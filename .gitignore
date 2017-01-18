@@ -1,0 +1,15 @@
+# System
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+
+# Sass
+.sass-cache/*
+/sass-cache
+
+# PatternLab
+patternlab.json
+.idea/
+public
