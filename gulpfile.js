@@ -155,7 +155,7 @@ gulp.task( 'develop', function( done ){
 			baseDir: "./public"
 		}
 	});
-	gulp.watch('templates/assets/sass/*.scss', gulp.series( 'copyAssets' ) );
+	gulp.watch('templates/assets/sass/**/*.scss', gulp.series( 'copyAssets' ) );
 	gulp.watch('templates/**/*.html', gulp.series( 'copyTemplates' ) );
 	gulp.watch( "public/**/*.*" ).on("change", browserSync.reload);
 } );
