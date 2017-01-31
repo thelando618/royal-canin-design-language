@@ -1,0 +1,38 @@
+{
+  "name": "royal-canin-web-design-language",
+  "version": "0.0.1",
+  "description": "The development files used in generating the Royal Canin Web Design Language static site.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/First10/royalcanin-webdesignlanguage.git"
+  },
+  "keywords": [
+    "gulp",
+    "node",
+    "styleguide",
+    "static",
+    "html",
+    "css",
+    "js"
+  ],
+  "author": "Matthew Mcclatchie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/First10/royalcanin-webdesignlanguage/issues"
+  },
+  "homepage": "https://github.com/First10/royalcanin-webdesignlanguage#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.7",
+    "directory-tree": "^1.2.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-file-include": "^1.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-util": "^3.0.8"
+  }
+}
