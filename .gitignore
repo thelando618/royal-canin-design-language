@@ -9,7 +9,5 @@ node_modules/
 .sass-cache/*
 /sass-cache
 
-# PatternLab
-patternlab.json
-.idea/
+# Styleguide
 public
