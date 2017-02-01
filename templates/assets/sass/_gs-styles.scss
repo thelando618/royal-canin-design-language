@@ -27,6 +27,17 @@ html {
 
 
 /* 
+	Info: Media styles
+	Dest:	_media	
+*/
+
+img	{
+	display: block;
+	max-width: 100%;
+}
+
+
+/* 
 	Info: Gulp Styleguide Sub Navigation
 	Dest: _lists
 */
@@ -39,17 +50,32 @@ html {
   bottom: 0;
   z-index: 10;
   width: 240px;	
-  border-right: 1px solid rgba(0,0,0,.25);
+  border-right: 1px solid rgba( 0, 0, 0, .15 );
   color: #212121;
   font-size: .825em;
-  padding: .5em 0;
+
+  .gs-logo {
+  	margin: 0;
+  	border-bottom: 1px solid rgba( 0, 0, 0, .15 );
+
+  	img {
+  		max-width: 140px;
+  		margin: 1.5em auto;
+  	}
+  }
+
+  ul {
+  	// See if this can be put into a class that lives in _nav.html
+  	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+  }
 
 	li {
 		ul {
-			padding-bottom: 2em;
-
 			a {
-				padding: 1em 0 1em 2.5em;
+				padding-top: 1em;
+				padding-bottom: 1em;
 			}
 		}
 	}
@@ -72,17 +98,33 @@ html {
 		}
 	}
 
+	// Only direct LIs
 	> ul > li {
-		border-bottom: 1px solid rgba(0,0,0,.25);
+		border-bottom: 1px solid rgba( 0, 0, 0, .15 );
 
 		> a {
-	  	text-transform: uppercase;
+	  	// text-transform: uppercase;
 	  	font-weight: 700;
 		}
 	}
 
+	// Nested ULs
+  ul ul {
+  	margin-left: 1em;
+  	// height: 0px;
+  	// overflow: hidden;
+  }
+
 	.active {
-		border-bottom: none;
+		border-bottom-color: transparent;
+
+		// > ul{
+		// 	padding-bottom: 2em;
+		// }
+
+		> ul {
+			height: auto;
+		}
 
 		> a {
 			&:after {

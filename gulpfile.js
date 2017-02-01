@@ -1,6 +1,7 @@
 'use strict';
 
 // @todo properly comment tasks
+// @todo install an html sanitizer such as https://www.npmjs.com/package/sanitize-html and run string that ends up in _nav.html through it before writing file.
 
 // Gulp
 var gulp 						= require('gulp');
@@ -93,40 +94,56 @@ gulp.task( 'getfiles', function( done ) {
 	done();
 } );
 
-
+// Create a _nav.html file that can be imported into full files
 gulp.task( 'createNav', gulp.series( 'getfiles', function( done ) {
 
-	// @todo wrap this in if check
-	// if links array is not empty
-	var list = '<ul>';
+	function getFilesRecursive( folder ) {
 
-	// var test = getJSON('nav.json', function (data) {
-		
-		for (var i = 0; i < links.length; i++) {
+		var fileContents = fs.readdirSync(folder),
+		fileTree = '<ul>',
+		stats;
 
-			// @TODO MOVE THIS INTO A FUNCTION
-			// Get rid of public from string
-			var trim = links[i].replace('public', '');
+		fileContents.forEach( function( fileName ) {
+			
+			stats = fs.lstatSync( folder + '/' + fileName );
 
+			if (stats.isDirectory()) {
 
-			// @TODO MOVE THIS INTO A FUNCTION
-			// Use regex to get rid of anything before the filename
-			var text = links[i].replace(/^.*[\\\/]/, '');
+				// Ignore assets directoy
+				// @todo come up with a better way to ignore directories (start support dirs with underscore perhaps?)
+				if ( 'assets' === fileName ) {
+					return false;
+				}
+				
+				// Create an empty link that will trigger some JS
+				fileTree += '<li><a href="#" class="gs-nav__trigger">' + fileName + '</a>' + getFilesRecursive(folder + '/' + fileName) +'</li>';
 
-			if ( '/index.html' === trim ) {
-				continue;
+			} else {
+
+				// Create full url and get rid of public 
+				var fullUrl = folder.replace( './public', '' ) + '/' + fileName
+
+				// Ignore root index.html
+				// @todo come up with a better way to ignore files (start support dirs with underscore perhaps?)
+				if ( '/index.html' === fullUrl ) {
+					return false;
+				}
+
+				// Add list item with anchor with full url
+				fileTree += '<li><a href="' + fullUrl + '">' + fileName + '</a></li>';
 			}
 
-			list += '<li><a href="' + trim + '">' + text +'</a></li>';
-		}
-
-		list += '</ul>';
-
-		fs.writeFile('templates/_nav.html', list, 'utf8', function() {
-			gutil.log( gutil.colors.bold.underline( 'nav.html file created' ) );
 		});
 
-	// });
+		fileTree += '</ul>';
+
+		return fileTree;
+	};
+
+	// Create the file and add the HTML string
+	fs.writeFile('templates/_nav.html', getFilesRecursive('./public'), 'utf8', function() {
+		gutil.log( gutil.colors.bold.underline( 'nav.html file created' ) );
+	});
 
 	done();
 } ) );
