@@ -115,8 +115,18 @@ gulp.task( 'createNav', gulp.series( 'getfiles', function( done ) {
 					return false;
 				}
 				
+
+				// @todo move this to root with other functions and improve
+				function niceFolderName( fileName ) {
+					// get rid of digits and hyphen
+					var niceName = fileName.replace( /(\d)+\-/g, '' );
+					// capitalize first letter
+					niceName = niceName.charAt(0).toUpperCase() + niceName.slice(1);
+					return niceName;
+				}
+
 				// Create an empty link that will trigger some JS
-				fileTree += '<li><a href="#" class="gs-nav__trigger">' + fileName + '</a>' + getFilesRecursive(folder + '/' + fileName) +'</li>';
+				fileTree += '<li><a href="#" class="gs-nav__trigger">' + niceFolderName( fileName ) + '</a>' + getFilesRecursive( folder + '/' + fileName) +'</li>';
 
 			} else {
 
@@ -129,8 +139,18 @@ gulp.task( 'createNav', gulp.series( 'getfiles', function( done ) {
 					return false;
 				}
 
+
+				// @todo move this to root with other functions and maybe combine with niceFolderName
+				function niceFileName( fileName ) {
+					// remove .html
+					var niceName = fileName.replace( '.html', '' )
+					// capitalize first letter
+					niceName = niceName.charAt(0).toUpperCase() + niceName.slice(1);
+					return niceName;
+				}
+
 				// Add list item with anchor with full url
-				fileTree += '<li><a href="' + fullUrl + '">' + fileName + '</a></li>';
+				fileTree += '<li><a href="' + fullUrl + '">' + niceFileName( fileName ) + '</a></li>';
 			}
 
 		});
