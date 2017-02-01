@@ -111,16 +111,16 @@ img	{
 	// Nested ULs
   ul ul {
   	margin-left: 1em;
-  	// height: 0px;
-  	// overflow: hidden;
+  	height: 0px;
+  	overflow: hidden;
   }
 
 	.active {
 		border-bottom-color: transparent;
 
-		// > ul{
-		// 	padding-bottom: 2em;
-		// }
+		> ul{
+			padding-bottom: 2em;
+		}
 
 		> ul {
 			height: auto;
