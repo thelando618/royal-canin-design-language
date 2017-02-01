@@ -2,3 +2,23 @@
 
 
 @@include('./_site-footer.html')
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+	var lis = document.querySelectorAll('.gs-nav li > a');
+
+	for (var i = 0; i < lis.length; i++) {
+
+
+			lis[i].addEventListener( 'click', function() {
+				this.parentElement.classList.toggle('active');
+			} );
+
+	}
+</script>
