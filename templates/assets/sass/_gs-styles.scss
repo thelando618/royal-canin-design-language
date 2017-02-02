@@ -45,7 +45,6 @@ img	{
 .gs-nav {
 	display: block;
   z-index: 10;
-  border-right: 1px solid rgba( 0, 0, 0, .15 );
   color: #212121;
   font-size: .75em;
   position: relative;
@@ -64,7 +63,7 @@ img	{
   	}
   }
 
-  .gs-nav-trigger {
+  #gs-nav-trigger {
   	position: absolute;
   	top: 0;
   	right: 0;
@@ -104,7 +103,12 @@ img	{
 
 
   .gs-nav__nav {
-  	border: 1px solid blue;
+  	height: 0px;
+  	overflow: hidden;
+  	transition: height 0.3s ease-in-out;
+  }
+  .visible {
+  	border-bottom: 1px solid rgba( 0, 0, 0, .15 );
   }
 
 
@@ -114,7 +118,6 @@ img	{
   	margin: 0;
   	padding: 0;
   }
-
 
 	li {
 		ul {
@@ -194,6 +197,7 @@ img	{
 	  bottom: 0;
 	  width: 240px;
 	  font-size: .825em;
+	  border-right: 1px solid rgba( 0, 0, 0, .15 );
 
 	  .gs-logo {
 	  	img {
@@ -202,7 +206,7 @@ img	{
 	  	}
 	  }
 
-	  .gs-nav-trigger {
+	  #gs-nav-trigger {
 	  	display: none;
 	  }
 	}
