@@ -24,6 +24,9 @@ html {
 	font-size: 16px;
 }
 
+body {
+	background-color: #f3f3f3;
+}
 
 
 /* 
@@ -43,6 +46,7 @@ img	{
 */
 
 .gs-nav {
+	background-color: #ffffff;
 	display: block;
   z-index: 10;
   color: #212121;
@@ -204,6 +208,10 @@ img	{
 	  		max-width: 140px;
 	  		margin: 1em auto;
 	  	}
+	  }
+
+	  .gs-nav__nav {
+	  	height: auto !important; // Exists to override any JS applied from toggling the mobile nav.
 	  }
 
 	  #gs-nav-trigger {
