@@ -26,6 +26,7 @@ html {
 
 body {
 	background-color: #f3f3f3;
+	position: relative;
 }
 
 
@@ -43,6 +44,7 @@ img	{
 /* 
 	Info: Gulp Styleguide Sub Navigation
 	Dest: _lists
+	Note: The positioning rules may have to stay here
 */
 
 .gs-nav {
@@ -220,3 +222,80 @@ img	{
 	  }
 	}
 }
+
+
+
+/* 
+	Info: Gulp Styleguide Stage
+	Dest: ?
+	Note: The positioning rules may have to stay here
+*/
+
+.gs-stage {
+	overflow: hidden;
+
+	.gs-stage__inner {
+		background-color: #EAEAEA;
+		width: 95%;
+		margin: 2.5% auto;
+	}
+
+	.gs-stage__content, .gs-stage__meta {
+		padding: 1em;
+	}
+
+	.gs-stage__content {
+		background-color: #FFFFFF;
+	}
+
+
+	@media ( min-width: 1024px ) {
+		margin-left: 240px;
+	}
+
+	@media ( min-width: 1280px ) {
+		.gs-stage__inner {
+			display: flex;
+		}
+
+		.gs-stage__content, .gs-stage__meta {
+			padding: 2em;
+		}
+
+		.gs-stage__content {
+			background-color: #FFFFFF;
+			flex: 0 0 60%;
+			width: 65%;
+		}
+
+		.gs-stage__meta {
+			flex: 1 1 200px;
+		}
+
+
+		// If no-flexbox
+		// 
+		// display: table;
+		// 
+		// .gs-stage__content, .gs-stage__meta {
+		//	display: table-cell;
+		//	}
+		//	
+		//	.gs-stage__content {
+		//	width: 65%;
+		//	}
+
+
+
+	}
+
+
+
+	@media ( min-width: 1400px ) {
+		.gs-stage__inner {
+			width: 90%;
+			margin: 5% auto;
+		}
+	}
+}
+
