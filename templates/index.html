@@ -7,19 +7,125 @@
 
 
 
-
-
 <script type="text/javascript">
-
-	// var lis = document.querySelectorAll('.gs-nav li > a');
-
-	// for (var i = 0; i < lis.length; i++) {
+	
 
 
-	// 		lis[i].addEventListener( 'click', function() {
-	// 			this.parentElement.classList.toggle('active');
-	// 		} );
+	function simple_toggler( trigger, target ) {
 
-	// }
+		// If either argument is undefined, end here.
+	  if ( trigger === undefined || target === undefined ) {
+	  	return false;
+	  }
+
+	  // Set up internal variables to contain arguments.
+		var tr = document.querySelector( trigger ), 
+				ta = document.querySelector( target ) ;
+
+
+		// Event handlder
+		tr.addEventListener( 'click', function() {
+			// If the trigger has a class of triggered
+			if ( tr.classList.contains( 'triggered' ) ) {
+
+				// Remove that class
+				this.classList.remove( 'triggered' );
+				
+				// Set the target height to 0
+				ta.style.height = 0 + 'px';
+				// Remove visible class
+				ta.classList.remove( 'visible' );
+
+			} else {
+
+				// Add triggered class
+				this.classList.add( 'triggered' );
+
+				// Set the target height to it's scroll height
+				ta.style.height = ta.scrollHeight + 'px';
+				// Add visible class
+				ta.classList.add( 'visible' );
+
+			}
+		});
+	}
+
+
+
+
+
+	// Scripts
+
+	simple_toggler( '#gs-nav-trigger', '.gs-nav__nav' );
+
+
+
+
+
+
+
+
+
+
+
+
+
+	function sub_nav_toggler( triggers, parent ) {
+		var triggers = document.querySelectorAll( triggers );
+
+		// Parent
+		var parent = document.querySelector( parent );
+		var parentHeightNow = parent.scrollHeight;
+
+		// var parentBaseHeight = parent.scrollHeight;
+
+		triggers.forEach( function( trigger ){
+
+			// Event listener
+			trigger.addEventListener( 'click', function() {
+				
+					var target = trigger.parentNode.querySelector('ul');
+					var targetHeight;
+
+					
+
+					if ( target.classList.contains('visible') ) {
+						
+						target.classList.remove('visible');
+						targetHeight = target.scrollHeight - target.scrollHeight;
+
+						target.style.height = targetHeight + 'px';
+						parentHeightNow = parentHeightNow - target.scrollHeight;
+
+					} else {
+						
+						target.classList.add('visible');
+						targetHeight = target.scrollHeight;
+
+						target.style.height = targetHeight + 'px';
+						parentHeightNow = parentHeightNow + target.scrollHeight;
+
+					}
+
+					parent.style.height = parentHeightNow + 'px';
+
+			} );
+
+		} );
+
+
+	}
+
+	sub_nav_toggler( '.gs-nav__trigger', '.gs-nav__nav' );
+
+
+
+
+
+
+
+
+
+
 
 </script>

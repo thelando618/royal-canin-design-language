@@ -44,6 +44,30 @@ function simple_toggler( trigger, target ) {
 
 
 
+
+
 // Scripts
 
-simple_toggler( '#gs-nav-trigger', '.gs-nav__nav' )
+simple_toggler( '#gs-nav-trigger', '.gs-nav__nav' );
+
+
+
+
+
+
+
+
+
+
+	// var lis = document.querySelectorAll('.gs-nav li > a');
+
+	// for (var i = 0; i < lis.length; i++) {
+
+
+	// 		lis[i].addEventListener( 'click', function() {
+	// 			this.parentElement.classList.toggle('active');
+	// 		} );
+
+	// }
+
+
