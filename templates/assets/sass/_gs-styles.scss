@@ -107,18 +107,30 @@ img	{
   	}
   }
 
-
   .gs-nav__nav {
   	height: 0px;
   	overflow: hidden;
   	transition: height 0.3s ease-in-out;
+
+		// Only direct LIs
+		> ul > li {
+			border-bottom: 1px solid rgba( 0, 0, 0, .15 );
+
+			> a {
+		  	text-transform: uppercase;
+		  	font-weight: 700;
+			}
+		}
   }
 
   .visible {
   	height: auto;
-  	// margin-bottom: 2em;
-  }
+		padding-bottom: 2em;
 
+		&:last-of-type {
+			padding-bottom: 0;
+		}
+  }
 
   ul {
   	// See if this can be put into a class that lives in _nav.html
@@ -129,7 +141,6 @@ img	{
   }
 
 	li {
-		border: 1px solid red;
 		overflow: hidden;
 		ul {
 			a {
@@ -157,21 +168,10 @@ img	{
 		}
 	}
 
-	// Only direct LIs
-	> ul > li {
-		border-bottom: 1px solid rgba( 0, 0, 0, .15 );
-
-		> a {
-	  	// text-transform: uppercase;
-	  	font-weight: 700;
-		}
-	}
-
 	// Nested ULs
   ul ul {
   	margin-left: 1em;
   	height: 0px;
-  	// overflow: hidden;
   }
 
 	.active {
@@ -209,6 +209,7 @@ img	{
 	  width: 240px;
 	  font-size: .825em;
 	  border-right: 1px solid rgba( 0, 0, 0, .15 );
+	  overflow: scroll;
 
 	  .gs-logo {
 	  	img {
@@ -226,6 +227,10 @@ img	{
 	  }
 	}
 }
+
+
+
+
 
 
 
