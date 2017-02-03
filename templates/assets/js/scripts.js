@@ -1,7 +1,6 @@
 'use strict';
 
 
-
 // simple_toggler.js
 
 function simple_toggler( trigger, target ) {
@@ -80,6 +79,90 @@ function nav_accordion( accordion, trigger ) {
 
 
 
+// code_to_text.html
+
+// function htmlEntities(str) {
+// 	return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+// }
+
+// var the_codes = document.querySelectorAll('.gs-code');
+
+// the_codes.forEach( function( code ) {
+
+
+// 	// var test = code.innerHTML.trim();
+
+// 	var html = code.innerHTML.trim();
+// 	html = html.replace(/\s/g, '\n');
+// 	html = html.replace(/\n/g, '\n');
+
+
+// 	code.innerHTML = htmlEntities( html );
+// } );
+
+
+
+
+// Convert HTML Tags to Entities
+function htmlEntities(str) {
+	return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+
+
+/**
+ * Take in a block of code and convert it to a string
+ * @param  [string] code_block	Element that contains code	
+ * @return [string]							String with HTML tags replaced and tabs stripped out
+ */
+function syntax( code_block ) {
+	// if argument is undefined end here
+  if ( undefined === code_block ) {
+  	return false;
+  }
+
+  // get all the instances of code blocks
+	var the_codes = document.querySelectorAll( code_block );
+
+	// for each of them
+	the_codes.forEach( function( the_code ) {
+		
+		// (backwards)
+		// Remove all tabs in the HTML
+		// Pass that new string to a function that replaces HTML tags with Entities
+		// Set the innerHTML of the instance of the class with this new string.
+		the_code.innerHTML = htmlEntities( the_code.innerHTML.replace(/\t/g, '') );
+	} );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var the_codes = document.querySelectorAll('.gs-code');
+
+// the_codes.forEach( function( the_code ) {
+
+// 	var inside = the_code.innerHTML.replace(/\t/g, '');
+// 	console.log( inside );
+// 	the_code.innerHTML = htmlEntities( inside );
+
+// 	//the_code.innerHTML = the_codes = the_codes.replace(/\t/g, '');
+
+// } );
+
+// the_codes = the_codes.replace(/\t/g, '');
+// console.log( the_codes );
+
+
 
 
 // Scripts
@@ -88,4 +171,4 @@ simple_toggler( '#gs-nav-trigger', '.gs-nav__nav' );
 
 nav_accordion( '.gs-nav__nav', '.gs-nav__trigger');
 
-
+syntax( '.gs-code ');
