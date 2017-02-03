@@ -72,20 +72,74 @@
 
 <script type="text/javascript">
 	
+	function nav_accordion( accordion, trigger ) {
+		var a = document.querySelector( accordion );
+		var ts =	document.querySelectorAll( trigger );
 
 
+		ts.forEach( function( t ) {
+			t.addEventListener( 'click', function() {
+
+				var aH = a.scrollHeight;
 
 
-	var lis = document.querySelectorAll('.gs-nav li > a');
+				if ( t.classList.contains( 'triggered' ) ) {
 
-	for (var i = 0; i < lis.length; i++) {
+					// current height
+					var thul = t.parentNode.querySelector('ul');
+					var thulh = thul.offsetHeight;
 
 
-			lis[i].addEventListener( 'click', function() {
-				this.parentElement.classList.toggle('active');
+					t.classList.remove( 'triggered' );
+					// t.parentNode.querySelector('ul').classList.remove( 'visible' );
+
+					thul.style.height = thulh - thulh + 'px';
+
+					a.style.height = aH - thulh + 'px';
+
+				} else {
+
+					t.classList.add( 'triggered' );
+					// t.parentNode.querySelector('ul').classList.add( 'visible' );
+
+					var tHUL = t.parentNode.querySelector('ul');
+					var tHULH = tHUL.scrollHeight;
+
+					// t.parentNode.querySelector('ul').style.height = t.parentNode.querySelector('ul').scrollHeight + 'px';
+
+					tHUL.style.height = tHULH + 'px';
+
+					a.style.height = aH + tHULH + 'px';
+				}
+
+				a.style.height = a.clientHeight;
+
 			} );
+		});
+
 
 	}
+
+
+	nav_accordion( '.gs-nav__nav', '.gs-nav__trigger');
+
+
+
+	// var lis = document.querySelectorAll('.gs-nav li > a');
+
+	// for (var i = 0; i < lis.length; i++) {
+	// 	lis[i].addEventListener( 'click', function() {
+	// 		this.parentElement.classList.toggle('active');
+	// 	} );
+	// }
+
+
+
+
+
+
+
+
 
 
 	// function simple_toggler( trigger, target ) {

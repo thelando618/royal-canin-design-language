@@ -113,8 +113,10 @@ img	{
   	overflow: hidden;
   	transition: height 0.3s ease-in-out;
   }
+
   .visible {
-  	border-bottom: 1px solid rgba( 0, 0, 0, .15 );
+  	height: auto;
+  	// margin-bottom: 2em;
   }
 
 
@@ -127,6 +129,8 @@ img	{
   }
 
 	li {
+		border: 1px solid red;
+		overflow: hidden;
 		ul {
 			a {
 				padding-top: 1em;
@@ -167,7 +171,7 @@ img	{
   ul ul {
   	margin-left: 1em;
   	height: 0px;
-  	overflow: hidden;
+  	// overflow: hidden;
   }
 
 	.active {
