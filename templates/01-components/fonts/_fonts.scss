@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'DIN Pro';
+  src: url('../assets/fonts/din-pro/din-pro--bold.woff2') format('woff2'),
+       url('../assets/fonts/din-pro/din-pro--bold.woff') format('woff'),
+       url('../assets/fonts/din-pro/din-pro--bold.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'DIN Pro';
+  src: url('../assets/fonts/din-pro/din-pro--bold.woff2') format('woff2'),
+       url('../assets/fonts/din-pro/din-pro--bold.woff') format('woff'),
+       url('../assets/fonts/din-pro/din-pro--bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+
+.font-din {
+	font-family: 'Din Pro', 'Avenir', Helvetica, Arial, sans-serif;
+}
+
+.font-din--bold {
+	font-weight: 700;
+}
