@@ -1,0 +1,50 @@
+select {
+	border: 1px solid transparent;
+	font-size: 1.125em;
+	padding: .75em;
+	height: 49px;
+	width: 100%;
+	font-family: $font-din;
+	margin-bottom: 1em;
+}
+
+
+.rc-select {
+	position: relative;
+	margin-bottom: 1em;
+
+	select {
+		appearance: none;
+		margin-bottom: 0;
+	}
+
+	&:before, &:after {
+		display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+	}
+
+	&:before {
+    background-color: $rc-red;
+    width: 60px;
+    z-index: 1;
+	}
+
+	&:after {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #FFFFFF;
+    z-index: 2;
+    top: 50%;
+    margin-top: -3px;
+    right: 19px;
+    width: 10px;
+    height: 10px;
+	}
+}

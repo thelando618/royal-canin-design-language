@@ -254,6 +254,7 @@ input,
 optgroup,
 select,
 textarea {
+  box-sizing:border-box;
   font-family: sans-serif; /* 1 */
   font-size: 100%; /* 1 */
   line-height: 1.15; /* 1 */
