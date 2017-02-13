@@ -386,6 +386,11 @@ img	{
 		padding-top: 1em;
 		padding-bottom: 1em;
 		border-bottom: 1px solid #CCCCCC;
+
+		&:last-child {
+			border-bottom: none;
+			padding-bottom: 0;
+		}
 	}
 
 	h2 {
