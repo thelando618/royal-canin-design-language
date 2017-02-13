@@ -131,7 +131,7 @@ function syntax( code_block ) {
 		// Remove all tabs in the HTML
 		// Pass that new string to a function that replaces HTML tags with Entities
 		// Set the innerHTML of the instance of the class with this new string.
-		the_code.innerHTML = htmlEntities( the_code.innerHTML.replace(/\t/g, '').trim() );
+		the_code.innerHTML = htmlEntities( the_code.innerHTML.trim() );
 	} );
 }
 

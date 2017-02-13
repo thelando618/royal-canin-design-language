@@ -27,6 +27,7 @@ html {
 body {
 	background-color: #f3f3f3;
 	position: relative;
+	font-size: 16px;
 }
 
 
@@ -311,6 +312,47 @@ img	{
 	}
 }
 
+
+
+
+
+
+/* 
+	Info: Gulp Styleguide Code Labels
+	Dest: n/a 
+	Note: These rules will likely have to remain in a Gulp Styleguide Sass partial
+*/
+pre.language-html, pre.language-markup, pre.language-scss {
+	position: relative;
+
+	code {
+    width: 100%;
+    display: block;
+    overflow: scroll;
+	}
+
+	&:after {
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-color: #FFFFFF;
+		padding: .5em;
+		font-size: .875em;
+	}	
+}
+
+pre.language-html, pre.language-markup {
+	&:after {
+		content: '.html';
+	}
+}
+
+
+pre.language-scss {
+	&:after {
+		content: '.scss';
+	}
+}
 
 
 

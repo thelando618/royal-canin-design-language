@@ -1,0 +1,27 @@
+button {
+	font-family: $font-din;
+	background-color: $rc-red;
+	color: #FFFFFF;
+	border: none;
+	font-size: .875em;
+	text-transform: uppercase;
+	padding: 12px 20px;
+
+	&:hover, &:focus {
+		background-color: $rc-red--hover;
+	}
+
+	&:active {
+		background-color: $rc-red--active;
+	}
+
+
+	&.button--medium {
+		padding: 14.5px 35px;
+	}
+
+	&.button--large {
+		font-size: 1em;
+		padding: 16px 40px;
+	}
+}
