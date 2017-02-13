@@ -16,6 +16,7 @@ button {
 	}
 
 
+	// Sizes
 	&.button--medium {
 		padding: 14.5px 35px;
 	}
@@ -23,5 +24,46 @@ button {
 	&.button--large {
 		font-size: 1em;
 		padding: 16px 40px;
+	}
+
+
+	// Icons
+	svg {
+		display: inline-block;
+    width: 1em;
+    height: 1em;
+    line-height: 1;
+    vertical-align: top;
+    transform: scale(1.25);
+    margin-left: 10px;
+	}
+
+
+	// Variations
+	&.button--success {
+		background-color: $rc-green;
+	}
+
+	&.button--icon {
+		padding: 12px 10px 12px 20px;
+	}
+
+
+	// Combinations
+	&.button--medium.button--icon {
+		padding: 14.5px 17.5px 14.5px 35px;
+
+		svg {
+			transform: scale(1.375);
+			margin-left: 17.5px;
+		}
+	}
+
+	&.button--large.button--icon {
+		padding: 16px 20px 16px 40px;
+
+		svg {
+			margin-left: 20px;
+		}
 	}
 }
