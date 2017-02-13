@@ -273,6 +273,10 @@ img	{
 
 		.gs-stage__content {
 			background-color: #FFFFFF;
+			width: 100%;
+		}
+
+		.gs-stage__content--split {
 			flex: 0 0 60%;
 			width: 65%;
 		}
