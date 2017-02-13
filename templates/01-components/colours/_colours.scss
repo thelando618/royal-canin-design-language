@@ -38,6 +38,25 @@ $rc-light-grey--active: #B3B3B3;
 
 
 
+$rc-light-grey-alt: #A7A9AB;
+
+.fill--rc-light-grey-alt {
+	background-color: $rc-light-grey-alt;
+}
+
+$rc-light-grey-alt--hover: #929496;
+
+.fill--rc-light-grey-alt--hover {
+	background-color: $rc-light-grey-alt--hover;
+}
+
+$rc-light-grey-alt--active: #7B7C7D;
+
+.fill--rc-light-grey-alt--active {
+	background-color: $rc-light-grey-alt--active;
+}
+
+
 
 $rc-medium-grey: #87888A;
 
@@ -57,3 +76,82 @@ $rc-medium-grey--active: #575859;
 	background-color: $rc-medium-grey--active;
 }
 
+
+
+$rc-dark-grey: #58585B;
+
+.fill--rc-dark-grey {
+	background-color: $rc-dark-grey;
+}
+
+$rc-dark-grey--hover: #49494B;
+
+.fill--rc-dark-grey--hover {
+	background-color: $rc-dark-grey--hover;
+}
+
+$rc-dark-grey--active: #373738;
+
+.fill--rc-dark-grey--active {
+	background-color: $rc-dark-grey--active;
+}
+
+
+
+$rc-warm-grey: #968C83;
+
+.fill--rc-warm-grey {
+	background-color: $rc-warm-grey;
+}
+
+$rc-warm-grey--hover: #857E77;
+
+.fill--rc-warm-grey--hover {
+	background-color: $rc-warm-grey--hover;
+}
+
+$rc-warm-grey--active: #716B65;
+
+.fill--rc-warm-grey--active {
+	background-color: $rc-warm-grey--active;
+}
+
+
+
+$rc-blue: #1E3170;
+
+.fill--rc-blue {
+	background-color: $rc-blue;
+}
+
+$rc-blue--hover: #152558;
+
+.fill--rc-blue--hover {
+	background-color: $rc-blue--hover;
+}
+
+$rc-blue--active: #0C1533;
+
+.fill--rc-blue--active {
+	background-color: $rc-blue--active;
+}
+
+
+
+$rc-green: #006341;
+
+.fill--rc-green {
+	background-color: $rc-green;
+}
+
+$rc-green--hover: #015336;
+
+.fill--rc-green--hover {
+	background-color: $rc-green--hover;
+}
+
+$rc-green--active: #00432C;
+
+.fill--rc-green--active {
+	background-color: $rc-green--active;
+}
