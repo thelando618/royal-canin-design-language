@@ -192,7 +192,7 @@ gulp.task( 'develop', function( done ){
 			baseDir: "./public"
 		}
 	});
-	gulp.watch( ['templates/assets/sass/**/*.scss', 'templates/assets/js/**/*.js'], gulp.series( 'copyAssets' ) );
+	gulp.watch( ['templates/**/*.scss', 'templates/assets/js/**/*.js'], gulp.series( 'copyAssets' ) );
 	gulp.watch( 'templates/**/*.html', gulp.series( 'copyTemplates' ) );
 	gulp.watch( "public/**/*.*" ).on("change", browserSync.reload);
 } );

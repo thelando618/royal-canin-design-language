@@ -312,3 +312,31 @@ img	{
 	}
 }
 
+
+
+
+
+
+/* 
+	Info: Gulp Styleguide Colour List
+	Dest: n/a 
+	Note: These rules will likely have to remain in a Gulp Styleguide Sass partial
+*/
+.gs-colour-list {
+	// @todo - these styles should be in a class that can be used by the styleguide, separate to a class to be used in the end product.
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+	li {
+		padding: 1em 1em 2em 1em;
+		color: rgba(255, 255, 255, .9);
+	}
+
+	span {
+		display: block;
+		font-size: .875em;
+	}
+}
+
+
