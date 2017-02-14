@@ -45,4 +45,82 @@ ul, ol {
 			}
 		}
 	}
+
+	&.list--significance {
+		@extend .list--blank;
+		@extend .list--align;
+		box-shadow: 0 0 4px rgba( 0, 0, 0, .1 );
+
+		li {
+			position: relative;
+			background-color: #FFFFFF;
+			// @todo make into a variable.
+			border-bottom: 1px solid #E5E5E5;
+			padding: 1em;
+			margin-bottom: 0;
+			// @todo make into a variable.
+			color: #58585B;
+			// @todo make into a variable.
+			transition: background 0.1s ease-in;
+			padding-right: 3.5em;
+
+			&:hover, &:focus {
+				// @todo make into a variable.
+				background-color: #F3F3F3;
+				border-bottom-color: transparent;
+			}
+
+			&:last-child {
+				border-bottom-color: transparent;
+			}
+		}
+
+		.list--significance__icon {
+			display: block;
+			width: 1.5em;
+			height: 1.5em;
+			position: absolute;
+			top: 50%;
+			margin-top: -.75em;
+			right: 1em;
+
+			// @todo make into a variable.
+			fill: #968C83;
+		}
+
+		a {
+			display: 	block;
+			margin: -1em;
+			padding: 1em;
+			color: inherit;
+			text-decoration: none;
+			color: #232323;
+		}
+
+		.active {
+			// @todo make into a variable.
+			background-color: darken( #F3F3F3, 2.5% );
+			border-left: 4px solid $rc-red;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				margin-top: -4px;
+				left: 0;
+				width: 0;
+				height: 0;
+				border-top: 4px solid transparent;
+				border-left: 4px solid $rc-red;
+				border-bottom: 4px solid transparent;
+			}
+
+			&:hover, &:focus {
+				// @todo make into a variable.
+				background-color: darken( #F3F3F3, 5% );
+			}
+		}
+	}
 }
+
+

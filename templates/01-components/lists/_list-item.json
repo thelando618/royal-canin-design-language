@@ -1,0 +1,32 @@
+[
+  {
+		"text" : "My Royal Canin ®",
+  	"icon" : "",
+  	"link" : true,
+  	"active" : false
+  },
+  {
+  	"text" : "Your Pets",
+  	"icon" : "http://cdn.onlinewebfonts.com/svg/img_332582.svg",
+  	"link" : true,
+  	"active" : true
+  },
+  {
+  	"text" : "Your Stockists",
+  	"icon" : "http://cdn.onlinewebfonts.com/svg/img_332582.svg",
+  	"link" : true,
+  	"active" : false
+  },
+	{
+		"text" : "Your Vet Practices",
+		"icon" : "http://cdn.onlinewebfonts.com/svg/img_332582.svg",
+		"link" : false,
+		"active" : false
+	},
+	{
+		"text" : "Loyalty Programme",
+		"icon" : "http://cdn.onlinewebfonts.com/svg/img_332582.svg",
+		"link" : false,
+		"active" : false
+	}
+]
