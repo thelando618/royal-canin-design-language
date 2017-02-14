@@ -1,0 +1,64 @@
+@@include('./_site-header.html')
+
+<div class="gs-stage">
+
+	<div class="gs-stage__inner">
+
+		<div class="gs-stage__content">
+
+			<h1>List Modifiers</h1>
+
+			<h2>Blank List</h2>
+			<p>The class <code class="language-html">list--blank</code> will remove bullets or numbers from each list item.</p>
+
+			<div class="gs-present">
+				@@include('./01-components/lists/_unordered-list.html', {
+					"classes": "list--blank"
+			  })
+			</div>
+
+			<pre><code class="gs-code language-html">@@include('./01-components/lists/_unordered-list.html', {
+				"classes": "list--blank"
+			 })</code></pre>
+
+			<br>
+			<br>
+
+			<h2>Aligned List</h2>
+			<p>The class <code class="language-html">list--align</code> will remove the default margin and padding from the list.</p>
+
+			<div class="gs-present">
+				@@include('./01-components/lists/_ordered-list.html', {
+					"classes": "list--align"
+			  })
+			</div>
+
+			<pre><code class="gs-code language-html">@@include('./01-components/lists/_ordered-list.html', {
+				"classes": "list--align"
+			 })</code></pre>
+
+			<br>
+			<br>
+
+			<h2>Blank + Aligned List</h2>
+			<p>A combination of the above 2 classes.</p>
+
+			<div class="gs-present">
+				@@include('./01-components/lists/_ordered-list.html', {
+					"classes": "list--align list--blank"
+			  })
+			</div>
+
+			<pre><code class="gs-code language-html">@@include('./01-components/lists/_ordered-list.html', {
+				"classes": "list--align list--blank"
+			 })</code></pre>
+
+
+		</div>
+		
+	</div>
+
+</div>
+
+@@include('./_site-footer.html')
+
