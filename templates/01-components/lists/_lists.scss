@@ -75,7 +75,7 @@ ul, ol {
 			}
 		}
 
-		.list--significance__icon {
+		svg {
 			display: block;
 			width: 1.5em;
 			height: 1.5em;
@@ -83,7 +83,6 @@ ul, ol {
 			top: 50%;
 			margin-top: -.75em;
 			right: 1em;
-
 			// @todo make into a variable.
 			fill: #968C83;
 		}
@@ -122,5 +121,3 @@ ul, ol {
 		}
 	}
 }
-
-
