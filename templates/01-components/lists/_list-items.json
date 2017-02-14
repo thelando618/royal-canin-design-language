@@ -1,0 +1,38 @@
+[
+  {
+		"text" : "This is a standard list item",
+    "code": "",
+  	"link" : false,
+  	"active" : false
+  },
+  {
+  	"text" : "This is a standard list item wrapped in a link",
+    "code": "",
+  	"link" : true,
+  	"active" : false
+  },
+  {
+    "text" : "This is a standard list item with an active class applied",
+    "code": "",
+    "link" : false,
+    "active" : true
+  },
+  {
+  	"text" : "This is a standard list item with some placeholder text to make it very long - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "code": "",
+  	"link" : false,
+  	"active" : false
+  },
+	{
+		"text" : "This is a standard list item with some <em>inline <strong>HTML</strong> entities</em>",
+    "code": "",
+		"link" : false,
+		"active" : false
+	},
+	{
+		"text" : "This is a list item that includes an <a href='#''>inline link</a>",
+    "code": "",
+		"link" : false,
+		"active" : false
+	}
+]
