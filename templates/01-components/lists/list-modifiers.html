@@ -12,15 +12,11 @@
 			<p>The class <code class="language-html">list--blank</code> will remove bullets or numbers from each list item.</p>
 
 			<div class="gs-present">
-<!-- 				@@include('./01-components/lists/_unordered-list.html', {
-					"classes": "list--blank"
-			  }) -->
+				<ul class="list--blank">@@loop("./01-components/lists/_list-item.html", "./01-components/lists/_list-items.json")</ul>
 			</div>
 
 			<pre><code class="gs-code language-html">
-<!-- 			@@include('./01-components/lists/_unordered-list.html', {
-				"classes": "list--blank"
-			 }) -->
+				<ul class="list--blank">@@loop("./01-components/lists/_list-item.html", "./01-components/lists/_list-items.json")</ul>
 			</code></pre>
 
 			<br>
@@ -30,14 +26,12 @@
 			<p>The class <code class="language-html">list--align</code> will remove the default margin and padding from the list.</p>
 
 			<div class="gs-present">
-				@@include('./01-components/lists/_ordered-list.html', {
-					"classes": "list--align"
-			  })
+				<ol class="list--align">@@loop("./01-components/lists/_list-item.html", "./01-components/lists/_list-items.json")</ol>
 			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/lists/_ordered-list.html', {
-				"classes": "list--align"
-			 })</code></pre>
+			<pre><code class="gs-code language-html">
+				<ol class="list--align">@@loop("./01-components/lists/_list-item.html", "./01-components/lists/_list-items.json")</ol>
+			</code></pre>
 
 			<br>
 			<br>
@@ -46,14 +40,12 @@
 			<p>A combination of the above 2 classes.</p>
 
 			<div class="gs-present">
-				@@include('./01-components/lists/_ordered-list.html', {
-					"classes": "list--align list--blank"
-			  })
+				<ul class="list--align list--blank">@@loop("./01-components/lists/_list-item.html", "./01-components/lists/_list-items.json")</ul>
 			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/lists/_ordered-list.html', {
-				"classes": "list--align list--blank"
-			 })</code></pre>
+			<pre><code class="gs-code language-html">
+				<ul class="list--align list--blank">@@loop("./01-components/lists/_list-item.html", "./01-components/lists/_list-items.json")</ul>
+			</code></pre>
 
 
 		</div>

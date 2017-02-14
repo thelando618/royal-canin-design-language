@@ -9,10 +9,14 @@
 			<h1>Ordered List</h1>
 
 			<div class="gs-present">
-				@@include('./01-components/lists/_ordered-list.html')
+				<ol>
+					@@loop("./01-components/lists/_list-item.html", "./01-components/lists/_list-items.json")
+				</ol>
 			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/lists/_ordered-list.html')</code></pre>
+			<pre><code class="gs-code language-html">
+				<ol>@@loop("./01-components/lists/_list-item.html", "./01-components/lists/_list-items.json")</ol>
+			</code></pre>
 
 		</div>
 		

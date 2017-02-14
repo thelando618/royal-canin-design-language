@@ -9,14 +9,14 @@
 			<h1>Icon List</h1>
 
 			<div class="gs-present">
-				@@include('./01-components/lists/_icon-list.html', {
-					"classes": "list--blank list--align list--icons"
-			  })
+				<ul>
+					@@loop("./01-components/lists/_list-item.html", "./01-components/lists/_list-items.json")
+				</ul>
 			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/lists/_icon-list.html', {
-				"classes": "list--blank list--align list--icons"
-			 })</code></pre>
+			<pre><code class="gs-code language-html">
+				<ul>@@loop("./01-components/lists/_list-item.html", "./01-components/lists/_list-items.json")</ul>
+			</code></pre>
 
 		</div>
 		
