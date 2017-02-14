@@ -447,3 +447,17 @@ pre.language-scss {
 }
 
 
+
+
+/* 
+	Info: Gulp Styleguide SVG list
+	Dest: n/a 
+	Note: These rules will likely have to remain in a Gulp Styleguide Sass partial
+*/
+.gs-svg-list {
+	svg {
+		width: 4em;
+		height: 4em;
+	}
+}
+
