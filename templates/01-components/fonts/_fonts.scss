@@ -1,7 +1,44 @@
-$font-din: "din-2014", 'Avenir', Helvetica, Arial, sans-serif;
+// DIN Pro
+@font-face {
+  font-family: 'DIN Pro';
+  src: url('../fonts/din_pro.woff2') format('woff2'),
+       url('../fonts/din_pro.woff') format('woff'),
+       url('../fonts/din_pro.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 300;
+}
+
+// DIN Pro Medium
+@font-face {
+  font-family: 'DIN Pro';
+  src: url('../fonts/din_pro_medium.woff2') format('woff2'),
+       url('../fonts/din_pro_medium.woff') format('woff'),
+       url('../fonts/din_pro_medium.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 500;
+}
+
+// DIN Pro Bold
+@font-face {
+  font-family: 'DIN Pro';
+  src: url('../fonts/din_pro_bold.woff2') format('woff2'),
+       url('../fonts/din_pro_bold.woff') format('woff'),
+       url('../fonts/din_pro_bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+}
+
+// Font stack variable
+$font-din: "DIN Pro", 'Avenir', Helvetica, Arial, sans-serif;
+
 
 .font-din {
 	font-family: $font-din;
+	font-weight: 300;
+}
+
+.font-din--med {
+	font-weight: 500;
 }
 
 .font-din--bold {

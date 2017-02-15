@@ -75,10 +75,7 @@ gulp.task( 'copyAssets', gulp.parallel( 'sass', function( done ) {
 	return gulp.src([
 			// @todo make this into a single command that copies everything
 			path.join( paths.templates, '*.css' ),
-			path.join( paths.templates, '*.js' ),
-			path.join( paths.templates, '*.ttf' ),
-			path.join( paths.templates, '*.woff' ),
-			path.join( paths.templates, '*.woff2' ),
+			path.join( paths.templates, '*.js' )
 		])
 		.pipe( fileinclude({
 			// todo update paths to use object
@@ -88,6 +85,13 @@ gulp.task( 'copyAssets', gulp.parallel( 'sass', function( done ) {
 		.pipe( gulp.dest( './public/' ) );
 	done();
 } ) );
+
+
+// Copy font files
+gulp.task('copyFonts', function( done ) {
+	return gulp.src( path.join( paths.templates, paths.assets, 'fonts/', '*' ) )
+		.pipe(gulp.dest('./public'));
+});
 
 
 // Get HTML files inside public directory and create an array
@@ -175,7 +179,7 @@ gulp.task( 'createNav', gulp.series( 'getfiles', function( done ) {
 
 
 // Styleguide tasks
-gulp.task( 'generate', gulp.series( 'publicDir', 'copyTemplates', 'copyAssets', 'createNav', 'copyTemplates', function( done ) {
+gulp.task( 'generate', gulp.series( 'publicDir', 'copyTemplates', 'copyAssets', 'copyFonts', 'createNav', 'copyTemplates', function( done ) {
 	done();
 } ) );
 
