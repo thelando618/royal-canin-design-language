@@ -73,8 +73,12 @@ gulp.task( 'sass', function( done ) {
 // Copy other assets, excluding HTML files.
 gulp.task( 'copyAssets', gulp.parallel( 'sass', function( done ) {
 	return gulp.src([
+			// @todo make this into a single command that copies everything
 			path.join( paths.templates, '*.css' ),
 			path.join( paths.templates, '*.js' ),
+			path.join( paths.templates, '*.ttf' ),
+			path.join( paths.templates, '*.woff' ),
+			path.join( paths.templates, '*.woff2' ),
 		])
 		.pipe( fileinclude({
 			// todo update paths to use object
