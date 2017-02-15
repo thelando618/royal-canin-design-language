@@ -54,10 +54,8 @@ function nav_accordion( accordion, trigger ) {
 
 
 	ts.forEach( function( t ) {
-		t.addEventListener( 'click', function() {
-
-			var aH = a.scrollHeight;
-
+		t.addEventListener( 'mousedown', function( event ) {
+			event.preventDefault();
 
 			if ( t.classList.contains( 'triggered' ) ) {
 
@@ -70,9 +68,24 @@ function nav_accordion( accordion, trigger ) {
 				t.parentNode.querySelector('ul').classList.add( 'visible' );
 			}
 
-			a.style.height = a.clientHeight;
+		} );
+
+		t.addEventListener( 'focus', function( event ) {
+			event.preventDefault();
+
+			if ( t.classList.contains( 'triggered' ) ) {
+
+				t.classList.remove( 'triggered' );
+				t.parentNode.querySelector('ul').classList.remove( 'visible' );
+
+			} else {
+
+				t.classList.add( 'triggered' );
+				t.parentNode.querySelector('ul').classList.add( 'visible' );
+			}
 
 		} );
+
 	});
 
 }
