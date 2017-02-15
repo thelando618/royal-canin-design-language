@@ -15,55 +15,44 @@ button {
 		background-color: $rc-red--active;
 	}
 
-
-	// Sizes
-	&.button--medium {
-		padding: 14.5px 35px;
-	}
-
-	&.button--large {
-		font-size: 1em;
-		padding: 16px 40px;
-	}
-
-
 	// Icons
 	svg {
 		display: inline-block;
 		vertical-align: bottom;
+		fill: #FFFFFF;
 		width: 1em;
 		height: 1em;
 		line-height: 1;
 		transform: scale(1.25);
 		margin-left: 10px;
+		margin-right: -8px; // Half of button horizontal padding - difference after scaling up.
 	}
 
+	// Sizes
+	&.button--medium {
+		padding: 14.5px 35px;
+
+		svg {
+			transform: scale(1.375);
+			margin-left: 17.5px;
+			margin-right: -13px; // Half of button horizontal padding - difference after scaling up.
+		}
+	}
+
+	&.button--large {
+		font-size: 1em;
+		padding: 16px 40px;
+
+		svg {
+			transform: scale(1.375);
+			margin-left: 20px;
+			margin-right: -18px; // Half of button horizontal padding - difference after scaling up.
+		}
+	}
 
 	// Variations
 	&.button--success {
 		background-color: $rc-green;
 	}
 
-	&.button--icon {
-		padding: 12px 10px 12px 20px;
-	}
-
-
-	// Combinations
-	&.button--medium.button--icon {
-		padding: 14.5px 17.5px 14.5px 35px;
-
-		svg {
-			transform: scale(1.375);
-			margin-left: 17.5px;
-		}
-	}
-
-	&.button--large.button--icon {
-		padding: 16px 20px 16px 40px;
-
-		svg {
-			margin-left: 20px;
-		}
-	}
 }
