@@ -1,3 +1,4 @@
+// General
 body,
 input,
 textarea,
@@ -11,6 +12,19 @@ button {
 	}
 }
 
+// Paragraph
 p {
 	line-height: 1.5;
+}
+
+
+a {
+	// @todo make this into a variable
+	transition: color 0.2s ease-in;
+	color: $rc-red;
+
+	&:hover, &:focus {
+		color: $rc-red--hover;
+		text-decoration: none;
+	}
 }
