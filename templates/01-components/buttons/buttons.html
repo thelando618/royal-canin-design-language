@@ -17,19 +17,29 @@
 
 			<pre><code class="gs-code language-html">@@include('./01-components/buttons/_button.html')</code></pre>
 
+			<br>
 
 			<div class="gs-present">
-				@@include('./01-components/buttons/_button-medium.html')
+				@@include('./01-components/buttons/_button-class.html', {
+					"class": "button--medium" 
+				})
 			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/buttons/_button-medium.html')</code></pre>
+			<pre><code class="gs-code language-html">@@include('./01-components/buttons/_button-class.html', {
+				"class": "button--medium" 
+			})</code></pre>
 
+			<br>
 
 			<div class="gs-present">
-				@@include('./01-components/buttons/_button-large.html')
+				@@include('./01-components/buttons/_button-class.html', {
+					"class": "button--large" 
+				})
 			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/buttons/_button-large.html')</code></pre>
+			<pre><code class="gs-code language-html">@@include('./01-components/buttons/_button-class.html', {
+				"class": "button--large" 
+			})</code></pre>
 
 		</div>
 
