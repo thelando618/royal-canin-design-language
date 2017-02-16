@@ -1,0 +1,46 @@
+table	{
+  display: block;
+  overflow-x: scroll;
+  border-collapse: collapse;
+  border-spacing: 0;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
+
+  th, td {
+  	// @todo make this colour into a variable
+  	border-right: 1px solid #EBEBEB;
+  	padding: .875em 1em;
+
+  	&:first-child {
+  		text-align: left;
+  	}
+
+  	&:last-child {
+  		border-right: none;
+  	}
+  }
+
+	thead {
+	}
+
+	tbody {
+		tr:nth-child( even ) {
+			// @todo make this into a variable
+			background-color: #F6F6F6;
+		}
+	}
+
+	th {
+		background-color: $rc-red;
+		color: #FFFFFF;
+	}
+}
+
+.table--blank {
+	tbody {
+		tr:nth-child( even ) {
+			background-color: inherit;
+		}
+	}
+}

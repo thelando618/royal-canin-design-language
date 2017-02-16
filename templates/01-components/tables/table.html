@@ -1,0 +1,151 @@
+@@include('./_site-header.html')
+
+<div class="gs-stage">
+
+	<div class="gs-stage__inner">
+
+		<div class="gs-stage__content">
+
+			<h1>Table</h1>
+
+			<p>Tables should be used when it is appropriate for the data.</p>
+			<p>The following attributes are now deprecated and <strong>should not</strong> be used:</p>
+
+			<ul>
+				<li><code>align</code></li>
+				<li><code>bgcolor</code></li>
+				<li><code>border</code></li>
+				<li><code>cellpadding</code></li>
+				<li><code>cellspacing</code></li>
+				<li><code>frame</code></li>
+				<li><code>rules</code></li>
+				<li><code>summary</code></li>
+				<li><code>width</code></li>
+			</ul>
+			
+			<p>The default styling will make the tables scroll horizontally when the browser window is narrower than the data being displayed.</p>
+
+			<br>
+
+			<h2>Structure</h2>
+			<p>The <code>thead</code>, <code>tbody</code> and <code>tfoot</code> tags must be used where appropriate.</p>
+			<pre><code class="gs-code language-html">@@include('./01-components/tables/_table-structure.html')</code></pre>
+
+			<br>
+
+			<h2>Standard Table</h2>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Header One</th>
+						<th>Header Two</th>
+						<th>Header Three</th>
+						<th>Header Four</th>
+						<th>Header Five</th>
+						<th>Header Six</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>Cell One</td>
+						<td>Cell Two</td>
+						<td>Cell Three</td>
+						<td>Cell Four</td>
+						<td>Cell Five</td>
+						<td><input type="checkbox" name="checkbox"></td>
+					</tr>
+					<tr>
+						<td>Cell One</td>
+						<td>Cell Two</td>
+						<td>Cell Three</td>
+						<td>Cell Four</td>
+						<td>Cell Five</td>
+						<td><input type="checkbox" name="checkbox"></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<br>
+
+			<h2>Table - colspan</h2>
+			<p>The <code>colspan</code> attribute may be used to force a cell to span mutliple columns.</p>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Header One</th>
+						<th>Header Two</th>
+						<th>Header Three</th>
+						<th>Header Four</th>
+						<th>Header Five</th>
+						<th>Header Six</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>Cell One</td>
+						<td>Cell Two</td>
+						<td>Cell Three</td>
+						<!-- colspan -->
+    				<td colspan="2">Cell Four - Span Two</td>
+						<td><input type="checkbox" name="checkbox"></td>
+					</tr>
+					<tr>
+						<td>Cell One</td>
+						<td colspan="4">Cell Two - Span Four</td>
+						<!-- colspan -->
+						<!-- colspan -->
+						<!-- colspan -->
+						<td><input type="checkbox" name="checkbox"></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<br>
+
+			<h2>Table - rowspan</h2>
+			<p>The <code>rowspan</code> attribute may be used to force a cell to span mutliple rows, only when the <code>table--blank</code> class is applied to the table. .</p>
+
+			<table class="table--blank">
+				<thead>
+					<tr>
+						<th>Header One</th>
+						<th>Header Two</th>
+						<th>Header Three</th>
+						<th>Header Four</th>
+						<th>Header Five</th>
+						<th>Header Six</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>Cell One</td>
+						<td rowspan="2">Cell Two - Span Two</td>
+						<td>Cell Three</td>
+						<td>Cell Four</td>
+						<td>Cell Five</td>
+						<td><input type="checkbox" name="checkbox"></td>
+					</tr>
+					<tr>
+						<td>Cell One</td>
+						<!-- rowspan -->
+						<td>Cell Three</td>
+						<td>Cell Four</td>
+						<td>Cell Five</td>
+						<td><input type="checkbox" name="checkbox"></td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+
+	</div>
+
+</div>
+
+@@include('./_site-footer.html')
+
