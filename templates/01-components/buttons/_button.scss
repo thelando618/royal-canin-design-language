@@ -17,25 +17,11 @@ button {
 		background-color: $rc-red--active;
 	}
 
-	// Icons
-	svg {
-		display: inline-block;
-		vertical-align: bottom;
-		fill: #FFFFFF;
-		width: 1em;
-		height: 1em;
-		line-height: 1;
-		//@ todo add Modernizr fallback for IE9 as it doesn't scale SVGs
-		transform: scale(1.25);
-		margin-left: .625rem;
-		margin-right: - button-icon-right-pull( 1.25, .625rem );
-	}
-
 	// Sizes
 	&.button--medium {
 		padding: 14.5px 35px;
 
-		svg {
+		svg, &.button--loading:after {
 			transform: scale(1.375);
 			margin-left: 1.09375rem;
 			margin-right: - button-icon-right-pull( 1.375, 1.09375rem )
@@ -46,7 +32,7 @@ button {
 		font-size: 1em;
 		padding: 16px 40px;
 
-		svg {
+		svg, &.button--loading:after {
 			transform: scale(1.375);
 			margin-left: 1.25rem;
 			margin-right: - button-icon-right-pull( 1.375, 1.25rem )
@@ -59,4 +45,45 @@ button {
 		background-color: #60D967;
 	}
 
+	// SVG
+	svg, &.button--loading:after {
+		display: inline-block;
+		vertical-align: bottom;
+		fill: #FFFFFF;
+		width: 1em;
+		height: 1em;
+		line-height: 1;
+		//@ todo add Modernizr fallback for IE9 as it doesn't scale SVGs
+		transform: scale(1.25);
+		margin-left: .625rem;
+		margin-right: - button-icon-right-pull( 1.25, .625rem );
+	}
+
+	// Loading
+	&.button--loading {
+		svg {
+			display: none;
+		}
+
+		&:after {
+			content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.8 24"><style>.st0{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}</style><path d="M2.5 18c1.5 2.4 4 4.2 7 4.8 5.9 1.3 11.8-2.5 13-8.5C23.8 8.3 20 2.5 14 1.2 8.1 0 2.3 3.8 1 9.7" class="st0"/></svg>');
+			animation: steady-spin 1s infinite linear;
+
+			// @todo put this stuff inside a modernizr check
+			// content: '';
+			// background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/disp/585d0331234507.564a1d239ac5e.gif');
+			// background-size: 1em;
+		}
+	}
+
+}
+
+// @todo move this a keyframes file.
+@keyframes steady-spin {
+	0% {
+		transform: rotate(0deg) scale(1.25);
+	}
+	100% {
+		transform: rotate(360deg) scale(1.25);
+	}
 }

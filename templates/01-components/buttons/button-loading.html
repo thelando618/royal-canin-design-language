@@ -1,0 +1,30 @@
+@@include('./_site-header.html')
+
+<div class="gs-stage">
+
+	<div class="gs-stage__inner">
+
+		<div class="gs-stage__content">
+
+			<h1>Button - Loading</h1>
+			<p>A class is added to a button when a request is processing to indicate a loading state.</p>
+			<p>This class hides the SVG and inserts a pseudo element that is animated with CSS.</p>
+
+			<div class="gs-present">
+				@@include('./01-components/buttons/_button-icon.html', {
+					"class": "button--loading"
+				})
+			</div>
+
+			<pre><code class="gs-code language-html">@@include('./01-components/buttons/_button-icon.html', {
+				"class": ""
+			})</code></pre>
+
+		</div>
+
+	</div>
+
+</div>
+
+@@include('./_site-footer.html')
+
