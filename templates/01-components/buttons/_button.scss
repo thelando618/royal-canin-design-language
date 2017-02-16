@@ -23,9 +23,10 @@ button {
 		width: 1em;
 		height: 1em;
 		line-height: 1;
+		//@ todo add Modernizr fallback for IE9 as it doesn't scale SVGs
 		transform: scale(1.25);
-		margin-left: 10px;
-		margin-right: -8px; // Half of button horizontal padding - difference after scaling up.
+		margin-left: .625rem;
+		margin-right: - button-icon-right-pull( 1.25, .625rem );
 	}
 
 	// Sizes
@@ -34,8 +35,8 @@ button {
 
 		svg {
 			transform: scale(1.375);
-			margin-left: 17.5px;
-			margin-right: -13px; // Half of button horizontal padding - difference after scaling up.
+			margin-left: 1.09375rem;
+			margin-right: - button-icon-right-pull( 1.375, 1.09375rem )
 		}
 	}
 
@@ -45,8 +46,8 @@ button {
 
 		svg {
 			transform: scale(1.375);
-			margin-left: 20px;
-			margin-right: -18px; // Half of button horizontal padding - difference after scaling up.
+			margin-left: 1.25rem;
+			margin-right: - button-icon-right-pull( 1.375, 1.25rem )
 		}
 	}
 
