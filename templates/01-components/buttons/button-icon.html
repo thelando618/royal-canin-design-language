@@ -7,15 +7,31 @@
 		<div class="gs-stage__content">
 
 			<h1>Button - Icon</h1>
+			<p>No extra class is required to use an icon in a button. Simply add the required SVG from the list of available icons.</p>
+
+			<p>A button with a size modifier will automatically increase the size of the SVG.</p>
 
 			<div class="gs-present">
 				@@include('./01-components/buttons/_button-icon.html', {
-					"class": "button--icon"
+					"class": ""
 				})
 			</div>
 
 			<pre><code class="gs-code language-html">@@include('./01-components/buttons/_button-icon.html', {
-				"class": "button--icon button--large"
+				"class": ""
+			})</code></pre>
+
+			<br>
+
+			<h2>Button Large - Icon</h2>
+			<div class="gs-present">
+				@@include('./01-components/buttons/_button-icon.html', {
+					"class": "button--large"
+				})
+			</div>
+
+			<pre><code class="gs-code language-html">@@include('./01-components/buttons/_button-icon.html', {
+				"class": "button--large"
 			})</code></pre>
 
 		</div>
