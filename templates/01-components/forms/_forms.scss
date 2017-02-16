@@ -1,11 +1,46 @@
+label {
+	display: inline-block;
+	font-size: 1.125em;
+	margin: .75em 0;
+}
+
+
+input[type="text"],
+textarea,
 select {
-	border: 1px solid transparent;
+	width: 100%;
 	font-size: 1.125em;
 	padding: .75em;
-	height: 49px;
-	width: 100%;
-	font-family: $font-din;
+	border: 1px solid transparent;
 	margin-bottom: 1em;
+	box-shadow: 0 2px 4px rgba( 0, 0, 0, .1 );
+
+	&:focus {
+		outline: none;
+		// @todo make this a variable
+		border: 1px solid #80ACE1;
+		box-shadow: 0 0 4px rgba( 128, 172, 255, 0.9 );
+	}
+
+	&:disabled {
+		background-color: $rc-light-grey;
+	}
+
+	&.error {
+		// @todo make this a variable
+		color: #E45252;
+		border: 1px solid $rc-red;
+		background-color: #F4EAEA;
+
+		&:focus {
+			box-shadow: 0 0 4px rgba( 232, 90, 90, 0.9 );
+		}
+	}
+}
+
+textarea {
+	resize: vertical;
+	height: 200px;
 }
 
 

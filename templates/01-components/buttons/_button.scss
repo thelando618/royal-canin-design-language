@@ -1,11 +1,12 @@
 button {
-	font-family: $font-din;
+	font-size: .875em;
+	line-height: 1.15;
 	background-color: $rc-red;
 	color: #FFFFFF;
 	border: none;
-	font-size: .875em;
 	text-transform: uppercase;
 	padding: 12px 20px;
+
 	// @todo make into a variable
 	transition: background-color 0.2s ease-in;
 

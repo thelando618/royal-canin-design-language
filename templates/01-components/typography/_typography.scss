@@ -1,0 +1,11 @@
+body,
+input,
+textarea,
+select,
+button {
+	font: 300 1em $font-din; // weight size/line-height family
+}
+
+p {
+	line-height: 1.5;
+}
