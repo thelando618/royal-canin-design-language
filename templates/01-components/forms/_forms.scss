@@ -27,7 +27,7 @@ select {
 		background-color: $rc-light-grey;
 	}
 
-	&.error {
+	&.error, &:invalid {
 		// @todo make this a variable
 		color: #E45252;
 		border: 1px solid $rc-red;
@@ -45,6 +45,9 @@ textarea {
 	height: 200px;
 }
 
+
+input[type="email"] {
+}
 
 
 input[type="checkbox"] {
