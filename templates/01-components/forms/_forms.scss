@@ -47,10 +47,22 @@ textarea {
 
 
 
-input[type="checkbox"] {
+input[type="checkbox"],
+input[type="color"] {
 	width: auto;
 	box-shadow: none;
 }
+
+
+
+input[type="color"] {
+	background: none;
+	width: 5em;
+	height: 2.5em;
+	padding: 0;
+}
+
+
 
 
 
@@ -72,6 +84,7 @@ input[type="checkbox"] ~ label {
   vertical-align: baseline;
   margin-left: .5em;
 }
+
 
 
 
