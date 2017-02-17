@@ -47,31 +47,59 @@
 
 			<h1>Inputs</h1>
 
+			<p>Available inputs for Forms.</p>
+
+			<h2>A note on accessibility.</h2>
+
+			<p>Please ensure that the <code class="language-html">for=""</code> attribute is used on labels and that it matches the input ID, for accessibility purposes, for example: </p>
+
+			<pre><code class="gs-code language-html"><label for="id-text">Input Label</label>
+<input id="id-text" type="text" name="text" placeholder="Placeholder..."></code></pre>
+
+			<p>Since the <code class="language-html">for</code> attribute relies on an ID to match up with, ensure that all Input IDs are unique on your page.</p>
+
+			<br>
+
+			<h2>Type - Button</h2>
+			<div class="gs-present">
+				<label for="id-button">Input Label</label>
+<input id="id-button" type="button" name="button" value="Button">
+			</div>
+
+			<pre><code class="gs-code language-html"><label for="id-button">Input Label</label>
+<input id="id-button" type="button" name="button" value="Button"></code></pre>
+
+			<br>
+
+			<h2>Type - Text</h2>
+			<div class="gs-present">
+				<label for="id-text">Input Label</label>
+<input id="id-text" type="text" name="text" placeholder="Placeholder...">
+			</div>
+
+			<pre><code class="gs-code language-html"><label for="id-text">Input Label</label>
+<input id="id-text" type="text" name="text" placeholder="Placeholder..."></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+			<br><br><br>
 
 			<h2>Text</h2>
 			<div class="gs-present">
-				<label>Label</label>
-<input type="text" name="name" placeholder="Placeholder...">
-
-<input type="text" name="name" placeholder="Placeholder..." class="error">
-
-<label>Label</label>
-<input type="text" name="name" placeholder="Placeholder..." disabled value="Disabled field">
-
-<label>Required</label>
-<input type="text" name="name" placeholder="Placeholder..." required>
+				<label for="id-text">Input Label</label>
+<input id="id-text" type="text" name="text" placeholder="Placeholder...">
 			</div>
 
-			<pre><code class="gs-code language-html"><label>Label</label>
-<input type="text" name="name" placeholder="Placeholder...">
-
-<input type="text" name="name" placeholder="Placeholder..." class="error">
-
-<label>Label</label>
-<input type="text" name="name" placeholder="Placeholder..." disabled value="Disabled field">
-
-<label>Required</label>
-<input type="text" name="name" placeholder="Placeholder..." required></code></pre>
+			<pre><code class="gs-code language-html"><label for="id-text">Input Label</label>
+<input id="id-text" type="text" name="text" placeholder="Placeholder..."></code></pre>
 
 			<br>
 			<br>
