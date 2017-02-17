@@ -76,22 +76,72 @@
 
 			<h2>Type - Email</h2>
 			<p>The Email Input has access to the <code class="language-scss">:valid</code> and <code class="language-scss">:invalid</code> pseudo-classes.</p>
+			<p>Only the <code class="language-scss">:invalid</code> pseudo-class is used as a visual indicator.</p>
+
 			<div class="gs-present">
-				@@include('./01-components/forms/_input-email.html')
+				@@include('./01-components/forms/_input-standard.html', {
+					"type": "email" 
+				})
 			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-email.html')</code></pre>
+			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
+				"type": "email" 
+			})</code></pre>
+
+			<br>
+
+			<h2>Type - Number</h2>
+			<div class="gs-present">
+				@@include('./01-components/forms/_input-standard.html', {
+					"type": "number" 
+				})
+			</div>
+
+			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
+				"type": "number" 
+			})</code></pre>
 
 			<br>
 
 			<h2>Type - Text</h2>
 			<div class="gs-present">
-				@@include('./01-components/forms/_input-text.html')
+				@@include('./01-components/forms/_input-standard.html', {
+					"type": "text" 
+				})
 			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-text.html')</code></pre>
+			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
+				"type": "text" 
+			})</code></pre>
 
+			<br>
 
+			<h2>Type - Password</h2>
+			<div class="gs-present">
+				@@include('./01-components/forms/_input-standard.html', {
+					"type": "password" 
+				})
+			</div>
+
+			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
+				"type": "password" 
+			})</code></pre>
+
+			<br>
+
+			<h2>Type - URL</h2>
+			<p>The URL Input has access to the <code class="language-scss">:valid</code> and <code class="language-scss">:invalid</code> pseudo-classes.</p>
+			<p>Only the <code class="language-scss">:invalid</code> pseudo-class is used as a visual indicator.</p>
+
+			<div class="gs-present">
+				@@include('./01-components/forms/_input-standard.html', {
+					"type": "url" 
+				})
+			</div>
+
+			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
+				"type": "url" 
+			})</code></pre>
 
 
 
