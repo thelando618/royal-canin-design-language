@@ -1,5 +1,5 @@
 label {
-	display: block;
+	display: inline-block;
 	font-size: 1.125em;
 	margin-bottom: .75em;
 }
@@ -8,6 +8,7 @@ label {
 input,
 textarea,
 select {
+	display: block;
 	width: 100%;
 	font-size: 1.125em;
 	padding: .75em;
@@ -46,6 +47,11 @@ textarea {
 
 
 
+input[type="checkbox"] {
+	display: inline-block;
+}
+
+
 
 input[type="checkbox"],
 input[type="color"] {
@@ -61,8 +67,6 @@ input[type="color"] {
 	height: 2.5em;
 	padding: 0;
 }
-
-
 
 
 
@@ -133,3 +137,4 @@ input[type="checkbox"] ~ label {
     height: 10px;
 	}
 }
+

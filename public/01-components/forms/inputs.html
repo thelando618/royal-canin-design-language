@@ -74,6 +74,7 @@
 			<h2>Type - Checkbox</h2>
 			<p>When using Checkboxes, ensure that the accompanying Label either wraps the input, or is place directly after it.</p>
 			<p>What follows is an example of both implementations.</p>
+			<p>In a form or a real world situation, Checkboxes and their labels should be grouped inside of, and positioned by, a containing element.</p>
 
 			<div class="gs-present">
 				<!-- Wrapping Label -->
@@ -81,6 +82,8 @@
 	<input id="id-wrapped-checkbox" type="checkbox" name="checkbox">
 	Input Label
 </label>
+
+<br>
 
 <!-- Sibling Label -->
 <input id="id-sibling-checkbox" type="checkbox" name="checkbox">
@@ -92,6 +95,8 @@
 	<input id="id-wrapped-checkbox" type="checkbox" name="checkbox">
 	Input Label
 </label>
+
+<br>
 
 <!-- Sibling Label -->
 <input id="id-sibling-checkbox" type="checkbox" name="checkbox">
@@ -109,6 +114,17 @@
 
 			<pre><code class="gs-code language-html"><label for="id-color">Input Label</label>
 <input id="id-color" type="color" name="color" value="#E2001A"></code></pre>
+
+			<br>
+
+			<h2>Type - Date</h2>
+			<div class="gs-present">
+				<label for="id-date">Input Label</label>
+<input id="id-date" type="date" name="date">
+			</div>
+
+			<pre><code class="gs-code language-html"><label for="id-date">Input Label</label>
+<input id="id-date" type="date" name="date"></code></pre>
 
 			<br>
 
