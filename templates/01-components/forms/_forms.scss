@@ -50,13 +50,15 @@ input[type="email"] {
 }
 
 
-input[type="checkbox"] {
+input[type="checkbox"],
+input[type="radio"] {
 	display: inline-block;
 }
 
 
 
 input[type="checkbox"],
+input[type="radio"],
 input[type="color"] {
 	width: auto;
 	box-shadow: none;
@@ -76,7 +78,8 @@ input[type="color"] {
 
 // Wrapping Label
 label {
-	> input[type="checkbox"] {
+	> input[type="checkbox"],
+	> input[type="radio"] {
     display: inline-block;
     vertical-align: baseline;
     margin-bottom: 0;
@@ -86,7 +89,8 @@ label {
 
 
 // Sibling Label
-input[type="checkbox"] ~ label {
+input[type="checkbox"] ~ label,
+input[type="radio"] ~ label {
   display: inline-block;
   vertical-align: baseline;
   margin-left: .5em;

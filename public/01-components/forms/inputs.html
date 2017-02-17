@@ -72,9 +72,9 @@
 			<br>
 
 			<h2>Type - Checkbox</h2>
-			<p>When using Checkboxes, ensure that the accompanying Label either wraps the input, or is place directly after it.</p>
+			<p>When using Checkbox Inputs, ensure that the accompanying Label either wraps the input, or is place directly after it.</p>
 			<p>What follows is an example of both implementations.</p>
-			<p>In a form or a real world situation, Checkboxes and their labels should be grouped inside of, and positioned by, a containing element.</p>
+			<p>In a form or a real world situation, Checkbox Inputs and their labels should be grouped inside of, and positioned by, a containing element.</p>
 
 			<div class="gs-present">
 				<!-- Wrapping Label -->
@@ -161,6 +161,39 @@
 
 			<pre><code class="gs-code language-html"><label for="id-number">Input Label</label>
 <input id="id-number" type="number" name="number" placeholder="Placeholder..."></code></pre>
+
+			<br>
+
+			<h2>Type - Radio</h2>
+			<p>When using Radio Inputs, ensure that the accompanying Label either wraps the input, or is place directly after it.</p>
+			<p>What follows is an example of both implementations.</p>
+			<p>In a form or a real world situation, Radio Inputs and their labels should be grouped inside of, and positioned by, a containing element.</p>
+
+			<div class="gs-present">
+				<!-- Wrapping Label -->
+<label for="id-wrapped-radio">
+	<input id="id-wrapped-radio" type="radio" name="radio">
+	Input Label
+</label>
+
+<br>
+
+<!-- Sibling Label -->
+<input id="id-sibling-radio" type="radio" name="radio">
+<label for="id-sibling-radio">Input Label</label>
+			</div>
+
+			<pre><code class="gs-code language-html"><!-- Wrapping Label -->
+<label for="id-wrapped-radio">
+	<input id="id-wrapped-radio" type="radio" name="radio">
+	Input Label
+</label>
+
+<br>
+
+<!-- Sibling Label -->
+<input id="id-sibling-radio" type="radio" name="radio">
+<label for="id-sibling-radio">Input Label</label></code></pre>
 
 			<br>
 
