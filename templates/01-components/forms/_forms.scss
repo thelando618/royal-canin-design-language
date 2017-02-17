@@ -1,14 +1,13 @@
 label {
-	display: inline-block;
+	display: block;
 	font-size: 1.125em;
-	margin: .75em 0;
+	margin-bottom: .75em;
 }
 
 
 input,
 textarea,
 select {
-	display: block;
 	width: 100%;
 	font-size: 1.125em;
 	padding: .75em;
@@ -39,10 +38,47 @@ select {
 	}
 }
 
+
 textarea {
 	resize: vertical;
 	height: 200px;
 }
+
+
+
+
+input[type="checkbox"] {
+	width: auto;
+	box-shadow: none;
+}
+
+
+
+
+// Wrapping Label
+label {
+	> input[type="checkbox"] {
+    display: inline-block;
+    vertical-align: baseline;
+    margin-bottom: 0;
+    margin-right: .5em;
+	}
+}
+
+
+// Sibling Label
+input[type="checkbox"] ~ label {
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: .5em;
+}
+
+
+
+
+
+
+
 
 
 .rc-select {

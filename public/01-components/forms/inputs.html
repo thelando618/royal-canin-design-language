@@ -71,6 +71,34 @@
 
 			<br>
 
+			<h2>Type - Checkbox</h2>
+			<p>When using Checkboxes, ensure that the accompanying Label either wraps the input, or is place directly after it.</p>
+			<p>What follows is an example of both implementations.</p>
+
+			<div class="gs-present">
+				<!-- Wrapping Label -->
+<label for="id-wrapped-checkbox">
+	<input id="id-wrapped-checkbox" type="checkbox" name="checkbox">
+	Input Label
+</label>
+
+<!-- Sibling Label -->
+<input id="id-sibling-checkbox" type="checkbox" name="checkbox">
+<label for="id-sibling-checkbox">Input Label</label>
+			</div>
+
+			<pre><code class="gs-code language-html"><!-- Wrapping Label -->
+<label for="id-wrapped-checkbox">
+	<input id="id-wrapped-checkbox" type="checkbox" name="checkbox">
+	Input Label
+</label>
+
+<!-- Sibling Label -->
+<input id="id-sibling-checkbox" type="checkbox" name="checkbox">
+<label for="id-sibling-checkbox">Input Label</label></code></pre>
+
+			<br>
+
 			<h2>Type - Text</h2>
 			<div class="gs-present">
 				<label for="id-text">Input Label</label>
