@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Testing</title>
+
+<!-- 	<script src="https://use.typekit.net/cvb5ckl.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script> -->
+
+	<link rel="stylesheet" href="/assets/css/style.css">
+	<link rel="stylesheet" href="/assets/css/prism.css">
+</head>
+
+<body>
+
+<div class="gs-nav">
+	<header class="gs-nav__header">
+		<figure class="gs-logo">
+			<img src="https://www.royalcanin.co.uk/wp-content/themes/rcuk2015/img/rc-logo-2016.png" alt="Royal Canin">
+		</figure>
+
+		<!-- update to gs-nav__trigger -->
+		<div id="gs-nav-trigger">
+			<div class="gs-nav-trigger__pos">
+				<hr>
+				<hr>
+				<hr>
+			</div>
+		</div>
+	</header>
+
+	<nav class="gs-nav__nav">
+		<ul><li><a href="#" class="gs-nav__trigger">Documentation</a><ul><li><a href="/00-documentation/index.html">Index</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Components</a><ul><li><a href="#" class="gs-nav__trigger">SVGs</a><ul><li><a href="/01-components/SVGs/svgs.html">Svgs</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Alerts</a><ul><li><a href="/01-components/alerts/alert.html">Alert</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Buttons</a><ul><li><a href="/01-components/buttons/button-icon.html">Button-icon</a></li><li><a href="/01-components/buttons/button-loading.html">Button-loading</a></li><li><a href="/01-components/buttons/button-success.html">Button-success</a></li><li><a href="/01-components/buttons/buttons.html">Buttons</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Colours</a><ul><li><a href="/01-components/colours/colours.html">Colours</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Fonts</a><ul><li><a href="/01-components/fonts/fonts.html">Fonts</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Forms</a><ul><li><a href="/01-components/forms/inputs.html">Inputs</a></li><li><a href="/01-components/forms/select.html">Select</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Lists</a><ul><li><a href="/01-components/lists/list-icons.html">List-icons</a></li><li><a href="/01-components/lists/list-modifiers.html">List-modifiers</a></li><li><a href="/01-components/lists/list-ordered.html">List-ordered</a></li><li><a href="/01-components/lists/list-significant.html">List-significant</a></li><li><a href="/01-components/lists/list-unordered.html">List-unordered</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Tables</a><ul><li><a href="/01-components/tables/table.html">Table</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Typography</a><ul><li><a href="/01-components/typography/header.html">Header</a></li><li><a href="/01-components/typography/inline.html">Inline</a></li><li><a href="/01-components/typography/paragraph.html">Paragraph</a></li></ul></li></ul></li></ul>
+	</nav>
+</div>
+
+
+<div class="gs-stage">
+
+	<div class="gs-stage__inner">
+
+		<div class="gs-stage__content">
+
+			<h1>Button - Icon</h1>
+			<p>No extra class is required to use an icon in a button. Simply add the required SVG from the list of available icons.</p>
+
+			<p>A button with a size modifier will automatically increase the size of the SVG.</p>
+
+			<div class="gs-present">
+				<button class="">
+	Button
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img">
+		<title id="title">Search</title>
+		<path d="M56 8c-5.3-5.3-12.3-8-19.2-8-7 0-13.9 2.7-19.2 8-9.3 9.3-10.5 23.8-3.4 34.4L1.6 55c-2.1 2.1-2.1 5.4 0 7.5s5.4 2.1 7.5 0l12.6-12.6c4.6 3.1 9.8 4.6 15.1 4.6 7 0 13.9-2.7 19.2-8C66.6 35.8 66.6 18.6 56 8zm-4.9 33.5c-3.8 3.8-8.9 5.9-14.3 5.9s-10.5-2.1-14.3-5.9c-7.9-7.9-7.9-20.7 0-28.6C26.3 9.1 31.4 7 36.8 7s10.5 2.1 14.3 5.9S57 21.8 57 27.2s-2.1 10.5-5.9 14.3z"></path>
+	</svg>
+</button>
+
+			</div>
+
+			<pre><code class="gs-code language-html"><button class="">
+	Button
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img">
+		<title id="title">Search</title>
+		<path d="M56 8c-5.3-5.3-12.3-8-19.2-8-7 0-13.9 2.7-19.2 8-9.3 9.3-10.5 23.8-3.4 34.4L1.6 55c-2.1 2.1-2.1 5.4 0 7.5s5.4 2.1 7.5 0l12.6-12.6c4.6 3.1 9.8 4.6 15.1 4.6 7 0 13.9-2.7 19.2-8C66.6 35.8 66.6 18.6 56 8zm-4.9 33.5c-3.8 3.8-8.9 5.9-14.3 5.9s-10.5-2.1-14.3-5.9c-7.9-7.9-7.9-20.7 0-28.6C26.3 9.1 31.4 7 36.8 7s10.5 2.1 14.3 5.9S57 21.8 57 27.2s-2.1 10.5-5.9 14.3z"></path>
+	</svg>
+</button>
+</code></pre>
+
+			<br>
+
+			<h2>Button Large - Icon</h2>
+			<div class="gs-present">
+				<button class="button--large">
+	Button
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img">
+		<title id="title">Search</title>
+		<path d="M56 8c-5.3-5.3-12.3-8-19.2-8-7 0-13.9 2.7-19.2 8-9.3 9.3-10.5 23.8-3.4 34.4L1.6 55c-2.1 2.1-2.1 5.4 0 7.5s5.4 2.1 7.5 0l12.6-12.6c4.6 3.1 9.8 4.6 15.1 4.6 7 0 13.9-2.7 19.2-8C66.6 35.8 66.6 18.6 56 8zm-4.9 33.5c-3.8 3.8-8.9 5.9-14.3 5.9s-10.5-2.1-14.3-5.9c-7.9-7.9-7.9-20.7 0-28.6C26.3 9.1 31.4 7 36.8 7s10.5 2.1 14.3 5.9S57 21.8 57 27.2s-2.1 10.5-5.9 14.3z"></path>
+	</svg>
+</button>
+
+			</div>
+
+			<pre><code class="gs-code language-html"><button class="button--large">
+	Button
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img">
+		<title id="title">Search</title>
+		<path d="M56 8c-5.3-5.3-12.3-8-19.2-8-7 0-13.9 2.7-19.2 8-9.3 9.3-10.5 23.8-3.4 34.4L1.6 55c-2.1 2.1-2.1 5.4 0 7.5s5.4 2.1 7.5 0l12.6-12.6c4.6 3.1 9.8 4.6 15.1 4.6 7 0 13.9-2.7 19.2-8C66.6 35.8 66.6 18.6 56 8zm-4.9 33.5c-3.8 3.8-8.9 5.9-14.3 5.9s-10.5-2.1-14.3-5.9c-7.9-7.9-7.9-20.7 0-28.6C26.3 9.1 31.4 7 36.8 7s10.5 2.1 14.3 5.9S57 21.8 57 27.2s-2.1 10.5-5.9 14.3z"></path>
+	</svg>
+</button>
+</code></pre>
+
+		</div>
+
+	</div>
+
+</div>
+
+
+<script src="/assets/js/scripts.js"></script>
+<script src="/assets/js/prism.js"></script>
+
+</body>
+</html>
+

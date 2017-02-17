@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Testing</title>
+
+<!-- 	<script src="https://use.typekit.net/cvb5ckl.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script> -->
+
+	<link rel="stylesheet" href="/assets/css/style.css">
+	<link rel="stylesheet" href="/assets/css/prism.css">
+</head>
+
+<body>
+
+<div class="gs-nav">
+	<header class="gs-nav__header">
+		<figure class="gs-logo">
+			<img src="https://www.royalcanin.co.uk/wp-content/themes/rcuk2015/img/rc-logo-2016.png" alt="Royal Canin">
+		</figure>
+
+		<!-- update to gs-nav__trigger -->
+		<div id="gs-nav-trigger">
+			<div class="gs-nav-trigger__pos">
+				<hr>
+				<hr>
+				<hr>
+			</div>
+		</div>
+	</header>
+
+	<nav class="gs-nav__nav">
+		<ul><li><a href="#" class="gs-nav__trigger">Documentation</a><ul><li><a href="/00-documentation/index.html">Index</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Components</a><ul><li><a href="#" class="gs-nav__trigger">SVGs</a><ul><li><a href="/01-components/SVGs/svgs.html">Svgs</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Alerts</a><ul><li><a href="/01-components/alerts/alert.html">Alert</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Buttons</a><ul><li><a href="/01-components/buttons/button-icon.html">Button-icon</a></li><li><a href="/01-components/buttons/button-loading.html">Button-loading</a></li><li><a href="/01-components/buttons/button-success.html">Button-success</a></li><li><a href="/01-components/buttons/buttons.html">Buttons</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Colours</a><ul><li><a href="/01-components/colours/colours.html">Colours</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Fonts</a><ul><li><a href="/01-components/fonts/fonts.html">Fonts</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Forms</a><ul><li><a href="/01-components/forms/inputs.html">Inputs</a></li><li><a href="/01-components/forms/select.html">Select</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Lists</a><ul><li><a href="/01-components/lists/list-icons.html">List-icons</a></li><li><a href="/01-components/lists/list-modifiers.html">List-modifiers</a></li><li><a href="/01-components/lists/list-ordered.html">List-ordered</a></li><li><a href="/01-components/lists/list-significant.html">List-significant</a></li><li><a href="/01-components/lists/list-unordered.html">List-unordered</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Tables</a><ul><li><a href="/01-components/tables/table.html">Table</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Typography</a><ul><li><a href="/01-components/typography/header.html">Header</a></li><li><a href="/01-components/typography/inline.html">Inline</a></li><li><a href="/01-components/typography/paragraph.html">Paragraph</a></li></ul></li></ul></li></ul>
+	</nav>
+</div>
+
+
+<div class="gs-stage">
+
+	<div class="gs-stage__inner">
+
+		<div class="gs-stage__content">
+
+			<h1>Table</h1>
+
+			<p>Tables should be used when it is appropriate for the data.</p>
+			<p>The following attributes are now deprecated and <strong>should not</strong> be used:</p>
+
+			<ul>
+				<li><code>align</code></li>
+				<li><code>bgcolor</code></li>
+				<li><code>border</code></li>
+				<li><code>cellpadding</code></li>
+				<li><code>cellspacing</code></li>
+				<li><code>frame</code></li>
+				<li><code>rules</code></li>
+				<li><code>summary</code></li>
+				<li><code>width</code></li>
+			</ul>
+			
+			<p>The default styling will make the tables scroll horizontally when the browser window is narrower than the data being displayed.</p>
+
+			<br>
+
+			<h2>Structure</h2>
+			<p>The <code>thead</code>, <code>tbody</code> and <code>tfoot</code> tags must be used where appropriate.</p>
+			<pre><code class="gs-code language-html"><table>
+	<thead>
+		<tr>
+			<th>...</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>...</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td>...</td>
+		</tr>
+	</tfoot>
+</table></code></pre>
+
+			<br>
+
+			<h2>Standard Table</h2>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Header One</th>
+						<th>Header Two</th>
+						<th>Header Three</th>
+						<th>Header Four</th>
+						<th>Header Five</th>
+						<th>Header Six</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>Cell One</td>
+						<td>Cell Two</td>
+						<td>Cell Three</td>
+						<td>Cell Four</td>
+						<td>Cell Five</td>
+						<td><input type="checkbox" name="checkbox"></td>
+					</tr>
+					<tr>
+						<td>Cell One</td>
+						<td>Cell Two</td>
+						<td>Cell Three</td>
+						<td>Cell Four</td>
+						<td>Cell Five</td>
+						<td><input type="checkbox" name="checkbox"></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<br>
+
+			<h2>Table - colspan</h2>
+			<p>The <code>colspan</code> attribute may be used to force a cell to span mutliple columns.</p>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Header One</th>
+						<th>Header Two</th>
+						<th>Header Three</th>
+						<th>Header Four</th>
+						<th>Header Five</th>
+						<th>Header Six</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>Cell One</td>
+						<td>Cell Two</td>
+						<td>Cell Three</td>
+						<!-- colspan -->
+    				<td colspan="2">Cell Four - Span Two</td>
+						<td><input type="checkbox" name="checkbox"></td>
+					</tr>
+					<tr>
+						<td>Cell One</td>
+						<td colspan="4">Cell Two - Span Four</td>
+						<!-- colspan -->
+						<!-- colspan -->
+						<!-- colspan -->
+						<td><input type="checkbox" name="checkbox"></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<br>
+
+			<h2>Table - rowspan</h2>
+			<p>The <code>rowspan</code> attribute may be used to force a cell to span mutliple rows, only when the <code>table--blank</code> class is applied to the table. .</p>
+
+			<table class="table--blank">
+				<thead>
+					<tr>
+						<th>Header One</th>
+						<th>Header Two</th>
+						<th>Header Three</th>
+						<th>Header Four</th>
+						<th>Header Five</th>
+						<th>Header Six</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>Cell One</td>
+						<td rowspan="2">Cell Two - Span Two</td>
+						<td>Cell Three</td>
+						<td>Cell Four</td>
+						<td>Cell Five</td>
+						<td><input type="checkbox" name="checkbox"></td>
+					</tr>
+					<tr>
+						<td>Cell One</td>
+						<!-- rowspan -->
+						<td>Cell Three</td>
+						<td>Cell Four</td>
+						<td>Cell Five</td>
+						<td><input type="checkbox" name="checkbox"></td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+
+	</div>
+
+</div>
+
+
+<script src="/assets/js/scripts.js"></script>
+<script src="/assets/js/prism.js"></script>
+
+</body>
+</html>
+

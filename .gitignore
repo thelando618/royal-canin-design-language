@@ -10,4 +10,5 @@ node_modules/
 /sass-cache
 
 # Styleguide
-public
+# On gh-pages branch, acknowledge public directiory
+# public
