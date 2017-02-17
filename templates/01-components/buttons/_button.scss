@@ -1,4 +1,6 @@
-button {
+button,
+input[type="button"] {
+	width: auto;
 	font-size: .875em;
 	line-height: 1.15;
 	background-color: $rc-red;

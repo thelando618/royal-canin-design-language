@@ -5,9 +5,10 @@ label {
 }
 
 
-input[type="text"],
+input,
 textarea,
 select {
+	display: block;
 	width: 100%;
 	font-size: 1.125em;
 	padding: .75em;
