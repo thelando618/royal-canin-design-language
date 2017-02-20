@@ -1,0 +1,30 @@
+[role="alert"], .alert {
+	text-align: center;
+	border: 2px solid $rc-red;
+	border-radius: 25px;
+	padding: 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+
+	strong {
+		font-weight: 300;
+	}
+
+	&.alert--error {
+		background-color: transparentize( $rc-red, .9 );
+		color: $rc-red;
+	}
+
+	&.alert--success {
+		// @todo make this into a variable
+		border-color: #8AE375;
+		color: darken( #8AE375, 25% );
+		background-color: transparentize( #8AE375, .9 );
+	}
+
+
+	// @todo make this into a variable
+	@media ( min-width: 640px ) {
+		border-radius: 50px;
+	}
+}

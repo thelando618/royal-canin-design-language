@@ -8,6 +8,54 @@
 
 			<h1>Alert</h1>
 
+			<h2>Standard Alert</h2>
+
+			<div class="gs-present">
+				@@include('./01-components/alerts/_alert.html', {
+					"class": "",
+					"message": "Standard Alert. Neither positive or negative."
+				})
+			</div>
+
+			<pre><code class="gs-code language-html">@@include('./01-components/alerts/_alert.html', {
+				"class": "",
+				"message": "Standard Alert. Neither positive or negative."
+			})</code></pre>
+
+			<br>
+
+			<h2>Error Alert</h2>
+
+			<div class="gs-present">
+				@@include('./01-components/alerts/_alert.html', {
+					"class": "alert--error",
+					"message": "Oh dear, you have done something wrong!"
+				})
+			</div>
+
+			<pre><code class="gs-code language-html">@@include('./01-components/alerts/_alert.html', {
+				"class": "alert--error",
+				"message": "Oh dear, you have done something wrong!"
+			})</code></pre>
+
+			<br>
+
+			<h2>Success Alert</h2>
+
+			<div class="gs-present">
+				@@include('./01-components/alerts/_alert.html', {
+					"class": "alert--success",
+					"message": "Congrats, you have done something well!"
+				})
+			</div>
+
+			<pre><code class="gs-code language-html">@@include('./01-components/alerts/_alert.html', {
+				"class": "alert--success",
+				"message": "Congrats, you have done something well!"
+			})</code></pre>
+
+
+
 			<p></p>
 
 		</div>
