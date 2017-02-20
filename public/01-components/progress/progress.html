@@ -42,54 +42,46 @@
 
 		<div class="gs-stage__content">
 
-			<h1>Alert</h1>
-
-			<h2>Standard Alert</h2>
-
-			<div class="gs-present">
-				<aside role="alert" class="alert ">
-  <strong>Standard Alert. Neither positive or negative.</strong>
-</aside>
-			</div>
-
-			<pre><code class="gs-code language-html"><aside role="alert" class="alert ">
-  <strong>Standard Alert. Neither positive or negative.</strong>
-</aside></code></pre>
+			<h1>Progress</h1>
+			<p>The Progress element is used to display a known percentage between two values.</p>
+			<p>If the browser does not support the <code class="language-html">&lt;progress&gt;</code> element <b>(IE9)</b>, then the fallback div will be shown instead.</p>
 
 			<br>
 
-			<h2>Error Alert</h2>
+			<div class="gs-present gs-present--white">
+				<div class="rc-progress">
+	<div class="rc-progress__markers">
+		<div class="rc-progress__markers__marker rc-progress__markers__marker--start">0%</div>
+		<div class="rc-progress__markers__marker rc-progress__markers__marker--end">100%</div>
+	</div>
 
-			<div class="gs-present">
-				<aside role="alert" class="alert alert--error">
-  <strong>Oh dear, you have done something wrong!</strong>
-</aside>
+	<progress max="100" value="80">
+		<div class="rc-progress--fallback">
+			<span class="rc-progress--fallback__bar"></span>
+			<span class="rc-progress--fallback__value" style="width: 80%;">Progress: 80%</span>
+		</div>
+	</progress>
+</div>
 			</div>
-
-			<pre><code class="gs-code language-html"><aside role="alert" class="alert alert--error">
-  <strong>Oh dear, you have done something wrong!</strong>
-</aside></code></pre>
 
 			<br>
 
-			<h2>Success Alert</h2>
+			<pre><code class="gs-code language-html"><div class="rc-progress">
+	<div class="rc-progress__markers">
+		<div class="rc-progress__markers__marker rc-progress__markers__marker--start">0%</div>
+		<div class="rc-progress__markers__marker rc-progress__markers__marker--end">100%</div>
+	</div>
 
-			<div class="gs-present">
-				<aside role="alert" class="alert alert--success">
-  <strong>Congrats, you have done something well!</strong>
-</aside>
-			</div>
-
-			<pre><code class="gs-code language-html"><aside role="alert" class="alert alert--success">
-  <strong>Congrats, you have done something well!</strong>
-</aside></code></pre>
-
-
-
-			<p></p>
+	<progress max="100" value="80">
+		<div class="rc-progress--fallback">
+			<span class="rc-progress--fallback__bar"></span>
+			<span class="rc-progress--fallback__value" style="width: 80%;">Progress: 80%</span>
+		</div>
+	</progress>
+</div></code></pre>
 
 		</div>
-
+		
 	</div>
 
 </div>
@@ -100,4 +92,3 @@
 
 </body>
 </html>
-

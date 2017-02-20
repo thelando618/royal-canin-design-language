@@ -1,0 +1,106 @@
+.rc-progress {
+  position: relative;
+
+  .rc-progress__markers {
+    overflow: auto;
+    padding-bottom: 1em;
+  }
+
+  .rc-progress__markers__marker {
+    position: relative;
+    // @todo make this into a variable
+    background-color: #1E3170;
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 1em;
+    padding: .5em;
+    min-width: 3em;
+    text-align: center;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      width: 0;
+      height: 0;
+      border-left: .5em solid transparent;
+      border-right: .5em solid transparent;
+      border-top: .5em solid #1E3170;
+    }
+  }
+
+  .rc-progress__markers__marker--start {
+    float: left;
+
+    &:after {
+      left: 0;
+    }
+  }
+
+  .rc-progress__markers__marker--end {
+    float: right;
+
+    &:after {
+      right: 0;
+    }
+  }
+
+
+
+
+  // Progress Element and Fallback
+  progress[value], .rc-progress--fallback {
+    position: relative;
+    height: 2em;
+  }
+
+  progress[value]::-webkit-progress-bar, .rc-progress--fallback__bar {
+    background-color: #FFFFFF;
+  }
+
+  progress[value]::-webkit-progress-value, .rc-progress--fallback__value {
+    background-color: $rc-red;
+    // @todo make this into a helper class and add class on progress page.
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  // Progress Element
+  progress[value] {
+    appearance: none;
+    width: 100%;
+    display: block;
+  }
+
+  // Fallback element
+  .rc-progress--fallback__value, .rc-progress--fallback__bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  // @todo make this into a variable
+  @media ( min-width: 640px ){
+    margin-left: 2em;
+    margin-right: 2em;
+
+    .rc-progress__markers {
+      margin-left: -2em;
+      margin-right: -2em;
+    }
+
+    .rc-progress__markers__marker--start, .rc-progress__markers__marker--end {
+      &:after {
+        left: 50%;
+        right: auto;
+        margin-left: -.5em;
+      }
+    }
+  }
+
+
+}
+
