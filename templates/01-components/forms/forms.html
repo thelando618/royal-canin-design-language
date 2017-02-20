@@ -1,0 +1,43 @@
+@@include('./_site-header.html')
+
+<div class="gs-stage">
+
+	<div class="gs-stage__inner">
+
+		<div class="gs-stage__content">
+
+			<h1>Forms</h1>
+
+			<h2>A note on Accessibility (A11y)</h2>
+
+			<p>Please ensure that the <code class="language-html">for=""</code> attribute is used on labels and that it matches the input ID, for accessibility purposes, for example: </p>
+
+			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
+				"type": "text" 
+			})</code></pre>
+
+			<p>Since the <code class="language-html">for</code> attribute relies on an ID to match up with, ensure that all Input IDs are unique on your page.</p>
+
+			<p>Every input, where applicable, must include a Label. If the design calls for an instance where no label exists, it should be hidden using the <code class="language-scss">screen-reader-text</code> class. More information on this can be on the <a href="#">Accessibility</a> page.</p>
+
+			<br>
+
+			<h2>Positioning Inputs</h2>
+			<p>When building a form, please use a wrapping element to position your Inputs, as opposed to applying positioning rules directly to the Inputs. For example:</p>
+
+
+			<pre><code class="gs-code language-html">@@include('./01-components/forms/_form-positioning.html')</code></pre>
+
+			<br>
+
+			<h2><strong>&lt;input type="image"&gt;</strong></h2>
+			<p>Please don't use the Image input type for submit buttons.</p>
+			<p>The Submit input type, a button or an anchor with a class of <code class="language-scss">button</code> is more appropriate.</p>
+
+		</div>
+		
+	</div>
+
+</div>
+
+@@include('./_site-footer.html')
