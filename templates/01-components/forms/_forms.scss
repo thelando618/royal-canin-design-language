@@ -46,7 +46,12 @@ textarea {
 }
 
 
-input[type="email"] {
+input[type="checkbox"],
+input[type="color"],
+input[type="file"],
+input[type="radio"] {
+	width: auto;
+	box-shadow: none;
 }
 
 
@@ -55,17 +60,6 @@ input[type="radio"] {
 	display: inline-block;
 }
 
-
-
-input[type="checkbox"],
-input[type="radio"],
-input[type="color"] {
-	width: auto;
-	box-shadow: none;
-}
-
-
-
 input[type="color"] {
 	background: none;
 	width: 5em;
@@ -73,6 +67,9 @@ input[type="color"] {
 	padding: 0;
 }
 
+input[type="file"] {
+	padding-left: 0;
+}
 
 
 
