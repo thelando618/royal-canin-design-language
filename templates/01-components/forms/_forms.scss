@@ -142,3 +142,78 @@ input[type="radio"] ~ label {
 	}
 }
 
+
+
+// Custom inputs
+.rc-input--custom {
+	overflow: hidden;
+	position: relative;
+
+	input[type="checkbox"],
+	input[type="radio"] {
+		display: none;
+	}
+
+	// Unchecked
+	input[type="checkbox"] + label,
+	input[type="radio"] + label {
+		cursor: pointer;
+		margin-left: 0;
+
+		&:before {
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			line-height: 1;
+			width: 1em;
+			height: 1em;
+			padding: .25em;
+			border: 2px solid #A1A1A1; // @todo make this into a variable
+			transition: background-color 0.2s;
+			margin-right: .5em;
+		}
+	}
+
+	input[type="checkbox"] + label {
+		&:before {
+			border-radius: 4px;
+		}
+	}
+
+	input[type="radio"]+ label {
+		&:before {
+			border-radius: 100%;
+		}
+	}
+
+
+	// Checked
+	input[type="checkbox"]:checked + label,
+	input[type="radio"]:checked + label {
+		&:before {
+		  background: center center / 1.2em no-repeat;
+		}
+	}
+
+	input[type="checkbox"]:checked + label {
+		&:before {
+			// @todo update SVG
+			background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/59/Feedbin-Icon-check.svg');
+			background-color: $rc-red;
+			border-color: transparent;
+		}
+	}
+
+
+	input[type="radio"]:checked + label {
+		&:before {
+			background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><style>.st0{fill:#E2001A;}</style><circle cx="100" cy="100" r="100" class="st0"/></svg>');
+			background-color: #FFFFFF;
+			border-color: $rc-red;
+		}
+	}
+}
+
+
+
+
