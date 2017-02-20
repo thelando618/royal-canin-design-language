@@ -1,0 +1,43 @@
+@@include('./_site-header.html')
+
+<div class="gs-stage">
+
+	<div class="gs-stage__inner">
+
+		<div class="gs-stage__content">
+
+			<h1>Inputs - States</h1>
+			<p>This page displays the more common Input types that will likely be used on most Royal Canin sites.</p>
+
+			<br>
+
+			<h2>Required</h2>
+			<div class="gs-present">
+				<label>Input Label</label>
+				<input id="id-text" type="text" name="name" placeholder="Placeholder..." required>
+			</div>
+
+			<br>
+
+			<h2>Error</h2>
+			<p>When an input fails to validate, the class <code class="language-scss">error</code> is added to the input.</p>
+			<div class="gs-present">
+				<label>Input Label</label>
+				<input id="id-text" type="text" name="name" placeholder="Placeholder..." class="error">
+			</div>
+
+			<br>
+
+			<h2>Disabled</h2>
+			<div class="gs-present">
+				<label>Input Label</label>
+				<input id="id-text" type="text" name="name" placeholder="Placeholder..." disabled>
+			</div>
+
+		</div>
+		
+	</div>
+
+</div>
+
+@@include('./_site-footer.html')

@@ -6,7 +6,8 @@ label {
 
 input,
 textarea,
-select {
+select,
+input:required {
 	display: block;
 	width: 100%;
 	font-size: 1.125em;
@@ -31,10 +32,11 @@ select {
 		color: #E45252;
 		border: 1px solid $rc-red;
 		background-color: #F4EAEA;
+	}
 
-		&:focus {
-			box-shadow: 0 0 4px rgba( 232, 90, 90, 0.9 );
-		}
+	&:required {
+		background-color: transparent;
+		border-color: transparent;
 	}
 }
 
