@@ -45,11 +45,13 @@
 
 		<div class="gs-stage__content">
 
-			<h1>Select</h1>
+			<h1>Select Menus</h1>
 
 
+			<h2>Standard</h2>
 			<div class="gs-present">
-				<select>
+				<label>Select Label</label>
+<select>
 	<option selected disabled>Please select an option</option>
 	<option>Option 1</option>
 	<option>Option 2</option>
@@ -57,7 +59,8 @@
 </select>
 			</div>
 
-			<pre><code class="gs-code language-html"><select>
+			<pre><code class="gs-code language-html"><label>Select Label</label>
+<select>
 	<option selected disabled>Please select an option</option>
 	<option>Option 1</option>
 	<option>Option 2</option>
@@ -65,10 +68,12 @@
 </select></code></pre>
 
 			<br>
-			<br>
+
+			<h2>Custom</h2>
 
 			<div class="gs-present">
-				<div class="rc-select">
+				<label>Select Label</label>
+<div class="rc-select--custom">
 	<select>
 		<option selected="" disabled="">Select an option</option>
 		<option>Option 1</option>
@@ -78,7 +83,34 @@
 </div>
 			</div>
 
-			<pre><code class="gs-code language-html"><div class="rc-select">
+			<pre><code class="gs-code language-html"><label>Select Label</label>
+<div class="rc-select--custom">
+	<select>
+		<option selected="" disabled="">Select an option</option>
+		<option>Option 1</option>
+		<option>Option 2</option>
+		<option>Option 3</option>
+	</select>
+</div></code></pre>
+
+			<br>
+
+			<h2>Custom - Significant</h2>
+
+			<div class="gs-present">
+				<label>Select Label</label>
+<div class="rc-select--custom rc-select--custom--significant">
+	<select>
+		<option selected="" disabled="">Select an option</option>
+		<option>Option 1</option>
+		<option>Option 2</option>
+		<option>Option 3</option>
+	</select>
+</div>
+			</div>
+
+			<pre><code class="gs-code language-html"><label>Select Label</label>
+<div class="rc-select--custom rc-select--custom--significant">
 	<select>
 		<option selected="" disabled="">Select an option</option>
 		<option>Option 1</option>

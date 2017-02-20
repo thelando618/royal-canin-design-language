@@ -9,23 +9,43 @@
 
 		<div class="gs-stage__content">
 
-			<h1>Select</h1>
+			<h1>Select Menus</h1>
 
 
+			<h2>Standard</h2>
 			<div class="gs-present">
-				@@include('./01-components/forms/_select.html')
+				@@include('./01-components/forms/_select-standard.html')
 			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_select.html')</code></pre>
+			<pre><code class="gs-code language-html">@@include('./01-components/forms/_select-standard.html')</code></pre>
 
 			<br>
-			<br>
+
+			<h2>Custom</h2>
 
 			<div class="gs-present">
-				@@include('./01-components/forms/_select-rc.html')
+				@@include('./01-components/forms/_select-custom.html', {
+					"class" : "rc-select--custom"
+				})
 			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_select-rc.html')</code></pre>
+			<pre><code class="gs-code language-html">@@include('./01-components/forms/_select-custom.html', {
+				"class" : "rc-select--custom"
+			})</code></pre>
+
+			<br>
+
+			<h2>Custom - Significant</h2>
+
+			<div class="gs-present">
+				@@include('./01-components/forms/_select-custom.html', {
+					"class" : "rc-select--custom rc-select--custom--significant"
+				})
+			</div>
+
+			<pre><code class="gs-code language-html">@@include('./01-components/forms/_select-custom.html', {
+				"class" : "rc-select--custom rc-select--custom--significant"
+			})</code></pre>
 
 		</div>
 		
