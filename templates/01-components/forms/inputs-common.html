@@ -1,0 +1,168 @@
+@@include('./_site-header.html')
+
+<div class="gs-stage">
+
+	<div class="gs-stage__inner">
+
+		<div class="gs-stage__content">
+
+			<h1>Inputs - Common</h1>
+			<p>This page displays the more common Input types that will likely be used on most Royal Canin sites.</p>
+
+			<br>
+
+			<h2>Type - Button</h2>
+			<div class="gs-present">
+				@@include('./01-components/forms/_input-value.html', {
+					"type": "button",
+					"value": "button"
+				})
+			</div>
+
+			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-value.html', {
+				"type": "button",
+				"value": "button"
+			})</code></pre>
+
+			<br>
+
+			<h2>Type - Checkbox (Custom)</h2>
+			<p>Custom Checkbox Inputs require a different structure.</p>
+
+			<div class="gs-present">
+				@@include('./01-components/forms/_input-toggle-custom.html', {
+					"type": "checkbox"
+				})
+			</div>
+
+			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-toggle-custom.html', {
+				"type": "checkbox"
+			})</code></pre>
+
+			<br>
+
+			<h2>Type - Date</h2>
+			<div class="gs-present">
+				@@include('./01-components/forms/_input-no-placeholder.html', {
+					"type": "date" 
+				})
+			</div>
+
+			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-no-placeholder.html', {
+				"type": "date" 
+			})</code></pre>
+
+			<br>
+
+			<h2>Type - Email</h2>
+			<p>The Email Input has access to the <code class="language-scss">:valid</code> and <code class="language-scss">:invalid</code> pseudo-classes.</p>
+			<p>Only the <code class="language-scss">:invalid</code> pseudo-class is used as a visual indicator.</p>
+
+			<div class="gs-present">
+				@@include('./01-components/forms/_input-standard.html', {
+					"type": "email" 
+				})
+			</div>
+
+			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
+				"type": "email" 
+			})</code></pre>
+
+			<br>
+
+			<h2>Type - Number</h2>
+			<div class="gs-present">
+				@@include('./01-components/forms/_input-standard.html', {
+					"type": "number" 
+				})
+			</div>
+
+			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
+				"type": "number" 
+			})</code></pre>
+
+			<br>
+
+			<h2>Type - Radio (Custom)</h2>
+			<p>Custom Radio Inputs require a different structure.</p>
+
+			<div class="gs-present">
+				@@include('./01-components/forms/_input-toggle-custom.html', {
+					"type": "radio"
+				})
+			</div>
+
+			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-toggle-custom.html', {
+				"type": "radio"
+			})</code></pre>
+
+			<br>
+
+			<h2>Type - Search</h2>
+			<div class="gs-present">
+				@@include('./01-components/forms/_input-standard.html', {
+					"type": "search" 
+				})
+			</div>
+
+			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
+				"type": "search" 
+			})</code></pre>
+
+			<br>
+
+			<h2>Type - Submit</h2>
+			<div class="gs-present">
+				@@include('./01-components/forms/_input-value.html', {
+					"type": "submit",
+					"value": "Submit"
+				})
+			</div>
+
+			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-value.html', {
+				"type": "submit",
+				"value": "Submit"
+			})</code></pre>
+
+			<br>
+
+			<h2>Type - Text</h2>
+			<div class="gs-present">
+				@@include('./01-components/forms/_input-standard.html', {
+					"type": "text" 
+				})
+			</div>
+
+			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
+				"type": "text" 
+			})</code></pre>
+
+			<br>
+
+			<h2>Type - Password</h2>
+			<div class="gs-present">
+				@@include('./01-components/forms/_input-standard.html', {
+					"type": "password" 
+				})
+			</div>
+
+			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
+				"type": "password" 
+			})</code></pre>
+
+			<br>
+
+			<h2>Textarea</h2>
+			<div class="gs-present">
+				@@include('./01-components/forms/_textarea.html')
+			</div>
+
+			<pre><code class="gs-code language-html">@@include('./01-components/forms/_textarea.html')</code></pre>
+
+		</div>
+		
+	</div>
+
+</div>
+
+@@include('./_site-footer.html')

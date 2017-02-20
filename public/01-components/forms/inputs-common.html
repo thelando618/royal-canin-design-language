@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,17 +36,16 @@
 </div>
 
 
-
-
 <div class="gs-stage">
 
 	<div class="gs-stage__inner">
 
 		<div class="gs-stage__content">
 
-			<h1>Inputs</h1>
+			<h1>Inputs - Common</h1>
+			<p>This page displays the more common Input types that will likely be used on most Royal Canin sites.</p>
 
-			<p>Available inputs for Forms.</p>
+			<br>
 
 			<h2>Type - Button</h2>
 			<div class="gs-present">
@@ -57,39 +55,6 @@
 
 			<pre><code class="gs-code language-html"><label for="id-button">Input Label</label>
 <input id="id-button" type="button" name="button" value="button"></code></pre>
-
-			<br>
-
-			<h2>Type - Checkbox</h2>
-			<p>When using Checkbox Inputs, ensure that the accompanying Label either wraps the input, or is place directly after it.</p>
-			<p>What follows is an example of both implementations.</p>
-			<p>In a form or a real world situation, Checkbox Inputs and their labels should be grouped inside of, and positioned by, a containing element.</p>
-
-			<div class="gs-present">
-				<!-- Wrapping Label -->
-<label for="id-wrapped-checkbox">
-	<input id="id-wrapped-checkbox" type="checkbox" name="checkbox">
-	Input Label
-</label>
-
-<br>
-
-<!-- Sibling Label -->
-<input id="id-sibling-checkbox" type="checkbox" name="checkbox">
-<label for="id-sibling-checkbox">Input Label</label>
-			</div>
-
-			<pre><code class="gs-code language-html"><!-- Wrapping Label -->
-<label for="id-wrapped-checkbox">
-	<input id="id-wrapped-checkbox" type="checkbox" name="checkbox">
-	Input Label
-</label>
-
-<br>
-
-<!-- Sibling Label -->
-<input id="id-sibling-checkbox" type="checkbox" name="checkbox">
-<label for="id-sibling-checkbox">Input Label</label></code></pre>
 
 			<br>
 
@@ -130,19 +95,6 @@
 
 			<br>
 
-			<h2>Type - Color</h2>
-			<p>If used, the Color input should use the Royal Canin Red color as it's default value.</p>
-
-			<div class="gs-present">
-				<label for="id-color">Input Label</label>
-<input id="id-color" type="color" name="color" value="#E2001A">
-			</div>
-
-			<pre><code class="gs-code language-html"><label for="id-color">Input Label</label>
-<input id="id-color" type="color" name="color" value="#E2001A"></code></pre>
-
-			<br>
-
 			<h2>Type - Date</h2>
 			<div class="gs-present">
 				<label for="id-date">Input Label</label>
@@ -151,17 +103,6 @@
 
 			<pre><code class="gs-code language-html"><label for="id-date">Input Label</label>
 <input id="id-date" type="date" name="date"></code></pre>
-
-			<br>
-
-			<h2>Type - Datetime Local</h2>
-			<div class="gs-present">
-				<label for="id-datetime-local">Input Label</label>
-<input id="id-datetime-local" type="datetime-local" name="datetime-local">
-			</div>
-
-			<pre><code class="gs-code language-html"><label for="id-datetime-local">Input Label</label>
-<input id="id-datetime-local" type="datetime-local" name="datetime-local"></code></pre>
 
 			<br>
 
@@ -179,38 +120,6 @@
 
 			<br>
 
-			<h2>Type - File</h2>
-			<div class="gs-present">
-				<label for="id-file">Input Label</label>
-<input id="id-file" type="file" name="file">
-			</div>
-
-			<pre><code class="gs-code language-html"><label for="id-file">Input Label</label>
-<input id="id-file" type="file" name="file"></code></pre>
-
-			<br>
-
-			<h2>Type - Hidden</h2>
-			<p>In the case of a Hidden input, the label is not necessary.</p>
-			<div class="gs-present">
-				<input id="id-hidden" type="hidden" name="hidden" value="value">
-			</div>
-
-			<pre><code class="gs-code language-html"><input id="id-hidden" type="hidden" name="hidden" value="value"></code></pre>
-
-			<br>
-
-			<h2>Type - Month</h2>
-			<div class="gs-present">
-				<label for="id-month">Input Label</label>
-<input id="id-month" type="month" name="month">
-			</div>
-
-			<pre><code class="gs-code language-html"><label for="id-month">Input Label</label>
-<input id="id-month" type="month" name="month"></code></pre>
-
-			<br>
-
 			<h2>Type - Number</h2>
 			<div class="gs-present">
 				<label for="id-number">Input Label</label>
@@ -219,39 +128,6 @@
 
 			<pre><code class="gs-code language-html"><label for="id-number">Input Label</label>
 <input id="id-number" type="number" name="number" placeholder="Placeholder..."></code></pre>
-
-			<br>
-
-			<h2>Type - Radio</h2>
-			<p>When using Radio Inputs, ensure that the accompanying Label either wraps the input, or is place directly after it.</p>
-			<p>What follows is an example of both implementations.</p>
-			<p>In a form or a real world situation, Radio Inputs and their labels should be grouped inside of, and positioned by, a containing element.</p>
-
-			<div class="gs-present">
-				<!-- Wrapping Label -->
-<label for="id-wrapped-radio">
-	<input id="id-wrapped-radio" type="radio" name="radio">
-	Input Label
-</label>
-
-<br>
-
-<!-- Sibling Label -->
-<input id="id-sibling-radio" type="radio" name="radio">
-<label for="id-sibling-radio">Input Label</label>
-			</div>
-
-			<pre><code class="gs-code language-html"><!-- Wrapping Label -->
-<label for="id-wrapped-radio">
-	<input id="id-wrapped-radio" type="radio" name="radio">
-	Input Label
-</label>
-
-<br>
-
-<!-- Sibling Label -->
-<input id="id-sibling-radio" type="radio" name="radio">
-<label for="id-sibling-radio">Input Label</label></code></pre>
 
 			<br>
 
@@ -292,17 +168,6 @@
 
 			<br>
 
-			<h2>Type - Reset</h2>
-			<div class="gs-present">
-				<label for="id-reset">Input Label</label>
-<input id="id-reset" type="reset" name="reset" value="Reset">
-			</div>
-
-			<pre><code class="gs-code language-html"><label for="id-reset">Input Label</label>
-<input id="id-reset" type="reset" name="reset" value="Reset"></code></pre>
-
-			<br>
-
 			<h2>Type - Search</h2>
 			<div class="gs-present">
 				<label for="id-search">Input Label</label>
@@ -322,28 +187,6 @@
 
 			<pre><code class="gs-code language-html"><label for="id-submit">Input Label</label>
 <input id="id-submit" type="submit" name="submit" value="Submit"></code></pre>
-
-			<br>
-
-			<h2>Type - Time</h2>
-			<div class="gs-present">
-				<label for="id-time">Input Label</label>
-<input id="id-time" type="time" name="time">
-			</div>
-
-			<pre><code class="gs-code language-html"><label for="id-time">Input Label</label>
-<input id="id-time" type="time" name="time"></code></pre>
-
-			<br>
-
-			<h2>Type - Tel</h2>
-			<div class="gs-present">
-				<label for="id-tel">Input Label</label>
-<input id="id-tel" type="tel" name="tel" placeholder="Placeholder...">
-			</div>
-
-			<pre><code class="gs-code language-html"><label for="id-tel">Input Label</label>
-<input id="id-tel" type="tel" name="tel" placeholder="Placeholder..."></code></pre>
 
 			<br>
 
@@ -369,31 +212,6 @@
 
 			<br>
 
-			<h2>Type - URL</h2>
-			<p>The URL Input has access to the <code class="language-scss">:valid</code> and <code class="language-scss">:invalid</code> pseudo-classes.</p>
-			<p>Only the <code class="language-scss">:invalid</code> pseudo-class is used as a visual indicator.</p>
-
-			<div class="gs-present">
-				<label for="id-url">Input Label</label>
-<input id="id-url" type="url" name="url" placeholder="Placeholder...">
-			</div>
-
-			<pre><code class="gs-code language-html"><label for="id-url">Input Label</label>
-<input id="id-url" type="url" name="url" placeholder="Placeholder..."></code></pre>
-
-			<br>
-
-			<h2>Type - Week</h2>
-			<div class="gs-present">
-				<label for="id-week">Input Label</label>
-<input id="id-week" type="week" name="week">
-			</div>
-
-			<pre><code class="gs-code language-html"><label for="id-week">Input Label</label>
-<input id="id-week" type="week" name="week"></code></pre>
-
-			<br>
-
 			<h2>Textarea</h2>
 			<div class="gs-present">
 				<textarea placeholder="This is a textarea...">
@@ -415,4 +233,3 @@
 
 </body>
 </html>
-
