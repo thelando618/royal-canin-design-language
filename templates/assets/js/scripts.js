@@ -1,3 +1,5 @@
+/* Progress JS */
+var test = 1;
 'use strict';
 
 

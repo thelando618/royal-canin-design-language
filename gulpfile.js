@@ -12,6 +12,7 @@ var sass 						= require('gulp-sass');
 var gutil 					= require('gulp-util');
 var concat 					= require('gulp-concat');
 var uglify 					= require('gulp-uglify');
+var rename 					= require('gulp-rename');
 
 // Node
 var browserSync 		= require('browser-sync').create();
@@ -64,9 +65,23 @@ gulp.task('copyTemplates', function( done ) {
 
 
 // Concat JS
+gulp.task( 'concat', function( done ) {
+	return gulp.src([ path.join( paths.templates, '*.js' ), '!./templates/assets/js/scripts.js', '!./templates/assets/js/min/*.js' ])
+		.pipe( concat( 'scripts.js' ) )
+		.pipe( gulp.dest( './templates/assets/js' ) );
+	done();
+});
 
 
 // Minify JS
+gulp.task( 'minify', gulp.parallel( 'concat', function( done ) {
+	return gulp.src( './templates/assets/js/scripts.js' )
+		.pipe( rename( 'scripts.min.js' ) )
+		.pipe( uglify() )
+		.pipe( gulp.dest( './templates/assets/js/min' ) );
+	done();
+} ) );
+
 
 // Generate Sass
 gulp.task( 'sass', function( done ) {    
@@ -79,11 +94,11 @@ gulp.task( 'sass', function( done ) {
 
 
 // Copy other assets, excluding HTML files.
-gulp.task( 'copyAssets', gulp.parallel( 'sass', function( done ) {
+gulp.task( 'copyAssets', gulp.parallel( 'sass', 'minify', function( done ) {
 	return gulp.src([
 			// @todo make this into a single command that copies everything
 			path.join( paths.templates, '*.css' ),
-			path.join( paths.templates, '*.js' )
+			path.join( paths.templates, '/min/*.js' )
 		])
 		.pipe( fileinclude({
 			// todo update paths to use object
