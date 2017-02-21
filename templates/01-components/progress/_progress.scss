@@ -45,7 +45,23 @@
     }
   }
 
+  .rc-progress__value {
+    position: absolute;
+    bottom: 0;
+    // left: 95%;
+    margin-left: -3em;
+    color: #FFFFFF;
+    width: 3em;
+    font-size: 1em;
+    padding: .5em 0;
+    line-height: 1;
+    text-align: center;
+  }
 
+  .rc-progress__value--outside {
+    color: $rc-red;
+    margin-left: 0;
+  }
 
 
   // Progress Element and Fallback

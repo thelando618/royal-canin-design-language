@@ -1,13 +1,13 @@
-<div class="rc-progress">
+<div class="rc-progress" data-value="@@value">
 	<div class="rc-progress__markers">
-		<div class="rc-progress__markers__marker rc-progress__markers__marker--start">0%</div>
-		<div class="rc-progress__markers__marker rc-progress__markers__marker--end">100%</div>
+		<div class="rc-progress__markers__marker rc-progress__markers__marker--start">@@min%</div>
+		<div class="rc-progress__markers__marker rc-progress__markers__marker--end">@@max%</div>
 	</div>
 
-	<progress max="100" value="80">
+	<progress max="@@max" value="@@value" class="rc-progress__progressElem">
 		<div class="rc-progress--fallback">
 			<span class="rc-progress--fallback__bar"></span>
-			<span class="rc-progress--fallback__value" style="width: 80%;">Progress: 80%</span>
+			<span class="rc-progress--fallback__value" style="width: @@value%;">Progress: @@value%</span>
 		</div>
 	</progress>
 </div>
