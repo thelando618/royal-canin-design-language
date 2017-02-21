@@ -10,6 +10,8 @@ var clean 					= require('gulp-clean');
 var fileinclude			= require('gulp-file-include');
 var sass 						= require('gulp-sass');
 var gutil 					= require('gulp-util');
+var concat 					= require('gulp-concat');
+var uglify 					= require('gulp-uglify');
 
 // Node
 var browserSync 		= require('browser-sync').create();
@@ -61,6 +63,12 @@ gulp.task('copyTemplates', function( done ) {
 });
 
 
+// Concat JS
+
+
+// Minify JS
+
+// Generate Sass
 gulp.task( 'sass', function( done ) {    
 	return gulp.src( './templates/assets/sass/style.scss' )
 		.pipe( sass( { outputStyle: 'compressed' } ).on( 'error', sass.logError ) )
