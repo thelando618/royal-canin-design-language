@@ -8,7 +8,6 @@
 
 	"use strict";
 
-
 	var Progress = window.Progress || {};
 
   Progress = (function() {
@@ -88,12 +87,14 @@
   	$( this.progress ).append( this.valueContainer );
   }
 
-  // jQuery Prototpe Function
-	$.fn.Progress = function() {
-		var progress = new Progress( this );
-		return this;
+  // Initiate all Progress Elements.
+	$.fn.Progress = function () {
+		return this.each( function () {
+			var progress = new Progress( this );
+		});
 	};
 
+	// Invoke Update Progress Method
 	$.fn.updateProgress = function( value ) {
 		var progress = new Progress( this );
 		progress.updateValue( value );
@@ -103,21 +104,27 @@
 
 
 
-// Scripts
-$(function () {
-	var prog1 = $('.rc-progress1');
-	var prog2 = $('.rc-progress2');
 
-	// Move this to GS scripts
-	prog1.Progress();
-	prog2.Progress();
+
+
+// Move this to Scripts
+$(function () {
+	$('.rc-progress').Progress(); // Initiate all Progress elements
+});
+
+
+
+
+
+// Move this to GS scripts
+$(function () {
 
 	$( '.update-progress1').on('click', function( event ) {
-		prog1.updateProgress( 50 );
+		$('.rc-progress1').updateProgress( 50 );
 	});
 
 	$( '.update-progress2').on('click', function( event ) {
-		prog2.updateProgress( 98 );
+		$('.rc-progress2').updateProgress( 98 );
 	});
 
 });
