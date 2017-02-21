@@ -66,21 +66,29 @@ gulp.task('copyTemplates', function( done ) {
 
 // Concat JS
 gulp.task( 'concat', function( done ) {
-	return gulp.src([ path.join( paths.templates, '*.js' ), '!./templates/assets/js/scripts.js', '!./templates/assets/js/min/*.js' ])
+	return gulp.src([ './templates/**/*.js', '!./templates/assets/**/*.js' ])
 		.pipe( concat( 'scripts.js' ) )
-		.pipe( gulp.dest( './templates/assets/js' ) );
+		.pipe( gulp.dest( './templates/assets/js/' ) );
 	done();
 });
 
 
 // Minify JS
-gulp.task( 'minify', gulp.parallel( 'concat', function( done ) {
+gulp.task( 'minify', gulp.series( 'concat', function( done ) {
 	return gulp.src( './templates/assets/js/scripts.js' )
 		.pipe( rename( 'scripts.min.js' ) )
 		.pipe( uglify() )
-		.pipe( gulp.dest( './templates/assets/js/min' ) );
+		.pipe( gulp.dest( './templates/assets/js/min/' ) );
 	done();
 } ) );
+
+
+// Copy JS
+gulp.task( 'copyJS', gulp.series( 'minify', function( done ) {
+	return gulp.src( './templates/assets/js/min/*.js' )
+		.pipe( gulp.dest( './public/assets/js/' ) );
+	done();
+} ) )
 
 
 // Generate Sass
@@ -93,21 +101,12 @@ gulp.task( 'sass', function( done ) {
 } );
 
 
-// Copy other assets, excluding HTML files.
-gulp.task( 'copyAssets', gulp.parallel( 'sass', 'minify', function( done ) {
-	return gulp.src([
-			// @todo make this into a single command that copies everything
-			path.join( paths.templates, '*.css' ),
-			path.join( paths.templates, '/min/*.js' )
-		])
-		.pipe( fileinclude({
-			// todo update paths to use object
-      prefix: '@@',
-      basepath: './templates'
-		}) )
+// Copy CSS
+gulp.task( 'copyCSS', gulp.series( 'sass', function( done ) {
+	return gulp.src( path.join( paths.templates, '*.css' ) )
 		.pipe( gulp.dest( './public/' ) );
 	done();
-} ) );
+} ) )
 
 
 // Copy font files
@@ -202,7 +201,7 @@ gulp.task( 'createNav', gulp.series( 'getfiles', function( done ) {
 
 
 // Styleguide tasks
-gulp.task( 'generate', gulp.series( 'publicDir', 'copyTemplates', 'copyAssets', 'copyFonts', 'createNav', 'copyTemplates', function( done ) {
+gulp.task( 'generate', gulp.series( 'publicDir', 'copyTemplates', 'copyCSS', 'copyJS', 'copyFonts', 'createNav', 'copyTemplates', function( done ) {
 	done();
 } ) );
 
@@ -223,7 +222,8 @@ gulp.task( 'develop', function( done ){
 			baseDir: "./public"
 		}
 	});
-	gulp.watch( ['templates/**/*.scss', 'templates/**/*.js'], gulp.series( 'copyAssets' ) );
+	gulp.watch( './templates/**/*.scss', gulp.series( 'copyCSS' ) );
+	gulp.watch( [ 'templates/**/*.js', '!templates/assets/js/**/*.js', '!templates/assets/js/*.js' ], gulp.series( 'copyJS' ) );
 	gulp.watch( 'templates/**/*.html', gulp.series( 'copyTemplates' ) );
 	gulp.watch( "public/**/*.*" ).on("change", browserSync.reload);
 } );

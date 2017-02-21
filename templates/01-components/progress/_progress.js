@@ -1,2 +1,3 @@
 /* Progress JS */
-var test = 1;
+var test = 'progress JS';
+

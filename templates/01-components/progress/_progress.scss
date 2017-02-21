@@ -54,11 +54,15 @@
     height: 2em;
   }
 
-  progress[value]::-webkit-progress-bar, .rc-progress--fallback__bar {
+  progress[value]::-webkit-progress-bar,
+  progress[value]::-moz-progress-bar,
+  .rc-progress--fallback__bar {
     background-color: #FFFFFF;
   }
 
-  progress[value]::-webkit-progress-value, .rc-progress--fallback__value {
+  progress[value]::-webkit-progress-value,
+  progress[value]::-moz-progress-value,
+  .rc-progress--fallback__value {
     background-color: $rc-red;
     // @todo make this into a helper class and add class on progress page.
     text-indent: 100%;
@@ -100,7 +104,4 @@
       }
     }
   }
-
-
 }
-
