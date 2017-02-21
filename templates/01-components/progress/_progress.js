@@ -33,9 +33,7 @@ $(function () {
 
 			// Setup Object to contain properties related to the value
 			this.valueProps = {
-				"class" : [
-					"rc-progress__value"
-				],
+				"class" : "rc-progress__value",
 				"percent" : ""
 			}
 
@@ -64,7 +62,7 @@ $(function () {
   	this.valueProps.percent = this.valueAsPercentage( this.progressValue );
 
   	// Trigger method
-  	this.prepareValue();
+  	this.prepareValue( this.progressValue );
   }
 
   Progress.prototype.updateValue = function( newValue ) {
@@ -77,15 +75,20 @@ $(function () {
 
 		$( '.rc-progress__value' ).remove();
 
-		this.displayValue();
+		this.prepareValue( newValue );
   }
 
 
-	Progress.prototype.prepareValue = function( element ) {
+
+	Progress.prototype.prepareValue = function( prepValue ) {
+		
 		// If the number is less than 10, add another class to the class array
-		if ( 10 > this.progressValue ) {
-			this.valueProps.class.push( 'rc-progress__value--outside' );
+		if ( 10 > prepValue ) {
+			this.valueProps.class = 'rc-progress__value rc-progress__value--outside';
+		} else {
+			this.valueProps.class = 'rc-progress__value';
 		}
+		console.log(this.valueProps);
 
 		this.displayValue();
 	}
@@ -94,7 +97,7 @@ $(function () {
 
   Progress.prototype.displayValue = function( element ) {
 
-  	this.valueContainer = '<div class="' + this.valueProps.class.join( ' ' ) + '" style="left: ' + this.valueProps.percent + '">' + this.valueProps.percent + '</div>';
+  	this.valueContainer = '<div class="' + this.valueProps.class + '" style="left: ' + this.valueProps.percent + '">' + this.valueProps.percent + '</div>';
   	$( this.progress ).append( this.valueContainer );
   }
 
@@ -122,7 +125,7 @@ $(function () {
 	// Update value test
   $( '.gs-stage__content h1').on('click', function( event ) {
   	// Update Value
-  	prog.updateProgress( 20 );
+  	prog.updateProgress( 50 );
   });
 
 });
