@@ -7,18 +7,6 @@
 $(function () {
 	"use strict";
 
-  // @todo 1 add wrappers property to all dropdowns after ready class is added
-  // This will aid in hiding all dropdowns when a new one is hovered on
-  // DO THE SAME FOR TRIGGERS
-
-  // @todo update hideDropdown method to accept more targeted arguments (hide single or hide all)
-
-  // @todo [method] add option to decide if dropdown overlays or pushes content down
-
-  // @todo add option to hover or click
-
-  // @todo Don't really need settings.wrapper (SINGULAR) because this is the element. Maybe this can be passed to methods that need it?
-
 	var Progress = window.Progress || {};
 
   Progress = (function() {
@@ -27,7 +15,7 @@ $(function () {
       // The element
   		this.progress = ( element );
   		// The Progress element
-  		this.progressElem = $( element ).children( 'progress' );
+  		this.progressElem = $( this.progress ).children( 'progress' );
   		// The Fallback Span
   		this.progressFall = $( '.rc-progress--fallback__value' );
 
@@ -42,10 +30,15 @@ $(function () {
   	return Progress;
   }());
 
-
+  // Helper
   Progress.prototype.valueAsPercentage = function( number ) {
   	return number + '%';
   }
+
+
+  // Add accessibility method to upate rc-progress--fallback__value Inner text
+
+
 
   Progress.prototype.init = function( element ) {
     // Ready
@@ -73,12 +66,10 @@ $(function () {
 		this.progressElem[0].value = newValue;
 		this.progressFall.css('width', this.valueAsPercentage( newValue ) );
 
-		$( '.rc-progress__value' ).remove();
+		$( this.progress ).children( '.rc-progress__value' ).remove();
 
 		this.prepareValue( newValue );
   }
-
-
 
 	Progress.prototype.prepareValue = function( prepValue ) {
 		
@@ -88,20 +79,15 @@ $(function () {
 		} else {
 			this.valueProps.class = 'rc-progress__value';
 		}
-		console.log(this.valueProps);
 
 		this.displayValue();
 	}
-
-
 
   Progress.prototype.displayValue = function( element ) {
 
   	this.valueContainer = '<div class="' + this.valueProps.class + '" style="left: ' + this.valueProps.percent + '">' + this.valueProps.percent + '</div>';
   	$( this.progress ).append( this.valueContainer );
   }
-
-
 
   // jQuery Prototpe Function
 	$.fn.Progress = function() {
@@ -114,18 +100,35 @@ $(function () {
 		return this;
 	};
 
-
-	var prog = $('.rc-progress');
+	var prog = $('.rc-progress1');
+	var prog2 = $('.rc-progress2');
 
 	// Selector
 	prog.Progress();
+	prog2.Progress();
 
 
 
+
+
+
+
+	// Move this to GS scripts
 	// Update value test
-  $( '.gs-stage__content h1').on('click', function( event ) {
+  $( '.update-progress1').on('click', function( event ) {
   	// Update Value
   	prog.updateProgress( 50 );
+  	
+  	// Disable button after click
+  	$( this ).attr('disabled', true);
+  });
+
+  $( '.update-progress2').on('click', function( event ) {
+  	// Update Value
+  	prog2.updateProgress( 8 );
+  	
+  	// Disable button after click
+  	$( this ).attr('disabled', true);
   });
 
 });
