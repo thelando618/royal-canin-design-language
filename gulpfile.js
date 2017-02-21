@@ -223,7 +223,7 @@ gulp.task( 'develop', function( done ){
 		}
 	});
 	gulp.watch( './templates/**/*.scss', gulp.series( 'copyCSS' ) );
-	gulp.watch( [ 'templates/**/*.js', '!templates/assets/js/**/*.js', '!templates/assets/js/*.js' ], gulp.series( 'copyJS' ) );
+	gulp.watch( [ 'templates/**/*.js', '!templates/assets/js/**/*.js' ], gulp.series( 'copyJS' ) );
 	gulp.watch( 'templates/**/*.html', gulp.series( 'copyTemplates' ) );
 	gulp.watch( "public/**/*.*" ).on("change", browserSync.reload);
 } );
