@@ -4,8 +4,10 @@
  *
  */
 
-$(function () {
+;(function ( $, window, document, undefined ) {
+
 	"use strict";
+
 
 	var Progress = window.Progress || {};
 
@@ -35,10 +37,7 @@ $(function () {
   	return number + '%';
   }
 
-
   // Add accessibility method to upate rc-progress--fallback__value Inner text
-
-
 
   Progress.prototype.init = function( element ) {
     // Ready
@@ -92,43 +91,33 @@ $(function () {
   // jQuery Prototpe Function
 	$.fn.Progress = function() {
 		var progress = new Progress( this );
-		
-		this.updateProgress = function( newValue ){
-			progress.updateValue( newValue );
-		};
-
 		return this;
 	};
 
-	var prog = $('.rc-progress1');
+	$.fn.updateProgress = function( value ) {
+		var progress = new Progress( this );
+		progress.updateValue( value );
+	};
+
+})( jQuery, window, document );
+
+
+
+// Scripts
+$(function () {
+	var prog1 = $('.rc-progress1');
 	var prog2 = $('.rc-progress2');
 
-	// Selector
-	prog.Progress();
+	// Move this to GS scripts
+	prog1.Progress();
 	prog2.Progress();
 
+	$( '.update-progress1').on('click', function( event ) {
+		prog1.updateProgress( 50 );
+	});
 
-
-
-
-
-
-	// Move this to GS scripts
-	// Update value test
-  $( '.update-progress1').on('click', function( event ) {
-  	// Update Value
-  	prog.updateProgress( 50 );
-  	
-  	// Disable button after click
-  	$( this ).attr('disabled', true);
-  });
-
-  $( '.update-progress2').on('click', function( event ) {
-  	// Update Value
-  	prog2.updateProgress( 8 );
-  	
-  	// Disable button after click
-  	$( this ).attr('disabled', true);
-  });
+	$( '.update-progress2').on('click', function( event ) {
+		prog2.updateProgress( 98 );
+	});
 
 });
