@@ -3,20 +3,107 @@ body,
 input,
 textarea,
 select,
-button {
+button,
+p {
 	font: 300 .875em $font-din; // weight size/line-height family
-
 
 	@media ( min-width: 640px ) {
 		font-size: 1em;
 	}
 }
 
+
+
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+	color: $rc-red;
+	font-weight: 700;
+	line-height: 1.25;
+	margin-top: 1em;
+	margin-bottom: .5em;
+}
+
+h1 {
+	font-size: 2em;// 32
+	
+	@media ( min-width: 640px ) {
+		font-size: 2.5em; // 40
+	}
+
+	@media ( min-width: 1024px ) {
+		font-size: 3.125em;	// 50
+	}
+}
+
+h2 {
+	font-size: 1.875em; // 30
+	
+	@media ( min-width: 640px ) {
+		font-size: 2.25em; // 36
+	}
+
+	@media ( min-width: 1024px ) {
+		font-size: 2.625em;	//42
+	}
+}
+
+h3 {
+	font-size: 1.625em; // 26
+	
+	@media ( min-width: 640px ) {
+		font-size: 2em; // 32
+	}
+
+	@media ( min-width: 1024px ) {
+		font-size: 2.25em;	//36
+	}
+}
+
+h4 {
+	font-size: 1.5em; // 24
+	
+	@media ( min-width: 640px ) {
+		font-size: 1.875em; // 30
+	}
+
+	@media ( min-width: 1024px ) {
+		font-size: 2em; // 32
+	}
+}
+
+h5 {
+	font-size: 1.375em; // 22
+	
+	@media ( min-width: 640px ) {
+		font-size: 1.625em; // 26
+	}
+
+	@media ( min-width: 1024px ) {
+		font-size: 1.75em; // 28
+	}
+}
+
+
+h6 {
+	font-size: 1.25em; // 20
+	
+	@media ( min-width: 640px ) {
+		font-size: 1.5em; // 24
+	}
+
+	@media ( min-width: 1024px ) {
+		font-size: 1.625em; // 26
+	}
+}
+
+
+
+
 // Paragraph
 p {
 	line-height: 1.5;
 }
-
 
 a {
 	// @todo make this into a variable
