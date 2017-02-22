@@ -18,7 +18,8 @@
   		// The Progress element
   		this.progressElem = $( this.progress ).children( 'progress' );
   		// The Fallback Span
-  		this.progressFall = $( '.rc-progress--fallback__value' );
+  		this.progressFall = $( this.progress ).find( '.rc-progress--fallback__value' );
+  		// console.log( this.progressFall );
 
 			// Setup Object to contain properties related to the value
 			this.valueProps = {
@@ -58,11 +59,15 @@
 
   Progress.prototype.updateValue = function( newValue ) {
 
-		this.valueProps.percent = this.valueAsPercentage( newValue );
-		this.progress.data( 'value', newValue );
-		this.progress.attr( 'data-value', newValue );
-		this.progressElem[0].value = newValue;
-		this.progressFall.css('width', this.valueAsPercentage( newValue ) );
+  	this.valueProps.percent = this.valueAsPercentage( newValue );
+
+  	if ( Modernizr.progressbar ) {
+			this.progress.data( 'value', newValue );
+			this.progress.attr( 'data-value', newValue );
+			this.progressElem[0].value = newValue;
+  	} else {
+  		this.progressFall.css('width', this.valueAsPercentage( newValue ) );
+  	}
 
 		$( this.progress ).children( '.rc-progress__value' ).remove();
 
