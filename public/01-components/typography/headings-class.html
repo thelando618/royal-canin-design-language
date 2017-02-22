@@ -39,53 +39,36 @@
 
 		<div class="gs-stage__content">
 
-			<h1>Button - Icon</h1>
-			<p>No extra class is required to use an icon in a button. Simply add the required SVG from the list of available icons.</p>
+			<h1>Class Headings</h1>
+			<p>Wherever possible, when a Heading tag is used, an accompanying heading class must be applied to set it's size to one of the six predefined levels. <strong>These classes should be used in any Component, Feature or Template to set the size of a Heading.</strong></p>
 
-			<p>A button with a size modifier will automatically increase the size of the SVG.</p>
+			<p>This is due to the HTML5 document outline algorithm allowing multiple content roots on any HTML5 marked up webpage. This means, in short, that multiple <code class="language-html">&lt;h1&gt;</code> tags can be used if separated by the appropriate HTML5 semantic sectioning elements.</p>
+
+			<p>The use of an <code class="language-scss">rc-head--[value]</code> class will set the size of any Heading tag (or indeed any element with that class applied to it) to the corresponding standard Heading size.</p>
+
+			<p>As is demonstrated below, the same 6 Heading tags are displayed as on the <a href="/01-components/typography/headings-default.html">Default Headings page</a>, but with a different <code class="language-scss">rc-head--[value]</code> class applied in order to change their appearance. In this case, we've effectively reversed the sizes of the Heading levels; <code class="language-scss">&lt;h1&gt;</code> is shown at the size of a <code class="language-scss">&lt;h6&gt;</code>, and so on.</p>
 
 			<div class="gs-present">
-				<button class="">
-	Button
-	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img">
-		<title id="title">Search</title>
-		<path d="M56 8c-5.3-5.3-12.3-8-19.2-8-7 0-13.9 2.7-19.2 8-9.3 9.3-10.5 23.8-3.4 34.4L1.6 55c-2.1 2.1-2.1 5.4 0 7.5s5.4 2.1 7.5 0l12.6-12.6c4.6 3.1 9.8 4.6 15.1 4.6 7 0 13.9-2.7 19.2-8C66.6 35.8 66.6 18.6 56 8zm-4.9 33.5c-3.8 3.8-8.9 5.9-14.3 5.9s-10.5-2.1-14.3-5.9c-7.9-7.9-7.9-20.7 0-28.6C26.3 9.1 31.4 7 36.8 7s10.5 2.1 14.3 5.9S57 21.8 57 27.2s-2.1 10.5-5.9 14.3z"></path>
-	</svg>
-</button>
+				<h1 class="rc-head rc-head--6">Heading 1</h1>
+<h2 class="rc-head rc-head--5">Heading 2</h2>
+<h3 class="rc-head rc-head--4">Heading 3</h3>
+<h4 class="rc-head rc-head--3">Heading 4</h4>
+<h5 class="rc-head rc-head--2">Heading 5</h5>
+<h6 class="rc-head rc-head--1">Heading 6</h6>
 
 			</div>
-
-			<pre><code class="gs-code language-html"><button class="">
-	Button
-	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img">
-		<title id="title">Search</title>
-		<path d="M56 8c-5.3-5.3-12.3-8-19.2-8-7 0-13.9 2.7-19.2 8-9.3 9.3-10.5 23.8-3.4 34.4L1.6 55c-2.1 2.1-2.1 5.4 0 7.5s5.4 2.1 7.5 0l12.6-12.6c4.6 3.1 9.8 4.6 15.1 4.6 7 0 13.9-2.7 19.2-8C66.6 35.8 66.6 18.6 56 8zm-4.9 33.5c-3.8 3.8-8.9 5.9-14.3 5.9s-10.5-2.1-14.3-5.9c-7.9-7.9-7.9-20.7 0-28.6C26.3 9.1 31.4 7 36.8 7s10.5 2.1 14.3 5.9S57 21.8 57 27.2s-2.1 10.5-5.9 14.3z"></path>
-	</svg>
-</button>
-</code></pre>
 
 			<br>
 
-			<h2>Button Large - Icon</h2>
-			<div class="gs-present">
-				<button class="button--large">
-	Button
-	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img">
-		<title id="title">Search</title>
-		<path d="M56 8c-5.3-5.3-12.3-8-19.2-8-7 0-13.9 2.7-19.2 8-9.3 9.3-10.5 23.8-3.4 34.4L1.6 55c-2.1 2.1-2.1 5.4 0 7.5s5.4 2.1 7.5 0l12.6-12.6c4.6 3.1 9.8 4.6 15.1 4.6 7 0 13.9-2.7 19.2-8C66.6 35.8 66.6 18.6 56 8zm-4.9 33.5c-3.8 3.8-8.9 5.9-14.3 5.9s-10.5-2.1-14.3-5.9c-7.9-7.9-7.9-20.7 0-28.6C26.3 9.1 31.4 7 36.8 7s10.5 2.1 14.3 5.9S57 21.8 57 27.2s-2.1 10.5-5.9 14.3z"></path>
-	</svg>
-</button>
+			<pre><code class="gs-code language-html">
+				<h1 class="rc-head rc-head--6">Heading 1</h1>
+<h2 class="rc-head rc-head--5">Heading 2</h2>
+<h3 class="rc-head rc-head--4">Heading 3</h3>
+<h4 class="rc-head rc-head--3">Heading 4</h4>
+<h5 class="rc-head rc-head--2">Heading 5</h5>
+<h6 class="rc-head rc-head--1">Heading 6</h6>
 
-			</div>
-
-			<pre><code class="gs-code language-html"><button class="button--large">
-	Button
-	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img">
-		<title id="title">Search</title>
-		<path d="M56 8c-5.3-5.3-12.3-8-19.2-8-7 0-13.9 2.7-19.2 8-9.3 9.3-10.5 23.8-3.4 34.4L1.6 55c-2.1 2.1-2.1 5.4 0 7.5s5.4 2.1 7.5 0l12.6-12.6c4.6 3.1 9.8 4.6 15.1 4.6 7 0 13.9-2.7 19.2-8C66.6 35.8 66.6 18.6 56 8zm-4.9 33.5c-3.8 3.8-8.9 5.9-14.3 5.9s-10.5-2.1-14.3-5.9c-7.9-7.9-7.9-20.7 0-28.6C26.3 9.1 31.4 7 36.8 7s10.5 2.1 14.3 5.9S57 21.8 57 27.2s-2.1 10.5-5.9 14.3z"></path>
-	</svg>
-</button>
-</code></pre>
+			</code></pre>
 
 		</div>
 

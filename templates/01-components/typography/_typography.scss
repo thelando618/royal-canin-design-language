@@ -15,7 +15,7 @@ p {
 
 
 
-// Headings
+// Default Headings
 h1, h2, h3, h4, h5, h6 {
 	color: $rc-red;
 	font-weight: 700;
@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: .5em;
 }
 
-h1 {
+h1, .rc-head--1 {
 	font-size: 2em;// 32
 	
 	@media ( min-width: 640px ) {
@@ -36,7 +36,7 @@ h1 {
 	}
 }
 
-h2 {
+h2, .rc-head--2 {
 	font-size: 1.875em; // 30
 	
 	@media ( min-width: 640px ) {
@@ -48,7 +48,7 @@ h2 {
 	}
 }
 
-h3 {
+h3, .rc-head--3 {
 	font-size: 1.625em; // 26
 	
 	@media ( min-width: 640px ) {
@@ -60,7 +60,7 @@ h3 {
 	}
 }
 
-h4 {
+h4, .rc-head--4 {
 	font-size: 1.5em; // 24
 	
 	@media ( min-width: 640px ) {
@@ -72,7 +72,7 @@ h4 {
 	}
 }
 
-h5 {
+h5, .rc-head--5 {
 	font-size: 1.375em; // 22
 	
 	@media ( min-width: 640px ) {
@@ -85,7 +85,7 @@ h5 {
 }
 
 
-h6 {
+h6, .rc-head--6 {
 	font-size: 1.25em; // 20
 	
 	@media ( min-width: 640px ) {
@@ -96,7 +96,6 @@ h6 {
 		font-size: 1.625em; // 26
 	}
 }
-
 
 
 

@@ -2,37 +2,37 @@
   {
     "heading": {
       "number": "1",
-      "class": "clock"
+      "class": "rc-head rc-head--6"
     }
   },
   {
     "heading": {
       "number": "2",
-      "class": "mobile"
+      "class": "rc-head rc-head--5"
     }
   },
   {
     "heading": {
       "number": "3",
-      "class": "play"
+      "class": "rc-head rc-head--4"
     }
   },
   {
     "heading": {
       "number": "4",
-      "class": "screen"
+      "class": "rc-head rc-head--3"
     }
   },
   {
     "heading": {
       "number": "5",
-      "class": "search"
+      "class": "rc-head rc-head--2"
     }
   },
   {
     "heading": {
       "number": "6",
-      "class": "volume"
+      "class": "rc-head rc-head--1"
     }
   }
 ]
