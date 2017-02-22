@@ -358,51 +358,33 @@ pre.language-scss {
 	Dest: n/a 
 	Note: These rules will likely have to remain in a Gulp Styleguide Sass partial
 */
-.gs-colour-list-wrap {
-	overflow: hidden;
-}
 
 .gs-colour-list {
-	// @todo - these styles should be in a class that can be used by the styleguide, separate to a class to be used in the end product.
 	list-style-type: none;
-	margin: 0 0 1em 0;
+	margin-top: 0;
 	padding: 0;
 
 	li {
-		padding: 1em 1em 2em 1em;
+		margin: 0;
+		padding: 1em;
 		color: rgba(255, 255, 255, .9);
+		font-size: .875rem;
 	}
 
 	span {
 		display: block;
-		font-size: .875em;
+		box-sizing: border-box;
 	}
 
-
-
-
-	@media ( min-width: 1024px ) {
-		// @todo these may eventually be replaced with grid columns
-		&.gs-colour-list--third {
-			width: 30%;
-			float: left;
-			margin-right: 5%;
-
-			&:nth-child(3) {
-				margin-right: 0;
-			}
-		}
-
-		&.gs-colour-list--fifth {
-			width: 18%;
-			float: left;
-			margin-right: 2.5%;
-
-			&:nth-child(5) {
-				margin-right: 0;
-			}
+	@media ( min-width: 640px ) {
+		span {
+			display: inline-block;
+			vertical-align: top;
+			width: 32.5%;
+			padding-right: 2em;
 		}
 	}
+
 }
 
 
