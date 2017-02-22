@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,90 +33,42 @@
 </div>
 
 
-
-
 <div class="gs-stage">
 
 	<div class="gs-stage__inner">
 
 		<div class="gs-stage__content">
 
-			<h1>Select Menus</h1>
+			<h1>Paragraph Images</h1>
+			<p>Images can be inserted within blocks of paragraph text and positioned so that the text floats around the image. Available classes are:</p>
+			<ul class="list--blank list--align">
+				<li><code class="language-scss">alignleft</code></li>
+				<li><code class="language-scss">alignright</code></li>
+				<li><code class="language-scss">aligncenter</code></li>
+			</ul>
 
+			<p>These classes are intended strictly for positioning <code class="language-html">&lt;img&gt;</code> and <code class="language-html">&lt;figure&gt;</code> tags around paragraph text and <strong>will not work</strong> when applied to any other element. For positioning any other element or outside the context of positioning images around paragraph text, please use the available grid and layout classes.</p>
 
-			<h2>Standard</h2>
-			<div class="gs-present">
-				<label>Select Label</label>
-<select>
-	<option selected disabled>Please select an option</option>
-	<option>Option 1</option>
-	<option>Option 2</option>
-	<option>Option 3</option>
-</select>
-			</div>
-
-			<pre><code class="gs-code language-html"><label>Select Label</label>
-<select>
-	<option selected disabled>Please select an option</option>
-	<option>Option 1</option>
-	<option>Option 2</option>
-	<option>Option 3</option>
-</select></code></pre>
+			<p>The <code class="language-scss">align[value]</code> rules impose a maximum width on the <code class="language-html">&lt;img&gt;</code> or <code class="language-html">&lt;figure&gt;</code> tag to which it is applied. This is to ensure that text is able to wrap around it.</p>
 
 			<br>
-
-			<h2>Custom</h2>
-
-			<div class="gs-present">
-				<label>Select Label</label>
-<div class="rc-select--custom">
-	<select>
-		<option selected="" disabled="">Select an option</option>
-		<option>Option 1</option>
-		<option>Option 2</option>
-		<option>Option 3</option>
-	</select>
-</div>
-			</div>
-
-			<pre><code class="gs-code language-html"><label>Select Label</label>
-<div class="rc-select--custom">
-	<select>
-		<option selected="" disabled="">Select an option</option>
-		<option>Option 1</option>
-		<option>Option 2</option>
-		<option>Option 3</option>
-	</select>
-</div></code></pre>
-
 			<br>
 
-			<h2>Custom - Significant</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-			<div class="gs-present">
-				<label>Select Label</label>
-<div class="rc-select--custom rc-select--custom--significant">
-	<select>
-		<option selected="" disabled="">Select an option</option>
-		<option>Option 1</option>
-		<option>Option 2</option>
-		<option>Option 3</option>
-	</select>
-</div>
-			</div>
+			<figure class="alignleft">
+			  <img src="http://placehold.it/800x600" alt="An awesome picture">	
+			  <figcaption>This image is wrapped inside a figure tag with the alignleft class. This is the figcaption.</figcaption>
+			</figure>
 
-			<pre><code class="gs-code language-html"><label>Select Label</label>
-<div class="rc-select--custom rc-select--custom--significant">
-	<select>
-		<option selected="" disabled="">Select an option</option>
-		<option>Option 1</option>
-		<option>Option 2</option>
-		<option>Option 3</option>
-	</select>
-</div></code></pre>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 		</div>
-		
+
 	</div>
 
 </div>
