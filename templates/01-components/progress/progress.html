@@ -10,47 +10,24 @@
 			<p>The Progress element is used to display a known percentage between two values.</p>
 			<p>If the browser does not support the <code class="language-html">&lt;progress&gt;</code> element <b>(IE9)</b>, then the fallback div will be shown instead.</p>
 
+			<p>This component relies on accompanying Javascript in order to display the current value between the min and max values, as well as the ability to update that value.</p>
+
 			<br>
 
 			<div class="gs-present gs-present--white">
 				@@include('./01-components/progress/_progress.html', {
 					"min": "0",
 					"max": "100",
-					"value": "2"
+					"value": "20"
 				})
 			</div>
-
-<br>
-
-
-			<div class="gs-present gs-present--white">
-				<div class="rc-progress rc-progress2" data-value="40">
-					<div class="rc-progress__markers">
-						<div class="rc-progress__markers__marker rc-progress__markers__marker--start">0%</div>
-						<div class="rc-progress__markers__marker rc-progress__markers__marker--end">100%</div>
-					</div>
-
-					<progress max="100" value="40" class="rc-progress__progressElem">
-						<div class="rc-progress--fallback">
-							<span class="rc-progress--fallback__bar"></span>
-							<span class="rc-progress--fallback__value" style="width: 40%;">Progress: @@value%</span>
-						</div>
-					</progress>
-				</div>
-
-				<br>
-				<button class="update-progress2">Click me to update progress</button>
-			</div>
-
-<br>
-
 
 			<br>
 
 			<pre><code class="gs-code language-html">@@include('./01-components/progress/_progress.html', {
 				"min": "0",
 				"max": "100",
-				"value": "2"
+				"value": "20"
 			})</code></pre>
 
 		</div>

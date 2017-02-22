@@ -117,7 +117,7 @@
 
   // Fallback Styles
   // These don't seem to be applied when comma separated with progress element selectors
-  // .no-progressbar & {
+  .no-progressbar & {
     .rc-progress--fallback {
       position: relative;
       height: 2em;
@@ -142,7 +142,7 @@
       white-space: nowrap;
       overflow: hidden;
     }
-  // }
+  }
 
 
 }

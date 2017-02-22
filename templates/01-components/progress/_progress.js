@@ -19,7 +19,6 @@
   		this.progressElem = $( this.progress ).children( 'progress' );
   		// The Fallback Span
   		this.progressFall = $( this.progress ).find( '.rc-progress--fallback__value' );
-  		// console.log( this.progressFall );
 
 			// Setup Object to contain properties related to the value
 			this.valueProps = {
@@ -67,6 +66,7 @@
 			this.progressElem[0].value = newValue;
   	} else {
   		this.progressFall.css('width', this.valueAsPercentage( newValue ) );
+			this.progressFall.text( 'Progress: ' + this.valueAsPercentage( newValue ) );
   	}
 
 		$( this.progress ).children( '.rc-progress__value' ).remove();
@@ -124,12 +124,9 @@ $(function () {
 // Move this to GS scripts
 $(function () {
 
-	$( '.update-progress1').on('click', function( event ) {
-		$('.rc-progress1').updateProgress( 50 );
+	$( '.update-progress-demo').on('click', function( event ) {
+		$('.rc-progress-demo').updateProgress( 50 );
 	});
 
-	$( '.update-progress2').on('click', function( event ) {
-		$('.rc-progress2').updateProgress( 98 );
-	});
 
 });
