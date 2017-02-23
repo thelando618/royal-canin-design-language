@@ -46,8 +46,14 @@ input[type="submit"] {
 
 	// Variations
 	&.button--success {
-		// @todo make this into a variable
-		background-color: #60D967;
+		background-color: $rc-tertiary-green;
+
+		&:hover, &:focus {
+			background-color: darken( $rc-tertiary-green, 7.5% );
+		}
+		&:active {
+			background-color: darken( $rc-tertiary-green, 15% );
+		}
 	}
 
 	// SVG
