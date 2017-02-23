@@ -37,22 +37,6 @@ ul, ol {
 		list-style-position: inside;
 	}
 
-	&.list--icons {
-		> li {
-			&:before {
-			  content: '';
-			  display: inline-block;
-			  vertical-align: middle;
-			  // @todo replace with own SVG
-			  background-image: url( 'http://cdn.onlinewebfonts.com/svg/img_332582.svg' );
-			  background-size: 1em 1em;
-			  height: 1em;
-			  width: 1em;
-			  margin-right: .75em;
-			}
-		}
-	}
-
 	&.list--significance {
 		@extend .list--blank;
 		@extend .list--align;
