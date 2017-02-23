@@ -25,7 +25,7 @@ table	{
 
 	tbody {
 		tr:nth-child( even ) {
-      border-right: 1px solid lighten( $rc-light-grey, 10% );
+      background-color: lighten( $rc-light-grey, 10% );
 		}
 	}
 
