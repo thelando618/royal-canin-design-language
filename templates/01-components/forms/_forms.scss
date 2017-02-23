@@ -194,8 +194,6 @@ input[type=range]:focus::-ms-fill-upper {
 
 // Custom Checkbox + Radio
 .rc-input--custom {
-	border: 1px solid blue;
-
 	input[type="checkbox"],
 	input[type="radio"] {
 		display: none;
@@ -213,10 +211,10 @@ input[type=range]:focus::-ms-fill-upper {
 			vertical-align: middle;
 			width: 1em;
 			height: 1em;
-			padding: .25em;
+			padding: .25rem;
 			border: 2px solid #A1A1A1; // @todo make this into a variable
-			transition: background-color 0.2s;
-			margin-right: .5em;
+			transition: border-color 0.2s, background-color 0.2s;
+			margin-right: .5rem;
 		}
 	}
 
@@ -232,29 +230,29 @@ input[type=range]:focus::-ms-fill-upper {
 		}
 	}
 
-
 	// Checked
 	input[type="checkbox"]:checked + label,
 	input[type="radio"]:checked + label {
 		&:before {
-		  background: center center / 1.2em no-repeat;
+			line-height: 1;
+			width: 1em;
+			height: 1em;
+			border-color: $rc-red;
 		}
 	}
 
 	input[type="checkbox"]:checked + label {
 		&:before {
-			// @todo update SVG
-			background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 12"><rect x="2.539" y="3.535" transform="matrix(0.7069 -0.7073 0.7073 0.7069 -4.1456 5.0653)" fill="#FFFFFF" width="3" height="8.001"/><rect x="2.843" y="4.268" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -1.342 8.2958)" fill="#FFFFFF" width="13" height="3"/><head/></svg>') center center / 1.2em no-repeat $rc-red;
-			border-color: transparent;
+			content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E %3Cstyle%3E .st0%7Bfill:%23FFFFFF;%7D %3C/style%3E %3Cpath d='M.1 31.8l9.1-9.1L33.6 47l-9.1 9.1L.1 31.8zM15.3 47L54.9 7.4l9.1 9.1-39.5 39.6-9.2-9.1z' class='st0'/%3E %3C/svg%3E");
+			background-color: $rc-red;
 		}
 	}
 
 
 	input[type="radio"]:checked + label {
 		&:before {
-			background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><style>.st0{fill:#E2001A;}</style><circle cx="100" cy="100" r="100" class="st0"/></svg>');
+			content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='Layer_1' viewBox='0 0 64 64'%3E %3Cstyle%3E .st0%7Bfill:%23E2001A;%7D %3C/style%3E %3Ccircle cx='32' cy='32' r='32' class='st0'/%3E %3C/svg%3E");
 			background-color: #FFFFFF;
-			border-color: $rc-red;
 		}
 	}
 }
