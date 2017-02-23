@@ -16,10 +16,9 @@
 	}
 
 	&.alert--success {
-		// @todo make this into a variable
-		border-color: #8AE375;
-		color: darken( #8AE375, 25% );
-		background-color: transparentize( #8AE375, .9 );
+		border-color: $rc-tertiary-green;
+		color: darken( $rc-tertiary-green, 25% );
+		background-color: transparentize( $rc-tertiary-green, .9 );
 	}
 
 

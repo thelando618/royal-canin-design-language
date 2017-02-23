@@ -1,0 +1,10 @@
+[
+  {
+    "colour": {
+      "name": "Support Green",
+      "hex": "#8AE375",
+      "sass": "$rc-tertiary-green",
+      "class": "fill--rc-tertiary-green"
+    }
+  }
+]
