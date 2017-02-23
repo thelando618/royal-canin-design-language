@@ -18,9 +18,8 @@ input:required {
 
 	&:focus {
 		outline: none;
-		// @todo make this a variable
-		border: 1px solid #80ACE1;
-		box-shadow: 0 0 4px rgba( 128, 172, 255, 0.9 );
+		border: 1px solid $rc-tertiary-light-blue;
+		box-shadow: 0 0 4px $rc-tertiary-light-blue;
 	}
 
 	&:disabled {
@@ -28,10 +27,9 @@ input:required {
 	}
 
 	&.error, &:invalid {
-		// @todo make this a variable
-		color: #E45252;
+		color: $rc-red;
 		border: 1px solid $rc-red;
-		background-color: #F4EAEA;
+		background-color: transparentize( $rc-red, .9 );
 	}
 
 	&:required {
@@ -198,7 +196,7 @@ input[type=range]:focus::-ms-fill-upper {
 			width: 1em;
 			height: 1em;
 			padding: .25rem;
-			border: 2px solid #A1A1A1; // @todo make this into a variable
+			border: 2px solid $rc-light-grey-alt;
 			transition: border-color 0.2s, background-color 0.2s;
 			margin-right: .5rem;
 		}

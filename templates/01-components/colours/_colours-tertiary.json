@@ -1,10 +1,18 @@
 [
   {
     "colour": {
-      "name": "Support Green",
+      "name": "Tertiary Green",
       "hex": "#8AE375",
       "sass": "$rc-tertiary-green",
       "class": "fill--rc-tertiary-green"
+    }
+  },
+  {
+    "colour": {
+      "name": "Tertiary Light Blue",
+      "hex": "#80ACE1",
+      "sass": "$rc-tertiary-light-blue",
+      "class": "fill--rc-tertiary-light-blue"
     }
   }
 ]
