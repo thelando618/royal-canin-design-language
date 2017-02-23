@@ -1,0 +1,46 @@
+// DELETE THIS WHEN FINISHED DEV
+.gs-present--white {
+	padding: 1em;
+}
+
+
+
+
+.rc-tabs {
+
+	.rc-tabs__triggers {
+		overflow: hidden;
+		margin-top: 0;
+		margin-bottom: 0;
+
+		li {
+			float: left;
+			margin-bottom: 0;
+			margin-right: .25em;
+		}
+	}
+
+	.rc-tabs__triggers__trigger {
+		// @todo move this into a button class if it is used anywhere else...
+		color: inherit;
+		background-color: lighten( $rc-light-grey, 10% );
+
+		svg {
+			fill: $rc-light-grey-alt;
+		}
+
+
+		&.active {
+			background-color: #FFFFFF;
+
+			svg {
+				fill: $rc-red;
+			}
+		}
+	}
+
+	.rc-tabs__content {
+		background-color: #FFFFFF;
+		padding: 1em;
+	}
+}
