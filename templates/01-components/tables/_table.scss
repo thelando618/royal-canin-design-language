@@ -8,8 +8,7 @@ table	{
   white-space: nowrap;
 
   th, td {
-  	// @todo make this colour into a variable
-  	border-right: 1px solid #EBEBEB;
+    border-right: 1px solid lighten( $rc-light-grey, 7.5% );
   	padding: .875em 1em;
 
   	&:first-child {
@@ -26,8 +25,7 @@ table	{
 
 	tbody {
 		tr:nth-child( even ) {
-			// @todo make this into a variable
-			background-color: #F6F6F6;
+      border-right: 1px solid lighten( $rc-light-grey, 10% );
 		}
 	}
 
