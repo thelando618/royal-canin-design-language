@@ -8,8 +8,7 @@
 
   .rc-progress__markers__marker {
     position: relative;
-    // @todo make this into a variable
-    background-color: #1E3170;
+    background-color: $rc-blue;
     color: #FFFFFF;
     display: inline-block;
     font-size: 1em;
