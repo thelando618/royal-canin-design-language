@@ -39,57 +39,28 @@
 
 		<div class="gs-stage__content">
 
-			<h1>Forms</h1>
+			<h1>Tabs</h1>
+			<p></p>
 
-			<h2>A note on Accessibility (A11y)</h2>
+			<div class="gs-present">
+				<button class="">
+	Button
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img">
+		<title id="title">clock</title>
+		<path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm3.6-26.5V14.4c0-1.9-1.6-3.5-3.5-3.5s-3.5 1.6-3.5 3.5v19l13 13c.7.7 1.6 1 2.5 1s1.8-.3 2.5-1c1.4-1.4 1.4-3.6 0-4.9l-11-11z"></path>
+	</svg>
+</button>
 
-			<p>Please ensure that the <code class="language-html">for=""</code> attribute is used on labels and that it matches the input ID, for accessibility purposes, for example: </p>
-
-			<pre><code class="gs-code language-html"><label for="id-text">Input Label</label>
-<input id="id-text" type="text" name="text" placeholder="Placeholder..."></code></pre>
-
-			<p>Since the <code class="language-html">for</code> attribute relies on an ID to match up with, ensure that all Input IDs are unique on your page.</p>
-
-			<p>Every input, where applicable, must include a Label. If the design calls for an instance where no label exists, it should be hidden using the <code class="language-scss">screen-reader-text</code> class. More information on this can be on the <a href="#">Accessibility</a> page.</p>
-
-			<br>
-
-			<h2>Positioning Inputs</h2>
-			<p>When building a form, please use a wrapping element to position your Inputs, as opposed to applying positioning rules directly to the Inputs. For example:</p>
+			</div>
 
 
-			<pre><code class="gs-code language-html"><form>
-	<div class="positioning-class">
-		<label for="id-@@type">Input Label</label>
-		<input id="id-@@type" type="@@type" name="@@type" placeholder="Placeholder...">
-	</div>
 
-	<ul class="positioning-class list--blank list--align">
-		<li>
-			<input id="checkbox-1" type="checkbox" name="checkbox">
-			<label for="checkbox-1">Input Label</label>
-		</li>
 
-		<li>
-			<input id="checkbox-2" type="checkbox" name="checkbox">
-			<label for="checkbox-2">Input Label</label>
-		</li>
 
-		<li>
-			<input id="checkbox-3" type="checkbox" name="checkbox">
-			<label for="checkbox-3">Input Label</label>
-		</li>
-	</ul>
-</form></code></pre>
 
-			<br>
-
-			<h2><strong>&lt;input type="image"&gt;</strong></h2>
-			<p>Please don't use the Image input type for submit buttons.</p>
-			<p>The Submit input type, a button or an anchor with a class of <code class="language-scss">button</code> is more appropriate.</p>
 
 		</div>
-		
+
 	</div>
 
 </div>
@@ -102,3 +73,4 @@
 
 </body>
 </html>
+
