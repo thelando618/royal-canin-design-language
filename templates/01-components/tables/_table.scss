@@ -33,6 +33,11 @@ table	{
 		background-color: $rc-red;
 		color: #FFFFFF;
 	}
+
+  // Removes margin from custom checkbox element, where used.
+  label {
+    margin-bottom: 0;
+  }
 }
 
 .table--blank {
