@@ -116,6 +116,13 @@ gulp.task('copyFonts', function( done ) {
 });
 
 
+// Copy Image files
+gulp.task('copyImages', function( done ) {
+	return gulp.src( path.join( paths.templates, paths.assets, 'images/', '*' ) )
+		.pipe(gulp.dest('./public'));
+});
+
+
 // Get HTML files inside public directory and create an array
 gulp.task( 'getfiles', function( done ) {  
 	dirTree( paths.public, ['.html'], function( item ) {
@@ -201,7 +208,7 @@ gulp.task( 'createNav', gulp.series( 'getfiles', function( done ) {
 
 
 // Styleguide tasks
-gulp.task( 'generate', gulp.series( 'publicDir', 'copyTemplates', 'copyCSS', 'copyJS', 'copyFonts', 'createNav', 'copyTemplates', function( done ) {
+gulp.task( 'generate', gulp.series( 'publicDir', 'copyTemplates', 'copyCSS', 'copyJS', 'copyFonts', 'copyImages', 'createNav', 'copyTemplates', function( done ) {
 	done();
 } ) );
 

@@ -71,13 +71,19 @@ input[type="submit"] {
 		}
 
 		&:after {
-			content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.8 24"><style>.st0{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}</style><path d="M2.5 18c1.5 2.4 4 4.2 7 4.8 5.9 1.3 11.8-2.5 13-8.5C23.8 8.3 20 2.5 14 1.2 8.1 0 2.3 3.8 1 9.7" class="st0"/></svg>');
+		
+			// When an SVG is used in this manner, it must be first optimised and then URL encoded to ensure cross browser compatibility.
+			// Optimise: https://jakearchibald.github.io/svgomg/
+			// URL Encode: https://codepen.io/tigt/post/optimizing-svgs-in-data-uris
+			content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E %3Cstyle%3E .st0%7Bfill:%23FFFFFF;%7D %3C/style%3E %3Cpath d='M4.2 46.2c4.2 6.6 11.1 11.5 19.3 13.1l.5-2.4-.5 2.4c2.2.5 4.3.7 6.4.7 13.9 0 26.5-9.7 29.4-23.8l-2.5-.5 2.5.5c.5-2.2.7-4.3.7-6.4C60 15.9 50.2 3.7 35.9.6c-2-.4-4-.6-6-.6C15.8 0 3.2 9.7.1 23.7c-.3 1.3.6 2.7 1.9 3 1.4.3 2.7-.6 3-1.9C7.6 13.1 18.2 5 29.8 5c1.7 0 3.3.2 5 .5l.6-2.5-.5 2.4C46.9 8 55 18.2 55 29.7c0 1.8-.2 3.6-.6 5.4C52 47 41.5 55 29.9 55c-1.8 0-3.6-.2-5.3-.6C17.7 53 12 49 8.6 43.6c-.7-1.2-2.3-1.5-3.5-.8s-1.7 2.3-.9 3.4z' class='st0'/%3E %3C/svg%3E");
+			width: 1em;
+			height: 1em;
 			animation: steady-spin 1s infinite linear;
 
-			// @todo put this stuff inside a modernizr check
-			// content: '';
-			// background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/disp/585d0331234507.564a1d239ac5e.gif');
-			// background-size: 1em;
+			.no-cssanimations & {
+				content: '';
+				background: url('../images/loading.gif') center center / 1em no-repeat;
+			}
 		}
 	}
 
