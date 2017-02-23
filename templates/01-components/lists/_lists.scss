@@ -44,20 +44,15 @@ ul, ol {
 
 		li {
 			background-color: #FFFFFF;
-			// @todo make into a variable.
-			border-bottom: 1px solid #E5E5E5;
+			border-bottom: 1px solid $rc-light-grey;
 			padding: 1em;
 			margin-bottom: 0;
-			// @todo make into a variable.
-			color: #58585B;
 			// @todo make into a variable.
 			transition: background 0.1s ease-in;
 			padding-right: 3.5em;
 
 			&:hover, &:focus {
-				// @todo make into a variable.
-				background-color: #F3F3F3;
-				border-bottom-color: transparent;
+				background-color: lighten( $rc-light-grey, 10% );
 			}
 
 			&:last-child {
@@ -73,8 +68,7 @@ ul, ol {
 			top: 50%;
 			margin-top: -.75em;
 			right: 1em;
-			// @todo make into a variable.
-			fill: #968C83;
+			fill: $rc-warm-grey;
 		}
 
 		a {
@@ -87,8 +81,7 @@ ul, ol {
 		}
 
 		.active {
-			// @todo make into a variable.
-			background-color: darken( #F3F3F3, 2.5% );
+			background-color: lighten( $rc-light-grey, 10% );
 			border-left: 4px solid $rc-red;
 
 			&:before {
@@ -104,10 +97,6 @@ ul, ol {
 				border-bottom: 4px solid transparent;
 			}
 
-			&:hover, &:focus {
-				// @todo make into a variable.
-				background-color: darken( #F3F3F3, 5% );
-			}
 		}
 	}
 }
