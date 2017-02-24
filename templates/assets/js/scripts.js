@@ -197,6 +197,8 @@ $(function () {
     }
   }
 
+  // @todo count method for triggers
+
 
   Tabs.prototype.showFirst = function( element ) {
     // Get first trigger

@@ -3,32 +3,36 @@
 	padding: 1em;
 }
 
-
-
-
 .rc-tabs {
-
 	.rc-tabs__triggers {
 		overflow: hidden;
 		margin-top: 0;
 		margin-bottom: 0;
-
+		width: 90%;
+	
 		li {
 			float: left;
-			margin-bottom: 0;
-			margin-right: .25em;
+			padding-right: .25em;
+
+	    &:last-child {
+	    	margin-bottom: .25em;
+	    }
 		}
 	}
 
 	.rc-tabs__triggers__trigger {
-		// @todo move this into a button class if it is used anywhere else...
 		color: inherit;
 		background-color: lighten( $rc-light-grey, 10% );
+		cursor: pointer;
+		height: 100%;
+
+		&:focus {
+			outline: none;
+		}
 
 		svg {
 			fill: $rc-light-grey-alt;
 		}
-
 
 		&.active {
 			background-color: #FFFFFF;
@@ -42,5 +46,48 @@
 	.rc-tabs__content {
 		background-color: #FFFFFF;
 		padding: 1em;
+	}
+
+	&.rc-tabs--icons {
+		.rc-tabs__triggers {
+			.button__value {
+				display: none;
+			}
+
+			svg {
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+	}
+
+	// Using max width to avoid setting and resetting styles using min-width queries
+	@media ( max-width: 1024px ) {
+		.rc-tabs__triggers {
+			.button__value {
+				display: none;
+			}
+
+			svg {
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+	}
+
+	// Using flexbox (as opposed to no-flexbox), to avoid setting and resetting styles
+	.flexbox & {
+		.rc-tabs__triggers {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		li {
+			flex: 1 1 auto;
+		}
+
+		.rc-tabs__triggers__trigger {
+			width: 100%;
+		}
 	}
 }
