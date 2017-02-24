@@ -1,3 +1,7 @@
+.rc-tooltip__trigger {
+	cursor: help;
+}
+
 .rc-tooltip {
 	position: absolute;
 	right: 100%;
@@ -6,8 +10,8 @@
 	background-color: #FFFFFF;
 	padding: .5em 1em;
 	max-width: 400px;
-	box-shadow: 0 4px 10px rgba( 0, 0, 0, .03 );
-	margin: 1em;
+	// width: 400px;
+	box-shadow: 0 .5em 1em rgba( 0, 0, 0, .1 );
 
 	p {
 		margin: 0;
@@ -20,13 +24,13 @@
 	&:before {
 		content: '';
 		position: absolute;
-		top: 0;
-		margin-top: -.5rem;
+		top: 100%;
+		// margin-top: -.5rem;
 		left: 10%;
 		width: 0;
 		height: 0;
 		border-left: .5rem solid transparent;
 		border-right: .5rem solid transparent;
-		border-bottom: .5rem solid #FFFFFF;
+		border-top: .5rem solid #FFFFFF;
 	}
 }

@@ -329,15 +329,35 @@ $(function () {
   		display: 'none',
   		right: 'auto', 
   		opacity: 1,
-  		top:tooltip.pageY + 16,
+  		top: tooltip.pageY + 16,
   		left: tooltip.pageX - 32
   	}).fadeIn( 400 );
   }
 
   Tooltips.prototype.moveTooltip = function( tooltip, event ) {
+
+  	var border_top = $(window).scrollTop();
+  	var border_right = $(window).width();
+    var left_pos;
+    var top_pos;
+    var offset = 16;
+
+		if( border_right - ( offset * 2 ) >= tooltip.outerWidth() + event.pageX ) {
+			left_pos = event.pageX - offset * 0.25;
+		} else {
+			left_pos = border_right - tooltip.outerWidth() - offset * 2;
+		}
+
+		if( border_top + ( offset *2 ) >= event.pageY - tooltip.height() ) {
+			top_pos = border_top + offset;
+		} else {
+			top_pos = event.pageY-tooltip.height() - offset * 2;
+		}
+
+
   	tooltip.css({
-  		top:event.pageY + 16,
-  		left:event.pageX - 32
+  		top: top_pos,
+  		left: left_pos
   	});
   }
 
