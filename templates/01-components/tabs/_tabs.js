@@ -35,14 +35,15 @@
   }());
 
 
-
-
   Tabs.prototype.init = function( element ) {
     // Ready
     $( this.tabs ).addClass( this.settings.initClass );
 
     // Hide all Content
     this.content.hide();
+
+    // Trigger count method
+    this.count();
 
     // Trigger showFirst method
     this.showFirst();
@@ -51,6 +52,16 @@
     if ( true === this.settings.firstShowing ) {
       // Call triggerEvent method which has eventListeners in for future clicks
       this.triggerEvent();
+    }
+  }
+
+
+  Tabs.prototype.count = function( element ) {
+    // For each content block, if there is no accompanying trigger, remove it from the DOM.
+    for (var i = 0; i < this.content.length; i++) {
+      if ( $( this.content[i] ).attr( 'id' ) !== $( this.triggers[i] ).data( 'tab' ) ) {
+        $( this.content[i] ).remove();
+      }
     }
   }
 
@@ -65,7 +76,6 @@
     // Call changeTab method with first trigger data attribute passed
     this.changeTab( triggerData );
   }
-
 
 
   Tabs.prototype.changeTab = function( tab ) {
