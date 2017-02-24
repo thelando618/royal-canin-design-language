@@ -190,14 +190,19 @@ $(function () {
 
   Tabs.prototype.count = function( element ) {
     // For each content block, if there is no accompanying trigger, remove it from the DOM.
-    for (var i = 0; i < this.content.length; i++) {
+    for ( var i = 0; i < this.content.length; i++ ) {
       if ( $( this.content[i] ).attr( 'id' ) !== $( this.triggers[i] ).data( 'tab' ) ) {
         $( this.content[i] ).remove();
       }
     }
-  }
 
-  // @todo count method for triggers
+    // For each trigger, if there is no accompanying content block, remove it from the DOM.
+    for ( var i = 0; i < this.triggers.length; i++ ) {
+      if ( $( this.content[i] ).attr( 'id' ) !== $( this.triggers[i] ).data( 'tab' ) ) {
+        $( this.triggers[i] ).parent( 'li' ).remove();
+      }
+    }
+  }
 
 
   Tabs.prototype.showFirst = function( element ) {
