@@ -46,6 +46,8 @@
 	.rc-tabs__content {
 		background-color: #FFFFFF;
 		padding: 1em;
+		border: 1px solid red;
+		overflow: hidden;
 	}
 
 	&.rc-tabs--icons {
@@ -91,3 +93,17 @@
 		}
 	}
 }
+
+
+
+// Move to helper class
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+

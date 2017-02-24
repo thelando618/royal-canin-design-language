@@ -7,19 +7,28 @@
 		<div class="gs-stage__content">
 
 			<h1>Tabs</h1>
-			<p></p>
+			<p>The Tabs Component relies on the main <b>Royal Canin WDL Javascript File</b>.</p>
+
+			<p>Whilst this component is flexible enough to accommodate any number of tabs and any amount of content in the content boxes, it is recommended than when using it, you follow these guidelines:</p>
+
+			<ul>
+				<li>No more than 5 tabs.</li>
+				<li>Trigger button values should be short.</li>
+				<li>Trigger button SVGs should be relevant and used for all buttons, or none.</li>
+				<li>Images used inside the content blocks must use the align classes, <a href="/01-components/typography/paragraph-image.html">outlined here</a>.</li>
+				<li>All Trigger buttons must contain text <em>as well as </em> an SVG, or an SVG by itself.</li>
+				<li>If the Trigger buttons contain no text (just an SVG), the <code class="language-html">rc-tabs--icons</code> class must be applied in addition to the wrapping <code class="language-html">rc-tabs</code> class.</li>
+				<li>The <code class="language-html">clearfix</code> class should not be removed.</li>
+			</ul>
+
+			<br>
+			<br>
 
 			<div class="gs-present gs-present--white">
 				@@include('./01-components/tabs/_tabs.html')
 			</div>
 
-
-
-
-
-<!-- 			<pre><code class="gs-code language-html">@@include('./01-components/buttons/_button-icon.html', {
-				"class": ""
-			})</code></pre> -->
+			<pre><code class="gs-code language-html">@@include('./01-components/tabs/_tabs.html')</code></pre>
 
 		</div>
 
