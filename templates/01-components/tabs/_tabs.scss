@@ -44,6 +44,7 @@
 	}
 
 	.rc-tabs__content {
+		box-sizing: border-box;
 		background-color: #FFFFFF;
 		padding: 1em;
 		overflow: hidden;
@@ -93,9 +94,80 @@
 	}
 }
 
+// Tabs - Side Triggers
+.rc-tabs--side {
+	background-color: lighten( $rc-light-grey, 10% );
+	display: flex;
+	width: 300px;
+
+	.rc-tabs__triggers {
+		order: 2;
+		width: 20%;
+
+		li {
+			padding-right: 0;
+			margin-bottom: 0;
+			flex: 1 1 100%;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		.button__value {
+			display: none;
+		}
+
+		svg {
+			margin: 0 auto;
+		}
+	}
+
+	.rc-tabs__triggers__trigger {
+		padding: .75em 1em;
+	}
+
+	.rc-tabs__content {
+		order: 1;
+		width: 80%;
+	}
+
+	.no-flexbox & {
+		overflow: hidden;
+
+		.rc-tabs__triggers {
+			float: right;
+		}
+
+		.rc-tabs__content {
+			float: left;
+		}
+	}
+
+	@media ( min-width: 640px ) {
+		width: 400px;
+
+		.rc-tabs__triggers {
+			width: 15%;
+		}
+
+		.rc-tabs__content {
+			width: 85%;
+		}
+	}
+}
 
 
-// Move to helper class
+
+
+
+
+
+
+
+
+
+// Move to helper class and partial and update Tabs
 .clearfix:before,
 .clearfix:after {
 	content: " ";

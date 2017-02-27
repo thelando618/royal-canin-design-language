@@ -1,14 +1,9 @@
-.rc-tooltip__trigger {
-	cursor: help;
-}
-
 .rc-tooltip {
 	position: absolute;
 	left: -110%;
 	z-index: 1000;
 	display: inline-block;
 	background-color: #FFFFFF;
-	padding: .5em 1em;
 	width: auto;
 	max-width: 80%;
 	box-shadow: 0 .5em 1em rgba( 0, 0, 0, .1 );
@@ -23,6 +18,10 @@
 
 	> p {
 		font-size: .875em;
+	}
+
+	.rc-tooltip__pad {
+		padding: .5em 1em;
 	}
 
 	.rc-tooltip__icon {
@@ -54,6 +53,10 @@
 		border-top: none;
 		border-bottom: .5rem solid #FFFFFF;
 		margin-top: -.5rem;
+	}
+
+	.rc-tabs--side {
+		font-size: .875em;
 	}
 
 	@media ( min-width: 480px ) {
