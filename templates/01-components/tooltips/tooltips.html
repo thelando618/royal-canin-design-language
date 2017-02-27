@@ -7,20 +7,63 @@
 		<div class="gs-stage__content">
 
 			<h1>Tooltips</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>Tooltips should be primarily to display additional content that is beneficial yet not crucial to the user.</p>
 
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <a href="#" class="rc-tooltip__trigger" data-tooltip="rc-tooltip--1">This should trigger a tooltip on hover</a> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>Tabbed Tooltips are available but the content that is displayed in them should <b>always primarily</b> be presented in a way that does not requir user interactivity to reveal.</p>
 
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <a href="#" class="rc-tooltip__trigger" data-tooltip="rc-tooltip--2"> This should trigger a static tooltip</a> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>To put it simply, the main content should not rely on the Tooltip in order to be coherent.</p>
 
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<br>
 
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<h2>A note on accessibiltiy</h2>
+			<p>Since Tooltips are triggered by a hover, at this point there is some work to do in order to make them more accessibility friendly.</p>
+
+			<p>Similarly, whilst Tooltips work fine on touch based devices, they may not be the best way to present information as taps are required to trigger events instead of simply hovering.</p>
+
+			<p>For this reason it is worth stressing the point again, that only supplementary, non-critical content should live within a Tooltip.</p>
 
 
-			@@include('./01-components/tooltips/_tooltip.html')
+			<br>
 
-			<!-- <pre><code class="gs-code language-html">@@include('./01-components/tabs/_tabs.html')</code></pre> -->
+			<h2>Standard Tooltip</h2>
+			<p>The <a href="#" class="rc-tooltip__trigger" data-tooltip="rc-tooltip--1">fairly long trigger</a> in this sentence should display a standard Tooltip when hovered over. This Tooltip should follow the mouse if it is moved whilst over the trigger.</p>
+
+
+			<p>The <strong>Trigger</strong> for this Tooltip is demonstrated below.</p>
+			<p><b>Notice</b> the <code class="language-html">data-tooltip="rc-tooltip--1"</code> data attribute that has been applied. This data attribute is used to determine which Tooltip this Trigger should display; it must match the Tooltip's <b>ID</b> attribute.</p>
+			<pre><code class="language-html">&lt;a href="#" class="rc-tooltip__trigger" data-tooltip="rc-tooltip--1"&gt;fairly long trigger&lt;/a&gt;</code></pre>
+
+
+			<p>The <strong>Tooltip</strong> code itself is demonstrated below.</p>
+			<p><b>Notice</b> the <b>ID</b> attribute as well as the <code class="language-html">data-tooltip-follow="true"</code> data attribute that has been applied and set to true. This ensures that the Tooltip will follow the movement of the mouse whilst it is over the Trigger.</p>
+
+			@@include('./01-components/tooltips/_tooltip-standard.html')
+
+			<pre><code class="gs-code language-html">@@include('./01-components/tooltips/_tooltip-standard.html')</code></pre>		
+
+
+			<br>
+
+
+			<h2>Tabbed Tooltip</h2>
+			<p>The <a href="#" class="rc-tooltip__trigger" data-tooltip="rc-tooltip--2">trigger</a> in this sentence should display a Tabbed Tooltip when hovered over. This Tooltip should be static, positioned slightly offset from where the mouse triggered it.</p>
+
+			<p>As well as displaying information this Tooltip can be interacted with. The same JS that powers <a href="http://localhost:3000/01-components/tabs/tabs.html">Tabs</a> is used here to allow for the content to be changed inside the Tooltip.</p>
+
+			<p>The <strong>Trigger</strong> for this Tooltip is demonstrated below.</p>
+			<p><b>Notice</b> that the <code class="language-html">data-tooltip</code> attribute that has been applied is different to the first example.</p>
+			<pre><code class="language-html">&lt;a href="#" class="rc-tooltip__trigger" data-tooltip="rc-tooltip--2"&gt;trigger&lt;/a&gt;</code></pre>
+
+
+			<p>The <strong>Tooltip</strong> code itself is demonstrated below.</p>
+			<p><b>Notice</b> the <b>ID</b> attribute as well as the <code class="language-html">data-tooltip-follow</code> attribute. This Tooltip will not move after being triggered.</p>
+
+			@@include('./01-components/tooltips/_tooltip-tabbed.html')
+
+			<pre><code class="gs-code language-html">@@include('./01-components/tooltips/_tooltip-tabbed.html')</code></pre>		
+
+
+			@@include('./01-components/tooltips/_tooltip-tabbed.html')
 
 
 		</div>

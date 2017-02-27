@@ -309,6 +309,10 @@ $(function () {
   Tooltips.prototype.event = function( element ) {
   	var th = this;
 
+  	$( this.tooltip ).on( 'click', function( event ) {
+  		event.preventDefault();
+  	});
+
     $( this.tooltip ).on( 'mouseenter', function( event ) {
       var tooltip = $( this ).data( 'tooltip' );
       th.showTooltip( $( '#' + tooltip ), event );
