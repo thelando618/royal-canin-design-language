@@ -36,7 +36,7 @@
   Tooltips.prototype.event = function( element ) {
   	var th = this;
 
-    $( this.tooltip ).on( 'mouseenter focus', function( event ) {
+    $( this.tooltip ).on( 'mouseenter', function( event ) {
       var tooltip = $( this ).data( 'tooltip' );
       th.showTooltip( $( '#' + tooltip ), event );
     });
@@ -50,7 +50,7 @@
     	}
     });
 
-    $( this.tooltip ).on( 'mouseout blur', function( event ) {
+    $( this.tooltip ).on( 'mouseout', function( event ) {
       var tooltip = $( this ).data( 'tooltip' );
 			th.delay = setTimeout( function() {
 				th.hideTooltip( $( '#' + tooltip ) );
