@@ -299,6 +299,9 @@ $(function () {
     // Ready
     $( this.tooltip ).addClass( 'rc-tooltip-init' );
 
+    this.arrow = $( '.rc-tooltip__arrow' );
+    console.log( this.arrow );
+
     this.event();
   }
 
@@ -349,11 +352,12 @@ $(function () {
 		}
 
 		if( border_top + ( offset *2 ) >= event.pageY - tooltip.height() ) {
-			top_pos = border_top + offset;
+			this.arrow.addClass( 'rc-tooltip__arrow--top' );
+			top_pos = event.pageY + offset;
 		} else {
-			top_pos = event.pageY-tooltip.height() - offset * 2;
+			this.arrow.removeClass( 'rc-tooltip__arrow--top' );
+			top_pos = event.pageY - tooltip.height() - offset * 2;
 		}
-
 
   	tooltip.css({
   		top: top_pos,
