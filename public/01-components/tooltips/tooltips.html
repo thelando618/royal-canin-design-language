@@ -44,10 +44,14 @@
 
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <a href="#" class="rc-tooltip__trigger" data-tooltip="rc-tooltip--1">This should trigger a tooltip on hover</a> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <a href="#" class="rc-tooltip__trigger" data-tooltip="rc-tooltip--2"> This should trigger a static tooltip</a> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 
-			<div class="rc-tooltip" id="rc-tooltip--1">
+			<div class="rc-tooltip" id="rc-tooltip--1" data-tooltip-follow="true">
 	<div class="rc-tooltip__arrow"></div>
 
 	<div class="rc-tooltip__icon">
@@ -59,6 +63,18 @@
 
 	<header>
 		<p>Some Title Text that is much much</p>
+	</header>
+
+	<p>Some Body Text Lorem ipsum dolo.</p>
+</div>
+
+
+
+<div class="rc-tooltip" id="rc-tooltip--2" data-tooltip-follow="false">
+	<div class="rc-tooltip__arrow"></div>
+
+	<header>
+		<p>This should be static</p>
 	</header>
 
 	<p>Some Body Text Lorem ipsum dolo.</p>
