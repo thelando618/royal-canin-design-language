@@ -135,6 +135,53 @@ $(function () {
 
 
 
+
+// Move this to Scripts
+$(function () {
+
+	var $r = $('input[type="range"]');
+	var $ruler = $('<div class="rangeslider__ruler rangeslider__ruler--top" />');
+	var $test = $('<div class="rangeslider__ruler rangeslider__ruler--bottom" />');
+
+	// Initialize
+	$r.rangeslider({
+	  polyfill: false,
+
+	  onInit: function() {
+	    $ruler[0].innerHTML = getRulerRange( this.min, this.max, this.step, 5 );
+	    $test[0].innerHTML = getRulerRange( this.min, this.max, this.step, 5 );
+	    this.$range.prepend( $ruler );
+	    this.$range.prepend( $test );
+	  }
+	});
+
+
+	function getRulerRange( min, max, step, big ) {
+	  var range = '';
+	  var i = 1;
+	  var percent = 100 / max;
+
+	  while ( i <= max ) {
+
+	  	if ( i == 1 || i % big == 1 ) {
+	  		range += '<span class="big" style="width: ' + percent + '%;"></span>';
+	  	} else {
+	  		range += '<span style="width: ' + percent + '%;"></span>';
+	  	}
+
+	    if ( i == max || i == min ) {
+	    	range += '<span class="big" width="0%"></span>';
+	    }
+
+	    i = i + step;
+	  }
+	  return range;
+	}
+
+});
+
+
+
 /**
  *
  * File Tabs.js.
