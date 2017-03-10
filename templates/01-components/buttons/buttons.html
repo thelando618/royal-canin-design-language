@@ -8,38 +8,96 @@
 
 		<div class="gs-stage__content">
 
-			<h1 class="gs-stage__content__header">Buttons</h1>
-			<p>Buttons can be used for a variety of actions. Button sizing should be utilised to best display on the device being output on. Button states can give different visual representations to the user. Icons can be used within buttons to highlight a specific area or action.</p>
+			<header class="gs-stage__content__header">
+				<h1>Buttons</h1>
+				<p>Usage and implementation for Buttons within Web Design Language.</p>
 
-			<div class="gs-present">
+				<blockquote>
+					<h2 class="rc-head rc-head--6">Standard Button</h2>
+					<p>Buttons can be used for a variety of actions.</p>
+					<p>Sizing modifier classes can be used to change the size of the Button.</p>
+					<p>Button states can give different visual representations to the user.</p>
+					<p>Icons can be used within Buttons to hightlight a specific area or action.</p>
+				</blockquote>
+			</header>
+
+
+			<h2>Examples</h2>
+
+			<section class="gs-present">
+				<header>
+					<label>Button</label>
+					<p>A standard button can be implemented by copying and pasting the code below into your HTML. No classes are required to implement a standard button and the default color will be the brand red.</p>
+					<ul class="list--align list--blank">
+						<li><strong>Specifications</strong></li>
+						<li><code class="gs-code language-scss">font-size: .875em;</code></li>
+						<li><code class="gs-code language-scss">padding: 12px 20px;</code></li>
+					</ul>
+				</header>
+
 				@@include('./01-components/buttons/_button.html')
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/buttons/_button.html')</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/buttons/_button.html')</code></pre>
+			</section>
 
-			<br>
 
-			<div class="gs-present">
+			<section class="gs-present">
+				<header>
+					<label>Button Medium</label>
+					<p>A modifier class of <code class="gs-code language-html">button--medium</code> can be added to increase the Button padding.</p>
+					<ul class="list--align list--blank">
+						<li><strong>Specifications</strong></li>
+						<li><code class="gs-code language-scss">font-size: .875em;</code></li>
+						<li><code class="gs-code language-scss">padding: 14.5px 35px;</code></li>
+					</ul>
+				</header>
+
 				@@include('./01-components/buttons/_button-class.html', {
 					"class": "button--medium" 
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/buttons/_button-class.html', {
-				"class": "button--medium" 
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/buttons/_button-class.html', {
+					"class": "button--medium" 
+				})</code></pre>
+			</section>
 
-			<br>
 
-			<div class="gs-present">
+			<section class="gs-present">
+				<header>
+					<label>Button Large</label>
+					<p>A modifier class of <code class="gs-code language-html">button--large</code> can be added to increase the Button padding and font size.</p>
+					<ul class="list--align list--blank">
+						<li><strong>Specifications</strong></li>
+						<li><code class="gs-code language-scss">font-size: 1em;</code></li>
+						<li><code class="gs-code language-scss">padding: 16px 40px;</code></li>
+					</ul>
+				</header>
+
 				@@include('./01-components/buttons/_button-class.html', {
 					"class": "button--large" 
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/buttons/_button-class.html', {
-				"class": "button--large" 
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/buttons/_button-class.html', {
+					"class": "button--large" 
+				})</code></pre>
+			</section>
+
+
+			<section class="gs-present">
+				<header>
+					<label>Button Full Width</label>
+					<p>A modifier class of <code class="gs-code language-html">button--full</code> can be added to override the button sizing and make the default full width to the container.</p>
+					<p>This class can be used alongside a sizing modifier class.</p>
+				</header>
+
+				@@include('./01-components/buttons/_button-class.html', {
+					"class": "button--medium button--full"
+				})
+
+				<pre><code class="gs-code language-html">@@include('./01-components/buttons/_button-class.html', {
+					"class": "button--medium button--full"
+				})</code></pre>
+			</section>
 
 		</div>
 

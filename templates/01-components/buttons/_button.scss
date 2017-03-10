@@ -44,6 +44,10 @@ input[type="submit"] {
 		}
 	}
 
+	&.button--full {
+		width: 100%;
+	}
+
 	// Variations
 	&.button--success {
 		background-color: $rc-tertiary-green;
