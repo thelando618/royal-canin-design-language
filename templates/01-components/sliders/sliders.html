@@ -6,19 +6,51 @@
 
 		<div class="gs-stage__content">
 
-			<h1>Sliders</h1>
-			<p>This section is in progress.</p>
-<!-- 			<p>The Sliders described here are not to be mistaken with the <a href="#">Carousels Feature.</a></p>
-			<p>These Sliders are intended for users to provide a value along a preset range.</p>
-			<p><b>As it stands, this Component is built on top of a <a href="http://rangeslider.js.org/">Javascript Plugin</a> that provides the necessary Polyfill code for older browsers.</b></p>
+			<aside role="alert" class="alert alert--error">
+			  <strong>This section is currently in progress.</strong>
+			</aside>
 
-			<br>
+			<header class="gs-stage__content__header">
+				<h1 class="gs-stage__content__head-tag">Sliders</h1>
+				<p>Usage and implementation for Sliders within Web Design Language.</p>
 
-			<div class="gs-present gs-present--white">
-				<input class="test" type="range" name="rc-range" min="0" max="30" step="1" value="0">
-			</div>
- -->
+				<blockquote class="gs-stage__content__intro">
+					<h2 class="rc-head rc-head--6">Introduction</h2>
+					<p>Sliders are an interactive means to enable a user to select a value when a timescale for selection is useful.</p>
+					<p>Sliders will work from mobile devices up and will feedback to a user the option they have selected instantly. </p>
+					<p>The Sliders described here are not to be mistaken with the <a href="#">Carousels Feature.</a></p>
+				</blockquote>
+			</header>
+
+			<h2 class="gs-stage__content__head-tag">Examples</h2>
+
+			<section class="gs-present">
+				<header>
+					<label>Standard</label>
+				</header>
+
+	<!-- 			<div class="gs-present gs-present--white">
+					<input class="test" type="range" name="rc-range" min="0" max="30" step="1" value="0">
+				</div> -->
+			</section>
+
 		</div>
+
+		<section class="gs-section gs-changelog">
+			<header>
+				<h1 class="rc-head rc-head--4 gs-section__head">Changelog</h1>
+			</header>
+
+			<div class="gs-section__content">
+				<ul class="list--blank list--align">
+					@@loop("./_changelog-item.html", "./01-components/sliders/_changelog.json")
+				</ul>
+			</div>
+		</section>
+
+		@@include('./_issues.html')
+
+		@@include('./_feedback.html')
 
 	</div>
 
