@@ -30,3 +30,15 @@
 
 // Font stack variable
 $font-din: "DIN Pro", 'Avenir', Helvetica, Arial, sans-serif;
+
+.font--regular {
+  font-weight: 300;
+}
+
+.font--medium {
+  font-weight: 500;
+}
+
+.font--bold {
+  font-weight: 700;
+}

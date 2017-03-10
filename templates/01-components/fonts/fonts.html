@@ -1,7 +1,4 @@
-
 @@include('./_site-header.html')
-
-
 
 <div class="gs-stage">
 
@@ -9,37 +6,64 @@
 
 		<div class="gs-stage__content">
 
-			<h1>Fonts</h1>
 
-			<div class="gs-font-list-wrap">
+			<header class="gs-stage__content__header">
+				<h1>Typeface</h1>
+				<p>Usage and implementation for Typography within Web Design Language.</p>
 
-				<ul class="gs-font-list">
-					<li class="font-din">
-						<h2>DIN Pro</h2>
-						<p class="gs-font-list--style">Regular</p>
-						<p class="gs-font-list--demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<blockquote>
+					<h2 class="rc-head rc-head--6">Introduction</h2>
+					<p>The only font that should be used on any Royal Canin touchpoint is from the Din Pro Family.</p>
+					</p>A mixture of Din Pro Regular for body copy and Din Pro Medium for headers and Din Pro Bold in specific use case will ensure the correct style is adhered to.</p>
+				</blockquote>
+			</header>
+
+
+			<h2>Examples</h2>
+
+			<section class="gs-present">
+				<ul class="list--align list--blank">
+					<li>
+						<h2 class="font--regular">Din Pro Regular</h2>
+						<p>Din Pro <b>Regular</b> is implemented through standard <code class="language-html">&lt;p&gt;</code>, <code class="language-html">&lt;li&gt;</code>, <code class="language-html">&lt;span&gt;</code> and <code class="language-html">&lt;label&gt;</code> tags.</p>
+						<p>To implement Din Pro Regular, add the class <code class="gs-code language-html">font--regular</code></p>
 					</li>
 
-					<li class="font-din font-din--med">
-						<h2>DIN Pro</h2>
-						<p class="gs-font-list--style">Medium</p>
-						<p class="gs-font-list--demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<li>
+						<h2 class="font--medium">Din Pro Medium</h2>
+						<p>Din Pro <b>Medium</b> is implemented through standard <code class="language-html">&lt;h&gt;</code>tags.</p>
+						<p>To implement Din Pro Medium add the class <code class="gs-code language-html">font--medium</code></p>
 					</li>
 
-					<li class="font-din font-din--bold">
-						<h2>DIN Pro</h2>
-						<p class="gs-font-list--style">Bold</p>
-						<p class="gs-font-list--demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<li>
+						<h2 class="font--bold">Din Pro Bold</h2>
+						<p>Din Pro <b>Bold</b> should only be implemented in extreme cases as it can appear overpowering to the user.</p>
+						<p>To implement Din Pro Bold add the class <code class="gs-code language-html">font--bold</code></p>
 					</li>
 				</ul>
-				
-			</div>
+
+			</section>
 
 		</div>
+
+		<section class="gs-section gs-changelog">
+			<header>
+				<h1 class="rc-head rc-head--4 gs-section__head">Changelog</h1>
+			</header>
+
+			<div class="gs-section__content">
+				<ul class="list--blank list--align">
+					@@loop("./_changelog-item.html", "./01-components/fonts/_changelog.json")
+				</ul>
+			</div>
+		</section>
+
+		@@include('./_issues.html')
+
+		@@include('./_feedback.html')
 		
 	</div>
 
 </div>
 
 @@include('./_site-footer.html')
-

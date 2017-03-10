@@ -411,43 +411,6 @@ pre.language-scss {
 
 
 /* 
-	Info: Gulp Styleguide Font List
-	Dest: n/a 
-	Note: These rules will likely have to remain in a Gulp Styleguide Sass partial
-*/
-.gs-font-list {
-	// @todo - these styles should be in a class that can be used by the styleguide, separate to a class to be used in the end product.
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-
-	li {
-		position: relative;
-		padding-top: 1em;
-		padding-bottom: 1em;
-		border-bottom: 1px solid #CCCCCC;
-
-		&:last-child {
-			border-bottom: none;
-			padding-bottom: 0;
-		}
-	}
-
-	h2 {
-		font-weight: inherit;
-		margin-top: .5em;
-	}
-
-	span {
-		display: block;
-		margin-bottom: .5em;
-	}
-}
-
-
-
-
-/* 
 	Info: Gulp Styleguide SVG list
 	Dest: n/a 
 	Note: These rules will likely have to remain in a Gulp Styleguide Sass partial
