@@ -116,7 +116,18 @@ a {
 
 
 
-// Move to Media partial
+// Blockquote
+blockquote {
+	border-left: 3px solid $rc-red;
+	margin-left: 0;
+	padding-left: 2em;
+
+	color: $rc-medium-grey;
+}
+
+
+
+// @todo Move to Media partial
 
 figure {
 	margin-bottom: 1em;

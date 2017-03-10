@@ -254,7 +254,24 @@ img	{
 	}
 
 	.gs-stage__content__header {
-		margin-top: 0;
+		margin-bottom: 3em;
+
+		h1 {
+			margin-top: 0;
+		}
+	}
+
+	.gs-present {
+		margin-bottom: 3em;
+
+		p {
+			color: #87888A;
+		}
+
+		label {
+			margin-bottom: 0;
+			font-weight: 500;
+		}
 	}
 
 
