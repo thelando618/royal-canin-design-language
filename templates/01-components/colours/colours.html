@@ -1,7 +1,4 @@
-
 @@include('./_site-header.html')
-
-
 
 <div class="gs-stage">
 
@@ -9,35 +6,72 @@
 
 		<div class="gs-stage__content">
 
-			<h1>Brand Colours</h1>
-			<p>Primary and Secondary brand colours are used to introduce the brand and highlight specific values.</p>
+			<header class="gs-stage__content__header">
+				<h1>Colours</h1>
+				<p>Usage and implementation for Colours within Web Design Language.</p>
 
-			<p>Colours are presented here by their <b>name</b>, <b>Hex</b> value and <b>Sass variable</b>.</p>
+				<blockquote>
+					<h2 class="rc-head rc-head--6">Brand Colours</h2>
+					<p>Primary and Secondary brand Colours are used to introduce the brand and highlight specific values.</p>
+					<p>Colours are presented here by their <b>name</b>, <b>Hex</b> value and <b>Sass variable</b>.</p>
+				</blockquote>
+			</header>
 
-			<label class="rc-head--6">Primary Colours</label>
-			<ul class="gs-colour-list">
-				@@loop("./01-components/colours/_colour.html", "./01-components/colours/_colours-primary.json")
-			</ul>
+			<h2>Examples</h2>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label>Primary Colours</label>
+					<p>Primary brand colours should be used when the brand is to be emphasised. Brand red should be used for headers buttons and elements of prominenece. Light grey can be used as a template background colour when the content that sits on it is within a white panel or as a secondary button colour.</p>
+				</header>
 
-			<label class="rc-head--6">Secondary Colours</label>
-			<ul class="gs-colour-list">
-				@@loop("./01-components/colours/_colour.html", "./01-components/colours/_colours-secondary.json")
-			</ul>
+				<ul class="gs-colour-list">
+					@@loop("./01-components/colours/_colour.html", "./01-components/colours/_colours-primary.json")
+				</ul>
+			</section>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label>Secondary Colours</label>
+					<p>Secondary brand colours should be used for secondary pieces of content or where a user needs to be alerted to a state. Text colour should be used throughout designs &amp; implementation and represents the best colour contrast for use on white and light grey background. Success and Error colours are to be used when a user requires feedback on a an action. Button alternate should be used when a button colour is required but should be secondary to the main brand red.</p>
+				</header>
 
-			<label class="rc-head--6">Tertiary Colours</label>
-			<ul class="gs-colour-list">
-				@@loop("./01-components/colours/_colour.html", "./01-components/colours/_colours-tertiary.json")
-			</ul>
+				<ul class="gs-colour-list">
+					@@loop("./01-components/colours/_colour.html", "./01-components/colours/_colours-secondary.json")
+				</ul>
+			</section>
+
+			<section class="gs-present">
+				<header>
+					<label>Tertiary Colours</label>
+					<p></p>
+				</header>
+
+				<ul class="gs-colour-list">
+					@@loop("./01-components/colours/_colour.html", "./01-components/colours/_colours-tertiary.json")
+				</ul>
+			</section>
 
 		</div>
+
+		<section class="gs-section gs-changelog">
+			<header>
+				<h1 class="rc-head rc-head--4 gs-section__head">Changelog</h1>
+			</header>
+
+			<div class="gs-section__content">
+				<ul class="list--blank list--align">
+					@@loop("./_changelog-item.html", "./01-components/colours/_changelog.json")
+				</ul>
+			</div>
+		</section>
+
+		@@include('./_issues.html')
+
+		@@include('./_feedback.html')
 		
 	</div>
 
 </div>
 
 @@include('./_site-footer.html')
-
