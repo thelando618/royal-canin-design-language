@@ -98,7 +98,6 @@
 .rc-tabs--side {
 	background-color: lighten( $rc-light-grey, 10% );
 	display: flex;
-	width: 300px;
 
 	.rc-tabs__triggers {
 		order: 2;
@@ -145,8 +144,6 @@
 	}
 
 	@media ( min-width: 640px ) {
-		width: 400px;
-
 		.rc-tabs__triggers {
 			width: 15%;
 		}
