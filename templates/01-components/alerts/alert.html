@@ -6,59 +6,91 @@
 
 		<div class="gs-stage__content">
 
-			<h1>Alert</h1>
 
-			<h2>Standard Alert</h2>
+			<header class="gs-stage__content__header">
+				<h1 class="gs-stage__content__head-tag">Alerts</h1>
+				<p>Usage and implementation for Alerts within Web Design Language.</p>
 
-			<div class="gs-present">
-				@@include('./01-components/alerts/_alert.html', {
-					"class": "",
-					"message": "Standard Alert. Neither positive or negative."
-				})
-			</div>
+				<blockquote class="gs-stage__content__intro">
+					<h2 class="rc-head rc-head--6">Introduction</h2>
+					<p>Alerts are a way of displaying feedback to a user when the user has carried out a task. </p>
+					<p>Alert success shows the user when they have succeeded in a task.</p>
+					<p>Alert error shows the user when the task they carried out did not work.</p>
+				</blockquote>
+			</header>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/alerts/_alert.html', {
-				"class": "",
-				"message": "Standard Alert. Neither positive or negative."
-			})</code></pre>
+			<h2 class="gs-stage__content__head-tag">Examples</h2>
+			<p>The examples below display front end styling and HTML markup to implement alerts into your code.</p>
 
-			<br>
 
-			<h2>Error Alert</h2>
+			<section class="gs-present">
+				<header>
+					<label>Success</label>
+					<p>The alert success message can be changed to your own message or desired language.</p>
+				</header>
 
-			<div class="gs-present">
-				@@include('./01-components/alerts/_alert.html', {
-					"class": "alert--error",
-					"message": "Oh dear, you have done something wrong!"
-				})
-			</div>
-
-			<pre><code class="gs-code language-html">@@include('./01-components/alerts/_alert.html', {
-				"class": "alert--error",
-				"message": "Oh dear, you have done something wrong!"
-			})</code></pre>
-
-			<br>
-
-			<h2>Success Alert</h2>
-
-			<div class="gs-present">
 				@@include('./01-components/alerts/_alert.html', {
 					"class": "alert--success",
 					"message": "Congrats, you have done something well!"
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/alerts/_alert.html', {
-				"class": "alert--success",
-				"message": "Congrats, you have done something well!"
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/alerts/_alert.html', {
+					"class": "alert--success",
+					"message": "Congrats, you have done something well!"
+				})</code></pre>
+			</section>
 
+			<section class="gs-present">
+				<header>
+					<label>Error</label>
+					<p>The alert success message can be changed to your own message or desired language.</p>
+				</header>
 
+				@@include('./01-components/alerts/_alert.html', {
+					"class": "alert--error",
+					"message": "Oh dear, you have done something wrong!"
+				})
 
-			<p></p>
+				<pre><code class="gs-code language-html">@@include('./01-components/alerts/_alert.html', {
+					"class": "alert--error",
+					"message": "Oh dear, you have done something wrong!"
+				})</code></pre>
+			</section>
+
+			<section class="gs-present">
+				<header>
+					<label>Standard</label>
+					<p>The alert success message can be changed to your own message or desired language.</p>
+				</header>
+
+				@@include('./01-components/alerts/_alert.html', {
+					"class": "",
+					"message": "Standard Alert. Neither positive or negative."
+				})
+
+				<pre><code class="gs-code language-html">@@include('./01-components/alerts/_alert.html', {
+					"class": "",
+					"message": "Standard Alert. Neither positive or negative."
+				})</code></pre>
+			</section>
 
 		</div>
+
+		<section class="gs-section gs-changelog">
+			<header>
+				<h1 class="rc-head rc-head--4 gs-section__head">Changelog</h1>
+			</header>
+
+			<div class="gs-section__content">
+				<ul class="list--blank list--align">
+					@@loop("./_changelog-item.html", "./01-components/alerts/_changelog.json")
+				</ul>
+			</div>
+		</section>
+
+		@@include('./_issues.html')
+
+		@@include('./_feedback.html')
 
 	</div>
 
