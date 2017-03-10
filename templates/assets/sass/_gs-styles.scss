@@ -440,3 +440,61 @@ pre.language-scss {
 	}
 }
 
+
+
+/*
+	Info: Gulp Styleguide Misc Section
+	Dest: n/a
+	Note: These rules will likely have to remain in a Gulp Styleguide Sass partial
+*/
+.gs-section {
+	position: relative;
+	padding: 2em;
+
+	.gs_section__content {
+		width: 90%;
+	}
+
+	header {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	.gs-section__head {
+		margin: 0;
+	}
+
+	.gs-section__logo {
+		width: 60px;
+
+		svg {
+			display: block;
+		}
+	}
+
+	.no-flexbox & {
+		header {
+			display: table;
+
+			.gs-section__head, .gs-section__logo {
+				display: table-cell;
+			}
+		}
+	}
+
+	@media ( min-width: 480px ) {
+		.gs-section__logo {
+			width: 80px;
+		}
+	}
+
+	@media ( min-width: 800px ) {
+		.gs-section__logo {
+			width: 100px;
+		}
+	}
+}
+
