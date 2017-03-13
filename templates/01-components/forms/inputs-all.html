@@ -1,7 +1,4 @@
-
 @@include('./_site-header.html')
-
-
 
 <div class="gs-stage">
 
@@ -9,339 +6,370 @@
 
 		<div class="gs-stage__content">
 
-			<h1>Inputs</h1>
+			<header class="gs-stage__content__header">
+				<h1 class="gs-stage__content__head-tag">Inputs</h1>
+				<p>Usage and implementation for Forms within Web Design Language.</p>
 
-			<p>Available inputs for Forms.</p>
+				<blockquote class="gs-stage__content__intro">
+					<h2 class="rc-head rc-head--6">Introduction</h2>
+					<p>Buttons can be used for a variety of actions.</p>
+					<p>Sizing modifier classes can be used to change the size of the Button.</p>
+					<p>Button states can give different visual representations to the user.</p>
+					<p>Icons can be used within Buttons to hightlight a specific area or action.</p>
+				</blockquote>
+			</header>
 
-			<h2>Type - Button</h2>
-			<div class="gs-present">
+			<h2 class="gs-stage__content__head-tag">Examples</h2>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Type - Button</label>
+				</header>
+
 				@@include('./01-components/forms/_input-value.html', {
 					"type": "button",
 					"value": "button"
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-value.html', {
-				"type": "button",
-				"value": "button"
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-value.html', {
+					"type": "button",
+					"value": "button"
+				})</code></pre>
+			</section>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Type - Checkbox</label>
+					<p>When using Checkbox Inputs, ensure that the accompanying Label either wraps the input, or is placed directly after it.</p>
+					<p>What follows is an example of both implementations.</p>
+					<p>In a form or a real world situation, Checkbox Inputs and their labels should be grouped inside of, and positioned by, a containing element.</p>
+				</header>
 
-			<h2>Type - Checkbox</h2>
-			<p>When using Checkbox Inputs, ensure that the accompanying Label either wraps the input, or is place directly after it.</p>
-			<p>What follows is an example of both implementations.</p>
-			<p>In a form or a real world situation, Checkbox Inputs and their labels should be grouped inside of, and positioned by, a containing element.</p>
-
-			<div class="gs-present">
 				@@include('./01-components/forms/_input-toggle.html', {
 					"type": "checkbox"
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-toggle.html', {
-				"type": "checkbox"
-			})</code></pre>
-
-			<br>
-
-			<h2>Type - Checkbox (Custom)</h2>
-			<p>Custom Checkbox Inputs require a different structure.</p>
-
-			<div class="gs-present">
-				@@include('./01-components/forms/_input-toggle-custom.html', {
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-toggle.html', {
 					"type": "checkbox"
-				})
-			</div>
+				})</code></pre>
+			</section>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-toggle-custom.html', {
-				"type": "checkbox"
-			})</code></pre>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Type - Color</label>
+					<p>If used, the Color input should use the Royal Canin Red color as it's default value.</p>
+				</header>
 
-			<br>
-
-			<h2>Type - Color</h2>
-			<p>If used, the Color input should use the Royal Canin Red color as it's default value.</p>
-
-			<div class="gs-present">
 				@@include('./01-components/forms/_input-value.html', {
 					"type": "color",
 					"value": "#E2001A"
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-value.html', {
-				"type": "color",
-				"value": "#E2001A"
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-value.html', {
+					"type": "color",
+					"value": "#E2001A"
+				})</code></pre>
+			</section>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Type - Date</label>
+				</header>
 
-			<h2>Type - Date</h2>
-			<div class="gs-present">
 				@@include('./01-components/forms/_input-no-placeholder.html', {
 					"type": "date" 
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-no-placeholder.html', {
-				"type": "date" 
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-no-placeholder.html', {
+					"type": "date" 
+				})</code></pre>
+			</section>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Type - Datetime Local</label>
+					<p>It is unlikely that this input type will need to be used. A standard Date Input can be used in most situations.</p>
+					<p>On top of this, there is less browser support for this Input type.</p>
+				</header>
 
-			<h2>Type - Datetime Local</h2>
-			<div class="gs-present">
 				@@include('./01-components/forms/_input-no-placeholder.html', {
 					"type": "datetime-local" 
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-no-placeholder.html', {
-				"type": "datetime-local" 
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-no-placeholder.html', {
+					"type": "datetime-local" 
+				})</code></pre>
+			</section>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Type - Email</label>
+					<p>The Email Input has access to the <code class="language-scss">:valid</code> and <code class="language-scss">:invalid</code> pseudo-classes.</p>
+					<p>Only the <code class="language-scss">:invalid</code> pseudo-class is used as a visual indicator.</p>
+				</header>
 
-			<h2>Type - Email</h2>
-			<p>The Email Input has access to the <code class="language-scss">:valid</code> and <code class="language-scss">:invalid</code> pseudo-classes.</p>
-			<p>Only the <code class="language-scss">:invalid</code> pseudo-class is used as a visual indicator.</p>
-
-			<div class="gs-present">
 				@@include('./01-components/forms/_input-standard.html', {
 					"type": "email" 
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
-				"type": "email" 
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
+					"type": "email" 
+				})</code></pre>
+			</section>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Type - File</label>
+				</header>
 
-			<h2>Type - File</h2>
-			<div class="gs-present">
 				@@include('./01-components/forms/_input-no-placeholder.html', {
 					"type": "file" 
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-no-placeholder.html', {
-				"type": "file" 
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-no-placeholder.html', {
+					"type": "file" 
+				})</code></pre>
+			</section>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Type - Hidden</label>
+					<p>In the case of a Hidden input, the label is not necessary.</p>
+				</header>
 
-			<h2>Type - Hidden</h2>
-			<p>In the case of a Hidden input, the label is not necessary.</p>
-			<div class="gs-present">
 				@@include('./01-components/forms/_input-hidden.html', {
 					"type": "hidden",
 					"value": "value" 
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-hidden.html', {
-				"type": "hidden",
-				"value": "value" 
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-hidden.html', {
+					"type": "hidden",
+					"value": "value" 
+				})</code></pre>
+			</section>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Type - Month</label>
+				</header>
 
-			<h2>Type - Month</h2>
-			<div class="gs-present">
 				@@include('./01-components/forms/_input-no-placeholder.html', {
 					"type": "month" 
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-no-placeholder.html', {
-				"type": "month" 
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-no-placeholder.html', {
+					"type": "month" 
+				})</code></pre>
+			</section>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Type - Number</label>
+				</header>
 
-			<h2>Type - Number</h2>
-			<div class="gs-present">
 				@@include('./01-components/forms/_input-standard.html', {
 					"type": "number" 
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
-				"type": "number" 
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
+					"type": "number" 
+				})</code></pre>
+			</section>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Type - Radio</label>
+					<p>When using Radio Inputs, ensure that the accompanying Label either wraps the input, or is place directly after it.</p>
+					<p>What follows is an example of both implementations.</p>
+					<p>In a form or a real world situation, Radio Inputs and their labels should be grouped inside of, and positioned by, a containing element.</p>
+				</header>
 
-			<h2>Type - Radio</h2>
-			<p>When using Radio Inputs, ensure that the accompanying Label either wraps the input, or is place directly after it.</p>
-			<p>What follows is an example of both implementations.</p>
-			<p>In a form or a real world situation, Radio Inputs and their labels should be grouped inside of, and positioned by, a containing element.</p>
-
-			<div class="gs-present">
 				@@include('./01-components/forms/_input-toggle.html', {
 					"type": "radio"
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-toggle.html', {
-				"type": "radio"
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-toggle.html', {
+					"type": "radio"
+				})</code></pre>
+			</section>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Type - Radio (Custom)</label>
+					<p>Custom Radio Inputs require a different structure.</p>
+				</header>
 
-			<h2>Type - Radio (Custom)</h2>
-			<p>Custom Radio Inputs require a different structure.</p>
-
-			<div class="gs-present">
 				@@include('./01-components/forms/_input-toggle-custom.html', {
 					"type": "radio"
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-toggle-custom.html', {
-				"type": "radio"
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-toggle-custom.html', {
+					"type": "radio"
+				})</code></pre>
+			</section>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Type - Reset</label>
+				</header>
 
-			<h2>Type - Reset</h2>
-			<div class="gs-present">
 				@@include('./01-components/forms/_input-value.html', {
 					"type": "reset",
 					"value": "Reset"
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-value.html', {
-				"type": "reset",
-				"value": "Reset"
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-value.html', {
+					"type": "reset",
+					"value": "Reset"
+				})</code></pre>
+			</section>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Type - Search</label>
+				</header>
 
-			<h2>Type - Search</h2>
-			<div class="gs-present">
 				@@include('./01-components/forms/_input-standard.html', {
 					"type": "search" 
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
-				"type": "search" 
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
+					"type": "search" 
+				})</code></pre>
+			</section>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Type - Submit</label>
+				</header>
 
-			<h2>Type - Submit</h2>
-			<div class="gs-present">
 				@@include('./01-components/forms/_input-value.html', {
 					"type": "submit",
 					"value": "Submit"
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-value.html', {
-				"type": "submit",
-				"value": "Submit"
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-value.html', {
+					"type": "submit",
+					"value": "Submit"
+				})</code></pre>
+			</section>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Type - Time</label>
+				</header>
 
-			<h2>Type - Time</h2>
-			<div class="gs-present">
 				@@include('./01-components/forms/_input-no-placeholder.html', {
 					"type": "time" 
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-no-placeholder.html', {
-				"type": "time" 
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-no-placeholder.html', {
+					"type": "time" 
+				})</code></pre>
+			</section>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Type - Tel</label>
+				</header>
 
-			<h2>Type - Tel</h2>
-			<div class="gs-present">
 				@@include('./01-components/forms/_input-standard.html', {
 					"type": "tel" 
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
-				"type": "tel" 
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
+					"type": "tel" 
+				})</code></pre>
+			</section>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Type - Text</label>
+				</header>
 
-			<h2>Type - Text</h2>
-			<div class="gs-present">
 				@@include('./01-components/forms/_input-standard.html', {
 					"type": "text" 
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
-				"type": "text" 
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
+					"type": "text" 
+				})</code></pre>
+			</section>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Type - Password</label>
+				</header>
 
-			<h2>Type - Password</h2>
-			<div class="gs-present">
 				@@include('./01-components/forms/_input-standard.html', {
 					"type": "password" 
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
-				"type": "password" 
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
+					"type": "password" 
+				})</code></pre>
+			</section>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Type - URL</label>
+					<p>The URL Input has access to the <code class="language-scss">:valid</code> and <code class="language-scss">:invalid</code> pseudo-classes.</p>
+					<p>Only the <code class="language-scss">:invalid</code> pseudo-class is used as a visual indicator.</p>
+				</header>
 
-			<h2>Type - URL</h2>
-			<p>The URL Input has access to the <code class="language-scss">:valid</code> and <code class="language-scss">:invalid</code> pseudo-classes.</p>
-			<p>Only the <code class="language-scss">:invalid</code> pseudo-class is used as a visual indicator.</p>
-
-			<div class="gs-present">
 				@@include('./01-components/forms/_input-standard.html', {
 					"type": "url" 
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
-				"type": "url" 
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
+					"type": "url" 
+				})</code></pre>
+			</section>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Type - Week</label>
+				</header>
 
-			<h2>Type - Week</h2>
-			<div class="gs-present">
 				@@include('./01-components/forms/_input-no-placeholder.html', {
 					"type": "week" 
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-no-placeholder.html', {
-				"type": "week" 
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-no-placeholder.html', {
+					"type": "week" 
+				})</code></pre>
+			</section>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Textarea</label>
+				</header>
 
-			<h2>Textarea</h2>
-			<div class="gs-present">
 				@@include('./01-components/forms/_textarea.html')
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_textarea.html')</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_textarea.html')</code></pre>
+			</section>
 
 		</div>
+
+		<section class="gs-section gs-changelog">
+			<header>
+				<h1 class="rc-head rc-head--4 gs-section__head">Changelog</h1>
+			</header>
+
+			<div class="gs-section__content">
+				<ul class="list--blank list--align">
+					@@loop("./_changelog-item.html", "./01-components/buttons/_changelog.json")
+				</ul>
+			</div>
+		</section>
+
+		@@include('./_issues.html')
+
+		@@include('./_feedback.html')
 		
 	</div>
 
 </div>
 
 @@include('./_site-footer.html')
-
