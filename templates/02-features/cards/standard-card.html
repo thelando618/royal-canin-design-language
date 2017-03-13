@@ -23,11 +23,11 @@
 					<label class="gs-present__label">Standard Card</label>
 				</header>
 
-				todo
+				@@include('./02-features/cards/_standard-card.html', {})
 
-				<pre><code class="gs-code language-html">
-				<!-- @todo -->
-				</code></pre>
+				<pre><code class="gs-code language-html">@@include('./02-features/cards/_standard-card.html', {
+
+				})</code></pre>
 			</section>
 
 		</div>
@@ -39,7 +39,7 @@
 
 			<div class="gs-section__content">
 				<ul class="list--blank list--align">
-					@@loop("./_changelog-item.html", "./01-components/cards/_changelog.json")
+					@@loop("./_changelog-item.html", "./02-features/cards/_changelog.json")
 				</ul>
 			</div>
 		</section>
