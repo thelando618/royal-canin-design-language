@@ -24,14 +24,15 @@
 					<label class="gs-present__label">Required</label>
 				</header>
 
-				<label>Input Label</label>
-				<input id="id-text" type="text" name="name" placeholder="Placeholder..." required>
+				@@include('./01-components/forms/_input-standard--attributes.html', {
+					"type": "text",
+					"attrs": "required"
+				})
 
-				<!-- @todo abstract -->
-				<pre><code class="gs-code language-html">
-<label>Input Label</label>
-<input id="id-text" type="text" name="name" placeholder="Placeholder..." required>
-				</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard--attributes.html', {
+					"type": "text",
+					"attrs": "required"
+				})</code></pre>
 			</section>
 
 			<section class="gs-present">
@@ -40,14 +41,15 @@
 					<p>When an input fails to validate, the class <code class="language-scss">error</code> is added to the input.</p>
 				</header>
 
-				<label>Input Label</label>
-				<input id="id-text" type="text" name="name" placeholder="Placeholder..." class="error">
+				@@include('./01-components/forms/_input-standard--attributes.html', {
+					"type": "text",
+					"attrs": "class='error'"
+				})
 
-				<!-- @todo abstract -->
-				<pre><code class="gs-code language-html">
-<label>Input Label</label>
-<input id="id-text" type="text" name="name" placeholder="Placeholder..." class="error">
-				</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard--attributes.html', {
+					"type": "text",
+					"attrs": "class='error'"
+				})</code></pre>
 			</section>
 
 			<section class="gs-present">
@@ -56,14 +58,16 @@
 					<p>If a form element is required to be locked it will be disabled until further action has been carried out. </p>
 				</header>
 
-				<label>Input Label</label>
-				<input id="id-text" type="text" name="name" placeholder="Placeholder..." disabled>
+				@@include('./01-components/forms/_input-standard--attributes.html', {
+					"type": "text",
+					"attrs": "disabled"
+				})
 
 				<!-- @todo abstract -->
-				<pre><code class="gs-code language-html">
-<label>Input Label</label>
-<input id="id-text" type="text" name="name" placeholder="Placeholder..." disabled>
-				</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard--attributes.html', {
+					"type": "text",
+					"attrs": "disabled"
+				})</code></pre>
 			</section>
 
 		</div>
