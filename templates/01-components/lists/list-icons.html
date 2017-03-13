@@ -19,15 +19,19 @@
 
 			<h2 class="gs-stage__content__head-tag">Examples</h2>
 
-			<div class="gs-present">
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Icon List</label>
+				</header>
+
 				<ul class="list--blank list--align">
 					@@loop("./01-components/lists/_list-item-icon.html", "./01-components/lists/_list-items-icon.json")
 				</ul>
-			</div>
 
-			<pre><code class="gs-code language-html">
-				<ul class="list--blank list--align">@@loop("./01-components/lists/_list-item-icon.html", "./01-components/lists/_list-items-icon.json")</ul>
-			</code></pre>
+				<pre><code class="gs-code language-html">
+					<ul class="list--blank list--align">@@loop("./01-components/lists/_list-item-icon.html", "./01-components/lists/_list-items-icon.json")</ul>
+				</code></pre>
+			</section>
 
 		</div>
 
