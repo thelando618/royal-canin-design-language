@@ -6,160 +6,193 @@
 
 		<div class="gs-stage__content">
 
-			<h1>Inputs - Common</h1>
-			<p>This page displays the more common Input types that will likely be used on most Royal Canin sites.</p>
+			<header class="gs-stage__content__header">
+				<h1 class="gs-stage__content__head-tag">Inputs - Common</h1>
+				<p>Usage and implementation for Forms within Web Design Language.</p>
 
-			<br>
+				<blockquote class="gs-stage__content__intro">
+					<h2 class="rc-head rc-head--6">Introduction</h2>
+					<p>Form elements will ensure rapid form development is a possibility.</p>
+					<p>Strict markup will ensure all form elements are displayed correctly</p>
+				</blockquote>
+			</header>
 
-			<h2>Type - Button</h2>
-			<div class="gs-present">
+			<h2 class="gs-stage__content__head-tag">Examples</h2>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Type - Button</label>
+				</header>
+
 				@@include('./01-components/forms/_input-value.html', {
 					"type": "button",
 					"value": "button"
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-value.html', {
-				"type": "button",
-				"value": "button"
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-value.html', {
+					"type": "button",
+					"value": "button"
+				})</code></pre>
+			</section>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Type - Checkbox (Custom)</label>
+				</header>
 
-			<h2>Type - Checkbox (Custom)</h2>
-			<p>Custom Checkbox Inputs require a different structure.</p>
-
-			<div class="gs-present">
 				@@include('./01-components/forms/_input-toggle-custom.html', {
 					"type": "checkbox"
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-toggle-custom.html', {
-				"type": "checkbox"
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-toggle-custom.html', {
+					"type": "checkbox"
+				})</code></pre>
+			</section>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Type - Date</label>
+				</header>
 
-			<h2>Type - Date</h2>
-			<div class="gs-present">
 				@@include('./01-components/forms/_input-no-placeholder.html', {
-					"type": "date" 
+					"type": "date"
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-no-placeholder.html', {
-				"type": "date" 
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-no-placeholder.html', {
+					"type": "date"
+				})</code></pre>
+			</section>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Type - Email</label>
+					<p>The Email Input has access to the <code class="language-scss">:valid</code> and <code class="language-scss">:invalid</code> pseudo-classes.</p>
+					<p>Only the <code class="language-scss">:invalid</code> pseudo-class is used as a visual indicator.</p>
+				</header>
 
-			<h2>Type - Email</h2>
-			<p>The Email Input has access to the <code class="language-scss">:valid</code> and <code class="language-scss">:invalid</code> pseudo-classes.</p>
-			<p>Only the <code class="language-scss">:invalid</code> pseudo-class is used as a visual indicator.</p>
-
-			<div class="gs-present">
 				@@include('./01-components/forms/_input-standard.html', {
 					"type": "email" 
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
-				"type": "email" 
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
+					"type": "email" 
+				})</code></pre>
+			</section>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Type - Number</label>
+				</header>
 
-			<h2>Type - Number</h2>
-			<div class="gs-present">
 				@@include('./01-components/forms/_input-standard.html', {
-					"type": "number" 
+					"type": "number"
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
-				"type": "number" 
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
+					"type": "number"
+				})</code></pre>
+			</section>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Type - Radio (Custom)</label>
+					<p>Custom Radio Inputs require a different structure.</p>
+				</header>
 
-			<h2>Type - Radio (Custom)</h2>
-			<p>Custom Radio Inputs require a different structure.</p>
-
-			<div class="gs-present">
 				@@include('./01-components/forms/_input-toggle-custom.html', {
 					"type": "radio"
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-toggle-custom.html', {
-				"type": "radio"
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-toggle-custom.html', {
+					"type": "radio"
+				})</code></pre>
+			</section>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Type - Search</label>
+				</header>
 
-			<h2>Type - Search</h2>
-			<div class="gs-present">
 				@@include('./01-components/forms/_input-standard.html', {
-					"type": "search" 
+					"type": "search"
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
-				"type": "search" 
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
+					"type": "search"
+				})</code></pre>
+			</section>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Type - Submit</label>
+				</header>
 
-			<h2>Type - Submit</h2>
-			<div class="gs-present">
 				@@include('./01-components/forms/_input-value.html', {
 					"type": "submit",
 					"value": "Submit"
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-value.html', {
-				"type": "submit",
-				"value": "Submit"
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-value.html', {
+					"type": "submit",
+					"value": "Submit"
+				})</code></pre>
+			</section>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Type - Text</label>
+				</header>
 
-			<h2>Type - Text</h2>
-			<div class="gs-present">
 				@@include('./01-components/forms/_input-standard.html', {
 					"type": "text" 
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
-				"type": "text" 
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
+					"type": "text" 
+				})</code></pre>
+			</section>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Type - Password</label>
+				</header>
 
-			<h2>Type - Password</h2>
-			<div class="gs-present">
 				@@include('./01-components/forms/_input-standard.html', {
 					"type": "password" 
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
-				"type": "password" 
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-standard.html', {
+					"type": "password" 
+				})</code></pre>
+			</section>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Textarea</label>
+				</header>
 
-			<h2>Textarea</h2>
-			<div class="gs-present">
 				@@include('./01-components/forms/_textarea.html')
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_textarea.html')</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_textarea.html')</code></pre>
+			</section>
 
 		</div>
+
+		<section class="gs-section gs-changelog">
+			<header>
+				<h1 class="rc-head rc-head--4 gs-section__head">Changelog</h1>
+			</header>
+
+			<div class="gs-section__content">
+				<ul class="list--blank list--align">
+					@@loop("./_changelog-item.html", "./01-components/forms/_changelog.json")
+				</ul>
+			</div>
+		</section>
+
+		@@include('./_issues.html')
+
+		@@include('./_feedback.html')
 		
 	</div>
 
