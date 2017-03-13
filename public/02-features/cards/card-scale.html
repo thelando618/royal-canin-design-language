@@ -40,78 +40,41 @@
 		<div class="gs-stage__content">
 
 			<header class="gs-stage__content__header">
-				<h1 class="gs-stage__content__head-tag">Icon List</h1>
-				<p>Usage and implementation for Lists within Web Design Language.</p>
+				<h1 class="gs-stage__content__head-tag">Card - Scale</h1>
+				<p>Usage and implementation for Cards within Web Design Language.</p>
 
 				<blockquote class="gs-stage__content__intro">
 					<h2 class="rc-head rc-head--6">Introduction</h2>
-					<p>Lists can be implemented with an icon set pre defined using SVG icons.</p>
-					<p>Lists can contain external links built inline. </p>
+					<p>Card modifier classes can be used to change the appearance of default Cards when certain breakpoints are reached.</p>
+					<p>This page demonstrates how the <code class="language-html">card--vertical</code> class affects the appearance of a Card.</p>
 				</blockquote>
 			</header>
 
 			<h2 class="gs-stage__content__head-tag">Examples</h2>
+			<p>The examples below display front end styling and HTML markup to implement Cards into your code.</p>
 
 			<section class="gs-present">
 				<header>
-					<label class="gs-present__label">Icon List</label>
+					<label class="gs-present__label">Card - Scale Medium</label>
 				</header>
 
-				<ul class="list--blank list--align">
-					
-	<li  >
-		<svg xmlns="http://www.w3.org/2000/svgs" version="1.1" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">check</title><path d="M.1 31.8l9.1-9.1L33.6 47l-9.1 9.1L.1 31.8zM15.3 47L54.9 7.4l9.1 9.1-39.5 39.6-9.2-9.1z"/></svg> This is a standard list item 
-	</li>
+				<article class="card card--vertical">
+	<figure class="card__image" style="background-image: url('http://placehold.it/800x600');" role="img" title="This should be the 'alt' text of the image used." aria-label="This should be the 'alt' text of the image used."></figure>
+	<header class="card__header">
+		<p class="card__meta">Article</p>
+		<h1 class="card__title">Breed Focus - The Beagle</h1>
+		<a href="#" role="link" class="card__link button">Read Now</a>
+	</header>
+</article>
 
-	<li  >
-		<a href="#"><svg xmlns="http://www.w3.org/2000/svgs" version="1.1" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">check</title><path d="M.1 31.8l9.1-9.1L33.6 47l-9.1 9.1L.1 31.8zM15.3 47L54.9 7.4l9.1 9.1-39.5 39.6-9.2-9.1z"/></svg> This is a standard list item wrapped in a link </a>
-	</li>
-
-	<li  class="active"  >
-		<svg xmlns="http://www.w3.org/2000/svgs" version="1.1" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">check</title><path d="M.1 31.8l9.1-9.1L33.6 47l-9.1 9.1L.1 31.8zM15.3 47L54.9 7.4l9.1 9.1-39.5 39.6-9.2-9.1z"/></svg> This is a standard list item with an active class applied 
-	</li>
-
-	<li  >
-		<svg xmlns="http://www.w3.org/2000/svgs" version="1.1" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">check</title><path d="M.1 31.8l9.1-9.1L33.6 47l-9.1 9.1L.1 31.8zM15.3 47L54.9 7.4l9.1 9.1-39.5 39.6-9.2-9.1z"/></svg> This is a standard list item with some placeholder text to make it very long - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-	</li>
-
-	<li  >
-		<svg xmlns="http://www.w3.org/2000/svgs" version="1.1" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">check</title><path d="M.1 31.8l9.1-9.1L33.6 47l-9.1 9.1L.1 31.8zM15.3 47L54.9 7.4l9.1 9.1-39.5 39.6-9.2-9.1z"/></svg> This is a standard list item with some <em>inline <strong>HTML</strong> entities</em> 
-	</li>
-
-	<li  >
-		<svg xmlns="http://www.w3.org/2000/svgs" version="1.1" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">check</title><path d="M.1 31.8l9.1-9.1L33.6 47l-9.1 9.1L.1 31.8zM15.3 47L54.9 7.4l9.1 9.1-39.5 39.6-9.2-9.1z"/></svg> This is a list item that includes an <a href='#''>inline link</a> 
-	</li>
-
-				</ul>
-
-				<pre><code class="gs-code language-html">
-					<ul class="list--blank list--align">
-	<li  >
-		<svg xmlns="http://www.w3.org/2000/svgs" version="1.1" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">check</title><path d="M.1 31.8l9.1-9.1L33.6 47l-9.1 9.1L.1 31.8zM15.3 47L54.9 7.4l9.1 9.1-39.5 39.6-9.2-9.1z"/></svg> This is a standard list item 
-	</li>
-
-	<li  >
-		<a href="#"><svg xmlns="http://www.w3.org/2000/svgs" version="1.1" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">check</title><path d="M.1 31.8l9.1-9.1L33.6 47l-9.1 9.1L.1 31.8zM15.3 47L54.9 7.4l9.1 9.1-39.5 39.6-9.2-9.1z"/></svg> This is a standard list item wrapped in a link </a>
-	</li>
-
-	<li  class="active"  >
-		<svg xmlns="http://www.w3.org/2000/svgs" version="1.1" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">check</title><path d="M.1 31.8l9.1-9.1L33.6 47l-9.1 9.1L.1 31.8zM15.3 47L54.9 7.4l9.1 9.1-39.5 39.6-9.2-9.1z"/></svg> This is a standard list item with an active class applied 
-	</li>
-
-	<li  >
-		<svg xmlns="http://www.w3.org/2000/svgs" version="1.1" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">check</title><path d="M.1 31.8l9.1-9.1L33.6 47l-9.1 9.1L.1 31.8zM15.3 47L54.9 7.4l9.1 9.1-39.5 39.6-9.2-9.1z"/></svg> This is a standard list item with some placeholder text to make it very long - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-	</li>
-
-	<li  >
-		<svg xmlns="http://www.w3.org/2000/svgs" version="1.1" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">check</title><path d="M.1 31.8l9.1-9.1L33.6 47l-9.1 9.1L.1 31.8zM15.3 47L54.9 7.4l9.1 9.1-39.5 39.6-9.2-9.1z"/></svg> This is a standard list item with some <em>inline <strong>HTML</strong> entities</em> 
-	</li>
-
-	<li  >
-		<svg xmlns="http://www.w3.org/2000/svgs" version="1.1" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">check</title><path d="M.1 31.8l9.1-9.1L33.6 47l-9.1 9.1L.1 31.8zM15.3 47L54.9 7.4l9.1 9.1-39.5 39.6-9.2-9.1z"/></svg> This is a list item that includes an <a href='#''>inline link</a> 
-	</li>
-</ul>
-				</code></pre>
+				<pre><code class="gs-code language-html"><article class="card card--vertical">
+	<figure class="card__image" style="background-image: url('http://placehold.it/800x600');" role="img" title="This should be the 'alt' text of the image used." aria-label="This should be the 'alt' text of the image used."></figure>
+	<header class="card__header">
+		<p class="card__meta">Article</p>
+		<h1 class="card__title">Breed Focus - The Beagle</h1>
+		<a href="#" role="link" class="card__link button">Read Now</a>
+	</header>
+</article></code></pre>
 			</section>
 
 		</div>
@@ -126,7 +89,7 @@
 					<li>
 	<strong>2017-03</strong>
 	<br>
-	Version 1.0
+	Initial release
 </li>
 				</ul>
 			</div>
@@ -177,7 +140,7 @@
 		<p>If you would like to offer feedback on the design of this component, please join the Web Design Language <a href="#">Slack</a> channel.</p>
 	</div>
 </section>
-		
+
 	</div>
 
 </div>
@@ -190,4 +153,3 @@
 
 </body>
 </html>
-

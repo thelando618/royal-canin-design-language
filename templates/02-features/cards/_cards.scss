@@ -75,3 +75,54 @@
 		}
 	}
 }
+
+.card.card--vertical {
+	@media ( min-width: 600px ) {
+		display: block;
+		padding: 1em;
+
+		.card__image {
+			max-width: 100%;
+			width: 100%;
+			display: block;
+			padding-top: 56.25%; // 16x9
+		}
+
+		.card__header {
+			padding-top: 1em;
+			padding-bottom: 1em;
+			text-align: center;
+		}
+
+		.card__meta {
+			display: none;
+		}
+
+
+		.card__title {
+			font-size: 1.375em;
+			color: $rc-medium-grey;
+		}
+
+		// @todo make this into a class, .text-then-button or something?
+		.card__link {
+			display: inline-block;
+			text-decoration: none;
+			background-color: $rc-tertiary-light-blue;
+			color: #FFFFFF;
+			text-transform: uppercase;
+			padding: 12px 20px;
+			transition: background-color 0.2s ease-in;
+			margin-top: 1em;
+
+
+			&:hover, &:focus {
+				background-color: darken( $rc-tertiary-light-blue, 5% );
+			}
+
+			&:active {
+				background-color: darken( $rc-tertiary-light-blue, 10% );
+			}
+		}
+	}
+}
