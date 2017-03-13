@@ -1,7 +1,4 @@
-
 @@include('./_site-header.html')
-
-
 
 <div class="gs-stage">
 
@@ -9,49 +6,77 @@
 
 		<div class="gs-stage__content">
 
-			<h1>Select Menus</h1>
+			<header class="gs-stage__content__header">
+				<h1 class="gs-stage__content__head-tag">Select Menus</h1>
+				<p>Usage and implementation for Forms within Web Design Language.</p>
 
+				<blockquote class="gs-stage__content__intro">
+					<h2 class="rc-head rc-head--6">Introduction</h2>
+					<p>Form elements will ensure rapid form development is a possibility.</p>
+					<p>Strict markup will ensure all form elements are displayed correctly</p>
+				</blockquote>
+			</header>
 
-			<h2>Standard</h2>
-			<div class="gs-present">
+			<h2 class="gs-stage__content__head-tag">Examples</h2>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Standard</label>
+				</header>
+
 				@@include('./01-components/forms/_select-standard.html')
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_select-standard.html')</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_select-standard.html')</code></pre>
+			</section>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Custom</label>
+				</header>
 
-			<h2>Custom</h2>
-
-			<div class="gs-present">
 				@@include('./01-components/forms/_select-custom.html', {
 					"class" : "rc-select--custom"
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_select-custom.html', {
-				"class" : "rc-select--custom"
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_select-custom.html', {
+					"class" : "rc-select--custom"
+				})</code></pre>
+			</section>
 
-			<br>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Custom - Significant</label>
+				</header>
 
-			<h2>Custom - Significant</h2>
-
-			<div class="gs-present">
 				@@include('./01-components/forms/_select-custom.html', {
 					"class" : "rc-select--custom rc-select--custom--significant"
 				})
-			</div>
 
-			<pre><code class="gs-code language-html">@@include('./01-components/forms/_select-custom.html', {
-				"class" : "rc-select--custom rc-select--custom--significant"
-			})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_select-custom.html', {
+					"class" : "rc-select--custom rc-select--custom--significant"
+				})</code></pre>
+			</section>
 
 		</div>
+
+		<section class="gs-section gs-changelog">
+			<header>
+				<h1 class="rc-head rc-head--4 gs-section__head">Changelog</h1>
+			</header>
+
+			<div class="gs-section__content">
+				<ul class="list--blank list--align">
+					@@loop("./_changelog-item.html", "./01-components/forms/_changelog.json")
+				</ul>
+			</div>
+		</section>
+
+		@@include('./_issues.html')
+
+		@@include('./_feedback.html')
 		
 	</div>
 
 </div>
 
 @@include('./_site-footer.html')
-
