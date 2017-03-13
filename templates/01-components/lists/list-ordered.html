@@ -6,20 +6,51 @@
 
 		<div class="gs-stage__content">
 
-			<h1>Ordered List</h1>
+			<header class="gs-stage__content__header">
+				<h1 class="gs-stage__content__head-tag">Ordered List</h1>
+				<p>Usage and implementation for Lists within Web Design Language.</p>
 
-			<div class="gs-present">
-				<ol>
+				<blockquote class="gs-stage__content__intro">
+					<h2 class="rc-head rc-head--6">Introduction</h2>
+					<p>Lists can be implemented with an icon set pre defined using SVG icons.</p>
+					<p>Lists can contain external links built inline. </p>
+				</blockquote>
+			</header>
+
+			<h2 class="gs-stage__content__head-tag">Examples</h2>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Ordered List</label>
+				</header>
+
+				<ul>
 					@@loop("./01-components/lists/_list-item-simple.html", "./01-components/lists/_list-items-simple.json")
-				</ol>
-			</div>
+				</ul>
 
-			<pre><code class="gs-code language-html">
-				<ol>@@loop("./01-components/lists/_list-item-simple.html", "./01-components/lists/_list-items-simple.json")</ol>
-			</code></pre>
+				<pre><code class="gs-code language-html">
+					<ol>@@loop("./01-components/lists/_list-item-simple.html", "./01-components/lists/_list-items-simple.json")</ol>
+				</code></pre>
+			</section>
 
 		</div>
-		
+
+		<section class="gs-section gs-changelog">
+			<header>
+				<h1 class="rc-head rc-head--4 gs-section__head">Changelog</h1>
+			</header>
+
+			<div class="gs-section__content">
+				<ul class="list--blank list--align">
+					@@loop("./_changelog-item.html", "./01-components/lists/_changelog.json")
+				</ul>
+			</div>
+		</section>
+
+		@@include('./_issues.html')
+
+		@@include('./_feedback.html')
+
 	</div>
 
 </div>
