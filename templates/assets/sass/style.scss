@@ -1,5 +1,13 @@
 @import 'normalize';
 
+// @todo move this to global file.
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 @import 'gs-styles';
 
 @import 'functions';
