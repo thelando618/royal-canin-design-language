@@ -94,12 +94,14 @@ gulp.task( 'copyJS', gulp.series( 'minify', function( done ) {
 // Generate Sass
 gulp.task( 'sass', function( done ) {    
 	return gulp.src( './templates/assets/sass/style.scss' )
-		.pipe( sass( { outputStyle: 'compressed' } ).on( 'error', sass.logError ) )
+		.pipe( sass({
+				outputStyle: 'compressed',
+				includePaths: ['node_modules/susy/sass']
+		}).on( 'error', sass.logError ) )
 		.pipe( autoprefixer( { browsers: ['last 5 versions'] } ) )
 		.pipe( gulp.dest( './templates/assets/css/' ) );
 	done();
 } );
-
 
 // Copy CSS
 gulp.task( 'copyCSS', gulp.series( 'sass', function( done ) {
