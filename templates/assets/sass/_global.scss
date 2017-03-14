@@ -1,0 +1,26 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+body {
+	position: relative;
+	background-color: #f3f3f3;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+@import "susy";
+
+$grid--standard: (
+  columns: 12,  // The number of columns in your grid
+  gutters: 1/4, // The size of a gutter in relation to a single column
+);
+
+$grid--no-gutters: (
+  columns: 12,  // The number of columns in your grid
+  gutters: 0, // The size of a gutter in relation to a single column
+);

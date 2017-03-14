@@ -8,40 +8,6 @@
 */
 
 
-
-/* 
-	Info: Global styles
-	Dest: _global, _lists
-*/
-
-.list-no-style {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
-
-html {
-	font-size: 16px;
-}
-
-body {
-	background-color: #f3f3f3;
-	position: relative;
-	font-size: 16px;
-}
-
-
-/* 
-	Info: Media styles
-	Dest:	_media	
-*/
-
-img	{
-	display: block;
-	max-width: 100%;
-}
-
-
 /* 
 	Info: Gulp Styleguide Sub Navigation
 	Dest: _lists
