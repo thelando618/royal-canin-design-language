@@ -126,3 +126,42 @@
 		}
 	}
 }
+
+.card--details {
+	text-align: center;
+
+	.card__header {
+		flex: 0 1 100%;
+		padding-top: 0;
+		padding-bottom: 0;
+		padding-left: 0;
+	}
+
+	svg {
+		display: inline-block;
+		vertical-align: middle;
+		width: 1.75em;
+		height: 1.75em;
+		fill: $rc-medium-grey;
+	}
+
+	.card__meta, .card__title {
+		padding: .5em;
+	}
+
+	.card__meta {
+		background-color: $rc-light-grey;
+		color: $rc-red;
+		font-size: 1em;
+	}
+
+	.card__title {
+		margin: 0;
+	}
+
+	@media ( min-width: 480px ) {
+		.card__meta {
+			font-size: 1.125em;
+		}
+	}
+}

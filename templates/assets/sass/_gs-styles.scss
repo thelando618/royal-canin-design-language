@@ -239,6 +239,10 @@ img	{
 .gs-stage {
 	overflow: hidden;
 
+	p {
+		color: #87888A;
+	}
+
 	.gs-stage__inner {
 		background-color: #EAEAEA;
 		width: 95%;
@@ -269,10 +273,6 @@ img	{
 
 	.gs-present {
 		margin-bottom: 3em;
-
-		p {
-			color: #87888A;
-		}
 
 		.gs-present__label {
 			// margin-bottom: 0;
