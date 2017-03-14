@@ -91,15 +91,15 @@
 		.card__image {
 			max-width: 100%;
 			width: 100%;
-			padding-top: 56.25%; // 16x9
+			flex: 0 0 200px;
 		}
 
 		.card__header {
 			display: flex;
 	  	flex-direction: column;
 	  	justify-content: space-between;
-	  	flex: 1 1 100%;
-
+			flex: 1 0 auto;
+			max-width: 100%;
 			padding-left: 0;
 			padding-top: 1em;
 			padding-bottom: 1em;
@@ -127,6 +127,23 @@
 
 			&:active {
 				background-color: darken( $rc-tertiary-light-blue, 10% );
+			}
+		}
+
+		.no-flexbox & {
+			display: block;
+
+			.card__image, .card__header {
+				display: block;
+			}
+
+			.card__image {
+				width: 100%;
+				height: 200px;
+			}
+
+			.card__header {
+				padding-left: 0;
 			}
 		}
 	}
@@ -187,8 +204,8 @@
 		justify-content: space-between;
 
 		.no-flexbox & {
-			// @todo integrate susy
-			border: 1px solid yellow;
+			display: block;
+			@include container();
 		}
 
 		&.cards--3 {
@@ -198,7 +215,7 @@
 
 			.no-flexbox & {
 				.card--vertical {
-					// @todo integrate susy 
+					@include gallery( 4 of 12 );
 				}
 			}
 		}
@@ -210,12 +227,11 @@
 
 			.no-flexbox & {
 				.card--vertical {
-					// @todo integrate susy 
+					@include gallery( 6 of 12 );
 				}
 			}
 		}
 	}
-
 
 	@media ( min-width: 960px ) {
 		&.cards--4 {
@@ -225,7 +241,7 @@
 
 			.no-flexbox & {
 				.card--vertical {
-					// @todo integrate susy 
+					@include gallery( 3 of 12 );
 				}
 			}
 		}
