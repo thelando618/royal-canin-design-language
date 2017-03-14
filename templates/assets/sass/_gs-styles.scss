@@ -446,10 +446,10 @@ pre.language-scss {
 	}
 
 	header {
-		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		position: relative;
 		width: 100%;
 	}
 
@@ -458,10 +458,12 @@ pre.language-scss {
 	}
 
 	.gs-section__logo {
-		width: 60px;
+		max-width: 60px;
 
 		svg {
 			display: block;
+			height: auto;
+			width: 100%;
 		}
 	}
 
@@ -471,19 +473,45 @@ pre.language-scss {
 
 			.gs-section__head, .gs-section__logo {
 				display: table-cell;
+				vertical-align: middle;
+			}
+
+			.gs-section__logo {
+				width: 60px;
+				float: right;
+			}
+
+			svg {
+				height: 40px;
 			}
 		}
 	}
 
 	@media ( min-width: 480px ) {
 		.gs-section__logo {
-			width: 80px;
+			max-width: 80px;
+		}
+
+		.no-flexbox & {
+			header {
+				.gs-section__logo {
+					width: 80px;
+				}
+			}
 		}
 	}
 
 	@media ( min-width: 800px ) {
 		.gs-section__logo {
-			width: 100px;
+			max-width: 100px;
+		}
+
+		.no-flexbox & {
+			header {
+				.gs-section__logo {
+					width: 100px;
+				}
+			}
 		}
 	}
 }
