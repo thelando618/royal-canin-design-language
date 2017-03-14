@@ -1,8 +1,14 @@
 [
   {
     "entry": {
-      "date": "2017-03",
-      "content": "Version 0.1 of Sketch Wireframe Kit"
+      "date": "2017-03-14",
+      "content": "Added link to Sketch File v1.0.0"
+    }
+  },
+  {
+    "entry": {
+      "date": "2017-03-13",
+			"content": "Setup page"
     }
   }
 ]
