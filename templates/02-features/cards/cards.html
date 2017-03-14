@@ -7,13 +7,12 @@
 		<div class="gs-stage__content">
 
 			<header class="gs-stage__content__header">
-				<h1 class="gs-stage__content__head-tag">Card - Vertical</h1>
+				<h1 class="gs-stage__content__head-tag">Cards</h1>
 				<p>Usage and implementation for Cards within Web Design Language.</p>
 
 				<blockquote class="gs-stage__content__intro">
 					<h2 class="rc-head rc-head--6">Introduction</h2>
-					<p>Card modifier classes can be used to change the appearance of default Cards.</p>
-					<p>This page demonstrates how the <code class="language-html">card--vertical</code> class affects the appearance of a Card.</p>
+					<p>Cards, particularly those with the <code class="language-html">card--vertical</code> modifier class, can be displayed in rows.</p>
 				</blockquote>
 			</header>
 
@@ -22,20 +21,12 @@
 
 			<section class="gs-present">
 				<header>
-					<label class="gs-present__label">Card - Vertical</label>
+					<label class="gs-present__label">Cards - 3 per row</label>
 				</header>
 
-				@@include('./02-features/cards/_card.html', {
-					"class": "card--vertical",
-					"image": "http://placehold.it/800x600",
-					"title": "Breed Focus - The Beagle"
-				})
+				@@include('./02-features/cards/_cards-3.html')
 
-				<pre><code class="gs-code language-html">@@include('./02-features/cards/_card.html', {
-					"class": "card--vertical",
-					"image": "http://placehold.it/800x600",
-					"title": "Breed Focus - The Beagle"
-				})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./02-features/cards/_cards-3.html')</code></pre>
 			</section>
 
 		</div>
