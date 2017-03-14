@@ -1,46 +1,12 @@
 @import 'normalize';
 
-// @todo move this to global file.
-html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
 @import 'gs-styles';
+
+@import 'global';
 
 @import 'functions';
 
-
-/* @todo SEE IF THIS CAN BE IMPROVED AND MOVE INTO A MEDIA FILE */
-.video-wrapper {
-	position: relative;
-	padding-bottom: 56.25%;
-	padding-top: 25px;
-	height: 0;
-
-	iframe, embed {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;		
-	}
-}
-
-// @todo move this into a components files
-@import "susy";
-
-$grid--standard: (
-  columns: 12,  // The number of columns in your grid
-  gutters: 1/4, // The size of a gutter in relation to a single column
-);
-
-$grid--no-gutters: (
-  columns: 12,  // The number of columns in your grid
-  gutters: 0, // The size of a gutter in relation to a single column
-);
+@import 'media';
 
 @import '../../01-components/01-components';
 
