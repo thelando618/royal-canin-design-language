@@ -1,7 +1,9 @@
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
+input[type="submit"],
+.button {
+	display: inline-block;
 	width: auto;
 	font-size: .875em;
 	line-height: 1.15;
@@ -9,13 +11,20 @@ input[type="submit"] {
 	color: #FFFFFF;
 	border: none;
 	text-transform: uppercase;
+	text-decoration: none;
 	padding: 12px 20px;
-
-	// @todo make into a variable
 	transition: background-color 0.2s ease-in;
+
+	&:hover, &:focus, &.active {
+		color: #FFFFFF;
+	}
 
 	&:hover, &:focus {
 		background-color: $rc-red--hover;
+	}
+
+	&:focus {
+		outline: 3px solid lightblue;
 	}
 
 	&:active {
