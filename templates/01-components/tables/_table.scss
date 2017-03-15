@@ -8,7 +8,7 @@ table	{
   white-space: nowrap;
 
   th, td {
-    border-right: 1px solid lighten( $rc-light-grey, 7.5% );
+    border-right: 1px solid lighten( $rc-medium-grey, 35% );
   	padding: .875em 1em;
 
   	&:first-child {
@@ -25,7 +25,7 @@ table	{
 
 	tbody {
 		tr:nth-child( even ) {
-      background-color: lighten( $rc-light-grey, 10% );
+      background-color: lighten( $rc-medium-grey, 40% );
 		}
 	}
 

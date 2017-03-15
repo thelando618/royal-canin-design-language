@@ -1,4 +1,4 @@
-// DELETE THIS WHEN FINISHED DEV
+// @todo DELETE THIS WHEN FINISHED DEV
 .gs-present--white {
 	padding: 1em;
 }
@@ -22,7 +22,7 @@
 
 	.rc-tabs__triggers__trigger {
 		color: inherit;
-		background-color: lighten( $rc-light-grey, 10% );
+		background-color: lighten( $rc-medium-grey, 35% );
 		cursor: pointer;
 		height: 100%;
 
@@ -31,7 +31,7 @@
 		}
 
 		svg {
-			fill: $rc-light-grey-alt;
+			fill: $rc-medium-grey;
 		}
 
 		&.active {
@@ -96,7 +96,7 @@
 
 // Tabs - Side Triggers
 .rc-tabs--side {
-	background-color: lighten( $rc-light-grey, 10% );
+	background-color: lighten( $rc-medium-grey, 35% );
 	display: flex;
 
 	.rc-tabs__triggers {
@@ -164,7 +164,7 @@
 
 
 
-// Move to helper class and partial and update Tabs
+// @todo Move to helper class and partial and update Tabs
 .clearfix:before,
 .clearfix:after {
 	content: " ";

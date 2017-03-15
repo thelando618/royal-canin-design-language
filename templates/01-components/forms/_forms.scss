@@ -18,12 +18,12 @@ input:required {
 
 	&:focus {
 		outline: none;
-		border: 1px solid $rc-tertiary-light-blue;
-		box-shadow: 0 0 4px $rc-tertiary-light-blue;
+		border: 1px solid $rc-alt-blue;
+		box-shadow: 0 0 4px $rc-alt-blue;
 	}
 
 	&:disabled {
-		background-color: $rc-light-grey;
+		background-color: lighten( $rc-medium-grey, 35% );
 	}
 
 	&.error, &:invalid {
@@ -103,10 +103,11 @@ input[type="file"] {
 			content: '';
 			display: inline-block;
 			vertical-align: middle;
+			border: 1px solid $rc-medium-grey;
 			width: 1em;
 			height: 1em;
 			padding: .25rem;
-			border: 2px solid $rc-light-grey-alt;
+			background-color: lighten( $rc-medium-grey, 35% );
 			transition: border-color 0.2s, background-color 0.2s;
 			margin-right: .5rem;
 		}
@@ -131,7 +132,6 @@ input[type="file"] {
 			line-height: 1;
 			width: 1em;
 			height: 1em;
-			border-color: $rc-red;
 		}
 	}
 
@@ -139,6 +139,7 @@ input[type="file"] {
 		&:before {
 			content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E %3Cstyle%3E .st0%7Bfill:%23FFFFFF;%7D %3C/style%3E %3Cpath d='M.1 31.8l9.1-9.1L33.6 47l-9.1 9.1L.1 31.8zM15.3 47L54.9 7.4l9.1 9.1-39.5 39.6-9.2-9.1z' class='st0'/%3E %3C/svg%3E");
 			background-color: $rc-red;
+			border-color: $rc-red;
 		}
 	}
 
