@@ -241,8 +241,11 @@
 		margin-bottom: 3em;
 
 		.gs-present__label {
-			// margin-bottom: 0;
 			font-weight: 500;
+		}
+
+		.gs-present__label + p {
+			margin-top: 0;
 		}
 	}
 
