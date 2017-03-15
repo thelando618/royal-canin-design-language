@@ -206,6 +206,15 @@ gulp.task( 'createNav', gulp.series( 'getfiles', function( done ) {
 } ) );
 
 
+// Create CNAME file in public directory.
+gulp.task( 'cname', function( done ) {
+	var cname = 'rcwdl.first10.co.uk';
+	fs.writeFile( 'public/CNAME', cname, function( err ) {
+		if (err) throw err;
+	});
+	done();
+} );
+
 
 // Styleguide tasks
 gulp.task( 'generate', gulp.series( 'publicDir', 'copyTemplates', 'copyCSS', 'copyJS', 'copyFonts', 'copyImages', 'createNav', 'copyTemplates', function( done ) {
