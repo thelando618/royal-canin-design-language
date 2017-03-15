@@ -44,15 +44,15 @@ ul, ol {
 
 		li {
 			background-color: #FFFFFF;
-			border-bottom: 1px solid $rc-light-grey;
+			border-bottom: 1px solid lighten( $rc-medium-grey, 35% );
 			padding: 1em;
 			margin-bottom: 0;
-			// @todo make into a variable.
+			// @todo make transition into a variable?
 			transition: background 0.1s ease-in;
 			padding-right: 3.5em;
 
 			&:hover, &:focus {
-				background-color: lighten( $rc-light-grey, 10% );
+				background-color: lighten( $rc-medium-grey, 40% );
 			}
 
 			&:last-child {
@@ -68,7 +68,7 @@ ul, ol {
 			top: 50%;
 			margin-top: -.75em;
 			right: 1em;
-			fill: $rc-warm-grey;
+			fill: $rc-medium-grey;
 		}
 
 		a {
@@ -81,7 +81,7 @@ ul, ol {
 		}
 
 		.active {
-			background-color: lighten( $rc-light-grey, 10% );
+			background-color: lighten( $rc-medium-grey, 40% );
 			border-left: 4px solid $rc-red;
 
 			&:before {
@@ -96,7 +96,6 @@ ul, ol {
 				border-left: 4px solid $rc-red;
 				border-bottom: 4px solid transparent;
 			}
-
 		}
 	}
 }

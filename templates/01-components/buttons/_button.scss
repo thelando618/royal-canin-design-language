@@ -20,7 +20,7 @@ input[type="submit"],
 	}
 
 	&:hover, &:focus {
-		background-color: $rc-red--hover;
+		background-color: darken( $rc-red, 7.5% );
 	}
 
 	&:focus {
@@ -28,7 +28,7 @@ input[type="submit"],
 	}
 
 	&:active {
-		background-color: $rc-red--active;
+		background-color: darken( $rc-red, 15% );
 	}
 
 	// Sizes
@@ -59,13 +59,13 @@ input[type="submit"],
 
 	// Variations
 	&.button--success {
-		background-color: $rc-tertiary-green;
+		background-color: $rc-success;
 
 		&:hover, &:focus {
-			background-color: darken( $rc-tertiary-green, 7.5% );
+			background-color: darken( $rc-success, 7.5% );
 		}
 		&:active {
-			background-color: darken( $rc-tertiary-green, 15% );
+			background-color: darken( $rc-success, 15% );
 		}
 	}
 
@@ -90,7 +90,6 @@ input[type="submit"],
 		}
 
 		&:after {
-		
 			// When an SVG is used in this manner, it must be first optimised and then URL encoded to ensure cross browser compatibility.
 			// Optimise: https://jakearchibald.github.io/svgomg/
 			// URL Encode: https://codepen.io/tigt/post/optimizing-svgs-in-data-uris

@@ -104,12 +104,12 @@ p {
 }
 
 a {
-	// @todo make this into a variable
+	// @todo make this transition into a variable?
 	transition: color 0.2s ease-in;
 	color: $rc-red;
 
 	&:hover, &:focus {
-		color: $rc-red--hover;
+		color: darken( $rc-red, 7.5% );
 		text-decoration: none;
 	}
 }
