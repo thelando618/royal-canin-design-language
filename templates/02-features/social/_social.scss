@@ -1,0 +1,86 @@
+$social-color-facebook: #3B5998;
+
+// Katy Decorah
+// Instagram
+// http://codepen.io/katydecorah/pen/PNLePj
+$social-color-instagram: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%),
+	radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
+	radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
+	radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%),
+	radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%),
+	radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%),
+	radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
+	linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+
+$social-color-instagram-fallback: #BA00B1;
+$social-color-twitter: #1DA1F3;
+$social-color-youtube: #CD201F;
+
+
+
+.social {
+	text-align: center;
+
+	ul, li {
+		margin: 0;
+	}
+
+	li {
+		display: inline-block;
+		margin-left: .25em;
+		margin-right: .25em;
+	}
+
+	svg {
+		display: block;
+		width: 1.5em;
+		height: 1.5em;
+		margin: 0;
+		line-height: 1;
+		fill: $rc-white;
+		transition: transform .2s ease-in-out;
+	}
+
+	.social__network {}
+	.social__network--facebook {
+		background: $social-color-facebook;
+	}
+	.social__network--instagram {
+		background: $social-color-instagram-fallback; // IE9
+		background: $social-color-instagram;
+	}
+	.social__network--twitter {
+		background: $social-color-twitter;
+	}
+	.social__network--youtube {
+		background: $social-color-youtube;
+	}
+
+	a {
+		display: block;
+		padding: .75em;
+		border-radius: 100%;
+		background-color: navy;
+		transition: background-color .2s ease-in-out;
+
+		&:hover {
+			svg {
+				transform: scale( 1.125 );
+			}
+		}
+	}
+}
+
+.social--rc {
+	.social__network {
+		background: $rc-red;
+
+		&:hover, &:focus {
+			background: darken( $rc-red, 7.5% );
+		}
+
+		&:active {
+			background: darken( $rc-red, 15% );
+		}
+	}
+}
