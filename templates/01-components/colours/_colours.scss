@@ -1,5 +1,46 @@
 // Primary Colours
 $rc-red: #E2001A;
+.fill--rc-red {
+	background-color: $rc-red;
+}
+
+$rc-medium-grey: #87888A;
+.fill--rc-medium-grey {
+	background-color: $rc-medium-grey;
+}
+
+$rc-white: #FFFFFF;
+.fill--rc-white {
+	background-color: $rc-white;
+}
+
+
+// Secondary Colours
+$rc-text-color: #58585B;
+.fill--rc-text-color {
+	background-color: $rc-text-color;
+}
+
+$rc-alt-blue: #8EC9D6;
+.fill--rc-alt-blue {
+	background-color: $rc-alt-blue;
+}
+
+$rc-success: #5FCC78;
+.fill--rc-success {
+	background-color: $rc-success;
+}
+
+$rc-error: #C71838;
+.fill--rc-error {
+	background-color: $rc-error;
+}
+
+
+
+
+// Primary Colours
+$rc-red: #E2001A;
 
 .fill--rc-red {
 	background-color: $rc-red;
