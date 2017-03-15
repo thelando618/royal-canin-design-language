@@ -217,7 +217,7 @@ gulp.task( 'cname', function( done ) {
 
 
 // Styleguide tasks
-gulp.task( 'generate', gulp.series( 'publicDir', 'copyTemplates', 'copyCSS', 'copyJS', 'copyFonts', 'copyImages', 'createNav', 'copyTemplates', function( done ) {
+gulp.task( 'generate', gulp.series( 'publicDir', 'copyTemplates', 'copyCSS', 'copyJS', 'copyFonts', 'copyImages', 'createNav', 'copyTemplates', 'cname', function( done ) {
 	done();
 } ) );
 
