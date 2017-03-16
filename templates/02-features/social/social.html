@@ -111,7 +111,25 @@
 					<p>Default social network links with Label on left</p>
 				</header>
 
-				<pre><code class="gs-code language-html"></code></pre>
+				@@include('./02-features/social/_social-links.html', {
+					"class": "social--label--side",
+					"label": "Follow Royal Canin",
+					"squished": false,
+					"facebook": true,
+					"instagram": true,
+					"twitter": true,
+					"youtube": true
+				})
+
+				<pre><code class="gs-code language-html">@@include('./02-features/social/_social-links.html', {
+					"class": "social--label--side",
+					"label": "Follow Royal Canin",
+					"squished": true,
+					"facebook": true,
+					"instagram": true,
+					"twitter": true,
+					"youtube": true
+				})</code></pre>
 			</section>
 
 

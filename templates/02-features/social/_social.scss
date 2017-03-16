@@ -22,7 +22,12 @@ $social-color-youtube: #CD201F;
 	text-align: center;
 
 	.social__label {
+		line-height: 1;
+		margin-bottom: 0;
+		padding: 1em;
 	}
+
+	ul {}
 
 	ul, li {
 		margin: 0;
@@ -85,5 +90,15 @@ $social-color-youtube: #CD201F;
 		&:active {
 			background: darken( $rc-red, 15% );
 		}
+	}
+}
+
+.social--label--side {
+	label {
+		padding: 0 1em;
+	}
+	.social__label, ul {
+		display: inline-block;
+		vertical-align: middle;
 	}
 }
