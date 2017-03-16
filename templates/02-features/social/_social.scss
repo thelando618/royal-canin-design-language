@@ -22,12 +22,16 @@ $social-color-youtube: #CD201F;
 	text-align: center;
 
 	.social__label {
+		display: block;
 		line-height: 1;
 		margin-bottom: 0;
 		padding: 1em;
 	}
 
-	ul {}
+	ul {
+		position: relative;
+		display: inline-block;
+	}
 
 	ul, li {
 		margin: 0;
@@ -35,6 +39,7 @@ $social-color-youtube: #CD201F;
 
 	li {
 		display: inline-block;
+		vertical-align: middle;
 		margin-left: .25em;
 		margin-right: .25em;
 	}
@@ -94,11 +99,41 @@ $social-color-youtube: #CD201F;
 }
 
 .social--label--side {
-	label {
-		padding: 0 1em;
-	}
 	.social__label, ul {
 		display: inline-block;
 		vertical-align: middle;
+	}
+}
+
+.social--box {
+	ul {
+		margin-top: .25em;
+		background-color: $rc-white;
+		border: 1px solid lighten( $rc-medium-grey, 35% );
+		padding: .75em;
+
+		&:before, &:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			margin-left: -.5em;
+			width: 1em;
+			height: 1em;
+			background-color: $rc-white;
+		}
+
+		&:before {
+			transform: translateY( -.5em ) rotate( 45deg );
+			z-index: 1;
+			border: 1px solid lighten( $rc-medium-grey, 35% );
+		}
+
+		&:after {
+			z-index: 2;
+			height: .75em;
+			width: 2em;
+			margin-left: -1em;
+		}
 	}
 }
