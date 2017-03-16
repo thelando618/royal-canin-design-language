@@ -22,13 +22,34 @@
 
 			<section class="gs-present">
 				<header>
-					<label class="gs-present__label">Default</label>
-					<p>A default video embed</p>
+					<label class="gs-present__label">YouTube</label>
+					<p>A default video embed from YouTube</p>
 				</header>
 
-				Video
+				@@include('./02-features/videos/_video.html', {
+					"embed": "src='https://www.youtube.com/embed/FYwO1fiYoa8?rel=0&amp;controls=0&amp;showinfo=0?ecver=1' frameborder='0' allowfullscreen"
+				})
 
-				<pre><code class="gs-code language-html"></code></pre>
+				<pre><code class="gs-code language-html">@@include('./02-features/videos/_video.html', {
+					"embed": "src='https://www.youtube.com/embed/FYwO1fiYoa8?rel=0&amp;controls=0&amp;showinfo=0?ecver=1' frameborder='0' allowfullscreen"
+				})
+				</code></pre>
+			</section>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Vimeo</label>
+					<p>A default video embed from Vimeo</p>
+				</header>
+
+				@@include('./02-features/videos/_video.html', {
+					"embed": "src='https://player.vimeo.com/video/207771491' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen"
+				})
+
+				<pre><code class="gs-code language-html">@@include('./02-features/videos/_video.html', {
+					"embed": "src='https://player.vimeo.com/video/207771491' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen"
+				})
+				</code></pre>
 			</section>
 
 		</div>
