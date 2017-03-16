@@ -1,4 +1,7 @@
 <nav class="social @@class">
+	@@if ( label !== '' ) {
+	<label class="social__label">@@label</label>
+	}
 	@@if ( squished === false ) {<ul class="list--blank list--align">
 		@@if ( facebook === true ) {<li>
 			<a href="#" class="social__network social__network--facebook">
@@ -20,5 +23,6 @@
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 48" aria-labelledby="title" role="img"><title id="title">youtube</title><path d="M52.3.5c-9.6-.7-31-.7-40.6 0C1.3 1.2.1 7.5 0 24c.1 16.5 1.3 22.8 11.7 23.5 9.6.7 31 .7 40.6 0 10.4-.7 11.6-7 11.7-23.5C63.9 7.5 62.7 1.2 52.3.5zM24 34.7V13.3L45.3 24 24 34.7z"></path></svg>
 			</a>
 		</li>}
-	</ul>}@@if ( squished === true ) { <!-- Same contents as Default --> }
+	</ul>}@@if ( squished === true ) { <!-- Same unordered list as Default example --> }
+
 </nav>
