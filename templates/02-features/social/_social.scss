@@ -16,8 +16,6 @@ $social-color-instagram-fallback: #BA00B1;
 $social-color-twitter: #1DA1F3;
 $social-color-youtube: #CD201F;
 
-
-
 .social {
 	text-align: center;
 
@@ -117,23 +115,50 @@ $social-color-youtube: #CD201F;
 			position: absolute;
 			top: 0;
 			left: 50%;
-			margin-left: -.5em;
 			width: 1em;
 			height: 1em;
 			background-color: $rc-white;
 		}
 
 		&:before {
-			transform: translateY( -.5em ) rotate( 45deg );
+			transform: translateX( -.5em ) translateY( -.5em ) rotate( 45deg );
 			z-index: 1;
 			border: 1px solid lighten( $rc-medium-grey, 35% );
 		}
 
 		&:after {
 			z-index: 2;
-			height: .75em;
 			width: 2em;
+			height: .75em;
 			margin-left: -1em;
 		}
+	}
+}
+
+.social--label--side.social--box {
+	@media ( max-width: 639px ) {
+		label {
+			display: block;
+		}
+	}
+
+	@media ( min-width: 640px ) {
+		ul {
+			margin-top: 0;
+			margin-left: .25em;
+
+			&:before, &:after {
+				top: 50%;
+				left: 0;
+			}
+
+			&:after {
+				transform: translateY( -1em );
+				width: .75em;
+				height: 2em;
+				margin-left: 0;
+			}
+		}
+
 	}
 }
