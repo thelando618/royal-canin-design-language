@@ -29,6 +29,7 @@
 
 				@@include('./02-features/social/_social-links.html', {
 					"class": "",
+					"squished": false,
 					"facebook": true,
 					"instagram": true,
 					"twitter": true,
@@ -37,6 +38,7 @@
 
 				<pre><code class="gs-code language-html">@@include('./02-features/social/_social-links.html', {
 					"class": "",
+					"squished": false,
 					"facebook": true,
 					"instagram": true,
 					"twitter": true,
@@ -51,7 +53,23 @@
 					<p>Social network links with Royal Canin colours</p>
 				</header>
 
-				<pre><code class="gs-code language-html"></code></pre>
+				@@include('./02-features/social/_social-links.html', {
+					"class": "social--rc",
+					"squished": false,
+					"facebook": true,
+					"instagram": true,
+					"twitter": true,
+					"youtube": true
+				})
+
+				<pre><code class="gs-code language-html">@@include('./02-features/social/_social-links.html', {
+					"class": "social--rc",
+					"squished": true,
+					"facebook": true,
+					"instagram": true,
+					"twitter": true,
+					"youtube": true
+				})</code></pre>
 			</section>
 
 
