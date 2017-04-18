@@ -359,32 +359,66 @@ pre.language-scss {
 	list-style-type: none;
 	margin-top: 0;
 	padding: 0;
+	overflow: hidden;
 
+	// @todo - replace with Susy grid?
 	li {
-		margin: 0;
-		padding: 1em;
-		color: rgba(255, 255, 255, .9);
-		font-size: .875rem;
-	}
-
-	.gs__dark {
-		color: rgba(0, 0, 0, .9);
-	}
-
-	span {
 		display: block;
-		box-sizing: border-box;
-	}
+		width: 50%;
+		float: left;
+		margin-bottom: 2em;
+		color: #58585B;
 
-	@media ( min-width: 640px ) {
-		span {
-			display: inline-block;
-			vertical-align: top;
-			width: 32.5%;
-			padding-right: 2em;
+		// @todo - replace with Susy grid?
+		&:nth-child( 2n+1 ) {
+			clear: left;
 		}
 	}
 
+	.gs-colour-list__block, .gs-colour-list__info {
+		max-width: 90%;
+		border: 1px solid #EAEAEA;
+	}
+
+	.gs-colour-list__block {
+		height: 100px;
+		border-bottom: none;
+		transition: background-color .3s ease-in;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	.gs-colour-list__info {
+		background-color: #FFFFFF;
+		padding: 1em;
+
+		span {
+			display: block;
+		}
+	}
+
+	@media ( min-width: 640px ) {
+		// @todo - replace with Susy grid?
+		li {
+			clear: none !important;
+			width: 25%;
+		}
+	}
+}
+
+.gs-colour-list--nonprimary {
+	@media ( min-width: 960px ) {
+		li {
+			width: 16.66%;
+
+			// @todo - replace with Susy grid?
+			&:nth-child( 4n+1 ) {
+				clear: left;
+			}
+		}
+	}
 }
 
 

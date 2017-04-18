@@ -17,6 +17,14 @@
   },
   {
     "colour": {
+      "name": "Light Grey",
+      "hex": "#EAEAEA",
+      "sass": "$rc-light-grey",
+      "class": "fill--rc-light-grey"
+    }
+  },
+  {
+    "colour": {
       "name": "White",
       "hex": "#FFFFFF",
       "sass": "$rc-white",

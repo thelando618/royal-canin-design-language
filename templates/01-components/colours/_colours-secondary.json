@@ -1,18 +1,18 @@
 [
   {
     "colour": {
-      "name": "Text Colour",
-      "hex": "#58585B",
-      "sass": "$rc-text-color",
-      "class": "fill--rc-text-color"
+      "name": "Text",
+      "hex": "#444444",
+      "sass": "$rc-text",
+      "class": "fill--rc-text"
     }
   },
   {
     "colour": {
-      "name": "Alt Blue",
+      "name": "Functional",
       "hex": "#8EC9D6",
-      "sass": "$rc-alt-blue",
-      "class": "fill--rc-alt-blue"
+      "sass": "$rc-functional",
+      "class": "fill--rc-functional"
     }
   },
   {
