@@ -51,8 +51,8 @@
 
 			<section class="gs-present">
 				<header>
-					<label class="gs-present__label">Royal Canin colours</label>
-					<p>Social network links with Royal Canin colours</p>
+					<label class="gs-present__label">Royal Canin background colour</label>
+					<p>Social network links with Royal Canin background colour</p>
 				</header>
 
 				@@include('./02-features/social/_social-links.html', {
@@ -75,6 +75,35 @@
 					"youtube": true
 				})</code></pre>
 			</section>
+
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Royal Canin Icon colour</label>
+					<p>Social network links with Royal Canin Icon colour</p>
+				</header>
+
+				@@include('./02-features/social/_social-links.html', {
+					"class": "social--rc-icon",
+					"label": "",
+					"squished": false,
+					"facebook": true,
+					"instagram": true,
+					"twitter": true,
+					"youtube": true
+				})
+
+				<pre><code class="gs-code language-html">@@include('./02-features/social/_social-links.html', {
+					"class": "social--rc-icon",
+					"label": "",
+					"squished": true,
+					"facebook": true,
+					"instagram": true,
+					"twitter": true,
+					"youtube": true
+				})</code></pre>
+			</section>
+
 
 
 			<section class="gs-present">

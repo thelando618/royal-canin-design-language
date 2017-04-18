@@ -96,6 +96,24 @@ $social-color-youtube: #CD201F;
 	}
 }
 
+.social--rc-icon {
+	.social__network {
+		background: $rc-white;
+
+		svg {
+			fill: $rc-red;
+		}
+
+		&:hover, &:focus {
+			background: darken( $rc-white, 5% );
+		}
+
+		&:active {
+			background: darken( $rc-white, 15% );
+		}
+	}
+}
+
 .social--label--side {
 	.social__label, ul {
 		display: inline-block;
