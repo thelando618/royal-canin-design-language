@@ -5,26 +5,29 @@
 
 .rc-tabs {
 	.rc-tabs__triggers {
-		overflow: hidden;
+	  overflow-y: scroll; /* has to be scroll, not auto */
+	  -webkit-overflow-scrolling: touch;
 		margin-top: 0;
 		margin-bottom: 0;
-		width: 90%;
 	
 		li {
-			float: left;
+			display: table-cell;
 			padding-right: .25em;
+			margin-bottom: 0;
 
-	    &:last-child {
-	    	margin-bottom: .25em;
-	    }
+			&:last-of-type {
+				padding-right: 4em;
+			}
 		}
 	}
 
 	.rc-tabs__triggers__trigger {
+		display: block;
 		color: inherit;
-		background-color: lighten( $rc-medium-grey, 35% );
+		background-color: transparent;
 		cursor: pointer;
 		height: 100%;
+		border-bottom: 4px solid $rc-white;
 
 		&:focus {
 			outline: none;
@@ -35,7 +38,7 @@
 		}
 
 		&.active {
-			background-color: #FFFFFF;
+			border-bottom: 4px solid $rc-red;
 
 			svg {
 				fill: $rc-red;
@@ -79,18 +82,18 @@
 
 	// Using flexbox (as opposed to no-flexbox), to avoid setting and resetting styles
 	.flexbox & {
-		.rc-tabs__triggers {
-			display: flex;
-			flex-wrap: wrap;
-		}
+		// .rc-tabs__triggers {
+		// 	display: flex;
+		// 	flex-wrap: wrap;
+		// }
 
-		li {
-			flex: 1 1 auto;
-		}
+		// li {
+		// 	flex: 1 1 auto;
+		// }
 
-		.rc-tabs__triggers__trigger {
-			width: 100%;
-		}
+		// .rc-tabs__triggers__trigger {
+		// 	width: 100%;
+		// }
 	}
 }
 
