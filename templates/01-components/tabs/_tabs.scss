@@ -18,15 +18,16 @@
 	}
 
 	.rc-tabs__triggers__trigger {
-		// display: block;
-		// height: 100%;
 		color: inherit;
 		background-color: transparent;
 		cursor: pointer;
-		border-bottom: 4px solid $rc-white;
+    border-bottom: 4px solid $rc-white;
+    border-color: $rc-white;
+
 
 		&.active {
 			border-bottom: 4px solid $rc-red;
+			border-color: $rc-red;
 		}
 	}
 
@@ -50,6 +51,7 @@
 		display: flex;
 		flex-direction: column;
 		order: 2;
+		overflow: hidden;
 
     li {
     	display: flex;
@@ -96,6 +98,11 @@
 
 			li {
 				display: block;
+			}
+
+			.rc-tabs__triggers__trigger {
+				display: block;
+				height: 100%;
 			}
 		}
 	}
