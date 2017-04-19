@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: .5em;
 }
 
-h1, .rc-head--1 {
+h1 {
 	font-size: 2em;// 32
 	
 	@media ( min-width: 640px ) {
@@ -35,7 +35,7 @@ h1, .rc-head--1 {
 	}
 }
 
-h2, .rc-head--2 {
+h2 {
 	font-size: 1.875em; // 30
 	
 	@media ( min-width: 640px ) {
@@ -47,7 +47,7 @@ h2, .rc-head--2 {
 	}
 }
 
-h3, .rc-head--3 {
+h3 {
 	font-size: 1.625em; // 26
 	
 	@media ( min-width: 640px ) {
@@ -59,7 +59,7 @@ h3, .rc-head--3 {
 	}
 }
 
-h4, .rc-head--4 {
+h4 {
 	font-size: 1.5em; // 24
 	
 	@media ( min-width: 640px ) {
@@ -71,7 +71,7 @@ h4, .rc-head--4 {
 	}
 }
 
-h5, .rc-head--5 {
+h5 {
 	font-size: 1.375em; // 22
 	
 	@media ( min-width: 640px ) {
@@ -84,7 +84,7 @@ h5, .rc-head--5 {
 }
 
 
-h6, .rc-head--6 {
+h6 {
 	font-size: 1.25em; // 20
 	
 	@media ( min-width: 640px ) {
@@ -98,18 +98,74 @@ h6, .rc-head--6 {
 
 
 
+// Modifier Headings
+.rc-head--display {
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 1.875em; // 30
+	
+	@media ( min-width: 640px ) {
+		font-size: 2.5em; // 40
+	}
+
+	@media ( min-width: 1024px ) {
+		font-size: 3.125em;	// 50
+	}
+}
+
+.rc-head--headline {
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 1.375em; // 22
+	
+	@media ( min-width: 640px ) {
+		font-size: 1.75em; // 28
+	}
+
+	@media ( min-width: 1024px ) {
+		font-size: 2em; // 32
+	}
+}
+
+.rc-head--subheadline {
+	font-weight: 700;
+	font-size: 1.125em; // 18
+	
+	@media ( min-width: 640px ) {
+		font-size: 1.375em; // 22
+	}
+
+	@media ( min-width: 1024px ) {
+		font-size: 1.5em; // 24
+	}
+}
+
+.rc-head--article {
+	font-size: 1em; // 16
+	
+	@media ( min-width: 640px ) {
+		font-size: 1.25em; // 20
+	}
+
+	@media ( min-width: 1024px ) {
+		font-size: 1.375em; // 22
+	}
+}
+
+
+
+
 // Paragraph
 p {
 	line-height: 1.5;
 }
 
 a {
-	// @todo make this transition into a variable?
 	transition: color 0.2s ease-in;
 	color: $rc-red;
 
 	&:hover, &:focus {
-		color: darken( $rc-red, 7.5% );
+		color: darken( $rc-red, 5% );
 		text-decoration: none;
 	}
 }
@@ -122,5 +178,7 @@ blockquote {
 	margin-left: 0;
 	padding-left: 2em;
 
-	color: $rc-medium-grey;
+	p {
+		color: $rc-text;
+	}
 }

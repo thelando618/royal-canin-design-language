@@ -7,15 +7,15 @@
 		<div class="gs-stage__content">
 
 			<header class="gs-stage__content__header">
-				<h1 class="gs-stage__content__head-tag">Headings - Classes</h1>
+				<h1 class="gs-stage__content__head-tag">Headings - Modifiers</h1>
 				<p>Usage and implementation for Typography within Web Design Language.</p>
 
 				<blockquote class="gs-stage__content__intro">
-					<h2 class="rc-head rc-head--6">Introduction</h2>
-					<p>Wherever possible, when a Heading tag is used, an accompanying heading class must be applied to set it's size to one of the six predefined levels. <strong>These classes should be used in any Component, Feature or Template to set the size of a Heading.</strong></p>
+					<h2 class="rc-head rc-head--article">Introduction</h2>
+					<p>Wherever possible, when a Heading tag is used, an accompanying heading class must be applied to set it's appearance to one of the avaiable options demonstrated below. <strong>These classes should be used in any Component, Feature or Template to set the appearance of a Heading.</strong></p>
 					<p>This is due to the HTML5 document outline algorithm allowing multiple content roots on any HTML5 marked up webpage. This means, in short, that multiple <code class="language-html">&lt;h1&gt;</code> tags can be used if separated by the appropriate HTML5 semantic sectioning elements.</p>
-					<p>The use of an <code class="language-scss">rc-head--[value]</code> class will set the size of any Heading tag (or indeed any element with that class applied to it) to the corresponding standard Heading size.</p>
-					<p>As is demonstrated below, the same 6 Heading tags are displayed as on the <a href="/01-components/typography/headings-default.html">Default Headings page</a>, but with a different <code class="language-scss">rc-head--[value]</code> class applied in order to change their appearance. In this case, we've effectively reversed the sizes of the Heading levels; <code class="language-scss">&lt;h1&gt;</code> is shown at the size of a <code class="language-scss">&lt;h6&gt;</code>, and so on.</p>
+					<p>The use of an <code class="language-scss">rc-head--[value]</code> class will set the appearance of any Heading tag, or indeed any element with that class applied to it.</p>
+					<p>As demonstrated brlow, a <code class="language-scss">rc-head--[value]</code> modifier class will <strong>override the default font size of a standard Heading tag.</strong></p>
 				</blockquote>
 			</header>
 
@@ -24,11 +24,11 @@
 			<section class="gs-present">
 				<header>
 					<label class="gs-present__label">Heading Classes</label>
-					@@loop("./01-components/typography/_heading-class.html", "./01-components/typography/_headings.json")
+					@@include("./01-components/typography/_heading-class.html")
 				</header>
 
 				<pre><code class="gs-code language-html">
-					@@loop("./01-components/typography/_heading-class.html", "./01-components/typography/_headings.json")
+					@@include("./01-components/typography/_heading-class.html")
 				</code></pre>
 			</section>
 

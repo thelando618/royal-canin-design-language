@@ -12,6 +12,11 @@ $rc-red: #E2001A;
 	}
 }
 
+.color--red {
+	color: $rc-red;
+}
+
+
 $rc-medium-grey: #87888A;
 .fill--rc-medium-grey {
 	background-color: $rc-medium-grey;
