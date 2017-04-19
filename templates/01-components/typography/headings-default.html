@@ -11,8 +11,8 @@
 				<p>Usage and implementation for Typography within Web Design Language.</p>
 
 				<blockquote class="gs-stage__content__intro">
-					<h2 class="rc-head rc-head--6">Introduction</h2>
-					<p>Heading tags, wherever possible, should have an <a href="/01-components/typography/headings-class.html">accompanying Header class</a> applied to them to change their appearance.</p>
+					<h2 class="rc-head rc-head--article">Introduction</h2>
+					<p>Heading tags, wherever possible, should have an <a href="/01-components/typography/headings-modifiers.html">accompanying Header class</a> applied to them to change their appearance.</p>
 					<p>Thanks to the HTML5 document outline algorithm, multiple content roots are available on any HTML5 marked up webpage, therefore, in short, multiple <code class="language-html">&lt;h1&gt;</code> tags can be used.</p>
 					<p>In some cases however, such as in a CMS where control over the markup output may be limited, the default heading styles will apply.</p>
 				</blockquote>
@@ -24,12 +24,13 @@
 				<header>
 					<label class="gs-present__label">Default Headings</label>
 					<p>Header tags can be implemented as dispalyed below and will inherit the following default styles.</p>
+					<p>A modifier class can be used to change the colour of the Heading.</p>
 				</header>
 
-				@@loop("./01-components/typography/_heading-default.html", "./01-components/typography/_headings.json")
+				@@include("./01-components/typography/_heading-default.html")
 
 				<pre><code class="gs-code language-html">
-					@@loop("./01-components/typography/_heading-default.html", "./01-components/typography/_headings.json")
+					@@include("./01-components/typography/_heading-default.html")
 				</code></pre>
 			</section>
 
