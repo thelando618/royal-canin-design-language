@@ -45,8 +45,13 @@
 
 				<blockquote class="gs-stage__content__intro">
 					<h2 class="rc-head rc-head--subheadline">Introduction</h2>
-					<p>Lists can be implemented with an icon set pre defined using SVG icons.</p>
-					<p>Lists can contain external links built inline. </p>
+					<p>Lists items can have an extra modifier class added to them in order to display an SVG icon at the start.</p>
+					<p>The root class <code class="gs-code language-scss">list-icon</code> must be applied, then the actual icon class must be added. Pick from:</p>
+					<ul>
+						<li><code class="gs-code language-scss">list-icon--check</code></li>
+						<li><code class="gs-code language-scss">list-icon--arrow-down</code></li>
+						<li><code class="gs-code language-scss">list-icon--arrow-right</code></li>
+					</ul>
 				</blockquote>
 			</header>
 
@@ -59,56 +64,56 @@
 
 				<ul class="list--blank list--align">
 					
-	<li  >
-		<svg xmlns="http://www.w3.org/2000/svgs" version="1.1" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">check</title><path d="M.1 31.8l9.1-9.1L33.6 47l-9.1 9.1L.1 31.8zM15.3 47L54.9 7.4l9.1 9.1-39.5 39.6-9.2-9.1z"/></svg> This is a standard list item 
+	<li class=" ">
+		 This is a standard list item 
 	</li>
 
-	<li  >
-		<a href="#"><svg xmlns="http://www.w3.org/2000/svgs" version="1.1" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">check</title><path d="M.1 31.8l9.1-9.1L33.6 47l-9.1 9.1L.1 31.8zM15.3 47L54.9 7.4l9.1 9.1-39.5 39.6-9.2-9.1z"/></svg> This is a standard list item wrapped in a link </a>
+	<li class="list--icon list-icon--check ">
+		<a href="#"> This is a standard list item wrapped in a link </a>
 	</li>
 
-	<li  class="active"  >
-		<svg xmlns="http://www.w3.org/2000/svgs" version="1.1" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">check</title><path d="M.1 31.8l9.1-9.1L33.6 47l-9.1 9.1L.1 31.8zM15.3 47L54.9 7.4l9.1 9.1-39.5 39.6-9.2-9.1z"/></svg> This is a standard list item with an active class applied 
+	<li class="list--icon list-icon--arrow-right active">
+		 This is a standard list item with an active class applied 
 	</li>
 
-	<li  >
-		<svg xmlns="http://www.w3.org/2000/svgs" version="1.1" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">check</title><path d="M.1 31.8l9.1-9.1L33.6 47l-9.1 9.1L.1 31.8zM15.3 47L54.9 7.4l9.1 9.1-39.5 39.6-9.2-9.1z"/></svg> This is a standard list item with some placeholder text to make it very long - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+	<li class="list--icon list-icon--arrow-right ">
+		 This is a standard list item with some placeholder text to make it very long - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 	</li>
 
-	<li  >
-		<svg xmlns="http://www.w3.org/2000/svgs" version="1.1" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">check</title><path d="M.1 31.8l9.1-9.1L33.6 47l-9.1 9.1L.1 31.8zM15.3 47L54.9 7.4l9.1 9.1-39.5 39.6-9.2-9.1z"/></svg> This is a standard list item with some <em>inline <strong>HTML</strong> entities</em> 
+	<li class="list--icon list-icon--arrow-down ">
+		 This is a standard list item with some <em>inline <strong>HTML</strong> entities</em> 
 	</li>
 
-	<li  >
-		<svg xmlns="http://www.w3.org/2000/svgs" version="1.1" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">check</title><path d="M.1 31.8l9.1-9.1L33.6 47l-9.1 9.1L.1 31.8zM15.3 47L54.9 7.4l9.1 9.1-39.5 39.6-9.2-9.1z"/></svg> This is a list item that includes an <a href='#''>inline link</a> 
+	<li class="list--icon list-icon--check ">
+		 This is a list item that includes an <a href='#'>inline link</a> 
 	</li>
 
 				</ul>
 
 				<pre><code class="gs-code language-html">
 					<ul class="list--blank list--align">
-	<li  >
-		<svg xmlns="http://www.w3.org/2000/svgs" version="1.1" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">check</title><path d="M.1 31.8l9.1-9.1L33.6 47l-9.1 9.1L.1 31.8zM15.3 47L54.9 7.4l9.1 9.1-39.5 39.6-9.2-9.1z"/></svg> This is a standard list item 
+	<li class=" ">
+		 This is a standard list item 
 	</li>
 
-	<li  >
-		<a href="#"><svg xmlns="http://www.w3.org/2000/svgs" version="1.1" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">check</title><path d="M.1 31.8l9.1-9.1L33.6 47l-9.1 9.1L.1 31.8zM15.3 47L54.9 7.4l9.1 9.1-39.5 39.6-9.2-9.1z"/></svg> This is a standard list item wrapped in a link </a>
+	<li class="list--icon list-icon--check ">
+		<a href="#"> This is a standard list item wrapped in a link </a>
 	</li>
 
-	<li  class="active"  >
-		<svg xmlns="http://www.w3.org/2000/svgs" version="1.1" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">check</title><path d="M.1 31.8l9.1-9.1L33.6 47l-9.1 9.1L.1 31.8zM15.3 47L54.9 7.4l9.1 9.1-39.5 39.6-9.2-9.1z"/></svg> This is a standard list item with an active class applied 
+	<li class="list--icon list-icon--arrow-right active">
+		 This is a standard list item with an active class applied 
 	</li>
 
-	<li  >
-		<svg xmlns="http://www.w3.org/2000/svgs" version="1.1" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">check</title><path d="M.1 31.8l9.1-9.1L33.6 47l-9.1 9.1L.1 31.8zM15.3 47L54.9 7.4l9.1 9.1-39.5 39.6-9.2-9.1z"/></svg> This is a standard list item with some placeholder text to make it very long - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+	<li class="list--icon list-icon--arrow-right ">
+		 This is a standard list item with some placeholder text to make it very long - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 	</li>
 
-	<li  >
-		<svg xmlns="http://www.w3.org/2000/svgs" version="1.1" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">check</title><path d="M.1 31.8l9.1-9.1L33.6 47l-9.1 9.1L.1 31.8zM15.3 47L54.9 7.4l9.1 9.1-39.5 39.6-9.2-9.1z"/></svg> This is a standard list item with some <em>inline <strong>HTML</strong> entities</em> 
+	<li class="list--icon list-icon--arrow-down ">
+		 This is a standard list item with some <em>inline <strong>HTML</strong> entities</em> 
 	</li>
 
-	<li  >
-		<svg xmlns="http://www.w3.org/2000/svgs" version="1.1" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">check</title><path d="M.1 31.8l9.1-9.1L33.6 47l-9.1 9.1L.1 31.8zM15.3 47L54.9 7.4l9.1 9.1-39.5 39.6-9.2-9.1z"/></svg> This is a list item that includes an <a href='#''>inline link</a> 
+	<li class="list--icon list-icon--check ">
+		 This is a list item that includes an <a href='#'>inline link</a> 
 	</li>
 </ul>
 				</code></pre>
