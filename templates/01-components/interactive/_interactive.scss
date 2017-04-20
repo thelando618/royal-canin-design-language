@@ -4,12 +4,25 @@
 	height: 1em;
 	margin: 0 .25em;
 	background-color: $rc-light-grey;
+	border: 2px solid transparent;
 	border-radius: 100%;
 	overflow: hidden;
-	transition: background-color .2s ease-in-out;
+	transition: background-color .2s ease-in-out, border .2s ease-in-out;
+
+	&:hover, &:focus {
+		border-color: $rc-red;
+	}
 
 	&.interactive--pager--active {
 		background-color: $rc-red;
+
+		&:hover, &:focus {
+			background-color: darken( $rc-red, 5% );
+		}
+
+		&:active {
+			background-color: darken( $rc-red, 15% );
+		}
 	}
 }
 
