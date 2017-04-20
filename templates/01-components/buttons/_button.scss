@@ -1,118 +1,175 @@
+
+// 	// Variations
+// 	&.button--success {
+// 		background-color: $rc-success;
+
+// 		&:hover, &:focus {
+// 			background-color: darken( $rc-success, 7.5% );
+// 		}
+// 		&:active {
+// 			background-color: darken( $rc-success, 15% );
+// 		}
+// 	}
+
+
+// 	// Loading
+// 	&.button--loading {
+// 		svg {
+// 			display: none;
+// 		}
+
+// 		&:after {
+// 			// When an SVG is used in this manner, it must be first optimised and then URL encoded to ensure cross browser compatibility.
+// 			// Optimise: https://jakearchibald.github.io/svgomg/
+// 			// URL Encode: https://codepen.io/tigt/post/optimizing-svgs-in-data-uris
+// 			content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E %3Cstyle%3E .st0%7Bfill:%23FFFFFF;%7D %3C/style%3E %3Cpath d='M4.2 46.2c4.2 6.6 11.1 11.5 19.3 13.1l.5-2.4-.5 2.4c2.2.5 4.3.7 6.4.7 13.9 0 26.5-9.7 29.4-23.8l-2.5-.5 2.5.5c.5-2.2.7-4.3.7-6.4C60 15.9 50.2 3.7 35.9.6c-2-.4-4-.6-6-.6C15.8 0 3.2 9.7.1 23.7c-.3 1.3.6 2.7 1.9 3 1.4.3 2.7-.6 3-1.9C7.6 13.1 18.2 5 29.8 5c1.7 0 3.3.2 5 .5l.6-2.5-.5 2.4C46.9 8 55 18.2 55 29.7c0 1.8-.2 3.6-.6 5.4C52 47 41.5 55 29.9 55c-1.8 0-3.6-.2-5.3-.6C17.7 53 12 49 8.6 43.6c-.7-1.2-2.3-1.5-3.5-.8s-1.7 2.3-.9 3.4z' class='st0'/%3E %3C/svg%3E");
+// 			width: 1em;
+// 			height: 1em;
+// 			animation: steady-spin 1s infinite linear;
+
+// 			.no-cssanimations & {
+// 				content: '';
+// 				background: url('../images/loading.gif') center center / 1em no-repeat;
+// 			}
+// 		}
+// 	}
+
+// }
+
+// // @todo move this a keyframes file.
+// @keyframes steady-spin {
+// 	0% {
+// 		transform: rotate(0deg) scale(1.25);
+// 	}
+// 	100% {
+// 		transform: rotate(360deg) scale(1.25);
+// 	}
+// }
+
+
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .button {
-	display: inline-block;
-	width: auto;
-	font-size: .875em;
-	line-height: 1.15;
+	cursor: pointer;
 	background-color: $rc-red;
-	color: #FFFFFF;
-	border: none;
-	text-transform: uppercase;
-	text-decoration: none;
-	padding: 12px 20px;
+	color: $rc-white;
+	font-weight: 500;
+	font-size: .875em;
+	padding: .625em 1.5em;
+	line-height: 1.5;
+	border: 2px solid transparent;
+	border-radius: 3px;
 	transition: background-color 0.2s ease-in;
 
-	&:hover, &:focus, &.active {
-		color: #FFFFFF;
-	}
-
 	&:hover, &:focus {
-		background-color: darken( $rc-red, 7.5% );
+		background-color: darken( $rc-red, 5% );
 	}
 
 	&:focus {
-		outline: 3px solid lightblue;
+		outline: none;
 	}
 
 	&:active {
 		background-color: darken( $rc-red, 15% );
 	}
 
-	// Sizes
-	&.button--medium {
-		padding: 14.5px 35px;
-
-		svg, &.button--loading:after {
-			transform: scale(1.375);
-			margin-left: 1.09375rem;
-			margin-right: - button-icon-right-pull( 1.375, 1.09375rem )
-		}
-	}
-
-	&.button--large {
-		font-size: 1em;
-		padding: 16px 40px;
-
-		svg, &.button--loading:after {
-			transform: scale(1.375);
-			margin-left: 1.25rem;
-			margin-right: - button-icon-right-pull( 1.375, 1.25rem )
-		}
-	}
-
-	&.button--full {
-		width: 100%;
-	}
-
-	// Variations
-	&.button--success {
-		background-color: $rc-success;
-
-		&:hover, &:focus {
-			background-color: darken( $rc-success, 7.5% );
-		}
-		&:active {
-			background-color: darken( $rc-success, 15% );
-		}
-	}
-
-	// SVG
-	svg, &.button--loading:after {
+	&:after {
+		position: relative;
 		display: inline-block;
-		vertical-align: bottom;
-		fill: #FFFFFF;
+		vertical-align: middle;
 		width: 1em;
 		height: 1em;
-		line-height: 1;
-		//@ todo add Modernizr fallback for IE9 as it doesn't scale SVGs
-		transform: scale(1.25);
-		margin-left: .625rem;
-		margin-right: - button-icon-right-pull( 1.25, .625rem );
+		margin-left: .5rem;
+		margin-right: - button-icon-right-pull( 1.25, .5rem );
+		top: -2px;
+		background: center/contain no-repeat;
 	}
 
-	// Loading
-	&.button--loading {
-		svg {
-			display: none;
-		}
-
-		&:after {
-			// When an SVG is used in this manner, it must be first optimised and then URL encoded to ensure cross browser compatibility.
-			// Optimise: https://jakearchibald.github.io/svgomg/
-			// URL Encode: https://codepen.io/tigt/post/optimizing-svgs-in-data-uris
-			content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E %3Cstyle%3E .st0%7Bfill:%23FFFFFF;%7D %3C/style%3E %3Cpath d='M4.2 46.2c4.2 6.6 11.1 11.5 19.3 13.1l.5-2.4-.5 2.4c2.2.5 4.3.7 6.4.7 13.9 0 26.5-9.7 29.4-23.8l-2.5-.5 2.5.5c.5-2.2.7-4.3.7-6.4C60 15.9 50.2 3.7 35.9.6c-2-.4-4-.6-6-.6C15.8 0 3.2 9.7.1 23.7c-.3 1.3.6 2.7 1.9 3 1.4.3 2.7-.6 3-1.9C7.6 13.1 18.2 5 29.8 5c1.7 0 3.3.2 5 .5l.6-2.5-.5 2.4C46.9 8 55 18.2 55 29.7c0 1.8-.2 3.6-.6 5.4C52 47 41.5 55 29.9 55c-1.8 0-3.6-.2-5.3-.6C17.7 53 12 49 8.6 43.6c-.7-1.2-2.3-1.5-3.5-.8s-1.7 2.3-.9 3.4z' class='st0'/%3E %3C/svg%3E");
-			width: 1em;
-			height: 1em;
-			animation: steady-spin 1s infinite linear;
-
-			.no-cssanimations & {
-				content: '';
-				background: url('../images/loading.gif') center center / 1em no-repeat;
-			}
-		}
+	&.button--pill {
+		border-radius: 50px;
 	}
 
+	// Icons
+	// &.button--icon-arrow-right {
+	// 	&:after {
+	// 		content: '';
+	// 		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 39.5 64'%3E %3Cstyle%3E .st0%7Bfill:%23FFFFFF;%7D %3C/style%3E %3Cpath d='M39.5 32.1c0 1.9-.8 3.7-2.2 5.1L12.7 61.8C11.3 63.3 9.4 64 7.5 64c-1.9 0-3.8-.7-5.3-2.2-2.9-2.9-2.9-7.6 0-10.6L21.4 32 2.2 12.7C-.7 9.8-.7 5.1 2.2 2.1c2.9-2.9 7.6-2.9 10.6 0l24.5 24.5c1.4 1.4 2.1 3.3 2.2 5.1v.4' class='st0'/%3E %3C/svg%3E");
+	// 	}
+	// }
+
+	// &.button--icon-check {
+	// 	&:after {
+	// 		content: '';
+	// 		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 53.1'%3E %3Cstyle%3E .st0%7Bfill:%23FFFFFF;%7D %3C/style%3E %3Cpath d='M62.7 10.4l-31 40.2c-.5.6-1 1.1-1.6 1.5-.1 0-.1.1-.2.1-1 .6-2.1.9-3.3.9-1.4 0-2.8-.4-4-1.3L2.5 36.3C-.3 34.1-.9 30 1.3 27.2s6.3-3.4 9.1-1.2l15 11.5 27-35c2.2-2.8 6.3-3.4 9.1-1.2s3.3 6.3 1.2 9.1z' class='st0'/%3E %3C/svg%3E");
+	// 	}
+	// }
 }
 
-// @todo move this a keyframes file.
-@keyframes steady-spin {
-	0% {
-		transform: rotate(0deg) scale(1.25);
+
+
+
+
+
+.button--secondary {
+	border-color: $rc-red;
+	color: $rc-red;
+	background-color: transparent;
+
+	// &.button--icon-arrow-right {
+	// 	&:after {
+	// 		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 39.5 64'%3E %3Cstyle%3E .st0%7Bfill:%23E2001A;%7D %3C/style%3E %3Cpath d='M39.5 32.1c0 1.9-.8 3.7-2.2 5.1L12.7 61.8C11.3 63.3 9.4 64 7.5 64c-1.9 0-3.8-.7-5.3-2.2-2.9-2.9-2.9-7.6 0-10.6L21.4 32 2.2 12.7C-.7 9.8-.7 5.1 2.2 2.1c2.9-2.9 7.6-2.9 10.6 0l24.5 24.5c1.4 1.4 2.1 3.3 2.2 5.1v.4' class='st0'/%3E %3C/svg%3E");
+	// 	}
+	// }
+
+
+	&:hover, &:focus {
+		background-color: $rc-red;
+		color: $rc-white;
+
+		// &.button--icon-arrow-right {
+		// 	&:after {
+		// 		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 39.5 64'%3E %3Cstyle%3E .st0%7Bfill:%23FFFFFF;%7D %3C/style%3E %3Cpath d='M39.5 32.1c0 1.9-.8 3.7-2.2 5.1L12.7 61.8C11.3 63.3 9.4 64 7.5 64c-1.9 0-3.8-.7-5.3-2.2-2.9-2.9-2.9-7.6 0-10.6L21.4 32 2.2 12.7C-.7 9.8-.7 5.1 2.2 2.1c2.9-2.9 7.6-2.9 10.6 0l24.5 24.5c1.4 1.4 2.1 3.3 2.2 5.1v.4' class='st0'/%3E %3C/svg%3E");
+		// 	}
+		// }
 	}
-	100% {
-		transform: rotate(360deg) scale(1.25);
+
+	&:active {
+		background-color: darken( $rc-red, 5% );
+		border-color: darken( $rc-red, 5% );
+	}
+}
+
+
+
+
+
+.button--tertiary {
+	border-color: $rc-text;
+	color: $rc-text;
+	background-color: transparent;
+
+	// &.button--icon-arrow-right {
+	// 	&:after {
+	// 		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 39.5 64'%3E %3Cstyle%3E .st0%7Bfill:%23444444;%7D %3C/style%3E %3Cpath d='M39.5 32.1c0 1.9-.8 3.7-2.2 5.1L12.7 61.8C11.3 63.3 9.4 64 7.5 64c-1.9 0-3.8-.7-5.3-2.2-2.9-2.9-2.9-7.6 0-10.6L21.4 32 2.2 12.7C-.7 9.8-.7 5.1 2.2 2.1c2.9-2.9 7.6-2.9 10.6 0l24.5 24.5c1.4 1.4 2.1 3.3 2.2 5.1v.4' class='st0'/%3E %3C/svg%3E");
+	// 	}
+	// }
+
+
+	&:hover, &:focus {
+		background-color: $rc-text;
+		color: $rc-white;
+
+		// &.button--icon-arrow-right {
+		// 	&:after {
+		// 		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 39.5 64'%3E %3Cstyle%3E .st0%7Bfill:%23FFFFFF;%7D %3C/style%3E %3Cpath d='M39.5 32.1c0 1.9-.8 3.7-2.2 5.1L12.7 61.8C11.3 63.3 9.4 64 7.5 64c-1.9 0-3.8-.7-5.3-2.2-2.9-2.9-2.9-7.6 0-10.6L21.4 32 2.2 12.7C-.7 9.8-.7 5.1 2.2 2.1c2.9-2.9 7.6-2.9 10.6 0l24.5 24.5c1.4 1.4 2.1 3.3 2.2 5.1v.4' class='st0'/%3E %3C/svg%3E");
+		// 	}
+		// }
+	}
+
+	&:active {
+		background-color: darken( $rc-text, 5% );
+		border-color: darken( $rc-text, 5% );
 	}
 }
