@@ -1,0 +1,131 @@
+@@include('./_site-header.html')
+
+<div class="gs-stage">
+
+	<div class="gs-stage__inner">
+
+		<div class="gs-stage__content">
+
+			<header class="gs-stage__content__header">
+				<h1 class="gs-stage__content__head-tag">Avatars</h1>
+				<p>Usage and implementation for Buttons within Web Design Language.</p>
+
+				<blockquote class="gs-stage__content__intro">
+					<h2 class="rc-head rc-head--subheadline">Introduction</h2>
+					<p>An avatar is a circular image type used to denote a users pet.</p>
+				</blockquote>
+			</header>
+
+			<h2 class="gs-stage__content__head-tag rc-head--subheadline">Examples</h2>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Avatar</label>
+					<p>The figcaption is optional and at this point will be hidden visually.</p>
+				</header>
+
+				@@include('./01-components/avatars/_avatar.html', {
+					"class": "",
+					"value": "Pet's name",
+					"has_image": true,
+					"url": "https://placeholdit.imgix.net/~text?txtsize=75&txt=800%C3%97625&w=800&h=625"
+				})
+
+				<pre><code class="gs-code language-html">@@include('./01-components/avatars/_avatar.html', {
+					"class": "",
+					"value": "Pet's name",
+					"has_image": true,
+					"url": "https://placeholdit.imgix.net/~text?txtsize=75&txt=800%C3%97625&w=800&h=625"
+				})
+				</code></pre>
+			</section>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Avatar - Medium</label>
+					<p>The figcaption is optional and at this point will be hidden visually.</p>
+				</header>
+
+				@@include('./01-components/avatars/_avatar.html', {
+					"class": "avatar--medium",
+					"value": "Pet's name",
+					"has_image": true,
+					"url": "https://placeholdit.imgix.net/~text?txtsize=75&txt=800%C3%97625&w=800&h=625"
+				})
+
+				<pre><code class="gs-code language-html">@@include('./01-components/avatars/_avatar.html', {
+					"class": "avatar--medium",
+					"value": "Pet's name",
+					"has_image": true,
+					"url": "https://placeholdit.imgix.net/~text?txtsize=75&txt=800%C3%97625&w=800&h=625"
+				})
+				</code></pre>
+			</section>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Avatar - Large</label>
+					<p>The figcaption is optional and at this point will be hidden visually.</p>
+				</header>
+
+				@@include('./01-components/avatars/_avatar.html', {
+					"class": "avatar--large",
+					"value": "Pet's name",
+					"has_image": true,
+					"url": "https://placeholdit.imgix.net/~text?txtsize=75&txt=800%C3%97625&w=800&h=625"
+				})
+
+				<pre><code class="gs-code language-html">@@include('./01-components/avatars/_avatar.html', {
+					"class": "avatar--large",
+					"value": "Pet's name",
+					"has_image": true,
+					"url": "https://placeholdit.imgix.net/~text?txtsize=75&txt=800%C3%97625&w=800&h=625"
+				})
+				</code></pre>
+			</section>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Avatar - Fabllack</label>
+					<p>The figcaption is optional and at this point will be hidden visually.</p>
+				</header>
+
+				@@include('./01-components/avatars/_avatar.html', {
+					"class": "",
+					"value": "Pet's name",
+					"has_image": false,
+					"url": ""
+				})
+
+				<pre><code class="gs-code language-html">@@include('./01-components/avatars/_avatar.html', {
+					"class": "",
+					"value": "Pet's name",
+					"has_image": false,
+					"url": ""
+				})
+				</code></pre>
+			</section>
+
+		</div>
+
+		<section class="gs-section gs-changelog">
+			<header>
+				<h1 class="rc-head rc-head--subheadline gs-section__head">Changelog</h1>
+			</header>
+
+			<div class="gs-section__content">
+				<ul class="list--blank list--align">
+					@@loop("./_changelog-item.html", "./01-components/interactive/_changelog.json")
+				</ul>
+			</div>
+		</section>
+
+		@@include('./_issues.html')
+
+		@@include('./_feedback.html')
+
+	</div>
+
+</div>
+
+@@include('./_site-footer.html')
