@@ -112,6 +112,18 @@ input[type="submit"],
 	&:active {
 		background-color: darken( $rc-red, 15% );
 	}
+
+	&:disabled {
+		background-color: $rc-light-grey;
+		color: $rc-medium-grey;
+		border-color: transparent;
+		cursor: not-allowed;
+
+		&:hover, &:focus, &:active {
+			background-color: $rc-light-grey;
+			color: $rc-medium-grey;
+		}
+	}
 }
 
 
