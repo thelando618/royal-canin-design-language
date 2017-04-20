@@ -158,15 +158,47 @@ h6 {
 // Paragraph
 p {
 	line-height: 1.5;
-}
 
-a {
-	transition: color 0.2s ease-in;
-	color: $rc-red;
+	a {
+		display: inline-block;
+		vertical-align: bottom;
+		position: relative;
+		z-index: 1;
+		color: $rc-functional;
+		transition: color 0.2s ease-in;
+		overflow: hidden;
 
-	&:hover, &:focus {
-		color: darken( $rc-red, 5% );
-		text-decoration: none;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: $rc-functional;
+			z-index: -1;
+			transform: translateX( -110% );
+			transition: transform .2s ease-in-out, background-color .2s ease-in-out;
+		}
+
+		&:hover, &:focus {
+			color: $rc-white;
+			text-decoration: none;
+
+			&:before {
+				transform: translateX( 0% );
+			}
+		}
+
+		&:focus {
+			outline: none;
+		}
+
+		&:active {
+			&:before {
+				background-color: darken( $rc-functional, 5% );
+			}
+		}
 	}
 }
 
