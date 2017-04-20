@@ -60,7 +60,7 @@ input[type="submit"],
 	padding: .625em 1.5em;
 	line-height: 1.5;
 	border: 2px solid transparent;
-	border-radius: 3px;
+	border-radius: 50px;
 	transition: background-color 0.2s ease-in;
 
 	&:after {
@@ -119,6 +119,10 @@ input[type="submit"],
 			background-color: $rc-light-grey;
 			color: $rc-medium-grey;
 		}
+	}
+
+	@media( min-width: 640px ) {
+		border-radius: 3px;
 	}
 }
 
