@@ -21,13 +21,21 @@
 		color: inherit;
 		background-color: transparent;
 		cursor: pointer;
-    border-bottom: 4px solid $rc-white;
-    border-color: $rc-white;
+    border-bottom: 4px solid transparent;
+    border-bottom-color: $rc-white;
+    border-radius: 0px;
 
 
 		&.active {
-			border-bottom: 4px solid $rc-red;
-			border-color: $rc-red;
+			border-bottom-color: $rc-red;
+
+			// Targeting IE9 as it is having issues with borders
+			.no-flexbox & {
+				&.active {
+					background-color: $rc-red;
+					color: $rc-white;
+				}
+			}
 		}
 	}
 
