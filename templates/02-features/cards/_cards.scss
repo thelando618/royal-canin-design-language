@@ -144,51 +144,38 @@
 	}
 }
 
-
 .card--details {
 	text-align: center;
 
-	.card__image, .card__link {
-		display: none;
-	}
-
 	.card__header {
+		padding: 0;
+		align-self: stretch;
 		flex: 1 1 100%;
-		padding-top: 0;
-		padding-bottom: 0;
-		padding-left: 0;
 	}
 
 	svg {
 		display: inline-block;
 		vertical-align: middle;
-		width: 1.75em;
-		height: 1.75em;
+		width: 1.5em;
+		height: 1.5em;
 		fill: $rc-medium-grey;
 	}
 
 	.card__meta, .card__title {
 		padding: .5em;
-	}
-
-	.card__meta {
-		background-color: $rc-medium-grey;
-		color: $rc-red;
 		font-size: 1em;
 	}
 
-	.card__title {
-		margin: 0;
+	.card__meta {
+		font-size: 1.125em;
 	}
 
-	@media ( min-width: 480px ) {
-		.card__meta {
-			font-size: 1.125em;
-		}
+	.card__title {
+		border-top: 1px solid $rc-light-grey;
+		margin: 0;
+		font-weight: 700;
 	}
 }
-
-
 
 // Groups of Cards
 .cards {
