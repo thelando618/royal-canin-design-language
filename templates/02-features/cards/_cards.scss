@@ -13,9 +13,7 @@
 
 	.card__header {
 		align-self: center;
-		padding-top: 1em;
-		padding-bottom: 1em;
-		padding-left: .5em;
+		padding: 1em .5em;
 	}
 
 	.card__meta, .card__link {
@@ -49,7 +47,7 @@
 		}
 	}
 
-	@media ( max-width: 600px ) {
+	@media ( max-width: 700px ) {
 		.button {
 			padding: 0;
 			color: $rc-functional;
@@ -83,7 +81,7 @@
 		}
 	}
 
-	@media ( min-width: 600px ) {
+	@media ( min-width: 700px ) {
 		display: flex;
 		flex-direction: column;
 
@@ -98,13 +96,11 @@
 			flex-direction: column;
 			justify-content: space-between;
 			flex: 1 0 auto;
-			max-width: 100%;
 			padding: 1em;
 			text-align: center;
 		}
 
 		.card__title {
-			font-size: 1.375em;
 			margin-bottom: 1em;
 		}
 
@@ -114,7 +110,6 @@
 				display: none;
 			}
 		}
-
 
 		.no-flexbox & {
 			display: block;
@@ -139,6 +134,12 @@
 			.card__image {
 				height: 200px;
 			}
+		}
+	}
+
+	@media ( min-width: 960px ) {
+		.card__title {
+			font-size: 1.375em;
 		}
 	}
 }
@@ -191,37 +192,32 @@
 
 // Groups of Cards
 .cards {
-	overflow: hidden;
+	@include container;
 
 	@media ( min-width: 700px ) {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 
-		.no-flexbox & {
-			display: block;
-			@include container();
-		}
-
 		&.cards--3 {
-			.card--vertical {
+			.card {
 				flex: 0 1 32%;
 			}
 
 			.no-flexbox & {
-				.card--vertical {
+				.card {
 					@include gallery( 4 of 12 );
 				}
 			}
 		}
 
 		&.cards--4 {
-			.card--vertical {
+			.card {
 				flex: 0 1 49%;
 			}
 
 			.no-flexbox & {
-				.card--vertical {
+				.card {
 					@include gallery( 6 of 12 );
 				}
 			}
@@ -230,12 +226,12 @@
 
 	@media ( min-width: 960px ) {
 		&.cards--4 {
-			.card--vertical {
+			.card {
 				flex: 0 1 24%;
 			}
 
 			.no-flexbox & {
-				.card--vertical {
+				.card {
 					@include gallery( 3 of 12 );
 				}
 			}
