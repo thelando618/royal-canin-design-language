@@ -6,23 +6,18 @@
 
 		<div class="gs-stage__content">
 
-			@@include('./01-components/alerts/_alert.html', {
-				"class": "alert--error",
-				"message": "This section is in progress"
-			})
-
 			<header class="gs-stage__content__header">
 				<h1 class="gs-stage__content__head-tag">Grid</h1>
 				<p>Usage and implementation for Grid within Web Design Language.</p>
 
 				<blockquote class="gs-stage__content__intro">
 					<h2 class="rc-head rc-head--subheadline">Introduction</h2>
+					<p>The Web Design Langauge grid system is made up of 5 Column options. Columns counts can be mixed and variations documented below will enable a wide range of column options.</p>
 				</blockquote>
 			</header>
 
 			<h2 class="gs-stage__content__head-tag rc-head--subheadline">Examples</h2>
 			<p>The examples below display front end styling and HTML markup to implement the Grid into your code.</p>
-
 
 			<section class="gs-present">
 				<header>
@@ -30,16 +25,11 @@
 				</header>
 
 				<div class="rc-grid">
-					<div class="rc-col rc-col-100">
-						<div class="gs-col-demo">
-							100%
-						</div>
-					</div>
+					@@loop("./02-features/grid/_grid.html", [
+						{ "class": "rc-col--100", "number": "100%" }
+					])
 				</div>
-
-				<pre><code class="gs-code language-html"></code></pre>
 			</section>
-
 
 			<section class="gs-present">
 				<header>
@@ -47,19 +37,11 @@
 				</header>
 
 				<div class="rc-grid">
-					<div class="rc-col rc-col-50">
-						<div class="gs-col-demo">
-							50%
-						</div>
-					</div>
-					<div class="rc-col rc-col-50">
-						<div class="gs-col-demo">
-							50%
-						</div>
-					</div>
+					@@loop("./02-features/grid/_grid.html", [
+						{ "class": "rc-col--50", "number": "50%" },
+						{ "class": "rc-col--50", "number": "50%" }
+					])
 				</div>
-
-				<pre><code class="gs-code language-html"></code></pre>
 			</section>
 
 			<section class="gs-present">
@@ -68,26 +50,13 @@
 				</header>
 
 				<div class="rc-grid">
-					<div class="rc-col rc-col-33">
-						<div class="gs-col-demo">
-							33%
-						</div>
-					</div>
-					<div class="rc-col rc-col-33">
-						<div class="gs-col-demo">
-							33%
-						</div>
-					</div>
-					<div class="rc-col rc-col-33">
-						<div class="gs-col-demo">
-							33%
-						</div>
-					</div>
+					@@loop("./02-features/grid/_grid.html", [
+						{ "class": "rc-col--33", "number": "33%" },
+						{ "class": "rc-col--33", "number": "33%" },
+						{ "class": "rc-col--33", "number": "33%" }
+					])
 				</div>
-
-				<pre><code class="gs-code language-html"></code></pre>
 			</section>
-
 
 			<section class="gs-present">
 				<header>
@@ -95,31 +64,14 @@
 				</header>
 
 				<div class="rc-grid">
-					<div class="rc-col rc-col-25">
-						<div class="gs-col-demo">
-							25%
-						</div>
-					</div>
-					<div class="rc-col rc-col-25">
-						<div class="gs-col-demo">
-							25%
-						</div>
-					</div>
-					<div class="rc-col rc-col-25">
-						<div class="gs-col-demo">
-							25%
-						</div>
-					</div>
-					<div class="rc-col rc-col-25">
-						<div class="gs-col-demo">
-							25%
-						</div>
-					</div>
+					@@loop("./02-features/grid/_grid.html", [
+						{ "class": "rc-col--25", "number": "25%" },
+						{ "class": "rc-col--25", "number": "25%" },
+						{ "class": "rc-col--25", "number": "25%" },
+						{ "class": "rc-col--25", "number": "25%" }
+					])
 				</div>
-
-				<pre><code class="gs-code language-html"></code></pre>
 			</section>
-
 
 			<section class="gs-present">
 				<header>
@@ -127,36 +79,55 @@
 				</header>
 
 				<div class="rc-grid">
-					<div class="rc-col rc-col-20">
-						<div class="gs-col-demo">
-							20%
-						</div>
-					</div>
-					<div class="rc-col rc-col-20">
-						<div class="gs-col-demo">
-							20%
-						</div>
-					</div>
-					<div class="rc-col rc-col-20">
-						<div class="gs-col-demo">
-							20%
-						</div>
-					</div>
-					<div class="rc-col rc-col-20">
-						<div class="gs-col-demo">
-							20%
-						</div>
-					</div>
-					<div class="rc-col rc-col-20">
-						<div class="gs-col-demo">
-							20%
-						</div>
-					</div>
+					@@loop("./02-features/grid/_grid.html", [
+						{ "class": "rc-col--20", "number": "20%" },
+						{ "class": "rc-col--20", "number": "20%" },
+						{ "class": "rc-col--20", "number": "20%" },
+						{ "class": "rc-col--20", "number": "20%" },
+						{ "class": "rc-col--20", "number": "20%" }
+					])
 				</div>
-
-				<pre><code class="gs-code language-html"></code></pre>
 			</section>
 
+			<h2 class="gs-stage__content__head-tag rc-head--subheadline">Variations</h2>
+			<p>Grid column layouts can be mixed to suit your content as long as the sum of the fractional value is 1.</p>
+
+			<section class="gs-present">
+				<div class="rc-grid">
+					@@loop("./02-features/grid/_grid.html", [
+						{ "class": "rc-col--50", "number": "50%" },
+						{ "class": "rc-col--25", "number": "25%" },
+						{ "class": "rc-col--25", "number": "25%" }
+					])
+				</div>
+			</section>
+
+			<section class="gs-present">
+				<div class="rc-grid">
+					@@loop("./02-features/grid/_grid.html", [
+						{ "class": "rc-col--33", "number": "33%" },
+						{ "class": "rc-col--66", "number": "66%" }
+					])
+				</div>
+			</section>
+
+			<section class="gs-present">
+				<div class="rc-grid">
+					@@loop("./02-features/grid/_grid.html", [
+						{ "class": "rc-col--25", "number": "25%" },
+						{ "class": "rc-col--75", "number": "75%" }
+					])
+				</div>
+			</section>
+
+			<section class="gs-present">
+				<div class="rc-grid">
+					@@loop("./02-features/grid/_grid.html", [
+						{ "class": "rc-col--20", "number": "20%" },
+						{ "class": "rc-col--80", "number": "80%" }
+					])
+				</div>
+			</section>
 
 		</div>
 

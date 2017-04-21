@@ -1,37 +1,42 @@
 .rc-grid {
 	@include container( 1440px );
 
-
 	.rc-col {
-		// margin-bottom: .75em;
 		margin-bottom: gutter( 11 );
 	}
 
 
 	@media ( min-width: 600px ) {
-		.rc-col-25,
-		.rc-col-50 {
-			@include gallery( 6 of 12 );
+		.rc-col--33 {
+			@include span( 4 of 12 split );
+		}
+
+		.rc-col--66 {
+			@include span( 8 of 12 split );
 		}
 	}
 
 
-	@media ( min-width: 720px ) {
-		.rc-col-33 {
-			@include gallery( 4 of 12 );
-		}
-	}
-
-
-	@media ( min-width: 960px ) {
-		.rc-col-25 {
-			@include gallery( 3 of 12 );
+	@media ( min-width: 800px ) {
+		.rc-col--25 {
+			@include span( 3 of 12 split );
 		}
 
-		.rc-col-20 {
-			@include gallery( 2.4 of 12 );
+		.rc-col--50 {
+			@include span( 6 of 12 split );
 		}
 
+		.rc-col--75 {
+			@include span( 9 of 12 split );
+		}
+
+		.rc-col--20 {
+			@include span( 2.4 of 12 split );
+		}
+
+		.rc-col--80 {
+			@include span( 9.6 of 12 split );
+		}
 	}
 
 }
