@@ -1,125 +1,73 @@
 .rc-progress {
   position: relative;
 
-  .rc-progress__markers {
-    overflow: auto;
-    padding-bottom: 1em;
-  }
-
-  .rc-progress__markers__marker {
-    position: relative;
-    background-color: darken( $rc-functional, 40% );
-    color: #FFFFFF;
-    display: inline-block;
-    font-size: 1em;
-    padding: .5em;
-    min-width: 3em;
-    text-align: center;
-
-    &:after {
-      content: '';
-      position: absolute;
-      top: 100%;
-      width: 0;
-      height: 0;
-      border-left: .5em solid transparent;
-      border-right: .5em solid transparent;
-      border-top: .5em solid darken( $rc-functional, 40% );
-    }
-  }
-
-  .rc-progress__markers__marker--start {
-    float: left;
-
-    &:after {
-      left: 0;
-    }
-  }
-
-  .rc-progress__markers__marker--end {
-    float: right;
-
-    &:after {
-      right: 0;
-    }
-  }
-
   .rc-progress__value {
     position: absolute;
-    bottom: 0;
-    // left: 95%;
+    top: 0;
     margin-left: -3em;
     color: #FFFFFF;
-    width: 3em;
-    font-size: 1em;
-    padding: .5em 0;
+    padding: .75em .5em;
     line-height: 1;
-    text-align: center;
   }
 
   .rc-progress__value--outside {
-    color: $rc-red;
+    color: $rc-success;
     margin-left: 0;
   }
 
-  // Progress Element and Fallback
-  progress[value] {
-    position: relative;
-    height: 2em;
-  }
-
-  progress[value]::-webkit-progress-bar {
-    background-color: #FFFFFF;
-  }
-
-  progress[value]::-webkit-progress-value {
-    background-color: $rc-red;
-    // @todo make this into a helper class and add class on progress page.
-    text-indent: 100%;
-    white-space: nowrap;
+  .rc-progress__progressElem {
+    border-radius: 50px;
     overflow: hidden;
   }
 
-  progress[value]::-moz-progress-bar{
-    background-color: $rc-red;
-  }
-
-  // Progress Element
   progress[value] {
+    position: relative;
+    height: 2.5em;
     appearance: none;
     width: 100%;
     display: block;
     border: none;
+    transition: width .2s ease-in-out;
   }
 
-
-  // @todo make this into a variable
-  @media ( min-width: 640px ){
-    margin-left: 2em;
-    margin-right: 2em;
-
-    .rc-progress__markers {
-      margin-left: -2em;
-      margin-right: -2em;
-    }
-
-    .rc-progress__markers__marker--start, .rc-progress__markers__marker--end {
-      &:after {
-        left: 50%;
-        right: auto;
-        margin-left: -.5em;
-      }
-    }
+  progress[value]::-webkit-progress-bar {
+    background-color: #FFFFFF;
+    border-radius: 50px;
+    overflow: hidden;
+    transition: width .2s ease-in-out;
   }
 
+  progress[value]::-moz-progress-bar {
+    background-color: $rc-success;
+    border-radius: 50px;
+    overflow: hidden;
+    transition: width .4s ease-in-out;
+  }
 
+  progress::-ms-fill {
+    border: none;
+    background-color: $rc-success;
+    border-radius: 50px;
+    overflow: hidden;
+    transition: width .4s ease-in-out;
+  }
+
+  progress[value]::-webkit-progress-value {
+    background-color: $rc-success;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    transition: width .4s ease-in-out;
+  }
 
   // Fallback Styles
   // These don't seem to be applied when comma separated with progress element selectors
   .no-progressbar & {
     .rc-progress--fallback {
       position: relative;
-      height: 2em;
+      height: 2.5em;
     }
 
     .rc-progress--fallback__value, .rc-progress--fallback__bar {
@@ -135,13 +83,10 @@
     }
 
     .rc-progress--fallback__value {
-      background-color: $rc-red;
-      // @todo make this into a helper class and add class on progress page.
+      background-color: $rc-success;
       text-indent: 100%;
       white-space: nowrap;
       overflow: hidden;
     }
   }
-
-
 }
