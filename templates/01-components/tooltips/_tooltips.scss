@@ -3,14 +3,10 @@
 	left: -110%;
 	z-index: 1000;
 	display: inline-block;
-	background-color: #FFFFFF;
+	background-color: $rc-white;
 	width: auto;
 	max-width: 80%;
 	box-shadow: 0 .5em 1em rgba( 0, 0, 0, .1 );
-
-	header {
-		margin-bottom: .5em;
-	}
 
 	p {
 		margin: 0;
@@ -21,7 +17,7 @@
 	}
 
 	.rc-tooltip__pad {
-		padding: .5em 1em;
+		padding: 1em;
 	}
 
 	.rc-tooltip__icon {
@@ -34,7 +30,12 @@
 			height: 2em;
 			margin-top: .25em;
 			margin-right: 1em;
+			margin-bottom: .5em
 		}
+	}
+
+	.rc-tooltip__title {
+		margin: 0;
 	}
 
 	.rc-tooltip__arrow {
@@ -45,13 +46,13 @@
 		height: 0;
 		border-left: .5rem solid transparent;
 		border-right: .5rem solid transparent;
-		border-top: .5rem solid #FFFFFF;
+		border-top: .5rem solid $rc-white;
 	}
 
 	.rc-tooltip__arrow--top {
 		top: 0;
 		border-top: none;
-		border-bottom: .5rem solid #FFFFFF;
+		border-bottom: .5rem solid $rc-white;
 		margin-top: -.5rem;
 	}
 
