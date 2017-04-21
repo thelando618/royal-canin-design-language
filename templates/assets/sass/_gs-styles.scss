@@ -365,18 +365,10 @@ pre.language-scss {
 	padding: 0;
 	overflow: hidden;
 
-	// @todo - replace with Susy grid?
 	li {
 		display: block;
-		width: 50%;
-		float: left;
 		margin-bottom: 2em;
 		color: #58585B;
-
-		// @todo - replace with Susy grid?
-		&:nth-child( 2n+1 ) {
-			clear: left;
-		}
 	}
 
 	.gs-colour-list__block, .gs-colour-list__info {
@@ -400,27 +392,6 @@ pre.language-scss {
 
 		span {
 			display: block;
-		}
-	}
-
-	@media ( min-width: 640px ) {
-		// @todo - replace with Susy grid?
-		li {
-			clear: none !important;
-			width: 25%;
-		}
-	}
-}
-
-.gs-colour-list--nonprimary {
-	@media ( min-width: 960px ) {
-		li {
-			width: 16.66%;
-
-			// @todo - replace with Susy grid?
-			&:nth-child( 4n+1 ) {
-				clear: left;
-			}
 		}
 	}
 }
