@@ -1,15 +1,230 @@
+// FOR TESTING
+.rc-carousel {
+	background-color: lightblue;
+}
+
+.hero__fg {
+	background-color: gold;
+}
+
+
+$hero-bp-small: 600px;
+$hero-bp-medium: 768px;
+$hero-bp-large: 1000px;
+
+.hero {
+	position: relative;
+
+	.hero__bg {
+		background: center/cover no-repeat;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: 0;
+		z-index: 1;
+	}
+
+	.hero__fg {
+		@include container( 1200px );
+		position: relative;
+		z-index: 5;
+		overflow: hidden;
+		text-align: center;
+		padding: 0 3.5em;
+	}
+
+	.hero__title {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		color: $rc-red;
+	}
+
+	.hero__description {
+		color: $rc-medium-grey;
+	}
+
+	.button {
+		margin-top: .5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	img {
+		margin: 0 auto;
+	}
+
+	@media( min-width: $hero-bp-medium ) {
+		.hero__fg {
+			padding: 0 4em;
+		}
+
+		.button {
+			font-size: 1.125em;
+		}
+	}
+
+	@media( min-width: $hero-bp-large ) {
+		.button {
+			font-size: 1.375em;
+			padding: .75rem 2rem;
+		}
+	}
+}
+
+.hero__layout--1 {
+	.hero__description {
+		display: none;
+	}
+
+	@media( min-width: $hero-bp-medium ) {
+		.hero__fg {
+			text-align: left;
+			display: flex;
+			flex-direction: row-reverse;
+			align-items: center;
+		}
+
+		.hero__title, .hero__description {
+			max-width: 90%;
+		}
+
+		.hero__section {
+			flex: 0 0 50%;
+		}
+
+		.hero__description {
+			display: block;
+		}
+
+		.no-flexbox & {
+			.hero__fg {
+				display: table;
+				width: 100%;
+			}
+
+			.hero__section {
+				position: relative;
+				display: table-cell;
+				vertical-align: middle;
+				width: 50%;
+
+				&:nth-of-type( 1 ){
+					left: 50%;
+				}
+
+				&:nth-of-type( 2 ){
+					left: -50%;
+				}
+			}
+		}
+	}
+}
+
+.hero__layout--2 {	
+	.hero__fg {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.hero__section--img {
+		flex: 0 0 45%;
+	}
+
+	.hero__section--text {
+		flex: 0 0 100%;
+	}
+
+	.no-flexbox & {
+		.hero__section--img {
+			display: inline-block;
+			vertical-align: middle;
+			max-width: 45%;
+
+			&:nth-of-type( 1 ) {
+				margin-right: 4%;
+			}
+
+			&:nth-of-type( 2 ) {
+				margin-left: 4%;
+			}
+		}
+	}
+
+	@media( min-width: $hero-bp-medium ) {
+		.hero__fg {
+			align-items: flex-end;
+		}
+
+		.hero__section--img {
+			flex: 0 0 30%;
+
+			&:nth-of-type( 1 ) {
+				order: 1;
+			}
+
+			&:nth-of-type( 2 ) {
+				order: 3;
+			}
+		}
+
+		.hero__section--text {
+			order: 2;
+			flex: 0 0 40%;
+			align-self: center;
+			padding: 0 1em;
+		}
+
+		.no-flexbox & {
+			.hero__fg {
+				display: table;
+				width: 100%;
+			}
+
+			.hero__section {
+				position: relative;
+				display: table-cell;
+				vertical-align: bottom;
+			}
+
+			.hero__section--img {
+				width: 30%;
+
+				&:nth-of-type( 1 ), &:nth-of-type( 2 ) {
+					margin: 0;
+				}
+
+				 &:nth-of-type( 2 ) {
+				 	left: 40%;
+				 }
+			}
+
+			.hero__section--text {
+				vertical-align: middle;
+				width: 40%;
+				left: -30%;
+			}
+		}
+	}
+}
+
+.hero__layout--3 {
+	.hero__section--text {
+		max-width: 600px;
+		margin: 0 auto;
+	}
+}
+
+
+
+
 /* Slick - Core */
 .slick-slider {
   position: relative;
   display: block;
-  box-sizing: border-box;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
-  -ms-touch-action: pan-y;
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
 }
@@ -33,10 +248,6 @@
 
 .slick-slider .slick-track,
 .slick-slider .slick-list {
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
@@ -99,16 +310,13 @@
   }
 }
 
-
-
-
 /* Slick - Custom */
 .rc-carousel {
 	.interactive--navigation {
 	  position: absolute;
-	  top: 50%;
+	  top: 25%;
 	  transform: translateY( -50% );
-	  z-index: 200;
+	  z-index: 20;
 
 	  &.interactive--navigation--prev {
 	    left: 0;
@@ -119,9 +327,6 @@
 	}
 
 	.rc-carousel__dots {
-		position: absolute;
-		bottom: 0;
-	  width: 100%;
 	  text-align: center;
 	  margin: 0;
 	  padding: 1em 0;
@@ -139,161 +344,10 @@
 			}
 		}
 	}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-$hero-bp-small: 600px;
-$hero-bp-medium: 800px;
-$hero-bp-large: 1000px;
-
-/**
- * Takes in a value and adjusts is based on a modifier class
- * @param  {string} $amount The amount of padding to use
- */
-@mixin position_hero_fg( $amount ) {
-	&.hero__fg--top {
-		padding-top: $amount * 0.5;
-		padding-bottom: $amount * 1.5;
-	}
-
-	&.hero__fg--middle {
-		padding-top: $amount;
-		padding-bottom: $amount;
-	}
-
-	&.hero__fg--bottom {
-		padding-top: $amount * 1.5;
-		padding-bottom: $amount * 0.5;
-	}
-}
-
-.hero {
-	position: relative;
-	display: block;
-	line-height: normal;
-
-	.hero__bg {
-		background: center/cover no-repeat;
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		margin: 0;
-		z-index: 10;
-	}
-
-	.hero__fg {
-		@include container( 1200px );
-		position: relative;
-		z-index: 20;
-		padding-top: 2em;
-		padding-right: 2em;
-		padding-bottom: 2em;
-		padding-left: 2em;
-		color: $rc-white;
-	}
-
-	.hero__fg--dark {
-		color: $rc-medium-grey;
-	}
-
-	h1 {
-		font-size: 2em;
-		margin-top: 0;
-	}
-
-	p {
-		font-size: 1em;
-	}
-
-	.button {
-		margin-right: 1em;
-		margin-bottom: 1em;
-	}
-
-	@media ( min-width: $hero-bp-small ) {
-		.hero__fg {
-			padding-right: 2.5em;
-			padding-left: 2.5em;
-		}
-
-		h1 {
-			font-size: 3em;
-		}
-
-		p {
-			font-size: 1.25em;
-		}
-	}
 
 	@media ( min-width: $hero-bp-medium ) {
-		h1 {
-			font-size: 4em;
+		.interactive--navigation {
+			top: 50%;
 		}
-
-		p {
-			font-size: 1.5em;
-		}
-	}
-
-	@media ( min-width: $hero-bp-large ) {
-		.hero__fg {
-			padding-right: 3em;
-			padding-left: 3em;
-		}
-	}
-}
-
-.hero__fg{
-	&.hero__fg--left {
-		text-align: left;
-
-		.button {
-			margin-right: 1em;
-		}
-	}
-
-	&.hero__fg--center {
-		text-align: center;
-
-		.button {
-			margin-left: .5em;
-			margin-right: .5em;
-		}
-	}
-
-	&.hero__fg--right {
-		text-align: right;
-
-		.button {
-			margin-left: 1em;
-			margin-right: 0;
-		}
-	}
-
-	// Vertical positioning
-	@include position_hero_fg( 2em );
-
-	@media ( min-width: $hero-bp-small ) {
-		@include position_hero_fg( 4em );
-	}
-
-	@media ( min-width: $hero-bp-medium ) {
-		@include position_hero_fg( 6em );
-	}
-
-	@media ( min-width: $hero-bp-large ) {
-		@include position_hero_fg( 8em );
 	}
 }
