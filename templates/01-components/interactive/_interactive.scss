@@ -8,6 +8,7 @@
 	border-radius: 100%;
 	overflow: hidden;
 	transition: background-color .2s ease-in-out, border .2s ease-in-out;
+	color: transparent;
 
 	&:hover, &:focus {
 		border-color: $rc-red;
