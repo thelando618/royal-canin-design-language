@@ -4,16 +4,37 @@ $hero-bp-large: 1000px;
 
 .hero {
 	position: relative;
+	position: relative;
+	display: block;
+	line-height: normal;
+	overflow: hidden;
 
 	.hero__bg {
 		background: center/cover no-repeat;
 		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		margin: 0;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%,-50%);
+		object-fit: cover;
+  	min-width: 100%;
+    height: 100%;
+
+	  .no-objectfit & {
+		  min-height: 100%;
+		  width: auto;
+		  height: auto;
+	  }
+	}
+
+	figure.hero__bg {
 		z-index: 1;
+	}
+
+	video.hero__bg {
+		z-index: 2;
+	  .touchevents & {
+			display: none;
+		}
 	}
 
 	.hero__fg {
