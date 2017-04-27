@@ -29,7 +29,7 @@ $(function () {
   }
 
   // Carousel Caches
-  var $slick_hero = $( '.rc-carousel' );
+  var $slick_hero = $( '.rc-carousel--hero' );
 
   // Carousel Inits
   $slick_hero.slick( carousel_default );
