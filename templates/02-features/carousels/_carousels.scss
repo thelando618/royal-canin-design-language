@@ -4,6 +4,7 @@ $hero-bp-large: 1000px;
 
 .hero {
 	position: relative;
+	overflow: hidden;
 
 	.hero__bg {
 		background: center/cover no-repeat;
