@@ -569,50 +569,65 @@ $(function () {
 
 /**
  *
- * File image-galleries.js.
+ * File maps.js.
  *
  */
 
-$(function () {
 
-  // Carousel Settings
-  var carousel_next_arrow = '<a href="#" class="interactive--navigation interactive--navigation--next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.5 64" aria-labelledby="svg-arrow-right" role="img"><title id="svg-arrow-right" lang="en">arrow-right</title><path d="M34.5 34.5L6 63c-.7.7-1.6 1-2.5 1s-1.8-.3-2.5-1c-1.4-1.4-1.4-3.6 0-5l26-26L1 6C-.4 4.6-.4 2.4 1 1S4.6-.4 6 1l28.5 28.5c1.4 1.4 1.4 3.6 0 5z"></path></svg><span class="screen-reader-text">Next Slide</span></a>',
-      carousel_prev_arrow = '<a href="#" class="interactive--navigation interactive--navigation--prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.5 64" aria-labelledby="svg-arrow-left" role="img"><title id="svg-arrow-left" lang="en">arrow-left</title><path d="M1 29.5L29.5 1c1.4-1.4 3.6-1.4 5 0s1.4 3.6 0 5l-26 26 26 26c1.4 1.4 1.4 3.6 0 5-.7.7-1.6 1-2.5 1-.9 0-1.8-.3-2.5-1L1 34.5c-1.3-1.4-1.3-3.6 0-5z"></path></svg><span class="screen-reader-text">Previous Slide</span></a>';
-
-  var carousel_gallery_main = {
-    adaptiveHeight: true,
-    asNavFor: '.rc-carousel--gallery__thumbs',
-    autoplay: true,
-    nextArrow: carousel_next_arrow,
-    prevArrow: carousel_prev_arrow,
-    slidesToShow: 1
+// Locations
+var key_locations = {
+  royal_canin: {
+    lat: 43.700753,
+    lng: 4.187961
+  },
+  first_10: {
+    lat: 53.790639,
+    lng: -1.532333
   }
+}
 
-  var carousel_gallery_thumbs = {
-    adaptiveHeight: true,
-    arrows: false,
-    asNavFor: '.rc-carousel--gallery__main',
-    focusOnSelect: true,
-    mobileFirst: true,
-    nextArrow: carousel_next_arrow,
-    prevArrow: carousel_prev_arrow,
-    slidesToShow: 3,
-    responsive: [
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 5
-        }
-      }
-    ]
-  }
 
-  // Carousel Caches
-  var $slick_gallery = $( '.rc-carousel--gallery__main' );
-  var $slick_thumbs = $( '.rc-carousel--gallery__thumbs' );
+// Map icon
+var icon = {
+  path: 'M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm11.5-25c0 6.4-5.1 11.5-11.5 11.5S20.5 38.4 20.5 32 25.6 20.5 32 20.5 43.5 25.6 43.5 32z',
+  fillColor: '#E2001A',
+  fillOpacity: .6,
+  scale: .5,
+  strokeWeight: 0
+}
 
-  // Carousel Inits
-  $slick_gallery.slick( carousel_gallery_main );
-  $slick_thumbs.slick( carousel_gallery_thumbs );
 
-});
+// Settings
+var settings_map_royal_canin = {
+  center: key_locations.royal_canin,
+  scrollwheel: false,
+  zoom: 17
+}
+
+var settings_map_first_10 = {
+  center: key_locations.first_10,
+  scrollwheel: false,
+  zoom: 18
+}
+
+
+// Maps
+function initMap() {
+  var map_royal_canin = new google.maps.Map( document.getElementById( 'map_royal_canin' ), settings_map_royal_canin );
+  
+  var marker_royal_canin = new google.maps.Marker({
+    icon: icon,
+    position: key_locations.royal_canin,
+    map: map_royal_canin
+  });
+
+  var map_first_10 = new google.maps.Map( document.getElementById( 'map_first_10' ), settings_map_first_10 );
+
+  var marker_first_10 = new google.maps.Marker({
+    icon: icon,
+    position: key_locations.first_10,
+    map: map_first_10
+  });
+}
+
+

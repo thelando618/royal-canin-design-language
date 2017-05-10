@@ -45,20 +45,43 @@
 
 				<blockquote class="gs-stage__content__intro">
 					<h2 class="rc-head rc-head--subheadline">Introduction</h2>
+					<p>Maps rely on the <a href="https://developers.google.com/maps/documentation/javascript/">Google Maps Javascript API</a>.</p>
 				</blockquote>
 			</header>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Google Maps API Key</label>
+					<p>In order to display a map using the Google Maps Javascript API, and API key must be provided.</p>
+					<p><b>Please get in touch with Royal Canin to get access to the official API key.</b></p>
+				</header>
+			</section>
 
 			<section class="gs-present">
 				<header>
 					<label class="gs-present__label">Basic Map</label>
 				</header>
 
-				
+				<div id="map_royal_canin" class="rc-map"></div>
 
 				<br>
 
 				<pre><code class="gs-code language-html">
-					
+					<div id="map_royal_canin" class="rc-map"></div>
+				</code></pre>
+			</section>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Basic Map</label>
+				</header>
+
+				<div id="map_first_10" class="rc-map"></div>
+
+				<br>
+
+				<pre><code class="gs-code language-html">
+					<div id="map_first_10" class="rc-map"></div>
 				</code></pre>
 			</section>
 
@@ -132,6 +155,7 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQ7i7zivBcb6rUxcnB-7yJFlgzbwXnjcw&callback=initMap"></script>
 <script src="/assets/js/prism.js"></script>
 <script src="/assets/js/slick.min.js"></script>
 <script src="/assets/js/styleguide.js"></script>

@@ -12,20 +12,43 @@
 
 				<blockquote class="gs-stage__content__intro">
 					<h2 class="rc-head rc-head--subheadline">Introduction</h2>
+					<p>Maps rely on the <a href="https://developers.google.com/maps/documentation/javascript/">Google Maps Javascript API</a>.</p>
 				</blockquote>
 			</header>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Google Maps API Key</label>
+					<p>In order to display a map using the Google Maps Javascript API, and API key must be provided.</p>
+					<p><b>Please get in touch with Royal Canin to get access to the official API key.</b></p>
+				</header>
+			</section>
 
 			<section class="gs-present">
 				<header>
 					<label class="gs-present__label">Basic Map</label>
 				</header>
 
-				@@include('./02-features/maps/_map.html')
+				<div id="map_royal_canin" class="rc-map"></div>
 
 				<br>
 
 				<pre><code class="gs-code language-html">
-					@@include('./02-features/maps/_map.html')
+					<div id="map_royal_canin" class="rc-map"></div>
+				</code></pre>
+			</section>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Basic Map</label>
+				</header>
+
+				<div id="map_first_10" class="rc-map"></div>
+
+				<br>
+
+				<pre><code class="gs-code language-html">
+					<div id="map_first_10" class="rc-map"></div>
 				</code></pre>
 			</section>
 
