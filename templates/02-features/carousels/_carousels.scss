@@ -329,7 +329,7 @@ $hero-bp-large: 1000px;
 .rc-carousel {
 	.interactive--navigation {
 	  position: absolute;
-	  top: 25%;
+	  top: 50%;
 	  transform: translateY( -50% );
 	  z-index: 20;
 
@@ -359,10 +359,50 @@ $hero-bp-large: 1000px;
 			}
 		}
 	}
+}
+
+.rc-carousel--hero {
+	.interactive--navigation {
+	  top: 25%;
+	}
 
 	@media ( min-width: $hero-bp-medium ) {
 		.interactive--navigation {
 			top: 50%;
+		}
+	}
+}
+
+.rc-carousel--gallery {
+	figure {
+		margin-bottom: 0;
+	}
+
+	.slick-slide {
+		transition: border .3s ease-in-out;
+		cursor: pointer;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&.slider-nav {
+		.slick-slide {
+			padding: .25rem;
+			border: 2px solid transparent;
+		}
+
+		.slick-current {
+			border-color: $rc-red;
+		}
+	}
+
+	@media( min-width: 640px ) {
+		&.slider-nav {
+			.slick-slide {
+				padding: .5rem;
+			}
 		}
 	}
 }
