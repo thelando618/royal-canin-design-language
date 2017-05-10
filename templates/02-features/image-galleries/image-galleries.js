@@ -4,8 +4,6 @@
  *
  */
 
-
-// Move this to Scripts
 $(function () {
 
   // Carousel Settings
@@ -14,31 +12,22 @@ $(function () {
 
   var carousel_gallery_main = {
     adaptiveHeight: true,
-    asNavFor: '.slider-nav',
+    asNavFor: '.rc-carousel--gallery__thumbs',
     autoplay: true,
-    autoplaySpeed: 4000,
-    dots: false,
-    dotsClass: 'rc-carousel__dots list--blank list--align',
     nextArrow: carousel_next_arrow,
     prevArrow: carousel_prev_arrow,
-    speed: 400,
-    slidesToScroll: 1,
     slidesToShow: 1
   }
 
   var carousel_gallery_thumbs = {
     adaptiveHeight: true,
     arrows: false,
-    asNavFor: '.slider-for',
-    autoplay: true,
-    autoplaySpeed: 4000,
-    dots: false,
+    asNavFor: '.rc-carousel--gallery__main',
     focusOnSelect: true,
     mobileFirst: true,
     nextArrow: carousel_next_arrow,
     prevArrow: carousel_prev_arrow,
     slidesToShow: 3,
-    speed: 400,
     responsive: [
       {
         breakpoint: 640,
@@ -50,8 +39,8 @@ $(function () {
   }
 
   // Carousel Caches
-  var $slick_gallery = $( '#gallery-main-1' );
-  var $slick_thumbs = $( '#gallery-thumbs-1' );
+  var $slick_gallery = $( '.rc-carousel--gallery__main' );
+  var $slick_thumbs = $( '.rc-carousel--gallery__thumbs' );
 
   // Carousel Inits
   $slick_gallery.slick( carousel_gallery_main );

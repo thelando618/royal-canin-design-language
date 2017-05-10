@@ -387,7 +387,7 @@ $hero-bp-large: 1000px;
 		}
 	}
 
-	&.slider-nav {
+	&.rc-carousel--gallery__thumbs {
 		.slick-slide {
 			padding: .25rem;
 			border: 2px solid transparent;
@@ -399,7 +399,7 @@ $hero-bp-large: 1000px;
 	}
 
 	@media( min-width: 640px ) {
-		&.slider-nav {
+		&.rc-carousel--gallery__thumbs {
 			.slick-slide {
 				padding: .5rem;
 			}
