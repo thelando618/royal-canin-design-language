@@ -5,7 +5,13 @@
  */
 
 
-// Locations
+
+// 
+// BEGIN - global - do not edit
+// -------------------------------------------------------------------------------------------------------------------------------------------- //
+// 
+
+
 var key_locations = {
   royal_canin: {
     lat: 43.700753,
@@ -14,9 +20,12 @@ var key_locations = {
   first_10: {
     lat: 53.790639,
     lng: -1.532333
+  },
+  first_10_2: {
+    lat: 53.790639,
+    lng: -1.532
   }
 }
-
 
 // Map icon
 var icon = {
@@ -26,6 +35,35 @@ var icon = {
   scale: .5,
   strokeWeight: 0
 }
+
+/**
+ * Create a Google Maps Marker
+ * @param  object   position  The desired position of the Marker
+ * @param  object   map       The Map to apply the Marker to      
+ * @return object             The Marker applied to the Map
+ */
+function create_marker ( position, map ) {
+  if ( typeof map === "undefined" || typeof position === "undefined") {
+    return false;
+  }
+
+  var map_marker = new google.maps.Marker({
+    icon: icon,
+    position: position,
+    map: map
+  });
+
+  // return not strictly needed, as Marker gets applied when new Method is called.
+  return map_marker;
+}
+
+
+// 
+// END - global - do not edit
+// -------------------------------------------------------------------------------------------------------------------------------------------- //
+// 
+
+
 
 
 // Settings
@@ -42,23 +80,26 @@ var settings_map_first_10 = {
 }
 
 
-// Maps
+
+/**
+ * Standard Google Maps init function. Generates Maps.
+ */
 function initMap() {
-  var map_royal_canin = new google.maps.Map( document.getElementById( 'map_royal_canin' ), settings_map_royal_canin );
-  
-  var marker_royal_canin = new google.maps.Marker({
-    icon: icon,
-    position: key_locations.royal_canin,
-    map: map_royal_canin
-  });
 
-  var map_first_10 = new google.maps.Map( document.getElementById( 'map_first_10' ), settings_map_first_10 );
+  var dom_map_royal_canin = document.getElementById( 'map_royal_canin' );
+  var dom_map_first_10 = document.getElementById( 'map_first_10' );
 
-  var marker_first_10 = new google.maps.Marker({
-    icon: icon,
-    position: key_locations.first_10,
-    map: map_first_10
-  });
+  if ( null !== dom_map_royal_canin ) {
+    var map_royal_canin = new google.maps.Map( dom_map_royal_canin, settings_map_royal_canin );
+    create_marker( key_locations.royal_canin, map_royal_canin );
+  }
+
+  if ( null !== dom_map_first_10 ) {
+    var map_first_10 = new google.maps.Map( dom_map_first_10, settings_map_first_10 );
+    create_marker( key_locations.first_10, map_first_10 );
+    create_marker( key_locations.first_10_2, map_first_10 );
+  }
+
 }
 
 
