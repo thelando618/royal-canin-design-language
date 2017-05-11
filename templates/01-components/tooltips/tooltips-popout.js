@@ -6,12 +6,17 @@
 
 
 var tooltip_popout = {
-  init: function(  ) {
+
+  init: function( wrapper ) {
+
+    console.log( wrapper );
 
   },
 
-  positioning: function(  ) {
+  positioning: function( test ) {
     
+    console.log( test );
+
   },
 
   open_tooltip: function(  ) {
@@ -35,4 +40,4 @@ function ready(fn) {
 }
 
 
-ready( tooltip_popout.init( ) );
+ready( tooltip_popout.init( 'rc-tooltip--popout' ) );
