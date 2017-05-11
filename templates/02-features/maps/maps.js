@@ -81,7 +81,31 @@ function create_marker ( position, map ) {
 }
 
 
+function create_infobox ( content, marker, map ) {
+  /**
+   * Exit the function if any of the arguments passed are empty
+   * @return {bool} false
+   */
+  if ( typeof content === 'undefined' || typeof marker === 'undefined' || typeof map === 'undefined' ) {
+    return false;
+  }
 
+  var new_infowindow = new google.maps.InfoWindow({
+    content: content
+  });
+
+  marker.addListener( 'click', function() {    
+    new_infowindow.open( map, marker );
+
+    make_visible = 'rc-map__overlay--visible';
+
+    // Add class
+    if ( new_infowindow.content.classList )
+      new_infowindow.content.classList.add( make_visible );
+    else
+      new_infowindow.content.make_visible += ' ' + make_visible;
+  } );
+}
 
 
 
@@ -104,6 +128,10 @@ var key_locations = {
   first_10: {
     lat: 53.790639,
     lng: -1.532333
+  },
+  first_11: {
+    lat: 53.790639,
+    lng: -1.532
   }
 }
 
@@ -114,22 +142,13 @@ var key_locations = {
 function initMap() {
   // Royal Canin Map + Marker
   var map_royal_canin = create_map( document.getElementById( 'map_royal_canin' ), key_locations.royal_canin, 17 );
-  create_marker( key_locations.royal_canin, map_royal_canin );
+  var marker_royal_canin = create_marker( key_locations.royal_canin, map_royal_canin );
+  var infobox_royal_canin = create_infobox( document.getElementById( 'infobox_royal_canin' ), marker_royal_canin, map_royal_canin );
 
-  // First 10 Map + Marker
+  // First 10 Map + Marker + Infobox
   var map_first_10 = create_map( document.getElementById( 'map_first_10' ), key_locations.first_10, 17 );
-  create_marker( key_locations.first_10, map_first_10 );
-
+  var marker_first_10 = create_marker( key_locations.first_10, map_first_10 );
+  var marker_first_11 = create_marker( key_locations.first_11, map_first_10 );
+  var infobox_first_10 = create_infobox( document.getElementById( 'infobox_first_10' ), marker_first_10, map_first_10 );
+  var infobox_first_11 = create_infobox( document.getElementById( 'infobox_first_11' ), marker_first_11, map_first_10 );
 }
-
-
-
-
-/*
-
-  MORNING!
-  - MAP WITH OVERLAY
- */
-
-
-

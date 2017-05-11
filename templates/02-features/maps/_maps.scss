@@ -1,3 +1,17 @@
 .rc-map {
 	height: 400px;
 }
+
+.rc-map__overlay {
+	overflow: hidden;
+	visibility: hidden;
+	opacity: 0;
+	height: 0;
+	transition: visibility .25s ease-in-out .25s, opacity .25s ease-in-out .25s;
+}
+
+.rc-map__overlay--visible {
+	visibility: visible;
+	opacity: 1;
+	height: auto;
+}
