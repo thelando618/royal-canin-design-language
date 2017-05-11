@@ -46,7 +46,97 @@ function create_map ( selector, center, zoom ) {
   var new_map = new google.maps.Map( selector, {
     center: center,
     scrollwheel: false,
-    zoom: zoom
+    zoom: zoom,
+    // Apple Maps style
+    styles: [
+      {
+        "featureType": "landscape.man_made",
+        "elementType": "all",
+        "stylers": [
+          {
+            "color": "#faf5ed"
+          },
+          {
+            "lightness": "0"
+          },
+          {
+            "gamma": "1"
+          }
+        ]
+      },
+      {
+        "featureType": "poi.park",
+        "elementType": "geometry.fill",
+        "stylers": [
+          {
+            "color": "#bae5a6"
+          }
+        ]
+      },
+      {
+        "featureType": "road",
+        "elementType": "all",
+        "stylers": [
+          {
+            "weight": "1.00"
+          },
+          {
+            "gamma": "1.8"
+          },
+          {
+            "saturation": "0"
+          }
+        ]
+      },
+      {
+        "featureType": "road",
+        "elementType": "geometry.fill",
+        "stylers": [
+          {
+            "hue": "#ffb200"
+          }
+        ]
+      },
+      {
+        "featureType": "road.arterial",
+        "elementType": "geometry.fill",
+        "stylers": [
+          {
+            "lightness": "0"
+          },
+          {
+            "gamma": "1"
+          }
+        ]
+      },
+      {
+        "featureType": "transit.station.airport",
+        "elementType": "all",
+        "stylers": [
+          {
+            "hue": "#b000ff"
+          },
+          {
+            "saturation": "23"
+          },
+          {
+            "lightness": "-4"
+          },
+          {
+            "gamma": "0.80"
+          }
+        ]
+      },
+      {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+          {
+            "color": "#a0daf2"
+          }
+        ]
+      }
+    ]
   } );
 
   return new_map;
@@ -80,7 +170,13 @@ function create_marker ( position, map ) {
   return map_marker;
 }
 
-
+/**
+ * Create a Google Maps Marker
+ * @param  {object} content The content for the InfoWindow
+ * @param  {object} marker  The Marker to attach the InfoWindow to
+ * @param  {object} map     The Map that the Marker is applied to
+ * @return {object}         The InfoWindow applied to the Marker
+ */
 function create_infobox ( content, marker, map ) {
   /**
    * Exit the function if any of the arguments passed are empty
@@ -105,6 +201,8 @@ function create_infobox ( content, marker, map ) {
     else
       new_infowindow.content.make_visible += ' ' + make_visible;
   } );
+
+  return new_infowindow;
 }
 
 
@@ -152,3 +250,4 @@ function initMap() {
   var infobox_first_10 = create_infobox( document.getElementById( 'infobox_first_10' ), marker_first_10, map_first_10 );
   var infobox_first_11 = create_infobox( document.getElementById( 'infobox_first_11' ), marker_first_11, map_first_10 );
 }
+
