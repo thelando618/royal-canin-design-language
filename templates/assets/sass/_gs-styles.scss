@@ -317,7 +317,7 @@
 	Dest: n/a 
 	Note: These rules will likely have to remain in a Gulp Styleguide Sass partial
 */
-pre.language-html, pre.language-markup, pre.language-scss {
+pre.language-html, pre.language-markup, pre.language-scss, pre.language-js {
 	position: relative;
 
 	code {
@@ -342,13 +342,17 @@ pre.language-html, pre.language-markup {
 	}
 }
 
-
 pre.language-scss {
 	&:after {
 		content: '.scss';
 	}
 }
 
+pre.language-js {
+	&:after {
+		content: '.js';
+	}
+}
 
 
 

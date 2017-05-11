@@ -46,15 +46,59 @@
 				<blockquote class="gs-stage__content__intro">
 					<h2 class="rc-head rc-head--subheadline">Introduction</h2>
 					<p>Maps rely on the <a href="https://developers.google.com/maps/documentation/javascript/">Google Maps Javascript API</a>.</p>
+					<p>A suite of JS functions have been created to assist in creating consistent Maps, Markers and InfoWindows. These are displayed in the Javascript code demonstrations.</p>
+					<p>Every map on a page must have a unique ID.</p>
+					<p>Please ensure that every Map, Marker or InfoWindow that is created is stored in a unique variable.</p>
+				</blockquote>
+
+				<blockquote class="gs-stage__content__intro">
+					<h2 class="rc-head rc-head--subheadline">Google Maps API</h2>
+					<p>In order to display a map using the Google Maps Javascript API, and API key must be provided.</p>
+					<p><b>Please get in touch with Royal Canin to get access to the official API key.</b></p>
 				</blockquote>
 			</header>
 
 			<section class="gs-present">
 				<header>
-					<label class="gs-present__label">Google Maps API Key</label>
-					<p>In order to display a map using the Google Maps Javascript API, and API key must be provided.</p>
-					<p><b>Please get in touch with Royal Canin to get access to the official API key.</b></p>
+					<label class="gs-present__label">Javascript Functions</label>
+					<p>All Maps, Markers and InfoWindows should be created using the following functions.</p>
 				</header>
+
+				<p><b>Create a Map</b></p>
+				<ul class="list--align list--blank">
+					<li><code class="gs-code language-js">$selector</code> <em>string</em> - The ID of HTML element where the map should be displayed.</li>
+					<li><code class="gs-code language-js">$center</code> <em>object</em> - The coordinates for the centre of the Map.</li>
+					<li><code class="gs-code language-js">$zoom</code> <em>number</em> - The desired zoom level (Defaults to 17).</li>
+				</ul>
+
+				<pre><code class="gs-code language-js">
+					var map_royal_canin = create_map( document.getElementById( $selector ), $center, $zoom );
+				</code></pre>
+
+				<br>
+
+				<p><b>Create a Marker</b></p>
+				<ul class="list--align list--blank">
+					<li><code class="gs-code language-js">$position</code> <em>object</em> - The coordinates for the position of the Marker.</li>
+					<li><code class="gs-code language-js">$map</code> <em>object</em> - The Map the Marker should be applied to.</li>
+				</ul>
+
+				<pre><code class="gs-code language-js">
+					var marker_royal_canin = create_marker( $position, $map );
+				</code></pre>
+
+				<br>
+
+				<p><b>Create an InfoWindow</b></p>
+				<ul class="list--align list--blank">
+					<li><code class="gs-code language-js">$content</code> <em>object</em> - The DOM element that should be used for the InfoWindow contents.</li>
+					<li><code class="gs-code language-js">$marker</code> <em>object</em> - The Marker the InfoWindow should be applied to.</li>
+					<li><code class="gs-code language-js">$map</code> <em>object</em> - The Map the Marker is a part of.</li>
+				</ul>
+
+				<pre><code class="gs-code language-js">
+					var infobox_first_10 = create_infobox( document.getElementById( 'infobox_first_10' ), marker_first_10, map_first_10 );
+				</code></pre>
 			</section>
 
 			<section class="gs-present">
@@ -69,87 +113,53 @@
 				<pre><code class="gs-code language-html">
 					<div id="map_royal_canin" class="rc-map"></div>
 				</code></pre>
+
+				<pre><code class="gs-code language-js">
+					var map_royal_canin = create_map( document.getElementById( 'map_royal_canin' ), key_locations.royal_canin, 17 );
+				</code></pre>
 			</section>
+
 
 			<section class="gs-present">
 				<header>
-					<label class="gs-present__label">Basic Map</label>
+					<label class="gs-present__label">Basic Map + Marker</label>
+				</header>
+
+				<div id="map_royal_canin--marker" class="rc-map"></div>
+
+				<br>
+
+				<pre><code class="gs-code language-html">
+					<div id="map_royal_canin" class="rc-map"></div>
+				</code></pre>
+			</section>
+
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Basic Map + Marker + Info</label>
+					<p>Infoboxes should use a simplified <a href="/01-components/tooltips/tooltips.html">Tooltip</a> structure, as per the example below.</p>
 				</header>
 
 				<div id="map_first_10" class="rc-map"></div>
 
-
-
-
-
-
-				<div id="infobox_royal_canin" class="rc-map__overlay rc-tooltip">
-					<div class="rc-tooltip__icon">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img">
-							<title id="title">clock</title>
-							<path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm3.6-26.5V14.4c0-1.9-1.6-3.5-3.5-3.5s-3.5 1.6-3.5 3.5v19l13 13c.7.7 1.6 1 2.5 1s1.8-.3 2.5-1c1.4-1.4 1.4-3.6 0-4.9l-11-11z"></path>
-						</svg>
-					</div>
-
-					<h1 class="rc-head--subheadline color--red rc-tooltip__title">Title of the Tooltip</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				</div>
-
-
 				<div id="infobox_first_10" class="rc-map__overlay rc-tooltip">
-					<div class="rc-tabs rc-tabs--side">
-						<ul class="list--blank list--align rc-tabs__triggers">
-							<li><button class="rc-tabs__triggers__trigger" data-tab="rc-tab__1"><span class="button__value">Trigger One</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">clock</title><path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm3.6-26.5V14.4c0-1.9-1.6-3.5-3.5-3.5s-3.5 1.6-3.5 3.5v19l13 13c.7.7 1.6 1 2.5 1s1.8-.3 2.5-1c1.4-1.4 1.4-3.6 0-4.9l-11-11z"></path></svg></button></li>
-							<li><button class="rc-tabs__triggers__trigger" data-tab="rc-tab__2"><span class="button__value">Trigger Two</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">mobile</title><path d="M39.1 0H2.5C1.1 0 0 1.1 0 2.5v59C0 62.9 1.1 64 2.5 64h36.6c1.4 0 2.5-1.1 2.5-2.5v-59c0-1.4-1.1-2.5-2.5-2.5zM21.3 61.5c-1.9.4-3.6-1.3-3.2-3.2.2-1.1 1.1-2 2.2-2.2 1.9-.4 3.6 1.3 3.2 3.2-.2 1.1-1.1 2-2.2 2.2zm14.2-7.6H6.1s-.1 0-.1-.1V6.1s0-.1.1-.1h29.5s.1 0 .1.1l-.2 47.8c.1 0 .1 0 0 0z"></path></svg></button></li>
-							<li><button class="rc-tabs__triggers__trigger" data-tab="rc-tab__3"><span class="button__value">Trigger Three</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">play</title><path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm-2.6-34.1c-.7-.5-1.6 0-1.6.8v16.6c0 .8.9 1.3 1.6.8l11.7-8.3c.6-.4.6-1.2 0-1.6l-11.7-8.3z"></path></svg></button></li>
-							<li><button class="rc-tabs__triggers__trigger" data-tab="rc-tab__4"><span class="button__value">Trigger Four</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">play</title><path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm-2.6-34.1c-.7-.5-1.6 0-1.6.8v16.6c0 .8.9 1.3 1.6.8l11.7-8.3c.6-.4.6-1.2 0-1.6l-11.7-8.3z"></path></svg></button></li>
-							<li><button class="rc-tabs__triggers__trigger" data-tab="rc-tab__5"><span class="button__value">Trigger Five</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">play</title><path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm-2.6-34.1c-.7-.5-1.6 0-1.6.8v16.6c0 .8.9 1.3 1.6.8l11.7-8.3c.6-.4.6-1.2 0-1.6l-11.7-8.3z"></path></svg></button></li>
-						</ul>
-
-						<div class="rc-tabs__content">
-							<div class="rc-tabs__content__single clearfix" id="rc-tab__1">
-								<header><p>Header One</p></header>
-								<p>Some Body Text.</p>
-							</div>
-
-							<div class="rc-tabs__content__single clearfix" id="rc-tab__2">
-								<header><p>Header Two</p></header>
-								<p>Some Body Text.</p>
-							</div>
-
-							<div class="rc-tabs__content__single clearfix" id="rc-tab__3">
-								<header><p>Header Three</p></header>
-								<p>Some Body Text.</p>
-							</div>
-
-							<div class="rc-tabs__content__single clearfix" id="rc-tab__4">
-								<header><p>Header Four</p></header>
-								<p>Some Body Text.</p>
-							</div>
-
-							<div class="rc-tabs__content__single clearfix" id="rc-tab__5">
-								<header><p>Header Five</p></header>
-								<p>Some Body Text.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-
-
-				<div id="infobox_first_11" class="rc-map__overlay">
 					<h1 class="rc-head--subheadline color--red rc-tooltip__title">Title of the Tooltip</h1>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				</div>
-
-
-
 
 				<br>
 
 				<pre><code class="gs-code language-html">
 					<div id="map_first_10" class="rc-map"></div>
+
+					<div id="infobox_first_10" class="rc-map__overlay rc-tooltip">
+						<h1 class="rc-head--subheadline color--red rc-tooltip__title">Title of the Tooltip</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
 				</code></pre>
 			</section>
+
 
 		</div>
 

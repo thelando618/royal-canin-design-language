@@ -224,12 +224,8 @@ var key_locations = {
     lng: 4.187961
   },
   first_10: {
-    lat: 53.790639,
-    lng: -1.532333
-  },
-  first_11: {
-    lat: 53.790639,
-    lng: -1.532
+    lat: 53.790524,
+    lng: -1.532349
   }
 }
 
@@ -238,16 +234,16 @@ var key_locations = {
  * Standard Google Maps init function. Generates Maps.
  */
 function initMap() {
-  // Royal Canin Map + Marker
+  // Royal Canin Map
   var map_royal_canin = create_map( document.getElementById( 'map_royal_canin' ), key_locations.royal_canin, 17 );
-  var marker_royal_canin = create_marker( key_locations.royal_canin, map_royal_canin );
-  var infobox_royal_canin = create_infobox( document.getElementById( 'infobox_royal_canin' ), marker_royal_canin, map_royal_canin );
+  
+  // Royal Canin Map + Marker
+  var map_royal_canin_marker = create_map( document.getElementById( 'map_royal_canin--marker' ), key_locations.royal_canin, 17 );
+  var marker_royal_canin_marker = create_marker( key_locations.royal_canin, map_royal_canin_marker );
 
   // First 10 Map + Marker + Infobox
-  var map_first_10 = create_map( document.getElementById( 'map_first_10' ), key_locations.first_10, 17 );
+  var map_first_10 = create_map( document.getElementById( 'map_first_10' ), key_locations.first_10, 18 );
   var marker_first_10 = create_marker( key_locations.first_10, map_first_10 );
-  var marker_first_11 = create_marker( key_locations.first_11, map_first_10 );
   var infobox_first_10 = create_infobox( document.getElementById( 'infobox_first_10' ), marker_first_10, map_first_10 );
-  var infobox_first_11 = create_infobox( document.getElementById( 'infobox_first_11' ), marker_first_11, map_first_10 );
 }
 
