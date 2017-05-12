@@ -24,12 +24,22 @@ input:required {
 
 	&:disabled {
 		background-color: lighten( $rc-medium-grey, 35% );
+		
+		& + label {
+			opacity: .3;
+		}
 	}
 
 	&.error, &:invalid {
 		color: $rc-red;
 		border: 1px solid $rc-red;
 		background-color: transparentize( $rc-red, .9 );
+
+		& + label {
+			&:after {
+				width: 100%;
+			}
+		}
 	}
 
 	&:required {
