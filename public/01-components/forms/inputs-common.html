@@ -70,32 +70,32 @@
 				</header>
 
 				<div class="rc-input--custom">
-	<input id="id-custom-checkbox" type="checkbox" name="checkbox">
+	<input id="id-custom-checkbox" type="checkbox" name="checkbox" value="input-label">
 	<label for="id-custom-checkbox">Input Label</label>
 </div>
 
 <div class="rc-input--custom">
-	<input id="id-custom-checkbox-2" type="checkbox" name="checkbox" checked>
+	<input id="id-custom-checkbox-2" type="checkbox" name="checkbox" value="input-label" checked>
 	<label for="id-custom-checkbox-2">Input Label</label>
 </div>
 
 <div class="rc-input--custom">
-	<input id="id-custom-checkbox-3" type="checkbox" name="checkbox">
+	<input id="id-custom-checkbox-3" type="checkbox" name="checkbox" value="input-label">
 	<label for="id-custom-checkbox-3">Input Label</label>
 </div>
 
 				<pre><code class="gs-code language-html"><div class="rc-input--custom">
-	<input id="id-custom-checkbox" type="checkbox" name="checkbox">
+	<input id="id-custom-checkbox" type="checkbox" name="checkbox" value="input-label">
 	<label for="id-custom-checkbox">Input Label</label>
 </div>
 
 <div class="rc-input--custom">
-	<input id="id-custom-checkbox-2" type="checkbox" name="checkbox" checked>
+	<input id="id-custom-checkbox-2" type="checkbox" name="checkbox" value="input-label" checked>
 	<label for="id-custom-checkbox-2">Input Label</label>
 </div>
 
 <div class="rc-input--custom">
-	<input id="id-custom-checkbox-3" type="checkbox" name="checkbox">
+	<input id="id-custom-checkbox-3" type="checkbox" name="checkbox" value="input-label">
 	<label for="id-custom-checkbox-3">Input Label</label>
 </div></code></pre>
 			</section>
@@ -117,25 +117,39 @@
 					<label class="gs-present__label">Type - Email</label>
 					<p>The Email Input has access to the <code class="language-scss">:valid</code> and <code class="language-scss">:invalid</code> pseudo-classes.</p>
 					<p>Only the <code class="language-scss">:invalid</code> pseudo-class is used as a visual indicator.</p>
+					<p>&nbsp;</p>
 				</header>
 
-				<label for="id-email">Input Label</label>
-<input id="id-email" type="email" name="email" placeholder="Placeholder...">
+				<span class="rc-input">
+	<input id="id-email" type="email" name="email">	
+	<label for="id-email"><span class="rc-label">Input type - email</span></label>
+</span>
 
-				<pre><code class="gs-code language-html"><label for="id-email">Input Label</label>
-<input id="id-email" type="email" name="email" placeholder="Placeholder..."></code></pre>
+
+				<pre><code class="gs-code language-html"><span class="rc-input">
+	<input id="id-email" type="email" name="email">	
+	<label for="id-email"><span class="rc-label">Input type - email</span></label>
+</span>
+</code></pre>
 			</section>
 
 			<section class="gs-present">
 				<header>
 					<label class="gs-present__label">Type - Number</label>
+					<p>&nbsp;</p>
 				</header>
 
-				<label for="id-number">Input Label</label>
-<input id="id-number" type="number" name="number" placeholder="Placeholder...">
+				<span class="rc-input">
+	<input id="id-number" type="number" name="number">	
+	<label for="id-number"><span class="rc-label">Input type - number</span></label>
+</span>
 
-				<pre><code class="gs-code language-html"><label for="id-number">Input Label</label>
-<input id="id-number" type="number" name="number" placeholder="Placeholder..."></code></pre>
+
+				<pre><code class="gs-code language-html"><span class="rc-input">
+	<input id="id-number" type="number" name="number">	
+	<label for="id-number"><span class="rc-label">Input type - number</span></label>
+</span>
+</code></pre>
 			</section>
 
 			<section class="gs-present">
@@ -145,32 +159,32 @@
 				</header>
 
 				<div class="rc-input--custom">
-	<input id="id-custom-radio" type="radio" name="radio">
+	<input id="id-custom-radio" type="radio" name="radio" value="input-label">
 	<label for="id-custom-radio">Input Label</label>
 </div>
 
 <div class="rc-input--custom">
-	<input id="id-custom-radio-2" type="radio" name="radio" checked>
+	<input id="id-custom-radio-2" type="radio" name="radio" value="input-label" checked>
 	<label for="id-custom-radio-2">Input Label</label>
 </div>
 
 <div class="rc-input--custom">
-	<input id="id-custom-radio-3" type="radio" name="radio">
+	<input id="id-custom-radio-3" type="radio" name="radio" value="input-label">
 	<label for="id-custom-radio-3">Input Label</label>
 </div>
 
 				<pre><code class="gs-code language-html"><div class="rc-input--custom">
-	<input id="id-custom-radio" type="radio" name="radio">
+	<input id="id-custom-radio" type="radio" name="radio" value="input-label">
 	<label for="id-custom-radio">Input Label</label>
 </div>
 
 <div class="rc-input--custom">
-	<input id="id-custom-radio-2" type="radio" name="radio" checked>
+	<input id="id-custom-radio-2" type="radio" name="radio" value="input-label" checked>
 	<label for="id-custom-radio-2">Input Label</label>
 </div>
 
 <div class="rc-input--custom">
-	<input id="id-custom-radio-3" type="radio" name="radio">
+	<input id="id-custom-radio-3" type="radio" name="radio" value="input-label">
 	<label for="id-custom-radio-3">Input Label</label>
 </div></code></pre>
 			</section>
@@ -178,13 +192,20 @@
 			<section class="gs-present">
 				<header>
 					<label class="gs-present__label">Type - Search</label>
+					<p>&nbsp;</p>
 				</header>
 
-				<label for="id-search">Input Label</label>
-<input id="id-search" type="search" name="search" placeholder="Placeholder...">
+				<span class="rc-input">
+	<input id="id-search" type="search" name="search">	
+	<label for="id-search"><span class="rc-label">Input type - search</span></label>
+</span>
 
-				<pre><code class="gs-code language-html"><label for="id-search">Input Label</label>
-<input id="id-search" type="search" name="search" placeholder="Placeholder..."></code></pre>
+
+				<pre><code class="gs-code language-html"><span class="rc-input">
+	<input id="id-search" type="search" name="search">	
+	<label for="id-search"><span class="rc-label">Input type - search</span></label>
+</span>
+</code></pre>
 			</section>
 
 			<section class="gs-present">
@@ -202,37 +223,56 @@
 			<section class="gs-present">
 				<header>
 					<label class="gs-present__label">Type - Text</label>
+					<p>&nbsp;</p>
 				</header>
 
-				<label for="id-text">Input Label</label>
-<input id="id-text" type="text" name="text" placeholder="Placeholder...">
+				<span class="rc-input">
+	<input id="id-text" type="text" name="text">	
+	<label for="id-text"><span class="rc-label">Input type - text</span></label>
+</span>
 
-				<pre><code class="gs-code language-html"><label for="id-text">Input Label</label>
-<input id="id-text" type="text" name="text" placeholder="Placeholder..."></code></pre>
+
+				<pre><code class="gs-code language-html"><span class="rc-input">
+	<input id="id-text" type="text" name="text">	
+	<label for="id-text"><span class="rc-label">Input type - text</span></label>
+</span>
+</code></pre>
 			</section>
 
 			<section class="gs-present">
 				<header>
 					<label class="gs-present__label">Type - Password</label>
+					<p>&nbsp;</p>
 				</header>
 
-				<label for="id-password">Input Label</label>
-<input id="id-password" type="password" name="password" placeholder="Placeholder...">
+				<span class="rc-input">
+	<input id="id-password" type="password" name="password">	
+	<label for="id-password"><span class="rc-label">Input type - password</span></label>
+</span>
 
-				<pre><code class="gs-code language-html"><label for="id-password">Input Label</label>
-<input id="id-password" type="password" name="password" placeholder="Placeholder..."></code></pre>
+
+				<pre><code class="gs-code language-html"><span class="rc-input">
+	<input id="id-password" type="password" name="password">	
+	<label for="id-password"><span class="rc-label">Input type - password</span></label>
+</span>
+</code></pre>
 			</section>
 
 			<section class="gs-present">
 				<header>
 					<label class="gs-present__label">Textarea</label>
+					<p>&nbsp;</p>
 				</header>
 
-				<textarea placeholder="This is a textarea...">
-</textarea>
+				<span class="rc-input">
+	<textarea id="id-textarea"></textarea>
+	<label for="id-textarea"><span class="rc-label">textarea</span></label>
+</span>
 
-				<pre><code class="gs-code language-html"><textarea placeholder="This is a textarea...">
-</textarea></code></pre>
+				<pre><code class="gs-code language-html"><span class="rc-input">
+	<textarea id="id-textarea"></textarea>
+	<label for="id-textarea"><span class="rc-label">textarea</span></label>
+</span></code></pre>
 			</section>
 
 		</div>

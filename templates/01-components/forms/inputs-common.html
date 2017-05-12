@@ -68,6 +68,7 @@
 					<label class="gs-present__label">Type - Email</label>
 					<p>The Email Input has access to the <code class="language-scss">:valid</code> and <code class="language-scss">:invalid</code> pseudo-classes.</p>
 					<p>Only the <code class="language-scss">:invalid</code> pseudo-class is used as a visual indicator.</p>
+					<p>&nbsp;</p>
 				</header>
 
 				@@include('./01-components/forms/_input-standard.html', {
@@ -82,6 +83,7 @@
 			<section class="gs-present">
 				<header>
 					<label class="gs-present__label">Type - Number</label>
+					<p>&nbsp;</p>
 				</header>
 
 				@@include('./01-components/forms/_input-standard.html', {
@@ -111,6 +113,7 @@
 			<section class="gs-present">
 				<header>
 					<label class="gs-present__label">Type - Search</label>
+					<p>&nbsp;</p>
 				</header>
 
 				@@include('./01-components/forms/_input-standard.html', {
@@ -141,6 +144,7 @@
 			<section class="gs-present">
 				<header>
 					<label class="gs-present__label">Type - Text</label>
+					<p>&nbsp;</p>
 				</header>
 
 				@@include('./01-components/forms/_input-standard.html', {
@@ -155,6 +159,7 @@
 			<section class="gs-present">
 				<header>
 					<label class="gs-present__label">Type - Password</label>
+					<p>&nbsp;</p>
 				</header>
 
 				@@include('./01-components/forms/_input-standard.html', {
@@ -169,11 +174,16 @@
 			<section class="gs-present">
 				<header>
 					<label class="gs-present__label">Textarea</label>
+					<p>&nbsp;</p>
 				</header>
 
-				@@include('./01-components/forms/_textarea.html')
+				@@include('./01-components/forms/_textarea.html', {
+					"type": "textarea"
+				})
 
-				<pre><code class="gs-code language-html">@@include('./01-components/forms/_textarea.html')</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_textarea.html', {
+					"type": "textarea"
+				})</code></pre>
 			</section>
 
 		</div>

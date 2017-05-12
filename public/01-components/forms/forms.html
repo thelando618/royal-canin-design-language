@@ -58,8 +58,11 @@
 					<p>Please ensure that the <code class="language-html">for=""</code> attribute is used on labels and that it matches the input ID, for accessibility purposes, for example: </p>
 				</header>
 
-				<pre><code class="gs-code language-html"><label for="id-text">Input Label</label>
-<input id="id-text" type="text" name="text" placeholder="Placeholder..."></code></pre>
+				<pre><code class="gs-code language-html"><span class="rc-input">
+	<input id="id-text" type="text" name="text">	
+	<label for="id-text"><span class="rc-label">Input type - text</span></label>
+</span>
+</code></pre>
 
 				<p>Since the <code class="language-html">for</code> attribute relies on an ID to match up with, ensure that all Input IDs are unique on your page.</p>
 
