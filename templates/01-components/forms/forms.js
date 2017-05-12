@@ -61,6 +61,108 @@ var form_fields = {
   }
 }
 
+var pwd_fields = {
+  timer: 4000,
+  button_text: 'Toggle Password Visiblility',
+
+  /**
+   * Initiate - Runs create_toggle method for each password input found
+   * @param  {object} targets All password inputs found
+   */
+  init: function( targets ) {
+    targets.forEach( function( target ) {
+      pwd_fields.create_toggle( target );
+    } );
+  },
+
+  /**
+   * Create a button to allow password visibility toggling
+   * @param  {object} target The input that the button should be attached to.
+   */
+  create_toggle: function( target ) {
+    var wrap = target.parentNode;
+
+    var classes = {
+      btn: 'rc-input--password__toggle',
+      span: 'screen-reader-text'
+    }
+
+    var btn = document.createElement( 'button' );
+    
+    if ( btn.classList ) {
+      btn.classList.add( classes.btn );
+    } else {
+      btn.fill_class += ' ' + classes.btn;
+    }
+
+    var span = document.createElement( 'span' );
+    
+    span.innerText = this.button_text;
+    
+    if ( span.classList ) {
+      span.classList.add( classes.span );
+    } else {
+      span.fill_class += ' ' + classes.span;
+    }
+
+    btn.appendChild( span );
+    wrap.appendChild( btn );
+
+    this.create_attrs( target );
+  },
+
+
+
+
+
+
+
+
+
+  /**
+   * Creates data attribute and ID to connect toggle button to input field - MIGHT NOT BE NEEDED IF SIBLINGS WORK
+   * @param  {object} target The input that the button should be attached to.
+   * @return {[type]} [description]
+   */
+  create_attrs: function( target ) {
+    console.log( target );
+  },
+
+
+  /**
+   * Handles toggling input type
+   * @param  {object} target The input that the button should be attached to.
+   * @return {[type]} [description]
+   */
+  toggle_type: function( event ) {
+    var field = event.target;    
+
+
+    if ( true === is_text ) {
+      console.log( 'is text' );
+
+    } else {
+      console.log( 'is not text' );
+    }
+  },
+
+
+  /**
+   * Will obscure password if no user interaction after a given period
+   * @param  {object} target The input that the button should be attached to.
+   */
+  timeout: function( target ) {
+
+  }
+
+}
+
+
 var inputs = document.querySelectorAll( '.rc-input' );
 
-ready( form_fields.init( inputs ) );
+var pwds = document.querySelectorAll( 'input[type="password"]' );
+
+ready ( form_fields.init( inputs ) );
+ready ( pwd_fields.init( pwds ) );
+
+
