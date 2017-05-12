@@ -26,35 +26,41 @@
 					<label class="gs-present__label">Tooltip Popout List</label>
 				</header>
 
-				<div class="rc-tooltip--popout">
-					@@include('./01-components/buttons/_button-class.html', {
-						"class": "button--icon-arrow-down rc-tooltip--popout__trigger",
-						"value": "Read Article"
-					})
+				@@include('./01-components/buttons/_button-class-data.html', {
+					"class": "button--icon-arrow-down rc-tooltip--popout__trigger rc-tooltip__trigger",
+					"data-key": "tooltip",
+					"data-value": "rc-tooltip--1",
+					"value": "Read Article"
+				})
 
-					<div class="rc-tooltip--popout__popout rc-tooltip--popout__popout--abs">
-						<ul class="list--align list--blank">
-							<li>
-								@@include('./01-components/buttons/_button-class.html', {
-									"class": "button--tertiary button--icon-search",
-									"value": "Navigation Item"
-								})
-							</li>
-							<li>
-								@@include('./01-components/buttons/_button-class.html', {
-									"class": "button--tertiary button--icon-arrow-right",
-									"value": "Navigation Item"
-								})
-							</li>
-							<li>
-								@@include('./01-components/buttons/_button-class.html', {
-									"class": "button--tertiary button--icon-arrow-right",
-									"value": "Navigation Item"
-								})
-							</li>
-						</ul>
-					</div>
+
+				<div class="rc-tooltip rc-tooltip--popout__popout" id="rc-tooltip--1" data-tooltip-follow="false">
+					<div class="rc-tooltip__arrow"></div>
+
+					<ul class="list--align list--blank">
+						<li>
+							@@include('./01-components/buttons/_button-class.html', {
+								"class": "button--tertiary button--icon-search",
+								"value": "Navigation Item"
+							})
+						</li>
+						<li>
+							@@include('./01-components/buttons/_button-class.html', {
+								"class": "button--tertiary button--icon-arrow-right",
+								"value": "Navigation Item"
+							})
+						</li>
+						<li>
+							@@include('./01-components/buttons/_button-class.html', {
+								"class": "button--tertiary button--icon-arrow-right",
+								"value": "Navigation Item"
+							})
+						</li>
+					</ul>
+
 				</div>
+
+
 			</section>
 
 		</div>

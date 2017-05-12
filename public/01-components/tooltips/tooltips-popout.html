@@ -59,23 +59,27 @@
 					<label class="gs-present__label">Tooltip Popout List</label>
 				</header>
 
-				<div class="rc-tooltip--popout">
-					<button class="button--icon-arrow-down rc-tooltip--popout__trigger">Read Article</button>
+				<button class="button--icon-arrow-down rc-tooltip--popout__trigger rc-tooltip__trigger" data-tooltip="rc-tooltip--1">Read Article</button>
 
-					<div class="rc-tooltip--popout__popout rc-tooltip--popout__popout--abs">
-						<ul class="list--align list--blank">
-							<li>
-								<button class="button--tertiary button--icon-search">Navigation Item</button>
-							</li>
-							<li>
-								<button class="button--tertiary button--icon-arrow-right">Navigation Item</button>
-							</li>
-							<li>
-								<button class="button--tertiary button--icon-arrow-right">Navigation Item</button>
-							</li>
-						</ul>
-					</div>
+
+				<div class="rc-tooltip rc-tooltip--popout__popout" id="rc-tooltip--1" data-tooltip-follow="false">
+					<div class="rc-tooltip__arrow"></div>
+
+					<ul class="list--align list--blank">
+						<li>
+							<button class="button--tertiary button--icon-search">Navigation Item</button>
+						</li>
+						<li>
+							<button class="button--tertiary button--icon-arrow-right">Navigation Item</button>
+						</li>
+						<li>
+							<button class="button--tertiary button--icon-arrow-right">Navigation Item</button>
+						</li>
+					</ul>
+
 				</div>
+
+
 			</section>
 
 		</div>
