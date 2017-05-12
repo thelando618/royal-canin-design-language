@@ -89,6 +89,8 @@ button.rc-tooltip--popout__trigger {
 }
 
 .rc-tooltip--popout__popout {
+	border-radius: 3px;
+
 	ul {
 		margin-top: 0;
 		margin-bottom: 0;
@@ -98,7 +100,27 @@ button.rc-tooltip--popout__trigger {
 		margin-bottom: 0;
 	}
 
+	.list--icon {
+		padding: .625rem 1rem;
+	}
+
+	a {
+		display: inline-block;
+		font-size: .875em;
+		text-decoration: none;
+		color: inherit;
+		line-height: 1;
+		
+
+		&:hover, &:focus {
+			color: $rc-red;
+		}
+	}
+
 	button {
 		border: none;
+		border-radius: 0;
+		width: 100%;
+		text-align: left;
 	}
 }
