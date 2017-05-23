@@ -12,6 +12,10 @@ function ready(fn) {
   }
 }
 
+function hasClass(el, className) {
+  return el.classList ? el.classList.contains(className) : new RegExp('\\b'+ className+'\\b').test(el.className);
+}
+
 var form_fields = {
   init: function( targets ) {
     var that = this;
@@ -66,7 +70,7 @@ var form_fields = {
 
 
 var pwd_fields = {
-  timer: 4000,
+  the_timer: null,
   button_text: 'Toggle Password Visiblility',
   button_class: 'rc-input--password__toggle',
   button_span: 'screen-reader-text',
@@ -128,7 +132,13 @@ var pwd_fields = {
     // Add button to wrapping element
     wrap.appendChild( btn );
     
+    // Toggle field type
     this.toggle_type( btn, wrap );
+
+    // Listen for input blur
+    this.input_blur( input );
+
+    this.input_input( input );
   },
 
 
@@ -143,16 +153,39 @@ var pwd_fields = {
       var btn_id = button.getAttribute( 'id' );
       var input_target = wrap.querySelector( '[data-toggle=' + btn_id + ']' );
 
-      var is_text = input_target.type;
-      console.log( is_text );
+      var className = 'rc-input--filled';
+      
+      if ( true === hasClass( wrap, className ) ) {
+        if ( 'text' === input_target.type ) {
+          input_target.type = 'password';
+        } else {
+          input_target.type = 'text';
 
-      if ( 'text' === is_text ) {
-        input_target.type = 'password';
-      } else {
-        input_target.type = 'text';
+          // Start timer
+          pwd_fields.timeout( input_target, 3000 );
+        }
       }
     } );
   },
+
+
+
+  input_input: function( input ) {    
+    input.addEventListener( 'keydown', function( event ) {
+      clearTimeout( pwd_fields.the_timer );
+    } );
+  },
+
+
+  input_blur: function( input ) {
+    input.addEventListener( 'blur', function( event ) {
+      if ( 'text' === input.type ) {
+        pwd_fields.timeout( input, 1500 );
+      }
+    } );
+  },
+
+
 
 
 
@@ -160,8 +193,12 @@ var pwd_fields = {
    * Will obscure password if no user interaction after a given period
    * @param  {object} target The input that the button should be attached to.
    */
-  timeout: function( target ) {
-
+  timeout: function( input, time ) {
+    if ( 'text' === input.type ) {
+      pwd_fields.the_timer = setTimeout( function( event ) {
+        input.type = 'password';
+      }, time );
+    }
   }
 
 }
