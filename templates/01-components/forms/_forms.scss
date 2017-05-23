@@ -216,6 +216,7 @@ input[type="file"] {
 
 	input {
 		margin-bottom: 0;
+		padding: .75em;
 	}
 
 	label, .rc-label {
@@ -289,6 +290,26 @@ input[type="file"] {
 			opacity: .35;
 		}
 	}
+
+	.no-cssanimations & {
+		input, textarea{
+			width: 100%;
+		}
+
+		input {
+			height: 3.375em;
+		}
+
+		label {
+			&:after {
+				width: 100%;
+			}
+		}
+		.rc-label {
+			transform: translate( 0, -3em );
+			padding-left: 0;
+		}
+	}
 }
 
 
@@ -308,5 +329,5 @@ input[type="file"] {
 }
 
 .rc-input--password__visible {
-	border: 1px solid red;
+
 }
