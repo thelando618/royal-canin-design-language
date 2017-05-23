@@ -52,66 +52,45 @@ function nav_accordion( accordion, trigger ) {
 	var a = document.querySelector( accordion );
 	var ts =	document.querySelectorAll( trigger );
 
+	for ( var i = 0; i < ts.length; i++ ) {
+    (function(i) {
 
-	ts.forEach( function( t ) {
-		t.addEventListener( 'mousedown', function( event ) {
-			event.preventDefault();
+			ts[i].addEventListener( 'mousedown', function( event ) {
+				event.preventDefault();
 
-			if ( t.classList.contains( 'triggered' ) ) {
+				if ( ts[i].classList.contains( 'triggered' ) ) {
 
-				t.classList.remove( 'triggered' );
-				t.parentNode.querySelector('ul').classList.remove( 'visible' );
+					ts[i].classList.remove( 'triggered' );
+					ts[i].parentNode.querySelector('ul').classList.remove( 'visible' );
 
-			} else {
+				} else {
 
-				t.classList.add( 'triggered' );
-				t.parentNode.querySelector('ul').classList.add( 'visible' );
-			}
+					ts[i].classList.add( 'triggered' );
+					ts[i].parentNode.querySelector('ul').classList.add( 'visible' );
+				}
 
-		} );
+			} );
 
-		t.addEventListener( 'focus', function( event ) {
-			event.preventDefault();
+			ts[i].addEventListener( 'focus', function( event ) {
+				event.preventDefault();
 
-			if ( t.classList.contains( 'triggered' ) ) {
+				if ( ts[i].classList.contains( 'triggered' ) ) {
 
-				t.classList.remove( 'triggered' );
-				t.parentNode.querySelector('ul').classList.remove( 'visible' );
+					ts[i].classList.remove( 'triggered' );
+					ts[i].parentNode.querySelector('ul').classList.remove( 'visible' );
 
-			} else {
+				} else {
 
-				t.classList.add( 'triggered' );
-				t.parentNode.querySelector('ul').classList.add( 'visible' );
-			}
+					ts[i].classList.add( 'triggered' );
+					ts[i].parentNode.querySelector('ul').classList.add( 'visible' );
+				}
 
-		} );
+			} );
 
-	});
+		}(i));
+	}
 
 }
-
-
-
-// code_to_text.html
-
-// function htmlEntities(str) {
-// 	return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-// }
-
-// var the_codes = document.querySelectorAll('.gs-code');
-
-// the_codes.forEach( function( code ) {
-
-
-// 	// var test = code.innerHTML.trim();
-
-// 	var html = code.innerHTML.trim();
-// 	html = html.replace(/\s/g, '\n');
-// 	html = html.replace(/\n/g, '\n');
-
-
-// 	code.innerHTML = htmlEntities( html );
-// } );
 
 
 
@@ -138,42 +117,15 @@ function syntax( code_block ) {
 	var the_codes = document.querySelectorAll( code_block );
 
 	// for each of them
-	the_codes.forEach( function( the_code ) {
-		
+	for ( var i = 0; i < the_codes.length; i++ ) {
 		// (backwards)
 		// Remove all tabs in the HTML
 		// Pass that new string to a function that replaces HTML tags with Entities
 		// Set the innerHTML of the instance of the class with this new string.
-		the_code.innerHTML = htmlEntities( the_code.innerHTML.trim() );
-	} );
+		the_codes[i].innerHTML = htmlEntities( the_codes[i].innerHTML.trim() );
+	}
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-// var the_codes = document.querySelectorAll('.gs-code');
-
-// the_codes.forEach( function( the_code ) {
-
-// 	var inside = the_code.innerHTML.replace(/\t/g, '');
-// 	console.log( inside );
-// 	the_code.innerHTML = htmlEntities( inside );
-
-// 	//the_code.innerHTML = the_codes = the_codes.replace(/\t/g, '');
-
-// } );
-
-// the_codes = the_codes.replace(/\t/g, '');
-// console.log( the_codes );
 
 
 

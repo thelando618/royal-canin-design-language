@@ -85,16 +85,9 @@ var pwd_fields = {
    * @param  {object} targets All password inputs found
    */
   init: function( targets ) {
-    // targets.forEach( function( target, i ) {
-    //   pwd_fields.create_toggle( target, i );
-    // } );
-
     for ( var i = 0; i < targets.length; i++ ) {
-      
       pwd_fields.create_toggle( targets[i], i );
-
     }
-
   },
 
   /**
