@@ -180,7 +180,7 @@ var pwd_fields = {
   input_blur: function( input ) {
     input.addEventListener( 'blur', function( event ) {
       if ( 'text' === input.type ) {
-        pwd_fields.timeout( input, 1500 );
+        pwd_fields.timeout( input, 500 );
       }
     } );
   },
