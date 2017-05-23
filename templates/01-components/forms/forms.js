@@ -61,17 +61,23 @@ var form_fields = {
   }
 }
 
+
+
+
+
 var pwd_fields = {
   timer: 4000,
   button_text: 'Toggle Password Visiblility',
+  button_class: 'rc-input--password__toggle',
+  button_span: 'screen-reader-text',
 
   /**
    * Initiate - Runs create_toggle method for each password input found
    * @param  {object} targets All password inputs found
    */
   init: function( targets ) {
-    targets.forEach( function( target ) {
-      pwd_fields.create_toggle( target );
+    targets.forEach( function( target, i ) {
+      pwd_fields.create_toggle( target, i );
     } );
   },
 
@@ -79,54 +85,52 @@ var pwd_fields = {
    * Create a button to allow password visibility toggling
    * @param  {object} target The input that the button should be attached to.
    */
-  create_toggle: function( target ) {
+  create_toggle: function( target, index ) {
+    // The wrapping element
     var wrap = target.parentNode;
 
-    var classes = {
-      btn: 'rc-input--password__toggle',
-      span: 'screen-reader-text'
-    }
+    // Get input from wrap
+    var input = wrap.querySelector( 'input' );
 
+    // Set an attribute on the input
+    input.setAttribute( 'data-toggle', 'pwd-' + index );
+
+
+    // Create button
     var btn = document.createElement( 'button' );
     
+    // Add class to button
     if ( btn.classList ) {
-      btn.classList.add( classes.btn );
+      btn.classList.add( this.button_class );
     } else {
-      btn.fill_class += ' ' + classes.btn;
+      btn.fill_class += ' ' + this.button_class;
     }
 
+    // Set an attribute on the button that matches the input
+    btn.setAttribute( 'id', 'pwd-' + index );
+
+    // Create span for inside button
     var span = document.createElement( 'span' );
     
+    // Add text to span
     span.innerText = this.button_text;
     
+    // Add class to span
     if ( span.classList ) {
-      span.classList.add( classes.span );
+      span.classList.add( this.button_span );
     } else {
-      span.fill_class += ' ' + classes.span;
+      span.fill_class += ' ' + this.button_span;
     }
 
+    // Add span to button
     btn.appendChild( span );
+
+    // Add button to wrapping element
     wrap.appendChild( btn );
-
-    this.create_attrs( target );
+    
+    this.toggle_type( btn, wrap );
   },
 
-
-
-
-
-
-
-
-
-  /**
-   * Creates data attribute and ID to connect toggle button to input field - MIGHT NOT BE NEEDED IF SIBLINGS WORK
-   * @param  {object} target The input that the button should be attached to.
-   * @return {[type]} [description]
-   */
-  create_attrs: function( target ) {
-    console.log( target );
-  },
 
 
   /**
@@ -134,17 +138,22 @@ var pwd_fields = {
    * @param  {object} target The input that the button should be attached to.
    * @return {[type]} [description]
    */
-  toggle_type: function( event ) {
-    var field = event.target;    
+  toggle_type: function( button, wrap ) {
+    button.addEventListener( 'click', function( event ) {
+      var btn_id = button.getAttribute( 'id' );
+      var input_target = wrap.querySelector( '[data-toggle=' + btn_id + ']' );
 
+      var is_text = input_target.type;
+      console.log( is_text );
 
-    if ( true === is_text ) {
-      console.log( 'is text' );
-
-    } else {
-      console.log( 'is not text' );
-    }
+      if ( 'text' === is_text ) {
+        input_target.type = 'password';
+      } else {
+        input_target.type = 'text';
+      }
+    } );
   },
+
 
 
   /**

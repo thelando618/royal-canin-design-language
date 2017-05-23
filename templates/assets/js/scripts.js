@@ -1,344 +1,5 @@
 /**
  *
- * File Tabs.js.
- *
- */
-
-
-// Move this to Scripts
-$(function () {
-
-
-  // Carousel Settings
-  var carousel_next_arrow = '<a href="#" class="interactive--navigation interactive--navigation--next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.5 64" aria-labelledby="svg-arrow-right" role="img"><title id="svg-arrow-right" lang="en">arrow-right</title><path d="M34.5 34.5L6 63c-.7.7-1.6 1-2.5 1s-1.8-.3-2.5-1c-1.4-1.4-1.4-3.6 0-5l26-26L1 6C-.4 4.6-.4 2.4 1 1S4.6-.4 6 1l28.5 28.5c1.4 1.4 1.4 3.6 0 5z"></path></svg><span class="screen-reader-text">Next Slide</span></a>',
-      carousel_prev_arrow = '<a href="#" class="interactive--navigation interactive--navigation--prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.5 64" aria-labelledby="svg-arrow-left" role="img"><title id="svg-arrow-left" lang="en">arrow-left</title><path d="M1 29.5L29.5 1c1.4-1.4 3.6-1.4 5 0s1.4 3.6 0 5l-26 26 26 26c1.4 1.4 1.4 3.6 0 5-.7.7-1.6 1-2.5 1-.9 0-1.8-.3-2.5-1L1 34.5c-1.3-1.4-1.3-3.6 0-5z"></path></svg><span class="screen-reader-text">Previous Slide</span></a>';
-
-  var carousel_default = {
-    adaptiveHeight: true,
-    dots: true,
-    dotsClass: 'rc-carousel__dots list--blank list--align',
-    autoplay: true,
-    autoplaySpeed: 4000,
-    nextArrow: carousel_next_arrow,
-    prevArrow: carousel_prev_arrow,
-    speed: 400,
-    customPaging: function( slider, i ) {
-      var thumb = $( slider.$slides[i] ).data( 'thumb' );
-      return '<a href="#" class="' + thumb + '"><span class="screen-reader-text">' + i + '</span></a>';
-    }
-  }
-
-  // Carousel Caches
-  var $slick_hero = $( '.rc-carousel--hero' );
-
-  // Carousel Inits
-  $slick_hero.slick( carousel_default );
-
-
-});
-
-/**
- *
- * File image-galleries.js.
- *
- */
-
-$(function () {
-
-  // Carousel Settings
-  var carousel_next_arrow = '<a href="#" class="interactive--navigation interactive--navigation--next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.5 64" aria-labelledby="svg-arrow-right" role="img"><title id="svg-arrow-right" lang="en">arrow-right</title><path d="M34.5 34.5L6 63c-.7.7-1.6 1-2.5 1s-1.8-.3-2.5-1c-1.4-1.4-1.4-3.6 0-5l26-26L1 6C-.4 4.6-.4 2.4 1 1S4.6-.4 6 1l28.5 28.5c1.4 1.4 1.4 3.6 0 5z"></path></svg><span class="screen-reader-text">Next Slide</span></a>',
-      carousel_prev_arrow = '<a href="#" class="interactive--navigation interactive--navigation--prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.5 64" aria-labelledby="svg-arrow-left" role="img"><title id="svg-arrow-left" lang="en">arrow-left</title><path d="M1 29.5L29.5 1c1.4-1.4 3.6-1.4 5 0s1.4 3.6 0 5l-26 26 26 26c1.4 1.4 1.4 3.6 0 5-.7.7-1.6 1-2.5 1-.9 0-1.8-.3-2.5-1L1 34.5c-1.3-1.4-1.3-3.6 0-5z"></path></svg><span class="screen-reader-text">Previous Slide</span></a>';
-
-  var carousel_gallery_main = {
-    adaptiveHeight: true,
-    asNavFor: '.rc-carousel--gallery__thumbs',
-    autoplay: true,
-    nextArrow: carousel_next_arrow,
-    prevArrow: carousel_prev_arrow,
-    slidesToShow: 1
-  }
-
-  var carousel_gallery_thumbs = {
-    adaptiveHeight: true,
-    arrows: false,
-    asNavFor: '.rc-carousel--gallery__main',
-    focusOnSelect: true,
-    mobileFirst: true,
-    nextArrow: carousel_next_arrow,
-    prevArrow: carousel_prev_arrow,
-    slidesToShow: 3,
-    responsive: [
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 5
-        }
-      }
-    ]
-  }
-
-  // Carousel Caches
-  var $slick_gallery = $( '.rc-carousel--gallery__main' );
-  var $slick_thumbs = $( '.rc-carousel--gallery__thumbs' );
-
-  // Carousel Inits
-  $slick_gallery.slick( carousel_gallery_main );
-  $slick_thumbs.slick( carousel_gallery_thumbs );
-
-});
-
-/**
- *
- * File maps.js.
- *
- */
-
-
-/**
- * Custom Map icon SVG settings
- * @type {object}
- */
-var icon = {
-  path: 'M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm11.5-25c0 6.4-5.1 11.5-11.5 11.5S20.5 38.4 20.5 32 25.6 20.5 32 20.5 43.5 25.6 43.5 32z',
-  fillColor: '#E2001A',
-  fillOpacity: .6,
-  scale: .5,
-  strokeWeight: 0
-}
-
-/**
- * Creates a Google Map
- * @param  {object} selector The DOM ID to set up the Map in
- * @param  {object} center   The desired center of the Map
- * @param  {number} zoom     The zoom level of the Map
- * @return {object}          The Map
- */
-function create_map ( selector, center, zoom ) {
-  /**
-   * Sets default number for zoom
-   * @type {number}
-   */
-  var zoom = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 17;
-
-  /**
-   * Exit the function if any of the arguments passed are empty
-   * @return {bool} false
-   */
-  if ( null === selector || typeof center === 'undefined' || typeof zoom === 'undefined' ) {
-    return false;
-  }
-
-  /**
-   * Creates the new map with arguments passed and some defaults
-   * @type {google}
-   */
-  var new_map = new google.maps.Map( selector, {
-    center: center,
-    scrollwheel: false,
-    zoom: zoom,
-    // Apple Maps style
-    styles: [
-      {
-        "featureType": "landscape.man_made",
-        "elementType": "all",
-        "stylers": [
-          {
-            "color": "#faf5ed"
-          },
-          {
-            "lightness": "0"
-          },
-          {
-            "gamma": "1"
-          }
-        ]
-      },
-      {
-        "featureType": "poi.park",
-        "elementType": "geometry.fill",
-        "stylers": [
-          {
-            "color": "#bae5a6"
-          }
-        ]
-      },
-      {
-        "featureType": "road",
-        "elementType": "all",
-        "stylers": [
-          {
-            "weight": "1.00"
-          },
-          {
-            "gamma": "1.8"
-          },
-          {
-            "saturation": "0"
-          }
-        ]
-      },
-      {
-        "featureType": "road",
-        "elementType": "geometry.fill",
-        "stylers": [
-          {
-            "hue": "#ffb200"
-          }
-        ]
-      },
-      {
-        "featureType": "road.arterial",
-        "elementType": "geometry.fill",
-        "stylers": [
-          {
-            "lightness": "0"
-          },
-          {
-            "gamma": "1"
-          }
-        ]
-      },
-      {
-        "featureType": "transit.station.airport",
-        "elementType": "all",
-        "stylers": [
-          {
-            "hue": "#b000ff"
-          },
-          {
-            "saturation": "23"
-          },
-          {
-            "lightness": "-4"
-          },
-          {
-            "gamma": "0.80"
-          }
-        ]
-      },
-      {
-        "featureType": "water",
-        "elementType": "all",
-        "stylers": [
-          {
-            "color": "#a0daf2"
-          }
-        ]
-      }
-    ]
-  } );
-
-  return new_map;
-}
-
-/**
- * Create a Google Maps Marker
- * @param  {object}   position  The desired position of the Marker
- * @param  {object}   map       The Map to apply the Marker to      
- * @return {object}             The Marker applied to the Map
- */
-function create_marker ( position, map ) {
-  /**
-   * Exit the function if any of the arguments passed are empty
-   * @return {bool} false
-   */
-  if ( typeof position === 'undefined' || typeof map === 'undefined', false === map ) {
-    return false;
-  }
-
-  /**
-   * Creates the new map marker with arguments passed
-   * @type {google}
-   */
-  var map_marker = new google.maps.Marker({
-    icon: icon,
-    position: position,
-    map: map
-  });
-
-  return map_marker;
-}
-
-/**
- * Create a Google Maps Marker
- * @param  {object} content The content for the InfoWindow
- * @param  {object} marker  The Marker to attach the InfoWindow to
- * @param  {object} map     The Map that the Marker is applied to
- * @return {object}         The InfoWindow applied to the Marker
- */
-function create_infobox ( content, marker, map ) {
-  /**
-   * Exit the function if any of the arguments passed are empty
-   * @return {bool} false
-   */
-  if ( typeof content === 'undefined' || typeof marker === 'undefined' || typeof map === 'undefined' ) {
-    return false;
-  }
-
-  var new_infowindow = new google.maps.InfoWindow({
-    content: content
-  });
-
-  marker.addListener( 'click', function() {    
-    new_infowindow.open( map, marker );
-
-    make_visible = 'rc-map__overlay--visible';
-
-    // Add class
-    if ( new_infowindow.content.classList )
-      new_infowindow.content.classList.add( make_visible );
-    else
-      new_infowindow.content.make_visible += ' ' + make_visible;
-  } );
-
-  return new_infowindow;
-}
-
-
-
-
-
-// 
-// Following would live in custom scripts file
-// -------------------------------------------------------------------------------------------------------------------------------------------- //
-// 
-
-/**
- * Object containing lat/lng of key locations
- * @type {object}
- */
-var key_locations = {
-  royal_canin: {
-    lat: 43.700753,
-    lng: 4.187961
-  },
-  first_10: {
-    lat: 53.790524,
-    lng: -1.532349
-  }
-}
-
-
-/**
- * Standard Google Maps init function. Generates Maps.
- */
-function initMap() {
-  // Royal Canin Map
-  var map_royal_canin = create_map( document.getElementById( 'map_royal_canin' ), key_locations.royal_canin, 17 );
-  
-  // Royal Canin Map + Marker
-  var map_royal_canin_marker = create_map( document.getElementById( 'map_royal_canin--marker' ), key_locations.royal_canin, 17 );
-  var marker_royal_canin_marker = create_marker( key_locations.royal_canin, map_royal_canin_marker );
-
-  // First 10 Map + Marker + Infobox
-  var map_first_10 = create_map( document.getElementById( 'map_first_10' ), key_locations.first_10, 18 );
-  var marker_first_10 = create_marker( key_locations.first_10, map_first_10 );
-  var infobox_first_10 = create_infobox( document.getElementById( 'infobox_first_10' ), marker_first_10, map_first_10 );
-}
-
-
-/**
- *
  * File forms.js.
  *
  */
@@ -400,17 +61,23 @@ var form_fields = {
   }
 }
 
+
+
+
+
 var pwd_fields = {
   timer: 4000,
   button_text: 'Toggle Password Visiblility',
+  button_class: 'rc-input--password__toggle',
+  button_span: 'screen-reader-text',
 
   /**
    * Initiate - Runs create_toggle method for each password input found
    * @param  {object} targets All password inputs found
    */
   init: function( targets ) {
-    targets.forEach( function( target ) {
-      pwd_fields.create_toggle( target );
+    targets.forEach( function( target, i ) {
+      pwd_fields.create_toggle( target, i );
     } );
   },
 
@@ -418,54 +85,52 @@ var pwd_fields = {
    * Create a button to allow password visibility toggling
    * @param  {object} target The input that the button should be attached to.
    */
-  create_toggle: function( target ) {
+  create_toggle: function( target, index ) {
+    // The wrapping element
     var wrap = target.parentNode;
 
-    var classes = {
-      btn: 'rc-input--password__toggle',
-      span: 'screen-reader-text'
-    }
+    // Get input from wrap
+    var input = wrap.querySelector( 'input' );
 
+    // Set an attribute on the input
+    input.setAttribute( 'data-toggle', 'pwd-' + index );
+
+
+    // Create button
     var btn = document.createElement( 'button' );
     
+    // Add class to button
     if ( btn.classList ) {
-      btn.classList.add( classes.btn );
+      btn.classList.add( this.button_class );
     } else {
-      btn.fill_class += ' ' + classes.btn;
+      btn.fill_class += ' ' + this.button_class;
     }
 
+    // Set an attribute on the button that matches the input
+    btn.setAttribute( 'id', 'pwd-' + index );
+
+    // Create span for inside button
     var span = document.createElement( 'span' );
     
+    // Add text to span
     span.innerText = this.button_text;
     
+    // Add class to span
     if ( span.classList ) {
-      span.classList.add( classes.span );
+      span.classList.add( this.button_span );
     } else {
-      span.fill_class += ' ' + classes.span;
+      span.fill_class += ' ' + this.button_span;
     }
 
+    // Add span to button
     btn.appendChild( span );
+
+    // Add button to wrapping element
     wrap.appendChild( btn );
-
-    this.create_attrs( target );
+    
+    this.toggle_type( btn, wrap );
   },
 
-
-
-
-
-
-
-
-
-  /**
-   * Creates data attribute and ID to connect toggle button to input field - MIGHT NOT BE NEEDED IF SIBLINGS WORK
-   * @param  {object} target The input that the button should be attached to.
-   * @return {[type]} [description]
-   */
-  create_attrs: function( target ) {
-    console.log( target );
-  },
 
 
   /**
@@ -473,17 +138,22 @@ var pwd_fields = {
    * @param  {object} target The input that the button should be attached to.
    * @return {[type]} [description]
    */
-  toggle_type: function( event ) {
-    var field = event.target;    
+  toggle_type: function( button, wrap ) {
+    button.addEventListener( 'click', function( event ) {
+      var btn_id = button.getAttribute( 'id' );
+      var input_target = wrap.querySelector( '[data-toggle=' + btn_id + ']' );
 
+      var is_text = input_target.type;
+      console.log( is_text );
 
-    if ( true === is_text ) {
-      console.log( 'is text' );
-
-    } else {
-      console.log( 'is not text' );
-    }
+      if ( 'text' === is_text ) {
+        input_target.type = 'password';
+      } else {
+        input_target.type = 'text';
+      }
+    } );
   },
+
 
 
   /**
@@ -985,3 +655,342 @@ $(function () {
 $(function () {
 	$( '.rc-tooltip__trigger' ).Tooltips(); // Initiate all Tabs elements
 });
+
+/**
+ *
+ * File Tabs.js.
+ *
+ */
+
+
+// Move this to Scripts
+$(function () {
+
+
+  // Carousel Settings
+  var carousel_next_arrow = '<a href="#" class="interactive--navigation interactive--navigation--next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.5 64" aria-labelledby="svg-arrow-right" role="img"><title id="svg-arrow-right" lang="en">arrow-right</title><path d="M34.5 34.5L6 63c-.7.7-1.6 1-2.5 1s-1.8-.3-2.5-1c-1.4-1.4-1.4-3.6 0-5l26-26L1 6C-.4 4.6-.4 2.4 1 1S4.6-.4 6 1l28.5 28.5c1.4 1.4 1.4 3.6 0 5z"></path></svg><span class="screen-reader-text">Next Slide</span></a>',
+      carousel_prev_arrow = '<a href="#" class="interactive--navigation interactive--navigation--prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.5 64" aria-labelledby="svg-arrow-left" role="img"><title id="svg-arrow-left" lang="en">arrow-left</title><path d="M1 29.5L29.5 1c1.4-1.4 3.6-1.4 5 0s1.4 3.6 0 5l-26 26 26 26c1.4 1.4 1.4 3.6 0 5-.7.7-1.6 1-2.5 1-.9 0-1.8-.3-2.5-1L1 34.5c-1.3-1.4-1.3-3.6 0-5z"></path></svg><span class="screen-reader-text">Previous Slide</span></a>';
+
+  var carousel_default = {
+    adaptiveHeight: true,
+    dots: true,
+    dotsClass: 'rc-carousel__dots list--blank list--align',
+    autoplay: true,
+    autoplaySpeed: 4000,
+    nextArrow: carousel_next_arrow,
+    prevArrow: carousel_prev_arrow,
+    speed: 400,
+    customPaging: function( slider, i ) {
+      var thumb = $( slider.$slides[i] ).data( 'thumb' );
+      return '<a href="#" class="' + thumb + '"><span class="screen-reader-text">' + i + '</span></a>';
+    }
+  }
+
+  // Carousel Caches
+  var $slick_hero = $( '.rc-carousel--hero' );
+
+  // Carousel Inits
+  $slick_hero.slick( carousel_default );
+
+
+});
+
+/**
+ *
+ * File image-galleries.js.
+ *
+ */
+
+$(function () {
+
+  // Carousel Settings
+  var carousel_next_arrow = '<a href="#" class="interactive--navigation interactive--navigation--next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.5 64" aria-labelledby="svg-arrow-right" role="img"><title id="svg-arrow-right" lang="en">arrow-right</title><path d="M34.5 34.5L6 63c-.7.7-1.6 1-2.5 1s-1.8-.3-2.5-1c-1.4-1.4-1.4-3.6 0-5l26-26L1 6C-.4 4.6-.4 2.4 1 1S4.6-.4 6 1l28.5 28.5c1.4 1.4 1.4 3.6 0 5z"></path></svg><span class="screen-reader-text">Next Slide</span></a>',
+      carousel_prev_arrow = '<a href="#" class="interactive--navigation interactive--navigation--prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.5 64" aria-labelledby="svg-arrow-left" role="img"><title id="svg-arrow-left" lang="en">arrow-left</title><path d="M1 29.5L29.5 1c1.4-1.4 3.6-1.4 5 0s1.4 3.6 0 5l-26 26 26 26c1.4 1.4 1.4 3.6 0 5-.7.7-1.6 1-2.5 1-.9 0-1.8-.3-2.5-1L1 34.5c-1.3-1.4-1.3-3.6 0-5z"></path></svg><span class="screen-reader-text">Previous Slide</span></a>';
+
+  var carousel_gallery_main = {
+    adaptiveHeight: true,
+    asNavFor: '.rc-carousel--gallery__thumbs',
+    autoplay: true,
+    nextArrow: carousel_next_arrow,
+    prevArrow: carousel_prev_arrow,
+    slidesToShow: 1
+  }
+
+  var carousel_gallery_thumbs = {
+    adaptiveHeight: true,
+    arrows: false,
+    asNavFor: '.rc-carousel--gallery__main',
+    focusOnSelect: true,
+    mobileFirst: true,
+    nextArrow: carousel_next_arrow,
+    prevArrow: carousel_prev_arrow,
+    slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 5
+        }
+      }
+    ]
+  }
+
+  // Carousel Caches
+  var $slick_gallery = $( '.rc-carousel--gallery__main' );
+  var $slick_thumbs = $( '.rc-carousel--gallery__thumbs' );
+
+  // Carousel Inits
+  $slick_gallery.slick( carousel_gallery_main );
+  $slick_thumbs.slick( carousel_gallery_thumbs );
+
+});
+
+/**
+ *
+ * File maps.js.
+ *
+ */
+
+
+/**
+ * Custom Map icon SVG settings
+ * @type {object}
+ */
+var icon = {
+  path: 'M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm11.5-25c0 6.4-5.1 11.5-11.5 11.5S20.5 38.4 20.5 32 25.6 20.5 32 20.5 43.5 25.6 43.5 32z',
+  fillColor: '#E2001A',
+  fillOpacity: .6,
+  scale: .5,
+  strokeWeight: 0
+}
+
+/**
+ * Creates a Google Map
+ * @param  {object} selector The DOM ID to set up the Map in
+ * @param  {object} center   The desired center of the Map
+ * @param  {number} zoom     The zoom level of the Map
+ * @return {object}          The Map
+ */
+function create_map ( selector, center, zoom ) {
+  /**
+   * Sets default number for zoom
+   * @type {number}
+   */
+  var zoom = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 17;
+
+  /**
+   * Exit the function if any of the arguments passed are empty
+   * @return {bool} false
+   */
+  if ( null === selector || typeof center === 'undefined' || typeof zoom === 'undefined' ) {
+    return false;
+  }
+
+  /**
+   * Creates the new map with arguments passed and some defaults
+   * @type {google}
+   */
+  var new_map = new google.maps.Map( selector, {
+    center: center,
+    scrollwheel: false,
+    zoom: zoom,
+    // Apple Maps style
+    styles: [
+      {
+        "featureType": "landscape.man_made",
+        "elementType": "all",
+        "stylers": [
+          {
+            "color": "#faf5ed"
+          },
+          {
+            "lightness": "0"
+          },
+          {
+            "gamma": "1"
+          }
+        ]
+      },
+      {
+        "featureType": "poi.park",
+        "elementType": "geometry.fill",
+        "stylers": [
+          {
+            "color": "#bae5a6"
+          }
+        ]
+      },
+      {
+        "featureType": "road",
+        "elementType": "all",
+        "stylers": [
+          {
+            "weight": "1.00"
+          },
+          {
+            "gamma": "1.8"
+          },
+          {
+            "saturation": "0"
+          }
+        ]
+      },
+      {
+        "featureType": "road",
+        "elementType": "geometry.fill",
+        "stylers": [
+          {
+            "hue": "#ffb200"
+          }
+        ]
+      },
+      {
+        "featureType": "road.arterial",
+        "elementType": "geometry.fill",
+        "stylers": [
+          {
+            "lightness": "0"
+          },
+          {
+            "gamma": "1"
+          }
+        ]
+      },
+      {
+        "featureType": "transit.station.airport",
+        "elementType": "all",
+        "stylers": [
+          {
+            "hue": "#b000ff"
+          },
+          {
+            "saturation": "23"
+          },
+          {
+            "lightness": "-4"
+          },
+          {
+            "gamma": "0.80"
+          }
+        ]
+      },
+      {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+          {
+            "color": "#a0daf2"
+          }
+        ]
+      }
+    ]
+  } );
+
+  return new_map;
+}
+
+/**
+ * Create a Google Maps Marker
+ * @param  {object}   position  The desired position of the Marker
+ * @param  {object}   map       The Map to apply the Marker to      
+ * @return {object}             The Marker applied to the Map
+ */
+function create_marker ( position, map ) {
+  /**
+   * Exit the function if any of the arguments passed are empty
+   * @return {bool} false
+   */
+  if ( typeof position === 'undefined' || typeof map === 'undefined', false === map ) {
+    return false;
+  }
+
+  /**
+   * Creates the new map marker with arguments passed
+   * @type {google}
+   */
+  var map_marker = new google.maps.Marker({
+    icon: icon,
+    position: position,
+    map: map
+  });
+
+  return map_marker;
+}
+
+/**
+ * Create a Google Maps Marker
+ * @param  {object} content The content for the InfoWindow
+ * @param  {object} marker  The Marker to attach the InfoWindow to
+ * @param  {object} map     The Map that the Marker is applied to
+ * @return {object}         The InfoWindow applied to the Marker
+ */
+function create_infobox ( content, marker, map ) {
+  /**
+   * Exit the function if any of the arguments passed are empty
+   * @return {bool} false
+   */
+  if ( typeof content === 'undefined' || typeof marker === 'undefined' || typeof map === 'undefined' ) {
+    return false;
+  }
+
+  var new_infowindow = new google.maps.InfoWindow({
+    content: content
+  });
+
+  marker.addListener( 'click', function() {    
+    new_infowindow.open( map, marker );
+
+    make_visible = 'rc-map__overlay--visible';
+
+    // Add class
+    if ( new_infowindow.content.classList )
+      new_infowindow.content.classList.add( make_visible );
+    else
+      new_infowindow.content.make_visible += ' ' + make_visible;
+  } );
+
+  return new_infowindow;
+}
+
+
+
+
+
+// 
+// Following would live in custom scripts file
+// -------------------------------------------------------------------------------------------------------------------------------------------- //
+// 
+
+/**
+ * Object containing lat/lng of key locations
+ * @type {object}
+ */
+var key_locations = {
+  royal_canin: {
+    lat: 43.700753,
+    lng: 4.187961
+  },
+  first_10: {
+    lat: 53.790524,
+    lng: -1.532349
+  }
+}
+
+
+/**
+ * Standard Google Maps init function. Generates Maps.
+ */
+function initMap() {
+  // Royal Canin Map
+  var map_royal_canin = create_map( document.getElementById( 'map_royal_canin' ), key_locations.royal_canin, 17 );
+  
+  // Royal Canin Map + Marker
+  var map_royal_canin_marker = create_map( document.getElementById( 'map_royal_canin--marker' ), key_locations.royal_canin, 17 );
+  var marker_royal_canin_marker = create_marker( key_locations.royal_canin, map_royal_canin_marker );
+
+  // First 10 Map + Marker + Infobox
+  var map_first_10 = create_map( document.getElementById( 'map_first_10' ), key_locations.first_10, 18 );
+  var marker_first_10 = create_marker( key_locations.first_10, map_first_10 );
+  var infobox_first_10 = create_infobox( document.getElementById( 'infobox_first_10' ), marker_first_10, map_first_10 );
+}
+
