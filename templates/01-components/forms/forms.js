@@ -20,19 +20,24 @@ var form_fields = {
   init: function( targets ) {
     var that = this;
 
-    var events = [
-      'focus', 
-      'blur'
-    ]
+    for ( var i = 0; i < targets.length; i++ ) {
+      (function(i) {
 
-    targets.forEach( function( target ) {
-      var input = target.querySelector( 'input' ) || target.querySelector( 'textarea' );
-      events.forEach( function( event ) {
-        input.addEventListener( event, function(  ) {
-          that.fill_check( target, input );  
+        var span = targets[i];
+        
+        var input = span.querySelector( 'input' ) || span.querySelector( 'textarea' );
+
+        input.addEventListener( 'focus', function( event ) {  
+          that.fill_check( span, input );
         } );
-      } );
-    } );
+
+        input.addEventListener( 'blur', function( event ) {
+          that.fill_check( span, input );
+        } );
+
+      }(i));
+
+    }
   },
 
   fill_check: function( target, input ) {
@@ -80,9 +85,16 @@ var pwd_fields = {
    * @param  {object} targets All password inputs found
    */
   init: function( targets ) {
-    targets.forEach( function( target, i ) {
-      pwd_fields.create_toggle( target, i );
-    } );
+    // targets.forEach( function( target, i ) {
+    //   pwd_fields.create_toggle( target, i );
+    // } );
+
+    for ( var i = 0; i < targets.length; i++ ) {
+      
+      pwd_fields.create_toggle( targets[i], i );
+
+    }
+
   },
 
   /**
@@ -142,7 +154,6 @@ var pwd_fields = {
   },
 
 
-
   /**
    * Handles toggling input type
    * @param  {object} target The input that the button should be attached to.
@@ -169,7 +180,6 @@ var pwd_fields = {
   },
 
 
-
   input_input: function( input ) {    
     input.addEventListener( 'keydown', function( event ) {
       clearTimeout( pwd_fields.the_timer );
@@ -186,9 +196,6 @@ var pwd_fields = {
   },
 
 
-
-
-
   /**
    * Will obscure password if no user interaction after a given period
    * @param  {object} target The input that the button should be attached to.
@@ -202,6 +209,9 @@ var pwd_fields = {
   }
 
 }
+
+
+
 
 
 var inputs = document.querySelectorAll( '.rc-input' );
