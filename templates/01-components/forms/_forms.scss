@@ -89,7 +89,7 @@ input[type="file"] {
 	padding-left: 0;
 }
 
-input[data-toggle="datepicker"] {
+input[data-toggle^="datepicker"] {
 	background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 63.9 54.7' aria-labelledby='svg-calendar' role='img'%3E%3Cstyle%3E.st0%7Bfill:%23E2001A;%7D%3C/style%3E%3Ctitle id='svg-calendar' lang='en'%3Ecalendar%3C/title%3E %3Cpath class='st0' d='M9.6 24.6v21.2h34.2v-9.3h10.5V24.6H9.6zM41.3 34h-8.1v-6.9h8.1V34zm-18.6 0v-6.9h8.1V34h-8.1zm8.1 2.4v6.9h-8.1v-6.9h8.1zm-10.6-9.3V34h-8.1v-6.9h8.1zm-8.1 9.3h8.1v6.9h-8.1v-6.9zm29.2 6.9h-8.1v-6.9h8.1v6.9zm2.5-9.3v-6.9h8.1V34h-8.1zM14.1 10.2c0-1.3 1-2.3 2.3-2.3s2.3 1 2.3 2.3-1 2.3-2.3 2.3-2.3-1-2.3-2.3zm32.3 0c0-1.3 1-2.3 2.3-2.3s2.3 1 2.3 2.3-1 2.3-2.3 2.3-2.3-1-2.3-2.3zM57.4 0H6.6C3 0 0 3 0 6.6v41.5c0 3.6 3 6.6 6.6 6.6h41.6l4.9-4.9 5.9-5.9 4.9-4.9V6.6C64 3 61 0 57.4 0zM6.6 4.9h50.8c.9 0 1.7.7 1.7 1.7v8.2H4.9V6.6c0-.9.8-1.7 1.7-1.7zm48.2 33.9c-3.6 0-6.6 3-6.6 6.6v4.3H6.6c-.9 0-1.7-.7-1.7-1.7V19.8H59v19.1l-4.2-.1z'/%3E%3C/svg%3E") right .75em center/1.5em no-repeat;
 }
 
@@ -358,7 +358,7 @@ input[data-toggle="datepicker"] {
  * Date: 2017-04-08T12:04:53.399Z
  */
 .datepicker-container {
-  font-size: .875em;
+  font-size: .75em;
   position: fixed;
   z-index: -1;
   top: 0;
@@ -481,16 +481,23 @@ input[data-toggle="datepicker"] {
   background-color: #fff;
   background-color: $rc-light-grey;
   border-radius: 3px;
-  padding: .5em 0;
+  padding: .25em 0;
   margin: 2px;
-
-
 
   svg {
   	height: .875em;
     margin: 0;
     fill: $rc-red;
   }
+}
+
+.datepicker-panel > .datepicker-header > li {
+	border-radius: 0;
+	width: 24px;
+
+	svg {
+		vertical-align: baseline;
+	}
 }
 
 .datepicker-panel > ul > li:hover {
@@ -546,7 +553,7 @@ input[data-toggle="datepicker"] {
 .datepicker-panel > ul > li[data-view='years current'],
 .datepicker-panel > ul > li[data-view='year current'],
 .datepicker-panel > ul > li[data-view='month current'] {
-  width: 196px;
+  width: 220px;
 }
 
 .datepicker-panel > ul[data-view='years'] > li,
@@ -562,6 +569,32 @@ input[data-toggle="datepicker"] {
   background-color: #fff;
 }
 
+
 .datepicker-hide {
   display: none;
+}
+
+.rc-datepicker__clear {
+	display: inline-block;
+	text-decoration: none;
+	padding: .75em;
+	margin: .5em;
+	float: right;
+	line-height: 1;
+	color: inherit;
+
+	svg {
+		display: inline-block;
+		width: .75em;
+		height: .75em;
+		margin-left: .25em;
+	}
+
+	&:hover, &:focus {
+		background-color: darken( $rc-white, 5% );
+	}
+
+	&:active {
+		background-color: darken( $rc-white, 15% );	
+	}
 }
