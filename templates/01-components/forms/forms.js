@@ -4,6 +4,10 @@
  *
  */
 
+/**
+ * Checks if document is ready
+ * @param  {Function} fn Whatever is passed in the ready function 
+ */
 function ready(fn) {
   if (document.readyState != 'loading'){
     fn();
@@ -12,11 +16,27 @@ function ready(fn) {
   }
 }
 
+/**
+ * Checks whether a particular element has a class
+ * @param  {Object}  el        The element to check
+ * @param  {String}  className The class to test for
+ * @return {Boolean}           true or false
+ */
 function hasClass(el, className) {
   return el.classList ? el.classList.contains(className) : new RegExp('\\b'+ className+'\\b').test(el.className);
 }
 
+
+
+/**
+ * Applies JS behaviour to form input fields
+ * @type {Object}
+ */
 var form_fields = {
+  /**
+   * Which fields to apply the behaviour to
+   * @param  {NodeList} targets The fields passed to the Method as a NodeList
+   */
   init: function( targets ) {
     var that = this;
 
@@ -40,6 +60,11 @@ var form_fields = {
     }
   },
 
+  /**
+   * Checks whether the input field is empty
+   * @param  {Object} target The fields wrapping element
+   * @param  {Object} input  The field to check
+   */
   fill_check: function( target, input ) {
     var is_filled = 0 < input.value.length;
 
@@ -50,6 +75,14 @@ var form_fields = {
     }
   },
 
+  /**
+   * Controls the addition and removal of a class
+   * @param  {Object} target      The fields wrapping element to apply the class to
+   * @param  {Object} input       The input that is being tested @todo May not be needed in this method
+   * @param  {String} fill_class  The class to be added / removed
+   * @param  {String} instruction The instruction for whether to add or remove the class
+   * @return {Boolean}            Return false if instruction is not valid
+   */
   fill_class: function( target, input, fill_class, instruction ) {
     if ( 'add' === instruction ) {
       if ( target.classList ) {
@@ -71,9 +104,10 @@ var form_fields = {
 }
 
 
-
-
-
+/**
+ * Applies JS behaviour to form password fields
+ * @type {Object}
+ */
 var pwd_fields = {
   the_timer: null,
   button_text: 'Toggle Password Visiblility',
@@ -81,7 +115,7 @@ var pwd_fields = {
   button_span: 'screen-reader-text',
 
   /**
-   * Initiate - Runs create_toggle method for each password input found
+   * Runs create_toggle method for each password input found
    * @param  {object} targets All password inputs found
    */
   init: function( targets ) {
@@ -92,7 +126,7 @@ var pwd_fields = {
 
   /**
    * Create a button to allow password visibility toggling
-   * @param  {object} target The input that the button should be attached to.
+   * @param  {object} target The input that the button should be attached to
    */
   create_toggle: function( target, index ) {
     // The wrapping element
@@ -149,7 +183,7 @@ var pwd_fields = {
 
   /**
    * Handles toggling input type
-   * @param  {object} target The input that the button should be attached to.
+   * @param  {object} target The input that the button should be attached to
    * @return {[type]} [description]
    */
   toggle_type: function( button, wrap ) {
@@ -172,14 +206,20 @@ var pwd_fields = {
     } );
   },
 
-
+  /**
+   * Listen for keyboard events on input and stop clear timeout if detected
+   * @param  {Object} input The input to attach the event listener to
+   */
   input_input: function( input ) {    
     input.addEventListener( 'keydown', function( event ) {
       clearTimeout( pwd_fields.the_timer );
     } );
   },
 
-
+  /**
+   * Listen for the blur event and start a timeout when detected
+   * @param  {Object} input The input to attach the event listener to
+   */
   input_blur: function( input ) {
     input.addEventListener( 'blur', function( event ) {
       if ( 'text' === input.type ) {
@@ -187,7 +227,6 @@ var pwd_fields = {
       }
     } );
   },
-
 
   /**
    * Will obscure password if no user interaction after a given period
@@ -200,18 +239,12 @@ var pwd_fields = {
       }, time );
     }
   }
-
 }
 
 
-
-
-
+/* @todo Would live in main scripts file along with ready function declaration */
 var inputs = document.querySelectorAll( '.rc-input' );
-
 var pwds = document.querySelectorAll( 'input[type="password"]' );
 
 ready ( form_fields.init( inputs ) );
 ready ( pwd_fields.init( pwds ) );
-
-
