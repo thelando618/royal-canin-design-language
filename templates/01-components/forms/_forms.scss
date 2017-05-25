@@ -332,14 +332,7 @@ input[data-toggle^="datepicker"] {
 }
 
 .rc-input--password__visible {
-
 }
-
-
-
-
-
-
 
 
 
@@ -372,203 +365,130 @@ input[data-toggle^="datepicker"] {
   touch-action: none;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
-}
 
-.datepicker-container:before,
-.datepicker-container:after {
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  content: ' ';
-  border: 5px solid transparent;
+  &:before, &:after {
+	  position: absolute;
+	  display: block;
+	  width: 0;
+	  height: 0;
+	  content: ' ';
+	  border: .5em solid transparent;
+	  top: -.5em;
+	  left: 1em;
+	  border-top: 0;
+	  border-bottom-color: #FFFFFF;
+  }
 }
 
 .datepicker-dropdown {
   position: absolute;
   z-index: 1;
   box-sizing: content-box;
-  border: 1px solid #ccc;
-  box-shadow: 0 3px 6px #ccc;
+  box-shadow: 0 0 1em lighten( $rc-medium-grey, 25% );
 }
 
-.datepicker-inline {
-  position: static;
-}
+.datepicker-panel {
+	ul {
+	  width: 100%;
+	  margin: 0;
+	  padding: 0;
 
-.datepicker-top-left,
-.datepicker-top-right {
+		&:before,
+		&:after {
+		  display: table;
+		  content: ' ';
+		}
+		&:after {
+			clear: both;
+		}
+	}
 
-}
+	ul[data-view='years'] > li,
+	ul[data-view='months'] > li {
+  	width: 42.5px;
+	}
 
-.datepicker-top-left:before,
-.datepicker-top-left:after,
-.datepicker-top-right:before,
-.datepicker-top-right:after {
-  top: -5px;
-  left: 10px;
-  border-top: 0;
-}
+	ul[data-view='week'] > li,
+	ul[data-view='week'] > li:hover {
+  	cursor: default;
+  	background-color: #fff;
+	}
 
-.datepicker-top-left:before,
-.datepicker-top-right:before {
-  border-bottom-color: #ccc;
-}
+	li {
+	  float: left;
+	  width: 36px;
+	  margin: 0;
+	  padding: 0;
+	  list-style: none;
+	  cursor: pointer;
+	  text-align: center;
+	  background-color: #fff;
+	  background-color: $rc-light-grey;
+	  border-radius: 3px;
+	  padding: .25em 0;
+	  margin: 2px;
+	  transition: background-color .1s ease-in-out;
 
-.datepicker-top-left:after,
-.datepicker-top-right:after {
-  top: -4px;
-  border-bottom-color: #fff;
-}
+	  svg {
+	  	height: .875em;
+	    margin: 0;
+	    fill: $rc-red;
+	    pointer-events: none;
+	    vertical-align: baseline;
+	  }
 
-.datepicker-bottom-left,
-.datepicker-bottom-right {
-  border-bottom-color: #ccc;
-}
+	  &:hover {
+	  	background-color: lighten( $rc-light-grey, 5% );
+	  }
+	}
 
-.datepicker-bottom-left:before,
-.datepicker-bottom-left:after,
-.datepicker-bottom-right:before,
-.datepicker-bottom-right:after {
-  bottom: -5px;
-  left: 10px;
-  border-bottom: 0;
-}
+	li[data-view='years current'],
+	li[data-view='year current'],
+	li[data-view='month current'] {
+	  width: 220px !important;
+	}
 
-.datepicker-bottom-left:before,
-.datepicker-bottom-right:before {
-  border-top-color: #ccc;
-}
+	.datepicker-header li {
+		border-radius: 0;
+		width: 24px;
+	}
 
-.datepicker-bottom-left:after,
-.datepicker-bottom-right:after {
-  bottom: -4px;
-  border-top-color: #fff;
-}
+	.muted,
+	.muter:hover {
+	  color: $rc-light-grey;
+	  background-color: $rc-white;
+	}
 
-.datepicker-top-right:before,
-.datepicker-top-right:after,
-.datepicker-bottom-right:before,
-.datepicker-bottom-right:after {
-  right: 10px;
-  left: auto;
-}
+	.highlighted {
+		background-color: $rc-white;
 
-.datepicker-panel > ul:before,
-.datepicker-panel > ul:after {
-  display: table;
-  content: ' ';
-}
+		&:hover {
+			background-color: lighten( $rc-light-grey, 5% );
+		}
+	}
 
-.datepicker-panel > ul:after {
-  clear: both;
-}
+	.picked,
+	.picked:hover {
+	  background-color: $rc-functional;
+	  color: $rc-white;
+	}
 
-.datepicker-panel > ul {
-  width: 102%;
-  margin: 0;
-  padding: 0;
-}
+	.disabled,
+	.disabled:hover {
+	  cursor: default;
+	  color: #ccc;
+	  background-color: #fff;
 
-.datepicker-panel > ul > li {
-  float: left;
-  width: 36px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  cursor: pointer;
-  text-align: center;
-  background-color: #fff;
-  background-color: $rc-light-grey;
-  border-radius: 3px;
-  padding: .25em 0;
-  margin: 2px;
+	  svg {
+	  	opacity: .5;
+	  }
+	}
 
-  svg {
-  	height: .875em;
-    margin: 0;
-    fill: $rc-red;
-  }
-}
-
-.datepicker-panel > .datepicker-header > li {
-	border-radius: 0;
-	width: 24px;
-
-	svg {
-		vertical-align: baseline;
+	.disabled.highlighted,
+	.disabled:hover.highlighted {
+		background-color: darken( $rc-light-grey, 5% );
 	}
 }
-
-.datepicker-panel > ul > li:hover {
-  background-color: lighten( $rc-light-grey, 5% );
-}
-
-.datepicker-panel > ul > li.muted,
-.datepicker-panel > ul > li.muted:hover {
-  color: $rc-light-grey;
-  background-color: $rc-white;
-}
-
-.datepicker-panel > ul > li.highlighted {
-  background-color: $rc-white;
-}
-
-.datepicker-panel > ul > li.highlighted:hover {
-  background-color: lighten( $rc-light-grey, 5% );
-}
-
-.datepicker-panel > ul > li.picked,
-.datepicker-panel > ul > li.picked:hover {
-  background-color: $rc-functional;
-  color: $rc-white;
-}
-
-.datepicker-panel > ul > li.disabled,
-.datepicker-panel > ul > li.disabled:hover {
-  cursor: default;
-  color: #ccc;
-  background-color: #fff;
-
-  svg {
-  	opacity: .5;
-  }
-}
-
-.datepicker-panel > ul > li.disabled.highlighted,
-.datepicker-panel > ul > li.disabled:hover.highlighted {
-  background-color: darken( $rc-light-grey, 5% );
-}
-
-.datepicker-panel > ul > li[data-view='years prev'],
-.datepicker-panel > ul > li[data-view='year prev'],
-.datepicker-panel > ul > li[data-view='month prev'],
-.datepicker-panel > ul > li[data-view='years next'],
-.datepicker-panel > ul > li[data-view='year next'],
-.datepicker-panel > ul > li[data-view='month next'],
-.datepicker-panel > ul > li[data-view='next'] {
-
-}
-
-.datepicker-panel > ul > li[data-view='years current'],
-.datepicker-panel > ul > li[data-view='year current'],
-.datepicker-panel > ul > li[data-view='month current'] {
-  width: 220px;
-}
-
-.datepicker-panel > ul[data-view='years'] > li,
-.datepicker-panel > ul[data-view='months'] > li {
-  // line-height: 42.5px;
-  // height: 42.5px;
-  width: 42.5px;
-}
-
-.datepicker-panel > ul[data-view='week'] > li,
-.datepicker-panel > ul[data-view='week'] > li:hover {
-  cursor: default;
-  background-color: #fff;
-}
-
 
 .datepicker-hide {
   display: none;
