@@ -290,4 +290,15 @@ $(function() {
       $( that ).datepicker( 'reset' );
     });
   });
+
+
+
+  /**
+   * Initialise JS Select menus
+   * @type {Object} Configuration options
+   */
+  $('select').select2({
+    placeholder: 'Select an option',
+    minimumResultsForSearch: Infinity,
+  });
 });
