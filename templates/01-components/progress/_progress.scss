@@ -90,3 +90,101 @@
     }
   }
 }
+
+.rc-progress-stepped {
+  text-align: center;
+
+  ol {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  li {
+    counter-increment: step-counter;
+    float: left;
+
+    button {
+      border-radius: 100%;
+      padding: 0;
+      width: 2rem;
+      height: 2rem;
+      line-height: 1;
+      background-color: $rc-light-grey;
+      color: $rc-text;
+      border: 4px solid transparent;
+
+      &:before {
+        content: counter(step-counter);
+        border-radius: 100% !important;
+      }
+    }
+
+    &:after {
+      content: '';
+      display: inline-block;
+      position: relative;
+      background-color: $rc-light-grey;
+      width: .75rem;
+      height: .2rem;
+      top: -.2rem;
+    }
+
+    &:last-of-type {
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  .complete {
+    button {
+      background-color: $rc-success;
+      border-color: $rc-light-grey;
+    }
+  }
+
+  li[disabled] {
+    button {
+      opacity: .5;
+      cursor: not-allowed;
+    }
+  }
+
+  @media ( min-width: 480px ) {
+    li {
+      button {
+        width: 2.5rem;
+        height: 2.5rem;
+
+        &:before {
+          font-size: 1.25em;
+        }
+      }
+      &:after {
+        width: 1.25rem;
+        height: .3rem;
+        top: -.1.5rem;
+      }
+    }
+  }
+
+  @media ( min-width: 640px ) {
+    li {
+      button {
+        width: 3.5rem;
+        height: 3.5rem;
+
+        &:before {
+          font-size: 1.25em;
+        }
+      }
+      &:after {
+        width: 2rem;
+        height: .4rem;
+        top: -.2rem;
+      }
+    }
+  }
+}
