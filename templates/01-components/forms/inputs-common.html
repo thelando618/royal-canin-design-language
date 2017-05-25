@@ -54,19 +54,17 @@
 					<label class="gs-present__label">Type - Date</label>
 				</header>
 
-				<input data-toggle="datepicker-ddmmyyyy" class="rc-datepicker" id="rc-datepicker-1" placeholder="DD-MM-YYYY">
-
-				<br><br>
-
-				<input data-toggle="datepicker-yyyymm" class="rc-datepicker" id="rc-datepicker-2" placeholder="YYYY-MM">
-
-<!-- 				@@include('./01-components/forms/_input-no-placeholder.html', {
-					"type": "date"
+				@@include('./01-components/forms/_input-date.html', {
+					"id": "1",
+					"mode": "ddmmyyyy",
+					"placeholder": "DD-MM-YYYY"
 				})
 
-				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-no-placeholder.html', {
-					"type": "date"
-				})</code></pre> -->
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-date.html', {
+					"id": "1",
+					"mode": "ddmmyyyy",
+					"placeholder": "DD-MM-YYYY"
+				})</code></pre>
 			</section>
 
 			<section class="gs-present">
