@@ -13,7 +13,6 @@
 				<blockquote class="gs-stage__content__intro">
 					<h2 class="rc-head rc-head--subheadline">Introduction</h2>
 					<p>The Progress element is used to display a known percentage between two values.</p>
-					<p>If the browser does not support the <code class="language-html">&lt;progress&gt;</code> element <b>(IE9)</b>, then the fallback div will be shown instead.</p>
 					<p>This component relies on accompanying Javascript in order to display the current value between the min and max values, as well as the ability to update that value.</p>
 				</blockquote>
 			</header>
@@ -25,22 +24,9 @@
 					<label class="gs-present__label">Progress</label>
 				</header>
 
-				<div class="rc-progress-stepped" data-value="">
-					<ol>
-						<li class="complete"><button></button></li>
-						<li class="complete"><button></button></li>
-						<li><button></button></li>
-						<li disabled><button></button></li>
-						<li disabled><button></button></li>
-						<li disabled><button></button></li>
-					</ol>
-				</div>
+				@@include('./01-components/progress/_stepped-progress.html')
 
-<!-- 				<pre><code class="gs-code language-html">@@include('./01-components/progress/_progress.html', {
-					"min": "0",
-					"max": "100",
-					"value": "20"
-				})</code></pre> -->
+				<pre><code class="gs-code language-html">@@include('./01-components/progress/_stepped-progress.html')</code></pre>
 			</section>
 
 		</div>
