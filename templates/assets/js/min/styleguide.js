@@ -215,13 +215,13 @@ const triggerAndTargetClassModifier = {
 
   },
   climbTreeAndToggle: function (currentNode, target, modifier) {
-  while (!this.classCheck(currentNode, target) && currentNode !== null) {
+  while (!this.classCheck(currentNode, target.target) && currentNode !== null) {
     // Check the node for the target class and climb the DOM if not found.
     currentNode = currentNode.parentNode;
   }
 
   if (target.siblingCheck) {
-    var childTarget = currentNode.querySelector('.gs-nav__trigger');
+    var childTarget = currentNode.querySelector(target.targetClass);
     childTarget.classList.toggle(modifier);
   }
   else {
@@ -234,14 +234,14 @@ const triggerAndTargetClassModifier = {
     try {
       // Try and find the class with contains function, use RegEx for older browsers.
       if (el.classList) {
-        return el.classList.contains(className.target);
+        return el.classList.contains(className);
       }
       else {
-        return new RegExp('(^| )' + className.target + '( |$)', 'gi').test(el.className);
+        return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);
       }
     }
     catch (e) {
-      throw new Error('Css Selector: "' + className.target + '" doesn\'t appear to be in the DOM');
+      throw new Error('Css Selector: "' + className + '" doesn\'t appear to be in the DOM');
     }
   }
 };
@@ -253,8 +253,9 @@ function activeTrail (target) {
 
 activeTrail(
   {
-    target: '.gs-nav__section',
-    siblingCheck: true
+    target: 'gs-nav__section',
+    siblingCheck: true,
+    targetClass: '.gs-nav__trigger'
   }
 );
 
