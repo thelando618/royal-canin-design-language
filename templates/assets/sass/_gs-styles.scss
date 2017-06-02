@@ -14,6 +14,10 @@
 	Note: The positioning rules may have to stay here
 */
 
+* {
+  text-rendering: geometricPrecision;
+}
+
 .gs-nav {
 	background-color: #ffffff;
 	display: block;
@@ -85,15 +89,6 @@
 		}
   }
 
-  .visible {
-  	height: auto;
-		padding-bottom: 2em;
-
-		&:last-of-type {
-			padding-bottom: 0;
-		}
-  }
-
   ul {
   	// See if this can be put into a class that lives in _nav.html
   	list-style-type: none;
@@ -109,24 +104,6 @@
 				padding-top: 1em;
 				padding-bottom: 1em;
 			}
-		}
-	}
-
-	a {
-		display: block;
-		position: relative;
-		text-decoration: none;
-		color: inherit;
-		padding: 1.75em 0 1.75em 1.75em;
-		transition: color .1s ease-in;
-
-		&:focus {
-			background: #f3f3f3;
-		}
-
-		&:hover {
-			color: #3498db;
-
 		}
 	}
 
@@ -190,10 +167,64 @@
 	}
 }
 
+.gs-nav__link {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  padding: 1.75em 0 1.75em 1.75em;
+  transition: color .1s ease-in;
 
+  &:focus {
+    background: #f3f3f3;
+  }
 
+  &:hover {
+    color: #3498db;
 
+  }
+}
 
+.gs-nav__trigger.triggered + ul,
+.gs-nav__section.triggered > ul {
+  height: auto;
+  padding-bottom: 2em;
+
+  &:last-of-type {
+    padding-bottom: 0;
+  }
+}
+
+.gs-nav__link.triggered {
+  font-weight: 500;
+}
+
+.gs-nav__section > .gs-nav__trigger {
+  position: relative;
+
+  &::after {
+    transform: rotate(180deg);
+    opacity: 0;
+    transition: transform .5s ease, opacity .3s ease;
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    background-image: url('../images/chevron--down--red.svg');
+    background-position: center;
+    background-size: 15px;
+    background-repeat: no-repeat;
+  }
+}
+
+.gs-nav__section > .gs-nav__trigger.triggered {
+  &::after {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
 
 
 /* 

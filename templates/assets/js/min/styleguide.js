@@ -1,6 +1,30 @@
 'use strict';
 
 
+function getAllIndexes(arr, val) {
+  var indexes = [], i;
+  for(i = 0; i < arr.length; i++)
+    if (arr[i] === val)
+      indexes.push(i);
+  return indexes;
+};
+
+/**
+ * Get all siblings of an element
+ * @param  {Node}  elem The element
+ * @return {Array}      The siblings
+ */
+var getSiblings = function ( elem ) {
+  var siblings = [];
+  var sibling = elem.parentNode.firstChild;
+  for ( ; sibling; sibling = sibling.nextSibling ) {
+    if ( sibling.nodeType === 1 && sibling !== elem ) {
+      siblings.push( sibling );
+    }
+  }
+  return siblings;
+};
+
 // simple_toggler.js
 
 function simple_toggler( trigger, target ) {
@@ -137,3 +161,137 @@ simple_toggler( '#gs-nav-trigger', '.gs-nav__nav' );
 nav_accordion( '.gs-nav__nav', '.gs-nav__trigger');
 
 syntax( '.gs-code ');
+
+const triggerAndTargetClassModifier = {
+
+  /**
+   * Add event handler to elements with specified css selector, when specified event triggers,
+   * toggle the the supplied class name on both the trigger and target element.
+   *
+   * @param {string} event
+   * Event type to add handler to.
+   *
+   * @param {string} trigger
+   * Element selector that will be used to toggle the modifier class.
+   *
+   * @param {string} target
+   * Element selector that will be targeted when the event fires.
+   *
+   * @param {string} modifier
+   * Class added to both the trigger and target elements.
+   *
+   */
+  init: function init(event, trigger, target, modifier, depth) {
+    // Find the nodes we will use as triggers.
+    if (typeof document.querySelector(trigger) === 'object')   {
+      this.attach(event, document.querySelectorAll(trigger), target, modifier, depth);
+    }
+  },
+  attach: function attach(event, targetNodes, target, modifier, depth) {
+    // Loop through the list of nodes and attached events to each.
+    if (event === 'load') {
+      for (var i = 0; i < targetNodes.length; i++) {
+        this.action(targetNodes[i], target, modifier, depth);
+      }
+    }
+    else {
+      for (var b = 0; b < targetNodes.length; b++) {
+        targetNodes[b].addEventListener(event, function () {
+          this.action(targetNodes[b], target, modifier, depth);
+        });
+      }
+    }
+  },
+  action: function action(targetNode, target, modifier, depth) {
+    // Toggle the active class on the target.
+    targetNode.classList.toggle(modifier);
+
+    // Store the node in a temporary variable, which we will replace as we climb the DOM.
+    var currentNode = targetNode;
+
+    for (var i = 0; i < depth; i++) {
+      currentNode = this.climbTreeAndToggle(currentNode, target, modifier, i);
+    }
+
+  },
+  climbTreeAndToggle: function (currentNode, target, modifier) {
+  while (!this.classCheck(currentNode, target) && currentNode !== null) {
+    // Check the node for the target class and climb the DOM if not found.
+    currentNode = currentNode.parentNode;
+  }
+
+  if (target.siblingCheck) {
+    var childTarget = currentNode.querySelector('.gs-nav__trigger');
+    childTarget.classList.toggle(modifier);
+  }
+  else {
+    // Toggle the active class on the target.
+    currentNode.classList.toggle(modifier);
+  }
+  return currentNode.parentNode;
+},
+  classCheck: function classCheck(el, className) {
+    try {
+      // Try and find the class with contains function, use RegEx for older browsers.
+      if (el.classList) {
+        return el.classList.contains(className.target);
+      }
+      else {
+        return new RegExp('(^| )' + className.target + '( |$)', 'gi').test(el.className);
+      }
+    }
+    catch (e) {
+      throw new Error('Css Selector: "' + className.target + '" doesn\'t appear to be in the DOM');
+    }
+  }
+};
+
+function activeTrail (target) {
+  var depth = getAllIndexes(window.location.pathname, '/').length
+  triggerAndTargetClassModifier.init('load', '[href="' + window.location.pathname + '"]', target, 'triggered', depth - 1)
+}
+
+activeTrail(
+  {
+    target: '.gs-nav__section',
+    siblingCheck: true
+  }
+);
+
+/**
+ * Takes two selectors: 1) The menu selector to help encapsulate the behaviours 2) The target selector for toggling
+ *
+ * @param {string} menuSelector
+ * Css selector.
+ *
+ * @param triggerSelector
+ * Css selector.
+ */
+function resetMenuItems (menuSelector, triggerSelector) {
+  var menu = document.querySelector(menuSelector);
+  var menuTriggers = menu.querySelectorAll(triggerSelector);
+
+  menuTriggers.forEach(function (menuTrigger) {
+    menuTrigger.addEventListener('click', function () {
+
+      var currentNode = this;
+
+      while (!currentNode.classList.contains('toplevel')) {
+        // Check the node for the target class and climb the DOM if not found.
+        currentNode = currentNode.parentNode;
+      }
+
+      var nodeSiblings = getSiblings(currentNode);
+
+      nodeSiblings.forEach(function (sibling) {
+        var menuItemsTriggered = sibling.querySelectorAll('.gs-nav__trigger.triggered');
+
+        menuItemsTriggered.forEach(function (item) {
+          item.classList.remove('triggered');
+        })
+      })
+    });
+  });
+}
+
+resetMenuItems ('.gs-nav__nav', '.gs-nav__trigger');
