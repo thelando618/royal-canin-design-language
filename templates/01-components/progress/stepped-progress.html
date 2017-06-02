@@ -1,0 +1,54 @@
+@@include('./_site-header.html')
+
+<div class="gs-stage">
+
+	<div class="gs-stage__inner">
+
+		<div class="gs-stage__content">
+
+			<header class="gs-stage__content__header">
+				<h1 class="gs-stage__content__head-tag">Stepped Progress</h1>
+				<p>Usage and implementation for Progress Bars within Web Design Language.</p>
+
+				<blockquote class="gs-stage__content__intro">
+					<h2 class="rc-head rc-head--subheadline">Introduction</h2>
+					<p>The Progress element is used to display a known percentage between two values.</p>
+					<p>This component relies on accompanying Javascript in order to display the current value between the min and max values, as well as the ability to update that value.</p>
+				</blockquote>
+			</header>
+
+			<h2 class="gs-stage__content__head-tag rc-head--subheadline">Examples</h2>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Progress</label>
+				</header>
+
+				@@include('./01-components/progress/_stepped-progress.html')
+
+				<pre><code class="gs-code language-html">@@include('./01-components/progress/_stepped-progress.html')</code></pre>
+			</section>
+
+		</div>
+
+		<section class="gs-section gs-changelog">
+			<header>
+				<h1 class="rc-head rc-head--subheadline gs-section__head">Changelog</h1>
+			</header>
+
+			<div class="gs-section__content">
+				<ul class="list--blank list--align">
+					@@loop("./_changelog-item.html", "./01-components/progress/_changelog.json")
+				</ul>
+			</div>
+		</section>
+
+		@@include('./_issues.html')
+
+		@@include('./_feedback.html')
+		
+	</div>
+
+</div>
+
+@@include('./_site-footer.html')

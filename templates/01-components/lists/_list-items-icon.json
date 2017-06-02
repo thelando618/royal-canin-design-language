@@ -1,67 +1,37 @@
 [
   {
 		"text" : "This is a standard list item",
-    "code": {
-      "-xmlns": "http://www.w3.org/2000/svgs",
-      "-title": "check",
-      "-viewBox": "0 0 64 64",
-      "path": { "-d": "M.1 31.8l9.1-9.1L33.6 47l-9.1 9.1L.1 31.8zM15.3 47L54.9 7.4l9.1 9.1-39.5 39.6-9.2-9.1z" }
-    },
+    "class" : "",
   	"link" : false,
   	"active" : false
   },
   {
   	"text" : "This is a standard list item wrapped in a link",
-    "code": {
-      "-xmlns": "http://www.w3.org/2000/svgs",
-      "-title": "check",
-      "-viewBox": "0 0 64 64",
-      "path": { "-d": "M.1 31.8l9.1-9.1L33.6 47l-9.1 9.1L.1 31.8zM15.3 47L54.9 7.4l9.1 9.1-39.5 39.6-9.2-9.1z" }
-    },
+    "class" : "list--icon list-icon--check",
   	"link" : true,
   	"active" : false
   },
   {
     "text" : "This is a standard list item with an active class applied",
-    "code": {
-      "-xmlns": "http://www.w3.org/2000/svgs",
-      "-title": "check",
-      "-viewBox": "0 0 64 64",
-      "path": { "-d": "M.1 31.8l9.1-9.1L33.6 47l-9.1 9.1L.1 31.8zM15.3 47L54.9 7.4l9.1 9.1-39.5 39.6-9.2-9.1z" }
-    },
+    "class" : "list--icon list-icon--arrow-right",
     "link" : false,
     "active" : true
   },
   {
   	"text" : "This is a standard list item with some placeholder text to make it very long - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "code": {
-      "-xmlns": "http://www.w3.org/2000/svgs",
-      "-title": "check",
-      "-viewBox": "0 0 64 64",
-      "path": { "-d": "M.1 31.8l9.1-9.1L33.6 47l-9.1 9.1L.1 31.8zM15.3 47L54.9 7.4l9.1 9.1-39.5 39.6-9.2-9.1z" }
-    },
+    "class" : "list--icon list-icon--arrow-right",
   	"link" : false,
   	"active" : false
   },
 	{
 		"text" : "This is a standard list item with some <em>inline <strong>HTML</strong> entities</em>",
-    "code": {
-      "-xmlns": "http://www.w3.org/2000/svgs",
-      "-title": "check",
-      "-viewBox": "0 0 64 64",
-      "path": { "-d": "M.1 31.8l9.1-9.1L33.6 47l-9.1 9.1L.1 31.8zM15.3 47L54.9 7.4l9.1 9.1-39.5 39.6-9.2-9.1z" }
-    },
+    "class" : "list--icon list-icon--arrow-down",
 		"link" : false,
 		"active" : false
 	},
 	{
-		"text" : "This is a list item that includes an <a href='#''>inline link</a>",
-    "code": {
-      "-xmlns": "http://www.w3.org/2000/svgs",
-      "-title": "check",
-      "-viewBox": "0 0 64 64",
-      "path": { "-d": "M.1 31.8l9.1-9.1L33.6 47l-9.1 9.1L.1 31.8zM15.3 47L54.9 7.4l9.1 9.1-39.5 39.6-9.2-9.1z" }
-    },
+		"text" : "This is a list item that includes an <a href='#'>inline link</a>",
+    "class" : "list--icon list-icon--check",
 		"link" : false,
 		"active" : false
 	}

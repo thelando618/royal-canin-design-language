@@ -1,117 +1,76 @@
-// DELETE THIS WHEN FINISHED DEV
-.gs-present--white {
-	padding: 1em;
-}
-
+// Tabs
 .rc-tabs {
 	.rc-tabs__triggers {
-		overflow: hidden;
-		margin-top: 0;
+	  overflow-y: scroll; 
+	  -webkit-overflow-scrolling: touch;
+	  margin-top: 0;
 		margin-bottom: 0;
-		width: 90%;
 	
 		li {
-			float: left;
+			display: table-cell;
 			padding-right: .25em;
+			margin-bottom: 0;
 
-	    &:last-child {
-	    	margin-bottom: .25em;
-	    }
+			&:last-of-type {
+				padding-right: 4em;
+			}
 		}
 	}
 
 	.rc-tabs__triggers__trigger {
 		color: inherit;
-		background-color: lighten( $rc-light-grey, 10% );
+		background-color: transparent;
 		cursor: pointer;
-		height: 100%;
+    border-bottom: 4px solid transparent;
+    border-bottom-color: $rc-white;
+    border-radius: 0px;
 
-		&:focus {
-			outline: none;
-		}
-
-		svg {
-			fill: $rc-light-grey-alt;
-		}
 
 		&.active {
-			background-color: #FFFFFF;
+			border-bottom-color: $rc-red;
 
-			svg {
-				fill: $rc-red;
+			// Targeting IE9 as it is having issues with borders
+			.no-flexbox & {
+				&.active {
+					background-color: $rc-red;
+					color: $rc-white;
+				}
 			}
 		}
 	}
 
 	.rc-tabs__content {
-		box-sizing: border-box;
 		background-color: #FFFFFF;
 		padding: 1em;
 		overflow: hidden;
-	}
-
-	&.rc-tabs--icons {
-		.rc-tabs__triggers {
-			.button__value {
-				display: none;
-			}
-
-			svg {
-				margin-left: 0;
-				margin-right: 0;
-			}
-		}
-	}
-
-	// Using max width to avoid setting and resetting styles using min-width queries
-	@media ( max-width: 1024px ) {
-		.rc-tabs__triggers {
-			.button__value {
-				display: none;
-			}
-
-			svg {
-				margin-left: 0;
-				margin-right: 0;
-			}
-		}
-	}
-
-	// Using flexbox (as opposed to no-flexbox), to avoid setting and resetting styles
-	.flexbox & {
-		.rc-tabs__triggers {
-			display: flex;
-			flex-wrap: wrap;
-		}
-
-		li {
-			flex: 1 1 auto;
-		}
-
-		.rc-tabs__triggers__trigger {
-			width: 100%;
-		}
 	}
 }
 
 // Tabs - Side Triggers
 .rc-tabs--side {
-	background-color: lighten( $rc-light-grey, 10% );
+	background-color: $rc-light-grey;
 	display: flex;
 
-	.rc-tabs__triggers {
-		order: 2;
-		width: 20%;
+	.rc-tabs__content {
+		flex: 1 1 85%;
+	}
 
-		li {
+	.rc-tabs__triggers {
+		display: flex;
+		flex-direction: column;
+		order: 2;
+		overflow: hidden;
+
+    li {
+    	display: flex;
+    	flex: 1 1 auto;
 			padding-right: 0;
 			margin-bottom: 0;
-			flex: 1 1 100%;
 
 			&:last-child {
-				margin-bottom: 0;
+				padding-right: 0;
 			}
-		}
+    }
 
 		.button__value {
 			display: none;
@@ -124,54 +83,35 @@
 
 	.rc-tabs__triggers__trigger {
 		padding: .75em 1em;
+		border-bottom: none;
+
+		svg {
+			fill: $rc-medium-grey;
+		}
+
+		&.active {
+			background-color: $rc-white;
+			border-bottom: none;
+
+			svg {
+				fill: $rc-red;
+			}
+		}
 	}
 
-	.rc-tabs__content {
-		order: 1;
-		width: 80%;
-	}
 
 	.no-flexbox & {
-		overflow: hidden;
-
 		.rc-tabs__triggers {
 			float: right;
-		}
 
-		.rc-tabs__content {
-			float: left;
-		}
-	}
+			li {
+				display: block;
+			}
 
-	@media ( min-width: 640px ) {
-		.rc-tabs__triggers {
-			width: 15%;
-		}
-
-		.rc-tabs__content {
-			width: 85%;
+			.rc-tabs__triggers__trigger {
+				display: block;
+				height: 100%;
+			}
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-// Move to helper class and partial and update Tabs
-.clearfix:before,
-.clearfix:after {
-	content: " ";
-	display: table;
-}
-
-.clearfix:after {
-	clear: both;
-}
-

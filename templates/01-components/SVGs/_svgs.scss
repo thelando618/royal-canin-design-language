@@ -1,2 +1,4 @@
-svg {
-}
+// When an SVG is required in CSS, it must be optimised and then URL encoded to ensure cross browser compatibility.
+// 
+// Optimise: https://jakearchibald.github.io/svgomg/
+// URL Encode: https://codepen.io/tigt/post/optimizing-svgs-in-data-uris

@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Royal Canin Web Design Language</title>
-	<script src="/assets/js/modernizr.min.js"></script>
-	<link rel="stylesheet" href="/assets/css/style.css">
-	<link rel="stylesheet" href="/assets/css/prism.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Royal Canin Web Design Language</title>
+    <script src="/assets/js/modernizr.min.js"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/prism.css">
 </head>
 
 <body>
 
 <div class="gs-nav">
-	<header class="gs-nav__header">
-		<figure class="gs-logo">
-			<img src="https://www.royalcanin.co.uk/wp-content/themes/rcuk2015/img/rc-logo-2016.png" alt="Royal Canin">
-		</figure>
+    <header class="gs-nav__header">
+        <a href="/">
+            <figure class="gs-logo">
+                <img src="https://www.royalcanin.co.uk/wp-content/themes/rcuk2015/img/rc-logo-2016.png" alt="Royal Canin">
+            </figure>
+        </a>
 
-		<!-- update to gs-nav__trigger -->
-		<div id="gs-nav-trigger">
-			<div class="gs-nav-trigger__pos">
-				<hr>
-				<hr>
-				<hr>
-			</div>
-		</div>
-	</header>
+        <!-- update to gs-nav__trigger -->
+        <div id="gs-nav-trigger">
+            <div class="gs-nav-trigger__pos">
+                <hr>
+                <hr>
+                <hr>
+            </div>
+        </div>
+    </header>
 
-	<nav class="gs-nav__nav">
-		<ul><li><a href="#" class="gs-nav__trigger">Documentation</a><ul><li><a href="/00-documentation/ui-kit.html">Ui-kit</a></li><li><a href="/00-documentation/wireframe-kit.html">Wireframe-kit</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Components</a><ul><li><a href="#" class="gs-nav__trigger">Alerts</a><ul><li><a href="/01-components/alerts/alert.html">Alert</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Buttons</a><ul><li><a href="/01-components/buttons/button-icon.html">Button-icon</a></li><li><a href="/01-components/buttons/button-loading.html">Button-loading</a></li><li><a href="/01-components/buttons/button-success.html">Button-success</a></li><li><a href="/01-components/buttons/buttons.html">Buttons</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Colours</a><ul><li><a href="/01-components/colours/colours.html">Colours</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Fonts</a><ul><li><a href="/01-components/fonts/fonts.html">Fonts</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Forms</a><ul><li><a href="/01-components/forms/forms.html">Forms</a></li><li><a href="/01-components/forms/input-states.html">Input-states</a></li><li><a href="/01-components/forms/inputs-all.html">Inputs-all</a></li><li><a href="/01-components/forms/inputs-common.html">Inputs-common</a></li><li><a href="/01-components/forms/select.html">Select</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Lists</a><ul><li><a href="/01-components/lists/list-icons.html">List-icons</a></li><li><a href="/01-components/lists/list-modifiers.html">List-modifiers</a></li><li><a href="/01-components/lists/list-ordered.html">List-ordered</a></li><li><a href="/01-components/lists/list-significant.html">List-significant</a></li><li><a href="/01-components/lists/list-unordered.html">List-unordered</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Progress</a><ul><li><a href="/01-components/progress/progress.html">Progress</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Sliders</a><ul><li><a href="/01-components/sliders/sliders.html">Sliders</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Svgs</a><ul><li><a href="/01-components/svgs/svgs.html">Svgs</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Tables</a><ul><li><a href="/01-components/tables/table.html">Table</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Tabs</a><ul><li><a href="/01-components/tabs/tabs.html">Tabs</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Tooltips</a><ul><li><a href="/01-components/tooltips/tooltips.html">Tooltips</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Typography</a><ul><li><a href="/01-components/typography/headings-class.html">Headings-class</a></li><li><a href="/01-components/typography/headings-default.html">Headings-default</a></li><li><a href="/01-components/typography/inline.html">Inline</a></li><li><a href="/01-components/typography/paragraph-image.html">Paragraph-image</a></li><li><a href="/01-components/typography/paragraph.html">Paragraph</a></li></ul></li></ul></li></ul>
-	</nav>
+    <nav class="gs-nav__nav">
+        <ul><li class="gs-nav__section toplevel"><a href="#" class="gs-nav__trigger gs-nav__link">Documentation</a><ul><li><a href="/00-documentation/ui-kit.html" class="gs-nav__link">Ui-kit</a></li><li><a href="/00-documentation/wireframe-kit.html" class="gs-nav__link">Wireframe-kit</a></li></ul></li><li class="gs-nav__section toplevel"><a href="#" class="gs-nav__trigger gs-nav__link">Components</a><ul><li><a href="/01-components/SVGs/svgs.html" class="gs-nav__trigger gs-nav__link">SVGs</a></li><li><a href="/01-components/alerts/alert.html" class="gs-nav__trigger gs-nav__link">Alerts</a></li><li><a href="/01-components/avatars/avatars.html" class="gs-nav__trigger gs-nav__link">Avatars</a></li><li class="gs-nav__section"><a href="#" class="gs-nav__trigger gs-nav__link">Buttons</a><ul><li><a href="/01-components/buttons/button-functional.html" class="gs-nav__link">Button-functional</a></li><li><a href="/01-components/buttons/button-icon.html" class="gs-nav__link">Button-icon</a></li><li><a href="/01-components/buttons/buttons.html" class="gs-nav__link">Buttons</a></li></ul></li><li><a href="/01-components/colours/colours.html" class="gs-nav__trigger gs-nav__link">Colours</a></li><li><a href="/01-components/fonts/fonts.html" class="gs-nav__trigger gs-nav__link">Fonts</a></li><li class="gs-nav__section"><a href="#" class="gs-nav__trigger gs-nav__link">Forms</a><ul><li><a href="/01-components/forms/forms.html" class="gs-nav__link">Forms</a></li><li><a href="/01-components/forms/input-states.html" class="gs-nav__link">Input-states</a></li><li><a href="/01-components/forms/inputs-all.html" class="gs-nav__link">Inputs-all</a></li><li><a href="/01-components/forms/inputs-common.html" class="gs-nav__link">Inputs-common</a></li><li><a href="/01-components/forms/select.html" class="gs-nav__link">Select</a></li></ul></li><li><a href="/01-components/interactive/interactive.html" class="gs-nav__trigger gs-nav__link">Interactive</a></li><li class="gs-nav__section"><a href="#" class="gs-nav__trigger gs-nav__link">Lists</a><ul><li><a href="/01-components/lists/list-icons.html" class="gs-nav__link">List-icons</a></li><li><a href="/01-components/lists/list-modifiers.html" class="gs-nav__link">List-modifiers</a></li><li><a href="/01-components/lists/list-ordered.html" class="gs-nav__link">List-ordered</a></li><li><a href="/01-components/lists/list-significant.html" class="gs-nav__link">List-significant</a></li><li><a href="/01-components/lists/list-unordered.html" class="gs-nav__link">List-unordered</a></li></ul></li><li class="gs-nav__section"><a href="#" class="gs-nav__trigger gs-nav__link">Progress</a><ul><li><a href="/01-components/progress/progress.html" class="gs-nav__link">Progress</a></li><li><a href="/01-components/progress/stepped-progress.html" class="gs-nav__link">Stepped-progress</a></li></ul></li><li><a href="/01-components/sliders/sliders.html" class="gs-nav__trigger gs-nav__link">Sliders</a></li><li><a href="/01-components/tables/table.html" class="gs-nav__trigger gs-nav__link">Tables</a></li><li><a href="/01-components/tabs/tabs.html" class="gs-nav__trigger gs-nav__link">Tabs</a></li><li class="gs-nav__section"><a href="#" class="gs-nav__trigger gs-nav__link">Tooltips</a><ul><li><a href="/01-components/tooltips/tooltips-popout.html" class="gs-nav__link">Tooltips-popout</a></li><li><a href="/01-components/tooltips/tooltips.html" class="gs-nav__link">Tooltips</a></li></ul></li><li class="gs-nav__section"><a href="#" class="gs-nav__trigger gs-nav__link">Typography</a><ul><li><a href="/01-components/typography/headings-default.html" class="gs-nav__link">Headings-default</a></li><li><a href="/01-components/typography/headings-modifiers.html" class="gs-nav__link">Headings-modifiers</a></li><li><a href="/01-components/typography/inline.html" class="gs-nav__link">Inline</a></li><li><a href="/01-components/typography/paragraph-image.html" class="gs-nav__link">Paragraph-image</a></li><li><a href="/01-components/typography/paragraph.html" class="gs-nav__link">Paragraph</a></li></ul></li></ul></li><li class="gs-nav__section toplevel"><a href="#" class="gs-nav__trigger gs-nav__link">Features</a><ul><li><a href="/02-features/breadcrumbs/breadcrumbs.html" class="gs-nav__trigger gs-nav__link">Breadcrumbs</a></li><li class="gs-nav__section"><a href="#" class="gs-nav__trigger gs-nav__link">Cards</a><ul><li><a href="/02-features/cards/card-details.html" class="gs-nav__link">Card-details</a></li><li><a href="/02-features/cards/card.html" class="gs-nav__link">Card</a></li><li><a href="/02-features/cards/cards.html" class="gs-nav__link">Cards</a></li></ul></li><li class="gs-nav__section"><a href="#" class="gs-nav__trigger gs-nav__link">Carousels</a><ul><li><a href="/02-features/carousels/carousel-hero.html" class="gs-nav__link">Carousel-hero</a></li><li><a href="/02-features/carousels/carousels.html" class="gs-nav__link">Carousels</a></li></ul></li><li><a href="/02-features/grid/grid.html" class="gs-nav__trigger gs-nav__link">Grid</a></li><li><a href="/02-features/image-galleries/image-galleries.html" class="gs-nav__trigger gs-nav__link">Image-galleries</a></li><li><a href="/02-features/maps/maps.html" class="gs-nav__trigger gs-nav__link">Maps</a></li><li><a href="/02-features/social/social.html" class="gs-nav__trigger gs-nav__link">Social</a></li><li><a href="/02-features/videos/videos.html" class="gs-nav__trigger gs-nav__link">Videos</a></li></ul></li></ul>
+    </nav>
 </div>
 
 
@@ -44,7 +46,7 @@
 				<p>Usage and implementation for Tabs within Web Design Language.</p>
 
 				<blockquote class="gs-stage__content__intro">
-					<h2 class="rc-head rc-head--6">Introduction</h2>
+					<h2 class="rc-head rc-head--subheadline">Introduction</h2>
 					<p>Tabs should be used when multiple related pieces of content need to be displayed in limited space when it doesn’t matter which is displayed first.</p>
 					<p>Tab buttons can be displayed with an icon or as plain text in the same way as a standard button.</p>
 					<p>Whilst this component is flexible enough to accommodate any number of tabs and any amount of content in the content boxes, it is recommended than when using it, you follow these guidelines:</p>
@@ -60,7 +62,7 @@
 				</blockquote>
 			</header>
 
-			<h2 class="gs-stage__content__head-tag">Examples</h2>
+			<h2 class="gs-stage__content__head-tag rc-head--subheadline">Examples</h2>
 
 			<section class="gs-present gs-present--white">
 				<header>
@@ -72,23 +74,23 @@
 
 	<ul class="list--blank list--align rc-tabs__triggers">
 		<li>
-			<button class="rc-tabs__triggers__trigger" data-tab='rc-tab__1'><span class="button__value">Trigger One</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">clock</title><path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm3.6-26.5V14.4c0-1.9-1.6-3.5-3.5-3.5s-3.5 1.6-3.5 3.5v19l13 13c.7.7 1.6 1 2.5 1s1.8-.3 2.5-1c1.4-1.4 1.4-3.6 0-4.9l-11-11z"></path></svg></button>			
+			<button class="rc-tabs__triggers__trigger" data-tab="rc-tab__1">Trigger One</button>
 		</li>
 
 		<li>
-			<button class="rc-tabs__triggers__trigger" data-tab='rc-tab__2'><span class="button__value">Trigger Two</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">mobile</title><path d="M39.1 0H2.5C1.1 0 0 1.1 0 2.5v59C0 62.9 1.1 64 2.5 64h36.6c1.4 0 2.5-1.1 2.5-2.5v-59c0-1.4-1.1-2.5-2.5-2.5zM21.3 61.5c-1.9.4-3.6-1.3-3.2-3.2.2-1.1 1.1-2 2.2-2.2 1.9-.4 3.6 1.3 3.2 3.2-.2 1.1-1.1 2-2.2 2.2zm14.2-7.6H6.1s-.1 0-.1-.1V6.1s0-.1.1-.1h29.5s.1 0 .1.1l-.2 47.8c.1 0 .1 0 0 0z"></path></svg></button>			
+			<button class="rc-tabs__triggers__trigger" data-tab="rc-tab__2">Trigger Two</button>
 		</li>
 
 		<li>
-			<button class="rc-tabs__triggers__trigger" data-tab='rc-tab__3'><span class="button__value">Trigger Three</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">play</title><path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm-2.6-34.1c-.7-.5-1.6 0-1.6.8v16.6c0 .8.9 1.3 1.6.8l11.7-8.3c.6-.4.6-1.2 0-1.6l-11.7-8.3z"></path></svg></button>			
+			<button class="rc-tabs__triggers__trigger" data-tab="rc-tab__3">Trigger Three</button>
 		</li>
 
 		<li>
-			<button class="rc-tabs__triggers__trigger" data-tab='rc-tab__4'><span class="button__value">Trigger Four</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">play</title><path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm-2.6-34.1c-.7-.5-1.6 0-1.6.8v16.6c0 .8.9 1.3 1.6.8l11.7-8.3c.6-.4.6-1.2 0-1.6l-11.7-8.3z"></path></svg></button>			
+			<button class="rc-tabs__triggers__trigger" data-tab="rc-tab__4">Trigger Four</button>
 		</li>
 
 		<li>
-			<button class="rc-tabs__triggers__trigger" data-tab='rc-tab__5'><span class="button__value">Trigger Five</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">play</title><path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm-2.6-34.1c-.7-.5-1.6 0-1.6.8v16.6c0 .8.9 1.3 1.6.8l11.7-8.3c.6-.4.6-1.2 0-1.6l-11.7-8.3z"></path></svg></button>			
+			<button class="rc-tabs__triggers__trigger" data-tab="rc-tab__5">Trigger Five</button>
 		</li>
 
 	</ul>
@@ -139,23 +141,23 @@
 
 	<ul class="list--blank list--align rc-tabs__triggers">
 		<li>
-			<button class="rc-tabs__triggers__trigger" data-tab='rc-tab__1'><span class="button__value">Trigger One</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">clock</title><path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm3.6-26.5V14.4c0-1.9-1.6-3.5-3.5-3.5s-3.5 1.6-3.5 3.5v19l13 13c.7.7 1.6 1 2.5 1s1.8-.3 2.5-1c1.4-1.4 1.4-3.6 0-4.9l-11-11z"></path></svg></button>			
+			<button class="rc-tabs__triggers__trigger" data-tab="rc-tab__1">Trigger One</button>
 		</li>
 
 		<li>
-			<button class="rc-tabs__triggers__trigger" data-tab='rc-tab__2'><span class="button__value">Trigger Two</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">mobile</title><path d="M39.1 0H2.5C1.1 0 0 1.1 0 2.5v59C0 62.9 1.1 64 2.5 64h36.6c1.4 0 2.5-1.1 2.5-2.5v-59c0-1.4-1.1-2.5-2.5-2.5zM21.3 61.5c-1.9.4-3.6-1.3-3.2-3.2.2-1.1 1.1-2 2.2-2.2 1.9-.4 3.6 1.3 3.2 3.2-.2 1.1-1.1 2-2.2 2.2zm14.2-7.6H6.1s-.1 0-.1-.1V6.1s0-.1.1-.1h29.5s.1 0 .1.1l-.2 47.8c.1 0 .1 0 0 0z"></path></svg></button>			
+			<button class="rc-tabs__triggers__trigger" data-tab="rc-tab__2">Trigger Two</button>
 		</li>
 
 		<li>
-			<button class="rc-tabs__triggers__trigger" data-tab='rc-tab__3'><span class="button__value">Trigger Three</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">play</title><path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm-2.6-34.1c-.7-.5-1.6 0-1.6.8v16.6c0 .8.9 1.3 1.6.8l11.7-8.3c.6-.4.6-1.2 0-1.6l-11.7-8.3z"></path></svg></button>			
+			<button class="rc-tabs__triggers__trigger" data-tab="rc-tab__3">Trigger Three</button>
 		</li>
 
 		<li>
-			<button class="rc-tabs__triggers__trigger" data-tab='rc-tab__4'><span class="button__value">Trigger Four</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">play</title><path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm-2.6-34.1c-.7-.5-1.6 0-1.6.8v16.6c0 .8.9 1.3 1.6.8l11.7-8.3c.6-.4.6-1.2 0-1.6l-11.7-8.3z"></path></svg></button>			
+			<button class="rc-tabs__triggers__trigger" data-tab="rc-tab__4">Trigger Four</button>
 		</li>
 
 		<li>
-			<button class="rc-tabs__triggers__trigger" data-tab='rc-tab__5'><span class="button__value">Trigger Five</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">play</title><path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm-2.6-34.1c-.7-.5-1.6 0-1.6.8v16.6c0 .8.9 1.3 1.6.8l11.7-8.3c.6-.4.6-1.2 0-1.6l-11.7-8.3z"></path></svg></button>			
+			<button class="rc-tabs__triggers__trigger" data-tab="rc-tab__5">Trigger Five</button>
 		</li>
 
 	</ul>
@@ -213,23 +215,23 @@
 
 	<ul class="list--blank list--align rc-tabs__triggers">
 		<li>
-			<button class="rc-tabs__triggers__trigger" data-tab='rc-tab__1'><span class="button__value">Trigger One</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">clock</title><path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm3.6-26.5V14.4c0-1.9-1.6-3.5-3.5-3.5s-3.5 1.6-3.5 3.5v19l13 13c.7.7 1.6 1 2.5 1s1.8-.3 2.5-1c1.4-1.4 1.4-3.6 0-4.9l-11-11z"></path></svg></button>			
+			<button class="rc-tabs__triggers__trigger" data-tab='rc-tab--side__1'><span class="button__value">Trigger One</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">clock</title><path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm3.6-26.5V14.4c0-1.9-1.6-3.5-3.5-3.5s-3.5 1.6-3.5 3.5v19l13 13c.7.7 1.6 1 2.5 1s1.8-.3 2.5-1c1.4-1.4 1.4-3.6 0-4.9l-11-11z"></path></svg></button>			
 		</li>
 
 		<li>
-			<button class="rc-tabs__triggers__trigger" data-tab='rc-tab__2'><span class="button__value">Trigger Two</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">mobile</title><path d="M39.1 0H2.5C1.1 0 0 1.1 0 2.5v59C0 62.9 1.1 64 2.5 64h36.6c1.4 0 2.5-1.1 2.5-2.5v-59c0-1.4-1.1-2.5-2.5-2.5zM21.3 61.5c-1.9.4-3.6-1.3-3.2-3.2.2-1.1 1.1-2 2.2-2.2 1.9-.4 3.6 1.3 3.2 3.2-.2 1.1-1.1 2-2.2 2.2zm14.2-7.6H6.1s-.1 0-.1-.1V6.1s0-.1.1-.1h29.5s.1 0 .1.1l-.2 47.8c.1 0 .1 0 0 0z"></path></svg></button>			
+			<button class="rc-tabs__triggers__trigger" data-tab='rc-tab--side__2'><span class="button__value">Trigger Two</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.6 64" aria-labelledby="title" role="img"><title id="title">mobile</title><path d="M39.1 0H2.5C1.1 0 0 1.1 0 2.5v59C0 62.9 1.1 64 2.5 64h36.6c1.4 0 2.5-1.1 2.5-2.5v-59c0-1.4-1.1-2.5-2.5-2.5zM21.3 61.5c-1.9.4-3.6-1.3-3.2-3.2.2-1.1 1.1-2 2.2-2.2 1.9-.4 3.6 1.3 3.2 3.2-.2 1.1-1.1 2-2.2 2.2zm14.2-7.6H6.1s-.1 0-.1-.1V6.1s0-.1.1-.1h29.5s.1 0 .1.1l-.2 47.8c.1 0 .1 0 0 0z"></path></svg></button>			
 		</li>
 
 		<li>
-			<button class="rc-tabs__triggers__trigger" data-tab='rc-tab__3'><span class="button__value">Trigger Three</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">play</title><path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm-2.6-34.1c-.7-.5-1.6 0-1.6.8v16.6c0 .8.9 1.3 1.6.8l11.7-8.3c.6-.4.6-1.2 0-1.6l-11.7-8.3z"></path></svg></button>			
+			<button class="rc-tabs__triggers__trigger" data-tab='rc-tab--side__3'><span class="button__value">Trigger Three</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">play</title><path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm-2.6-34.1c-.7-.5-1.6 0-1.6.8v16.6c0 .8.9 1.3 1.6.8l11.7-8.3c.6-.4.6-1.2 0-1.6l-11.7-8.3z"></path></svg></button>			
 		</li>
 
 		<li>
-			<button class="rc-tabs__triggers__trigger" data-tab='rc-tab__4'><span class="button__value">Trigger Four</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">play</title><path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm-2.6-34.1c-.7-.5-1.6 0-1.6.8v16.6c0 .8.9 1.3 1.6.8l11.7-8.3c.6-.4.6-1.2 0-1.6l-11.7-8.3z"></path></svg></button>			
+			<button class="rc-tabs__triggers__trigger" data-tab='rc-tab--side__4'><span class="button__value">Trigger Four</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55.5 64" aria-labelledby="title" role="img"><title id="title">profile</title><path d="M0 64h55.5s0-20.8-16.9-27.1c5.5-3.6 9.2-9.8 9.2-16.8 0-11.1-9-20-20-20s-20 9-20 20c0 7.1 3.7 13.3 9.2 16.8C0 43.2 0 64 0 64zM27.8 6c7.7 0 14 6.3 14 14s-6.3 14-14 14-14-6.3-14-14c-.1-7.7 6.2-14 14-14zm0 35c9 0 15.1 3.5 18.7 10.8 1.1 2.1 1.7 4.3 2.2 6.2H6.8c.5-1.9 1.2-4.1 2.2-6.2C12.6 44.6 18.8 41 27.8 41z"></path></svg></button>			
 		</li>
 
 		<li>
-			<button class="rc-tabs__triggers__trigger" data-tab='rc-tab__5'><span class="button__value">Trigger Five</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">play</title><path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm-2.6-34.1c-.7-.5-1.6 0-1.6.8v16.6c0 .8.9 1.3 1.6.8l11.7-8.3c.6-.4.6-1.2 0-1.6l-11.7-8.3z"></path></svg></button>			
+			<button class="rc-tabs__triggers__trigger" data-tab='rc-tab--side__5'><span class="button__value">Trigger Five</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">search</title><path d="M56 8c-5.3-5.3-12.3-8-19.2-8-7 0-13.9 2.7-19.2 8-9.3 9.3-10.5 23.8-3.4 34.4L1.5 55c-2.1 2.1-2.1 5.4 0 7.5s5.4 2.1 7.5 0l12.6-12.6c4.6 3.1 9.8 4.6 15.1 4.6 7 0 13.9-2.7 19.2-8C66.6 35.8 66.6 18.6 56 8zm-4.9 33.5c-3.8 3.8-8.9 5.9-14.3 5.9s-10.5-2.1-14.3-5.9c-7.9-7.9-7.9-20.7 0-28.6C26.3 9.1 31.4 7 36.8 7s10.5 2.1 14.3 5.9c3.8 3.8 5.9 8.9 5.9 14.3s-2.1 10.5-5.9 14.3z"></path></svg></button>			
 		</li>
 
 	</ul>
@@ -237,12 +239,12 @@
 
 	<div class="rc-tabs__content">
 
-		<div class="rc-tabs__content__single clearfix" id="rc-tab__1">
+		<div class="rc-tabs__content__single clearfix" id="rc-tab--side__1">
 			<p>Content One</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		</div>
 
-		<div class="rc-tabs__content__single clearfix" id="rc-tab__2">
+		<div class="rc-tabs__content__single clearfix" id="rc-tab--side__2">
 			<figure class="alignleft">
 				<img src="http://placehold.it/800x600" alt="Hello">
 				<figcaption>This is the figcaption</figcaption>
@@ -253,12 +255,12 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		</div>
 
-		<div class="rc-tabs__content__single clearfix" id="rc-tab__3">
+		<div class="rc-tabs__content__single clearfix" id="rc-tab--side__3">
 			<p>Content Three</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		</div>
 
-		<div class="rc-tabs__content__single clearfix" id="rc-tab__4">
+		<div class="rc-tabs__content__single clearfix" id="rc-tab--side__4">
 			<img src="http://placehold.it/800x600" alt="Hello" class="alignright">
 
 			<p>Content Four</p>
@@ -266,7 +268,7 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		</div>
 
-		<div class="rc-tabs__content__single clearfix" id="rc-tab__5">
+		<div class="rc-tabs__content__single clearfix" id="rc-tab--side__5">
 			<p>Content Five</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		</div>
@@ -280,23 +282,23 @@
 
 	<ul class="list--blank list--align rc-tabs__triggers">
 		<li>
-			<button class="rc-tabs__triggers__trigger" data-tab='rc-tab__1'><span class="button__value">Trigger One</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">clock</title><path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm3.6-26.5V14.4c0-1.9-1.6-3.5-3.5-3.5s-3.5 1.6-3.5 3.5v19l13 13c.7.7 1.6 1 2.5 1s1.8-.3 2.5-1c1.4-1.4 1.4-3.6 0-4.9l-11-11z"></path></svg></button>			
+			<button class="rc-tabs__triggers__trigger" data-tab='rc-tab--side__1'><span class="button__value">Trigger One</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">clock</title><path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm3.6-26.5V14.4c0-1.9-1.6-3.5-3.5-3.5s-3.5 1.6-3.5 3.5v19l13 13c.7.7 1.6 1 2.5 1s1.8-.3 2.5-1c1.4-1.4 1.4-3.6 0-4.9l-11-11z"></path></svg></button>			
 		</li>
 
 		<li>
-			<button class="rc-tabs__triggers__trigger" data-tab='rc-tab__2'><span class="button__value">Trigger Two</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">mobile</title><path d="M39.1 0H2.5C1.1 0 0 1.1 0 2.5v59C0 62.9 1.1 64 2.5 64h36.6c1.4 0 2.5-1.1 2.5-2.5v-59c0-1.4-1.1-2.5-2.5-2.5zM21.3 61.5c-1.9.4-3.6-1.3-3.2-3.2.2-1.1 1.1-2 2.2-2.2 1.9-.4 3.6 1.3 3.2 3.2-.2 1.1-1.1 2-2.2 2.2zm14.2-7.6H6.1s-.1 0-.1-.1V6.1s0-.1.1-.1h29.5s.1 0 .1.1l-.2 47.8c.1 0 .1 0 0 0z"></path></svg></button>			
+			<button class="rc-tabs__triggers__trigger" data-tab='rc-tab--side__2'><span class="button__value">Trigger Two</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.6 64" aria-labelledby="title" role="img"><title id="title">mobile</title><path d="M39.1 0H2.5C1.1 0 0 1.1 0 2.5v59C0 62.9 1.1 64 2.5 64h36.6c1.4 0 2.5-1.1 2.5-2.5v-59c0-1.4-1.1-2.5-2.5-2.5zM21.3 61.5c-1.9.4-3.6-1.3-3.2-3.2.2-1.1 1.1-2 2.2-2.2 1.9-.4 3.6 1.3 3.2 3.2-.2 1.1-1.1 2-2.2 2.2zm14.2-7.6H6.1s-.1 0-.1-.1V6.1s0-.1.1-.1h29.5s.1 0 .1.1l-.2 47.8c.1 0 .1 0 0 0z"></path></svg></button>			
 		</li>
 
 		<li>
-			<button class="rc-tabs__triggers__trigger" data-tab='rc-tab__3'><span class="button__value">Trigger Three</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">play</title><path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm-2.6-34.1c-.7-.5-1.6 0-1.6.8v16.6c0 .8.9 1.3 1.6.8l11.7-8.3c.6-.4.6-1.2 0-1.6l-11.7-8.3z"></path></svg></button>			
+			<button class="rc-tabs__triggers__trigger" data-tab='rc-tab--side__3'><span class="button__value">Trigger Three</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">play</title><path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm-2.6-34.1c-.7-.5-1.6 0-1.6.8v16.6c0 .8.9 1.3 1.6.8l11.7-8.3c.6-.4.6-1.2 0-1.6l-11.7-8.3z"></path></svg></button>			
 		</li>
 
 		<li>
-			<button class="rc-tabs__triggers__trigger" data-tab='rc-tab__4'><span class="button__value">Trigger Four</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">play</title><path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm-2.6-34.1c-.7-.5-1.6 0-1.6.8v16.6c0 .8.9 1.3 1.6.8l11.7-8.3c.6-.4.6-1.2 0-1.6l-11.7-8.3z"></path></svg></button>			
+			<button class="rc-tabs__triggers__trigger" data-tab='rc-tab--side__4'><span class="button__value">Trigger Four</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55.5 64" aria-labelledby="title" role="img"><title id="title">profile</title><path d="M0 64h55.5s0-20.8-16.9-27.1c5.5-3.6 9.2-9.8 9.2-16.8 0-11.1-9-20-20-20s-20 9-20 20c0 7.1 3.7 13.3 9.2 16.8C0 43.2 0 64 0 64zM27.8 6c7.7 0 14 6.3 14 14s-6.3 14-14 14-14-6.3-14-14c-.1-7.7 6.2-14 14-14zm0 35c9 0 15.1 3.5 18.7 10.8 1.1 2.1 1.7 4.3 2.2 6.2H6.8c.5-1.9 1.2-4.1 2.2-6.2C12.6 44.6 18.8 41 27.8 41z"></path></svg></button>			
 		</li>
 
 		<li>
-			<button class="rc-tabs__triggers__trigger" data-tab='rc-tab__5'><span class="button__value">Trigger Five</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">play</title><path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm-2.6-34.1c-.7-.5-1.6 0-1.6.8v16.6c0 .8.9 1.3 1.6.8l11.7-8.3c.6-.4.6-1.2 0-1.6l-11.7-8.3z"></path></svg></button>			
+			<button class="rc-tabs__triggers__trigger" data-tab='rc-tab--side__5'><span class="button__value">Trigger Five</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img"><title id="title">search</title><path d="M56 8c-5.3-5.3-12.3-8-19.2-8-7 0-13.9 2.7-19.2 8-9.3 9.3-10.5 23.8-3.4 34.4L1.5 55c-2.1 2.1-2.1 5.4 0 7.5s5.4 2.1 7.5 0l12.6-12.6c4.6 3.1 9.8 4.6 15.1 4.6 7 0 13.9-2.7 19.2-8C66.6 35.8 66.6 18.6 56 8zm-4.9 33.5c-3.8 3.8-8.9 5.9-14.3 5.9s-10.5-2.1-14.3-5.9c-7.9-7.9-7.9-20.7 0-28.6C26.3 9.1 31.4 7 36.8 7s10.5 2.1 14.3 5.9c3.8 3.8 5.9 8.9 5.9 14.3s-2.1 10.5-5.9 14.3z"></path></svg></button>			
 		</li>
 
 	</ul>
@@ -304,12 +306,12 @@
 
 	<div class="rc-tabs__content">
 
-		<div class="rc-tabs__content__single clearfix" id="rc-tab__1">
+		<div class="rc-tabs__content__single clearfix" id="rc-tab--side__1">
 			<p>Content One</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		</div>
 
-		<div class="rc-tabs__content__single clearfix" id="rc-tab__2">
+		<div class="rc-tabs__content__single clearfix" id="rc-tab--side__2">
 			<figure class="alignleft">
 				<img src="http://placehold.it/800x600" alt="Hello">
 				<figcaption>This is the figcaption</figcaption>
@@ -320,12 +322,12 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		</div>
 
-		<div class="rc-tabs__content__single clearfix" id="rc-tab__3">
+		<div class="rc-tabs__content__single clearfix" id="rc-tab--side__3">
 			<p>Content Three</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		</div>
 
-		<div class="rc-tabs__content__single clearfix" id="rc-tab__4">
+		<div class="rc-tabs__content__single clearfix" id="rc-tab--side__4">
 			<img src="http://placehold.it/800x600" alt="Hello" class="alignright">
 
 			<p>Content Four</p>
@@ -333,7 +335,7 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		</div>
 
-		<div class="rc-tabs__content__single clearfix" id="rc-tab__5">
+		<div class="rc-tabs__content__single clearfix" id="rc-tab--side__5">
 			<p>Content Five</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		</div>
@@ -348,7 +350,7 @@
 
 		<section class="gs-section gs-changelog">
 			<header>
-				<h1 class="rc-head rc-head--4 gs-section__head">Changelog</h1>
+				<h1 class="rc-head rc-head--subheadline gs-section__head">Changelog</h1>
 			</header>
 
 			<div class="gs-section__content">
@@ -364,7 +366,7 @@
 
 		<section class="gs-section gs-issues">
 	<header>
-		<h1 class="rc-head rc-head--4 gs-section__head">Issues</h1>
+		<h1 class="rc-head rc-head--subheadline gs-section__head">Issues</h1>
 		<div class="gs-section__logo">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 120" aria-labelledby="title" role="img">
 				<title id="title">Github</title>
@@ -383,7 +385,7 @@
 
 		<section class="gs-section gs-feedback">
 	<header>
-		<h1 class="rc-head rc-head--4 gs-section__head">Feedback</h1>
+		<h1 class="rc-head rc-head--subheadline gs-section__head">Feedback</h1>
 		<div class="gs-section__logo">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 143" aria-labelledby="title" role="img">
 				<title id="title">Slack</title>
@@ -404,7 +406,7 @@
 	</header>
 
 	<div class="gs-section__content">
-		<p>If you would like to offer feedback on the design of this component, please join the Web Design Language <a href="#">Slack</a> channel.</p>
+		<p>If you would like to offer feedback on the design of this component, please <a href="mailto:&#100;&#097;&#110;&#046;&#115;&#104;&#111;&#114;&#101;&#109;&#097;&#110;&#064;&#102;&#105;&#114;&#115;&#116;&#049;&#048;&#046;&#099;&#111;&#046;&#117;&#107;">send an email</a> requesting access to the Web Design Language Slack channel.</p>
 	</div>
 </section>
 
@@ -414,9 +416,14 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="/assets/js/scripts.min.js"></script>
 <script src="/assets/js/prism.js"></script>
+<script src="/assets/js/slick.min.js"></script>
+<script src="/assets/js/datepicker.min.js"></script>
+<script src="/assets/js/nouislider.min.js"></script>
+<script src="/assets/js/select2.min.js"></script>
 <script src="/assets/js/styleguide.js"></script>
+<script src="/assets/js/scripts.min.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQ7i7zivBcb6rUxcnB-7yJFlgzbwXnjcw&callback=initMap"></script>
 
 </body>
 </html>

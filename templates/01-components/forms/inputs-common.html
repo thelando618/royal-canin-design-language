@@ -11,13 +11,13 @@
 				<p>Usage and implementation for Forms within Web Design Language.</p>
 
 				<blockquote class="gs-stage__content__intro">
-					<h2 class="rc-head rc-head--6">Introduction</h2>
+					<h2 class="rc-head rc-head--subheadline">Introduction</h2>
 					<p>Form elements will ensure rapid form development is a possibility.</p>
 					<p>Strict markup will ensure all form elements are displayed correctly</p>
 				</blockquote>
 			</header>
 
-			<h2 class="gs-stage__content__head-tag">Examples</h2>
+			<h2 class="gs-stage__content__head-tag rc-head--subheadline">Examples</h2>
 
 			<section class="gs-present">
 				<header>
@@ -54,12 +54,16 @@
 					<label class="gs-present__label">Type - Date</label>
 				</header>
 
-				@@include('./01-components/forms/_input-no-placeholder.html', {
-					"type": "date"
+				@@include('./01-components/forms/_input-date.html', {
+					"id": "1",
+					"mode": "ddmmyyyy",
+					"placeholder": "DD-MM-YYYY"
 				})
 
-				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-no-placeholder.html', {
-					"type": "date"
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_input-date.html', {
+					"id": "1",
+					"mode": "ddmmyyyy",
+					"placeholder": "DD-MM-YYYY"
 				})</code></pre>
 			</section>
 
@@ -68,6 +72,7 @@
 					<label class="gs-present__label">Type - Email</label>
 					<p>The Email Input has access to the <code class="language-scss">:valid</code> and <code class="language-scss">:invalid</code> pseudo-classes.</p>
 					<p>Only the <code class="language-scss">:invalid</code> pseudo-class is used as a visual indicator.</p>
+					<p>&nbsp;</p>
 				</header>
 
 				@@include('./01-components/forms/_input-standard.html', {
@@ -82,6 +87,7 @@
 			<section class="gs-present">
 				<header>
 					<label class="gs-present__label">Type - Number</label>
+					<p>&nbsp;</p>
 				</header>
 
 				@@include('./01-components/forms/_input-standard.html', {
@@ -111,6 +117,7 @@
 			<section class="gs-present">
 				<header>
 					<label class="gs-present__label">Type - Search</label>
+					<p>&nbsp;</p>
 				</header>
 
 				@@include('./01-components/forms/_input-standard.html', {
@@ -141,6 +148,7 @@
 			<section class="gs-present">
 				<header>
 					<label class="gs-present__label">Type - Text</label>
+					<p>&nbsp;</p>
 				</header>
 
 				@@include('./01-components/forms/_input-standard.html', {
@@ -155,6 +163,7 @@
 			<section class="gs-present">
 				<header>
 					<label class="gs-present__label">Type - Password</label>
+					<p>&nbsp;</p>
 				</header>
 
 				@@include('./01-components/forms/_input-standard.html', {
@@ -169,18 +178,23 @@
 			<section class="gs-present">
 				<header>
 					<label class="gs-present__label">Textarea</label>
+					<p>&nbsp;</p>
 				</header>
 
-				@@include('./01-components/forms/_textarea.html')
+				@@include('./01-components/forms/_textarea.html', {
+					"type": "textarea"
+				})
 
-				<pre><code class="gs-code language-html">@@include('./01-components/forms/_textarea.html')</code></pre>
+				<pre><code class="gs-code language-html">@@include('./01-components/forms/_textarea.html', {
+					"type": "textarea"
+				})</code></pre>
 			</section>
 
 		</div>
 
 		<section class="gs-section gs-changelog">
 			<header>
-				<h1 class="rc-head rc-head--4 gs-section__head">Changelog</h1>
+				<h1 class="rc-head rc-head--subheadline gs-section__head">Changelog</h1>
 			</header>
 
 			<div class="gs-section__content">

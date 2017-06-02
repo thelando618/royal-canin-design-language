@@ -2,23 +2,12 @@
 
 @import 'gs-styles';
 
+@import 'global';
+
 @import 'functions';
 
-
-/* @todo SEE IF THIS CAN BE IMPROVED AND MOVE INTO A MEDIA FILE */
-.video-wrapper {
-	position: relative;
-	padding-bottom: 56.25%;
-	padding-top: 25px;
-	height: 0;
-
-	iframe, embed {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;		
-	}
-}
+@import 'media';
 
 @import '../../01-components/01-components';
+
+@import '../../02-features/02-features';

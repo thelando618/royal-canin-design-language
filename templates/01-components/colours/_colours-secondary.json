@@ -1,122 +1,34 @@
 [
   {
     "colour": {
-      "name": "Blue",
-      "hex": "#1E3170",
-      "sass": "$rc-blue",
-      "class": "fill--rc-blue"
+      "name": "Text",
+      "hex": "#444444",
+      "sass": "$rc-text",
+      "class": "fill--rc-text"
     }
   },
   {
     "colour": {
-      "name": "Blue Hover",
-      "hex": "#152558",
-      "sass": "$rc-blue--hover",
-      "class": "fill--rc-blue--hover"
+      "name": "Functional",
+      "hex": "#8EC9D6",
+      "sass": "$rc-functional",
+      "class": "fill--rc-functional"
     }
   },
   {
     "colour": {
-      "name": "Blue Active",
-      "hex": "#0C1533",
-      "sass": "$rc-blue--active",
-      "class": "fill--rc-blue--active"
+      "name": "Success",
+      "hex": "#5FCC78",
+      "sass": "$rc-success",
+      "class": "fill--rc-success"
     }
   },
   {
     "colour": {
-      "name": "Dark Grey",
-      "hex": "#58585B",
-      "sass": "$rc-dark-grey",
-      "class": "fill--rc-dark-grey"
-    }
-  },
-  {
-    "colour": {
-      "name": "Dark Grey Hover",
-      "hex": "#49494B",
-      "sass": "$rc-dark-grey--hover",
-      "class": "fill--rc-dark-grey--hover"
-    }
-  },
-  {
-    "colour": {
-      "name": "Dark Grey Active",
-      "hex": "#373738",
-      "sass": "$rc-dark-grey--active",
-      "class": "fill--rc-dark-grey--active"
-    }
-  },
-  {
-    "colour": {
-      "name": "Green",
-      "hex": "#006341",
-      "sass": "$rc-green",
-      "class": "fill--rc-green"
-    }
-  },
-  {
-    "colour": {
-      "name": "Green Hover",
-      "hex": "#015336",
-      "sass": "$rc-green--hover",
-      "class": "fill--rc-green--hover"
-    }
-  },
-  {
-    "colour": {
-      "name": "Green Active",
-      "hex": "#00432C",
-      "sass": "$rc-green--active",
-      "class": "fill--rc-green--active"
-    }
-  },
-  {
-    "colour": {
-      "name": "Warm Grey",
-      "hex": "#968C83",
-      "sass": "$rc-warm-grey",
-      "class": "fill--rc-warm-grey"
-    }
-  },
-  {
-    "colour": {
-      "name": "Warm Grey Hover",
-      "hex": "#857E77",
-      "sass": "$rc-warm-grey--hover",
-      "class": "fill--rc-warm-grey--hover"
-    }
-  },
-  {
-    "colour": {
-      "name": "Warm Grey Active",
-      "hex": "#716B65",
-      "sass": "$rc-warm-grey--active",
-      "class": "fill--rc-warm-grey--active"
-    }
-  },
-  {
-    "colour": {
-      "name": "Light Grey (Alt)",
-      "hex": "#A7A9AB",
-      "sass": "$rc-light-grey-alt",
-      "class": "fill--rc-light-grey-alt"
-    }
-  },
-  {
-    "colour": {
-      "name": "Light Grey (Alt) Hover",
-      "hex": "#929496",
-      "sass": "$rc-light-grey-alt--hover",
-      "class": "fill--rc-light-grey-alt--hover"
-    }
-  },
-  {
-    "colour": {
-      "name": "Light Grey (Alt) Active",
-      "hex": "#7B7C7D",
-      "sass": "$rc-light-grey-alt--active",
-      "class": "fill--rc-light-grey-alt--active"
+      "name": "Error",
+      "hex": "#C71838",
+      "sass": "$rc-error",
+      "class": "fill--rc-error"
     }
   }
 ]

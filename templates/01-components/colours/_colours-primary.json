@@ -9,46 +9,6 @@
   },
   {
     "colour": {
-      "name": "Red Hover",
-      "hex": "#C30C21",
-      "sass": "$rc-red--hover",
-      "class": "fill--rc-red--hover"
-    }
-  },
-  {
-    "colour": {
-      "name": "Red Active",
-      "hex": "#A51425",
-      "sass": "$rc-red--active",
-      "class": "fill--rc-red--active"
-    }
-  },
-  {
-    "colour": {
-      "name": "Light Grey",
-      "hex": "#D8D8D8",
-      "sass": "$rc-light-grey",
-      "class": "fill--rc-light-grey"
-    }
-  },
-  {
-    "colour": {
-      "name": "Light Grey Hover",
-      "hex": "#C6C6C6",
-      "sass": "$rc-light-grey--hover",
-      "class": "fill--rc-light-grey--hover"
-    }
-  },
-  {
-    "colour": {
-      "name": "Light Grey Active",
-      "hex": "#B3B3B3",
-      "sass": "$rc-light-grey--active",
-      "class": "fill--rc-light-grey--active"
-    }
-  },
-  {
-    "colour": {
       "name": "Medium Grey",
       "hex": "#87888A",
       "sass": "$rc-medium-grey",
@@ -57,18 +17,18 @@
   },
   {
     "colour": {
-      "name": "Medium Grey Hover",
-      "hex": "#707173",
-      "sass": "$rc-medium-grey--hover",
-      "class": "fill--rc-medium-grey--hover"
+      "name": "Light Grey",
+      "hex": "#EAEAEA",
+      "sass": "$rc-light-grey",
+      "class": "fill--rc-light-grey"
     }
   },
   {
     "colour": {
-      "name": "Medium Grey Active",
-      "hex": "#575859",
-      "sass": "$rc-medium-grey--active",
-      "class": "fill--rc-medium-grey--active"
+      "name": "White",
+      "hex": "#FFFFFF",
+      "sass": "$rc-white",
+      "class": "gs__dark fill--rc-white"
     }
   }
 ]

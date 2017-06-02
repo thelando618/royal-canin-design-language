@@ -1,180 +1,111 @@
 // Primary Colours
 $rc-red: #E2001A;
-
 .fill--rc-red {
 	background-color: $rc-red;
+
+	&:hover, &:focus {
+		background-color: darken( $rc-red, 5% );
+	}
+
+	&:active {
+		background-color: darken( $rc-red, 15% );
+	}
 }
 
-$rc-red--hover: #C30C21;
-
-.fill--rc-red--hover {
-	background-color: $rc-red--hover;
+.color--red {
+	color: $rc-red;
 }
-
-$rc-red--active: #A51425;
-
-.fill--rc-red--active {
-	background-color: $rc-red--active;
-}
-
-
-
-$rc-light-grey: #D8D8D8;
-
-.fill--rc-light-grey {
-	background-color: $rc-light-grey;
-}
-
-$rc-light-grey--hover: #C6C6C6;
-
-.fill--rc-light-grey--hover {
-	background-color: $rc-light-grey--hover;
-}
-
-$rc-light-grey--active: #B3B3B3;
-
-.fill--rc-light-grey--active {
-	background-color: $rc-light-grey--active;
-}
-
-
-
-$rc-light-grey-alt: #A7A9AB;
-
-.fill--rc-light-grey-alt {
-	background-color: $rc-light-grey-alt;
-}
-
-$rc-light-grey-alt--hover: #929496;
-
-.fill--rc-light-grey-alt--hover {
-	background-color: $rc-light-grey-alt--hover;
-}
-
-$rc-light-grey-alt--active: #7B7C7D;
-
-.fill--rc-light-grey-alt--active {
-	background-color: $rc-light-grey-alt--active;
-}
-
 
 
 $rc-medium-grey: #87888A;
-
 .fill--rc-medium-grey {
 	background-color: $rc-medium-grey;
+
+	&:hover, &:focus {
+		background-color: darken( $rc-medium-grey, 5% );
+	}
+
+	&:active {
+		background-color: darken( $rc-medium-grey, 15% );
+	}
 }
 
-$rc-medium-grey--hover: #707173;
+$rc-light-grey: #EAEAEA;
+.fill--rc-light-grey {
+	background-color: $rc-light-grey;
 
-.fill--rc-medium-grey--hover {
-	background-color: $rc-medium-grey--hover;
+	&:hover, &:focus {
+		background-color: darken( $rc-light-grey, 5% );
+	}
+
+	&:active {
+		background-color: darken( $rc-light-grey, 15% );
+	}
 }
 
-$rc-medium-grey--active: #575859;
+$rc-white: #FFFFFF;
+.fill--rc-white {
+	background-color: $rc-white;
 
-.fill--rc-medium-grey--active {
-	background-color: $rc-medium-grey--active;
+	&:hover, &:focus {
+		background-color: darken( $rc-white, 5% );
+	}
+
+	&:active {
+		background-color: darken( $rc-white, 15% );
+	}
 }
-
-
-
-$rc-dark-grey: #58585B;
-
-.fill--rc-dark-grey {
-	background-color: $rc-dark-grey;
-}
-
-$rc-dark-grey--hover: #49494B;
-
-.fill--rc-dark-grey--hover {
-	background-color: $rc-dark-grey--hover;
-}
-
-$rc-dark-grey--active: #373738;
-
-.fill--rc-dark-grey--active {
-	background-color: $rc-dark-grey--active;
-}
-
 
 
 // Secondary Colours
+$rc-text: #444444;
+.fill--rc-text {
+	background-color: $rc-text;
 
-$rc-warm-grey: #968C83;
+	&:hover, &:focus {
+		background-color: darken( $rc-text, 5% );
+	}
 
-.fill--rc-warm-grey {
-	background-color: $rc-warm-grey;
+	&:active {
+		background-color: darken( $rc-text, 15% );
+	}
 }
 
-$rc-warm-grey--hover: #857E77;
+$rc-functional: #8EC9D6;
+.fill--rc-functional {
+	background-color: $rc-functional;
 
-.fill--rc-warm-grey--hover {
-	background-color: $rc-warm-grey--hover;
+	&:hover, &:focus {
+		background-color: darken( $rc-functional, 5% );
+	}
+
+	&:active {
+		background-color: darken( $rc-functional, 15% );
+	}
 }
 
-$rc-warm-grey--active: #716B65;
+$rc-success: #5FCC78;
+.fill--rc-success {
+	background-color: $rc-success;
 
-.fill--rc-warm-grey--active {
-	background-color: $rc-warm-grey--active;
+	&:hover, &:focus {
+		background-color: darken( $rc-success, 5% );
+	}
+
+	&:active {
+		background-color: darken( $rc-success, 15% );
+	}
 }
 
+$rc-error: #C71838;
+.fill--rc-error {
+	background-color: $rc-error;
 
+	&:hover, &:focus {
+		background-color: darken( $rc-error, 5% );
+	}
 
-$rc-blue: #1E3170;
-
-.fill--rc-blue {
-	background-color: $rc-blue;
-}
-
-$rc-blue--hover: #152558;
-
-.fill--rc-blue--hover {
-	background-color: $rc-blue--hover;
-}
-
-$rc-blue--active: #0C1533;
-
-.fill--rc-blue--active {
-	background-color: $rc-blue--active;
-}
-
-
-
-$rc-green: #006341;
-
-.fill--rc-green {
-	background-color: $rc-green;
-}
-
-$rc-green--hover: #015336;
-
-.fill--rc-green--hover {
-	background-color: $rc-green--hover;
-}
-
-$rc-green--active: #00432C;
-
-.fill--rc-green--active {
-	background-color: $rc-green--active;
-}
-
-
-
-
-
-
-
-
-// Tertiary Colours
-$rc-tertiary-green: #8AE375;
-
-.fill--rc-tertiary-green {
-	background-color: $rc-tertiary-green;
-}
-
-$rc-tertiary-light-blue: #80ACE1;
-
-.fill--rc-tertiary-light-blue {
-	background-color: $rc-tertiary-light-blue;
+	&:active {
+		background-color: darken( $rc-error, 15% );
+	}
 }

@@ -31,6 +31,15 @@ var paths = {
 	public: './public/'
 };
 
+function getIndexes(ary, what) {
+  var indexes = [];
+  ary.forEach(function(el, index) {
+    if (el.indexOf(what))
+      indexes.push(index);
+  });
+  return indexes;
+}
+
 
 // Empty array to contain links
 var links = [];
@@ -94,12 +103,14 @@ gulp.task( 'copyJS', gulp.series( 'minify', function( done ) {
 // Generate Sass
 gulp.task( 'sass', function( done ) {    
 	return gulp.src( './templates/assets/sass/style.scss' )
-		.pipe( sass( { outputStyle: 'compressed' } ).on( 'error', sass.logError ) )
+		.pipe( sass({
+				outputStyle: 'compressed',
+				includePaths: ['node_modules/susy/sass']
+		}).on( 'error', sass.logError ) )
 		.pipe( autoprefixer( { browsers: ['last 5 versions'] } ) )
 		.pipe( gulp.dest( './templates/assets/css/' ) );
 	done();
 } );
-
 
 // Copy CSS
 gulp.task( 'copyCSS', gulp.series( 'sass', function( done ) {
@@ -134,7 +145,7 @@ gulp.task( 'getfiles', function( done ) {
 // Create a _nav.html file that can be imported into full files
 gulp.task( 'createNav', gulp.series( 'getfiles', function( done ) {
 
-	function getFilesRecursive( folder ) {
+	function getFilesRecursive( folder, counter ) {
 
 		var fileContents = fs.readdirSync(folder),
 		fileTree = '<ul>',
@@ -162,8 +173,17 @@ gulp.task( 'createNav', gulp.series( 'getfiles', function( done ) {
 					return niceName;
 				}
 
-				// Create an empty link that will trigger some JS
-				fileTree += '<li><a href="#" class="gs-nav__trigger">' + niceFolderName( fileName ) + '</a>' + getFilesRecursive( folder + '/' + fileName) +'</li>';
+        var items = fs.readdirSync(folder + '/' + fileName);
+
+				// If the folder only contains one html file, make the parent link to that.
+        if (getIndexes(items, '.html').length === 1) {
+          fileTree += '<li><a href="' + folder.slice(8, folder.length) + '/' + fileName + '/' + items[0] + '" class="gs-nav__trigger gs-nav__link">' + niceFolderName( fileName ) + '</a></li>';
+        }
+        else {
+          // Create an empty link that will trigger some JS
+          var topClass = counter === 1 ? ' toplevel' : '';
+          fileTree += '<li class="gs-nav__section' + topClass + '"><a href="#" class="gs-nav__trigger gs-nav__link">' + niceFolderName( fileName ) + '</a>' + getFilesRecursive( folder + '/' + fileName) +'</li>';
+        }
 
 			} else {
 
@@ -176,7 +196,6 @@ gulp.task( 'createNav', gulp.series( 'getfiles', function( done ) {
 					return false;
 				}
 
-
 				// @todo move this to root with other functions and maybe combine with niceFolderName
 				function niceFileName( fileName ) {
 					// remove .html
@@ -187,7 +206,7 @@ gulp.task( 'createNav', gulp.series( 'getfiles', function( done ) {
 				}
 
 				// Add list item with anchor with full url
-				fileTree += '<li><a href="' + fullUrl + '">' + niceFileName( fileName ) + '</a></li>';
+				fileTree += '<li><a href="' + fullUrl + '" class="gs-nav__link">' + niceFileName( fileName ) + '</a></li>';
 			}
 
 		});
@@ -198,7 +217,7 @@ gulp.task( 'createNav', gulp.series( 'getfiles', function( done ) {
 	};
 
 	// Create the file and add the HTML string
-	fs.writeFile('templates/_nav.html', getFilesRecursive('./public'), 'utf8', function() {
+	fs.writeFile('templates/_nav.html', getFilesRecursive('./public', 1), 'utf8', function() {
 		gutil.log( gutil.colors.bold.underline( 'nav.html file created' ) );
 	});
 
@@ -206,9 +225,18 @@ gulp.task( 'createNav', gulp.series( 'getfiles', function( done ) {
 } ) );
 
 
+// Create CNAME file in public directory.
+gulp.task( 'cname', function( done ) {
+	var cname = 'rcwdl.first10.co.uk';
+	fs.writeFile( 'public/CNAME', cname, function( err ) {
+		if (err) throw err;
+	});
+	done();
+} );
+
 
 // Styleguide tasks
-gulp.task( 'generate', gulp.series( 'publicDir', 'copyTemplates', 'copyCSS', 'copyJS', 'copyFonts', 'copyImages', 'createNav', 'copyTemplates', function( done ) {
+gulp.task( 'generate', gulp.series( 'publicDir', 'copyTemplates', 'copyCSS', 'copyJS', 'copyFonts', 'copyImages', 'createNav', 'copyTemplates', 'cname', function( done ) {
 	done();
 } ) );
 

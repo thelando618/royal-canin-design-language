@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Royal Canin Web Design Language</title>
-	<script src="/assets/js/modernizr.min.js"></script>
-	<link rel="stylesheet" href="/assets/css/style.css">
-	<link rel="stylesheet" href="/assets/css/prism.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Royal Canin Web Design Language</title>
+    <script src="/assets/js/modernizr.min.js"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/prism.css">
 </head>
 
 <body>
 
 <div class="gs-nav">
-	<header class="gs-nav__header">
-		<figure class="gs-logo">
-			<img src="https://www.royalcanin.co.uk/wp-content/themes/rcuk2015/img/rc-logo-2016.png" alt="Royal Canin">
-		</figure>
+    <header class="gs-nav__header">
+        <a href="/">
+            <figure class="gs-logo">
+                <img src="https://www.royalcanin.co.uk/wp-content/themes/rcuk2015/img/rc-logo-2016.png" alt="Royal Canin">
+            </figure>
+        </a>
 
-		<!-- update to gs-nav__trigger -->
-		<div id="gs-nav-trigger">
-			<div class="gs-nav-trigger__pos">
-				<hr>
-				<hr>
-				<hr>
-			</div>
-		</div>
-	</header>
+        <!-- update to gs-nav__trigger -->
+        <div id="gs-nav-trigger">
+            <div class="gs-nav-trigger__pos">
+                <hr>
+                <hr>
+                <hr>
+            </div>
+        </div>
+    </header>
 
-	<nav class="gs-nav__nav">
-		<ul><li><a href="#" class="gs-nav__trigger">Documentation</a><ul><li><a href="/00-documentation/ui-kit.html">Ui-kit</a></li><li><a href="/00-documentation/wireframe-kit.html">Wireframe-kit</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Components</a><ul><li><a href="#" class="gs-nav__trigger">Alerts</a><ul><li><a href="/01-components/alerts/alert.html">Alert</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Buttons</a><ul><li><a href="/01-components/buttons/button-icon.html">Button-icon</a></li><li><a href="/01-components/buttons/button-loading.html">Button-loading</a></li><li><a href="/01-components/buttons/button-success.html">Button-success</a></li><li><a href="/01-components/buttons/buttons.html">Buttons</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Colours</a><ul><li><a href="/01-components/colours/colours.html">Colours</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Fonts</a><ul><li><a href="/01-components/fonts/fonts.html">Fonts</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Forms</a><ul><li><a href="/01-components/forms/forms.html">Forms</a></li><li><a href="/01-components/forms/input-states.html">Input-states</a></li><li><a href="/01-components/forms/inputs-all.html">Inputs-all</a></li><li><a href="/01-components/forms/inputs-common.html">Inputs-common</a></li><li><a href="/01-components/forms/select.html">Select</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Lists</a><ul><li><a href="/01-components/lists/list-icons.html">List-icons</a></li><li><a href="/01-components/lists/list-modifiers.html">List-modifiers</a></li><li><a href="/01-components/lists/list-ordered.html">List-ordered</a></li><li><a href="/01-components/lists/list-significant.html">List-significant</a></li><li><a href="/01-components/lists/list-unordered.html">List-unordered</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Progress</a><ul><li><a href="/01-components/progress/progress.html">Progress</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Sliders</a><ul><li><a href="/01-components/sliders/sliders.html">Sliders</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Svgs</a><ul><li><a href="/01-components/svgs/svgs.html">Svgs</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Tables</a><ul><li><a href="/01-components/tables/table.html">Table</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Tabs</a><ul><li><a href="/01-components/tabs/tabs.html">Tabs</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Tooltips</a><ul><li><a href="/01-components/tooltips/tooltips.html">Tooltips</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Typography</a><ul><li><a href="/01-components/typography/headings-class.html">Headings-class</a></li><li><a href="/01-components/typography/headings-default.html">Headings-default</a></li><li><a href="/01-components/typography/inline.html">Inline</a></li><li><a href="/01-components/typography/paragraph-image.html">Paragraph-image</a></li><li><a href="/01-components/typography/paragraph.html">Paragraph</a></li></ul></li></ul></li></ul>
-	</nav>
+    <nav class="gs-nav__nav">
+        <ul><li class="gs-nav__section toplevel"><a href="#" class="gs-nav__trigger gs-nav__link">Documentation</a><ul><li><a href="/00-documentation/ui-kit.html" class="gs-nav__link">Ui-kit</a></li><li><a href="/00-documentation/wireframe-kit.html" class="gs-nav__link">Wireframe-kit</a></li></ul></li><li class="gs-nav__section toplevel"><a href="#" class="gs-nav__trigger gs-nav__link">Components</a><ul><li><a href="/01-components/SVGs/svgs.html" class="gs-nav__trigger gs-nav__link">SVGs</a></li><li><a href="/01-components/alerts/alert.html" class="gs-nav__trigger gs-nav__link">Alerts</a></li><li><a href="/01-components/avatars/avatars.html" class="gs-nav__trigger gs-nav__link">Avatars</a></li><li class="gs-nav__section"><a href="#" class="gs-nav__trigger gs-nav__link">Buttons</a><ul><li><a href="/01-components/buttons/button-functional.html" class="gs-nav__link">Button-functional</a></li><li><a href="/01-components/buttons/button-icon.html" class="gs-nav__link">Button-icon</a></li><li><a href="/01-components/buttons/buttons.html" class="gs-nav__link">Buttons</a></li></ul></li><li><a href="/01-components/colours/colours.html" class="gs-nav__trigger gs-nav__link">Colours</a></li><li><a href="/01-components/fonts/fonts.html" class="gs-nav__trigger gs-nav__link">Fonts</a></li><li class="gs-nav__section"><a href="#" class="gs-nav__trigger gs-nav__link">Forms</a><ul><li><a href="/01-components/forms/forms.html" class="gs-nav__link">Forms</a></li><li><a href="/01-components/forms/input-states.html" class="gs-nav__link">Input-states</a></li><li><a href="/01-components/forms/inputs-all.html" class="gs-nav__link">Inputs-all</a></li><li><a href="/01-components/forms/inputs-common.html" class="gs-nav__link">Inputs-common</a></li><li><a href="/01-components/forms/select.html" class="gs-nav__link">Select</a></li></ul></li><li><a href="/01-components/interactive/interactive.html" class="gs-nav__trigger gs-nav__link">Interactive</a></li><li class="gs-nav__section"><a href="#" class="gs-nav__trigger gs-nav__link">Lists</a><ul><li><a href="/01-components/lists/list-icons.html" class="gs-nav__link">List-icons</a></li><li><a href="/01-components/lists/list-modifiers.html" class="gs-nav__link">List-modifiers</a></li><li><a href="/01-components/lists/list-ordered.html" class="gs-nav__link">List-ordered</a></li><li><a href="/01-components/lists/list-significant.html" class="gs-nav__link">List-significant</a></li><li><a href="/01-components/lists/list-unordered.html" class="gs-nav__link">List-unordered</a></li></ul></li><li class="gs-nav__section"><a href="#" class="gs-nav__trigger gs-nav__link">Progress</a><ul><li><a href="/01-components/progress/progress.html" class="gs-nav__link">Progress</a></li><li><a href="/01-components/progress/stepped-progress.html" class="gs-nav__link">Stepped-progress</a></li></ul></li><li><a href="/01-components/sliders/sliders.html" class="gs-nav__trigger gs-nav__link">Sliders</a></li><li><a href="/01-components/tables/table.html" class="gs-nav__trigger gs-nav__link">Tables</a></li><li><a href="/01-components/tabs/tabs.html" class="gs-nav__trigger gs-nav__link">Tabs</a></li><li class="gs-nav__section"><a href="#" class="gs-nav__trigger gs-nav__link">Tooltips</a><ul><li><a href="/01-components/tooltips/tooltips-popout.html" class="gs-nav__link">Tooltips-popout</a></li><li><a href="/01-components/tooltips/tooltips.html" class="gs-nav__link">Tooltips</a></li></ul></li><li class="gs-nav__section"><a href="#" class="gs-nav__trigger gs-nav__link">Typography</a><ul><li><a href="/01-components/typography/headings-default.html" class="gs-nav__link">Headings-default</a></li><li><a href="/01-components/typography/headings-modifiers.html" class="gs-nav__link">Headings-modifiers</a></li><li><a href="/01-components/typography/inline.html" class="gs-nav__link">Inline</a></li><li><a href="/01-components/typography/paragraph-image.html" class="gs-nav__link">Paragraph-image</a></li><li><a href="/01-components/typography/paragraph.html" class="gs-nav__link">Paragraph</a></li></ul></li></ul></li><li class="gs-nav__section toplevel"><a href="#" class="gs-nav__trigger gs-nav__link">Features</a><ul><li><a href="/02-features/breadcrumbs/breadcrumbs.html" class="gs-nav__trigger gs-nav__link">Breadcrumbs</a></li><li class="gs-nav__section"><a href="#" class="gs-nav__trigger gs-nav__link">Cards</a><ul><li><a href="/02-features/cards/card-details.html" class="gs-nav__link">Card-details</a></li><li><a href="/02-features/cards/card.html" class="gs-nav__link">Card</a></li><li><a href="/02-features/cards/cards.html" class="gs-nav__link">Cards</a></li></ul></li><li class="gs-nav__section"><a href="#" class="gs-nav__trigger gs-nav__link">Carousels</a><ul><li><a href="/02-features/carousels/carousel-hero.html" class="gs-nav__link">Carousel-hero</a></li><li><a href="/02-features/carousels/carousels.html" class="gs-nav__link">Carousels</a></li></ul></li><li><a href="/02-features/grid/grid.html" class="gs-nav__trigger gs-nav__link">Grid</a></li><li><a href="/02-features/image-galleries/image-galleries.html" class="gs-nav__trigger gs-nav__link">Image-galleries</a></li><li><a href="/02-features/maps/maps.html" class="gs-nav__trigger gs-nav__link">Maps</a></li><li><a href="/02-features/social/social.html" class="gs-nav__trigger gs-nav__link">Social</a></li><li><a href="/02-features/videos/videos.html" class="gs-nav__trigger gs-nav__link">Videos</a></li></ul></li></ul>
+    </nav>
 </div>
 
 
@@ -44,14 +46,14 @@
 				<p>Usage and implementation for Lists within Web Design Language.</p>
 
 				<blockquote class="gs-stage__content__intro">
-					<h2 class="rc-head rc-head--6">Introduction</h2>
+					<h2 class="rc-head rc-head--subheadline">Introduction</h2>
 					<p>Lists can be implemented with an icon set pre defined using SVG icons.</p>
 					<p>Lists can contain external links built inline. </p>
 					<p>The CSS class <code class="language-scss">list--significance</code> uses a Sass <code class="language-scss">@extend</code> rule to inherit the properties of the <code class="language-scss">list--blank</code> and <code class="language-scss">list--align</code> classes as standard</p>
 				</blockquote>
 			</header>
 
-			<h2 class="gs-stage__content__head-tag">Examples</h2>
+			<h2 class="gs-stage__content__head-tag rc-head--subheadline">Examples</h2>
 
 			<section class="gs-present">
 				<header>
@@ -111,7 +113,7 @@
 
 		<section class="gs-section gs-changelog">
 			<header>
-				<h1 class="rc-head rc-head--4 gs-section__head">Changelog</h1>
+				<h1 class="rc-head rc-head--subheadline gs-section__head">Changelog</h1>
 			</header>
 
 			<div class="gs-section__content">
@@ -127,7 +129,7 @@
 
 		<section class="gs-section gs-issues">
 	<header>
-		<h1 class="rc-head rc-head--4 gs-section__head">Issues</h1>
+		<h1 class="rc-head rc-head--subheadline gs-section__head">Issues</h1>
 		<div class="gs-section__logo">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 120" aria-labelledby="title" role="img">
 				<title id="title">Github</title>
@@ -146,7 +148,7 @@
 
 		<section class="gs-section gs-feedback">
 	<header>
-		<h1 class="rc-head rc-head--4 gs-section__head">Feedback</h1>
+		<h1 class="rc-head rc-head--subheadline gs-section__head">Feedback</h1>
 		<div class="gs-section__logo">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 143" aria-labelledby="title" role="img">
 				<title id="title">Slack</title>
@@ -167,7 +169,7 @@
 	</header>
 
 	<div class="gs-section__content">
-		<p>If you would like to offer feedback on the design of this component, please join the Web Design Language <a href="#">Slack</a> channel.</p>
+		<p>If you would like to offer feedback on the design of this component, please <a href="mailto:&#100;&#097;&#110;&#046;&#115;&#104;&#111;&#114;&#101;&#109;&#097;&#110;&#064;&#102;&#105;&#114;&#115;&#116;&#049;&#048;&#046;&#099;&#111;&#046;&#117;&#107;">send an email</a> requesting access to the Web Design Language Slack channel.</p>
 	</div>
 </section>
 		
@@ -177,9 +179,14 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="/assets/js/scripts.min.js"></script>
 <script src="/assets/js/prism.js"></script>
+<script src="/assets/js/slick.min.js"></script>
+<script src="/assets/js/datepicker.min.js"></script>
+<script src="/assets/js/nouislider.min.js"></script>
+<script src="/assets/js/select2.min.js"></script>
 <script src="/assets/js/styleguide.js"></script>
+<script src="/assets/js/scripts.min.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQ7i7zivBcb6rUxcnB-7yJFlgzbwXnjcw&callback=initMap"></script>
 
 </body>
 </html>

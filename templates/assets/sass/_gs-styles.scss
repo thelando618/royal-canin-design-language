@@ -8,45 +8,15 @@
 */
 
 
-
-/* 
-	Info: Global styles
-	Dest: _global, _lists
-*/
-
-.list-no-style {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
-
-html {
-	font-size: 16px;
-}
-
-body {
-	background-color: #f3f3f3;
-	position: relative;
-	font-size: 16px;
-}
-
-
-/* 
-	Info: Media styles
-	Dest:	_media	
-*/
-
-img	{
-	display: block;
-	max-width: 100%;
-}
-
-
 /* 
 	Info: Gulp Styleguide Sub Navigation
 	Dest: _lists
 	Note: The positioning rules may have to stay here
 */
+
+* {
+  text-rendering: geometricPrecision;
+}
 
 .gs-nav {
 	background-color: #ffffff;
@@ -119,15 +89,6 @@ img	{
 		}
   }
 
-  .visible {
-  	height: auto;
-		padding-bottom: 2em;
-
-		&:last-of-type {
-			padding-bottom: 0;
-		}
-  }
-
   ul {
   	// See if this can be put into a class that lives in _nav.html
   	list-style-type: none;
@@ -143,24 +104,6 @@ img	{
 				padding-top: 1em;
 				padding-bottom: 1em;
 			}
-		}
-	}
-
-	a {
-		display: block;
-		position: relative;
-		text-decoration: none;
-		color: inherit;
-		padding: 1.75em 0 1.75em 1.75em;
-		transition: color .1s ease-in;
-
-		&:focus {
-			background: #f3f3f3;
-		}
-
-		&:hover {
-			color: #3498db;
-
 		}
 	}
 
@@ -224,10 +167,64 @@ img	{
 	}
 }
 
+.gs-nav__link {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  padding: 1.75em 0 1.75em 1.75em;
+  transition: color .1s ease-in;
 
+  &:focus {
+    background: #f3f3f3;
+  }
 
+  &:hover {
+    color: #3498db;
 
+  }
+}
 
+.gs-nav__trigger.triggered + ul,
+.gs-nav__section.triggered > ul {
+  height: auto;
+  padding-bottom: 2em;
+
+  &:last-of-type {
+    padding-bottom: 0;
+  }
+}
+
+.gs-nav__link.triggered {
+  font-weight: 500;
+}
+
+.gs-nav__section > .gs-nav__trigger {
+  position: relative;
+
+  &::after {
+    transform: rotate(180deg);
+    opacity: 0;
+    transition: transform .5s ease, opacity .3s ease;
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    background-image: url('../images/chevron--down--red.svg');
+    background-position: center;
+    background-size: 15px;
+    background-repeat: no-repeat;
+  }
+}
+
+.gs-nav__section > .gs-nav__trigger.triggered {
+  &::after {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
 
 
 /* 
@@ -238,6 +235,10 @@ img	{
 
 .gs-stage {
 	overflow: hidden;
+
+	p {
+		color: #444444;
+	}
 
 	.gs-stage__inner {
 		background-color: #EAEAEA;
@@ -252,7 +253,7 @@ img	{
 	.gs-stage__content {
 		background-color: #FFFFFF;
 		// @todo remove overflow and make a clearfix helper class
-		overflow: hidden;
+		// overflow: hidden;
 	}
 
 	.gs-stage__content__header {
@@ -270,14 +271,17 @@ img	{
 	.gs-present {
 		margin-bottom: 3em;
 
-		p {
-			color: #87888A;
-		}
-
 		.gs-present__label {
-			// margin-bottom: 0;
 			font-weight: 500;
 		}
+
+		.gs-present__label + p {
+			margin-top: 0;
+		}
+	}
+
+	.gs-present--white {
+		padding: 1em;
 	}
 
 
@@ -344,7 +348,7 @@ img	{
 	Dest: n/a 
 	Note: These rules will likely have to remain in a Gulp Styleguide Sass partial
 */
-pre.language-html, pre.language-markup, pre.language-scss {
+pre.language-html, pre.language-markup, pre.language-scss, pre.language-js {
 	position: relative;
 
 	code {
@@ -369,13 +373,17 @@ pre.language-html, pre.language-markup {
 	}
 }
 
-
 pre.language-scss {
 	&:after {
 		content: '.scss';
 	}
 }
 
+pre.language-js {
+	&:after {
+		content: '.js';
+	}
+}
 
 
 
@@ -390,28 +398,37 @@ pre.language-scss {
 	list-style-type: none;
 	margin-top: 0;
 	padding: 0;
+	overflow: hidden;
 
 	li {
-		margin: 0;
-		padding: 1em;
-		color: rgba(255, 255, 255, .9);
-		font-size: .875rem;
-	}
-
-	span {
 		display: block;
-		box-sizing: border-box;
+		margin-bottom: 2em;
+		color: #58585B;
 	}
 
-	@media ( min-width: 640px ) {
-		span {
-			display: inline-block;
-			vertical-align: top;
-			width: 32.5%;
-			padding-right: 2em;
+	.gs-colour-list__block, .gs-colour-list__info {
+		max-width: 90%;
+		border: 1px solid #EAEAEA;
+	}
+
+	.gs-colour-list__block {
+		height: 100px;
+		border-bottom: none;
+		transition: background-color .3s ease-in;
+
+		&:focus {
+			outline: none;
 		}
 	}
 
+	.gs-colour-list__info {
+		background-color: #FFFFFF;
+		padding: 1em;
+
+		span {
+			display: block;
+		}
+	}
 }
 
 
@@ -446,10 +463,10 @@ pre.language-scss {
 	}
 
 	header {
-		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		position: relative;
 		width: 100%;
 	}
 
@@ -458,10 +475,11 @@ pre.language-scss {
 	}
 
 	.gs-section__logo {
-		width: 60px;
+		flex: 0 0 60px;
 
 		svg {
 			display: block;
+			height: 1em;
 		}
 	}
 
@@ -471,19 +489,49 @@ pre.language-scss {
 
 			.gs-section__head, .gs-section__logo {
 				display: table-cell;
+				vertical-align: middle;
+			}
+
+			svg {
+				margin: 0 0 0 auto;
+				max-width: 60px;
 			}
 		}
 	}
 
 	@media ( min-width: 480px ) {
 		.gs-section__logo {
-			width: 80px;
+			flex: 0 0 80px;
+
+			svg {
+				height: 1.5em;
+			}
+		}
+
+		.no-flexbox & {
+			header {
+				svg {
+					max-width: 80px;
+				}
+			}
 		}
 	}
 
 	@media ( min-width: 800px ) {
 		.gs-section__logo {
-			width: 100px;
+			flex: 0 0 100px;
+
+			svg {
+				height: 2em;
+			}
+		}
+
+		.no-flexbox & {
+			header {
+				svg {
+					max-width: 100px;
+				}
+			}
 		}
 	}
 }
@@ -500,3 +548,13 @@ pre.language-scss {
 	}
 }
 
+
+
+
+.gs-col-demo {
+	background-color: #EAEAEA;
+	text-align: center;
+	padding: 1.5em;
+	color: #E2001A;
+	font-size: 1.125em;
+}

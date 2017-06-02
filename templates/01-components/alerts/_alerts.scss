@@ -16,13 +16,12 @@
 	}
 
 	&.alert--success {
-		border-color: $rc-tertiary-green;
-		color: darken( $rc-tertiary-green, 25% );
-		background-color: transparentize( $rc-tertiary-green, .9 );
+		border-color: $rc-success;
+		color: darken( $rc-success, 25% );
+		background-color: transparentize( $rc-success, .9 );
 	}
 
-
-	// @todo make this into a variable
+	// @todo make this into a variable?
 	@media ( min-width: 640px ) {
 		border-radius: 50px;
 	}

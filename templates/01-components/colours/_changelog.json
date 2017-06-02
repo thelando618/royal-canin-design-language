@@ -1,6 +1,12 @@
 [
   {
     "entry": {
+      "date": "2017-03-15",
+			"content": "Removed majority of initial colours. Simplified palette."
+    }
+  },
+  {
+    "entry": {
       "date": "2017-03",
 			"content": "Initial release"
     }

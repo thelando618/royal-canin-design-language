@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Royal Canin Web Design Language</title>
-	<script src="/assets/js/modernizr.min.js"></script>
-	<link rel="stylesheet" href="/assets/css/style.css">
-	<link rel="stylesheet" href="/assets/css/prism.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Royal Canin Web Design Language</title>
+    <script src="/assets/js/modernizr.min.js"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/prism.css">
 </head>
 
 <body>
 
 <div class="gs-nav">
-	<header class="gs-nav__header">
-		<figure class="gs-logo">
-			<img src="https://www.royalcanin.co.uk/wp-content/themes/rcuk2015/img/rc-logo-2016.png" alt="Royal Canin">
-		</figure>
+    <header class="gs-nav__header">
+        <a href="/">
+            <figure class="gs-logo">
+                <img src="https://www.royalcanin.co.uk/wp-content/themes/rcuk2015/img/rc-logo-2016.png" alt="Royal Canin">
+            </figure>
+        </a>
 
-		<!-- update to gs-nav__trigger -->
-		<div id="gs-nav-trigger">
-			<div class="gs-nav-trigger__pos">
-				<hr>
-				<hr>
-				<hr>
-			</div>
-		</div>
-	</header>
+        <!-- update to gs-nav__trigger -->
+        <div id="gs-nav-trigger">
+            <div class="gs-nav-trigger__pos">
+                <hr>
+                <hr>
+                <hr>
+            </div>
+        </div>
+    </header>
 
-	<nav class="gs-nav__nav">
-		<ul><li><a href="#" class="gs-nav__trigger">Documentation</a><ul><li><a href="/00-documentation/ui-kit.html">Ui-kit</a></li><li><a href="/00-documentation/wireframe-kit.html">Wireframe-kit</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Components</a><ul><li><a href="#" class="gs-nav__trigger">Alerts</a><ul><li><a href="/01-components/alerts/alert.html">Alert</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Buttons</a><ul><li><a href="/01-components/buttons/button-icon.html">Button-icon</a></li><li><a href="/01-components/buttons/button-loading.html">Button-loading</a></li><li><a href="/01-components/buttons/button-success.html">Button-success</a></li><li><a href="/01-components/buttons/buttons.html">Buttons</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Colours</a><ul><li><a href="/01-components/colours/colours.html">Colours</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Fonts</a><ul><li><a href="/01-components/fonts/fonts.html">Fonts</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Forms</a><ul><li><a href="/01-components/forms/forms.html">Forms</a></li><li><a href="/01-components/forms/input-states.html">Input-states</a></li><li><a href="/01-components/forms/inputs-all.html">Inputs-all</a></li><li><a href="/01-components/forms/inputs-common.html">Inputs-common</a></li><li><a href="/01-components/forms/select.html">Select</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Lists</a><ul><li><a href="/01-components/lists/list-icons.html">List-icons</a></li><li><a href="/01-components/lists/list-modifiers.html">List-modifiers</a></li><li><a href="/01-components/lists/list-ordered.html">List-ordered</a></li><li><a href="/01-components/lists/list-significant.html">List-significant</a></li><li><a href="/01-components/lists/list-unordered.html">List-unordered</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Progress</a><ul><li><a href="/01-components/progress/progress.html">Progress</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Sliders</a><ul><li><a href="/01-components/sliders/sliders.html">Sliders</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Svgs</a><ul><li><a href="/01-components/svgs/svgs.html">Svgs</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Tables</a><ul><li><a href="/01-components/tables/table.html">Table</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Tabs</a><ul><li><a href="/01-components/tabs/tabs.html">Tabs</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Tooltips</a><ul><li><a href="/01-components/tooltips/tooltips.html">Tooltips</a></li></ul></li><li><a href="#" class="gs-nav__trigger">Typography</a><ul><li><a href="/01-components/typography/headings-class.html">Headings-class</a></li><li><a href="/01-components/typography/headings-default.html">Headings-default</a></li><li><a href="/01-components/typography/inline.html">Inline</a></li><li><a href="/01-components/typography/paragraph-image.html">Paragraph-image</a></li><li><a href="/01-components/typography/paragraph.html">Paragraph</a></li></ul></li></ul></li></ul>
-	</nav>
+    <nav class="gs-nav__nav">
+        <ul><li class="gs-nav__section toplevel"><a href="#" class="gs-nav__trigger gs-nav__link">Documentation</a><ul><li><a href="/00-documentation/ui-kit.html" class="gs-nav__link">Ui-kit</a></li><li><a href="/00-documentation/wireframe-kit.html" class="gs-nav__link">Wireframe-kit</a></li></ul></li><li class="gs-nav__section toplevel"><a href="#" class="gs-nav__trigger gs-nav__link">Components</a><ul><li><a href="/01-components/SVGs/svgs.html" class="gs-nav__trigger gs-nav__link">SVGs</a></li><li><a href="/01-components/alerts/alert.html" class="gs-nav__trigger gs-nav__link">Alerts</a></li><li><a href="/01-components/avatars/avatars.html" class="gs-nav__trigger gs-nav__link">Avatars</a></li><li class="gs-nav__section"><a href="#" class="gs-nav__trigger gs-nav__link">Buttons</a><ul><li><a href="/01-components/buttons/button-functional.html" class="gs-nav__link">Button-functional</a></li><li><a href="/01-components/buttons/button-icon.html" class="gs-nav__link">Button-icon</a></li><li><a href="/01-components/buttons/buttons.html" class="gs-nav__link">Buttons</a></li></ul></li><li><a href="/01-components/colours/colours.html" class="gs-nav__trigger gs-nav__link">Colours</a></li><li><a href="/01-components/fonts/fonts.html" class="gs-nav__trigger gs-nav__link">Fonts</a></li><li class="gs-nav__section"><a href="#" class="gs-nav__trigger gs-nav__link">Forms</a><ul><li><a href="/01-components/forms/forms.html" class="gs-nav__link">Forms</a></li><li><a href="/01-components/forms/input-states.html" class="gs-nav__link">Input-states</a></li><li><a href="/01-components/forms/inputs-all.html" class="gs-nav__link">Inputs-all</a></li><li><a href="/01-components/forms/inputs-common.html" class="gs-nav__link">Inputs-common</a></li><li><a href="/01-components/forms/select.html" class="gs-nav__link">Select</a></li></ul></li><li><a href="/01-components/interactive/interactive.html" class="gs-nav__trigger gs-nav__link">Interactive</a></li><li class="gs-nav__section"><a href="#" class="gs-nav__trigger gs-nav__link">Lists</a><ul><li><a href="/01-components/lists/list-icons.html" class="gs-nav__link">List-icons</a></li><li><a href="/01-components/lists/list-modifiers.html" class="gs-nav__link">List-modifiers</a></li><li><a href="/01-components/lists/list-ordered.html" class="gs-nav__link">List-ordered</a></li><li><a href="/01-components/lists/list-significant.html" class="gs-nav__link">List-significant</a></li><li><a href="/01-components/lists/list-unordered.html" class="gs-nav__link">List-unordered</a></li></ul></li><li class="gs-nav__section"><a href="#" class="gs-nav__trigger gs-nav__link">Progress</a><ul><li><a href="/01-components/progress/progress.html" class="gs-nav__link">Progress</a></li><li><a href="/01-components/progress/stepped-progress.html" class="gs-nav__link">Stepped-progress</a></li></ul></li><li><a href="/01-components/sliders/sliders.html" class="gs-nav__trigger gs-nav__link">Sliders</a></li><li><a href="/01-components/tables/table.html" class="gs-nav__trigger gs-nav__link">Tables</a></li><li><a href="/01-components/tabs/tabs.html" class="gs-nav__trigger gs-nav__link">Tabs</a></li><li class="gs-nav__section"><a href="#" class="gs-nav__trigger gs-nav__link">Tooltips</a><ul><li><a href="/01-components/tooltips/tooltips-popout.html" class="gs-nav__link">Tooltips-popout</a></li><li><a href="/01-components/tooltips/tooltips.html" class="gs-nav__link">Tooltips</a></li></ul></li><li class="gs-nav__section"><a href="#" class="gs-nav__trigger gs-nav__link">Typography</a><ul><li><a href="/01-components/typography/headings-default.html" class="gs-nav__link">Headings-default</a></li><li><a href="/01-components/typography/headings-modifiers.html" class="gs-nav__link">Headings-modifiers</a></li><li><a href="/01-components/typography/inline.html" class="gs-nav__link">Inline</a></li><li><a href="/01-components/typography/paragraph-image.html" class="gs-nav__link">Paragraph-image</a></li><li><a href="/01-components/typography/paragraph.html" class="gs-nav__link">Paragraph</a></li></ul></li></ul></li><li class="gs-nav__section toplevel"><a href="#" class="gs-nav__trigger gs-nav__link">Features</a><ul><li><a href="/02-features/breadcrumbs/breadcrumbs.html" class="gs-nav__trigger gs-nav__link">Breadcrumbs</a></li><li class="gs-nav__section"><a href="#" class="gs-nav__trigger gs-nav__link">Cards</a><ul><li><a href="/02-features/cards/card-details.html" class="gs-nav__link">Card-details</a></li><li><a href="/02-features/cards/card.html" class="gs-nav__link">Card</a></li><li><a href="/02-features/cards/cards.html" class="gs-nav__link">Cards</a></li></ul></li><li class="gs-nav__section"><a href="#" class="gs-nav__trigger gs-nav__link">Carousels</a><ul><li><a href="/02-features/carousels/carousel-hero.html" class="gs-nav__link">Carousel-hero</a></li><li><a href="/02-features/carousels/carousels.html" class="gs-nav__link">Carousels</a></li></ul></li><li><a href="/02-features/grid/grid.html" class="gs-nav__trigger gs-nav__link">Grid</a></li><li><a href="/02-features/image-galleries/image-galleries.html" class="gs-nav__trigger gs-nav__link">Image-galleries</a></li><li><a href="/02-features/maps/maps.html" class="gs-nav__trigger gs-nav__link">Maps</a></li><li><a href="/02-features/social/social.html" class="gs-nav__trigger gs-nav__link">Social</a></li><li><a href="/02-features/videos/videos.html" class="gs-nav__trigger gs-nav__link">Videos</a></li></ul></li></ul>
+    </nav>
 </div>
 
 
@@ -44,14 +46,14 @@
 				<p>Usage and implementation for SVGs within Web Design Language.</p>
 
 				<blockquote class="gs-stage__content__intro">
-					<h2 class="rc-head rc-head--6">Introduction</h2>
+					<h2 class="rc-head rc-head--subheadline">Introduction</h2>
 					<p>Throughout the site icons are handled as SVG’s to ensure they are displayed best on retina displays. SVG icons must be used throughout the site instead of Images or Fonts.</p>
 					<p>The comment preceding the SVG code is not required in production.</p>
 					<p>The SVGs displayed below have been prepared and optimised to use across Royal Canin touchpoints as a set. If an icon that you require does not exist please create an issue and describe the icon you require.</p>
 				</blockquote>
 			</header>
 
-			<h2 class="gs-stage__content__head-tag">Examples</h2>
+			<h2 class="gs-stage__content__head-tag rc-head--subheadline">Examples</h2>
 
 			<section class="gs-present">
 				<header>
@@ -60,304 +62,412 @@
 
 				<div class="gs-svg-list">
 					<!-- arrow-down-bold -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 39.5" aria-labelledby="title" role="img">
-	<title id="title">arrow-down-bold</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 39.5" aria-labelledby="svg-arrow-down-bold" role="img">
+	<title id="svg-arrow-down-bold" lang="en">arrow-down-bold</title>
 	<path d="M32 39.5h-.1c-1.9 0-3.7-.8-5.1-2.2L2.2 12.7C-.7 9.8-.7 5.1 2.2 2.1c2.9-2.9 7.6-2.9 10.6 0L32 21.4 51.3 2.2c2.9-2.9 7.6-2.9 10.6 0C63.3 3.6 64 5.6 64 7.5s-.7 3.8-2.2 5.3L37.3 37.3c-1.4 1.4-3.3 2.1-5.1 2.2H32z"/>
 </svg>
 
+<!-- Chevron down red -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 11.1" aria-labelledby="svg-Chevron down red" role="img">
+	<title id="svg-Chevron down red" lang="en">Chevron down red</title>
+	<path d="M9.2,10.8L0.3,1.9C0.1,1.7,0,1.4,0,1.1c0-0.3,0.1-0.6,0.3-0.8c0.4-0.4,1.1-0.4,1.6,0L10,8.4l8.1-8.1c0.4-0.4,1.1-0.4,1.6,0c0.4,0.4,0.4,1.1,0,1.6l-8.9,8.9C10.3,11.2,9.7,11.2,9.2,10.8"/>
+</svg>
+
 <!-- arrow-left -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.5 64" aria-labelledby="title" role="img">
-	<title id="title">arrow-left</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.5 64" aria-labelledby="svg-arrow-left" role="img">
+	<title id="svg-arrow-left" lang="en">arrow-left</title>
 	<path d="M1 29.5L29.5 1c1.4-1.4 3.6-1.4 5 0s1.4 3.6 0 5l-26 26 26 26c1.4 1.4 1.4 3.6 0 5-.7.7-1.6 1-2.5 1-.9 0-1.8-.3-2.5-1L1 34.5c-1.3-1.4-1.3-3.6 0-5z"/>
 </svg>
 
 <!-- arrow-left-bold -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.5 64" aria-labelledby="title" role="img">
-	<title id="title">arrow-left-bold</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.5 64" aria-labelledby="svg-arrow-left-bold" role="img">
+	<title id="svg-arrow-left-bold" lang="en">arrow-left-bold</title>
 	<path d="M0 32v-.1c0-1.9.8-3.7 2.2-5.1L26.7 2.2c2.9-2.9 7.6-2.9 10.6 0 2.9 2.9 2.9 7.6 0 10.6L18 32l19.3 19.3c2.9 2.9 2.9 7.6 0 10.6-1.5 1.4-3.4 2.1-5.3 2.1s-3.8-.7-5.3-2.2L2.2 37.3C.8 35.9 0 34 0 32.1V32z"/>
 </svg>
 
 <!-- arrow-right -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.5 64" aria-labelledby="title" role="img">
-	<title id="title">arrow-right</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.5 64" aria-labelledby="svg-arrow-right" role="img">
+	<title id="svg-arrow-right" lang="en">arrow-right</title>
 	<path d="M34.5 34.5L6 63c-.7.7-1.6 1-2.5 1s-1.8-.3-2.5-1c-1.4-1.4-1.4-3.6 0-5l26-26L1 6C-.4 4.6-.4 2.4 1 1S4.6-.4 6 1l28.5 28.5c1.4 1.4 1.4 3.6 0 5z"/>
 </svg>
 
 <!-- arrow-right-bold -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.5 64" aria-labelledby="title" role="img">
-	<title id="title">arrow-right-bold</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.5 64" aria-labelledby="svg-arrow-right-bold" role="img">
+	<title id="svg-arrow-right-bold" lang="en">arrow-right-bold</title>
 	<path d="M39.5 32.1c0 1.9-.8 3.7-2.2 5.1L12.7 61.8C11.3 63.3 9.4 64 7.5 64s-3.8-.7-5.3-2.2c-2.9-2.9-2.9-7.6 0-10.6L21.4 32 2.2 12.7C-.7 9.8-.7 5.1 2.2 2.1c2.9-2.9 7.6-2.9 10.6 0l24.5 24.5c1.4 1.4 2.1 3.3 2.2 5.1v.4z"/>
 </svg>
 
 <!-- arrow-up-bold -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 39.5" aria-labelledby="title" role="img">
-	<title id="title">arrow-up-bold</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 39.5" aria-labelledby="svg-arrow-up-bold" role="img">
+	<title id="svg-arrow-up-bold" lang="en">arrow-up-bold</title>
 	<path d="M32 0h.1c1.9 0 3.7.8 5.1 2.2l24.5 24.5c2.9 2.9 2.9 7.6 0 10.6-2.9 2.9-7.6 2.9-10.6 0L32 18 12.7 37.3c-2.9 2.9-7.6 2.9-10.6 0C.7 35.8 0 33.9 0 32s.7-3.8 2.2-5.3L26.7 2.2C28.1.8 30 0 31.9 0h.1z"/>
 </svg>
 
 <!-- basket -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 63.9" aria-labelledby="title" role="img">
-	<title id="title">basket</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 63.9" aria-labelledby="svg-basket" role="img">
+	<title id="svg-basket" lang="en">basket</title>
 	<path d="M61 30.8H33.8V9.4c1.7-.8 2.9-2.5 2.9-4.5 0-2.7-2.2-4.9-4.9-4.9s-4.9 2.2-4.9 4.9c0 2 1.2 3.7 2.9 4.5v21.4L3 30.7c-1.7 0-3 1.3-3 3s1.3 3 3 3h.3l9.3 21.5c-1 .5-1.7 1.5-1.7 2.7 0 1.7 1.3 3 3 3h35.6c1.7 0 3-1.3 3-3 0-1.2-.7-2.2-1.7-2.7l9.3-21.4h.8c1.7 0 3-1.3 3-3 .1-1.6-1.2-3-2.9-3zM40.1 57.9l1.3-8.9h7.4l-3.9 8.9h-4.8zm-5.8 0h-5L28 49h7.6l-1.3 8.9zm-15.6 0L14.8 49h7.4l1.3 8.9h-4.8zM27.3 44l-1-7.2h11.1l-1 7.2h-9.1zm-6.9-7.2l1 7.2h-8.8l-3.1-7.2h10.9zM50.9 44h-8.8l1-7.2H54L50.9 44z"/>
 </svg>
 
 <!-- bullseye -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img">
-	<title id="title">bullseye</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="svg-bullseye" role="img">
+	<title id="svg-bullseye" lang="en">bullseye</title>
 	<path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm11.5-25c0 6.4-5.1 11.5-11.5 11.5S20.5 38.4 20.5 32 25.6 20.5 32 20.5 43.5 25.6 43.5 32z"/>
 </svg>
 
 <!-- check -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 53.1" aria-labelledby="title" role="img">
-	<title id="title">check</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 53.1" aria-labelledby="svg-check" role="img">
+	<title id="svg-check" lang="en">check</title>
 	<path d="M62.7 10.4l-31 40.2c-.5.6-1 1.1-1.6 1.5-.1 0-.1.1-.2.1-1 .6-2.1.9-3.3.9-1.4 0-2.8-.4-4-1.3L2.5 36.3C-.3 34.1-.9 30 1.3 27.2s6.3-3.4 9.1-1.2l15 11.5 27-35c2.2-2.8 6.3-3.4 9.1-1.2s3.3 6.3 1.2 9.1z"/>
 </svg>
 
 <!-- check-circle -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img">
-	<title id="title">check-circle</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="svg-check-circle" role="img">
+	<title id="svg-check-circle" lang="en">check-circle</title>
 	<path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm14.3-31.6L33 43.9c-.7 1-1.8 1.5-2.8 1.5-.7 0-1.4-.2-2-.7l-9.6-6.9c-1.6-1.1-1.9-3.3-.8-4.9 1.1-1.6 3.3-1.9 4.9-.8l6.7 4.8 11.3-15.7c1.1-1.6 3.3-1.9 4.9-.8 1.4 1.2 1.8 3.4.7 5z"/>
 </svg>
 
 <!-- calendar -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 54.7" aria-labelledby="title" role="img">
-	<title id="title">calendar</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 54.7" aria-labelledby="svg-calendar" role="img">
+	<title id="svg-calendar" lang="en">calendar</title>
 	<path d="M9.6 24.6v21.2h34.2v-9.3h10.5V24.6H9.6zM41.3 34h-8.1v-6.9h8.1V34zm-18.6 0v-6.9h8.1V34h-8.1zm8.1 2.4v6.9h-8.1v-6.9h8.1zm-10.6-9.3V34h-8.1v-6.9h8.1zm-8.1 9.3h8.1v6.9h-8.1v-6.9zm29.2 6.9h-8.1v-6.9h8.1v6.9zm2.5-9.3v-6.9h8.1V34h-8.1zM14.1 10.2c0-1.3 1-2.3 2.3-2.3 1.3 0 2.3 1 2.3 2.3s-1 2.3-2.3 2.3c-1.3 0-2.3-1-2.3-2.3zm32.3 0c0-1.3 1-2.3 2.3-2.3 1.3 0 2.3 1 2.3 2.3s-1 2.3-2.3 2.3c-1.3 0-2.3-1-2.3-2.3zM57.4 0H6.6C3 0 0 3 0 6.6v41.5c0 3.6 3 6.6 6.6 6.6h41.6l4.9-4.9 5.9-5.9 4.9-4.9V6.6C64 3 61 0 57.4 0zM6.6 4.9h50.8c.9 0 1.7.7 1.7 1.7v8.2H4.9V6.6c0-.9.8-1.7 1.7-1.7zm48.2 33.9c-3.6 0-6.6 3-6.6 6.6v4.3H6.6c-.9 0-1.7-.7-1.7-1.7V19.8H59v19.1h-4.2z"/>
 </svg>
 
 <!-- clock -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img">
-	<title id="title">clock</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="svg-clock" role="img">
+	<title id="svg-clock" lang="en">clock</title>
 	<path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm14.6-15.5c1.4 1.4 1.4 3.6 0 4.9-.7.7-1.6 1-2.5 1s-1.8-.3-2.5-1l-13-13v-19c0-1.9 1.6-3.5 3.5-3.5s3.5 1.6 3.5 3.5v16.1l11 11z"/>
 </svg>
 
 <!-- computer -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 41.8" aria-labelledby="title" role="img">
-	<title id="title">computer</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 41.8" aria-labelledby="svg-computer" role="img">
+	<title id="svg-computer" lang="en">computer</title>
 	<path d="M60 37.2V4.9C60 2.2 57.8 0 55.1 0H8.9C6.2 0 4 2.2 4 4.9v32.3H0v1.7c0 1.6 1.3 2.9 2.9 2.9h58.2c1.6 0 2.9-1.3 2.9-2.9v-1.7h-4zM32 2c.6 0 1 .5 1 1 0 .6-.5 1-1 1s-1-.5-1-1 .4-1 1-1zM10 6h44v29.2H10V6z"/>
 </svg>
 
 <!-- cross -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img">
-	<title id="title">cross</title>
-	<path d="M63 58c1.4 1.4 1.4 3.6 0 5-.7.7-1.6 1-2.5 1-.9 0-1.8-.3-2.5-1L32 37 6 63c-.7.7-1.6 1-2.5 1-.9 0-1.8-.3-2.5-1-1.4-1.4-1.4-3.6 0-5l26-26L1 6C-.4 4.6-.4 2.4 1 1S4.6-.4 6 1l26 26L58 1c1.4-1.4 3.6-1.4 5 0s1.4 3.6 0 5L37 32l26 26z"/>
-</svg>
-
-<!-- crown -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 34.6" aria-labelledby="title" role="img">
-	<title id="title">crown</title>
-	<path d="M12.7 31.4c-.6 0-1.1-.3-1.5-.8-.6-.8-.5-2 .4-2.6 5-3.7 12.7-6 20.5-6 7.8 0 15.4 2.2 20.4 6 .8.6 1 1.8.4 2.6s-1.8 1-2.6.4c-3.4-2.5-9.9-5.2-18.2-5.2-8.3 0-14.8 2.7-18.2 5.2-.4.3-.8.4-1.2.4m1.7 3.2c.3 0 .6-.1.8-.3 3.8-3.1 10.3-5.1 16.8-5.1 6.6 0 12.9 1.9 16.8 5.1.5.5 1.4.4 1.8-.2.5-.6.4-1.4-.2-1.8-4.3-3.6-11.2-5.7-18.4-5.7-7.2 0-14.1 2.1-18.4 5.7-.6.5-.6 1.3-.2 1.8.3.3.6.5 1 .5M4.3 7.5c-.8 0-1.5.2-2.2.6-1 .6-1.7 1.5-2 2.6-.2 1.2-.1 2.3.5 3.3.8 1.3 2.2 2.1 3.7 2.1.8 0 1.5-.2 2.2-.6 1-.6 1.7-1.5 2-2.6.3-1.1.1-2.3-.5-3.3-.7-1.3-2.2-2.1-3.7-2.1M32 10.8c-2.4 0-4.3 1.9-4.3 4.3s1.9 4.3 4.3 4.3 4.3-1.9 4.3-4.3c0-2.3-1.9-4.3-4.3-4.3M32 0c-2.4 0-4.3 1.9-4.3 4.3s1.9 4.3 4.3 4.3 4.3-1.9 4.3-4.3S34.4 0 32 0M20.5 12.3c-.4 0-.8.1-1.1.2-2.3.6-3.7 3-3 5.3.5 1.9 2.2 3.2 4.1 3.2h.1c.4 0 .7-.1 1.1-.2 1.1-.3 2-1 2.6-2 .6-1 .7-2.2.4-3.3-.5-1.9-2.2-3.2-4.2-3.2M9.8 16.8c-.8 0-1.5.2-2.2.6-1 .6-1.7 1.5-2 2.6-.3 1.1-.1 2.3.5 3.3.8 1.3 2.2 2.1 3.7 2.1.8 0 1.5-.2 2.2-.6 1-.6 1.7-1.5 2-2.6.3-1.1.1-2.3-.5-3.3-.7-1.3-2.2-2.1-3.7-2.1m34.8-4.3c-.4-.1-.8-.2-1.1-.2-1.9 0-3.7 1.3-4.2 3.2-.6 2.3.7 4.7 3 5.3.4.1.8.2 1.1.2 1.9 0 3.7-1.3 4.2-3.2.7-2.3-.7-4.7-3-5.3M47.5 2c-.4-.1-.8-.2-1.1-.2-1.9 0-3.6 1.3-4.2 3.2-.6 2.3.7 4.7 3 5.3.4.1.8.2 1.1.2 1.9 0 3.7-1.3 4.2-3.2.6-2.3-.7-4.6-3-5.3m8.9 15.4c-.7-.4-1.4-.6-2.2-.6-1.5 0-2.9.8-3.7 2.1-.6 1-.8 2.2-.5 3.3.3 1.1 1 2.1 2 2.6.7.4 1.4.6 2.2.6 1.5 0 2.9-.8 3.7-2.1.6-1 .8-2.2.5-3.3-.3-1.1-1-2-2-2.6m7.5-6.7c-.3-1.1-1-2.1-2-2.6-.7-.4-1.4-.6-2.2-.6-1.5 0-2.9.8-3.7 2.1-.6 1-.8 2.2-.5 3.3.3 1.1 1 2.1 2 2.6.7.4 1.4.6 2.2.6 1.5 0 2.9-.8 3.7-2.1.6-1 .7-2.1.5-3.3m-46.2-.2c.4 0 .8-.1 1.1-.2 2.3-.6 3.6-3 3-5.3-.5-1.9-2.2-3.2-4.2-3.2-.4 0-.8.1-1.1.2-2.3.6-3.7 3-3 5.3.5 1.9 2.2 3.2 4.2 3.2z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="svg-cross" role="img">
+	<title id="svg-cross" lang="en">cross</title>
+	<path d="M44.6 32l16.8-16.8c3.5-3.5 3.5-9.1 0-12.6s-9.1-3.5-12.6 0L32 19.4 15.2 2.6C11.7-.9 6.1-.9 2.6 2.6s-3.5 9.1 0 12.6L19.4 32 2.6 48.8c-3.5 3.5-3.5 9.1 0 12.6 1.7 1.7 4 2.6 6.3 2.6s4.5-.9 6.3-2.6L32 44.6l16.8 16.8c1.7 1.7 4 2.6 6.3 2.6s4.5-.9 6.3-2.6c3.5-3.5 3.5-9.1 0-12.6L44.6 32z"/>
 </svg>
 
 <!-- envelope -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 48" aria-labelledby="title" role="img">
-	<title id="title">envelope</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 48" aria-labelledby="svg-envelope" role="img">
+	<title id="svg-envelope" lang="en">envelope</title>
 	<path d="M61.5 0h-59C1.1 0 0 1.1 0 2.5v42.9C0 46.9 1.1 48 2.5 48h59.1c1.4 0 2.5-1.1 2.5-2.5v-43C64 1.1 62.9 0 61.5 0zm-8.8 6L39.1 19.7l-3.5 3.5c-.3.3-.6.5-.9.7-1.6 1-3.7 1-5.3 0-.3-.2-.6-.4-.9-.7L25 19.7 11.3 6h41.4zM6 9.2l14.7 14.7L6 38.6V9.2zM11.1 42L25 28.1c2 1.7 4.5 2.6 7.1 2.6 2.5 0 5-.9 7.1-2.6L52.9 42H11.1zM58 38.6L43.3 23.9 58 9.2v29.4z"/>
 </svg>
 
+<!-- eye -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 34.7" aria-labelledby="svg-eye" role="img">
+	<title id="svg-eye" lang="en">eye</title>
+	<path d="M36.2 16.6c-1.8 0-3.3-1.5-3.3-3.3 0-1.4.9-2.6 2.1-3.1-.9-.4-2-.6-3.1-.6-4.3 0-7.8 3.5-7.8 7.8s3.5 7.8 7.8 7.8 7.8-3.4 7.8-7.7c0-1-.2-2-.6-2.8-.3 1.1-1.6 1.9-2.9 1.9M32 30.5c-7.3 0-13.2-5.9-13.2-13.2C18.8 10 24.7 4.1 32 4.1c7.3 0 13.2 5.9 13.2 13.2 0 7.3-5.9 13.2-13.2 13.2m31.6-14.4C60.2 12.1 48.9 0 32 0 15.1 0 3.8 12.1.4 16.1c-.6.7-.6 1.8 0 2.6C3.7 22.7 15 34.8 32 34.8c16.9 0 28.2-12.1 31.6-16.1.5-.9.5-1.8 0-2.6"/>
+</svg>
+
 <!-- loading -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 63.8 64" aria-labelledby="title" role="img">
-	<title id="title">loading</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 63.8 64" aria-labelledby="svg-loading" role="img">
+	<title id="svg-loading" lang="en">loading</title>
 	<path d="M34.1.1C16.7-1.1 2 11.6 0 28.1-.2 30.2 1.4 32 3.5 32c1.8 0 3.3-1.3 3.5-3.1C8.6 15.7 20.7 5.6 34.7 7.2c11.5 1.3 20.7 10.5 22 22C58.3 44.2 46.5 57 31.8 57c-6.3 0-12.1-2.4-16.5-6.3-1.3-1.2-3.3-1.2-4.6 0-1.6 1.4-1.6 3.8 0 5.2 5.6 5 13.1 8 21.2 8C50.2 64 65 48.4 63.7 29.7 62.6 14 49.8 1.2 34.1.1z"/>
 </svg>
 
 <!-- location -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img">
-	<title id="title">location</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="svg-location" role="img">
+	<title id="svg-location" lang="en">location</title>
 	<path d="M52.3 0c-6.5 0-11.7 5.2-11.7 11.7 0 1.6.3 3.2.9 4.5 0 .1 0 .1-.1.2-.6 1.6-1.2 3.2-1.4 5.7-.1 1.9-.8 4.1-2.2 4.5-.6.2-1.5.2-2.4.2h-2c-1.8.1-3.6.6-5.2 1.5-1.2.7-2.2 1.4-2.8 2.4-.6.8-1 1.8-1.2 3-.4 1.7-.2 3.4-.1 4.9.1 1.5.2 2.8-.2 3.8-.4.9-1.9 2.1-3 2.6-2.1-2.7-5.4-4.4-9.2-4.4C5.2 40.6 0 45.8 0 52.3S5.2 64 11.7 64c6.5 0 11.7-5.2 11.7-11.7 0-.6-.1-1.2-.2-1.8 2.7-1.2 5.2-3.6 6.1-5.9.9-2.3.7-4.5.6-6.5-.1-1.2-.2-2.3 0-3.3.1-.4.2-.6.2-.7.1-.1.3-.3.8-.6.9-.5 1.8-.7 2.8-.8h1.5c1.4 0 3 .1 4.6-.5 3.5-1.3 5.8-4.9 6.1-9.8 0-.3 0-.6.1-.8 1.8 1.1 3.9 1.7 6.1 1.7 6.5 0 11.7-5.2 11.7-11.7S58.8 0 52.3 0zM11.7 58C8.6 58 6 55.4 6 52.3s2.6-5.7 5.7-5.7 5.7 2.6 5.7 5.7-2.5 5.7-5.7 5.7zm40.6-40.6c-3.1 0-5.7-2.6-5.7-5.7S49.1 6 52.3 6c3.1 0 5.7 2.6 5.7 5.7s-2.6 5.7-5.7 5.7z"/>
 </svg>
 
 <!-- loyalty -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 63.8" aria-labelledby="title" role="img">
-	<title id="title">loyalty</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 63.8" aria-labelledby="svg-loyalty" role="img">
+	<title id="svg-loyalty" lang="en">loyalty</title>
 	<path d="M45.1 7C51.7 7 57 12.3 57 18.8v.2c0 .2.3 20.7-25 36.6C7.4 40.2 7 20.4 7 19v-.2C7 12.3 12.3 7 18.8 7c3.1 0 6 1.2 8.3 3.4l4.9 4.8 4.9-4.8C39.1 8.2 42 7 45.1 7m0-7C40 0 35.4 2 32 5.4 28.6 2 24 0 18.8 0 8.4 0 0 8.4 0 18.8c0 0-.8 26.6 32 44.9 32.8-18.3 32-44.9 32-44.9C64 8.4 55.5 0 45.1 0z"/>
 </svg>
 
 <!-- mobile -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.6 64" aria-labelledby="title" role="img">
-	<title id="title">mobile</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.6 64" aria-labelledby="svg-mobile" role="img">
+	<title id="svg-mobile" lang="en">mobile</title>
 	<path d="M39.1 0H2.5C1.1 0 0 1.1 0 2.5v59C0 62.9 1.1 64 2.5 64h36.6c1.4 0 2.5-1.1 2.5-2.5v-59c0-1.4-1.1-2.5-2.5-2.5zM21.3 61.5c-1.9.4-3.6-1.3-3.2-3.2.2-1.1 1.1-2 2.2-2.2 1.9-.4 3.6 1.3 3.2 3.2-.2 1.1-1.1 2-2.2 2.2zm14.2-7.6H6.1s-.1 0-.1-.1V6.1C6 6 6 6 6.1 6h29.5s.1 0 .1.1l-.2 47.8c.1 0 .1 0 0 0z"/>
 </svg>
 
 <!-- play -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img">
-	<title id="title">play</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="svg-play" role="img">
+	<title id="svg-play" lang="en">play</title>
 	<path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm9.1-25.8c.6.4.6 1.2 0 1.6l-11.7 8.3c-.7.5-1.6 0-1.6-.8V23.7c0-.8.9-1.3 1.6-.8l11.7 8.3z"/>
 </svg>
 
 <!-- profile -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55.5 64" aria-labelledby="title" role="img">
-	<title id="title">profile</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55.5 64" aria-labelledby="svg-profile" role="img">
+	<title id="svg-profile" lang="en">profile</title>
 	<path d="M0 64h55.5s0-20.8-16.9-27.1c5.5-3.6 9.2-9.8 9.2-16.8 0-11.1-9-20-20-20s-20 9-20 20c0 7.1 3.7 13.3 9.2 16.8C0 43.2 0 64 0 64zM27.8 6c7.7 0 14 6.3 14 14s-6.3 14-14 14-14-6.3-14-14c-.1-7.7 6.2-14 14-14zm0 35c9 0 15.1 3.5 18.7 10.8 1.1 2.1 1.7 4.3 2.2 6.2H6.8c.5-1.9 1.2-4.1 2.2-6.2C12.6 44.6 18.8 41 27.8 41z"/>
 </svg>
 
+<!-- royal-canin-crown -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 34.6" aria-labelledby="svg-royal-canin-crown" role="img">
+	<title id="svg-royal-canin-crown" lang="en">royal-canin-crown</title>
+	<path d="M12.7 31.4c-.6 0-1.1-.3-1.5-.8-.6-.8-.5-2 .4-2.6 5-3.7 12.7-6 20.5-6 7.8 0 15.4 2.2 20.4 6 .8.6 1 1.8.4 2.6s-1.8 1-2.6.4c-3.4-2.5-9.9-5.2-18.2-5.2-8.3 0-14.8 2.7-18.2 5.2-.4.3-.8.4-1.2.4m1.7 3.2c.3 0 .6-.1.8-.3 3.8-3.1 10.3-5.1 16.8-5.1 6.6 0 12.9 1.9 16.8 5.1.5.5 1.4.4 1.8-.2.5-.6.4-1.4-.2-1.8-4.3-3.6-11.2-5.7-18.4-5.7-7.2 0-14.1 2.1-18.4 5.7-.6.5-.6 1.3-.2 1.8.3.3.6.5 1 .5M4.3 7.5c-.8 0-1.5.2-2.2.6-1 .6-1.7 1.5-2 2.6-.2 1.2-.1 2.3.5 3.3.8 1.3 2.2 2.1 3.7 2.1.8 0 1.5-.2 2.2-.6 1-.6 1.7-1.5 2-2.6.3-1.1.1-2.3-.5-3.3-.7-1.3-2.2-2.1-3.7-2.1M32 10.8c-2.4 0-4.3 1.9-4.3 4.3s1.9 4.3 4.3 4.3 4.3-1.9 4.3-4.3c0-2.3-1.9-4.3-4.3-4.3M32 0c-2.4 0-4.3 1.9-4.3 4.3s1.9 4.3 4.3 4.3 4.3-1.9 4.3-4.3S34.4 0 32 0M20.5 12.3c-.4 0-.8.1-1.1.2-2.3.6-3.7 3-3 5.3.5 1.9 2.2 3.2 4.1 3.2h.1c.4 0 .7-.1 1.1-.2 1.1-.3 2-1 2.6-2 .6-1 .7-2.2.4-3.3-.5-1.9-2.2-3.2-4.2-3.2M9.8 16.8c-.8 0-1.5.2-2.2.6-1 .6-1.7 1.5-2 2.6-.3 1.1-.1 2.3.5 3.3.8 1.3 2.2 2.1 3.7 2.1.8 0 1.5-.2 2.2-.6 1-.6 1.7-1.5 2-2.6.3-1.1.1-2.3-.5-3.3-.7-1.3-2.2-2.1-3.7-2.1m34.8-4.3c-.4-.1-.8-.2-1.1-.2-1.9 0-3.7 1.3-4.2 3.2-.6 2.3.7 4.7 3 5.3.4.1.8.2 1.1.2 1.9 0 3.7-1.3 4.2-3.2.7-2.3-.7-4.7-3-5.3M47.5 2c-.4-.1-.8-.2-1.1-.2-1.9 0-3.6 1.3-4.2 3.2-.6 2.3.7 4.7 3 5.3.4.1.8.2 1.1.2 1.9 0 3.7-1.3 4.2-3.2.6-2.3-.7-4.6-3-5.3m8.9 15.4c-.7-.4-1.4-.6-2.2-.6-1.5 0-2.9.8-3.7 2.1-.6 1-.8 2.2-.5 3.3.3 1.1 1 2.1 2 2.6.7.4 1.4.6 2.2.6 1.5 0 2.9-.8 3.7-2.1.6-1 .8-2.2.5-3.3-.3-1.1-1-2-2-2.6m7.5-6.7c-.3-1.1-1-2.1-2-2.6-.7-.4-1.4-.6-2.2-.6-1.5 0-2.9.8-3.7 2.1-.6 1-.8 2.2-.5 3.3.3 1.1 1 2.1 2 2.6.7.4 1.4.6 2.2.6 1.5 0 2.9-.8 3.7-2.1.6-1 .7-2.1.5-3.3m-46.2-.2c.4 0 .8-.1 1.1-.2 2.3-.6 3.6-3 3-5.3-.5-1.9-2.2-3.2-4.2-3.2-.4 0-.8.1-1.1.2-2.3.6-3.7 3-3 5.3.5 1.9 2.2 3.2 4.2 3.2z"/>
+</svg>
+
+<!-- royal-canin-logo -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 199.7 69.7" aria-labelledby="svg-royal-canin-logo" role="img">
+	<title id="svg-royal-canin-logo" lang="en">royal-canin-logo</title>
+	<path d="M196.9 44.2c1.6 0 2.9 1.3 2.9 2.9 0 1.6-1.3 2.9-2.9 2.9-1.6 0-2.9-1.3-2.9-2.9 0-1.6 1.3-2.9 2.9-2.9zm0 5c1.2 0 2.2-1 2.2-2.2 0-1.2-1-2.2-2.2-2.2-1.2 0-2.2 1-2.2 2.2 0 1.3 1 2.2 2.2 2.2zm-.5-.9c0 .2-.1.4-.4.4-.3 0-.3-.1-.3-.4v-2.4c0-.2.1-.3.4-.3h.9c.6 0 1.2.2 1.2.9 0 .6-.3.8-.8.9l.6.9v.2c0 .2-.1.3-.4.3-.2 0-.3-.2-.4-.4l-.5-.9h-.2v.8zm.6-1.5c.3 0 .4-.1.4-.3 0-.3-.2-.4-.4-.4h-.6v.7h.6zM.4 66.8c0 1.4 1.2 2.6 2.6 2.6 1.4 0 2.6-1.2 2.6-2.6l.1-6.5c0-.1.1-.3.3-.3h.1l6.4 8.7c.4.4 1 .7 1.7.7 1.4 0 2.6-1.1 2.6-2.5 0-.4-.1-.8-.3-1.1l-4-6.3c2-1 3.5-3.5 3.5-6.2 0-4.5-3.2-8-7.9-8.2-2.6-.2-4.5.8-6 2.1C.5 48.7 0 50.9 0 53.3l.4 13.5zm7.5-16.3c1.6 0 2.9 1.2 2.9 2.6 0 1.5-1.3 2.6-2.9 2.6S5 54.6 5 53.2c0-1.5 1.3-2.7 2.9-2.7zm90 6.8c0 7.6 6.4 12.2 11.5 12.2 3.5 0 7.2-1.5 9.2-3.9.4-.5.6-1 .6-1.7 0-1.4-1.2-2.6-2.6-2.6-.4 0-.8.1-1.2.3l-2.1 1.4c-1 .7-2.2 1-3.5 1-3.6 0-6.5-3-6.5-6.7s2.9-6.7 6.5-6.7c1.3 0 2.5.4 3.5 1l2.1 1.4c.4.2.8.3 1.2.3 1.4 0 2.6-1.2 2.6-2.6 0-.6-.2-1.2-.6-1.7-2-2.4-5-3.8-8.5-3.8-6.8-.1-12.2 5.4-12.2 12.1zm-43.8 7.8c-.3.4-.5 1-.5 1.6 0 1.5 1.2 2.6 2.6 2.6.9 0 1.6-.4 2.1-1.1l2.8-3.8h6.7v2.2c0 1.5 1.3 2.7 2.8 2.7 1.5 0 2.7-1.2 2.7-2.7V47.5c0-1.5-1.3-2.8-2.8-2.8-.8 0-1.6.4-2.1 1L54.1 65.1zm13.8-10v4h-2.5c-.1 0-.2-.1-.2-.2v-.1l2.7-3.7zm57.6-9.4c-.5-.6-1.3-1-2.1-1-1.5 0-2.8.8-2.8 2.3v19.6c0 1.5 1.2 2.7 2.7 2.7 1.5 0 2.8-1.2 2.8-2.7v-2.2h6.7l2.8 3.8c.5.6 1.2 1.1 2.1 1.1 1.5 0 2.6-1.2 2.6-2.6 0-.6-.2-1.1-.5-1.6l-14.3-19.4zm3.3 13.1v.1c0 .1-.1.2-.2.2h-2.5v-4l2.7 3.7zm-87.6-1.6C41.2 50.4 35.8 45 29 45c-6.8 0-12.2 5.5-12.2 12.2S22.2 69.4 29 69.4c6.8 0 12.2-5.4 12.2-12.2zM29 50.6c3.6 0 6.6 2.9 6.6 6.6 0 3.6-2.9 6.6-6.6 6.6-3.6 0-6.6-2.9-6.6-6.6 0-3.6 3-6.6 6.6-6.6zm20.8 1.6c-.1 0-.2 0-.3-.1l-6.1-6.4c-.5-.5-1.1-.8-1.9-.8-1.4 0-2.6 1.2-2.6 2.6 0 .7.3 1.3.7 1.7l7.4 8.5.1 9c0 1.4 1.2 2.6 2.6 2.6 1.4 0 2.6-1.2 2.6-2.6l.1-9 7.4-8.5c.4-.5.7-1.1.7-1.7 0-1.4-1.2-2.6-2.6-2.6-.7 0-1.4.3-1.9.8l-6 6.4c0 .1-.1.1-.2.1zM179 46.7c-.6-1.2-1.8-1.8-3.3-1.8-1.9 0-3.5 1.6-3.5 3.5v18.7c0 1.5 1.2 2.6 2.7 2.6 1.5 0 2.7-1.2 2.7-2.6V55.7c0-.1.1-.2.2-.2l.1.1 6.8 12c.6 1.1 1.7 1.8 3 1.8 1.9 0 3.5-1.6 3.5-3.5v-19c0-1.5-1.2-2.6-2.6-2.6-1.5 0-2.6 1.2-2.6 2.6v11.4l-.2.2-.1-.1-6.7-11.7zm-30.5 0c-.6-1.2-1.8-1.8-3.3-1.8-1.9 0-3.5 1.6-3.5 3.5V67c0 1.5 1.2 2.6 2.7 2.6 1.5 0 2.7-1.2 2.7-2.6V55.6c0-.1.1-.2.2-.2l.1.1 6.8 12c.6 1.1 1.7 1.8 3 1.8 1.9 0 3.5-1.6 3.5-3.5v-19c0-1.5-1.2-2.6-2.6-2.6-1.5 0-2.6 1.2-2.6 2.6v11.4l-.2.2-.1-.1-6.7-11.6zM82.6 64.1c-.2 0-.3-.1-.3-.3V47.5c0-1.5-1.2-2.8-2.8-2.8-1.5 0-2.8 1.2-2.8 2.8v20.3c0 .9.7 1.5 1.5 1.5h9.7c1.4 0 2.6-1.2 2.6-2.6 0-1.4-1.2-2.6-2.6-2.6h-5.3zm81 2.7c0 1.6 1.3 2.8 2.8 2.8 1.6 0 2.8-1.3 2.8-2.8V47.1c0-1.6-1.3-2.8-2.8-2.8-1.6 0-2.8 1.3-2.8 2.8v19.7zM79.5 12c.4 0 .9-.1 1.3-.2 2.6-.7 4.1-3.4 3.4-6-.6-2.1-2.5-3.6-4.7-3.6-.4 0-.9.1-1.3.2-2.6.7-4.2 3.4-3.4 6 .6 2.1 2.5 3.5 4.7 3.6zm52.6.2c-.3-1.3-1.1-2.3-2.3-3-.8-.4-1.6-.7-2.5-.7-1.7 0-3.3.9-4.2 2.4-.7 1.1-.9 2.5-.5 3.7.3 1.3 1.1 2.3 2.3 3 .8.4 1.6.7 2.5.7 1.7 0 3.4-.9 4.2-2.4.6-1.1.8-2.4.5-3.7zm-8.6 7.6c-.8-.4-1.6-.7-2.5-.7-1.7 0-3.4.9-4.2 2.4-.7 1.1-.9 2.4-.5 3.7.3 1.3 1.1 2.3 2.3 3 .8.4 1.6.7 2.5.7 1.7 0 3.3-.9 4.2-2.4.7-1.1.9-2.5.5-3.7-.3-1.3-1.1-2.4-2.3-3zM113.4 2.3c-.4-.1-.9-.2-1.3-.2-2.2 0-4.1 1.5-4.7 3.6-.7 2.6.8 5.3 3.4 6 .4.1.9.2 1.3.2 2.2 0 4.2-1.5 4.7-3.6.8-2.6-.7-5.3-3.4-6zm-3.2 11.9c-.4-.1-.9-.2-1.3-.2-2.2 0-4.2 1.5-4.7 3.6-.7 2.6.8 5.3 3.4 6 .4.1.9.2 1.3.2 2.2 0 4.2-1.5 4.7-3.6.8-2.6-.8-5.3-3.4-6zm-39.6 4.9c-.9 0-1.7.2-2.5.7-1.1.7-1.9 1.7-2.3 3-.3 1.3-.1 2.6.5 3.7.9 1.5 2.5 2.4 4.2 2.4.9 0 1.7-.2 2.5-.7 1.1-.7 1.9-1.7 2.3-3 .3-1.3.1-2.6-.5-3.7-.8-1.5-2.4-2.4-4.2-2.4zM82.8 14c-.4 0-.9.1-1.3.2-2.6.7-4.2 3.4-3.4 6 .6 2.1 2.5 3.6 4.7 3.6h.1c.4 0 .8-.1 1.2-.2 1.3-.3 2.3-1.2 3-2.3.6-1.1.8-2.5.5-3.7-.7-2.1-2.6-3.6-4.8-3.6zm13-14c-2.7 0-4.9 2.2-4.9 4.9s2.2 4.9 4.9 4.9 4.9-2.2 4.9-4.9S98.5 0 95.8 0zm0 12.3c-2.7 0-4.9 2.2-4.9 4.9s2.2 4.9 4.9 4.9 4.9-2.2 4.9-4.9-2.2-4.9-4.9-4.9zM64.4 8.5c-.9 0-1.7.2-2.5.7-1.1.7-1.9 1.7-2.3 3-.3 1.3-.1 2.6.5 3.7.9 1.5 2.5 2.4 4.2 2.4.9 0 1.7-.2 2.5-.7 1.1-.7 1.9-1.7 2.3-3 .3-1.3.1-2.6-.5-3.7-.9-1.5-2.5-2.4-4.2-2.4zm11.4 30.8c.3 0 .7-.1.9-.3 4.3-3.6 11.7-5.8 19.1-5.8 7.5 0 14.6 2.2 19 5.8.6.5 1.5.4 2.1-.2.5-.6.4-1.5-.2-2.1-4.9-4-12.7-6.5-20.9-6.5s-16 2.4-21 6.5c-.6.5-.7 1.4-.2 2.1.4.4.8.5 1.2.5zm-1.9-3.6c-.7 0-1.3-.3-1.7-.9-.7-.9-.5-2.3.4-3C78.3 27.6 87 25 95.9 25s17.5 2.5 23.2 6.8c1 .7 1.1 2 .4 3-.7.9-2 1.1-3 .4-3.8-2.9-11.3-5.9-20.7-5.9-9.4 0-16.9 3.1-20.7 5.9-.3.3-.8.5-1.2.5z"/>
+</svg>
+
+<!-- royal-canin-logo-strapline -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 199.7 86.1" aria-labelledby="svg-royal-canin-logo-strapline" role="img">
+	<title id="svg-royal-canin-logo-strapline" lang="en">royal-canin-logo-strapline</title>
+	<path d="M196.9 44.2c1.6 0 2.9 1.3 2.9 2.9 0 1.6-1.3 2.9-2.9 2.9-1.6 0-2.9-1.3-2.9-2.9 0-1.6 1.3-2.9 2.9-2.9zm0 5c1.2 0 2.2-1 2.2-2.2 0-1.2-1-2.2-2.2-2.2-1.2 0-2.2 1-2.2 2.2 0 1.3 1 2.2 2.2 2.2zm-.5-.9c0 .2-.1.4-.4.4-.3 0-.3-.1-.3-.4v-2.4c0-.2.1-.3.4-.3h.9c.6 0 1.2.2 1.2.9 0 .6-.3.8-.8.9l.6.9v.2c0 .2-.1.3-.4.3-.2 0-.3-.2-.4-.4l-.5-.9h-.2v.8zm.6-1.5c.3 0 .4-.1.4-.3 0-.3-.2-.4-.4-.4h-.6v.7h.6zM9.9 86h1v-6.8h-1V86zm8.8 0l-3.2-4.8V86h-1v-6.8h.9l3.2 4.8v-4.8h1V86h-.9zm8.7-.7c-.5.5-1.1.8-1.9.8-.7 0-1.3-.3-1.8-.7-.7-.7-.7-1.4-.7-2.8 0-1.3 0-2.1.7-2.7.5-.5 1.1-.7 1.8-.7.9 0 1.4.3 1.9.8l-.7.7c-.4-.4-.6-.6-1.2-.6-.4 0-.8.2-1 .4-.3.4-.4.8-.4 2.1 0 1.4.1 1.8.4 2.1.2.3.6.4 1 .4.6 0 .9-.2 1.2-.6l.7.8zm7 .7L33 83.1h-1.3V86h-1v-6.8h2.6c1.3 0 2.1.8 2.1 2 0 1-.6 1.6-1.4 1.8l1.6 3h-1.2zm-.1-4.8c0-.7-.5-1.1-1.2-1.1h-1.5v2.1h1.5c.8.1 1.2-.3 1.2-1zm4.4 4.8v-6.8h4.4v.9h-3.3v2h2.8v.9h-2.8v2.1h3.3v.9h-4.4zm12.4-3.4c0 1 0 2.1-.7 2.8-.4.4-1 .6-1.7.6h-2.4v-6.8h2.4c.7 0 1.3.2 1.8.6.7.8.6 1.8.6 2.8zm-1 0c0-.9 0-1.6-.4-2-.3-.3-.7-.5-1.2-.5h-1.3v5h1.3c.5 0 .9-.1 1.2-.5.4-.3.4-1.1.4-2zm4.4 3.4h1v-6.8h-1V86zm9.4-1.9c0 1.3-.9 1.9-2.1 1.9H59v-6.8h2.7c1.3 0 2.1.7 2.1 1.9 0 .7-.5 1.3-.9 1.4.5.3 1 .8 1 1.6zm-1.1-3c0-.6-.4-1-1.1-1h-1.5v2h1.5c.7 0 1.1-.3 1.1-1zm.1 3c0-.6-.4-1-1.1-1h-1.6v2.1h1.6c.7-.1 1.1-.5 1.1-1.1zm4.4 1.9v-6.8h1v5.9h3.3v.9h-4.3zm7.3 0v-6.8H79v.9h-3.3v2h2.8v.9h-2.8v2.1H79v.9h-4.4zm11.3 0h1v-6.8h-1V86zm8.8 0l-3.2-4.8V86h-1v-6.8h.9l3.2 4.8v-4.8h1V86h-.9zm8.2 0v-6.8h4.4v.9H104v2h2.8v.9H104v2.1h3.3v.9h-4.4zm9.8 0h-.8l-2.2-6.8h1.1l1.6 5 1.6-5h1.1l-2.4 6.8zm5 0v-6.8h4.4v.9h-3.3v2h2.8v.9h-2.8v2.1h3.3v.9h-4.4zm11.4 0l-1.4-2.9h-1.3V86h-1v-6.8h2.6c1.3 0 2.1.8 2.1 2 0 1-.6 1.6-1.4 1.8l1.6 3h-1.2zm-.1-4.8c0-.7-.5-1.1-1.2-1.1h-1.5v2.1h1.5c.8.1 1.2-.3 1.2-1zm6.6 2V86h-1v-2.8l-2-4h1.1l1.4 3 1.4-3h1.1l-2 4zm13.3-.6c0 1 0 2.1-.7 2.8-.4.4-1.1.6-1.8.6H144v-6.8h2.4c.7 0 1.3.2 1.8.6.8.8.7 1.8.7 2.8zm-1 0c0-.9 0-1.6-.4-2-.3-.3-.7-.5-1.2-.5H145v5h1.3c.5 0 .9-.1 1.2-.5.4-.3.4-1.1.4-2zm4.4 3.4v-6.8h4.4v.9h-3.3v2h2.8v.9h-2.8v2.1h3.3v.9h-4.4zm9.9-5.8V86h-1v-5.9h-1.9v-.9h4.8v.9h-1.9zm8.2 5.8l-.5-1.4h-2.7l-.5 1.4h-1.1l2.5-6.8h.8l2.5 6.8h-1zm-1.8-5.2l-1.1 3h2.1l-1-3zm5.7 5.2h1v-6.8h-1V86zm4.6 0v-6.8h1v5.9h3.3v.9h-4.3zM.4 66.8c0 1.4 1.2 2.6 2.6 2.6 1.4 0 2.6-1.2 2.6-2.6l.1-6.5c0-.1.1-.3.3-.3h.1l6.4 8.7c.4.4 1 .7 1.7.7 1.4 0 2.6-1.1 2.6-2.5 0-.4-.1-.8-.3-1.1l-4-6.3c2-1 3.5-3.5 3.5-6.2 0-4.5-3.2-8-7.9-8.2-2.6-.2-4.5.8-6 2.1C.5 48.7 0 50.9 0 53.3l.4 13.5zm7.5-16.3c1.6 0 2.9 1.2 2.9 2.6 0 1.5-1.3 2.6-2.9 2.6S5 54.6 5 53.2c0-1.5 1.3-2.7 2.9-2.7zm90 6.8c0 7.6 6.4 12.2 11.5 12.2 3.5 0 7.2-1.5 9.2-3.9.4-.5.6-1 .6-1.7 0-1.4-1.2-2.6-2.6-2.6-.4 0-.8.1-1.2.3l-2.1 1.4c-1 .7-2.2 1-3.5 1-3.6 0-6.5-3-6.5-6.7s2.9-6.7 6.5-6.7c1.3 0 2.5.4 3.5 1l2.1 1.4c.4.2.8.3 1.2.3 1.4 0 2.6-1.2 2.6-2.6 0-.6-.2-1.2-.6-1.7-2-2.4-5-3.8-8.5-3.8-6.8-.1-12.2 5.4-12.2 12.1zm-43.8 7.8c-.3.4-.5 1-.5 1.6 0 1.5 1.2 2.6 2.6 2.6.9 0 1.6-.4 2.1-1.1l2.8-3.8h6.7v2.2c0 1.5 1.3 2.7 2.8 2.7 1.5 0 2.7-1.2 2.7-2.7V47.5c0-1.5-1.3-2.8-2.8-2.8-.8 0-1.6.4-2.1 1L54.1 65.1zm13.8-10v4h-2.5c-.1 0-.2-.1-.2-.2v-.1l2.7-3.7zm57.6-9.4c-.5-.6-1.3-1-2.1-1-1.5 0-2.8.8-2.8 2.3v19.6c0 1.5 1.2 2.7 2.7 2.7 1.5 0 2.8-1.2 2.8-2.7v-2.2h6.7l2.8 3.8c.5.6 1.2 1.1 2.1 1.1 1.5 0 2.6-1.2 2.6-2.6 0-.6-.2-1.1-.5-1.6l-14.3-19.4zm3.3 13.1v.1c0 .1-.1.2-.2.2h-2.5v-4l2.7 3.7zm-87.6-1.6C41.2 50.4 35.8 45 29 45c-6.8 0-12.2 5.5-12.2 12.2S22.2 69.4 29 69.4c6.8 0 12.2-5.4 12.2-12.2zM29 50.6c3.6 0 6.6 2.9 6.6 6.6 0 3.6-2.9 6.6-6.6 6.6-3.6 0-6.6-2.9-6.6-6.6 0-3.6 3-6.6 6.6-6.6zm20.8 1.6c-.1 0-.2 0-.3-.1l-6.1-6.4c-.5-.5-1.1-.8-1.9-.8-1.4 0-2.6 1.2-2.6 2.6 0 .7.3 1.3.7 1.7l7.4 8.5.1 9c0 1.4 1.2 2.6 2.6 2.6 1.4 0 2.6-1.2 2.6-2.6l.1-9 7.4-8.5c.4-.5.7-1.1.7-1.7 0-1.4-1.2-2.6-2.6-2.6-.7 0-1.4.3-1.9.8l-6 6.4c0 .1-.1.1-.2.1zM179 46.7c-.6-1.2-1.8-1.8-3.3-1.8-1.9 0-3.5 1.6-3.5 3.5v18.7c0 1.5 1.2 2.6 2.7 2.6 1.5 0 2.7-1.2 2.7-2.6V55.7c0-.1.1-.2.2-.2l.1.1 6.8 12c.6 1.1 1.7 1.8 3 1.8 1.9 0 3.5-1.6 3.5-3.5v-19c0-1.5-1.2-2.6-2.6-2.6-1.5 0-2.6 1.2-2.6 2.6v11.4l-.2.2-.1-.1-6.7-11.7zm-30.5 0c-.6-1.2-1.8-1.8-3.3-1.8-1.9 0-3.5 1.6-3.5 3.5V67c0 1.5 1.2 2.6 2.7 2.6 1.5 0 2.7-1.2 2.7-2.6V55.6c0-.1.1-.2.2-.2l.1.1 6.8 12c.6 1.1 1.7 1.8 3 1.8 1.9 0 3.5-1.6 3.5-3.5v-19c0-1.5-1.2-2.6-2.6-2.6-1.5 0-2.6 1.2-2.6 2.6v11.4l-.2.2-.1-.1-6.7-11.6zM82.6 64.1c-.2 0-.3-.1-.3-.3V47.5c0-1.5-1.2-2.8-2.8-2.8-1.5 0-2.8 1.2-2.8 2.8v20.3c0 .9.7 1.5 1.5 1.5h9.7c1.4 0 2.6-1.2 2.6-2.6 0-1.4-1.2-2.6-2.6-2.6h-5.3zm81 2.7c0 1.6 1.3 2.8 2.8 2.8 1.6 0 2.8-1.3 2.8-2.8V47.1c0-1.6-1.3-2.8-2.8-2.8-1.6 0-2.8 1.3-2.8 2.8v19.7zM79.5 12c.4 0 .9-.1 1.3-.2 2.6-.7 4.1-3.4 3.4-6-.6-2.1-2.5-3.6-4.7-3.6-.4 0-.9.1-1.3.2-2.6.7-4.2 3.4-3.4 6 .6 2.1 2.5 3.5 4.7 3.6zm52.6.2c-.3-1.3-1.1-2.3-2.3-3-.8-.4-1.6-.7-2.5-.7-1.7 0-3.3.9-4.2 2.4-.7 1.1-.9 2.5-.5 3.7.3 1.3 1.1 2.3 2.3 3 .8.4 1.6.7 2.5.7 1.7 0 3.4-.9 4.2-2.4.6-1.1.8-2.4.5-3.7zm-8.6 7.6c-.8-.4-1.6-.7-2.5-.7-1.7 0-3.4.9-4.2 2.4-.7 1.1-.9 2.4-.5 3.7.3 1.3 1.1 2.3 2.3 3 .8.4 1.6.7 2.5.7 1.7 0 3.3-.9 4.2-2.4.7-1.1.9-2.5.5-3.7-.3-1.3-1.1-2.4-2.3-3zM113.4 2.3c-.4-.1-.9-.2-1.3-.2-2.2 0-4.1 1.5-4.7 3.6-.7 2.6.8 5.3 3.4 6 .4.1.9.2 1.3.2 2.2 0 4.2-1.5 4.7-3.6.8-2.6-.7-5.3-3.4-6zm-3.2 11.9c-.4-.1-.9-.2-1.3-.2-2.2 0-4.2 1.5-4.7 3.6-.7 2.6.8 5.3 3.4 6 .4.1.9.2 1.3.2 2.2 0 4.2-1.5 4.7-3.6.8-2.6-.8-5.3-3.4-6zm-39.6 4.9c-.9 0-1.7.2-2.5.7-1.1.7-1.9 1.7-2.3 3-.3 1.3-.1 2.6.5 3.7.9 1.5 2.5 2.4 4.2 2.4.9 0 1.7-.2 2.5-.7 1.1-.7 1.9-1.7 2.3-3 .3-1.3.1-2.6-.5-3.7-.8-1.5-2.4-2.4-4.2-2.4zM82.8 14c-.4 0-.9.1-1.3.2-2.6.7-4.2 3.4-3.4 6 .6 2.1 2.5 3.6 4.7 3.6h.1c.4 0 .8-.1 1.2-.2 1.3-.3 2.3-1.2 3-2.3.6-1.1.8-2.5.5-3.7-.7-2.1-2.6-3.6-4.8-3.6zm13-14c-2.7 0-4.9 2.2-4.9 4.9s2.2 4.9 4.9 4.9 4.9-2.2 4.9-4.9S98.5 0 95.8 0zm0 12.3c-2.7 0-4.9 2.2-4.9 4.9s2.2 4.9 4.9 4.9 4.9-2.2 4.9-4.9-2.2-4.9-4.9-4.9zM64.4 8.5c-.9 0-1.7.2-2.5.7-1.1.7-1.9 1.7-2.3 3-.3 1.3-.1 2.6.5 3.7.9 1.5 2.5 2.4 4.2 2.4.9 0 1.7-.2 2.5-.7 1.1-.7 1.9-1.7 2.3-3 .3-1.3.1-2.6-.5-3.7-.9-1.5-2.5-2.4-4.2-2.4zm11.4 30.8c.3 0 .7-.1.9-.3 4.3-3.6 11.7-5.8 19.1-5.8 7.5 0 14.6 2.2 19 5.8.6.5 1.5.4 2.1-.2.5-.6.4-1.5-.2-2.1-4.9-4-12.7-6.5-20.9-6.5s-16 2.4-21 6.5c-.6.5-.7 1.4-.2 2.1.4.4.8.5 1.2.5zm-1.9-3.6c-.7 0-1.3-.3-1.7-.9-.7-.9-.5-2.3.4-3C78.3 27.6 87 25 95.9 25s17.5 2.5 23.2 6.8c1 .7 1.1 2 .4 3-.7.9-2 1.1-3 .4-3.8-2.9-11.3-5.9-20.7-5.9-9.4 0-16.9 3.1-20.7 5.9-.3.3-.8.5-1.2.5z"/>
+</svg>
+
 <!-- search -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img">
-	<title id="title">search</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="svg-search" role="img">
+	<title id="svg-search" lang="en">search</title>
 	<path d="M56 8c-5.3-5.3-12.3-8-19.2-8-7 0-13.9 2.7-19.2 8-9.3 9.3-10.5 23.8-3.4 34.4L1.5 55c-2.1 2.1-2.1 5.4 0 7.5s5.4 2.1 7.5 0l12.6-12.6c4.6 3.1 9.8 4.6 15.1 4.6 7 0 13.9-2.7 19.2-8C66.6 35.8 66.6 18.6 56 8zm-4.9 33.5c-3.8 3.8-8.9 5.9-14.3 5.9s-10.5-2.1-14.3-5.9c-7.9-7.9-7.9-20.7 0-28.6C26.3 9.1 31.4 7 36.8 7s10.5 2.1 14.3 5.9c3.8 3.8 5.9 8.9 5.9 14.3s-2.1 10.5-5.9 14.3z"/>
 </svg>
 
+<!-- social-facebook -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 64" aria-labelledby="svg-social-facebook" role="img">
+	<title id="svg-social-facebook" lang="en">social-facebook</title>
+	<path d="M8 21.3H0V32h8v32h13.3V32H31l1-10.7H21.3v-4.4c0-2.5.5-3.6 3-3.6H32V0H21.8C12.3 0 8 4.2 8 12.3v9z"/>
+</svg>
+
+<!-- social-instagram -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="svg-social-instagram" role="img">
+	<title id="svg-social-instagram" lang="en">social-instagram</title>
+	<path d="M32 5.8c8.5 0 9.6 0 12.9.2 8.7.4 12.7 4.5 13.1 13.1.2 3.4.2 4.4.2 12.9s0 9.6-.2 12.9c-.4 8.6-4.4 12.7-13.1 13.1-3.4.2-4.4.2-12.9.2s-9.6 0-12.9-.2C10.4 57.7 6.3 53.5 6 44.9c-.2-3.3-.2-4.4-.2-12.9s0-9.6.2-12.9C6.3 10.5 10.4 6.3 19.1 6c3.3-.2 4.4-.2 12.9-.2zM32 0c-8.7 0-9.8 0-13.2.2C7.2.7.7 7.2.2 18.8 0 22.2 0 23.3 0 32s0 9.8.2 13.2c.5 11.6 7 18.1 18.6 18.6 3.4.2 4.5.2 13.2.2s9.8 0 13.2-.2c11.6-.5 18.1-7 18.6-18.6.2-3.4.2-4.5.2-13.2s0-9.8-.2-13.2C63.3 7.2 56.8.7 45.2.2 41.8 0 40.7 0 32 0zm0 15.6c-9.1 0-16.4 7.4-16.4 16.4S22.9 48.4 32 48.4 48.4 41.1 48.4 32c0-9.1-7.3-16.4-16.4-16.4zm0 27.1c-5.9 0-10.7-4.8-10.7-10.7 0-5.9 4.8-10.7 10.7-10.7S42.7 26.1 42.7 32c0 5.9-4.8 10.7-10.7 10.7zm17.1-31.6c-2.1 0-3.8 1.7-3.8 3.8s1.7 3.8 3.8 3.8c2.1 0 3.8-1.7 3.8-3.8s-1.7-3.8-3.8-3.8z"/>
+</svg>
+
+<!-- social-twitter -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 52" aria-labelledby="svg-social-twitter" role="img">
+	<title id="svg-social-twitter" lang="en">social-twitter</title>
+	<path d="M64 6.2c-2.4 1-4.9 1.7-7.5 2.1C59.2 6.6 61.3 4 62.2 1c-2.5 1.5-5.3 2.6-8.3 3.2C51.5 1.6 48.1 0 44.3 0c-8.5 0-14.7 7.9-12.8 16.1-10.9-.5-20.6-5.8-27-13.7C1 8.3 2.7 16 8.5 19.9c-2.1-.1-4.2-.7-5.9-1.6-.1 6.1 4.2 11.8 10.5 13-1.8.5-3.9.6-5.9.2 1.7 5.2 6.5 9 12.3 9.1C13.9 45 7 46.9 0 46.1 5.8 49.8 12.7 52 20.1 52c24.4 0 38.2-20.6 37.3-39 2.6-1.9 4.8-4.2 6.6-6.8z"/>
+</svg>
+
+<!-- social-youtube -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 48" aria-labelledby="svg-social-youtube" role="img">
+	<title id="svg-social-youtube" lang="en">social-youtube</title>
+	<path d="M52.3.5c-9.6-.7-31-.7-40.6 0C1.3 1.2.1 7.5 0 24c.1 16.5 1.3 22.8 11.7 23.5 9.6.7 31 .7 40.6 0 10.4-.7 11.6-7 11.7-23.5C63.9 7.5 62.7 1.2 52.3.5zM24 34.7V13.3L45.3 24 24 34.7z"/>
+</svg>
+
+<!-- toggle -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 47" aria-labelledby="svg-toggle" role="img">
+	<title id="svg-toggle" lang="en">toggle</title>
+	<path d="M3.6 47h46.9c1.9 0 3.5-1.6 3.5-3.5S52.5 40 50.5 40H3.6C1.7 40 .1 41.6.1 43.5S1.7 47 3.6 47M0 23.5C0 25.4 1.6 27 3.5 27h57c1.9 0 3.5-1.6 3.5-3.5S62.4 20 60.5 20h-57C1.6 20 0 21.6 0 23.5M44.2 7H3.6C1.7 7 .1 5.4.1 3.5S1.7 0 3.6 0h40.6c1.9 0 3.5 1.6 3.5 3.5S46.1 7 44.2 7"/>
+</svg>
+
 <!-- vet -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 64" aria-labelledby="title" role="img">
-	<title id="title">vet</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 64" aria-labelledby="svg-vet" role="img">
+	<title id="svg-vet" lang="en">vet</title>
 	<path d="M28 6.1l22 4.7v18.7c.1 1.1.7 18.5-22 28.1C5.4 48 5.9 30.7 6 29.5V10.8l22-4.7M28 0L0 6v23s-2 23.7 28 35c30-11.3 28-35 28-35V6L28 0zm13.5 26.5h-10v-10h-7v10h-10v7h10v10h7v-10h10v-7z"/>
 </svg>
 
 <!-- volume -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img">
-	<title id="title">volume</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="svg-volume" role="img">
+	<title id="svg-volume" lang="en">volume</title>
 	<path d="M30.7 13.5v36.9l-4.1-3.3c-.1-.1-.2-.1-.3-.2-1.4-1-3-1.6-4.7-1.6H7V18.6h14.6c1.7 0 3.4-.5 4.7-1.6.1-.1.2-.1.2-.2l4.2-3.3m6-13.5c-.2 0-.4.1-.6.2l-14 11.2c-.2.1-.4.2-.6.2H1c-.6 0-1 .4-1 1v38.7c0 .6.4 1 1 1h20.6c.2 0 .4.1.6.2l13.9 11.2c.2.1.4.2.6.2.5 0 1-.4 1-1l.1-62c-.1-.5-.5-.9-1.1-.9zm6.1 54.1C54.6 53.6 64 43.8 64 31.9S54.6 10.2 42.8 9.7c-.6 0-1 .4-1 1v5c0 .5.4 1 1 1 8 .5 14.3 7.1 14.3 15.2s-6.3 14.7-14.3 15.2c-.5 0-1 .5-1 1v5c-.1.6.4 1.1 1 1zm.1-11.4c5.4-.6 9.7-5.2 9.7-10.8s-4.3-10.2-9.7-10.8c-.6-.1-1.1.4-1.1 1v5.1c0 .5.4.9.8 1 1.7.4 3 1.9 3 3.7 0 1.8-1.3 3.4-3 3.7-.5.1-.8.5-.8 1v5.1c-.1.6.5 1 1.1 1z"/>
 </svg>
 
 
 				</div>
 				<pre><code class="gs-code language-html"><!-- arrow-down-bold -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 39.5" aria-labelledby="title" role="img">
-	<title id="title">arrow-down-bold</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 39.5" aria-labelledby="svg-arrow-down-bold" role="img">
+	<title id="svg-arrow-down-bold" lang="en">arrow-down-bold</title>
 	<path d="M32 39.5h-.1c-1.9 0-3.7-.8-5.1-2.2L2.2 12.7C-.7 9.8-.7 5.1 2.2 2.1c2.9-2.9 7.6-2.9 10.6 0L32 21.4 51.3 2.2c2.9-2.9 7.6-2.9 10.6 0C63.3 3.6 64 5.6 64 7.5s-.7 3.8-2.2 5.3L37.3 37.3c-1.4 1.4-3.3 2.1-5.1 2.2H32z"/>
 </svg>
 
+<!-- Chevron down red -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 11.1" aria-labelledby="svg-Chevron down red" role="img">
+	<title id="svg-Chevron down red" lang="en">Chevron down red</title>
+	<path d="M9.2,10.8L0.3,1.9C0.1,1.7,0,1.4,0,1.1c0-0.3,0.1-0.6,0.3-0.8c0.4-0.4,1.1-0.4,1.6,0L10,8.4l8.1-8.1c0.4-0.4,1.1-0.4,1.6,0c0.4,0.4,0.4,1.1,0,1.6l-8.9,8.9C10.3,11.2,9.7,11.2,9.2,10.8"/>
+</svg>
+
 <!-- arrow-left -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.5 64" aria-labelledby="title" role="img">
-	<title id="title">arrow-left</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.5 64" aria-labelledby="svg-arrow-left" role="img">
+	<title id="svg-arrow-left" lang="en">arrow-left</title>
 	<path d="M1 29.5L29.5 1c1.4-1.4 3.6-1.4 5 0s1.4 3.6 0 5l-26 26 26 26c1.4 1.4 1.4 3.6 0 5-.7.7-1.6 1-2.5 1-.9 0-1.8-.3-2.5-1L1 34.5c-1.3-1.4-1.3-3.6 0-5z"/>
 </svg>
 
 <!-- arrow-left-bold -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.5 64" aria-labelledby="title" role="img">
-	<title id="title">arrow-left-bold</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.5 64" aria-labelledby="svg-arrow-left-bold" role="img">
+	<title id="svg-arrow-left-bold" lang="en">arrow-left-bold</title>
 	<path d="M0 32v-.1c0-1.9.8-3.7 2.2-5.1L26.7 2.2c2.9-2.9 7.6-2.9 10.6 0 2.9 2.9 2.9 7.6 0 10.6L18 32l19.3 19.3c2.9 2.9 2.9 7.6 0 10.6-1.5 1.4-3.4 2.1-5.3 2.1s-3.8-.7-5.3-2.2L2.2 37.3C.8 35.9 0 34 0 32.1V32z"/>
 </svg>
 
 <!-- arrow-right -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.5 64" aria-labelledby="title" role="img">
-	<title id="title">arrow-right</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.5 64" aria-labelledby="svg-arrow-right" role="img">
+	<title id="svg-arrow-right" lang="en">arrow-right</title>
 	<path d="M34.5 34.5L6 63c-.7.7-1.6 1-2.5 1s-1.8-.3-2.5-1c-1.4-1.4-1.4-3.6 0-5l26-26L1 6C-.4 4.6-.4 2.4 1 1S4.6-.4 6 1l28.5 28.5c1.4 1.4 1.4 3.6 0 5z"/>
 </svg>
 
 <!-- arrow-right-bold -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.5 64" aria-labelledby="title" role="img">
-	<title id="title">arrow-right-bold</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.5 64" aria-labelledby="svg-arrow-right-bold" role="img">
+	<title id="svg-arrow-right-bold" lang="en">arrow-right-bold</title>
 	<path d="M39.5 32.1c0 1.9-.8 3.7-2.2 5.1L12.7 61.8C11.3 63.3 9.4 64 7.5 64s-3.8-.7-5.3-2.2c-2.9-2.9-2.9-7.6 0-10.6L21.4 32 2.2 12.7C-.7 9.8-.7 5.1 2.2 2.1c2.9-2.9 7.6-2.9 10.6 0l24.5 24.5c1.4 1.4 2.1 3.3 2.2 5.1v.4z"/>
 </svg>
 
 <!-- arrow-up-bold -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 39.5" aria-labelledby="title" role="img">
-	<title id="title">arrow-up-bold</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 39.5" aria-labelledby="svg-arrow-up-bold" role="img">
+	<title id="svg-arrow-up-bold" lang="en">arrow-up-bold</title>
 	<path d="M32 0h.1c1.9 0 3.7.8 5.1 2.2l24.5 24.5c2.9 2.9 2.9 7.6 0 10.6-2.9 2.9-7.6 2.9-10.6 0L32 18 12.7 37.3c-2.9 2.9-7.6 2.9-10.6 0C.7 35.8 0 33.9 0 32s.7-3.8 2.2-5.3L26.7 2.2C28.1.8 30 0 31.9 0h.1z"/>
 </svg>
 
 <!-- basket -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 63.9" aria-labelledby="title" role="img">
-	<title id="title">basket</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 63.9" aria-labelledby="svg-basket" role="img">
+	<title id="svg-basket" lang="en">basket</title>
 	<path d="M61 30.8H33.8V9.4c1.7-.8 2.9-2.5 2.9-4.5 0-2.7-2.2-4.9-4.9-4.9s-4.9 2.2-4.9 4.9c0 2 1.2 3.7 2.9 4.5v21.4L3 30.7c-1.7 0-3 1.3-3 3s1.3 3 3 3h.3l9.3 21.5c-1 .5-1.7 1.5-1.7 2.7 0 1.7 1.3 3 3 3h35.6c1.7 0 3-1.3 3-3 0-1.2-.7-2.2-1.7-2.7l9.3-21.4h.8c1.7 0 3-1.3 3-3 .1-1.6-1.2-3-2.9-3zM40.1 57.9l1.3-8.9h7.4l-3.9 8.9h-4.8zm-5.8 0h-5L28 49h7.6l-1.3 8.9zm-15.6 0L14.8 49h7.4l1.3 8.9h-4.8zM27.3 44l-1-7.2h11.1l-1 7.2h-9.1zm-6.9-7.2l1 7.2h-8.8l-3.1-7.2h10.9zM50.9 44h-8.8l1-7.2H54L50.9 44z"/>
 </svg>
 
 <!-- bullseye -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img">
-	<title id="title">bullseye</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="svg-bullseye" role="img">
+	<title id="svg-bullseye" lang="en">bullseye</title>
 	<path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm11.5-25c0 6.4-5.1 11.5-11.5 11.5S20.5 38.4 20.5 32 25.6 20.5 32 20.5 43.5 25.6 43.5 32z"/>
 </svg>
 
 <!-- check -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 53.1" aria-labelledby="title" role="img">
-	<title id="title">check</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 53.1" aria-labelledby="svg-check" role="img">
+	<title id="svg-check" lang="en">check</title>
 	<path d="M62.7 10.4l-31 40.2c-.5.6-1 1.1-1.6 1.5-.1 0-.1.1-.2.1-1 .6-2.1.9-3.3.9-1.4 0-2.8-.4-4-1.3L2.5 36.3C-.3 34.1-.9 30 1.3 27.2s6.3-3.4 9.1-1.2l15 11.5 27-35c2.2-2.8 6.3-3.4 9.1-1.2s3.3 6.3 1.2 9.1z"/>
 </svg>
 
 <!-- check-circle -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img">
-	<title id="title">check-circle</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="svg-check-circle" role="img">
+	<title id="svg-check-circle" lang="en">check-circle</title>
 	<path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm14.3-31.6L33 43.9c-.7 1-1.8 1.5-2.8 1.5-.7 0-1.4-.2-2-.7l-9.6-6.9c-1.6-1.1-1.9-3.3-.8-4.9 1.1-1.6 3.3-1.9 4.9-.8l6.7 4.8 11.3-15.7c1.1-1.6 3.3-1.9 4.9-.8 1.4 1.2 1.8 3.4.7 5z"/>
 </svg>
 
 <!-- calendar -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 54.7" aria-labelledby="title" role="img">
-	<title id="title">calendar</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 54.7" aria-labelledby="svg-calendar" role="img">
+	<title id="svg-calendar" lang="en">calendar</title>
 	<path d="M9.6 24.6v21.2h34.2v-9.3h10.5V24.6H9.6zM41.3 34h-8.1v-6.9h8.1V34zm-18.6 0v-6.9h8.1V34h-8.1zm8.1 2.4v6.9h-8.1v-6.9h8.1zm-10.6-9.3V34h-8.1v-6.9h8.1zm-8.1 9.3h8.1v6.9h-8.1v-6.9zm29.2 6.9h-8.1v-6.9h8.1v6.9zm2.5-9.3v-6.9h8.1V34h-8.1zM14.1 10.2c0-1.3 1-2.3 2.3-2.3 1.3 0 2.3 1 2.3 2.3s-1 2.3-2.3 2.3c-1.3 0-2.3-1-2.3-2.3zm32.3 0c0-1.3 1-2.3 2.3-2.3 1.3 0 2.3 1 2.3 2.3s-1 2.3-2.3 2.3c-1.3 0-2.3-1-2.3-2.3zM57.4 0H6.6C3 0 0 3 0 6.6v41.5c0 3.6 3 6.6 6.6 6.6h41.6l4.9-4.9 5.9-5.9 4.9-4.9V6.6C64 3 61 0 57.4 0zM6.6 4.9h50.8c.9 0 1.7.7 1.7 1.7v8.2H4.9V6.6c0-.9.8-1.7 1.7-1.7zm48.2 33.9c-3.6 0-6.6 3-6.6 6.6v4.3H6.6c-.9 0-1.7-.7-1.7-1.7V19.8H59v19.1h-4.2z"/>
 </svg>
 
 <!-- clock -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img">
-	<title id="title">clock</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="svg-clock" role="img">
+	<title id="svg-clock" lang="en">clock</title>
 	<path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm14.6-15.5c1.4 1.4 1.4 3.6 0 4.9-.7.7-1.6 1-2.5 1s-1.8-.3-2.5-1l-13-13v-19c0-1.9 1.6-3.5 3.5-3.5s3.5 1.6 3.5 3.5v16.1l11 11z"/>
 </svg>
 
 <!-- computer -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 41.8" aria-labelledby="title" role="img">
-	<title id="title">computer</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 41.8" aria-labelledby="svg-computer" role="img">
+	<title id="svg-computer" lang="en">computer</title>
 	<path d="M60 37.2V4.9C60 2.2 57.8 0 55.1 0H8.9C6.2 0 4 2.2 4 4.9v32.3H0v1.7c0 1.6 1.3 2.9 2.9 2.9h58.2c1.6 0 2.9-1.3 2.9-2.9v-1.7h-4zM32 2c.6 0 1 .5 1 1 0 .6-.5 1-1 1s-1-.5-1-1 .4-1 1-1zM10 6h44v29.2H10V6z"/>
 </svg>
 
 <!-- cross -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img">
-	<title id="title">cross</title>
-	<path d="M63 58c1.4 1.4 1.4 3.6 0 5-.7.7-1.6 1-2.5 1-.9 0-1.8-.3-2.5-1L32 37 6 63c-.7.7-1.6 1-2.5 1-.9 0-1.8-.3-2.5-1-1.4-1.4-1.4-3.6 0-5l26-26L1 6C-.4 4.6-.4 2.4 1 1S4.6-.4 6 1l26 26L58 1c1.4-1.4 3.6-1.4 5 0s1.4 3.6 0 5L37 32l26 26z"/>
-</svg>
-
-<!-- crown -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 34.6" aria-labelledby="title" role="img">
-	<title id="title">crown</title>
-	<path d="M12.7 31.4c-.6 0-1.1-.3-1.5-.8-.6-.8-.5-2 .4-2.6 5-3.7 12.7-6 20.5-6 7.8 0 15.4 2.2 20.4 6 .8.6 1 1.8.4 2.6s-1.8 1-2.6.4c-3.4-2.5-9.9-5.2-18.2-5.2-8.3 0-14.8 2.7-18.2 5.2-.4.3-.8.4-1.2.4m1.7 3.2c.3 0 .6-.1.8-.3 3.8-3.1 10.3-5.1 16.8-5.1 6.6 0 12.9 1.9 16.8 5.1.5.5 1.4.4 1.8-.2.5-.6.4-1.4-.2-1.8-4.3-3.6-11.2-5.7-18.4-5.7-7.2 0-14.1 2.1-18.4 5.7-.6.5-.6 1.3-.2 1.8.3.3.6.5 1 .5M4.3 7.5c-.8 0-1.5.2-2.2.6-1 .6-1.7 1.5-2 2.6-.2 1.2-.1 2.3.5 3.3.8 1.3 2.2 2.1 3.7 2.1.8 0 1.5-.2 2.2-.6 1-.6 1.7-1.5 2-2.6.3-1.1.1-2.3-.5-3.3-.7-1.3-2.2-2.1-3.7-2.1M32 10.8c-2.4 0-4.3 1.9-4.3 4.3s1.9 4.3 4.3 4.3 4.3-1.9 4.3-4.3c0-2.3-1.9-4.3-4.3-4.3M32 0c-2.4 0-4.3 1.9-4.3 4.3s1.9 4.3 4.3 4.3 4.3-1.9 4.3-4.3S34.4 0 32 0M20.5 12.3c-.4 0-.8.1-1.1.2-2.3.6-3.7 3-3 5.3.5 1.9 2.2 3.2 4.1 3.2h.1c.4 0 .7-.1 1.1-.2 1.1-.3 2-1 2.6-2 .6-1 .7-2.2.4-3.3-.5-1.9-2.2-3.2-4.2-3.2M9.8 16.8c-.8 0-1.5.2-2.2.6-1 .6-1.7 1.5-2 2.6-.3 1.1-.1 2.3.5 3.3.8 1.3 2.2 2.1 3.7 2.1.8 0 1.5-.2 2.2-.6 1-.6 1.7-1.5 2-2.6.3-1.1.1-2.3-.5-3.3-.7-1.3-2.2-2.1-3.7-2.1m34.8-4.3c-.4-.1-.8-.2-1.1-.2-1.9 0-3.7 1.3-4.2 3.2-.6 2.3.7 4.7 3 5.3.4.1.8.2 1.1.2 1.9 0 3.7-1.3 4.2-3.2.7-2.3-.7-4.7-3-5.3M47.5 2c-.4-.1-.8-.2-1.1-.2-1.9 0-3.6 1.3-4.2 3.2-.6 2.3.7 4.7 3 5.3.4.1.8.2 1.1.2 1.9 0 3.7-1.3 4.2-3.2.6-2.3-.7-4.6-3-5.3m8.9 15.4c-.7-.4-1.4-.6-2.2-.6-1.5 0-2.9.8-3.7 2.1-.6 1-.8 2.2-.5 3.3.3 1.1 1 2.1 2 2.6.7.4 1.4.6 2.2.6 1.5 0 2.9-.8 3.7-2.1.6-1 .8-2.2.5-3.3-.3-1.1-1-2-2-2.6m7.5-6.7c-.3-1.1-1-2.1-2-2.6-.7-.4-1.4-.6-2.2-.6-1.5 0-2.9.8-3.7 2.1-.6 1-.8 2.2-.5 3.3.3 1.1 1 2.1 2 2.6.7.4 1.4.6 2.2.6 1.5 0 2.9-.8 3.7-2.1.6-1 .7-2.1.5-3.3m-46.2-.2c.4 0 .8-.1 1.1-.2 2.3-.6 3.6-3 3-5.3-.5-1.9-2.2-3.2-4.2-3.2-.4 0-.8.1-1.1.2-2.3.6-3.7 3-3 5.3.5 1.9 2.2 3.2 4.2 3.2z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="svg-cross" role="img">
+	<title id="svg-cross" lang="en">cross</title>
+	<path d="M44.6 32l16.8-16.8c3.5-3.5 3.5-9.1 0-12.6s-9.1-3.5-12.6 0L32 19.4 15.2 2.6C11.7-.9 6.1-.9 2.6 2.6s-3.5 9.1 0 12.6L19.4 32 2.6 48.8c-3.5 3.5-3.5 9.1 0 12.6 1.7 1.7 4 2.6 6.3 2.6s4.5-.9 6.3-2.6L32 44.6l16.8 16.8c1.7 1.7 4 2.6 6.3 2.6s4.5-.9 6.3-2.6c3.5-3.5 3.5-9.1 0-12.6L44.6 32z"/>
 </svg>
 
 <!-- envelope -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 48" aria-labelledby="title" role="img">
-	<title id="title">envelope</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 48" aria-labelledby="svg-envelope" role="img">
+	<title id="svg-envelope" lang="en">envelope</title>
 	<path d="M61.5 0h-59C1.1 0 0 1.1 0 2.5v42.9C0 46.9 1.1 48 2.5 48h59.1c1.4 0 2.5-1.1 2.5-2.5v-43C64 1.1 62.9 0 61.5 0zm-8.8 6L39.1 19.7l-3.5 3.5c-.3.3-.6.5-.9.7-1.6 1-3.7 1-5.3 0-.3-.2-.6-.4-.9-.7L25 19.7 11.3 6h41.4zM6 9.2l14.7 14.7L6 38.6V9.2zM11.1 42L25 28.1c2 1.7 4.5 2.6 7.1 2.6 2.5 0 5-.9 7.1-2.6L52.9 42H11.1zM58 38.6L43.3 23.9 58 9.2v29.4z"/>
 </svg>
 
+<!-- eye -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 34.7" aria-labelledby="svg-eye" role="img">
+	<title id="svg-eye" lang="en">eye</title>
+	<path d="M36.2 16.6c-1.8 0-3.3-1.5-3.3-3.3 0-1.4.9-2.6 2.1-3.1-.9-.4-2-.6-3.1-.6-4.3 0-7.8 3.5-7.8 7.8s3.5 7.8 7.8 7.8 7.8-3.4 7.8-7.7c0-1-.2-2-.6-2.8-.3 1.1-1.6 1.9-2.9 1.9M32 30.5c-7.3 0-13.2-5.9-13.2-13.2C18.8 10 24.7 4.1 32 4.1c7.3 0 13.2 5.9 13.2 13.2 0 7.3-5.9 13.2-13.2 13.2m31.6-14.4C60.2 12.1 48.9 0 32 0 15.1 0 3.8 12.1.4 16.1c-.6.7-.6 1.8 0 2.6C3.7 22.7 15 34.8 32 34.8c16.9 0 28.2-12.1 31.6-16.1.5-.9.5-1.8 0-2.6"/>
+</svg>
+
 <!-- loading -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 63.8 64" aria-labelledby="title" role="img">
-	<title id="title">loading</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 63.8 64" aria-labelledby="svg-loading" role="img">
+	<title id="svg-loading" lang="en">loading</title>
 	<path d="M34.1.1C16.7-1.1 2 11.6 0 28.1-.2 30.2 1.4 32 3.5 32c1.8 0 3.3-1.3 3.5-3.1C8.6 15.7 20.7 5.6 34.7 7.2c11.5 1.3 20.7 10.5 22 22C58.3 44.2 46.5 57 31.8 57c-6.3 0-12.1-2.4-16.5-6.3-1.3-1.2-3.3-1.2-4.6 0-1.6 1.4-1.6 3.8 0 5.2 5.6 5 13.1 8 21.2 8C50.2 64 65 48.4 63.7 29.7 62.6 14 49.8 1.2 34.1.1z"/>
 </svg>
 
 <!-- location -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img">
-	<title id="title">location</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="svg-location" role="img">
+	<title id="svg-location" lang="en">location</title>
 	<path d="M52.3 0c-6.5 0-11.7 5.2-11.7 11.7 0 1.6.3 3.2.9 4.5 0 .1 0 .1-.1.2-.6 1.6-1.2 3.2-1.4 5.7-.1 1.9-.8 4.1-2.2 4.5-.6.2-1.5.2-2.4.2h-2c-1.8.1-3.6.6-5.2 1.5-1.2.7-2.2 1.4-2.8 2.4-.6.8-1 1.8-1.2 3-.4 1.7-.2 3.4-.1 4.9.1 1.5.2 2.8-.2 3.8-.4.9-1.9 2.1-3 2.6-2.1-2.7-5.4-4.4-9.2-4.4C5.2 40.6 0 45.8 0 52.3S5.2 64 11.7 64c6.5 0 11.7-5.2 11.7-11.7 0-.6-.1-1.2-.2-1.8 2.7-1.2 5.2-3.6 6.1-5.9.9-2.3.7-4.5.6-6.5-.1-1.2-.2-2.3 0-3.3.1-.4.2-.6.2-.7.1-.1.3-.3.8-.6.9-.5 1.8-.7 2.8-.8h1.5c1.4 0 3 .1 4.6-.5 3.5-1.3 5.8-4.9 6.1-9.8 0-.3 0-.6.1-.8 1.8 1.1 3.9 1.7 6.1 1.7 6.5 0 11.7-5.2 11.7-11.7S58.8 0 52.3 0zM11.7 58C8.6 58 6 55.4 6 52.3s2.6-5.7 5.7-5.7 5.7 2.6 5.7 5.7-2.5 5.7-5.7 5.7zm40.6-40.6c-3.1 0-5.7-2.6-5.7-5.7S49.1 6 52.3 6c3.1 0 5.7 2.6 5.7 5.7s-2.6 5.7-5.7 5.7z"/>
 </svg>
 
 <!-- loyalty -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 63.8" aria-labelledby="title" role="img">
-	<title id="title">loyalty</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 63.8" aria-labelledby="svg-loyalty" role="img">
+	<title id="svg-loyalty" lang="en">loyalty</title>
 	<path d="M45.1 7C51.7 7 57 12.3 57 18.8v.2c0 .2.3 20.7-25 36.6C7.4 40.2 7 20.4 7 19v-.2C7 12.3 12.3 7 18.8 7c3.1 0 6 1.2 8.3 3.4l4.9 4.8 4.9-4.8C39.1 8.2 42 7 45.1 7m0-7C40 0 35.4 2 32 5.4 28.6 2 24 0 18.8 0 8.4 0 0 8.4 0 18.8c0 0-.8 26.6 32 44.9 32.8-18.3 32-44.9 32-44.9C64 8.4 55.5 0 45.1 0z"/>
 </svg>
 
 <!-- mobile -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.6 64" aria-labelledby="title" role="img">
-	<title id="title">mobile</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.6 64" aria-labelledby="svg-mobile" role="img">
+	<title id="svg-mobile" lang="en">mobile</title>
 	<path d="M39.1 0H2.5C1.1 0 0 1.1 0 2.5v59C0 62.9 1.1 64 2.5 64h36.6c1.4 0 2.5-1.1 2.5-2.5v-59c0-1.4-1.1-2.5-2.5-2.5zM21.3 61.5c-1.9.4-3.6-1.3-3.2-3.2.2-1.1 1.1-2 2.2-2.2 1.9-.4 3.6 1.3 3.2 3.2-.2 1.1-1.1 2-2.2 2.2zm14.2-7.6H6.1s-.1 0-.1-.1V6.1C6 6 6 6 6.1 6h29.5s.1 0 .1.1l-.2 47.8c.1 0 .1 0 0 0z"/>
 </svg>
 
 <!-- play -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img">
-	<title id="title">play</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="svg-play" role="img">
+	<title id="svg-play" lang="en">play</title>
 	<path d="M32 0C14.3 0 0 14.3 0 32s14.3 32 32 32 32-14.3 32-32S49.7 0 32 0zm0 57C18.2 57 7 45.8 7 32S18.2 7 32 7s25 11.2 25 25-11.2 25-25 25zm9.1-25.8c.6.4.6 1.2 0 1.6l-11.7 8.3c-.7.5-1.6 0-1.6-.8V23.7c0-.8.9-1.3 1.6-.8l11.7 8.3z"/>
 </svg>
 
 <!-- profile -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55.5 64" aria-labelledby="title" role="img">
-	<title id="title">profile</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55.5 64" aria-labelledby="svg-profile" role="img">
+	<title id="svg-profile" lang="en">profile</title>
 	<path d="M0 64h55.5s0-20.8-16.9-27.1c5.5-3.6 9.2-9.8 9.2-16.8 0-11.1-9-20-20-20s-20 9-20 20c0 7.1 3.7 13.3 9.2 16.8C0 43.2 0 64 0 64zM27.8 6c7.7 0 14 6.3 14 14s-6.3 14-14 14-14-6.3-14-14c-.1-7.7 6.2-14 14-14zm0 35c9 0 15.1 3.5 18.7 10.8 1.1 2.1 1.7 4.3 2.2 6.2H6.8c.5-1.9 1.2-4.1 2.2-6.2C12.6 44.6 18.8 41 27.8 41z"/>
 </svg>
 
+<!-- royal-canin-crown -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 34.6" aria-labelledby="svg-royal-canin-crown" role="img">
+	<title id="svg-royal-canin-crown" lang="en">royal-canin-crown</title>
+	<path d="M12.7 31.4c-.6 0-1.1-.3-1.5-.8-.6-.8-.5-2 .4-2.6 5-3.7 12.7-6 20.5-6 7.8 0 15.4 2.2 20.4 6 .8.6 1 1.8.4 2.6s-1.8 1-2.6.4c-3.4-2.5-9.9-5.2-18.2-5.2-8.3 0-14.8 2.7-18.2 5.2-.4.3-.8.4-1.2.4m1.7 3.2c.3 0 .6-.1.8-.3 3.8-3.1 10.3-5.1 16.8-5.1 6.6 0 12.9 1.9 16.8 5.1.5.5 1.4.4 1.8-.2.5-.6.4-1.4-.2-1.8-4.3-3.6-11.2-5.7-18.4-5.7-7.2 0-14.1 2.1-18.4 5.7-.6.5-.6 1.3-.2 1.8.3.3.6.5 1 .5M4.3 7.5c-.8 0-1.5.2-2.2.6-1 .6-1.7 1.5-2 2.6-.2 1.2-.1 2.3.5 3.3.8 1.3 2.2 2.1 3.7 2.1.8 0 1.5-.2 2.2-.6 1-.6 1.7-1.5 2-2.6.3-1.1.1-2.3-.5-3.3-.7-1.3-2.2-2.1-3.7-2.1M32 10.8c-2.4 0-4.3 1.9-4.3 4.3s1.9 4.3 4.3 4.3 4.3-1.9 4.3-4.3c0-2.3-1.9-4.3-4.3-4.3M32 0c-2.4 0-4.3 1.9-4.3 4.3s1.9 4.3 4.3 4.3 4.3-1.9 4.3-4.3S34.4 0 32 0M20.5 12.3c-.4 0-.8.1-1.1.2-2.3.6-3.7 3-3 5.3.5 1.9 2.2 3.2 4.1 3.2h.1c.4 0 .7-.1 1.1-.2 1.1-.3 2-1 2.6-2 .6-1 .7-2.2.4-3.3-.5-1.9-2.2-3.2-4.2-3.2M9.8 16.8c-.8 0-1.5.2-2.2.6-1 .6-1.7 1.5-2 2.6-.3 1.1-.1 2.3.5 3.3.8 1.3 2.2 2.1 3.7 2.1.8 0 1.5-.2 2.2-.6 1-.6 1.7-1.5 2-2.6.3-1.1.1-2.3-.5-3.3-.7-1.3-2.2-2.1-3.7-2.1m34.8-4.3c-.4-.1-.8-.2-1.1-.2-1.9 0-3.7 1.3-4.2 3.2-.6 2.3.7 4.7 3 5.3.4.1.8.2 1.1.2 1.9 0 3.7-1.3 4.2-3.2.7-2.3-.7-4.7-3-5.3M47.5 2c-.4-.1-.8-.2-1.1-.2-1.9 0-3.6 1.3-4.2 3.2-.6 2.3.7 4.7 3 5.3.4.1.8.2 1.1.2 1.9 0 3.7-1.3 4.2-3.2.6-2.3-.7-4.6-3-5.3m8.9 15.4c-.7-.4-1.4-.6-2.2-.6-1.5 0-2.9.8-3.7 2.1-.6 1-.8 2.2-.5 3.3.3 1.1 1 2.1 2 2.6.7.4 1.4.6 2.2.6 1.5 0 2.9-.8 3.7-2.1.6-1 .8-2.2.5-3.3-.3-1.1-1-2-2-2.6m7.5-6.7c-.3-1.1-1-2.1-2-2.6-.7-.4-1.4-.6-2.2-.6-1.5 0-2.9.8-3.7 2.1-.6 1-.8 2.2-.5 3.3.3 1.1 1 2.1 2 2.6.7.4 1.4.6 2.2.6 1.5 0 2.9-.8 3.7-2.1.6-1 .7-2.1.5-3.3m-46.2-.2c.4 0 .8-.1 1.1-.2 2.3-.6 3.6-3 3-5.3-.5-1.9-2.2-3.2-4.2-3.2-.4 0-.8.1-1.1.2-2.3.6-3.7 3-3 5.3.5 1.9 2.2 3.2 4.2 3.2z"/>
+</svg>
+
+<!-- royal-canin-logo -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 199.7 69.7" aria-labelledby="svg-royal-canin-logo" role="img">
+	<title id="svg-royal-canin-logo" lang="en">royal-canin-logo</title>
+	<path d="M196.9 44.2c1.6 0 2.9 1.3 2.9 2.9 0 1.6-1.3 2.9-2.9 2.9-1.6 0-2.9-1.3-2.9-2.9 0-1.6 1.3-2.9 2.9-2.9zm0 5c1.2 0 2.2-1 2.2-2.2 0-1.2-1-2.2-2.2-2.2-1.2 0-2.2 1-2.2 2.2 0 1.3 1 2.2 2.2 2.2zm-.5-.9c0 .2-.1.4-.4.4-.3 0-.3-.1-.3-.4v-2.4c0-.2.1-.3.4-.3h.9c.6 0 1.2.2 1.2.9 0 .6-.3.8-.8.9l.6.9v.2c0 .2-.1.3-.4.3-.2 0-.3-.2-.4-.4l-.5-.9h-.2v.8zm.6-1.5c.3 0 .4-.1.4-.3 0-.3-.2-.4-.4-.4h-.6v.7h.6zM.4 66.8c0 1.4 1.2 2.6 2.6 2.6 1.4 0 2.6-1.2 2.6-2.6l.1-6.5c0-.1.1-.3.3-.3h.1l6.4 8.7c.4.4 1 .7 1.7.7 1.4 0 2.6-1.1 2.6-2.5 0-.4-.1-.8-.3-1.1l-4-6.3c2-1 3.5-3.5 3.5-6.2 0-4.5-3.2-8-7.9-8.2-2.6-.2-4.5.8-6 2.1C.5 48.7 0 50.9 0 53.3l.4 13.5zm7.5-16.3c1.6 0 2.9 1.2 2.9 2.6 0 1.5-1.3 2.6-2.9 2.6S5 54.6 5 53.2c0-1.5 1.3-2.7 2.9-2.7zm90 6.8c0 7.6 6.4 12.2 11.5 12.2 3.5 0 7.2-1.5 9.2-3.9.4-.5.6-1 .6-1.7 0-1.4-1.2-2.6-2.6-2.6-.4 0-.8.1-1.2.3l-2.1 1.4c-1 .7-2.2 1-3.5 1-3.6 0-6.5-3-6.5-6.7s2.9-6.7 6.5-6.7c1.3 0 2.5.4 3.5 1l2.1 1.4c.4.2.8.3 1.2.3 1.4 0 2.6-1.2 2.6-2.6 0-.6-.2-1.2-.6-1.7-2-2.4-5-3.8-8.5-3.8-6.8-.1-12.2 5.4-12.2 12.1zm-43.8 7.8c-.3.4-.5 1-.5 1.6 0 1.5 1.2 2.6 2.6 2.6.9 0 1.6-.4 2.1-1.1l2.8-3.8h6.7v2.2c0 1.5 1.3 2.7 2.8 2.7 1.5 0 2.7-1.2 2.7-2.7V47.5c0-1.5-1.3-2.8-2.8-2.8-.8 0-1.6.4-2.1 1L54.1 65.1zm13.8-10v4h-2.5c-.1 0-.2-.1-.2-.2v-.1l2.7-3.7zm57.6-9.4c-.5-.6-1.3-1-2.1-1-1.5 0-2.8.8-2.8 2.3v19.6c0 1.5 1.2 2.7 2.7 2.7 1.5 0 2.8-1.2 2.8-2.7v-2.2h6.7l2.8 3.8c.5.6 1.2 1.1 2.1 1.1 1.5 0 2.6-1.2 2.6-2.6 0-.6-.2-1.1-.5-1.6l-14.3-19.4zm3.3 13.1v.1c0 .1-.1.2-.2.2h-2.5v-4l2.7 3.7zm-87.6-1.6C41.2 50.4 35.8 45 29 45c-6.8 0-12.2 5.5-12.2 12.2S22.2 69.4 29 69.4c6.8 0 12.2-5.4 12.2-12.2zM29 50.6c3.6 0 6.6 2.9 6.6 6.6 0 3.6-2.9 6.6-6.6 6.6-3.6 0-6.6-2.9-6.6-6.6 0-3.6 3-6.6 6.6-6.6zm20.8 1.6c-.1 0-.2 0-.3-.1l-6.1-6.4c-.5-.5-1.1-.8-1.9-.8-1.4 0-2.6 1.2-2.6 2.6 0 .7.3 1.3.7 1.7l7.4 8.5.1 9c0 1.4 1.2 2.6 2.6 2.6 1.4 0 2.6-1.2 2.6-2.6l.1-9 7.4-8.5c.4-.5.7-1.1.7-1.7 0-1.4-1.2-2.6-2.6-2.6-.7 0-1.4.3-1.9.8l-6 6.4c0 .1-.1.1-.2.1zM179 46.7c-.6-1.2-1.8-1.8-3.3-1.8-1.9 0-3.5 1.6-3.5 3.5v18.7c0 1.5 1.2 2.6 2.7 2.6 1.5 0 2.7-1.2 2.7-2.6V55.7c0-.1.1-.2.2-.2l.1.1 6.8 12c.6 1.1 1.7 1.8 3 1.8 1.9 0 3.5-1.6 3.5-3.5v-19c0-1.5-1.2-2.6-2.6-2.6-1.5 0-2.6 1.2-2.6 2.6v11.4l-.2.2-.1-.1-6.7-11.7zm-30.5 0c-.6-1.2-1.8-1.8-3.3-1.8-1.9 0-3.5 1.6-3.5 3.5V67c0 1.5 1.2 2.6 2.7 2.6 1.5 0 2.7-1.2 2.7-2.6V55.6c0-.1.1-.2.2-.2l.1.1 6.8 12c.6 1.1 1.7 1.8 3 1.8 1.9 0 3.5-1.6 3.5-3.5v-19c0-1.5-1.2-2.6-2.6-2.6-1.5 0-2.6 1.2-2.6 2.6v11.4l-.2.2-.1-.1-6.7-11.6zM82.6 64.1c-.2 0-.3-.1-.3-.3V47.5c0-1.5-1.2-2.8-2.8-2.8-1.5 0-2.8 1.2-2.8 2.8v20.3c0 .9.7 1.5 1.5 1.5h9.7c1.4 0 2.6-1.2 2.6-2.6 0-1.4-1.2-2.6-2.6-2.6h-5.3zm81 2.7c0 1.6 1.3 2.8 2.8 2.8 1.6 0 2.8-1.3 2.8-2.8V47.1c0-1.6-1.3-2.8-2.8-2.8-1.6 0-2.8 1.3-2.8 2.8v19.7zM79.5 12c.4 0 .9-.1 1.3-.2 2.6-.7 4.1-3.4 3.4-6-.6-2.1-2.5-3.6-4.7-3.6-.4 0-.9.1-1.3.2-2.6.7-4.2 3.4-3.4 6 .6 2.1 2.5 3.5 4.7 3.6zm52.6.2c-.3-1.3-1.1-2.3-2.3-3-.8-.4-1.6-.7-2.5-.7-1.7 0-3.3.9-4.2 2.4-.7 1.1-.9 2.5-.5 3.7.3 1.3 1.1 2.3 2.3 3 .8.4 1.6.7 2.5.7 1.7 0 3.4-.9 4.2-2.4.6-1.1.8-2.4.5-3.7zm-8.6 7.6c-.8-.4-1.6-.7-2.5-.7-1.7 0-3.4.9-4.2 2.4-.7 1.1-.9 2.4-.5 3.7.3 1.3 1.1 2.3 2.3 3 .8.4 1.6.7 2.5.7 1.7 0 3.3-.9 4.2-2.4.7-1.1.9-2.5.5-3.7-.3-1.3-1.1-2.4-2.3-3zM113.4 2.3c-.4-.1-.9-.2-1.3-.2-2.2 0-4.1 1.5-4.7 3.6-.7 2.6.8 5.3 3.4 6 .4.1.9.2 1.3.2 2.2 0 4.2-1.5 4.7-3.6.8-2.6-.7-5.3-3.4-6zm-3.2 11.9c-.4-.1-.9-.2-1.3-.2-2.2 0-4.2 1.5-4.7 3.6-.7 2.6.8 5.3 3.4 6 .4.1.9.2 1.3.2 2.2 0 4.2-1.5 4.7-3.6.8-2.6-.8-5.3-3.4-6zm-39.6 4.9c-.9 0-1.7.2-2.5.7-1.1.7-1.9 1.7-2.3 3-.3 1.3-.1 2.6.5 3.7.9 1.5 2.5 2.4 4.2 2.4.9 0 1.7-.2 2.5-.7 1.1-.7 1.9-1.7 2.3-3 .3-1.3.1-2.6-.5-3.7-.8-1.5-2.4-2.4-4.2-2.4zM82.8 14c-.4 0-.9.1-1.3.2-2.6.7-4.2 3.4-3.4 6 .6 2.1 2.5 3.6 4.7 3.6h.1c.4 0 .8-.1 1.2-.2 1.3-.3 2.3-1.2 3-2.3.6-1.1.8-2.5.5-3.7-.7-2.1-2.6-3.6-4.8-3.6zm13-14c-2.7 0-4.9 2.2-4.9 4.9s2.2 4.9 4.9 4.9 4.9-2.2 4.9-4.9S98.5 0 95.8 0zm0 12.3c-2.7 0-4.9 2.2-4.9 4.9s2.2 4.9 4.9 4.9 4.9-2.2 4.9-4.9-2.2-4.9-4.9-4.9zM64.4 8.5c-.9 0-1.7.2-2.5.7-1.1.7-1.9 1.7-2.3 3-.3 1.3-.1 2.6.5 3.7.9 1.5 2.5 2.4 4.2 2.4.9 0 1.7-.2 2.5-.7 1.1-.7 1.9-1.7 2.3-3 .3-1.3.1-2.6-.5-3.7-.9-1.5-2.5-2.4-4.2-2.4zm11.4 30.8c.3 0 .7-.1.9-.3 4.3-3.6 11.7-5.8 19.1-5.8 7.5 0 14.6 2.2 19 5.8.6.5 1.5.4 2.1-.2.5-.6.4-1.5-.2-2.1-4.9-4-12.7-6.5-20.9-6.5s-16 2.4-21 6.5c-.6.5-.7 1.4-.2 2.1.4.4.8.5 1.2.5zm-1.9-3.6c-.7 0-1.3-.3-1.7-.9-.7-.9-.5-2.3.4-3C78.3 27.6 87 25 95.9 25s17.5 2.5 23.2 6.8c1 .7 1.1 2 .4 3-.7.9-2 1.1-3 .4-3.8-2.9-11.3-5.9-20.7-5.9-9.4 0-16.9 3.1-20.7 5.9-.3.3-.8.5-1.2.5z"/>
+</svg>
+
+<!-- royal-canin-logo-strapline -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 199.7 86.1" aria-labelledby="svg-royal-canin-logo-strapline" role="img">
+	<title id="svg-royal-canin-logo-strapline" lang="en">royal-canin-logo-strapline</title>
+	<path d="M196.9 44.2c1.6 0 2.9 1.3 2.9 2.9 0 1.6-1.3 2.9-2.9 2.9-1.6 0-2.9-1.3-2.9-2.9 0-1.6 1.3-2.9 2.9-2.9zm0 5c1.2 0 2.2-1 2.2-2.2 0-1.2-1-2.2-2.2-2.2-1.2 0-2.2 1-2.2 2.2 0 1.3 1 2.2 2.2 2.2zm-.5-.9c0 .2-.1.4-.4.4-.3 0-.3-.1-.3-.4v-2.4c0-.2.1-.3.4-.3h.9c.6 0 1.2.2 1.2.9 0 .6-.3.8-.8.9l.6.9v.2c0 .2-.1.3-.4.3-.2 0-.3-.2-.4-.4l-.5-.9h-.2v.8zm.6-1.5c.3 0 .4-.1.4-.3 0-.3-.2-.4-.4-.4h-.6v.7h.6zM9.9 86h1v-6.8h-1V86zm8.8 0l-3.2-4.8V86h-1v-6.8h.9l3.2 4.8v-4.8h1V86h-.9zm8.7-.7c-.5.5-1.1.8-1.9.8-.7 0-1.3-.3-1.8-.7-.7-.7-.7-1.4-.7-2.8 0-1.3 0-2.1.7-2.7.5-.5 1.1-.7 1.8-.7.9 0 1.4.3 1.9.8l-.7.7c-.4-.4-.6-.6-1.2-.6-.4 0-.8.2-1 .4-.3.4-.4.8-.4 2.1 0 1.4.1 1.8.4 2.1.2.3.6.4 1 .4.6 0 .9-.2 1.2-.6l.7.8zm7 .7L33 83.1h-1.3V86h-1v-6.8h2.6c1.3 0 2.1.8 2.1 2 0 1-.6 1.6-1.4 1.8l1.6 3h-1.2zm-.1-4.8c0-.7-.5-1.1-1.2-1.1h-1.5v2.1h1.5c.8.1 1.2-.3 1.2-1zm4.4 4.8v-6.8h4.4v.9h-3.3v2h2.8v.9h-2.8v2.1h3.3v.9h-4.4zm12.4-3.4c0 1 0 2.1-.7 2.8-.4.4-1 .6-1.7.6h-2.4v-6.8h2.4c.7 0 1.3.2 1.8.6.7.8.6 1.8.6 2.8zm-1 0c0-.9 0-1.6-.4-2-.3-.3-.7-.5-1.2-.5h-1.3v5h1.3c.5 0 .9-.1 1.2-.5.4-.3.4-1.1.4-2zm4.4 3.4h1v-6.8h-1V86zm9.4-1.9c0 1.3-.9 1.9-2.1 1.9H59v-6.8h2.7c1.3 0 2.1.7 2.1 1.9 0 .7-.5 1.3-.9 1.4.5.3 1 .8 1 1.6zm-1.1-3c0-.6-.4-1-1.1-1h-1.5v2h1.5c.7 0 1.1-.3 1.1-1zm.1 3c0-.6-.4-1-1.1-1h-1.6v2.1h1.6c.7-.1 1.1-.5 1.1-1.1zm4.4 1.9v-6.8h1v5.9h3.3v.9h-4.3zm7.3 0v-6.8H79v.9h-3.3v2h2.8v.9h-2.8v2.1H79v.9h-4.4zm11.3 0h1v-6.8h-1V86zm8.8 0l-3.2-4.8V86h-1v-6.8h.9l3.2 4.8v-4.8h1V86h-.9zm8.2 0v-6.8h4.4v.9H104v2h2.8v.9H104v2.1h3.3v.9h-4.4zm9.8 0h-.8l-2.2-6.8h1.1l1.6 5 1.6-5h1.1l-2.4 6.8zm5 0v-6.8h4.4v.9h-3.3v2h2.8v.9h-2.8v2.1h3.3v.9h-4.4zm11.4 0l-1.4-2.9h-1.3V86h-1v-6.8h2.6c1.3 0 2.1.8 2.1 2 0 1-.6 1.6-1.4 1.8l1.6 3h-1.2zm-.1-4.8c0-.7-.5-1.1-1.2-1.1h-1.5v2.1h1.5c.8.1 1.2-.3 1.2-1zm6.6 2V86h-1v-2.8l-2-4h1.1l1.4 3 1.4-3h1.1l-2 4zm13.3-.6c0 1 0 2.1-.7 2.8-.4.4-1.1.6-1.8.6H144v-6.8h2.4c.7 0 1.3.2 1.8.6.8.8.7 1.8.7 2.8zm-1 0c0-.9 0-1.6-.4-2-.3-.3-.7-.5-1.2-.5H145v5h1.3c.5 0 .9-.1 1.2-.5.4-.3.4-1.1.4-2zm4.4 3.4v-6.8h4.4v.9h-3.3v2h2.8v.9h-2.8v2.1h3.3v.9h-4.4zm9.9-5.8V86h-1v-5.9h-1.9v-.9h4.8v.9h-1.9zm8.2 5.8l-.5-1.4h-2.7l-.5 1.4h-1.1l2.5-6.8h.8l2.5 6.8h-1zm-1.8-5.2l-1.1 3h2.1l-1-3zm5.7 5.2h1v-6.8h-1V86zm4.6 0v-6.8h1v5.9h3.3v.9h-4.3zM.4 66.8c0 1.4 1.2 2.6 2.6 2.6 1.4 0 2.6-1.2 2.6-2.6l.1-6.5c0-.1.1-.3.3-.3h.1l6.4 8.7c.4.4 1 .7 1.7.7 1.4 0 2.6-1.1 2.6-2.5 0-.4-.1-.8-.3-1.1l-4-6.3c2-1 3.5-3.5 3.5-6.2 0-4.5-3.2-8-7.9-8.2-2.6-.2-4.5.8-6 2.1C.5 48.7 0 50.9 0 53.3l.4 13.5zm7.5-16.3c1.6 0 2.9 1.2 2.9 2.6 0 1.5-1.3 2.6-2.9 2.6S5 54.6 5 53.2c0-1.5 1.3-2.7 2.9-2.7zm90 6.8c0 7.6 6.4 12.2 11.5 12.2 3.5 0 7.2-1.5 9.2-3.9.4-.5.6-1 .6-1.7 0-1.4-1.2-2.6-2.6-2.6-.4 0-.8.1-1.2.3l-2.1 1.4c-1 .7-2.2 1-3.5 1-3.6 0-6.5-3-6.5-6.7s2.9-6.7 6.5-6.7c1.3 0 2.5.4 3.5 1l2.1 1.4c.4.2.8.3 1.2.3 1.4 0 2.6-1.2 2.6-2.6 0-.6-.2-1.2-.6-1.7-2-2.4-5-3.8-8.5-3.8-6.8-.1-12.2 5.4-12.2 12.1zm-43.8 7.8c-.3.4-.5 1-.5 1.6 0 1.5 1.2 2.6 2.6 2.6.9 0 1.6-.4 2.1-1.1l2.8-3.8h6.7v2.2c0 1.5 1.3 2.7 2.8 2.7 1.5 0 2.7-1.2 2.7-2.7V47.5c0-1.5-1.3-2.8-2.8-2.8-.8 0-1.6.4-2.1 1L54.1 65.1zm13.8-10v4h-2.5c-.1 0-.2-.1-.2-.2v-.1l2.7-3.7zm57.6-9.4c-.5-.6-1.3-1-2.1-1-1.5 0-2.8.8-2.8 2.3v19.6c0 1.5 1.2 2.7 2.7 2.7 1.5 0 2.8-1.2 2.8-2.7v-2.2h6.7l2.8 3.8c.5.6 1.2 1.1 2.1 1.1 1.5 0 2.6-1.2 2.6-2.6 0-.6-.2-1.1-.5-1.6l-14.3-19.4zm3.3 13.1v.1c0 .1-.1.2-.2.2h-2.5v-4l2.7 3.7zm-87.6-1.6C41.2 50.4 35.8 45 29 45c-6.8 0-12.2 5.5-12.2 12.2S22.2 69.4 29 69.4c6.8 0 12.2-5.4 12.2-12.2zM29 50.6c3.6 0 6.6 2.9 6.6 6.6 0 3.6-2.9 6.6-6.6 6.6-3.6 0-6.6-2.9-6.6-6.6 0-3.6 3-6.6 6.6-6.6zm20.8 1.6c-.1 0-.2 0-.3-.1l-6.1-6.4c-.5-.5-1.1-.8-1.9-.8-1.4 0-2.6 1.2-2.6 2.6 0 .7.3 1.3.7 1.7l7.4 8.5.1 9c0 1.4 1.2 2.6 2.6 2.6 1.4 0 2.6-1.2 2.6-2.6l.1-9 7.4-8.5c.4-.5.7-1.1.7-1.7 0-1.4-1.2-2.6-2.6-2.6-.7 0-1.4.3-1.9.8l-6 6.4c0 .1-.1.1-.2.1zM179 46.7c-.6-1.2-1.8-1.8-3.3-1.8-1.9 0-3.5 1.6-3.5 3.5v18.7c0 1.5 1.2 2.6 2.7 2.6 1.5 0 2.7-1.2 2.7-2.6V55.7c0-.1.1-.2.2-.2l.1.1 6.8 12c.6 1.1 1.7 1.8 3 1.8 1.9 0 3.5-1.6 3.5-3.5v-19c0-1.5-1.2-2.6-2.6-2.6-1.5 0-2.6 1.2-2.6 2.6v11.4l-.2.2-.1-.1-6.7-11.7zm-30.5 0c-.6-1.2-1.8-1.8-3.3-1.8-1.9 0-3.5 1.6-3.5 3.5V67c0 1.5 1.2 2.6 2.7 2.6 1.5 0 2.7-1.2 2.7-2.6V55.6c0-.1.1-.2.2-.2l.1.1 6.8 12c.6 1.1 1.7 1.8 3 1.8 1.9 0 3.5-1.6 3.5-3.5v-19c0-1.5-1.2-2.6-2.6-2.6-1.5 0-2.6 1.2-2.6 2.6v11.4l-.2.2-.1-.1-6.7-11.6zM82.6 64.1c-.2 0-.3-.1-.3-.3V47.5c0-1.5-1.2-2.8-2.8-2.8-1.5 0-2.8 1.2-2.8 2.8v20.3c0 .9.7 1.5 1.5 1.5h9.7c1.4 0 2.6-1.2 2.6-2.6 0-1.4-1.2-2.6-2.6-2.6h-5.3zm81 2.7c0 1.6 1.3 2.8 2.8 2.8 1.6 0 2.8-1.3 2.8-2.8V47.1c0-1.6-1.3-2.8-2.8-2.8-1.6 0-2.8 1.3-2.8 2.8v19.7zM79.5 12c.4 0 .9-.1 1.3-.2 2.6-.7 4.1-3.4 3.4-6-.6-2.1-2.5-3.6-4.7-3.6-.4 0-.9.1-1.3.2-2.6.7-4.2 3.4-3.4 6 .6 2.1 2.5 3.5 4.7 3.6zm52.6.2c-.3-1.3-1.1-2.3-2.3-3-.8-.4-1.6-.7-2.5-.7-1.7 0-3.3.9-4.2 2.4-.7 1.1-.9 2.5-.5 3.7.3 1.3 1.1 2.3 2.3 3 .8.4 1.6.7 2.5.7 1.7 0 3.4-.9 4.2-2.4.6-1.1.8-2.4.5-3.7zm-8.6 7.6c-.8-.4-1.6-.7-2.5-.7-1.7 0-3.4.9-4.2 2.4-.7 1.1-.9 2.4-.5 3.7.3 1.3 1.1 2.3 2.3 3 .8.4 1.6.7 2.5.7 1.7 0 3.3-.9 4.2-2.4.7-1.1.9-2.5.5-3.7-.3-1.3-1.1-2.4-2.3-3zM113.4 2.3c-.4-.1-.9-.2-1.3-.2-2.2 0-4.1 1.5-4.7 3.6-.7 2.6.8 5.3 3.4 6 .4.1.9.2 1.3.2 2.2 0 4.2-1.5 4.7-3.6.8-2.6-.7-5.3-3.4-6zm-3.2 11.9c-.4-.1-.9-.2-1.3-.2-2.2 0-4.2 1.5-4.7 3.6-.7 2.6.8 5.3 3.4 6 .4.1.9.2 1.3.2 2.2 0 4.2-1.5 4.7-3.6.8-2.6-.8-5.3-3.4-6zm-39.6 4.9c-.9 0-1.7.2-2.5.7-1.1.7-1.9 1.7-2.3 3-.3 1.3-.1 2.6.5 3.7.9 1.5 2.5 2.4 4.2 2.4.9 0 1.7-.2 2.5-.7 1.1-.7 1.9-1.7 2.3-3 .3-1.3.1-2.6-.5-3.7-.8-1.5-2.4-2.4-4.2-2.4zM82.8 14c-.4 0-.9.1-1.3.2-2.6.7-4.2 3.4-3.4 6 .6 2.1 2.5 3.6 4.7 3.6h.1c.4 0 .8-.1 1.2-.2 1.3-.3 2.3-1.2 3-2.3.6-1.1.8-2.5.5-3.7-.7-2.1-2.6-3.6-4.8-3.6zm13-14c-2.7 0-4.9 2.2-4.9 4.9s2.2 4.9 4.9 4.9 4.9-2.2 4.9-4.9S98.5 0 95.8 0zm0 12.3c-2.7 0-4.9 2.2-4.9 4.9s2.2 4.9 4.9 4.9 4.9-2.2 4.9-4.9-2.2-4.9-4.9-4.9zM64.4 8.5c-.9 0-1.7.2-2.5.7-1.1.7-1.9 1.7-2.3 3-.3 1.3-.1 2.6.5 3.7.9 1.5 2.5 2.4 4.2 2.4.9 0 1.7-.2 2.5-.7 1.1-.7 1.9-1.7 2.3-3 .3-1.3.1-2.6-.5-3.7-.9-1.5-2.5-2.4-4.2-2.4zm11.4 30.8c.3 0 .7-.1.9-.3 4.3-3.6 11.7-5.8 19.1-5.8 7.5 0 14.6 2.2 19 5.8.6.5 1.5.4 2.1-.2.5-.6.4-1.5-.2-2.1-4.9-4-12.7-6.5-20.9-6.5s-16 2.4-21 6.5c-.6.5-.7 1.4-.2 2.1.4.4.8.5 1.2.5zm-1.9-3.6c-.7 0-1.3-.3-1.7-.9-.7-.9-.5-2.3.4-3C78.3 27.6 87 25 95.9 25s17.5 2.5 23.2 6.8c1 .7 1.1 2 .4 3-.7.9-2 1.1-3 .4-3.8-2.9-11.3-5.9-20.7-5.9-9.4 0-16.9 3.1-20.7 5.9-.3.3-.8.5-1.2.5z"/>
+</svg>
+
 <!-- search -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img">
-	<title id="title">search</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="svg-search" role="img">
+	<title id="svg-search" lang="en">search</title>
 	<path d="M56 8c-5.3-5.3-12.3-8-19.2-8-7 0-13.9 2.7-19.2 8-9.3 9.3-10.5 23.8-3.4 34.4L1.5 55c-2.1 2.1-2.1 5.4 0 7.5s5.4 2.1 7.5 0l12.6-12.6c4.6 3.1 9.8 4.6 15.1 4.6 7 0 13.9-2.7 19.2-8C66.6 35.8 66.6 18.6 56 8zm-4.9 33.5c-3.8 3.8-8.9 5.9-14.3 5.9s-10.5-2.1-14.3-5.9c-7.9-7.9-7.9-20.7 0-28.6C26.3 9.1 31.4 7 36.8 7s10.5 2.1 14.3 5.9c3.8 3.8 5.9 8.9 5.9 14.3s-2.1 10.5-5.9 14.3z"/>
 </svg>
 
+<!-- social-facebook -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 64" aria-labelledby="svg-social-facebook" role="img">
+	<title id="svg-social-facebook" lang="en">social-facebook</title>
+	<path d="M8 21.3H0V32h8v32h13.3V32H31l1-10.7H21.3v-4.4c0-2.5.5-3.6 3-3.6H32V0H21.8C12.3 0 8 4.2 8 12.3v9z"/>
+</svg>
+
+<!-- social-instagram -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="svg-social-instagram" role="img">
+	<title id="svg-social-instagram" lang="en">social-instagram</title>
+	<path d="M32 5.8c8.5 0 9.6 0 12.9.2 8.7.4 12.7 4.5 13.1 13.1.2 3.4.2 4.4.2 12.9s0 9.6-.2 12.9c-.4 8.6-4.4 12.7-13.1 13.1-3.4.2-4.4.2-12.9.2s-9.6 0-12.9-.2C10.4 57.7 6.3 53.5 6 44.9c-.2-3.3-.2-4.4-.2-12.9s0-9.6.2-12.9C6.3 10.5 10.4 6.3 19.1 6c3.3-.2 4.4-.2 12.9-.2zM32 0c-8.7 0-9.8 0-13.2.2C7.2.7.7 7.2.2 18.8 0 22.2 0 23.3 0 32s0 9.8.2 13.2c.5 11.6 7 18.1 18.6 18.6 3.4.2 4.5.2 13.2.2s9.8 0 13.2-.2c11.6-.5 18.1-7 18.6-18.6.2-3.4.2-4.5.2-13.2s0-9.8-.2-13.2C63.3 7.2 56.8.7 45.2.2 41.8 0 40.7 0 32 0zm0 15.6c-9.1 0-16.4 7.4-16.4 16.4S22.9 48.4 32 48.4 48.4 41.1 48.4 32c0-9.1-7.3-16.4-16.4-16.4zm0 27.1c-5.9 0-10.7-4.8-10.7-10.7 0-5.9 4.8-10.7 10.7-10.7S42.7 26.1 42.7 32c0 5.9-4.8 10.7-10.7 10.7zm17.1-31.6c-2.1 0-3.8 1.7-3.8 3.8s1.7 3.8 3.8 3.8c2.1 0 3.8-1.7 3.8-3.8s-1.7-3.8-3.8-3.8z"/>
+</svg>
+
+<!-- social-twitter -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 52" aria-labelledby="svg-social-twitter" role="img">
+	<title id="svg-social-twitter" lang="en">social-twitter</title>
+	<path d="M64 6.2c-2.4 1-4.9 1.7-7.5 2.1C59.2 6.6 61.3 4 62.2 1c-2.5 1.5-5.3 2.6-8.3 3.2C51.5 1.6 48.1 0 44.3 0c-8.5 0-14.7 7.9-12.8 16.1-10.9-.5-20.6-5.8-27-13.7C1 8.3 2.7 16 8.5 19.9c-2.1-.1-4.2-.7-5.9-1.6-.1 6.1 4.2 11.8 10.5 13-1.8.5-3.9.6-5.9.2 1.7 5.2 6.5 9 12.3 9.1C13.9 45 7 46.9 0 46.1 5.8 49.8 12.7 52 20.1 52c24.4 0 38.2-20.6 37.3-39 2.6-1.9 4.8-4.2 6.6-6.8z"/>
+</svg>
+
+<!-- social-youtube -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 48" aria-labelledby="svg-social-youtube" role="img">
+	<title id="svg-social-youtube" lang="en">social-youtube</title>
+	<path d="M52.3.5c-9.6-.7-31-.7-40.6 0C1.3 1.2.1 7.5 0 24c.1 16.5 1.3 22.8 11.7 23.5 9.6.7 31 .7 40.6 0 10.4-.7 11.6-7 11.7-23.5C63.9 7.5 62.7 1.2 52.3.5zM24 34.7V13.3L45.3 24 24 34.7z"/>
+</svg>
+
+<!-- toggle -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 47" aria-labelledby="svg-toggle" role="img">
+	<title id="svg-toggle" lang="en">toggle</title>
+	<path d="M3.6 47h46.9c1.9 0 3.5-1.6 3.5-3.5S52.5 40 50.5 40H3.6C1.7 40 .1 41.6.1 43.5S1.7 47 3.6 47M0 23.5C0 25.4 1.6 27 3.5 27h57c1.9 0 3.5-1.6 3.5-3.5S62.4 20 60.5 20h-57C1.6 20 0 21.6 0 23.5M44.2 7H3.6C1.7 7 .1 5.4.1 3.5S1.7 0 3.6 0h40.6c1.9 0 3.5 1.6 3.5 3.5S46.1 7 44.2 7"/>
+</svg>
+
 <!-- vet -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 64" aria-labelledby="title" role="img">
-	<title id="title">vet</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 64" aria-labelledby="svg-vet" role="img">
+	<title id="svg-vet" lang="en">vet</title>
 	<path d="M28 6.1l22 4.7v18.7c.1 1.1.7 18.5-22 28.1C5.4 48 5.9 30.7 6 29.5V10.8l22-4.7M28 0L0 6v23s-2 23.7 28 35c30-11.3 28-35 28-35V6L28 0zm13.5 26.5h-10v-10h-7v10h-10v7h10v10h7v-10h10v-7z"/>
 </svg>
 
 <!-- volume -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img">
-	<title id="title">volume</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="svg-volume" role="img">
+	<title id="svg-volume" lang="en">volume</title>
 	<path d="M30.7 13.5v36.9l-4.1-3.3c-.1-.1-.2-.1-.3-.2-1.4-1-3-1.6-4.7-1.6H7V18.6h14.6c1.7 0 3.4-.5 4.7-1.6.1-.1.2-.1.2-.2l4.2-3.3m6-13.5c-.2 0-.4.1-.6.2l-14 11.2c-.2.1-.4.2-.6.2H1c-.6 0-1 .4-1 1v38.7c0 .6.4 1 1 1h20.6c.2 0 .4.1.6.2l13.9 11.2c.2.1.4.2.6.2.5 0 1-.4 1-1l.1-62c-.1-.5-.5-.9-1.1-.9zm6.1 54.1C54.6 53.6 64 43.8 64 31.9S54.6 10.2 42.8 9.7c-.6 0-1 .4-1 1v5c0 .5.4 1 1 1 8 .5 14.3 7.1 14.3 15.2s-6.3 14.7-14.3 15.2c-.5 0-1 .5-1 1v5c-.1.6.4 1.1 1 1zm.1-11.4c5.4-.6 9.7-5.2 9.7-10.8s-4.3-10.2-9.7-10.8c-.6-.1-1.1.4-1.1 1v5.1c0 .5.4.9.8 1 1.7.4 3 1.9 3 3.7 0 1.8-1.3 3.4-3 3.7-.5.1-.8.5-.8 1v5.1c-.1.6.5 1 1.1 1z"/>
 </svg>
 
@@ -368,7 +478,7 @@
 
 		<section class="gs-section gs-changelog">
 			<header>
-				<h1 class="rc-head rc-head--4 gs-section__head">Changelog</h1>
+				<h1 class="rc-head rc-head--subheadline gs-section__head">Changelog</h1>
 			</header>
 
 			<div class="gs-section__content">
@@ -384,7 +494,7 @@
 
 		<section class="gs-section gs-issues">
 	<header>
-		<h1 class="rc-head rc-head--4 gs-section__head">Issues</h1>
+		<h1 class="rc-head rc-head--subheadline gs-section__head">Issues</h1>
 		<div class="gs-section__logo">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 120" aria-labelledby="title" role="img">
 				<title id="title">Github</title>
@@ -403,7 +513,7 @@
 
 		<section class="gs-section gs-feedback">
 	<header>
-		<h1 class="rc-head rc-head--4 gs-section__head">Feedback</h1>
+		<h1 class="rc-head rc-head--subheadline gs-section__head">Feedback</h1>
 		<div class="gs-section__logo">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 143" aria-labelledby="title" role="img">
 				<title id="title">Slack</title>
@@ -424,7 +534,7 @@
 	</header>
 
 	<div class="gs-section__content">
-		<p>If you would like to offer feedback on the design of this component, please join the Web Design Language <a href="#">Slack</a> channel.</p>
+		<p>If you would like to offer feedback on the design of this component, please <a href="mailto:&#100;&#097;&#110;&#046;&#115;&#104;&#111;&#114;&#101;&#109;&#097;&#110;&#064;&#102;&#105;&#114;&#115;&#116;&#049;&#048;&#046;&#099;&#111;&#046;&#117;&#107;">send an email</a> requesting access to the Web Design Language Slack channel.</p>
 	</div>
 </section>
 		
@@ -434,9 +544,14 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="/assets/js/scripts.min.js"></script>
 <script src="/assets/js/prism.js"></script>
+<script src="/assets/js/slick.min.js"></script>
+<script src="/assets/js/datepicker.min.js"></script>
+<script src="/assets/js/nouislider.min.js"></script>
+<script src="/assets/js/select2.min.js"></script>
 <script src="/assets/js/styleguide.js"></script>
+<script src="/assets/js/scripts.min.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQ7i7zivBcb6rUxcnB-7yJFlgzbwXnjcw&callback=initMap"></script>
 
 </body>
 </html>

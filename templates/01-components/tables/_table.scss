@@ -8,7 +8,7 @@ table	{
   white-space: nowrap;
 
   th, td {
-    border-right: 1px solid lighten( $rc-light-grey, 7.5% );
+    border-right: 1px solid lighten( $rc-light-grey, 35% );
   	padding: .875em 1em;
 
   	&:first-child {
@@ -20,18 +20,30 @@ table	{
   	}
   }
 
+  .table--highlight {
+    background-color: $rc-red;
+    color: $rc-white;
+  }
+
 	thead {
+    .table--highlight {
+      background-color: darken( $rc-red, 5% );
+    }
 	}
 
 	tbody {
 		tr:nth-child( even ) {
-      background-color: lighten( $rc-light-grey, 10% );
+      background-color: $rc-light-grey;
+
+      .table--highlight {
+        background-color: darken( $rc-red, 5% );
+      }
 		}
 	}
 
 	th {
-		background-color: $rc-red;
-		color: #FFFFFF;
+    background-color: $rc-light-grey;
+    color: $rc-red;
 	}
 
   // Removes margin from custom checkbox element, where used.
