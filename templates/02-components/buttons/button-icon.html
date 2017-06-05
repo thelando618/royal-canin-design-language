@@ -1,0 +1,94 @@
+@@include('./_site-header.html')
+
+<div class="gs-stage">
+
+	<div class="gs-stage__inner">
+
+		<div class="gs-stage__content">
+
+			<header class="gs-stage__content__header">
+				<h1 class="gs-stage__content__head-tag">Buttons - Icon</h1>
+				<p>Usage and implementation for Buttons within Web Design Language.</p>
+
+				<blockquote class="gs-stage__content__intro">
+					<h2 class="rc-head rc-head--subheadline">Introduction</h2>
+					<p>Icons can be added to Buttons with the addition of a modifier class.</p>
+					<p>Seocondary and Tertiary modifier classes will automatically change the colour of the Button's Icon.</p>
+					<p>The available icon classes are demonstrated below.</p>
+				</blockquote>
+			</header>
+
+			<h2 class="gs-stage__content__head-tag rc-head--subheadline">Examples</h2>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Icon - Arrow Right</label>
+				</header>
+
+				@@include('./02-components/buttons/_button-class.html', {
+					"class": "button--icon-arrow-right",
+					"value": "Read Article"
+				})
+
+				<pre><code class="gs-code language-html">@@include('./02-components/buttons/_button-class.html', {
+					"class": "button--icon-arrow-right",
+					"value": "Read Article"
+				})</code></pre>
+			</section>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Icon - Check</label>
+				</header>
+
+				@@include('./02-components/buttons/_button-class.html', {
+					"class": "button--icon-check",
+					"value": "Read Article"
+				})
+
+				<pre><code class="gs-code language-html">@@include('./02-components/buttons/_button-class.html', {
+					"class": "button--icon-check",
+					"value": "Read Article"
+				})</code></pre>
+			</section>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Icon - Search</label>
+				</header>
+
+				@@include('./02-components/buttons/_button-class.html', {
+					"class": "button--icon-search",
+					"value": "Read Article"
+				})
+
+				<pre><code class="gs-code language-html">@@include('./02-components/buttons/_button-class.html', {
+					"class": "button--icon-search",
+					"value": "Read Article"
+				})</code></pre>
+			</section>
+
+		</div>
+
+		<section class="gs-section gs-changelog">
+			<header>
+				<h1 class="rc-head rc-head--subheadline gs-section__head">Changelog</h1>
+			</header>
+
+			<div class="gs-section__content">
+				<ul class="list--blank list--align">
+					@@loop("./_changelog-item.html", "./02-components/buttons/_changelog.json")
+				</ul>
+			</div>
+		</section>
+
+		@@include('./_issues.html')
+
+		@@include('./_feedback.html')
+
+	</div>
+
+</div>
+
+@@include('./_site-footer.html')
+

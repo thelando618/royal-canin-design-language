@@ -1,0 +1,64 @@
+@@include('./_site-header.html', {
+    "class": {
+        "section": "features"
+    }
+})
+
+<div class="gs-stage">
+
+	<div class="gs-stage__inner">
+
+		<div class="gs-stage__content">
+
+			<header class="gs-stage__content__header">
+				<h1 class="gs-stage__content__head-tag">Card - Details</h1>
+				<p>Usage and implementation for Cards within Web Design Language.</p>
+
+				<blockquote class="gs-stage__content__intro">
+					<h2 class="rc-head rc-head--subheadline">Introduction</h2>
+					<p>Card modifier classes can be used to change the appearance of default Cards.</p>
+					<p>Some modifiers relate to breakpoints.</p>
+					<p>This page demonstrates how the <code class="language-html">card--details</code> class affects the appearance of a Card.</p>
+				</blockquote>
+			</header>
+
+			<h2 class="gs-stage__content__head-tag rc-head--subheadline">Examples</h2>
+			<p>The examples below display front end styling and HTML markup to implement Cards into your code.</p>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Card - Details</label>
+				</header>
+
+				@@include('./03-features/cards/_card-details.html', {
+					"class": "card--details"
+				})
+
+				<pre><code class="gs-code language-html">@@include('./03-features/cards/_card-details.html', {
+					"class": "card--details"
+				})</code></pre>
+			</section>
+
+		</div>
+
+		<section class="gs-section gs-changelog">
+			<header>
+				<h1 class="rc-head rc-head--subheadline gs-section__head">Changelog</h1>
+			</header>
+
+			<div class="gs-section__content">
+				<ul class="list--blank list--align">
+					@@loop("./_changelog-item.html", "./03-features/cards/_changelog.json")
+				</ul>
+			</div>
+		</section>
+
+		@@include('./_issues.html')
+
+		@@include('./_feedback.html')
+
+	</div>
+
+</div>
+
+@@include('./_site-footer.html')

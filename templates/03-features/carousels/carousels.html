@@ -1,0 +1,87 @@
+@@include('./_site-header.html', {
+    "class": {
+        "section": "features"
+    }
+})
+
+<div class="gs-stage">
+
+	<div class="gs-stage__inner">
+
+		<div class="gs-stage__content">
+
+			<header class="gs-stage__content__header">
+				<h1 class="gs-stage__content__head-tag">Carousels</h1>
+				<p>Usage and implementation for Carousels within Web Design Language.</p>
+
+				<blockquote class="gs-stage__content__intro">
+					<h2 class="rc-head rc-head--subheadline">Introduction</h2>
+					<p>A carousel should be used in an area of significance and is built up of an image, title, button, pager and navigation icons. Several carousel options are available below to ensure each layout can be accommodated.</p>
+				</blockquote>
+			</header>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Wrapping class</label>
+					<p>To display a carousel, use the following general strucutre.</p>
+					<p>Each <code class="language-html">div</code> inside of <code class="language-html">rc-carousel</code> constitues a slide. For RC Carousels, each slide is referred to as a <code class="language-html">hero</code> and can use 1 of 4 layouts.</p>
+					<p>The data attribute must be included with ecah hero.</p>
+				</header>
+
+				<pre><code class="gs-code language-html">
+					@@include('./03-features/carousels/_carousel-structure.html')
+				</code></pre>
+			</section>
+
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Carousel Hero - General structure</label>
+					<p>A carousel hero can use 1 of 4 layouts. The layout used is determined by which modifier class is added alongside the block <code class="language-html">hero</code> class. There are 3 modifier classes available.</p>
+					<p>All Carousel Heros use the same element classes inside the <code class="language-html">hero</code> block, but in different amounts and orders.</p>
+
+					<ul>
+						<li>The <code class="language-html">hero__bg</code> class should be applied to a background image or a video.</li>
+						<li>The <code class="language-html">hero__fg</code> class wraps any foreground content.</li>
+						<li>The <code class="language-html">hero__section</code> block and moidifer classes should be applied to content inside the foreground.</li>
+						<li>A standard anchor with the <code class="language-html">button button--icon-arrow-right</code> classes is provided for call to actions.</li>
+					</ul>
+				</header>
+
+				<pre><code class="gs-code language-html">
+					@@include('./03-features/carousels/_hero.html')
+				</code></pre>
+
+			</section>
+
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Carousel Hero Layouts</label>
+					<p><a href="#">View details</a> of the available layouts and classes for Carousel Heros.</p>
+				</header>
+			</section>
+
+		</div>
+
+		<section class="gs-section gs-changelog">
+			<header>
+				<h1 class="rc-head rc-head--subheadline gs-section__head">Changelog</h1>
+			</header>
+
+			<div class="gs-section__content">
+				<ul class="list--blank list--align">
+					@@loop("./_changelog-item.html", "./03-features/carousels/_changelog.json")
+				</ul>
+			</div>
+		</section>
+
+		@@include('./_issues.html')
+
+		@@include('./_feedback.html')
+
+	</div>
+
+</div>
+
+@@include('./_site-footer.html')
