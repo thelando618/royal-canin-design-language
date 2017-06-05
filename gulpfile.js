@@ -177,7 +177,7 @@ gulp.task( 'createNav', gulp.series( 'getfiles', function( done ) {
 
 				// If the folder only contains one html file, make the parent link to that.
         if (getIndexes(items, '.html').length === 1) {
-          fileTree += '<li><a href="' + folder.slice(8, folder.length) + '/' + fileName + '/' + items[0] + '" class="gs-nav__trigger gs-nav__link">' + niceFolderName( fileName ) + '</a></li>';
+          fileTree += '<li><a href="' + folder.slice(8, folder.length) + '/' + fileName + '/' + items[0] + '" class="gs-nav__trigger gs-nav__link single-level">' + niceFolderName( fileName ) + '</a></li>';
         }
         else {
           // Create an empty link that will trigger some JS

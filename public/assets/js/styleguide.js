@@ -247,8 +247,15 @@ const triggerAndTargetClassModifier = {
 };
 
 function activeTrail (target) {
-  var depth = getAllIndexes(window.location.pathname, '/').length
-  triggerAndTargetClassModifier.init('load', '[href="' + window.location.pathname + '"]', target, 'triggered', depth - 1)
+  // Count the / symbols in the location path to get the page depth, remove the first slash as that's root.
+  var depth = getAllIndexes(window.location.pathname, '/').length - 1;
+
+  if (document.querySelector('[href="' + window.location.pathname + '"]').classList.contains('single-level')) {
+    // If the target link is a single level link, remove 1 from the depth.
+    depth = depth - 1;
+  }
+
+  triggerAndTargetClassModifier.init('load', '[href="' + window.location.pathname + '"]', target, 'triggered', depth);
 }
 
 activeTrail(
