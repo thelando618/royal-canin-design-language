@@ -43,22 +43,102 @@
 		<div class="gs-stage__content">
 
 			<header class="gs-stage__content__header">
-				<h1 class="gs-stage__content__head-tag">Royal Canin Web Design Language</h1>
-				<p>Welcome to the Royal Canin Web Design Language Portal.</p>
+				<h1 class="gs-stage__content__head-tag">Icon List</h1>
+				<p>Usage and implementation for Lists within Web Design Language.</p>
 
 				<blockquote class="gs-stage__content__intro">
 					<h2 class="rc-head rc-head--subheadline">Introduction</h2>
-					<p>All Royal Canin website assets are to be demonstrated here.</p>
-					<p>Master Sketch files containing the wireframe and design patterns can be download in the Documentation section.</p>
-					<p>Find out more in the video below.</p>
+					<p>Lists items can have an extra modifier class added to them in order to display an SVG icon at the start.</p>
+					<p>The root class <code class="gs-code language-scss">list-icon</code> must be applied, then the actual icon class must be added. Pick from:</p>
+					<ul>
+						<li><code class="gs-code language-scss">list-icon--check</code></li>
+						<li><code class="gs-code language-scss">list-icon--arrow-down</code></li>
+						<li><code class="gs-code language-scss">list-icon--arrow-right</code></li>
+					</ul>
 				</blockquote>
 			</header>
 
-			<div class="video-wrapper">
-				<iframe src="https://player.vimeo.com/video/207771491" width="100%" height="auto" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-			</div>
+			<h2 class="gs-stage__content__head-tag rc-head--subheadline">Examples</h2>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Icon List</label>
+				</header>
+
+				<ul class="list--blank list--align">
+					
+	<li class=" ">
+		 This is a standard list item 
+	</li>
+
+	<li class="list--icon list-icon--check ">
+		<a href="#"> This is a standard list item wrapped in a link </a>
+	</li>
+
+	<li class="list--icon list-icon--arrow-right active">
+		 This is a standard list item with an active class applied 
+	</li>
+
+	<li class="list--icon list-icon--arrow-right ">
+		 This is a standard list item with some placeholder text to make it very long - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+	</li>
+
+	<li class="list--icon list-icon--arrow-down ">
+		 This is a standard list item with some <em>inline <strong>HTML</strong> entities</em> 
+	</li>
+
+	<li class="list--icon list-icon--check ">
+		 This is a list item that includes an <a href='#'>inline link</a> 
+	</li>
+
+				</ul>
+
+				<pre><code class="gs-code language-html">
+					<ul class="list--blank list--align">
+	<li class=" ">
+		 This is a standard list item 
+	</li>
+
+	<li class="list--icon list-icon--check ">
+		<a href="#"> This is a standard list item wrapped in a link </a>
+	</li>
+
+	<li class="list--icon list-icon--arrow-right active">
+		 This is a standard list item with an active class applied 
+	</li>
+
+	<li class="list--icon list-icon--arrow-right ">
+		 This is a standard list item with some placeholder text to make it very long - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+	</li>
+
+	<li class="list--icon list-icon--arrow-down ">
+		 This is a standard list item with some <em>inline <strong>HTML</strong> entities</em> 
+	</li>
+
+	<li class="list--icon list-icon--check ">
+		 This is a list item that includes an <a href='#'>inline link</a> 
+	</li>
+</ul>
+				</code></pre>
+			</section>
 
 		</div>
+
+		<section class="gs-section gs-changelog">
+			<header>
+				<h1 class="rc-head rc-head--subheadline gs-section__head">Changelog</h1>
+			</header>
+
+			<div class="gs-section__content">
+				<ul class="list--blank list--align">
+					<li>
+	<strong>2017-03</strong>
+	<br>
+	Initial release
+</li>
+				</ul>
+			</div>
+		</section>
 
 		<section class="gs-section gs-issues">
 	<header>
@@ -105,7 +185,7 @@
 		<p>If you would like to offer feedback on the design of this component, please <a href="mailto:&#100;&#097;&#110;&#046;&#115;&#104;&#111;&#114;&#101;&#109;&#097;&#110;&#064;&#102;&#105;&#114;&#115;&#116;&#049;&#048;&#046;&#099;&#111;&#046;&#117;&#107;">send an email</a> requesting access to the Web Design Language Slack channel.</p>
 	</div>
 </section>
-
+		
 	</div>
 
 </div>
@@ -123,3 +203,4 @@
 
 </body>
 </html>
+

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/assets/css/prism.css">
 </head>
 
-<body class="section-type--@@class.section">
+<body class="section-type--features">
 
 
 <div class="gs-nav">
@@ -43,22 +43,150 @@
 		<div class="gs-stage__content">
 
 			<header class="gs-stage__content__header">
-				<h1 class="gs-stage__content__head-tag">Royal Canin Web Design Language</h1>
-				<p>Welcome to the Royal Canin Web Design Language Portal.</p>
+				<h1 class="gs-stage__content__head-tag">Image Galleries</h1>
+				<p>Usage and implementation for Image Galleries within Web Design Language.</p>
 
 				<blockquote class="gs-stage__content__intro">
 					<h2 class="rc-head rc-head--subheadline">Introduction</h2>
-					<p>All Royal Canin website assets are to be demonstrated here.</p>
-					<p>Master Sketch files containing the wireframe and design patterns can be download in the Documentation section.</p>
-					<p>Find out more in the video below.</p>
+					<p>An image gallery can be used to display a selection of related images that the user can scroll through. Image thumbnails are optional.</p>
+					<p>It is recommended that, if using image thumbnails, hard croppped consistently sized square images are used.</p>
 				</blockquote>
 			</header>
 
-			<div class="video-wrapper">
-				<iframe src="https://player.vimeo.com/video/207771491" width="100%" height="auto" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-			</div>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Image Gallery</label>
+					<p>The code presented below is a demonstration of the expected markup.</p>
+				</header>
+
+				<div class="rc-carousel rc-carousel--gallery rc-carousel--gallery__main">
+	<div class="image-gallery">
+		<figure class="image-gallery__gallery">
+			<img src="https://placeholdit.imgix.net/~text?txtsize=120&txt=1600%C3%971200&w=1600&h=1200" alt="Alt text">
+		</figure>
+	</div>
+
+	<div class="image-gallery">
+		<figure class="image-gallery__gallery">
+			<img src="https://placeholdit.imgix.net/~text?txtsize=120&txt=1600%C3%971200&w=1600&h=1200" alt="Alt text">
+		</figure>
+	</div>
+
+	<div class="image-gallery">
+		<figure class="image-gallery__gallery">
+			<img src="https://placeholdit.imgix.net/~text?txtsize=120&txt=1600%C3%971200&w=1600&h=1200" alt="Alt text">
+		</figure>
+	</div>
+
+	<div class="image-gallery">
+		<figure class="image-gallery__gallery">
+			<img src="https://placeholdit.imgix.net/~text?txtsize=120&txt=1600%C3%971200&w=1600&h=1200" alt="Alt text">
+		</figure>
+	</div>
+
+	<div class="image-gallery">
+		<figure class="image-gallery__gallery">
+			<img src="https://placeholdit.imgix.net/~text?txtsize=120&txt=1600%C3%971200&w=1600&h=1200" alt="Alt text">
+		</figure>
+	</div>
+</div>
+
+
+				<br>
+
+				<pre><code class="gs-code language-html">
+					<div class="rc-carousel rc-carousel--gallery rc-carousel--gallery__main">
+	<div class="image-gallery">
+		<figure class="image-gallery__gallery">
+			<img src="https://placeholdit.imgix.net/~text?txtsize=120&txt=1600%C3%971200&w=1600&h=1200" alt="Alt text">
+		</figure>
+	</div>
+
+	<div class="image-gallery">
+		<figure class="image-gallery__gallery">
+			<img src="https://placeholdit.imgix.net/~text?txtsize=120&txt=1600%C3%971200&w=1600&h=1200" alt="Alt text">
+		</figure>
+	</div>
+
+	<div class="image-gallery">
+		<figure class="image-gallery__gallery">
+			<img src="https://placeholdit.imgix.net/~text?txtsize=120&txt=1600%C3%971200&w=1600&h=1200" alt="Alt text">
+		</figure>
+	</div>
+
+	<div class="image-gallery">
+		<figure class="image-gallery__gallery">
+			<img src="https://placeholdit.imgix.net/~text?txtsize=120&txt=1600%C3%971200&w=1600&h=1200" alt="Alt text">
+		</figure>
+	</div>
+
+	<div class="image-gallery">
+		<figure class="image-gallery__gallery">
+			<img src="https://placeholdit.imgix.net/~text?txtsize=120&txt=1600%C3%971200&w=1600&h=1200" alt="Alt text">
+		</figure>
+	</div>
+</div>
+
+				</code></pre>
+			</section>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Javascript</label>
+					<p>This is the Javascript file used to generate the carousel demonstrated above.</p>
+					<p>This file should not need to be changed. It should work with many carousels so long as the same structure is used.</p>
+					<p><a href="http://kenwheeler.github.io/slick/">Slick carousel documentation can be found here.</a></p>
+				</header>
+
+				<pre><code class="gs-code language-js">
+					/**
+ *
+ * File image-galleries.js.
+ *
+ */
+
+$(function () {
+
+  // Carousel Settings
+  var carousel_next_arrow = '<a href="#" class="interactive--navigation interactive--navigation--next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.5 64" aria-labelledby="svg-arrow-right" role="img"><title id="svg-arrow-right" lang="en">arrow-right</title><path d="M34.5 34.5L6 63c-.7.7-1.6 1-2.5 1s-1.8-.3-2.5-1c-1.4-1.4-1.4-3.6 0-5l26-26L1 6C-.4 4.6-.4 2.4 1 1S4.6-.4 6 1l28.5 28.5c1.4 1.4 1.4 3.6 0 5z"></path></svg><span class="screen-reader-text">Next Slide</span></a>',
+      carousel_prev_arrow = '<a href="#" class="interactive--navigation interactive--navigation--prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.5 64" aria-labelledby="svg-arrow-left" role="img"><title id="svg-arrow-left" lang="en">arrow-left</title><path d="M1 29.5L29.5 1c1.4-1.4 3.6-1.4 5 0s1.4 3.6 0 5l-26 26 26 26c1.4 1.4 1.4 3.6 0 5-.7.7-1.6 1-2.5 1-.9 0-1.8-.3-2.5-1L1 34.5c-1.3-1.4-1.3-3.6 0-5z"></path></svg><span class="screen-reader-text">Previous Slide</span></a>';
+
+  var carousel_gallery_main = {
+    adaptiveHeight: false,
+    autoplay: true,
+    nextArrow: carousel_next_arrow,
+    prevArrow: carousel_prev_arrow,
+    slidesToShow: 1
+  }
+
+  // Carousel Caches
+  var $slick_gallery = $( '.rc-carousel--gallery__main' );
+
+  // Carousel Inits
+  $slick_gallery.slick( carousel_gallery_main );
+
+});
+
+				</code></pre>
+			</section>
 
 		</div>
+
+		<section class="gs-section gs-changelog">
+			<header>
+				<h1 class="rc-head rc-head--subheadline gs-section__head">Changelog</h1>
+			</header>
+
+			<div class="gs-section__content">
+				<ul class="list--blank list--align">
+					<li>
+	<strong>2017-03</strong>
+	<br>
+	Initial release
+</li>
+				</ul>
+			</div>
+		</section>
 
 		<section class="gs-section gs-issues">
 	<header>

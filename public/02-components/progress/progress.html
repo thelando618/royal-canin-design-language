@@ -43,22 +43,66 @@
 		<div class="gs-stage__content">
 
 			<header class="gs-stage__content__header">
-				<h1 class="gs-stage__content__head-tag">Royal Canin Web Design Language</h1>
-				<p>Welcome to the Royal Canin Web Design Language Portal.</p>
+				<h1 class="gs-stage__content__head-tag">Progress</h1>
+				<p>Usage and implementation for Progress Bars within Web Design Language.</p>
 
 				<blockquote class="gs-stage__content__intro">
 					<h2 class="rc-head rc-head--subheadline">Introduction</h2>
-					<p>All Royal Canin website assets are to be demonstrated here.</p>
-					<p>Master Sketch files containing the wireframe and design patterns can be download in the Documentation section.</p>
-					<p>Find out more in the video below.</p>
+					<p>The Progress element is used to display a known percentage between two values.</p>
+					<p>If the browser does not support the <code class="language-html">&lt;progress&gt;</code> element <b>(IE9)</b>, then the fallback div will be shown instead.</p>
+					<p>This component relies on accompanying Javascript in order to display the current value between the min and max values, as well as the ability to update that value.</p>
 				</blockquote>
 			</header>
 
-			<div class="video-wrapper">
-				<iframe src="https://player.vimeo.com/video/207771491" width="100%" height="auto" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-			</div>
+			<h2 class="gs-stage__content__head-tag rc-head--subheadline">Examples</h2>
+
+			<section class="gs-present gs-present--white">
+				<header>
+					<label class="gs-present__label">Progress</label>
+				</header>
+
+				<div class="rc-progress rc-progress-demo" data-value="20">
+	<progress max="100" value="20" class="rc-progress__progressElem">
+		<div class="rc-progress--fallback">
+			<span class="rc-progress--fallback__bar"></span>
+			<span class="rc-progress--fallback__value" style="width: 20%;">Progress: 20%</span>
+		</div>
+	</progress>
+</div>
+
+<br>
+<button class="update-progress-demo">Click me to update progress</button>
+
+				<pre><code class="gs-code language-html"><div class="rc-progress rc-progress-demo" data-value="20">
+	<progress max="100" value="20" class="rc-progress__progressElem">
+		<div class="rc-progress--fallback">
+			<span class="rc-progress--fallback__bar"></span>
+			<span class="rc-progress--fallback__value" style="width: 20%;">Progress: 20%</span>
+		</div>
+	</progress>
+</div>
+
+<br>
+<button class="update-progress-demo">Click me to update progress</button></code></pre>
+			</section>
 
 		</div>
+
+		<section class="gs-section gs-changelog">
+			<header>
+				<h1 class="rc-head rc-head--subheadline gs-section__head">Changelog</h1>
+			</header>
+
+			<div class="gs-section__content">
+				<ul class="list--blank list--align">
+					<li>
+	<strong>2017-03</strong>
+	<br>
+	Initial release
+</li>
+				</ul>
+			</div>
+		</section>
 
 		<section class="gs-section gs-issues">
 	<header>
@@ -105,7 +149,7 @@
 		<p>If you would like to offer feedback on the design of this component, please <a href="mailto:&#100;&#097;&#110;&#046;&#115;&#104;&#111;&#114;&#101;&#109;&#097;&#110;&#064;&#102;&#105;&#114;&#115;&#116;&#049;&#048;&#046;&#099;&#111;&#046;&#117;&#107;">send an email</a> requesting access to the Web Design Language Slack channel.</p>
 	</div>
 </section>
-
+		
 	</div>
 
 </div>

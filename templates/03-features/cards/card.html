@@ -1,0 +1,68 @@
+@@include('./_site-header.html', {
+    "class": {
+        "section": "features"
+    }
+})
+
+<div class="gs-stage">
+
+	<div class="gs-stage__inner">
+
+		<div class="gs-stage__content">
+
+			<header class="gs-stage__content__header">
+				<h1 class="gs-stage__content__head-tag">Card - Default</h1>
+				<p>Usage and implementation for Cards within Web Design Language.</p>
+
+				<blockquote class="gs-stage__content__intro">
+					<h2 class="rc-head rc-head--subheadline">Introduction</h2>
+					<p>Cards are used to present the user with a link to a specific page or post.</p>
+					<p>Each Card's image should be presented as background image, to ensure consistent sizing across all cards.</p>
+					<p>Because of this, the <code class="language-html">&lt;figure&gt;</code> element that presents the image must have <code class="language-html">role</code>, <code class="language-html">title</code> and <code class="language-html">aria-label</code> attributes to aid in accessibility.</p>
+				</blockquote>
+			</header>
+
+			<h2 class="gs-stage__content__head-tag rc-head--subheadline">Examples</h2>
+			<p>The examples below display front end styling and HTML markup to implement Cards into your code.</p>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Card - Default</label>
+				</header>
+
+				@@include('./03-features/cards/_card.html', {
+					"class": "",
+					"image": "http://placehold.it/800x600",
+					"title": "Breed Focus - The Beagle"
+				})
+
+				<pre><code class="gs-code language-html">@@include('./03-features/cards/_card.html', {
+					"class": "",
+					"image": "http://placehold.it/800x600",
+					"title": "Breed Focus - The Beagle"
+				})</code></pre>
+			</section>
+
+		</div>
+
+		<section class="gs-section gs-changelog">
+			<header>
+				<h1 class="rc-head rc-head--subheadline gs-section__head">Changelog</h1>
+			</header>
+
+			<div class="gs-section__content">
+				<ul class="list--blank list--align">
+					@@loop("./_changelog-item.html", "./03-features/cards/_changelog.json")
+				</ul>
+			</div>
+		</section>
+
+		@@include('./_issues.html')
+
+		@@include('./_feedback.html')
+
+	</div>
+
+</div>
+
+@@include('./_site-footer.html')

@@ -1,0 +1,246 @@
+@@include('./_site-header.html', {
+    "class": {
+        "section": "features"
+    }
+})
+
+<div class="gs-stage">
+
+	<div class="gs-stage__inner">
+
+		<div class="gs-stage__content">
+
+			<header class="gs-stage__content__header">
+				<h1 class="gs-stage__content__head-tag">Social</h1>
+				<p>Usage and implementation for Sharing section within Web Design Language.</p>
+
+				<blockquote class="gs-stage__content__intro">
+					<h2 class="rc-head rc-head--subheadline">Introduction</h2>
+					<p>Social network links can be used as either links to Royal Canin's social network accounts, or as a way to share a particular post or page on a user's account.</p>
+					<p>The main structure and styling is consistent between these variations, only the section label will change to indicate the purpose to the user.</p>
+					<p>When using the Social section as a way to link to Royal Canin social networks, please ensure you have the correct links for your Country's social media accounts.</p>
+				</blockquote>
+			</header>
+
+			<h2 class="gs-stage__content__head-tag rc-head--subheadline">Examples</h2>
+			<p>The examples below display front end styling and HTML markup to implement the Sharing section into your code.</p>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Default</label>
+					<p>Default social network links</p>
+				</header>
+
+				@@include('./03-features/social/_social-links.html', {
+					"class": "",
+					"label": "",
+					"squished": false,
+					"facebook": true,
+					"instagram": true,
+					"twitter": true,
+					"youtube": true
+				})
+
+				<pre><code class="gs-code language-html">@@include('./03-features/social/_social-links.html', {
+					"class": "",
+					"label": "",
+					"squished": false,
+					"facebook": true,
+					"instagram": true,
+					"twitter": true,
+					"youtube": true
+				})</code></pre>
+			</section>
+
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Royal Canin background colour</label>
+					<p>Social network links with Royal Canin background colour</p>
+				</header>
+
+				@@include('./03-features/social/_social-links.html', {
+					"class": "social--rc",
+					"label": "",
+					"squished": false,
+					"facebook": true,
+					"instagram": true,
+					"twitter": true,
+					"youtube": true
+				})
+
+				<pre><code class="gs-code language-html">@@include('./03-features/social/_social-links.html', {
+					"class": "social--rc",
+					"label": "",
+					"squished": true,
+					"facebook": true,
+					"instagram": true,
+					"twitter": true,
+					"youtube": true
+				})</code></pre>
+			</section>
+
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Royal Canin Icon colour</label>
+					<p>Social network links with Royal Canin Icon colour</p>
+				</header>
+
+				@@include('./03-features/social/_social-links.html', {
+					"class": "social--rc-icon",
+					"label": "",
+					"squished": false,
+					"facebook": true,
+					"instagram": true,
+					"twitter": true,
+					"youtube": true
+				})
+
+				<pre><code class="gs-code language-html">@@include('./03-features/social/_social-links.html', {
+					"class": "social--rc-icon",
+					"label": "",
+					"squished": true,
+					"facebook": true,
+					"instagram": true,
+					"twitter": true,
+					"youtube": true
+				})</code></pre>
+			</section>
+
+
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Default + Label Top</label>
+					<p>Default social network links with Label above</p>
+				</header>
+
+				@@include('./03-features/social/_social-links.html', {
+					"class": "",
+					"label": "Follow Royal Canin",
+					"squished": false,
+					"facebook": true,
+					"instagram": true,
+					"twitter": true,
+					"youtube": true
+				})
+
+				<pre><code class="gs-code language-html">@@include('./03-features/social/_social-links.html', {
+					"class": "",
+					"label": "Follow Royal Canin",
+					"squished": true,
+					"facebook": true,
+					"instagram": true,
+					"twitter": true,
+					"youtube": true
+				})</code></pre>
+			</section>
+
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Default + Label Side</label>
+					<p>Default social network links with Label on left</p>
+				</header>
+
+				@@include('./03-features/social/_social-links.html', {
+					"class": "social--label--side",
+					"label": "Follow Royal Canin",
+					"squished": false,
+					"facebook": true,
+					"instagram": true,
+					"twitter": true,
+					"youtube": true
+				})
+
+				<pre><code class="gs-code language-html">@@include('./03-features/social/_social-links.html', {
+					"class": "social--label--side",
+					"label": "Follow Royal Canin",
+					"squished": true,
+					"facebook": true,
+					"instagram": true,
+					"twitter": true,
+					"youtube": true
+				})</code></pre>
+			</section>
+
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Default + Label Top + Box</label>
+					<p>Default social network links in Box with Label above</p>
+				</header>
+
+				@@include('./03-features/social/_social-links.html', {
+					"class": "social--box",
+					"label": "Follow Royal Canin",
+					"squished": false,
+					"facebook": true,
+					"instagram": true,
+					"twitter": true,
+					"youtube": true
+				})
+
+				<pre><code class="gs-code language-html">@@include('./03-features/social/_social-links.html', {
+					"class": "social--box",
+					"label": "Follow Royal Canin",
+					"squished": true,
+					"facebook": true,
+					"instagram": true,
+					"twitter": true,
+					"youtube": true
+				})</code></pre>
+			</section>
+
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Default + Label Side + Box</label>
+					<p>Default social network links in Box with Label on left</p>
+				</header>
+
+				@@include('./03-features/social/_social-links.html', {
+					"class": "social--label--side social--box",
+					"label": "Follow Royal Canin",
+					"squished": false,
+					"facebook": true,
+					"instagram": true,
+					"twitter": true,
+					"youtube": true
+				})
+
+				<pre><code class="gs-code language-html">@@include('./03-features/social/_social-links.html', {
+					"class": "social--label--side social--box",
+					"label": "Follow Royal Canin",
+					"squished": true,
+					"facebook": true,
+					"instagram": true,
+					"twitter": true,
+					"youtube": true
+				})</code></pre>
+			</section>
+
+		</div>
+
+		<section class="gs-section gs-changelog">
+			<header>
+				<h1 class="rc-head rc-head--subheadline gs-section__head">Changelog</h1>
+			</header>
+
+			<div class="gs-section__content">
+				<ul class="list--blank list--align">
+					@@loop("./_changelog-item.html", "./03-features/social/_changelog.json")
+				</ul>
+			</div>
+		</section>
+
+		@@include('./_issues.html')
+
+		@@include('./_feedback.html')
+
+	</div>
+
+</div>
+
+@@include('./_site-footer.html')

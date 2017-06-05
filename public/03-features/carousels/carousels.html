@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/assets/css/prism.css">
 </head>
 
-<body class="section-type--@@class.section">
+<body class="section-type--features">
 
 
 <div class="gs-nav">
@@ -43,22 +43,95 @@
 		<div class="gs-stage__content">
 
 			<header class="gs-stage__content__header">
-				<h1 class="gs-stage__content__head-tag">Royal Canin Web Design Language</h1>
-				<p>Welcome to the Royal Canin Web Design Language Portal.</p>
+				<h1 class="gs-stage__content__head-tag">Carousels</h1>
+				<p>Usage and implementation for Carousels within Web Design Language.</p>
 
 				<blockquote class="gs-stage__content__intro">
 					<h2 class="rc-head rc-head--subheadline">Introduction</h2>
-					<p>All Royal Canin website assets are to be demonstrated here.</p>
-					<p>Master Sketch files containing the wireframe and design patterns can be download in the Documentation section.</p>
-					<p>Find out more in the video below.</p>
+					<p>A carousel should be used in an area of significance and is built up of an image, title, button, pager and navigation icons. Several carousel options are available below to ensure each layout can be accommodated.</p>
 				</blockquote>
 			</header>
 
-			<div class="video-wrapper">
-				<iframe src="https://player.vimeo.com/video/207771491" width="100%" height="auto" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-			</div>
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Wrapping class</label>
+					<p>To display a carousel, use the following general strucutre.</p>
+					<p>Each <code class="language-html">div</code> inside of <code class="language-html">rc-carousel</code> constitues a slide. For RC Carousels, each slide is referred to as a <code class="language-html">hero</code> and can use 1 of 4 layouts.</p>
+					<p>The data attribute must be included with ecah hero.</p>
+				</header>
+
+				<pre><code class="gs-code language-html">
+					<div class="rc-carousel rc-carousel--hero">
+
+	<div class="hero" data-thumb="interactive--pager">
+		<!-- Hero code... -->
+	</div>
+
+</div>
+
+				</code></pre>
+			</section>
+
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Carousel Hero - General structure</label>
+					<p>A carousel hero can use 1 of 4 layouts. The layout used is determined by which modifier class is added alongside the block <code class="language-html">hero</code> class. There are 3 modifier classes available.</p>
+					<p>All Carousel Heros use the same element classes inside the <code class="language-html">hero</code> block, but in different amounts and orders.</p>
+
+					<ul>
+						<li>The <code class="language-html">hero__bg</code> class should be applied to a background image or a video.</li>
+						<li>The <code class="language-html">hero__fg</code> class wraps any foreground content.</li>
+						<li>The <code class="language-html">hero__section</code> block and moidifer classes should be applied to content inside the foreground.</li>
+						<li>A standard anchor with the <code class="language-html">button button--icon-arrow-right</code> classes is provided for call to actions.</li>
+					</ul>
+				</header>
+
+				<pre><code class="gs-code language-html">
+					<div class="hero" data-thumb="interactive--pager">
+	<figure class="hero__bg" style="background-image: url();"></figure>
+
+	<div class="hero__fg">
+		<div class="hero__section hero__section--img">
+			<img src="" alt="">
+		</div>
+
+		<div class="hero__section hero__section--text">
+			<h1 class="hero__title">Title</h1>
+			<p class="hero__description">Description</p>
+			<a href="#" class="button button--icon-arrow-right">Button</a>
+		</div>
+	</div>
+</div>
+				</code></pre>
+
+			</section>
+
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Carousel Hero Layouts</label>
+					<p><a href="#">View details</a> of the available layouts and classes for Carousel Heros.</p>
+				</header>
+			</section>
 
 		</div>
+
+		<section class="gs-section gs-changelog">
+			<header>
+				<h1 class="rc-head rc-head--subheadline gs-section__head">Changelog</h1>
+			</header>
+
+			<div class="gs-section__content">
+				<ul class="list--blank list--align">
+					<li>
+	<strong>2017-03</strong>
+	<br>
+	Initial release
+</li>
+				</ul>
+			</div>
+		</section>
 
 		<section class="gs-section gs-issues">
 	<header>

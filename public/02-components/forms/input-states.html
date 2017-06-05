@@ -43,22 +43,100 @@
 		<div class="gs-stage__content">
 
 			<header class="gs-stage__content__header">
-				<h1 class="gs-stage__content__head-tag">Royal Canin Web Design Language</h1>
-				<p>Welcome to the Royal Canin Web Design Language Portal.</p>
+				<h1 class="gs-stage__content__head-tag">Inputs - States</h1>
+				<p>Usage and implementation for Form Elements within Web Design Language.</p>
 
 				<blockquote class="gs-stage__content__intro">
 					<h2 class="rc-head rc-head--subheadline">Introduction</h2>
-					<p>All Royal Canin website assets are to be demonstrated here.</p>
-					<p>Master Sketch files containing the wireframe and design patterns can be download in the Documentation section.</p>
-					<p>Find out more in the video below.</p>
+					<p>Form elements will ensure rapid form development is a possibility.</p>
+					<p>Strict markup will ensure all form elements are displayed correctly</p>
 				</blockquote>
 			</header>
 
-			<div class="video-wrapper">
-				<iframe src="https://player.vimeo.com/video/207771491" width="100%" height="auto" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-			</div>
+			<h2 class="gs-stage__content__head-tag rc-head--subheadline">Examples</h2>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Required</label>
+					<p>&nbsp;</p>
+				</header>
+
+				<span class="rc-input">
+	<input id="id-text" type="text" name="text" required>
+	<label for="id-text"><span class="rc-label">Input type - text</span></label>
+</span>
+
+
+
+				<pre><code class="gs-code language-html"><span class="rc-input">
+	<input id="id-text" type="text" name="text" required>
+	<label for="id-text"><span class="rc-label">Input type - text</span></label>
+</span>
+
+</code></pre>
+			</section>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Error</label>
+					<p>When an input fails to validate, the class <code class="language-scss">error</code> is added to the input.</p>
+					<p>&nbsp;</p>
+				</header>
+
+				<span class="rc-input">
+	<input id="id-text" type="text" name="text" class='error'>
+	<label for="id-text"><span class="rc-label">Input type - text</span></label>
+</span>
+
+
+
+				<pre><code class="gs-code language-html"><span class="rc-input">
+	<input id="id-text" type="text" name="text" class='error'>
+	<label for="id-text"><span class="rc-label">Input type - text</span></label>
+</span>
+
+</code></pre>
+			</section>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Disabled</label>
+					<p>If a form element is required to be locked it will be disabled until further action has been carried out. </p>
+				</header>
+
+				<span class="rc-input">
+	<input id="id-text" type="text" name="text" disabled>
+	<label for="id-text"><span class="rc-label">Input type - text</span></label>
+</span>
+
+
+
+				<!-- @todo abstract -->
+				<pre><code class="gs-code language-html"><span class="rc-input">
+	<input id="id-text" type="text" name="text" disabled>
+	<label for="id-text"><span class="rc-label">Input type - text</span></label>
+</span>
+
+</code></pre>
+			</section>
 
 		</div>
+
+		<section class="gs-section gs-changelog">
+			<header>
+				<h1 class="rc-head rc-head--subheadline gs-section__head">Changelog</h1>
+			</header>
+
+			<div class="gs-section__content">
+				<ul class="list--blank list--align">
+					<li>
+	<strong>2017-03</strong>
+	<br>
+	Initial release
+</li>
+				</ul>
+			</div>
+		</section>
 
 		<section class="gs-section gs-issues">
 	<header>

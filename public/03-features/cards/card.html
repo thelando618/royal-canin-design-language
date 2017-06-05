@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/assets/css/prism.css">
 </head>
 
-<body class="section-type--@@class.section">
+<body class="section-type--features">
 
 
 <div class="gs-nav">
@@ -43,22 +43,65 @@
 		<div class="gs-stage__content">
 
 			<header class="gs-stage__content__header">
-				<h1 class="gs-stage__content__head-tag">Royal Canin Web Design Language</h1>
-				<p>Welcome to the Royal Canin Web Design Language Portal.</p>
+				<h1 class="gs-stage__content__head-tag">Card - Default</h1>
+				<p>Usage and implementation for Cards within Web Design Language.</p>
 
 				<blockquote class="gs-stage__content__intro">
 					<h2 class="rc-head rc-head--subheadline">Introduction</h2>
-					<p>All Royal Canin website assets are to be demonstrated here.</p>
-					<p>Master Sketch files containing the wireframe and design patterns can be download in the Documentation section.</p>
-					<p>Find out more in the video below.</p>
+					<p>Cards are used to present the user with a link to a specific page or post.</p>
+					<p>Each Card's image should be presented as background image, to ensure consistent sizing across all cards.</p>
+					<p>Because of this, the <code class="language-html">&lt;figure&gt;</code> element that presents the image must have <code class="language-html">role</code>, <code class="language-html">title</code> and <code class="language-html">aria-label</code> attributes to aid in accessibility.</p>
 				</blockquote>
 			</header>
 
-			<div class="video-wrapper">
-				<iframe src="https://player.vimeo.com/video/207771491" width="100%" height="auto" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-			</div>
+			<h2 class="gs-stage__content__head-tag rc-head--subheadline">Examples</h2>
+			<p>The examples below display front end styling and HTML markup to implement Cards into your code.</p>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Card - Default</label>
+				</header>
+
+				
+<article class="card ">
+	<figure class="card__image" style="background-image: url('http://placehold.it/800x600');" role="img" title="This should be the 'alt' text of the image used." aria-label="This should be the 'alt' text of the image used."></figure>
+	<header class="card__header">
+		<p class="card__meta"><a href="#">Article Category</a></p>
+		<h1 class="card__title">Breed Focus - The Beagle</h1>
+		<p class="card__link"><a href="#" role="link" class="button button--functional button--icon-arrow-right">Read Article</a></p>
+	</header>
+</article>
+
+
+				<pre><code class="gs-code language-html">
+<article class="card ">
+	<figure class="card__image" style="background-image: url('http://placehold.it/800x600');" role="img" title="This should be the 'alt' text of the image used." aria-label="This should be the 'alt' text of the image used."></figure>
+	<header class="card__header">
+		<p class="card__meta"><a href="#">Article Category</a></p>
+		<h1 class="card__title">Breed Focus - The Beagle</h1>
+		<p class="card__link"><a href="#" role="link" class="button button--functional button--icon-arrow-right">Read Article</a></p>
+	</header>
+</article>
+</code></pre>
+			</section>
 
 		</div>
+
+		<section class="gs-section gs-changelog">
+			<header>
+				<h1 class="rc-head rc-head--subheadline gs-section__head">Changelog</h1>
+			</header>
+
+			<div class="gs-section__content">
+				<ul class="list--blank list--align">
+					<li>
+	<strong>2017-03</strong>
+	<br>
+	Initial release
+</li>
+				</ul>
+			</div>
+		</section>
 
 		<section class="gs-section gs-issues">
 	<header>

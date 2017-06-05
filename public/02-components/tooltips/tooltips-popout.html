@@ -43,22 +43,71 @@
 		<div class="gs-stage__content">
 
 			<header class="gs-stage__content__header">
-				<h1 class="gs-stage__content__head-tag">Royal Canin Web Design Language</h1>
-				<p>Welcome to the Royal Canin Web Design Language Portal.</p>
+				<h1 class="gs-stage__content__head-tag">Tooltips - Popout</h1>
+				<p>Usage and implementation for Tooltips within Web Design Language.</p>
 
 				<blockquote class="gs-stage__content__intro">
 					<h2 class="rc-head rc-head--subheadline">Introduction</h2>
-					<p>All Royal Canin website assets are to be demonstrated here.</p>
-					<p>Master Sketch files containing the wireframe and design patterns can be download in the Documentation section.</p>
-					<p>Find out more in the video below.</p>
+					<p>Tooltips should be used primarily to display additional content that is beneficial yet not crucial to the user.</p>
+					<p>Tabbed Tooltips are available but the content that is displayed in them should <b>always primarily</b> be presented in a way that does not requir user interactivity to reveal.</p>
+					<p>To put it simply, the main content should not rely on the Tooltip in order to be coherent.</p>
 				</blockquote>
 			</header>
 
-			<div class="video-wrapper">
-				<iframe src="https://player.vimeo.com/video/207771491" width="100%" height="auto" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-			</div>
+			<h2 class="gs-stage__content__head-tag rc-head--subheadline">Examples</h2>
+			<p></p>
+
+			<section class="gs-present gs-present--white">
+				<header>
+					<label class="gs-present__label">Tooltip Popout List</label>
+				</header>
+
+				<button class="button--icon-arrow-down rc-tooltip--popout__trigger rc-tooltip__trigger" data-tooltip="rc-tooltip--1">Read Article</button>
+
+<div class="rc-tooltip rc-tooltip--popout__popout" id="rc-tooltip--1" data-tooltip-follow="false">
+	<div class="rc-tooltip__arrow"></div>
+
+	<ul class="list--align list--blank">
+		
+	<li class="list--icon list-icon--check ">
+		<a href="#"> Link example </a>
+	</li>
+
+
+		<li>
+			<button class="button--tertiary button--icon-search">Button example</button>
+		</li>
+		<li>
+			<button class="button--tertiary button--icon-arrow-right">Button example</button>
+		</li>
+
+		
+	<li class="list--icon list-icon--arrow-right ">
+		<a href="#"> Link example </a>
+	</li>
+
+	</ul>
+
+</div>
+			</section>
 
 		</div>
+
+		<section class="gs-section gs-changelog">
+			<header>
+				<h1 class="rc-head rc-head--subheadline gs-section__head">Changelog</h1>
+			</header>
+
+			<div class="gs-section__content">
+				<ul class="list--blank list--align">
+					<li>
+	<strong>2017-03</strong>
+	<br>
+	Initial release
+</li>
+				</ul>
+			</div>
+		</section>
 
 		<section class="gs-section gs-issues">
 	<header>
