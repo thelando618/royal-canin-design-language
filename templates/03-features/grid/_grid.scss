@@ -1,9 +1,16 @@
 .rc-grid {
 	@include container( 1440px );
+    margin-left: - gutter( 22 );
+    margin-right: - gutter( 22 );
 
 	.rc-col {
 		margin-bottom: gutter( 11 );
 	}
+
+  .rc-col--100 {
+    @include span( 12 of 12 split );
+    background-color: black;
+  }
 
 	@media ( min-width: 640px ) {
 		.rc-col--25 {
