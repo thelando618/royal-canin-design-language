@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Royal Canin Web Design Language</title>
+    <script src="/assets/js/modernizr.min.js"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/prism.css">
+</head>
+
+<body class="section-type--@@class.section">
+
+
+<div class="gs-nav">
+    <header class="gs-nav__header">
+        <a href="/">
+            <figure class="gs-logo">
+                <img src="https://www.royalcanin.co.uk/wp-content/themes/rcuk2015/img/rc-logo-2016.png" alt="Royal Canin">
+            </figure>
+        </a>
+
+        <!-- update to gs-nav__trigger -->
+        <div id="gs-nav-trigger">
+            <div class="gs-nav-trigger__pos">
+                <hr>
+                <hr>
+                <hr>
+            </div>
+        </div>
+    </header>
+
+    <nav class="gs-nav__nav">
+        <ul><li><a href="/00-welcome/welcome.html" class="gs-nav__trigger gs-nav__link single-level">Welcome</a></li><li class="gs-nav__section toplevel"><a href="#" class="gs-nav__trigger gs-nav__link">About</a><ul><li><a href="/01-about/00-what-is-web-design-language?.html" class="gs-nav__link">00-what-is-web-design-language?</a></li><li><a href="/01-about/01-influences.html" class="gs-nav__link">01-influences</a></li><li><a href="/01-about/02-Component-Based-Design.html" class="gs-nav__link">02-Component-Based-Design</a></li><li><a href="/01-about/03-Implementation.html" class="gs-nav__link">03-Implementation</a></li><li><a href="/01-about/04-feedback-&-issues.html" class="gs-nav__link">04-feedback-&-issues</a></li></ul></li><li class="gs-nav__section toplevel"><a href="#" class="gs-nav__trigger gs-nav__link">Components</a><ul><li><a href="/02-components/01-logos/logos.html" class="gs-nav__trigger gs-nav__link single-level">Logos</a></li><li><a href="/02-components/02-colours/colours.html" class="gs-nav__trigger gs-nav__link single-level">Colours</a></li><li class="gs-nav__section"><a href="#" class="gs-nav__trigger gs-nav__link">Typography</a><ul><li><a href="/02-components/03-typography/01-typeface.html" class="gs-nav__link">01-typeface</a></li><li><a href="/02-components/03-typography/02-headings.html" class="gs-nav__link">02-headings</a></li><li><a href="/02-components/03-typography/03-heading-modifiers.html" class="gs-nav__link">03-heading-modifiers</a></li><li><a href="/02-components/03-typography/04-inline.html" class="gs-nav__link">04-inline</a></li><li><a href="/02-components/03-typography/05-paragraph.html" class="gs-nav__link">05-paragraph</a></li><li><a href="/02-components/03-typography/06-paragraph-with-image.html" class="gs-nav__link">06-paragraph-with-image</a></li></ul></li><li class="gs-nav__section"><a href="#" class="gs-nav__trigger gs-nav__link">Buttons</a><ul><li><a href="/02-components/04-buttons/01-buttons.html" class="gs-nav__link">01-buttons</a></li><li><a href="/02-components/04-buttons/02-icon-button.html" class="gs-nav__link">02-icon-button</a></li><li><a href="/02-components/04-buttons/03-functional-button.html" class="gs-nav__link">03-functional-button</a></li></ul></li><li class="gs-nav__section"><a href="#" class="gs-nav__trigger gs-nav__link">Form-elements</a><ul><li><a href="/02-components/05-form-elements/01-forms.html" class="gs-nav__link">01-forms</a></li><li><a href="/02-components/05-form-elements/02-input.html" class="gs-nav__link">02-input</a></li><li><a href="/02-components/05-form-elements/03-select.html" class="gs-nav__link">03-select</a></li><li><a href="/02-components/05-form-elements/04-radio-buttons.html" class="gs-nav__link">04-radio-buttons</a></li><li><a href="/02-components/05-form-elements/05-option-buttons.html" class="gs-nav__link">05-option-buttons</a></li><li><a href="/02-components/05-form-elements/06-input-states.html" class="gs-nav__link">06-input-states</a></li><li><a href="/02-components/05-form-elements/07-inputs-common.html" class="gs-nav__link">07-inputs-common</a></li></ul></li><li class="gs-nav__section"><a href="#" class="gs-nav__trigger gs-nav__link">Progress</a><ul><li><a href="/02-components/06-progress/01-progress.html" class="gs-nav__link">01-progress</a></li><li><a href="/02-components/06-progress/02-stepped-progress.html" class="gs-nav__link">02-stepped-progress</a></li></ul></li><li><a href="/02-components/07-icons/icons.html" class="gs-nav__trigger gs-nav__link single-level">Icons</a></li><li class="gs-nav__section"><a href="#" class="gs-nav__trigger gs-nav__link">Images</a><ul><li><a href="/02-components/08-images/01-images.html" class="gs-nav__link">01-images</a></li><li><a href="/02-components/08-images/02-avatars.html" class="gs-nav__link">02-avatars</a></li></ul></li><li><a href="/02-components/09-interactive/interactive.html" class="gs-nav__trigger gs-nav__link single-level">Interactive</a></li><li><a href="/02-components/10-tabs/tabs.html" class="gs-nav__trigger gs-nav__link single-level">Tabs</a></li><li><a href="/02-components/11-sliders/sliders.html" class="gs-nav__trigger gs-nav__link single-level">Sliders</a></li><li class="gs-nav__section"><a href="#" class="gs-nav__trigger gs-nav__link">Tooltips</a><ul><li><a href="/02-components/12-tooltips/01-tooltips.html" class="gs-nav__link">01-tooltips</a></li><li><a href="/02-components/12-tooltips/02-tooltips-popout.html" class="gs-nav__link">02-tooltips-popout</a></li></ul></li><li><a href="/02-components/13-alerts/alert.html" class="gs-nav__trigger gs-nav__link single-level">Alerts</a></li><li class="gs-nav__section"><a href="#" class="gs-nav__trigger gs-nav__link">Lists</a><ul><li><a href="/02-components/14-lists/01-list-ordered.html" class="gs-nav__link">01-list-ordered</a></li><li><a href="/02-components/14-lists/02-list-unordered.html" class="gs-nav__link">02-list-unordered</a></li><li><a href="/02-components/14-lists/03-list-modifiers.html" class="gs-nav__link">03-list-modifiers</a></li><li><a href="/02-components/14-lists/04-list-significant.html" class="gs-nav__link">04-list-significant</a></li><li><a href="/02-components/14-lists/05-list-icons.html" class="gs-nav__link">05-list-icons</a></li></ul></li><li><a href="/02-components/15-tables/table.html" class="gs-nav__trigger gs-nav__link single-level">Tables</a></li></ul></li><li class="gs-nav__section toplevel"><a href="#" class="gs-nav__trigger gs-nav__link">Features</a><ul><li><a href="/03-features/breadcrumbs/breadcrumbs.html" class="gs-nav__trigger gs-nav__link single-level">Breadcrumbs</a></li><li class="gs-nav__section"><a href="#" class="gs-nav__trigger gs-nav__link">Cards</a><ul><li><a href="/03-features/cards/card-details.html" class="gs-nav__link">Card-details</a></li><li><a href="/03-features/cards/card.html" class="gs-nav__link">Card</a></li><li><a href="/03-features/cards/cards.html" class="gs-nav__link">Cards</a></li></ul></li><li class="gs-nav__section"><a href="#" class="gs-nav__trigger gs-nav__link">Carousels</a><ul><li><a href="/03-features/carousels/carousel-hero.html" class="gs-nav__link">Carousel-hero</a></li><li><a href="/03-features/carousels/carousels.html" class="gs-nav__link">Carousels</a></li></ul></li><li><a href="/03-features/grid/grid.html" class="gs-nav__trigger gs-nav__link single-level">Grid</a></li><li><a href="/03-features/image-galleries/image-galleries.html" class="gs-nav__trigger gs-nav__link single-level">Image-galleries</a></li><li><a href="/03-features/maps/maps.html" class="gs-nav__trigger gs-nav__link single-level">Maps</a></li><li><a href="/03-features/social/social.html" class="gs-nav__trigger gs-nav__link single-level">Social</a></li><li><a href="/03-features/videos/videos.html" class="gs-nav__trigger gs-nav__link single-level">Videos</a></li></ul></li><li class="gs-nav__section toplevel"><a href="#" class="gs-nav__trigger gs-nav__link">Kits</a><ul><li><a href="/04-kits/ui-kit.html" class="gs-nav__link">Ui-kit</a></li><li><a href="/04-kits/wireframe-kit.html" class="gs-nav__link">Wireframe-kit</a></li></ul></li><li><a href="/05-Register/register.html" class="gs-nav__trigger gs-nav__link single-level">Register</a></li></ul>
+    </nav>
+</div>
+
+
+<div class="gs-stage">
+
+	<div class="gs-stage__inner">
+
+		<div class="gs-stage__content">
+
+			<header class="gs-stage__content__header">
+				<h1 class="gs-stage__content__head-tag">Headings</h1>
+				<p>Usage and implementation for Typography within Web Design Language.</p>
+
+				<blockquote class="gs-stage__content__intro">
+					<h2 class="rc-head rc-head--subheadline">Introduction</h2>
+					<p>Heading tags, wherever possible, should have an <a href="/02-components/typography/headings-modifiers.html">accompanying Header class</a> applied to them to change their appearance.</p>
+					<p>Thanks to the HTML5 document outline algorithm, multiple content roots are available on any HTML5 marked up webpage, therefore, in short, multiple <code class="language-html">&lt;h1&gt;</code> tags can be used.</p>
+					<p>In some cases however, such as in a CMS where control over the markup output may be limited, the default heading styles will apply.</p>
+				</blockquote>
+			</header>
+
+			<h2 class="gs-stage__content__head-tag rc-head--subheadline">Examples</h2>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Default Headings</label>
+					<p>Header tags can be implemented as dispalyed below and will inherit the following default styles.</p>
+					<p>A modifier class can be used to change the colour of the Heading.</p>
+				</header>
+
+				<h1>Heading 1</h1>
+
+<h2 class="color--black">Heading 2</h2>
+
+<h3>Heading 3</h3>
+
+<h4>Heading 4</h4>
+
+<h5>Heading 5</h5>
+
+<h6>Heading 6</h6>
+
+
+				<pre><code class="gs-code language-html">
+					<h1>Heading 1</h1>
+
+<h2 class="color--black">Heading 2</h2>
+
+<h3>Heading 3</h3>
+
+<h4>Heading 4</h4>
+
+<h5>Heading 5</h5>
+
+<h6>Heading 6</h6>
+
+				</code></pre>
+			</section>
+
+		</div>
+
+		<section class="gs-section gs-changelog">
+			<header>
+				<h1 class="rc-head rc-head--subheadline gs-section__head">Changelog</h1>
+			</header>
+
+			<div class="gs-section__content">
+				<ul class="list--blank list--align">
+					<li>
+	<strong>2017-03</strong>
+	<br>
+	Initial release
+</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="gs-section gs-issues">
+	<header>
+		<h1 class="rc-head rc-head--subheadline gs-section__head">Issues</h1>
+		<div class="gs-section__logo">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 120" aria-labelledby="title" role="img">
+				<title id="title">Github</title>
+			  <style>
+			    .gh0{fill-rule:evenodd;clip-rule:evenodd;fill:#181616;}
+			  </style>
+			  <path d="M122.1 61.5c0 27.2-17.5 50.2-41.7 58.4-3.1.6-4.2-1.3-4.2-3 0-2 .1-8.7.1-16.9 0-5.7-2-9.5-4.1-11.4 13.6-1.5 27.9-6.7 27.9-30.4 0-6.7-2.4-12.2-6.3-16.5.6-1.6 2.7-7.8-.6-16.3 0 0-5.1-1.7-16.8 6.3-4.9-1.4-10.1-2-15.3-2.1-5.2 0-10.4.7-15.3 2.1-11.7-8-16.8-6.3-16.8-6.3-3.3 8.5-1.2 14.7-.6 16.3-3.9 4.3-6.3 9.8-6.3 16.5 0 23.6 14.3 28.8 27.8 30.4-1.7 1.5-3.3 4.3-3.9 8.2-3.5 1.6-12.3 4.3-17.8-5.1 0 0-3.2-5.9-9.4-6.3 0 0-6-.1-.4 3.7 0 0 4 1.9 6.8 9 0 0 3.6 11 20.6 7.3 0 5.1.1 10 .1 11.5 0 1.6-1.1 3.5-4.2 3C17.5 111.8 0 88.7 0 61.5 0 27.5 27.3 0 61.1 0c33.7 0 61 27.5 61 61.5zm-99 26.8c.2-.3-.1-.7-.5-.9-.4-.2-.9-.1-1.1.2-.1.3.1.7.5.9.5.2 1 .1 1.1-.2zm2.5 2.8c.3-.3.2-.8-.2-1.3-.4-.4-1-.6-1.3-.3-.3.3-.2.8.2 1.3s1 .6 1.3.3zm2.4 3.5c.4-.3.4-.9 0-1.5-.4-.5-1-.8-1.4-.5-.4.3-.4.9 0 1.5s1 .8 1.4.5zm3.3 3.5c.4-.4.2-1.1-.3-1.6s-1.2-.6-1.6-.2c-.3.4-.2 1.1.3 1.6.6.4 1.3.5 1.6.2zm4.6 2c.1-.5-.3-1.1-1-1.3-.7-.2-1.4 0-1.5.5-.1.5.3 1.1 1 1.3.6.2 1.3-.1 1.5-.5zm4.9.3c0-.5-.6-.9-1.3-.9-.7 0-1.3.4-1.3.9s.6.9 1.3.9c.8.1 1.4-.4 1.3-.9zm4.7-.8c-.1-.5-.7-.8-1.5-.7-.7.1-1.2.6-1.1 1.1.1.5.7.8 1.5.7.7-.1 1.2-.6 1.1-1.1zm163.1-46.7h-30.3c-.8 0-1.4.6-1.4 1.4v14.9c0 .8.6 1.4 1.4 1.4h11.8v18.6s-2.7.9-10 .9c-8.7 0-20.8-3.2-20.8-30s12.6-30.4 24.4-30.4c10.2 0 14.7 1.8 17.5 2.7.9.3 1.7-.6 1.7-1.4l3.4-14.4c0-.4-.1-.8-.5-1.1-1.1-.8-8.1-4.7-25.7-4.7-20.2 0-41 8.7-41 50.4s23.8 47.9 43.8 47.9c16.6 0 26.7-7.1 26.7-7.1.4-.2.5-.8.5-1.1V54.3c-.1-.7-.7-1.4-1.5-1.4zm156.3-37.1c0-.8-.6-1.4-1.4-1.4h-17.1c-.8 0-1.4.6-1.4 1.4v33.3h-26.6V15.8c0-.8-.6-1.4-1.4-1.4h-17.1c-.8 0-1.4.6-1.4 1.4v90c0 .8.6 1.4 1.4 1.4H317c.8 0 1.4-.6 1.4-1.4V67.4H345v38.5c0 .8.6 1.4 1.4 1.4h17.1c.8 0 1.4-.6 1.4-1.4V15.8zM240.8 27.6c0-6.2-4.9-11.2-11-11.2s-11 5-11 11.2c0 6.2 4.9 11.2 11 11.2 6.1.1 11-5 11-11.2zm-1.2 59.3V45.3c0-.8-.6-1.4-1.4-1.4h-17c-.8 0-1.5.8-1.5 1.6V105c0 1.7 1.1 2.3 2.5 2.3h15.3c1.7 0 2.1-.8 2.1-2.3V86.9zM429.8 44h-16.9c-.8 0-1.4.6-1.4 1.4v44.1s-4.3 3.2-10.4 3.2c-6.1 0-7.7-2.8-7.7-8.8V45.4c0-.8-.6-1.4-1.4-1.4h-17.2c-.8 0-1.4.6-1.4 1.4v41.4c0 17.9 9.9 22.3 23.5 22.3 11.2 0 20.2-6.2 20.2-6.2s.4 3.3.6 3.7c.2.4.7.8 1.2.8h10.9c.8 0 1.4-.6 1.4-1.4V45.6c0-.9-.6-1.6-1.4-1.6zM500 73.4c0 27.8-8.9 35.7-24.5 35.7-13.3 0-20.3-6.7-20.3-6.7s-.4 3.7-.7 4.2c-.3.5-.7.8-1.2.8h-11.9c-.8 0-1.4-.6-1.4-1.4V16c0-.8.6-1.4 1.4-1.4h17.1c.8 0 1.4.6 1.4 1.4v30.5s6.5-4.3 16.2-4.3c9.6-.2 23.9 3.4 23.9 31.2zm-19.7 1c0-14.7-5.9-16.5-12-16-4.8.4-8.8 2.9-8.8 2.9v28.5s4 2.7 9.9 2.9c8.3.3 10.9-2.8 10.9-18.3zM288.7 43.9h-12.8V26.8c0-.6-.3-1-1.1-1h-17.5c-.7 0-1 .3-1 1v17.6s-8.7 2.1-9.3 2.3c-.6.2-1 .7-1 1.4v11.1c0 .8.6 1.4 1.4 1.4h8.9v26.6c0 19.8 13.8 21.7 23.1 21.7 4.2 0 9.3-1.4 10.2-1.7.5-.2.8-.7.8-1.3V93.7c0-.8-.7-1.4-1.4-1.4s-2.7.3-4.6.3c-6.3 0-8.4-2.9-8.4-6.8V60.5h12.8c.8 0 1.4-.6 1.4-1.4V45.3c-.1-.8-.7-1.4-1.5-1.4z" class="gh0"/>
+			</svg>
+		</div>
+	</header>
+
+	<div class="gs-section__content">
+		<p>If you are having problems implementing this code, please submit an issue on our <a href="https://github.com/First10/royalcanin-webdesignlanguage/issues">Github</a> page.</p>
+	</div>
+</section>
+
+		<section class="gs-section gs-feedback">
+	<header>
+		<h1 class="rc-head rc-head--subheadline gs-section__head">Feedback</h1>
+		<div class="gs-section__logo">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 143" aria-labelledby="title" role="img">
+				<title id="title">Slack</title>
+			  <style>
+			    .sl0{fill:#ECB32D;} .sl1{fill:#63C1A0;} .sl2{fill:#E01A59;} .sl3{fill:#331433;} .sl4{fill:#D62027;} .sl5{fill:#89D3DF;} .sl6{fill:#258B74;} .sl7{fill:#819C3C;} .sl8{fill:#2D333A;}
+			  </style>
+			  <path d="M90 12.8c-2.2-6.5-9.1-10-15.6-8-6.5 2.2-10 9.1-8 15.6l32 98.4c2.2 6 8.8 9.5 15 7.6 6.6-1.9 10.6-8.9 8.4-15.3.1-.1-31.8-98.3-31.8-98.3z" class="sl0"/>
+			  <path d="M40.5 28.8c-2.2-6.5-9.1-10-15.6-8-6.5 2.2-10 9.1-8 15.6l32 98.4c2.2 6 8.8 9.5 15 7.6 6.6-1.9 10.6-8.9 8.4-15.3.1-.1-31.8-98.3-31.8-98.3z" class="sl1"/>
+			  <path d="M130.4 94.2c6.5-2.2 10-9.1 8-15.6-2.2-6.5-9.1-10-15.6-8l-98.6 32.1c-6 2.2-9.5 8.8-7.6 15 1.9 6.6 8.9 10.6 15.3 8.4.1.1 98.5-31.9 98.5-31.9z" class="sl2"/>
+			  <path d="M44.7 122.1c6.4-2.1 14.7-4.8 23.6-7.6-2.1-6.4-4.8-14.7-7.6-23.6l-23.6 7.6 7.6 23.6z" class="sl3"/>
+			  <path d="M94.4 106c8.9-2.8 17.2-5.6 23.6-7.6-2.1-6.4-4.8-14.7-7.6-23.6l-23.6 7.6 7.6 23.6z" class="sl4"/>
+			  <path d="M114.2 44.7c6.5-2.2 10-9.1 8-15.6-2.2-6.5-9.1-10-15.6-8l-98.4 32c-6 2.2-9.5 8.8-7.6 15 1.9 6.6 8.9 10.6 15.3 8.4.1.1 98.3-31.8 98.3-31.8z" class="sl5"/>
+			  <path d="M28.6 72.5c6.4-2.1 14.7-4.8 23.6-7.6-2.8-8.9-5.6-17.2-7.6-23.6L21 48.9l7.6 23.6z" class="sl6"/>
+			  <path d="M78.2 56.4c8.9-2.8 17.2-5.6 23.6-7.6-2.8-8.9-5.6-17.2-7.6-23.6l-23.6 7.6 7.6 23.6z" class="sl7"/>
+			  <path d="M230.2 38.6c4.3 1.9 4.7 3.3 1.3 9.8-3.5 6.6-4.3 7.1-8.7 5.4-5.4-2.3-12.3-4-16.7-4-7.3 0-12.1 2.6-12.1 6.6 0 13.1 41.7 6 41.7 33.8 0 14-12.1 23.4-30.1 23.4-9.5 0-21.2-3.2-29.3-7.3-4-2.1-4.3-3.2-.8-9.9 3-5.8 4-6.5 8.3-4.7 6.8 3 15.6 5.4 21.4 5.4 6.6 0 11.1-2.7 11.1-6.6 0-12.6-42.5-6.6-42.5-33.6 0-14.4 12-23.9 29.9-23.9 8.6-.2 19.2 2.3 26.5 5.6zm33.7-33v103.9c0 1.6-1.7 3.2-4 3.2H249c-2.4 0-4-1.7-4-3.2V5.6c0-5.1 1.5-5.6 9.5-5.6 9.1-.1 9.4.6 9.4 5.6zm77.7 58.3v44.8c0 2.4-1.7 4-4 4h-10.8c-2.5 0-4.2-1.8-4-4.3l.1-4.8c-5.8 6.5-14.2 9.9-22.7 9.9C284 113.5 273 104 273 90c0-14.9 12.3-25.1 30.9-25.1 7.1 0 13.4 1.3 18.7 3.4v-5.1c0-8.2-6.5-13.1-17.5-13.1-5.1 0-11.5 2.1-16.5 5-3.9 2.2-4.8 2.1-9-4.2-4.1-6.3-4-7.4 0-10 7.6-4.9 17.9-8.1 27.3-8.1 21.3 0 34.7 11.5 34.7 31.1zm-50.4 26c0 5.4 4.6 8.9 11.3 8.9 8.2 0 15.7-4 20.1-10.7v-6.9c-4.3-1.7-9.7-2.6-14.4-2.6-10.2-.1-17 4.7-17 11.3zm124.5-51.2c4 2.3 4.1 3.5-.2 10.3-4.1 6.4-4.8 6.7-9.2 4.6-3.3-1.7-8.7-3.2-13-3.2-13.7 0-22.8 9-22.8 22.7 0 14.1 9.1 23.7 22.8 23.7 4.8 0 10.7-1.8 14.6-4 4-2.3 4.8-2.2 9 4 3.8 5.7 3.8 7.1.3 9.5-6.2 4.2-15.7 7.4-24.3 7.4-25.3 0-42.3-16.2-42.3-40.6 0-24.2 17-40.2 42.5-40.2 7.7-.1 16.9 2.5 22.6 5.8zm82.7 64.2c3.2 4 1.9 5.5-6 8.3-8.1 3-9.2 2.7-12.1-.9l-22.7-30.2-10.1 9.8v19.6c0 1.6-1.7 3.2-4 3.2h-10.9c-2.4 0-4-1.7-4-3.2V5.6c0-5.1 1.5-5.6 9.5-5.6 9.2 0 9.5.7 9.5 5.6v59l31-29.7c3.4-3.2 5.4-3 11.4 1 6.7 4.3 7.2 5.6 4 8.7l-23 22.6 27.4 35.7z" class="sl8"/>
+			</svg>
+		</div>
+	</header>
+
+	<div class="gs-section__content">
+		<p>If you would like to offer feedback on the design of this component, please <a href="mailto:&#100;&#097;&#110;&#046;&#115;&#104;&#111;&#114;&#101;&#109;&#097;&#110;&#064;&#102;&#105;&#114;&#115;&#116;&#049;&#048;&#046;&#099;&#111;&#046;&#117;&#107;">send an email</a> requesting access to the Web Design Language Slack channel.</p>
+	</div>
+</section>
+
+	</div>
+
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="/assets/js/prism.js"></script>
+<script src="/assets/js/slick.min.js"></script>
+<script src="/assets/js/datepicker.min.js"></script>
+<script src="/assets/js/nouislider.min.js"></script>
+<script src="/assets/js/select2.min.js"></script>
+<script src="/assets/js/styleguide.js"></script>
+<script src="/assets/js/scripts.min.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQ7i7zivBcb6rUxcnB-7yJFlgzbwXnjcw&callback=initMap"></script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+@@include('./_site-header.html')
+
+<div class="gs-stage">
+
+	<div class="gs-stage__inner">
+
+		<div class="gs-stage__content">
+
+			<header class="gs-stage__content__header">
+				<h1 class="gs-stage__content__head-tag">Tooltips - Popout</h1>
+				<p>Usage and implementation for Tooltips within Web Design Language.</p>
+
+				<blockquote class="gs-stage__content__intro">
+					<h2 class="rc-head rc-head--subheadline">Introduction</h2>
+					<p>Tooltips should be used primarily to display additional content that is beneficial yet not crucial to the user.</p>
+					<p>Tabbed Tooltips are available but the content that is displayed in them should <b>always primarily</b> be presented in a way that does not requir user interactivity to reveal.</p>
+					<p>To put it simply, the main content should not rely on the Tooltip in order to be coherent.</p>
+				</blockquote>
+			</header>
+
+			<h2 class="gs-stage__content__head-tag rc-head--subheadline">Examples</h2>
+			<p></p>
+
+			<section class="gs-present gs-present--white">
+				<header>
+					<label class="gs-present__label">Tooltip Popout List</label>
+				</header>
+
+				@@include('./02-components/12-tooltips/_tooltip-popout.html')
+			</section>
+
+		</div>
+
+		<section class="gs-section gs-changelog">
+			<header>
+				<h1 class="rc-head rc-head--subheadline gs-section__head">Changelog</h1>
+			</header>
+
+			<div class="gs-section__content">
+				<ul class="list--blank list--align">
+					@@loop("./_changelog-item.html", "./02-components/12-tooltips/_changelog.json")
+				</ul>
+			</div>
+		</section>
+
+		@@include('./_issues.html')
+
+		@@include('./_feedback.html')
+
+	</div>
+
+</div>
+
+@@include('./_site-footer.html')

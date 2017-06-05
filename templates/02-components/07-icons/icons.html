@@ -1,0 +1,56 @@
+@@include('./_site-header.html')
+
+<div class="gs-stage">
+
+	<div class="gs-stage__inner">
+
+		<div class="gs-stage__content">
+
+			<header class="gs-stage__content__header">
+				<h1 class="gs-stage__content__head-tag">SVGs</h1>
+				<p>Usage and implementation for SVGs within Web Design Language.</p>
+
+				<blockquote class="gs-stage__content__intro">
+					<h2 class="rc-head rc-head--subheadline">Introduction</h2>
+					<p>Throughout the site icons are handled as SVG’s to ensure they are displayed best on retina displays. SVG icons must be used throughout the site instead of Images or Fonts.</p>
+					<p>The comment preceding the SVG code is not required in production.</p>
+					<p>The SVGs displayed below have been prepared and optimised to use across Royal Canin touchpoints as a set. If an icon that you require does not exist please create an issue and describe the icon you require.</p>
+				</blockquote>
+			</header>
+
+			<h2 class="gs-stage__content__head-tag rc-head--subheadline">Examples</h2>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">SVGs</label>
+				</header>
+
+				<div class="gs-svg-list">
+					@@loop("./02-components/07-icons/_icons.html", "./02-components/07-icons/_icons.json")
+				</div>
+				<pre><code class="gs-code language-html">@@loop("./02-components/07-icons/_icons.html", "./02-components/07-icons/_icons.json")</code></pre>
+			</section>
+
+		</div>
+
+		<section class="gs-section gs-changelog">
+			<header>
+				<h1 class="rc-head rc-head--subheadline gs-section__head">Changelog</h1>
+			</header>
+
+			<div class="gs-section__content">
+				<ul class="list--blank list--align">
+					@@loop("./_changelog-item.html", "./02-components/07-icons/_changelog.json")
+				</ul>
+			</div>
+		</section>
+
+		@@include('./_issues.html')
+
+		@@include('./_feedback.html')
+		
+	</div>
+
+</div>
+
+@@include('./_site-footer.html')
