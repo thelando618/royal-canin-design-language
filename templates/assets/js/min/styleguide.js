@@ -209,7 +209,7 @@ const triggerAndTargetClassModifier = {
     // Store the node in a temporary variable, which we will replace as we climb the DOM.
     var currentNode = targetNode;
 
-    for (var i = 0; i < depth; i++) {
+    for (var i = 1; i < depth; i++) {
       currentNode = this.climbTreeAndToggle(currentNode, target, modifier, i);
     }
 
