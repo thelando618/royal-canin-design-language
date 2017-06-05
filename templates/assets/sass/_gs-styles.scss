@@ -14,6 +14,10 @@
 	Note: The positioning rules may have to stay here
 */
 
+// Colours
+
+$gs-light-grey: #f3f3f3;
+
 * {
   text-rendering: geometricPrecision;
 }
@@ -178,11 +182,10 @@
   &:focus {
     background: #f3f3f3;
   }
+}
 
-  &:hover {
-    color: #3498db;
-
-  }
+.gs-nav__section {
+  margin: 0;
 }
 
 .gs-nav__trigger.triggered + ul,
@@ -550,12 +553,20 @@ pre.language-js {
 }
 
 
-
-
 .gs-col-demo {
 	background-color: #EAEAEA;
 	text-align: center;
 	padding: 1.5em;
 	color: #E2001A;
 	font-size: 1.125em;
+}
+
+
+%example-wrapper {
+  padding: 1em;
+}
+
+.example-wrapper-light {
+  background-color: $gs-light-grey;
+  @extend %example-wrapper;
 }
