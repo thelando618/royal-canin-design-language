@@ -472,12 +472,11 @@ ready( function(  ) {
 		connect: [true, false],
 		behaviour: 'tap-drag', 
 		step: 10,
-		tooltips: true,
 		range: {
 			'min': 0,
 			'max': 100
 		},
-		pips: { 
+		pips: {
 			mode: 'steps',
 			stepped: true,
 			density: 2
