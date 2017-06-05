@@ -4,6 +4,7 @@
     max-width: 310px;
 	position: relative;
 	margin-bottom: 1em;
+    @extend %on-white-outline;
 	
 	.card__image {
 		margin: 0;

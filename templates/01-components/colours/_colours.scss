@@ -1,5 +1,4 @@
-// Primary Colours
-$rc-red: #E2001A;
+
 .fill--rc-red {
 	background-color: $rc-red;
 
@@ -17,7 +16,7 @@ $rc-red: #E2001A;
 }
 
 
-$rc-medium-grey: #87888A;
+
 .fill--rc-medium-grey {
 	background-color: $rc-medium-grey;
 
@@ -30,7 +29,7 @@ $rc-medium-grey: #87888A;
 	}
 }
 
-$rc-light-grey: #EAEAEA;
+
 .fill--rc-light-grey {
 	background-color: $rc-light-grey;
 
@@ -43,7 +42,6 @@ $rc-light-grey: #EAEAEA;
 	}
 }
 
-$rc-white: #FFFFFF;
 .fill--rc-white {
 	background-color: $rc-white;
 
@@ -56,9 +54,6 @@ $rc-white: #FFFFFF;
 	}
 }
 
-
-// Secondary Colours
-$rc-text: #444444;
 .fill--rc-text {
 	background-color: $rc-text;
 
@@ -71,7 +66,6 @@ $rc-text: #444444;
 	}
 }
 
-$rc-functional: #8EC9D6;
 .fill--rc-functional {
 	background-color: $rc-functional;
 
@@ -84,7 +78,6 @@ $rc-functional: #8EC9D6;
 	}
 }
 
-$rc-success: #5FCC78;
 .fill--rc-success {
 	background-color: $rc-success;
 
@@ -97,7 +90,6 @@ $rc-success: #5FCC78;
 	}
 }
 
-$rc-error: #C71838;
 .fill--rc-error {
 	background-color: $rc-error;
 
