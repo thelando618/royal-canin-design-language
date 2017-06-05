@@ -11,39 +11,17 @@ $(function () {
       carousel_prev_arrow = '<a href="#" class="interactive--navigation interactive--navigation--prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.5 64" aria-labelledby="svg-arrow-left" role="img"><title id="svg-arrow-left" lang="en">arrow-left</title><path d="M1 29.5L29.5 1c1.4-1.4 3.6-1.4 5 0s1.4 3.6 0 5l-26 26 26 26c1.4 1.4 1.4 3.6 0 5-.7.7-1.6 1-2.5 1-.9 0-1.8-.3-2.5-1L1 34.5c-1.3-1.4-1.3-3.6 0-5z"></path></svg><span class="screen-reader-text">Previous Slide</span></a>';
 
   var carousel_gallery_main = {
-    adaptiveHeight: true,
-    asNavFor: '.rc-carousel--gallery__thumbs',
+    adaptiveHeight: false,
     autoplay: true,
     nextArrow: carousel_next_arrow,
     prevArrow: carousel_prev_arrow,
     slidesToShow: 1
   }
 
-  var carousel_gallery_thumbs = {
-    adaptiveHeight: true,
-    arrows: false,
-    asNavFor: '.rc-carousel--gallery__main',
-    focusOnSelect: true,
-    mobileFirst: true,
-    nextArrow: carousel_next_arrow,
-    prevArrow: carousel_prev_arrow,
-    slidesToShow: 3,
-    responsive: [
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 5
-        }
-      }
-    ]
-  }
-
   // Carousel Caches
   var $slick_gallery = $( '.rc-carousel--gallery__main' );
-  var $slick_thumbs = $( '.rc-carousel--gallery__thumbs' );
 
   // Carousel Inits
   $slick_gallery.slick( carousel_gallery_main );
-  $slick_thumbs.slick( carousel_gallery_thumbs );
 
 });
