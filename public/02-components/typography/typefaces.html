@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/assets/css/prism.css">
 </head>
 
-<body class="section-type--features">
+<body class="section-type--@@class.section">
 
 
 <div class="gs-nav">
@@ -43,127 +43,49 @@
 		<div class="gs-stage__content">
 
 			<header class="gs-stage__content__header">
-				<h1 class="gs-stage__content__head-tag">Maps</h1>
-				<p>Usage and implementation for Maps within Web Design Language.</p>
+				<h1 class="gs-stage__content__head-tag">Headings</h1>
+				<p>Usage and implementation for Typography within Web Design Language.</p>
 
 				<blockquote class="gs-stage__content__intro">
 					<h2 class="rc-head rc-head--subheadline">Introduction</h2>
-					<p>Maps rely on the <a href="https://developers.google.com/maps/documentation/javascript/">Google Maps Javascript API</a>.</p>
-					<p>A suite of JS functions have been created to assist in creating consistent Maps, Markers and InfoWindows. These are displayed in the Javascript code demonstrations.</p>
-					<p>Every map on a page must have a unique ID.</p>
-					<p>Please ensure that every Map, Marker or InfoWindow that is created is stored in a unique variable.</p>
-				</blockquote>
-
-				<blockquote class="gs-stage__content__intro">
-					<h2 class="rc-head rc-head--subheadline">Google Maps API</h2>
-					<p>In order to display a map using the Google Maps Javascript API, and API key must be provided.</p>
-					<p><b>Please get in touch with Royal Canin to get access to the official API key.</b></p>
+					<p>Din Family is used throughout Web Design Language projects with a variety of weights and sizes used
+                        to convey a message to the user. Brand red, text colour and white are the only available colours
+                        to use in generic copy.</p>
 				</blockquote>
 			</header>
 
-			<section class="gs-present">
-				<header>
-					<label class="gs-present__label">Javascript Functions</label>
-					<p>All Maps, Markers and InfoWindows should be created using the following functions.</p>
-					<p>These functions must live inside the Google Maps API <code class="gs-code language-js">initMap()</code> function in your scripts file. An example of this can be found in the accompanying <code class="gs-code language-js">maps.js</code>file.</p>
-				</header>
-
-				<p><b>Create a Map</b></p>
-				<ul class="list--align list--blank">
-					<li><code class="gs-code language-js">$selector</code> <em>string</em> - The ID of HTML element where the map should be displayed.</li>
-					<li><code class="gs-code language-js">$center</code> <em>object</em> - The coordinates for the centre of the Map.</li>
-					<li><code class="gs-code language-js">$zoom</code> <em>number</em> - The desired zoom level (Defaults to 17).</li>
-				</ul>
-
-				<pre><code class="gs-code language-js">
-					var map_royal_canin = create_map( document.getElementById( $selector ), $center, $zoom );
-				</code></pre>
-
-				<br>
-
-				<p><b>Create a Marker</b></p>
-				<ul class="list--align list--blank">
-					<li><code class="gs-code language-js">$position</code> <em>object</em> - The coordinates for the position of the Marker.</li>
-					<li><code class="gs-code language-js">$map</code> <em>object</em> - The Map the Marker should be applied to.</li>
-				</ul>
-
-				<pre><code class="gs-code language-js">
-					var marker_royal_canin = create_marker( $position, $map );
-				</code></pre>
-
-				<br>
-
-				<p><b>Create an InfoWindow</b></p>
-				<ul class="list--align list--blank">
-					<li><code class="gs-code language-js">$content</code> <em>object</em> - The DOM element that should be used for the InfoWindow contents.</li>
-					<li><code class="gs-code language-js">$marker</code> <em>object</em> - The Marker the InfoWindow should be applied to.</li>
-					<li><code class="gs-code language-js">$map</code> <em>object</em> - The Map the Marker is a part of.</li>
-				</ul>
-
-				<pre><code class="gs-code language-js">
-					var infobox_first_10 = create_infobox( document.getElementById( 'infobox_first_10' ), marker_first_10, map_first_10 );
-				</code></pre>
-			</section>
+			<h2 class="gs-stage__content__head-tag rc-head--subheadline">Examples</h2>
 
 			<section class="gs-present">
 				<header>
-					<label class="gs-present__label">Basic Map</label>
+					<label class="gs-present__label">Default Headings</label>
+					<p>Header tags can be implemented as dispalyed below and will inherit the following default styles.</p>
+					<p>A modifier class can be used to change the colour of the Heading.</p>
 				</header>
 
-				<div id="map_royal_canin" class="rc-map"></div>
+                <div class="typeface-example typeface-example-din-pro-regular">
+                    <label>Din Pro Regular</label>
+                    <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />
+                        abcdefghijklmnpqrstuvwxyz <br />
+                        123456789</p>
+                </div>
 
-				<br>
+                <div class="typeface-example typeface-example-din-pro-medium">
+                    <label>Din Pro Medium</label>
+                    <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />
+                        abcdefghijklmnpqrstuvwxyz <br />
+                        123456789</p>
+                </div>
 
-				<pre><code class="gs-code language-html">
-					<div id="map_royal_canin" class="rc-map"></div>
-				</code></pre>
+                <div class="typeface-example typeface-example-din-pro-bold">
+                    <label>Din Pro Bold</label>
+                    <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />
+                        abcdefghijklmnpqrstuvwxyz <br />
+                        123456789</p>
+                </div>
 
-				<pre><code class="gs-code language-js">
-					var map_royal_canin = create_map( document.getElementById( 'map_royal_canin' ), key_locations.royal_canin, 17 );
-				</code></pre>
+
 			</section>
-
-
-			<section class="gs-present">
-				<header>
-					<label class="gs-present__label">Basic Map + Marker</label>
-				</header>
-
-				<div id="map_royal_canin--marker" class="rc-map"></div>
-
-				<br>
-
-				<pre><code class="gs-code language-html">
-					<div id="map_royal_canin" class="rc-map"></div>
-				</code></pre>
-			</section>
-
-
-			<section class="gs-present">
-				<header>
-					<label class="gs-present__label">Basic Map + Marker + Info</label>
-					<p>Infoboxes should use a simplified <a href="/01-components/tooltips/tooltips.html">Tooltip</a> structure, as per the example below.</p>
-				</header>
-
-				<div id="map_first_10" class="rc-map"></div>
-
-				<div id="infobox_first_10" class="rc-map__overlay rc-tooltip">
-					<h1 class="rc-head--subheadline color--red rc-tooltip__title">Title of the Tooltip</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				</div>
-
-				<br>
-
-				<pre><code class="gs-code language-html">
-					<div id="map_first_10" class="rc-map"></div>
-
-					<div id="infobox_first_10" class="rc-map__overlay rc-tooltip">
-						<h1 class="rc-head--subheadline color--red rc-tooltip__title">Title of the Tooltip</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-				</code></pre>
-			</section>
-
 
 		</div>
 

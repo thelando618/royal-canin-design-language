@@ -1,0 +1,76 @@
+@@include('./_site-header.html')
+
+<div class="gs-stage">
+
+	<div class="gs-stage__inner">
+
+		<div class="gs-stage__content">
+
+			<header class="gs-stage__content__header">
+				<h1 class="gs-stage__content__head-tag">Headings</h1>
+				<p>Usage and implementation for Typography within Web Design Language.</p>
+
+				<blockquote class="gs-stage__content__intro">
+					<h2 class="rc-head rc-head--subheadline">Introduction</h2>
+					<p>Din Family is used throughout Web Design Language projects with a variety of weights and sizes used
+                        to convey a message to the user. Brand red, text colour and white are the only available colours
+                        to use in generic copy.</p>
+				</blockquote>
+			</header>
+
+			<h2 class="gs-stage__content__head-tag rc-head--subheadline">Examples</h2>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Default Headings</label>
+					<p>Header tags can be implemented as dispalyed below and will inherit the following default styles.</p>
+					<p>A modifier class can be used to change the colour of the Heading.</p>
+				</header>
+
+                <div class="typeface-example typeface-example-din-pro-regular">
+                    <label>Din Pro Regular</label>
+                    <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />
+                        abcdefghijklmnpqrstuvwxyz <br />
+                        123456789</p>
+                </div>
+
+                <div class="typeface-example typeface-example-din-pro-medium">
+                    <label>Din Pro Medium</label>
+                    <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />
+                        abcdefghijklmnpqrstuvwxyz <br />
+                        123456789</p>
+                </div>
+
+                <div class="typeface-example typeface-example-din-pro-bold">
+                    <label>Din Pro Bold</label>
+                    <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />
+                        abcdefghijklmnpqrstuvwxyz <br />
+                        123456789</p>
+                </div>
+
+
+			</section>
+
+		</div>
+
+		<section class="gs-section gs-changelog">
+			<header>
+				<h1 class="rc-head rc-head--subheadline gs-section__head">Changelog</h1>
+			</header>
+
+			<div class="gs-section__content">
+				<ul class="list--blank list--align">
+					@@loop("./_changelog-item.html", "./02-components/typography/_changelog.json")
+				</ul>
+			</div>
+		</section>
+
+		@@include('./_issues.html')
+
+		@@include('./_feedback.html')
+
+	</div>
+
+</div>
+
+@@include('./_site-footer.html')

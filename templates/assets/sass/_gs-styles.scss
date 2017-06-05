@@ -570,3 +570,32 @@ pre.language-js {
   background-color: $gs-light-grey;
   @extend %example-wrapper;
 }
+
+.typeface-example {
+  margin-bottom: 2em;
+  display: block;
+
+  & p {
+    @extend h2;
+    font-family: "DIN Pro", "Avenir", Helvetica, Arial, sans-serif;
+  }
+
+  & > label {
+    margin-top: 1em;
+  }
+
+  .gs-present & > p {
+    margin-top: 0;
+  }
+  &-din-pro-bold {
+    font-weight: 800;
+  }
+
+  &-din-pro-medium {
+    font-weight: 600;
+  }
+
+  &-din-pro-regular {
+    font-weight: 500;
+  }
+}
