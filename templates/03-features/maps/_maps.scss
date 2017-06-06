@@ -1,5 +1,6 @@
 .rc-map {
 	height: 400px;
+    @extend %feature-width-restriction;
 }
 
 .rc-map__overlay {

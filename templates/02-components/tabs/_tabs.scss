@@ -1,5 +1,7 @@
 // Tabs
 .rc-tabs {
+  @extend %feature-width-restriction;
+
 	.rc-tabs__triggers {
 	  overflow-y: scroll; 
 	  -webkit-overflow-scrolling: touch;
@@ -21,9 +23,9 @@
 		color: inherit;
 		background-color: transparent;
 		cursor: pointer;
-    border-bottom: 4px solid transparent;
-    border-bottom-color: $rc-white;
-    border-radius: 0px;
+        border-bottom: 4px solid transparent;
+        border-bottom-color: $rc-white;
+        border-radius: 0px;
 
 
 		&.active {
@@ -50,6 +52,7 @@
 .rc-tabs--side {
 	background-color: $rc-light-grey;
 	display: flex;
+    @extend %feature-width-restriction;
 
 	.rc-tabs__content {
 		flex: 1 1 85%;
