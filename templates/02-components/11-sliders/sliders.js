@@ -29,22 +29,25 @@ ready( function(  ) {
 	// Get element
 	var range = document.getElementById( 'rc-slider-demo' );
 
-	// Create Slider
-	noUiSlider.create( range, {
-		start: [ 0 ],
-		connect: [true, false],
-		behaviour: 'tap-drag', 
-		step: 10,
-		range: {
-			'min': 0,
-			'max': 100
-		},
-		pips: {
-			mode: 'steps',
-			stepped: true,
-			density: 2
-		}
-	});
+	if (range !== null) {
+
+    // Create Slider
+    noUiSlider.create(range, {
+      start: [0],
+      connect: [true, false],
+      behaviour: 'tap-drag',
+      step: 10,
+      range: {
+        'min': 0,
+        'max': 100
+      },
+      pips: {
+        mode: 'steps',
+        stepped: true,
+        density: 2
+      }
+    });
+  }
 
 
 } );
