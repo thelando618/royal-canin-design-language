@@ -1,4 +1,4 @@
 .rc-carousel--gallery {
-  max-width: 600px;
+  @extend %feature-width-restriction;
   margin: 0 auto;
 }

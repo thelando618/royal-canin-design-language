@@ -99,9 +99,8 @@ gulp.task( 'copyJS', gulp.series( 'minify', function( done ) {
 	done();
 } ) )
 
-
 // Generate Sass
-gulp.task( 'sass', function( done ) {    
+gulp.task( 'sass', function( done ) {
 	return gulp.src( './templates/assets/sass/style.scss' )
 		.pipe( sass({
 				outputStyle: 'compressed',
@@ -112,8 +111,19 @@ gulp.task( 'sass', function( done ) {
 	done();
 } );
 
+gulp.task( 'sass-styleguide', function( done ) {
+  return gulp.src( './templates/assets/sass/styleguide.styles.scss' )
+    .pipe( sass({
+      outputStyle: 'compressed',
+      includePaths: ['node_modules/susy/sass']
+    }).on( 'error', sass.logError ) )
+    .pipe( autoprefixer( { browsers: ['last 5 versions'] } ) )
+    .pipe( gulp.dest( './templates/assets/css/' ) );
+  done();
+} );
+
 // Copy CSS
-gulp.task( 'copyCSS', gulp.series( 'sass', function( done ) {
+gulp.task( 'copyCSS', gulp.series( 'sass', 'sass-styleguide', function( done ) {
 	return gulp.src( path.join( paths.templates, '*.css' ) )
 		.pipe( gulp.dest( './public/' ) );
 	done();
@@ -151,6 +161,17 @@ gulp.task( 'createNav', gulp.series( 'getfiles', function( done ) {
 		fileTree = '<ul>',
 		stats;
 
+    function cleanName( fileName ) {
+      // Check if the folder/file name has a numeric suffix.
+      if (parseInt(fileName.slice(0, 1)) > -1) {
+        // Remove the first three characters xx- then remove the html file extension if there is one, finally trim the white space.
+        return fileName.slice(2).replace('.html', '').replace(/-/g, ' ').trim();
+      }
+      else {
+        return fileName.replace('.html', '').trim();
+      }
+    }
+
 		fileContents.forEach( function( fileName ) {
 			
 			stats = fs.lstatSync( folder + '/' + fileName );
@@ -162,27 +183,17 @@ gulp.task( 'createNav', gulp.series( 'getfiles', function( done ) {
 				if ( 'assets' === fileName ) {
 					return false;
 				}
-				
-
-				// @todo move this to root with other functions and improve
-				function niceFolderName( fileName ) {
-					// get rid of digits and hyphen
-					var niceName = fileName.replace( /(\d)+\-/g, '' );
-					// capitalize first letter
-					niceName = niceName.charAt(0).toUpperCase() + niceName.slice(1);
-					return niceName;
-				}
 
         var items = fs.readdirSync(folder + '/' + fileName);
 
 				// If the folder only contains one html file, make the parent link to that.
         if (getIndexes(items, '.html').length === 1) {
-          fileTree += '<li><a href="' + folder.slice(8, folder.length) + '/' + fileName + '/' + items[0] + '" class="gs-nav__trigger gs-nav__link single-level">' + niceFolderName( fileName ) + '</a></li>';
+          fileTree += '<li><a href="' + folder.slice(8, folder.length) + '/' + fileName + '/' + items[0] + '" class="gs-nav__trigger gs-nav__link single-level">' + cleanName( fileName ) + '</a></li>';
         }
         else {
           // Create an empty link that will trigger some JS
           var topClass = counter === 1 ? ' toplevel' : '';
-          fileTree += '<li class="gs-nav__section' + topClass + '"><a href="#" class="gs-nav__trigger gs-nav__link">' + niceFolderName( fileName ) + '</a>' + getFilesRecursive( folder + '/' + fileName) +'</li>';
+          fileTree += '<li class="gs-nav__section' + topClass + '"><a href="#" class="gs-nav__trigger gs-nav__link">' + cleanName( fileName ) + '</a>' + getFilesRecursive( folder + '/' + fileName) +'</li>';
         }
 
 			} else {
@@ -196,17 +207,8 @@ gulp.task( 'createNav', gulp.series( 'getfiles', function( done ) {
 					return false;
 				}
 
-				// @todo move this to root with other functions and maybe combine with niceFolderName
-				function niceFileName( fileName ) {
-					// remove .html
-					var niceName = fileName.replace( '.html', '' )
-					// capitalize first letter
-					niceName = niceName.charAt(0).toUpperCase() + niceName.slice(1);
-					return niceName;
-				}
-
 				// Add list item with anchor with full url
-				fileTree += '<li><a href="' + fullUrl + '" class="gs-nav__link">' + niceFileName( fileName ) + '</a></li>';
+				fileTree += '<li><a href="' + fullUrl + '" class="gs-nav__link">' + cleanName( fileName ) + '</a></li>';
 			}
 
 		});

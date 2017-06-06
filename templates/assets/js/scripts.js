@@ -607,23 +607,25 @@ ready( function(  ) {
 	// Get element
 	var range = document.getElementById( 'rc-slider-demo' );
 
-	// Create Slider
-	noUiSlider.create( range, {
-		start: [ 0 ],
-		connect: [true, false],
-		behaviour: 'tap-drag', 
-		step: 10,
-		tooltips: true,
-		range: {
-			'min': 0,
-			'max': 100
-		},
-		pips: { 
-			mode: 'steps',
-			stepped: true,
-			density: 2
-		}
-	});
+	if (range !== null) {
+
+    // Create Slider
+    noUiSlider.create(range, {
+      start: [0],
+      connect: [true, false],
+      behaviour: 'tap-drag',
+      step: 10,
+      range: {
+        'min': 0,
+        'max': 100
+      },
+      pips: {
+        mode: 'steps',
+        stepped: true,
+        density: 2
+      }
+    });
+  }
 
 
 } );
@@ -798,7 +800,7 @@ $(function () {
       carousel_prev_arrow = '<a href="#" class="interactive--navigation interactive--navigation--prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.5 64" aria-labelledby="svg-arrow-left" role="img"><title id="svg-arrow-left" lang="en">arrow-left</title><path d="M1 29.5L29.5 1c1.4-1.4 3.6-1.4 5 0s1.4 3.6 0 5l-26 26 26 26c1.4 1.4 1.4 3.6 0 5-.7.7-1.6 1-2.5 1-.9 0-1.8-.3-2.5-1L1 34.5c-1.3-1.4-1.3-3.6 0-5z"></path></svg><span class="screen-reader-text">Previous Slide</span></a>';
 
   var carousel_default = {
-    adaptiveHeight: true,
+    adaptiveHeight: false,
     dots: true,
     dotsClass: 'rc-carousel__dots list--blank list--align',
     autoplay: true,
@@ -808,7 +810,7 @@ $(function () {
     speed: 400,
     customPaging: function( slider, i ) {
       var thumb = $( slider.$slides[i] ).data( 'thumb' );
-      return '<a href="#" class="' + thumb + '"><span class="screen-reader-text">' + i + '</span></a>';
+      return '<button class="' + thumb + '"><span class="screen-reader-text">' + i + '</span></button>';
     }
   }
 
@@ -1085,16 +1087,19 @@ var key_locations = {
  * Standard Google Maps init function. Generates Maps.
  */
 function initMap() {
-  // Royal Canin Map
-  var map_royal_canin = create_map( document.getElementById( 'map_royal_canin' ), key_locations.royal_canin, 17 );
-  
-  // Royal Canin Map + Marker
-  var map_royal_canin_marker = create_map( document.getElementById( 'map_royal_canin--marker' ), key_locations.royal_canin, 17 );
-  var marker_royal_canin_marker = create_marker( key_locations.royal_canin, map_royal_canin_marker );
 
-  // First 10 Map + Marker + Infobox
-  var map_first_10 = create_map( document.getElementById( 'map_first_10' ), key_locations.first_10, 18 );
-  var marker_first_10 = create_marker( key_locations.first_10, map_first_10 );
-  var infobox_first_10 = create_infobox( document.getElementById( 'infobox_first_10' ), marker_first_10, map_first_10 );
+  if (document.getElementById( 'map_royal_canin' ) !== null) {
+    // Royal Canin Map
+    var map_royal_canin = create_map(document.getElementById('map_royal_canin'), key_locations.royal_canin, 17);
+
+    // Royal Canin Map + Marker
+    var map_royal_canin_marker = create_map(document.getElementById('map_royal_canin--marker'), key_locations.royal_canin, 17);
+    var marker_royal_canin_marker = create_marker(key_locations.royal_canin, map_royal_canin_marker);
+
+    // First 10 Map + Marker + Infobox
+    var map_first_10 = create_map(document.getElementById('map_first_10'), key_locations.first_10, 18);
+    var marker_first_10 = create_marker(key_locations.first_10, map_first_10);
+    var infobox_first_10 = create_infobox(document.getElementById('infobox_first_10'), marker_first_10, map_first_10);
+  }
 }
 
