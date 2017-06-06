@@ -9,6 +9,7 @@
 	overflow: hidden;
 	transition: background-color .2s ease-in-out, border .2s ease-in-out;
 	color: transparent;
+    padding: 0;
 
 	&:hover, &:focus {
 		border-color: $rc-red;
@@ -31,7 +32,7 @@
 	display: inline-block;
 	padding: 1em;
 	transition: background-color .2s ease-in-out;
-	background-color: $rc-white;
+	background-color: $rc-light-grey;
 	overflow: hidden;
 	
 	svg {
@@ -39,7 +40,7 @@
 		display: block;
 		width: 1.25em;
 		height: 1.25em;
-		fill: $rc-red;
+		fill: $rc-text;
 		transition: fill .2s ease-in-out;
 	}
 
