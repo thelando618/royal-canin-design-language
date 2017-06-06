@@ -562,10 +562,6 @@ pre.language-js {
 }
 
 
-%example-wrapper {
-  padding: 1em;
-}
-
 .example-wrapper-light {
   background-color: $gs-light-grey;
   @extend %example-wrapper;
@@ -597,5 +593,66 @@ pre.language-js {
 
   &-din-pro-regular {
     font-weight: 500;
+  }
+}
+
+.half {
+  width: 49%;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.logo-usage > .gs-present__label {
+  margin-top: 3rem;
+  display: block;
+  width: 100%;
+}
+
+.logo-usage-example {
+  display: inline-block;
+  @extend %on-white-outline
+}
+
+.rc-carousel {
+  @extend %on-white-outline;
+}
+
+.logo-example {
+  @include clearfix();
+  margin: 4rem 0;
+  padding: 0 4rem;
+  position: relative;
+
+  &::before {
+    content: '';
+    @include red-accent(right, 2px);
+    display: block;
+    position: absolute;
+    left: 20%;
+    margin-left: 1rem;
+    top: 0;
+    bottom: 0;
+  }
+
+  & > figure,
+  & > label,
+  & > p {
+    float: left;
+  }
+
+  & > figure {
+    width: 30%;
+    padding-right: 3rem;
+  }
+
+  & > figure {
+    max-width: 200px;
+  }
+
+  & > label,
+  & > p {
+    clear: none;
+    width: 70%;
+    margin: 0 3rem;
   }
 }

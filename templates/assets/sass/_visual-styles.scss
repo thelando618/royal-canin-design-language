@@ -5,3 +5,11 @@
 %feature-width-restriction {
   max-width: 600px;
 }
+
+%example-wrapper {
+  padding: 1em;
+}
+
+@mixin red-accent($direction, $width) {
+  border-#{$direction}: $width solid $rc-red;
+}
