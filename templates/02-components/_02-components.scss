@@ -1,29 +1,46 @@
-@import 'colours/colours';
+// @import 'colours/colours';
 
-@import 'fonts/fonts';
+@import '02-colours/colours';
 
-@import 'typography/typography';
+@import '03-typography/fonts';
 
-@import 'svgs/svgs';
+@import '03-typography/typography';
 
-@import 'forms/forms';
+@import '04-buttons/button';
 
-@import 'lists/lists';
+@import '05-form-elements/forms';
 
-@import 'buttons/button';
+@import '06-progress/progress';
 
-@import 'tables/table';
+@import '07-icons/icons';
 
-@import 'alerts/alerts';
+// @import 'images/images';
 
-@import 'progress/progress';
+@import '08-images/avatars';
 
-@import 'tabs/tabs';
+@import '09-interactive/interactive';
 
-@import 'tooltips/tooltips';
+@import '10-tabs/tabs';
 
-@import 'sliders/sliders';
+@import '11-sliders/sliders';
 
-@import 'interactive/interactive';
+@import '12-tooltips/tooltips';
 
-@import 'avatars/avatars';
+@import '13-alerts/alerts';
+
+@import '14-lists/lists';
+
+@import '15-tables/table';
+
+
+
+
+
+
+
+
+
+
+
+
+
