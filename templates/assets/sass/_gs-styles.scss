@@ -14,12 +14,49 @@
 	Note: The positioning rules may have to stay here
 */
 
+// DIN Pro
+@font-face {
+  font-family: 'DIN Pro';
+  src: url('../fonts/din_pro.woff2') format('woff2'),
+  url('../fonts/din_pro.woff') format('woff'),
+  url('../fonts/din_pro.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 300;
+}
+
+// DIN Pro Medium
+@font-face {
+  font-family: 'DIN Pro';
+  src: url('../fonts/din_pro_medium.woff2') format('woff2'),
+  url('../fonts/din_pro_medium.woff') format('woff'),
+  url('../fonts/din_pro_medium.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 500;
+}
+
+// DIN Pro Bold
+@font-face {
+  font-family: 'DIN Pro';
+  src: url('../fonts/din_pro_bold.woff2') format('woff2'),
+  url('../fonts/din_pro_bold.woff') format('woff'),
+  url('../fonts/din_pro_bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+}
+
+// Font stack variable
+$font-din: "DIN Pro", 'Avenir', Helvetica, Arial, sans-serif;
+
 // Colours
 
 $gs-light-grey: #f3f3f3;
 
 * {
   text-rendering: geometricPrecision;
+}
+
+.gs-present--white {
+  background-color: lightgrey;
 }
 
 .gs-nav {
@@ -177,6 +214,7 @@ $gs-light-grey: #f3f3f3;
   color: inherit;
   padding: 1.75em 0 1.75em 1.75em;
   transition: color .1s ease-in;
+  text-transform: capitalize;
 
   &:focus {
     background: #f3f3f3;
@@ -566,13 +604,14 @@ pre.language-js {
   @extend %example-wrapper;
 }
 
-.typeface-example {
+.gs-typeface-example {
   margin-bottom: 2em;
   display: block;
 
   & p {
-    @extend h2;
-    font-family: "DIN Pro", "Avenir", Helvetica, Arial, sans-serif;
+    font-size: 1.75rem;
+    color: $rc-red;
+    font-family: $font-din;
   }
 
   & > label {
@@ -582,17 +621,6 @@ pre.language-js {
   .gs-present & > p {
     margin-top: 0;
   }
-  &-din-pro-bold {
-    font-weight: 800;
-  }
-
-  &-din-pro-medium {
-    font-weight: 600;
-  }
-
-  &-din-pro-regular {
-    font-weight: 500;
-  }
 }
 
 .half {
@@ -601,13 +629,13 @@ pre.language-js {
   display: inline-block;
 }
 
-.logo-usage > .gs-present__label {
+.gs-logo-usage > .gs-present__label {
   margin-top: 3rem;
   display: block;
   width: 100%;
 }
 
-.logo-usage-example {
+.gs-logo-usage-example {
   display: inline-block;
   @extend %on-white-outline
 }
@@ -616,7 +644,7 @@ pre.language-js {
   @extend %on-white-outline;
 }
 
-.logo-example {
+.gs-logo-example {
   @include clearfix();
   margin: 4rem 0;
   padding: 0 4rem;
@@ -654,4 +682,8 @@ pre.language-js {
     width: 70%;
     margin: 0 3rem;
   }
+}
+
+.featured-option > label {
+  @extend %on-white-outline;
 }

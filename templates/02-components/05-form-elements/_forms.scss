@@ -134,13 +134,15 @@ input[data-toggle^="datepicker"] {
 	input[type="checkbox"]:checked + label,
 	input[type="radio"]:checked + label {
 		&:before {
-			background: center/1rem no-repeat;
+			background-position: center;
+            background-size: 1rem;
+            background-repeat: no-repeat;
 		}
 	}
 
 	input[type="checkbox"]:checked + label {
 		&:before {
-			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E %3Cstyle%3E .st0%7Bfill:%23E2001A;%7D %3C/style%3E %3Cpath d='M.1 31.8l9.1-9.1L33.6 47l-9.1 9.1L.1 31.8zM15.3 47L54.9 7.4l9.1 9.1-39.5 39.6-9.2-9.1z' class='st0'/%3E %3C/svg%3E");
+			background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2217%22%20viewBox%3D%220%200%2020%2017%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M19.58%203.264L9.917%2015.818c-.146.19-.32.346-.51.47-.005.002-.01.006-.014.01-.023.013-.046.023-.07.036-.31.18-.66.275-1.014.275-.432%200-.867-.138-1.235-.42%200-.002%200-.002-.002-.003L.79%2011.354C-.095%2010.67-.26%209.398.42%208.51c.683-.886%201.956-1.052%202.844-.37l4.677%203.6L16.367.79C17.05-.095%2018.32-.26%2019.21.42c.886.684%201.052%201.956.37%202.844%22%20fill%3D%22%23E2001A%22%20fill-rule%3D%22evenodd%22/%3E%3C/svg%3E");
 			background-color: $rc-white;
 		}
 	}
@@ -152,15 +154,6 @@ input[data-toggle^="datepicker"] {
 		}
 	}
 }
-
-
-
-// @todo mvoe this to general sass partial
-.gs-present--white {
-	background-color: lightgrey;
-}
-
-
 
 
 .rc-input {
@@ -369,12 +362,9 @@ input[data-toggle^="datepicker"] {
 	li {
 	  float: left;
 	  width: 36px;
-	  margin: 0;
-	  padding: 0;
 	  list-style: none;
 	  cursor: pointer;
 	  text-align: center;
-	  background-color: #fff;
 	  background-color: $rc-light-grey;
 	  border-radius: 3px;
 	  padding: .25em 0;
@@ -792,3 +782,25 @@ input[data-toggle^="datepicker"] {
           .select2-container--default .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option {
             margin-left: -5em;
             padding-left: 6em; }
+
+.featured-option {
+  & > input[type="checkbox"] + label {
+    padding-right: 1rem;
+    margin-bottom: .25em;
+    display: block;
+  }
+
+  & > input[type="checkbox"] + label::before {
+    border: none;
+    background-color: $rc-light-grey;
+    border-radius: 0;
+    height: 2.5rem;
+    width: 2.5rem;
+    background-size: contain;
+    margin-right: 1rem;
+  }
+
+  & > input[type="checkbox"]:checked + label::before {
+    background-color: $rc-light-grey;
+  }
+}

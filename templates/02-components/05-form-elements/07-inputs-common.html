@@ -40,14 +40,36 @@
 					<label class="gs-present__label">Type - Checkbox (Custom)</label>
 				</header>
 
-				@@include('./02-components/05-form-elements/_input-toggle-custom.html', {
-					"type": "checkbox"
+				@@include('./02-components/05-form-elements/_input-type-select-custom.html', {
+					"type": "checkbox",
+                    "class": "",
+                    "target": "standard"
 				})
 
-				<pre><code class="gs-code language-html">@@include('./02-components/05-form-elements/_input-toggle-custom.html', {
-					"type": "checkbox"
+				<pre><code class="gs-code language-html">@@include('./02-components/05-form-elements/_input-type-select-custom.html', {
+					"type": "checkbox",
+                    "class": "",
+                    "target": "standard"
 				})</code></pre>
 			</section>
+
+            <section class="gs-present">
+                <header>
+                    <label class="gs-present__label">Type - Checkbox (Featured Option)</label>
+                </header>
+
+                @@include('./02-components/05-form-elements/_input-type-select-custom.html', {
+                "type": "checkbox",
+                "class": "featured-option",
+                "target": "featured-option"
+                })
+
+                <pre><code class="gs-code language-html">@@include('./02-components/05-form-elements/_input-type-select-custom.html', {
+					"type": "checkbox",
+                    "class": "featured-option",
+                    "target": "featured-option"
+				})</code></pre>
+            </section>
 
 			<section class="gs-present">
 				<header>
@@ -105,11 +127,11 @@
 					<p>Custom Radio Inputs require a different structure.</p>
 				</header>
 
-				@@include('./02-components/05-form-elements/_input-toggle-custom.html', {
+				@@include('./02-components/05-form-elements/_input-type-select-custom.html', {
 					"type": "radio"
 				})
 
-				<pre><code class="gs-code language-html">@@include('./02-components/05-form-elements/_input-toggle-custom.html', {
+				<pre><code class="gs-code language-html">@@include('./02-components/05-form-elements/_input-type-select-custom.html', {
 					"type": "radio"
 				})</code></pre>
 			</section>
