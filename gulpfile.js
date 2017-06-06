@@ -99,9 +99,8 @@ gulp.task( 'copyJS', gulp.series( 'minify', function( done ) {
 	done();
 } ) )
 
-
 // Generate Sass
-gulp.task( 'sass', function( done ) {    
+gulp.task( 'sass', function( done ) {
 	return gulp.src( './templates/assets/sass/style.scss' )
 		.pipe( sass({
 				outputStyle: 'compressed',
@@ -112,8 +111,19 @@ gulp.task( 'sass', function( done ) {
 	done();
 } );
 
+gulp.task( 'sass-styleguide', function( done ) {
+  return gulp.src( './templates/assets/sass/styleguide.styles.scss' )
+    .pipe( sass({
+      outputStyle: 'compressed',
+      includePaths: ['node_modules/susy/sass']
+    }).on( 'error', sass.logError ) )
+    .pipe( autoprefixer( { browsers: ['last 5 versions'] } ) )
+    .pipe( gulp.dest( './templates/assets/css/' ) );
+  done();
+} );
+
 // Copy CSS
-gulp.task( 'copyCSS', gulp.series( 'sass', function( done ) {
+gulp.task( 'copyCSS', gulp.series( 'sass', 'sass-styleguide', function( done ) {
 	return gulp.src( path.join( paths.templates, '*.css' ) )
 		.pipe( gulp.dest( './public/' ) );
 	done();
