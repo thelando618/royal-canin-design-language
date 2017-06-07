@@ -86,7 +86,7 @@ Runs the same as the `gulp view` command but also watches the files in the publi
 
 ## Deployment
 
-TBC
+git subtree push --prefix public origin gh-pages
 
 # &nbsp;
 
