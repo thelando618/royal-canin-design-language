@@ -11,14 +11,12 @@
 		<div class="gs-stage__content">
 
 			<header class="gs-stage__content__header">
-				<h1 class="gs-stage__content__head-tag">Videos</h1>
+				<h1 class="gs-stage__content__head-tag">Video</h1>
 				<p>Usage and implementation for Videos within Web Design Language.</p>
 
 				<blockquote class="gs-stage__content__intro">
 					<h2 class="rc-head rc-head--subheadline">Introduction</h2>
-					<p>Videos should be displayed using embed code from a source like YouTube or Vimeo.</p>
-					<p>The embed code should be placed inside a predetermined class to ensure the element is responsive.</p>
-					<p>The <code>width</code> and <code>height</code> attributes are not required in the embed URL, as these are overridden with CSS.</p>
+					<p>All video should be embedded and displayed in a Youtube player. Default sizing is 16:9 aspect ratio. The embed code should be placed inside a predetermined class to ensure the element is responsive. The <code>width</code> and <code>height</code> attributes are not required in the embed URL, as these are overridden with CSS.</p>
 				</blockquote>
 			</header>
 
@@ -31,28 +29,12 @@
 					<p>A default video embed from YouTube</p>
 				</header>
 
-				@@include('./03-features/videos/_video.html', {
+				@@include('./03-features/video/_video.html', {
 					"embed": "src='https://www.youtube.com/embed/FYwO1fiYoa8?rel=0&amp;controls=0&amp;showinfo=0?ecver=1' frameborder='0' allowfullscreen"
 				})
 
-				<pre><code class="gs-code language-html">@@include('./03-features/videos/_video.html', {
+				<pre><code class="gs-code language-html">@@include('./03-features/video/_video.html', {
 					"embed": "src='https://www.youtube.com/embed/FYwO1fiYoa8?rel=0&amp;controls=0&amp;showinfo=0?ecver=1' frameborder='0' allowfullscreen"
-				})
-				</code></pre>
-			</section>
-
-			<section class="gs-present">
-				<header>
-					<label class="gs-present__label">Vimeo</label>
-					<p>A default video embed from Vimeo</p>
-				</header>
-
-				@@include('./03-features/videos/_video.html', {
-					"embed": "src='https://player.vimeo.com/video/207771491' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen"
-				})
-
-				<pre><code class="gs-code language-html">@@include('./03-features/videos/_video.html', {
-					"embed": "src='https://player.vimeo.com/video/207771491' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen"
 				})
 				</code></pre>
 			</section>
@@ -66,7 +48,7 @@
 
 			<div class="gs-section__content">
 				<ul class="list--blank list--align">
-					@@loop("./_changelog-item.html", "./03-features/videos/_changelog.json")
+					@@loop("./_changelog-item.html", "./03-features/video/_changelog.json")
 				</ul>
 			</div>
 		</section>

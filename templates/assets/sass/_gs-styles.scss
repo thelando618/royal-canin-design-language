@@ -295,10 +295,43 @@ $gs-light-grey: #f3f3f3;
 		background-color: #FFFFFF;
 		// @todo remove overflow and make a clearfix helper class
 		// overflow: hidden;
+		
+		&.gs-stage__welcome{
+			margin-bottom: 3em;
+			margin-top: 1em;
+			
+			h2{
+				margin-top: 0;
+				margin-bottom: 1em;
+			}
+			
+			.video-wrapper{
+				border: 1px solid #EAEAEA;
+			}
+		}
+		
+		@media ( min-width: 1024px ) {
+			
+			padding: 2em;
+			
+		}
+	
+		@media ( min-width: 1280px ) {
+			
+			&.gs-stage__welcome{
+				padding-right: 35%;
+			
+				h4{
+					margin-top: 0;
+					margin-bottom: 1em;
+					font-size: 1.75em;
+				}
+			}
+		}
 	}
 
 	.gs-stage__content__header {
-		margin-bottom: 3em;
+		margin-bottom: 1em;
 	}
 
 	.gs-stage__content__head-tag {
@@ -310,8 +343,7 @@ $gs-light-grey: #f3f3f3;
 	}
 
 	.gs-present {
-		margin-bottom: 3em;
-
+		
 		.gs-present__label {
 			font-weight: 500;
 		}
@@ -336,7 +368,7 @@ $gs-light-grey: #f3f3f3;
 		// }
 
 		.gs-stage__content, .gs-stage__meta {
-			padding: 2em;
+			padding: 3em;
 		}
 
 		.gs-stage__content {
@@ -481,10 +513,11 @@ pre.language-js {
 */
 .gs-svg-list {
 	svg {
-		margin: 1em;
-		width: 4em;
-		height: 4em;
+		padding: 0.5em;
+		width: 2.5em;
+		height: 2.5em;
 		fill: #232323;
+		background: $gs-light-grey;
 	}
 }
 

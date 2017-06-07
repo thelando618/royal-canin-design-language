@@ -11,15 +11,8 @@
 		<div class="gs-stage__content">
 
 			<header class="gs-stage__content__header">
-				<h1 class="gs-stage__content__head-tag">Card - Details</h1>
+				<h1 class="gs-stage__content__head-tag">Cards</h1>
 				<p>Usage and implementation for Cards within Web Design Language.</p>
-
-				<blockquote class="gs-stage__content__intro">
-					<h2 class="rc-head rc-head--subheadline">Introduction</h2>
-					<p>Card modifier classes can be used to change the appearance of default Cards.</p>
-					<p>Some modifiers relate to breakpoints.</p>
-					<p>This page demonstrates how the <code class="language-html">card--details</code> class affects the appearance of a Card.</p>
-				</blockquote>
 			</header>
 
 			<h2 class="gs-stage__content__head-tag rc-head--subheadline">Examples</h2>
@@ -27,16 +20,22 @@
 
 			<section class="gs-present">
 				<header>
-					<label class="gs-present__label">Card - Details</label>
+					<label class="gs-present__label">Cards - 3 per row</label>
 				</header>
 
-				@@include('./03-features/cards/_card-details.html', {
-					"class": "card--details"
-				})
+				@@include('./03-features/cards/_cards-3.html')
 
-				<pre><code class="gs-code language-html">@@include('./03-features/cards/_card-details.html', {
-					"class": "card--details"
-				})</code></pre>
+				<pre><code class="gs-code language-html">@@include('./03-features/cards/_cards-3.html')</code></pre>
+			</section>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Cards - 4 per row</label>
+				</header>
+
+				@@include('./03-features/cards/_cards-4.html')
+
+				<pre><code class="gs-code language-html">@@include('./03-features/cards/_cards-4.html')</code></pre>
 			</section>
 
 		</div>
