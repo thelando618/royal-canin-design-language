@@ -624,9 +624,11 @@ pre.language-js {
 }
 
 .half {
-  width: 49%;
-  vertical-align: top;
-  display: inline-block;
+  @media ( min-width: 480px ) {
+    width: 49%;
+    vertical-align: top;
+    display: inline-block;
+  }
 }
 
 .gs-logo-usage > .gs-present__label {
@@ -646,31 +648,8 @@ pre.language-js {
 
 .gs-logo-example {
   @include clearfix();
-  margin: 4rem 0;
-  padding: 0 4rem;
   position: relative;
-
-  &::before {
-    content: '';
-    @include red-accent(right, 2px);
-    display: block;
-    position: absolute;
-    left: 20%;
-    margin-left: 1rem;
-    top: 0;
-    bottom: 0;
-  }
-
-  & > figure,
-  & > label,
-  & > p {
-    float: left;
-  }
-
-  & > figure {
-    width: 30%;
-    padding-right: 3rem;
-  }
+  margin: 2rem 3rem;
 
   & > figure {
     max-width: 200px;
@@ -680,7 +659,75 @@ pre.language-js {
   & > p {
     clear: none;
     width: 70%;
-    margin: 0 3rem;
+    padding: 1rem 3rem;
+    position: relative;
+    margin: 0;
+  }
+}
+
+@media ( max-width: 480px ) {
+  .gs-logo-example {
+    text-align: center;
+
+    & > figure {
+      display: inline-block;
+      float: none;
+      width: 200px;
+      padding: 0;
+      margin: 0 auto 1rem;
+    }
+
+    & > label,
+    & > p {
+      padding: 0;
+      margin: 0;
+      text-align: left;
+      width: 100%;
+    }
+  }
+}
+
+@media ( min-width: 480px ) {
+  .gs-logo-example {
+    text-align: center;
+
+    & > label::before,
+    & > p::before {
+      content: '';
+      @include red-accent(right, 2px);
+      display: block;
+      position: absolute;
+      left: 0;
+      margin-left: 1rem;
+      top: 0;
+      bottom: 0;
+    }
+
+    & > figure {
+      width: 30%;
+    }
+
+    & > figure,
+    & > label,
+    & > p {
+      text-align: left;
+      float: left;
+    }
+  }
+}
+
+@media ( min-width: 500px ) {
+  .gs-logo-example {
+    margin: 4rem 0;
+    padding: 0 4rem;
+
+    & > figure {
+      max-width: 200px;
+    }
+
+    & > label {
+      padding-right: 0;
+    }
   }
 }
 
