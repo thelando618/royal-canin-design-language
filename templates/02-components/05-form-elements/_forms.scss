@@ -14,7 +14,7 @@ input:required {
 	padding: .75em;
 	border: 1px solid transparent;
 	margin-bottom: 1em;
-	box-shadow: 0 2px 4px rgba( 0, 0, 0, .1 );
+	//box-shadow: 0 2px 4px rgba( 0, 0, 0, .1 );
 
 	&:focus {
 		outline: none;
@@ -49,6 +49,7 @@ input:required {
 textarea {
 	resize: vertical;
 	height: 200px;
+	background: $rc-vlight-grey;
 }
 
 input[type="checkbox"],
@@ -161,10 +162,13 @@ input[data-toggle^="datepicker"] {
 	position: relative;
 	margin-top: 1em;
 	margin-bottom: 1em;
+	max-width: 300px;
 
 	input {
 		margin-bottom: 0;
 		padding: .75em;
+		box-shadow: none;
+		background: $rc-vlight-grey;
 	}
 
 	label, .rc-label {
@@ -260,6 +264,11 @@ input[data-toggle^="datepicker"] {
 	}
 }
 
+.rc-input--btn{
+	display: block;
+	max-width: 300px;
+}
+
 
 .rc-input--password__toggle {
 	position: absolute;
@@ -278,6 +287,16 @@ input[data-toggle^="datepicker"] {
 
 .rc-input--password__visible {
 }
+
+.gs-present {
+	&.gs-form-field{
+	margin-bottom: 1em;
+	
+	@media ( min-width: 1024px ) {
+		
+		margin-bottom: 2em;
+	}
+}}
 
 
 
