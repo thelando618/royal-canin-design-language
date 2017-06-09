@@ -273,6 +273,8 @@ $gs-light-grey: #f3f3f3;
 	Note: The positioning rules may have to stay here
 */
 
+
+
 .gs-stage {
 	overflow: hidden;
 
@@ -408,6 +410,13 @@ $gs-light-grey: #f3f3f3;
 			width: 90%;
 			margin: 5% auto;
 		}
+	}
+}
+
+@media ( min-width: 1024px ) {		
+	
+	.gs-section__img{
+		margin: 3em auto;
 	}
 }
 
@@ -609,6 +618,8 @@ pre.language-js {
 	.gs-section__head {
 		margin: 0;
 	}
+	
+	
 
 	.gs-section__logo {
 		flex: 0 0 60px;
@@ -661,7 +672,7 @@ pre.language-js {
 				height: 2em;
 			}
 		}
-
+		
 		.no-flexbox & {
 			header {
 				svg {
