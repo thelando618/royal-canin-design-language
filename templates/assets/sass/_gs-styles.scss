@@ -212,7 +212,7 @@ $gs-light-grey: #f3f3f3;
   position: relative;
   text-decoration: none;
   color: inherit;
-  padding: 1em 0 1em 1.2em;
+  padding: 1.2em 0 1.2em 1.2em;
   transition: color .1s ease-in;
   text-transform: capitalize;
 
@@ -411,6 +411,66 @@ $gs-light-grey: #f3f3f3;
 	}
 }
 
+
+/* 
+	Info: Gulp Styleguide Code Labels
+	Dest: n/a 
+	Note: These rules will likely have to remain in a Gulp Styleguide Sass partial
+*/
+
+
+.gs-splash{
+	
+	.gs-stage__content__head-tag{
+		
+		@media ( min-width: 1280px ) {
+			margin-bottom: 1em;
+		}
+	}
+}
+
+.gs-splash_card{
+	border: 1px solid #EAEAEA;
+	position: relative;
+	
+	a{
+		text-decoration: none;
+	}
+	
+	.gs-splash__card__header{
+		background: #F7F7F7;
+		
+		
+		img{
+			margin: 0 auto;
+		}
+	}
+	
+	.gs-splash__card__body{
+		height: 150px;
+		padding: 1em;
+		
+		h3{
+			margin: 0;
+			font-size: 1.35em;
+		}
+		
+		svg{
+			fill: #e2001a;
+			width: 40px;
+			position: absolute;
+			bottom: 1.5em;
+			right: 1.5em;
+		}
+		
+		@media ( min-width: 1280px ) {
+			
+			h3{
+				font-size: 1.75em;
+			}	
+		}
+	}
+}
 
 
 
