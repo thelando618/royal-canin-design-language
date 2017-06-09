@@ -285,8 +285,23 @@ $gs-light-grey: #f3f3f3;
 	.gs-stage__inner {
 		background-color: #EAEAEA;
 		width: 95%;
-        max-width: 1240px;
+		max-width: 1240px;
 		margin: 2.5% auto;
+		
+		&.gs-coming_soon{
+			text-align: center;
+			
+			.gs-stage__content{
+				
+				h1{
+					margin-bottom: 0;
+				}
+				
+				p{
+					margin-top: 0;
+				}
+			}
+		}
 	}
 
 	.gs-stage__content, .gs-stage__meta {
