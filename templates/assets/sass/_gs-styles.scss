@@ -320,12 +320,10 @@ $gs-light-grey: #f3f3f3;
 	
 		@media ( min-width: 1280px ) {
 			
-			&.gs-stage__welcome{
-				padding-right: 35%;
+			&.gs-stage__declaration{
 			
 				h4{
-					margin-top: 0;
-					margin-bottom: 1em;
+					margin: 2em 35% 2em 0;
 					font-size: 1.75em;
 				}
 			}
@@ -416,7 +414,7 @@ $gs-light-grey: #f3f3f3;
 @media ( min-width: 1024px ) {		
 	
 	.gs-section__img{
-		margin: 3em auto;
+		margin: 3em 0;
 	}
 }
 
@@ -448,7 +446,31 @@ $gs-light-grey: #f3f3f3;
 	
 	.gs-splash__card__header{
 		background: #F7F7F7;
+		position: relative;
 		
+		.icon-play{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 45px;
+			height: 45px;
+			background: $rc-functional;
+			display: block;
+			padding: 0.5em;
+			text-align: center;
+			line-height: 36px;
+			cursor: pointer;
+			
+			svg{
+				fill: $rc-white;
+				width: 25px;
+				height: 22px;
+			}
+			
+			&:hover{
+				background: darken($rc-functional, 5%);
+			}
+		}
 		
 		img{
 			margin: 0 auto;
