@@ -192,8 +192,8 @@ $gs-light-grey: #f3f3f3;
 
 	  .gs-logo {
 	  	img {
-	  		max-width: 140px;
-	  		margin: 1em auto;
+	  		max-width: 120px;
+	  		margin: 0.7em auto;
 	  	}
 	  }
 
@@ -212,7 +212,7 @@ $gs-light-grey: #f3f3f3;
   position: relative;
   text-decoration: none;
   color: inherit;
-  padding: 1.75em 0 1.75em 1.75em;
+  padding: 1.2em 0 1.2em 1.2em;
   transition: color .1s ease-in;
   text-transform: capitalize;
 
@@ -273,6 +273,8 @@ $gs-light-grey: #f3f3f3;
 	Note: The positioning rules may have to stay here
 */
 
+
+
 .gs-stage {
 	overflow: hidden;
 
@@ -283,8 +285,23 @@ $gs-light-grey: #f3f3f3;
 	.gs-stage__inner {
 		background-color: #EAEAEA;
 		width: 95%;
-        max-width: 1240px;
+		max-width: 1240px;
 		margin: 2.5% auto;
+		
+		&.gs-coming_soon{
+			text-align: center;
+			
+			.gs-stage__content{
+				
+				h1{
+					margin-bottom: 0;
+				}
+				
+				p{
+					margin-top: 0;
+				}
+			}
+		}
 	}
 
 	.gs-stage__content, .gs-stage__meta {
@@ -295,10 +312,41 @@ $gs-light-grey: #f3f3f3;
 		background-color: #FFFFFF;
 		// @todo remove overflow and make a clearfix helper class
 		// overflow: hidden;
+		
+		&.gs-stage__welcome{
+			margin-bottom: 3em;
+			margin-top: 1em;
+			
+			h2{
+				margin-top: 0;
+				margin-bottom: 1em;
+			}
+			
+			.video-wrapper{
+				border: 1px solid #EAEAEA;
+			}
+		}
+		
+		@media ( min-width: 1024px ) {
+			
+			padding: 2em;
+			
+		}
+	
+		@media ( min-width: 1280px ) {
+			
+			&.gs-stage__declaration{
+			
+				h4{
+					margin: 2em 35% 2em 0;
+					font-size: 1.75em;
+				}
+			}
+		}
 	}
 
 	.gs-stage__content__header {
-		margin-bottom: 3em;
+		margin-bottom: 1em;
 	}
 
 	.gs-stage__content__head-tag {
@@ -310,8 +358,7 @@ $gs-light-grey: #f3f3f3;
 	}
 
 	.gs-present {
-		margin-bottom: 3em;
-
+		
 		.gs-present__label {
 			font-weight: 500;
 		}
@@ -336,7 +383,7 @@ $gs-light-grey: #f3f3f3;
 		// }
 
 		.gs-stage__content, .gs-stage__meta {
-			padding: 2em;
+			padding: 3em;
 		}
 
 		.gs-stage__content {
@@ -379,6 +426,97 @@ $gs-light-grey: #f3f3f3;
 	}
 }
 
+@media ( min-width: 1024px ) {		
+	
+	.gs-section__img{
+		margin: 3em 0;
+	}
+}
+
+
+/* 
+	Info: Gulp Styleguide Code Labels
+	Dest: n/a 
+	Note: These rules will likely have to remain in a Gulp Styleguide Sass partial
+*/
+
+
+.gs-splash{
+	
+	.gs-stage__content__head-tag{
+		
+		@media ( min-width: 1280px ) {
+			margin-bottom: 1em;
+		}
+	}
+}
+
+.gs-splash_card{
+	border: 1px solid #EAEAEA;
+	position: relative;
+	
+	a{
+		text-decoration: none;
+	}
+	
+	.gs-splash__card__header{
+		background: #F7F7F7;
+		position: relative;
+		
+		.icon-play{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 45px;
+			height: 45px;
+			background: $rc-functional;
+			display: block;
+			padding: 0.5em;
+			text-align: center;
+			line-height: 36px;
+			cursor: pointer;
+			
+			svg{
+				fill: $rc-white;
+				width: 25px;
+				height: 22px;
+			}
+			
+			&:hover{
+				background: darken($rc-functional, 5%);
+			}
+		}
+		
+		img{
+			margin: 0 auto;
+		}
+	}
+	
+	.gs-splash__card__body{
+		height: 150px;
+		padding: 1em;
+		
+		h3{
+			margin: 0;
+			font-size: 1.35em;
+		}
+		
+		svg{
+			fill: #e2001a;
+			width: 40px;
+			position: absolute;
+			bottom: 1.5em;
+			right: 1.5em;
+		}
+		
+		@media ( min-width: 1280px ) {
+			
+			h3{
+				font-size: 1.75em;
+			}	
+		}
+	}
+}
 
 
 
@@ -481,10 +619,13 @@ pre.language-js {
 */
 .gs-svg-list {
 	svg {
-		margin: 1em;
-		width: 4em;
-		height: 4em;
+		padding: 0.75em;
+		width: 3em;
+		height: 3em;
 		fill: #232323;
+		background: $gs-light-grey;
+		margin-bottom: 0.5em;
+		margin-right: 0.5em;
 	}
 }
 
@@ -514,6 +655,8 @@ pre.language-js {
 	.gs-section__head {
 		margin: 0;
 	}
+	
+	
 
 	.gs-section__logo {
 		flex: 0 0 60px;
@@ -566,7 +709,7 @@ pre.language-js {
 				height: 2em;
 			}
 		}
-
+		
 		.no-flexbox & {
 			header {
 				svg {
@@ -632,7 +775,7 @@ pre.language-js {
 }
 
 .gs-logo-usage > .gs-present__label {
-  margin-top: 3rem;
+  margin-top: 0;
   display: block;
   width: 100%;
 }
@@ -649,19 +792,29 @@ pre.language-js {
 .gs-logo-example {
   @include clearfix();
   position: relative;
-  margin: 2rem 3rem;
+  padding: 2rem 3rem;
+  background: white;
 
   & > figure {
     max-width: 200px;
+    text-align: center;
   }
 
   & > label,
   & > p {
     clear: none;
     width: 70%;
-    padding: 1rem 3rem;
+    padding: 0 3em;
     position: relative;
     margin: 0;
+  }
+  
+  &.gs-logo-crown figure{
+	  
+	  svg{
+	   max-width: 50px;
+	   margin: auto;
+	  }
   }
 }
 
@@ -718,11 +871,16 @@ pre.language-js {
 
 @media ( min-width: 500px ) {
   .gs-logo-example {
-    margin: 4rem 0;
-    padding: 0 4rem;
+    padding: 0 4rem 4rem 4rem;
+    
 
     & > figure {
-      max-width: 200px;
+      max-width: 240px;
+      text-align: center;
+      
+      svg{
+	      max-width: 170px;
+      }
     }
 
     & > label {
