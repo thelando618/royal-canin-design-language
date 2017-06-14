@@ -106,7 +106,7 @@ function nav_accordion( accordion, trigger ) {
 				} else {
 
 					ts[i].classList.add( 'triggered' );
-					ts[i].parentNode.querySelector('ul').classList.add( 'visible' );
+					//ts[i].parentNode.querySelector('ul').classList.add( 'visible' );
 				}
 
 			} );

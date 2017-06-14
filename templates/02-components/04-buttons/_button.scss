@@ -3,17 +3,18 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .button {
-	display: inline-block;
+	display: block;
 	text-decoration: none;
 	cursor: pointer;
 	background-color: $rc-red;
 	color: $rc-white;
 	font-weight: 500;
-	font-size: .875em;
-	padding: .625rem 1.5rem;
+	font-size: .675em;
+	padding: .3rem 1rem;
 	line-height: 1.5;
 	border: 2px solid transparent;
 	border-radius: 50px;
+	margin-bottom: 1em;
 	transition: background-color 0.2s ease-in;
 
 	&:after {
@@ -84,6 +85,21 @@ input[type="submit"],
 
 	@media( min-width: 640px ) {
 		border-radius: 3px;
+	}
+	
+	&.button--small{
+		font-size: .875em;
+		padding: .425rem 1.5rem;
+	}
+	
+	&.button--medium{
+		font-size: 1em;
+		padding: .625rem 2.5rem;
+	}
+	
+	&.button--large{
+		font-size: 1.2em;
+		padding: .825rem 3.5rem;
 	}
 }
 
@@ -272,6 +288,31 @@ input[type="submit"],
 
 	.button--full--width--mobile{
 		width: 100%;
+	}
+}
+
+.button--panel{
+	background: $rc-white;
+	border-radius: 0;
+	color: $rc-red;
+	padding: 0;
+	width: 100%;
+	font-size: 2em;
+	padding-top: 1em;
+	text-align: center;
+	max-width: 375px;
+	border: 1px solid rgba( 0, 0, 0, .15 );
+	
+	img{
+		margin: 0 auto;
+	}
+	
+	&:hover,
+	&:focus,
+	&:active{
+		color: $rc-red;
+		background: $rc-white;
+		text-decoration: underline;
 	}
 }
 
