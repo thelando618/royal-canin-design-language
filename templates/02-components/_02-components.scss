@@ -1,5 +1,3 @@
-// @import 'colours/colours';
-
 @import '02-colours/colours';
 
 @import '03-typography/fonts';
@@ -20,27 +18,20 @@
 
 @import '09-interactive/interactive';
 
-@import '10-tabs/tabs';
+@import '10-sliders/sliders';
 
-@import '11-sliders/sliders';
+@import '11-tooltips/tooltips';
 
-@import '12-tooltips/tooltips';
+@import '12-social/social';
 
-@import '13-alerts/alerts';
+@import '13-miscellaneous/01-alerts/alerts';
 
-@import '14-lists/lists';
+@import '13-miscellaneous/02-breadcrumbs/breadcrumbs';
 
-@import '15-tables/table';
+@import '13-miscellaneous/03-lists/lists';
 
+@import '13-miscellaneous/04-tables/table';
 
+@import '13-miscellaneous/05-maps/maps';
 
-
-
-
-
-
-
-
-
-
-
+@import '13-miscellaneous/06-video/videos';

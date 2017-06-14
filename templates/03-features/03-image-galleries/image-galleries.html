@@ -1,0 +1,73 @@
+@@include('./_site-header.html', {
+    "class": {
+        "section": "features"
+    }
+})
+
+<div class="gs-stage">
+
+	<div class="gs-stage__inner">
+
+		<div class="gs-stage__content">
+
+			<header class="gs-stage__content__header">
+				<h1 class="gs-stage__content__head-tag">Image Galleries</h1>
+				<p>Usage and implementation for Image Galleries within Web Design Language.</p>
+
+				<blockquote class="gs-stage__content__intro">
+					<h2 class="rc-head rc-head--subheadline">Introduction</h2>
+					<p>An image gallery can be used to display a selection of related images that the user can scroll through. Image thumbnails are optional.</p>
+				</blockquote>
+			</header>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Image Gallery</label>
+					<p>The code presented below is a demonstration of the expected markup.</p>
+				</header>
+
+				@@include('./03-features/03-image-galleries/_image-gallery.html')
+
+				<br>
+
+				<pre><code class="gs-code language-html">
+					@@include('./03-features/03-image-galleries/_image-gallery.html')
+				</code></pre>
+			</section>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Javascript</label>
+					<p>This is the Javascript file used to generate the carousel demonstrated above.</p>
+					<p>This file should not need to be changed. It should work with many carousels so long as the same structure is used.</p>
+					<p><a href="http://kenwheeler.github.io/slick/">Slick carousel documentation can be found here.</a></p>
+				</header>
+
+				<pre><code class="gs-code language-js">
+					@@include('./03-features/03-image-galleries/image-galleries.js')
+				</code></pre>
+			</section>
+
+		</div>
+
+		<section class="gs-section gs-changelog">
+			<header>
+				<h1 class="rc-head rc-head--subheadline gs-section__head">Changelog</h1>
+			</header>
+
+			<div class="gs-section__content">
+				<ul class="list--blank list--align">
+					@@loop("./_changelog-item.html", "./03-features/03-image-galleries/_changelog.json")
+				</ul>
+			</div>
+		</section>
+
+		@@include('./_issues.html')
+
+		@@include('./_feedback.html')
+
+	</div>
+
+</div>
+
+@@include('./_site-footer.html')

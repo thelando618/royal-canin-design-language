@@ -264,6 +264,17 @@ input[type="submit"],
 	}
 }
 
+.button--full--width{
+	width: 100%;
+}
+
+@media ( max-width: 640px ) {
+
+	.button--full--width--mobile{
+		width: 100%;
+	}
+}
+
 // @todo move this a keyframes file.
 @keyframes steady-spin {
 	0% {

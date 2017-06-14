@@ -1,0 +1,57 @@
+@@include('./_site-header.html')
+
+<div class="gs-stage">
+
+	<div class="gs-stage__inner">
+
+		<div class="gs-stage__content">
+
+			<header class="gs-stage__content__header">
+				<h1 class="gs-stage__content__head-tag">Unordered List</h1>
+				<p>Usage and implementation for Lists within Web Design Language.</p>
+
+				<blockquote class="gs-stage__content__intro">
+					<h2 class="rc-head rc-head--subheadline">Introduction</h2>
+					<p>Lists can be implemented with an icon set pre defined using SVG icons. Lists can contain external links built inline. </p>
+				</blockquote>
+			</header>
+
+			<h2 class="gs-stage__content__head-tag rc-head--subheadline">Examples</h2>
+
+			<section class="gs-present">
+				<header>
+					<label class="gs-present__label">Unordered List</label>
+				</header>
+
+				<ul>
+					@@loop("./02-components/13-miscellaneous/03-lists/_list-item-simple.html", "./02-components/13-miscellaneous/03-lists/_list-items-simple.json")
+				</ul>
+
+				<pre><code class="gs-code language-html">
+					<ul>@@loop("./02-components/13-miscellaneous/03-lists/_list-item-simple.html", "./02-components/13-miscellaneous/03-lists/_list-items-simple.json")</ul>
+				</code></pre>
+			</section>
+
+		</div>
+
+		<section class="gs-section gs-changelog">
+			<header>
+				<h1 class="rc-head rc-head--subheadline gs-section__head">Changelog</h1>
+			</header>
+
+			<div class="gs-section__content">
+				<ul class="list--blank list--align">
+					@@loop("./_changelog-item.html", "./02-components/13-miscellaneous/03-lists/_changelog.json")
+				</ul>
+			</div>
+		</section>
+
+		@@include('./_issues.html')
+
+		@@include('./_feedback.html')
+		
+	</div>
+
+</div>
+
+@@include('./_site-footer.html')

@@ -632,6 +632,32 @@ pre.language-js {
 
 
 /*
+	Info: Gulp Styleguide Typography Section
+	Dest: n/a
+	Note: These rules will likely have to remain in a Gulp Styleguide Sass partial
+*/
+.gs-type_block{
+	margin-bottom: 1em;
+	
+	h1, h2, h3, h4, h5, h6, p{
+		margin: 0;
+		line-height: 1;
+	}
+	
+	@media ( min-width: 480px ) {
+
+		margin-bottom: 2em;
+
+	}
+	
+	@media ( min-width: 1024px ) {
+		
+		margin-top: 1rem;	
+	}
+}
+
+
+/*
 	Info: Gulp Styleguide Misc Section
 	Dest: n/a
 	Note: These rules will likely have to remain in a Gulp Styleguide Sass partial
