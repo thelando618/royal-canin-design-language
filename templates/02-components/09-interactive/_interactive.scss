@@ -37,7 +37,6 @@
 	background-color: $rc-red;
 	overflow: hidden;
 	border: 1px solid rgba( 0, 0, 0, .15 );
-	margin-right: 1em;
 		
 	svg {
 		position: relative;
@@ -54,6 +53,13 @@
 
 	&:active {
 		background-color: darken( $rc-red, 5% );
+	}
+	
+	&.interactive-grey{
+		background-color: $rc-red;
+		svg{
+			fill: $rc-red;	
+		}
 	}
 }
 

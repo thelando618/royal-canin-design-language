@@ -74,13 +74,13 @@ $hero-bp-large: 1000px;
 		}
 
 		.button {
-			font-size: 1.125em;
+			//font-size: 1.125em;
 		}
 	}
 
 	@media( min-width: $hero-bp-large ) {
 		.button {
-			font-size: 1.375em;
+			font-size: 1.125em;
 			padding: .75rem 2rem;
 		}
 	}
@@ -230,7 +230,7 @@ $hero-bp-large: 1000px;
 
 .hero__layout--3 {
 	.hero__section--text {
-		max-width: 600px;
+		//max-width: 600px;
 		margin: 0 auto;
 	}
 }
@@ -291,7 +291,8 @@ $hero-bp-large: 1000px;
   float: left;
   height: 100%;
   min-height: 1px;
-  
+  padding: 1em;
+    
   [dir="rtl"] & {
     float: right;
   }
@@ -323,7 +324,11 @@ $hero-bp-large: 1000px;
     height: auto;
     border: 1px solid transparent;
   }
-}
+  
+  @media ( min-width: 480px ) {
+		padding: 2em;  
+	}
+}	
 
 /* Slick - Custom */
 .rc-carousel {
@@ -332,6 +337,13 @@ $hero-bp-large: 1000px;
 	  top: 50%;
 	  transform: translateY( -50% );
 	  z-index: 20;
+	  padding: 0.5em;
+	  background: $rc-light-grey;
+	  border: none;
+	  
+	  svg{
+		  fill: $rc-red;
+	  }
 
 	  &.interactive--navigation--prev {
 	    left: 0;
@@ -344,7 +356,9 @@ $hero-bp-large: 1000px;
 	.rc-carousel__dots {
 	  text-align: center;
 	  margin: 0;
-	  padding: 1em 0;
+	  padding: 0;
+	  position: relative;
+	  bottom: 20px;
 
 	  li {
 	    display: inline-block;

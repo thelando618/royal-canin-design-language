@@ -448,6 +448,13 @@ $gs-light-grey: #f3f3f3;
 	}
 }
 
+.gs-buttons{
+	
+	button{
+		display: block;
+	}
+}
+
 
 /* 
 	Info: Gulp Styleguide Code Labels
@@ -631,6 +638,22 @@ pre.language-js {
 		}
 	}
 }
+
+
+/* 
+	Info: Gulp Styleguide Carousels
+	Dest: n/a 
+	Note: 
+*/
+.gs-carousel {
+	
+	.interactive--navigation, 
+	.interactive--navigation--round, 
+	.interactive--response{
+		margin-right: 1em;
+	}
+}
+
 
 
 
