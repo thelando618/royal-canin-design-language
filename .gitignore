@@ -12,3 +12,4 @@ node_modules/
 # Styleguide
 # On gh-pages branch, acknowledge public directiory
 # public
+dist
