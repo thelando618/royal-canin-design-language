@@ -24,7 +24,7 @@
 // Tasks
   const tasks = {
     'dev': {
-      subtasks: [],
+      subtasks: ['combineMq'],
       pretasks: ['sass'],
       watch: {
         active: false,

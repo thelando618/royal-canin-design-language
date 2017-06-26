@@ -11,6 +11,7 @@ need.sassGlob = require('gulp-sass-glob');
 need.reporter = require('postcss-reporter');
 need.syntax_scss = require('postcss-scss');
 need.stylelint   = require('stylelint');
+need.combineMq = require('gulp-combine-mq');
 
 need.postcss = require('gulp-postcss');
 
