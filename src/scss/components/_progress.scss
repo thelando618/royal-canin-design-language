@@ -152,7 +152,7 @@
     }
   }
 
-  @media ( min-width: 480px ) {
+  @media ( get-breakpoint('x-small') ) {
     li {
       button {
         width: 2.5rem;
@@ -170,7 +170,7 @@
     }
   }
 
-  @media ( min-width: 640px ) {
+  @media (get-breakpoint('small')) {
     li {
       button {
         width: 3.5rem;

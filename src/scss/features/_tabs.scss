@@ -91,7 +91,7 @@
 		position: relative;
 	}
 	
-	@media ( min-width: 640px ) {
+	@media (get-breakpoint('small')) {
 		
 		.rc-tabs__content__single{
 			padding: 2em;	

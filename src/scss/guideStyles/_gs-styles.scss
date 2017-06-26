@@ -189,7 +189,7 @@ $gs-light-grey: #f3f3f3;
 		}
 	}
 
-	@media ( min-width: 1024px ) {
+	@media ( get-breakpoint('x-large') ) {
 	  position: fixed;
 	  top: 0;
 	  left: 0;
@@ -338,7 +338,7 @@ $gs-light-grey: #f3f3f3;
 			}
 		}
 		
-		@media ( min-width: 1024px ) {
+		@media ( get-breakpoint('x-large') ) {
 			
 			padding: 2em;
 			
@@ -384,7 +384,7 @@ $gs-light-grey: #f3f3f3;
 	}
 
 
-	@media ( min-width: 1024px ) {
+	@media ( get-breakpoint('x-large') ) {
 		margin-left: 240px;
 		
 		.gs-stage__content__intro {
@@ -441,7 +441,7 @@ $gs-light-grey: #f3f3f3;
 	}
 }
 
-@media ( min-width: 1024px ) {		
+@media ( get-breakpoint('x-large') ) {
 	
 	.gs-section__img{
 		margin: 3em 0;
@@ -531,7 +531,7 @@ $gs-light-grey: #f3f3f3;
 			right: 1.5em;
 		}
 		
-		@media ( min-width: 640px ) {
+		@media (get-breakpoint('small')) {
 			
 			h3{
 				font-size: 1.35em;
@@ -689,13 +689,13 @@ pre.language-js {
 		line-height: 1;
 	}
 	
-	@media ( min-width: 480px ) {
+	@media ( get-breakpoint('x-small') ) {
 
 		margin-bottom: 2em;
 
 	}
 	
-	@media ( min-width: 1024px ) {
+	@media ( get-breakpoint('x-large') ) {
 		
 		margin-top: 1rem;	
 	}
@@ -754,7 +754,7 @@ pre.language-js {
 		}
 	}
 
-	@media ( min-width: 480px ) {
+	@media ( get-breakpoint('x-small') ) {
 		.gs-section__logo {
 			flex: 0 0 80px;
 
@@ -838,7 +838,7 @@ pre.language-js {
 }
 
 .half {
-  @media ( min-width: 480px ) {
+  @media ( get-breakpoint('x-small') ) {
     width: 49%;
     vertical-align: top;
     display: inline-block;
@@ -911,7 +911,7 @@ pre.language-js {
   }
 }
 
-@media ( min-width: 480px ) {
+@media ( get-breakpoint('x-small') ) {
   .gs-logo-example {
     text-align: center;
 

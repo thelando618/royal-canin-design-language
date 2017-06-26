@@ -83,7 +83,7 @@ input[type="submit"],
 		}
 	}
 
-	@media( min-width: 640px ) {
+	@media(get-breakpoint('small')) {
 		border-radius: 3px;
 	}
 	

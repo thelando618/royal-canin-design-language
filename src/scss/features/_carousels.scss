@@ -325,7 +325,7 @@ $hero-bp-large: 1000px;
     border: 1px solid transparent;
   }
   
-  @media ( min-width: 480px ) {
+  @media ( get-breakpoint('x-small') ) {
 		padding: 2em;  
 	}
 }	
@@ -412,7 +412,7 @@ $hero-bp-large: 1000px;
 		}
 	}
 
-	@media( min-width: 640px ) {
+	@media(get-breakpoint('small')) {
 		&.rc-carousel--gallery__thumbs {
 			.slick-slide {
 				padding: .5rem;

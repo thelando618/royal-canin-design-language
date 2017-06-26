@@ -1,63 +1,32 @@
-//@each $familyname, $filename, $weight, $style in $typefaces {
-//
-//  @font-face {
-//    font-family: $familyname;
-//    src:
-//            url('#{$typeface-location}#{$filename}.eot');
-//    src:
-//            url('#{$typeface-location}#{$filename}.eot?#iefix') format('embedded-opentype'),
-//            url('#{$typeface-location}#{$filename}.woff2') format('woff2'),
-//            url('#{$typeface-location}#{$filename}.woff') format('woff'),
-//            url('#{$typeface-location}#{$familyname}.ttf') format('truetype');
-//    font-style: $style;
-//    font-weight: $weight;
-//  }
-//
-//  %#{$familyname} {
-//    font-family: $familyname;
-//    font-style: $style;
-//    font-weight: $weight;
-//  }
-//
-//    .#{$familyname} {
-//      @extend %#{$familyname};
-//  }
-//}
+@each $familyname, $filename, $weight, $style in $typefaces {
 
+  @font-face {
+    font-family: $familyname;
+    src:
+            url('#{$typeface-location}#{$filename}.eot');
+    src:
+            url('#{$typeface-location}#{$filename}.eot?#iefix') format('embedded-opentype'),
+            url('#{$typeface-location}#{$filename}.woff2') format('woff2'),
+            url('#{$typeface-location}#{$filename}.woff') format('woff'),
+            url('#{$typeface-location}#{$familyname}.ttf') format('truetype');
+    font-style: $style;
+    font-weight: $weight;
+  }
 
+  // Make the class/placeholder string valid by removing spaces and converting to lowercase.
+  $className: str-replace(to_lower_case($familyname), ' ', '-');
 
-// DIN Pro
-@font-face {
-  font-family: 'DIN Pro';
-  src: url('../fonts/din_pro.woff2') format('woff2'),
-       url('../fonts/din_pro.woff') format('woff'),
-       url('../fonts/din_pro.ttf') format('truetype');
-  font-style: normal;
-  font-weight: 300;
+  %#{$className}--#{$weight} {
+    font-family: $familyname;
+    font-style: $style;
+    font-weight: $weight;
+  }
+
+    .#{$className}--#{$weight} {
+      @extend %#{$className}--#{$weight};
+  }
 }
 
-// DIN Pro Medium
-@font-face {
-  font-family: 'DIN Pro';
-  src: url('../fonts/din_pro_medium.woff2') format('woff2'),
-       url('../fonts/din_pro_medium.woff') format('woff'),
-       url('../fonts/din_pro_medium.ttf') format('truetype');
-  font-style: normal;
-  font-weight: 500;
-}
-
-// DIN Pro Bold
-@font-face {
-  font-family: 'DIN Pro';
-  src: url('../fonts/din_pro_bold.woff2') format('woff2'),
-       url('../fonts/din_pro_bold.woff') format('woff'),
-       url('../fonts/din_pro_bold.ttf') format('truetype');
-  font-style: normal;
-  font-weight: 700;
-}
-
-// Font stack variable
-$font-din: "DIN Pro", 'Avenir', Helvetica, Arial, sans-serif;
 
 
 .font--regular {

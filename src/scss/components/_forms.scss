@@ -291,7 +291,7 @@ input[data-toggle^="datepicker"] {
 	&.gs-form-field{
 	margin-bottom: 1em;
 	
-	@media ( min-width: 1024px ) {
+	@media ( get-breakpoint('x-large') ) {
 		
 		margin-bottom: 2em;
 	}

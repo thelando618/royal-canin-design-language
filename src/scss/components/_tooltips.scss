@@ -60,7 +60,7 @@
 		font-size: .875em;
 	}
 
-	@media ( min-width: 480px ) {
+	@media ( get-breakpoint('x-small') ) {
 		max-width: 480px;
 	}
 }

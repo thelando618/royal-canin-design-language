@@ -23,7 +23,7 @@
 	}
 
 	// @todo make this into a variable?
-	@media ( min-width: 640px ) {
+	@media (get-breakpoint('small')) {
 		border-radius: 50px;
 	}
 }

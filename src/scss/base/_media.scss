@@ -17,7 +17,7 @@ figure {
 		text-align: center;
 	}
 
-	@media ( min-width: 640px ) {
+	@media (get-breakpoint('small')) {
 		figcaption {
 			text-align: left;
 			margin-bottom: .5em;
@@ -29,7 +29,7 @@ img.alignleft,
 figure.alignleft,
 img.alignright,
 figure.alignright {
-	@media ( min-width: 640px ) {
+	@media (get-breakpoint('small')) {
 		max-width: 60%;
 		margin-top: .4em;
 		margin-bottom: .75em;
@@ -38,7 +38,7 @@ figure.alignright {
 
 img.alignleft,
 figure.alignleft {
-	@media ( min-width: 640px ) {
+	@media (get-breakpoint('small')) {
 		float: left;
 		margin-right: 1.5em;
 
@@ -50,7 +50,7 @@ figure.alignleft {
 
 img.alignright,
 figure.alignright {
-	@media ( min-width: 640px ) {
+	@media (get-breakpoint('small')) {
 		float: right;
 		margin-left: 1.5em;
 
@@ -62,7 +62,7 @@ figure.alignright {
 
 img.aligncenter,
 figure.aligncenter {
-	@media ( min-width: 640px ) {
+	@media (get-breakpoint('small')) {
 		max-width: 90%;
 		margin: 1em auto;
 	}

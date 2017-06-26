@@ -11,7 +11,7 @@
     @include span( 12 of 12 split );
   }
 
-	@media ( min-width: 640px ) {
+	@media (get-breakpoint('small')) {
 		.rc-col--25 {
 			@include span( 3 of 12 split );
 

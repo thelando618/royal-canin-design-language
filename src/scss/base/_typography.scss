@@ -6,7 +6,7 @@ select,
 button {
 	font: 300 .875em $font-din; // weight size/line-height family
 
-	@media ( min-width: 640px ) {
+	@media (get-breakpoint('small')) {
 		font-size: 1em;
 	}
 }
@@ -26,11 +26,11 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
 	font-size: 2em;// 32
 	
-	@media ( min-width: 640px ) {
+	@media (get-breakpoint('small')) {
 		font-size: 2.5em; // 40
 	}
 
-	@media ( min-width: 1024px ) {
+	@media ( get-breakpoint('x-large') ) {
 		font-size: 3.125em;	// 50
 	}
 }
@@ -38,11 +38,11 @@ h1 {
 h2 {
 	font-size: 1.875em; // 30
 	
-	@media ( min-width: 640px ) {
+	@media (get-breakpoint('small')) {
 		font-size: 2.25em; // 36
 	}
 
-	@media ( min-width: 1024px ) {
+	@media ( get-breakpoint('x-large') ) {
 		font-size: 2.625em;	//42
 	}
 }
@@ -50,11 +50,11 @@ h2 {
 h3 {
 	font-size: 1.625em; // 26
 	
-	@media ( min-width: 640px ) {
+	@media (get-breakpoint('small')) {
 		font-size: 2em; // 32
 	}
 
-	@media ( min-width: 1024px ) {
+	@media ( get-breakpoint('x-large') ) {
 		font-size: 2.25em;	//36
 	}
 }
@@ -62,11 +62,11 @@ h3 {
 h4 {
 	font-size: 1.5em; // 24
 	
-	@media ( min-width: 640px ) {
+	@media (get-breakpoint('small')) {
 		font-size: 1.875em; // 30
 	}
 
-	@media ( min-width: 1024px ) {
+	@media ( get-breakpoint('x-large') ) {
 		font-size: 2em; // 32
 	}
 }
@@ -74,11 +74,11 @@ h4 {
 h5 {
 	font-size: 1.375em; // 22
 	
-	@media ( min-width: 640px ) {
+	@media (get-breakpoint('small')) {
 		font-size: 1.625em; // 26
 	}
 
-	@media ( min-width: 1024px ) {
+	@media ( get-breakpoint('x-large') ) {
 		font-size: 1.75em; // 28
 	}
 }
@@ -87,11 +87,11 @@ h5 {
 h6 {
 	font-size: 1.25em; // 20
 	
-	@media ( min-width: 640px ) {
+	@media (get-breakpoint('small')) {
 		font-size: 1.5em; // 24
 	}
 
-	@media ( min-width: 1024px ) {
+	@media ( get-breakpoint('x-large') ) {
 		font-size: 1.625em; // 26
 	}
 }
@@ -104,11 +104,11 @@ h6 {
 	text-transform: uppercase;
 	font-size: 1.875em; // 30
 	
-	@media ( min-width: 640px ) {
+	@media (get-breakpoint('small')) {
 		font-size: 2.5em; // 40
 	}
 
-	@media ( min-width: 1024px ) {
+	@media ( get-breakpoint('x-large') ) {
 		font-size: 3.125em;	// 50
 	}
 }
@@ -118,11 +118,11 @@ h6 {
 	text-transform: uppercase;
 	font-size: 1.375em; // 22
 	
-	@media ( min-width: 640px ) {
+	@media (get-breakpoint('small')) {
 		font-size: 1.75em; // 28
 	}
 
-	@media ( min-width: 1024px ) {
+	@media ( get-breakpoint('x-large') ) {
 		font-size: 2em; // 32
 	}
 }
@@ -131,11 +131,11 @@ h6 {
 	font-weight: 300;
 	font-size: 1.125em; // 18
 	
-	@media ( min-width: 640px ) {
+	@media (get-breakpoint('small')) {
 		font-size: 1.375em; // 22
 	}
 
-	@media ( min-width: 1024px ) {
+	@media ( get-breakpoint('x-large') ) {
 		font-size: 1.5em; // 24
 	}
 }
@@ -143,11 +143,11 @@ h6 {
 .rc-head--article {
 	font-size: 1em; // 16
 	
-	@media ( min-width: 640px ) {
+	@media (get-breakpoint('small')) {
 		font-size: 1.25em; // 20
 	}
 
-	@media ( min-width: 1024px ) {
+	@media ( get-breakpoint('x-large') ) {
 		font-size: 1.375em; // 22
 	}
 }

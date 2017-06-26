@@ -1,6 +1,10 @@
 $typeface-location: '../assets/fonts/';
-// Font name             File name        weight     style
-$typefaces: ('PiSLIETZLindham',     '323CAD_0_0',    800,       normal),
-        ('MuseoSans-700',       '323CB4_0_0',    700,       normal),
-        ('MuseoSans-500Italic', '323CB5_0_0',    500,       italic),
-        ('MuseoSans-500',       '323CB7_0_0',    500,       normal);
+            // Font name             File name            weight     style
+$typefaces: ('DIN Pro',              'din_pro',           300,       normal),
+            ('DIN Pro',              'din_pro_medium',    500,       normal),
+            ('DIN Pro',              'din_pro_bold',      700,       normal);
+
+
+
+// Font stack variable
+$font-din: "DIN Pro", 'Avenir', Helvetica, Arial, sans-serif;

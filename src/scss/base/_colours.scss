@@ -31,29 +31,6 @@
 ///
 
 
-$colours: (
-        'brand': (
-                'red':  #E2001A,
-                'medium-grey': #87888A,
-                'light-grey':  #EAEAEA,
-                'lighter-grey': #F7F7F7,
-                'white': #FFF
-        ),
-        'functional': (
-                'text': #444444,
-                'functional': #8EC9D6,
-                'success': #5FCC78,
-                'error': #C71838
-        )
-);
-
-$tint-tone: (
-        'darker': -15,
-        'dark': -5,
-        'light': 5,
-        'lighter': 10
-);
-
 
 @function colour($palette, $name, $tintTone: null) {
   $getPalette: map-get($colours, $palette);
@@ -101,13 +78,13 @@ $tint-tone: (
       .colour-bkgrnd-#{$colourName} {
         background-color: $colour;
 
-        .dark-tone-example.colour-bkgrnd-#{$colourName}:hover,
-        .dark-tone-example.colour-bkgrnd-#{$colourName}:focus {
+        &.dark-tone-example:hover,
+        &.dark-tone-example:focus {
           background-color: colour(nth(map-keys($colours), $i), $colourName, 'dark');
         }
 
-        .darker-tone-example.colour-bkgrnd-#{$colourName}:hover,
-        .darker-tone-example.colour-bkgrnd-#{$colourName}:focus {
+        &.darker-tone-example:hover,
+        &.darker-tone-example:focus {
           background-color: colour(nth(map-keys($colours), $i), $colourName, 'darker');
         }
       }
@@ -115,13 +92,13 @@ $tint-tone: (
       .colour-text-#{$colourName} {
         color: $colour;
 
-        .dark-tone-example.colour-bkgrnd-#{$colourName}:hover,
-        .dark-tone-example.colour-bkgrnd-#{$colourName}:focus {
+        &.dark-tone-example:hover,
+        &.dark-tone-example:focus {
           color: colour(nth(map-keys($colours), $i), $colourName, 'dark');
         }
 
-        .darker-tone-example.colour-bkgrnd-#{$colourName}:hover,
-        .darker-tone-example.colour-bkgrnd-#{$colourName}:focus {
+        &.darker-tone-example:hover,
+        &.darker-tone-example:focus {
           color: colour(nth(map-keys($colours), $i), $colourName, 'darker');
         }
       }
@@ -129,13 +106,13 @@ $tint-tone: (
       .colour-border-#{$colourName} {
         border-color: $colour;
 
-        .dark-tone-example.colour-bkgrnd-#{$colourName}:hover,
-        .dark-tone-example.colour-bkgrnd-#{$colourName}:focus {
+        &.dark-tone-example:hover,
+        &.dark-tone-example:focus {
           border-color: colour(nth(map-keys($colours), $i), $colourName, 'dark');
         }
 
-        .darker-tone-example.colour-bkgrnd-#{$colourName}:hover,
-        .darker-tone-example.colour-bkgrnd-#{$colourName}:focus {
+        &.darker-tone-example:hover,
+        &.darker-tone-example:focus {
           border-color: colour(nth(map-keys($colours), $i), $colourName, 'darker');
         }
       }
