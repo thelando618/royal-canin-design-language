@@ -1,0 +1,136 @@
+.interactive--pager {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	margin: 0 .25em;
+	background-color: colour('brand', 'light-grey');
+	border: 2px solid transparent;
+	border-radius: 100%;
+	overflow: hidden;
+	transition: background-color .2s ease-in-out, border .2s ease-in-out;
+	color: transparent;
+    padding: 0;
+
+	&:hover, &:focus {
+		border-color: colour('brand', 'red');
+	}
+
+	&.interactive--pager--active {
+		background-color: colour('brand', 'red');
+
+		&:hover, &:focus {
+			background-color: colour('brand', 'red', 'dark');
+		}
+
+		&:active {
+			background-color: colour('brand', 'red', 'darker');
+		}
+	}
+}
+
+.interactive--navigation, 
+.interactive--navigation--round, 
+.interactive--response {
+	display: inline-block;
+	padding: 1em;
+	transition: background-color .2s ease-in-out;
+	background-color: colour('brand', 'red');;
+	overflow: hidden;
+	border: 1px solid rgba( 0, 0, 0, .15 );
+		
+	svg {
+		position: relative;
+		display: block;
+		width: 1.25em;
+		height: 1.25em;
+		fill: colour('brand', 'white');
+		transition: fill .2s ease-in-out;
+	}
+
+	&:hover, &:focus {
+		background-color: colour('brand', 'red', 'dark');
+	}
+
+	&:active {
+		background-color: colour('brand', 'red', 'dark');
+	}
+	
+	&.interactive-grey{
+		background-color: colour('brand', 'red');
+		svg{
+			fill: colour('brand', 'red');
+		}
+	}
+}
+
+.interactive--navigation--round, .interactive--response {
+	border-radius: 100%;	
+}
+
+.interactive--response {
+	border: 1px solid colour('brand', 'light-grey');
+
+	svg {
+		fill: colour('brand', 'medium-grey');
+	}
+
+	&:hover, &:focus {
+		background-color: colour('brand', 'white', 'dark');
+	}
+
+	&:active {
+		background-color: colour('brand', 'white', 'darker');
+	}
+}
+
+.interactive--navigation--round {
+	border-radius: 100%;
+	overflow: hidden;
+	background-color: colour('brand', 'red');;
+
+	svg {
+		fill: colour('brand', 'white');
+	}
+
+	&:hover, &:focus {
+		background-color: colour('brand', 'red', 'dark');
+	}
+
+	&:active {
+		background-color: colour('brand', 'red', 'darker');;
+	}
+}
+
+.interactive--navigation--prev {
+	svg {
+		right: 1px;
+	}
+}
+
+.interactive--navigation--next {
+	svg {
+		left: 1px;
+	}
+}
+
+.interactive--response--affirmative {
+	padding: 1.5em;
+	box-shadow: 0 2px 4px #f1f1f1;
+	background: colour('brand', 'white');
+	&:hover, &:focus, &.interactive--response--active {
+		svg {
+			fill: colour('functional', 'success');;
+		}
+	}
+}
+
+.interactive--response--negative {
+	padding: 1.5em;
+	box-shadow: 0 2px 4px #f1f1f1;
+	background: colour('brand', 'white');
+	&:hover, &:focus, &.interactive--response--active {
+		svg {
+			fill: colour('brand', 'red');
+		}
+	}
+}

@@ -1,0 +1,145 @@
+// ----------------------------------------------------------------------
+
+// Colours
+
+// ----------------------------------------------------------------------
+
+////
+/// @author James Drawneek
+/// @group First 10 Digital
+////
+
+/// Manage colours by grouping and looping variables.
+///  Utility classes are also generated:
+///  .colour-bkgrnd-red {
+///   background-color: #E2001A;
+///  }
+///
+///  .colour-text-red {
+///   color: #E2001A;
+///  }
+///
+/// @example scss - Basic Usage Sass
+///    .component-id-like-red-text {
+///        color: colour('brand', 'red');
+///    }
+///
+/// @example scss - Tint/tone usage. Outputs the target colour at -10% lightness.
+///    .component-id-like--dark-red-text {
+///        color: colour('brand', 'red', 'darker');
+///    }
+///
+
+
+$colours: (
+        'brand': (
+                'red':  #E2001A,
+                'medium-grey': #87888A,
+                'light-grey':  #EAEAEA,
+                'lighter-grey': #F7F7F7,
+                'white': #FFF
+        ),
+        'functional': (
+                'text': #444444,
+                'functional': #8EC9D6,
+                'success': #5FCC78,
+                'error': #C71838
+        )
+);
+
+$tint-tone: (
+        'darker': -15,
+        'dark': -5,
+        'light': 5,
+        'lighter': 10
+);
+
+
+@function colour($palette, $name, $tintTone: null) {
+  $getPalette: map-get($colours, $palette);
+
+  @if $getPalette != null {
+    $getColour: map-get( map-get($colours, $palette), $name);
+
+    @if $getColour != null {
+
+      @if $tintTone != null {
+        @if map-has-key($tint-tone, $tintTone) {
+          @return scale_color($getColour, $lightness: map-get($tint-tone, $tintTone) * 1%);
+
+        }
+        @else {
+          @error 'The tint used -> #{$tintTone} doesn\'t exsist. Please use: #{$tint-tone}';
+        }
+      }
+
+      @else {
+        @return $getColour;
+      }
+
+    } @else {
+      @error 'The colour #{$name} doesn\'t appear to be in the palette #{$palette}';
+    }
+  }
+  @else {
+    @error 'The palette #{$palette} doesn\'t exsist';
+  }
+}
+
+@each $palette in $colours {
+  // Get the index of the current loop, use that to get the key.
+  $i: index($colours, $palette);
+
+  @if nth(map-keys($colours), $i) == 'brand' {
+    $getPalette: map-get($colours, nth(map-keys($colours), $i));
+
+    @each $colour in $getPalette {
+
+      $n: index($getPalette, $colour);
+      $colourName: nth(map-keys($getPalette), $n);
+
+      .colour-bkgrnd-#{$colourName} {
+        background-color: $colour;
+
+        .dark-tone-example.colour-bkgrnd-#{$colourName}:hover,
+        .dark-tone-example.colour-bkgrnd-#{$colourName}:focus {
+          background-color: colour(nth(map-keys($colours), $i), $colourName, 'dark');
+        }
+
+        .darker-tone-example.colour-bkgrnd-#{$colourName}:hover,
+        .darker-tone-example.colour-bkgrnd-#{$colourName}:focus {
+          background-color: colour(nth(map-keys($colours), $i), $colourName, 'darker');
+        }
+      }
+
+      .colour-text-#{$colourName} {
+        color: $colour;
+
+        .dark-tone-example.colour-bkgrnd-#{$colourName}:hover,
+        .dark-tone-example.colour-bkgrnd-#{$colourName}:focus {
+          color: colour(nth(map-keys($colours), $i), $colourName, 'dark');
+        }
+
+        .darker-tone-example.colour-bkgrnd-#{$colourName}:hover,
+        .darker-tone-example.colour-bkgrnd-#{$colourName}:focus {
+          color: colour(nth(map-keys($colours), $i), $colourName, 'darker');
+        }
+      }
+
+      .colour-border-#{$colourName} {
+        border-color: $colour;
+
+        .dark-tone-example.colour-bkgrnd-#{$colourName}:hover,
+        .dark-tone-example.colour-bkgrnd-#{$colourName}:focus {
+          border-color: colour(nth(map-keys($colours), $i), $colourName, 'dark');
+        }
+
+        .darker-tone-example.colour-bkgrnd-#{$colourName}:hover,
+        .darker-tone-example.colour-bkgrnd-#{$colourName}:focus {
+          border-color: colour(nth(map-keys($colours), $i), $colourName, 'darker');
+        }
+      }
+
+    }
+  }
+}

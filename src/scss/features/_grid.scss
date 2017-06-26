@@ -1,0 +1,59 @@
+.rc-grid {
+	@include container( 1440px );
+    margin-left: - gutter( 22 );
+    margin-right: - gutter( 22 );
+
+	.rc-col {
+		margin-bottom: gutter( 11 );
+	}
+
+  .rc-col--100 {
+    @include span( 12 of 12 split );
+  }
+
+	@media ( min-width: 640px ) {
+		.rc-col--25 {
+			@include span( 3 of 12 split );
+
+			& ~ .rc-col--50 {
+				@include span( 6 of 12 split );
+			}
+
+			& ~ .rc-col--75 {
+				@include span( 9 of 12 split );
+			}
+		}
+
+		.rc-col--33 {
+			@include span( 4 of 12 split );
+		}
+
+		.rc-col--50 {
+			@include span( 6 of 12 split );
+
+			& ~ .rc-col--25 {
+				@include span( 3 of 12 split );
+			}
+		}
+
+		.rc-col--66 {
+			@include span( 8 of 12 split );
+		}
+
+		.rc-col--75 {
+			@include span( 9 of 12 split );
+		}
+	}
+
+
+	@media ( min-width: 800px ) {
+		.rc-col--20 {
+			@include span( 2.4 of 12 split );
+		}
+
+		.rc-col--80 {
+			@include span( 9.6 of 12 split );
+		}
+	}
+
+}
