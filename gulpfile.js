@@ -1,266 +1,99 @@
-'use strict';
+(function () {
+  const gulp = require('gulp');
+  //const debug = require('gulp-debug');
+  // Use this to debug pipes.
+  // .pipe(debug({title: 'Streams open :'}))
 
-// @todo properly comment tasks
-// @todo install an html sanitizer such as https://www.npmjs.com/package/sanitize-html and run string that ends up in _nav.html through it before writing file.
-
-// Gulp
-var gulp 						= require('gulp');
-var autoprefixer 		= require('gulp-autoprefixer');
-var clean 					= require('gulp-clean');
-var fileinclude			= require('gulp-file-include');
-var sass 						= require('gulp-sass');
-var gutil 					= require('gulp-util');
-var concat 					= require('gulp-concat');
-var uglify 					= require('gulp-uglify');
-var rename 					= require('gulp-rename');
-
-// Node
-var browserSync 		= require('browser-sync').create();
-var dirTree 				= require('directory-tree');
-var fs 							= require('fs');
-var path 						= require('path');
-
-// Object to contain files and paths
-// @todo update with better paths
-var paths = {
-	templates : './templates/**/',
-	anyFile : '*.*',
-	template : '*.html',
-	partial : '_*.html',
-	assets : '/assets/',
-	public: './public/'
-};
-
-function getIndexes(ary, what) {
-  var indexes = [];
-  ary.forEach(function(el, index) {
-    if (el.indexOf(what))
-      indexes.push(index);
-  });
-  return indexes;
-}
+  const need = require('./gulp/gulp_dependancies');
+  const sitesettings = require('./gulp/gulp_settings');
 
 
-// Empty array to contain links
-var links = [];
+  const TaskTemplate = {
+    subtasks: [],
+    pretasks: [],
+    watch: {
+      active: false,
+      files: [sitesettings.watch.sass]
+    },
+    linting: {
+      js: sitesettings.location.linting.js,
+      sass: sitesettings.location.linting.sass
+    }
+  };
 
-
-// Public Directory
-gulp.task( 'publicDir', function( done ) {
-	// If public directory exists
-	if ( fs.existsSync( './public' ) ) {
-		// Clean it
-		return gulp.src( paths.public , { read: false } )
-			.pipe( clean() );
-	} else {
-		// Create it
-		fs.mkdirSync( './public' );
-	}
-	done();
-});
-
-
-// Copy .html files to public. Exclude those that start with an underscore
-gulp.task('copyTemplates', function( done ) {
-	return gulp.src([ path.join( paths.templates, paths.template ), '!' + path.join( paths.templates, paths.partial ) ])
-	.pipe( fileinclude({
-		// todo update paths to use object
-  	prefix: '@@',
-  	basepath: './templates'
-	}) )
-	.pipe(gulp.dest('./public'));
-	done();
-});
-
-
-// Concat JS
-gulp.task( 'concat', function( done ) {
-	return gulp.src([ './templates/**/*.js', '!./templates/assets/**/*.js' ])
-		.pipe( concat( 'scripts.js' ) )
-		.pipe( gulp.dest( './templates/assets/js/' ) );
-	done();
-});
-
-
-// Minify JS
-gulp.task( 'minify', gulp.series( 'concat', function( done ) {
-	return gulp.src( './templates/assets/js/scripts.js' )
-		.pipe( rename( 'scripts.min.js' ) )
-		.pipe( uglify() )
-		.pipe( gulp.dest( './templates/assets/js/min/' ) );
-	done();
-} ) );
-
-
-// Copy JS
-gulp.task( 'copyJS', gulp.series( 'minify', function( done ) {
-	return gulp.src( './templates/assets/js/min/*.js' )
-		.pipe( gulp.dest( './public/assets/js/' ) );
-	done();
-} ) )
-
-// Generate Sass
-gulp.task( 'sass', function( done ) {
-	return gulp.src( './templates/assets/sass/style.scss' )
-		.pipe( sass({
-				outputStyle: 'compressed',
-				includePaths: ['node_modules/susy/sass']
-		}).on( 'error', sass.logError ) )
-		.pipe( autoprefixer( { browsers: ['last 5 versions'] } ) )
-		.pipe( gulp.dest( './templates/assets/css/' ) );
-	done();
-} );
-
-gulp.task( 'sass-styleguide', function( done ) {
-  return gulp.src( './templates/assets/sass/styleguide.styles.scss' )
-    .pipe( sass({
-      outputStyle: 'compressed',
-      includePaths: ['node_modules/susy/sass']
-    }).on( 'error', sass.logError ) )
-    .pipe( autoprefixer( { browsers: ['last 5 versions'] } ) )
-    .pipe( gulp.dest( './templates/assets/css/' ) );
-  done();
-} );
-
-// Copy CSS
-gulp.task( 'copyCSS', gulp.series( 'sass', 'sass-styleguide', function( done ) {
-	return gulp.src( path.join( paths.templates, '*.css' ) )
-		.pipe( gulp.dest( './public/' ) );
-	done();
-} ) )
-
-
-// Copy font files
-gulp.task('copyFonts', function( done ) {
-	return gulp.src( path.join( paths.templates, paths.assets, 'fonts/', '*' ) )
-		.pipe(gulp.dest('./public'));
-});
-
-
-// Copy Image files
-gulp.task('copyImages', function( done ) {
-	return gulp.src( path.join( paths.templates, paths.assets, 'images/', '*' ) )
-		.pipe(gulp.dest('./public'));
-});
-
-
-// Get HTML files inside public directory and create an array
-gulp.task( 'getfiles', function( done ) {  
-	dirTree( paths.public, ['.html'], function( item ) {
-		links.push( item.path );
-	});
-	done();
-} );
-
-// Create a _nav.html file that can be imported into full files
-gulp.task( 'createNav', gulp.series( 'getfiles', function( done ) {
-
-	function getFilesRecursive( folder, counter ) {
-
-		var fileContents = fs.readdirSync(folder),
-		fileTree = '<ul>',
-		stats;
-
-    function cleanName( fileName ) {
-      // Check if the folder/file name has a numeric suffix.
-      if (parseInt(fileName.slice(0, 1)) > -1) {
-        // Remove the first three characters xx- then remove the html file extension if there is one, finally trim the white space.
-        return fileName.slice(2).replace('.html', '').replace(/-/g, ' ').trim();
+// Tasks
+  const tasks = {
+    'dev': {
+      subtasks: [],
+      pretasks: ['sass'],
+      watch: {
+        active: false,
+        files: [sitesettings.watch.sass]
+      },
+      linting: {
+        testSass: true
       }
-      else {
-        return fileName.replace('.html', '').trim();
+    },
+    'tasklist': {
+      subtasks: [],
+      pretasks: ['tasklist'],
+      watch: {
+        active: false,
+        files: [sitesettings.watch.sass]
+      },
+      linting: {
+        testSass: true
       }
     }
+  };
 
-		fileContents.forEach( function( fileName ) {
-			
-			stats = fs.lstatSync( folder + '/' + fileName );
+  var tasksooj = {};
 
-			if (stats.isDirectory()) {
+  // Rebuild the task object using the template as a base for each item.
+  (function(tasksooj, TaskTemplate) {
+    Object.keys(tasks).forEach(function(taskname) {
 
-				// Ignore assets directoy
-				// @todo come up with a better way to ignore directories (start support dirs with underscore perhaps?)
-				if ( 'assets' === fileName ) {
-					return false;
-				}
+      var newTaskObj = Object.create(TaskTemplate);
+      tasksooj[taskname] = Object.assign(newTaskObj, tasks[taskname]);
+    });
+  })(tasksooj, TaskTemplate);
 
-        var items = fs.readdirSync(folder + '/' + fileName);
+  function genTasks(task, subtasks) {
+    task[subtasks].forEach(function (task) {
+      getTask(task, gulp, sitesettings, need, tasksooj);
+    });
+  }
 
-				// If the folder only contains one html file, make the parent link to that.
-        if (getIndexes(items, '.html').length === 1) {
-          fileTree += '<li><a href="' + folder.slice(8, folder.length) + '/' + fileName + '/' + items[0] + '" class="gs-nav__trigger gs-nav__link single-level">' + cleanName( fileName ) + '</a></li>';
-        }
-        else {
-          // Create an empty link that will trigger some JS
-          var topClass = counter === 1 ? ' toplevel' : '';
-          fileTree += '<li class="gs-nav__section' + topClass + '"><a href="#" class="gs-nav__trigger gs-nav__link">' + cleanName( fileName ) + '</a>' + getFilesRecursive( folder + '/' + fileName) +'</li>';
-        }
+  // This function pulls the tasks in from their separate files and passes the configuration.
+  function getTask(task, gulp, sitesettings, need, tasksooj) {
+    if (task !== '' && typeof task === 'string') {
+      let livetask = require('./gulp/tasks/' + task);
+      livetask(task, gulp, sitesettings, need, tasksooj);
+    }
+  }
 
-			} else {
+  // Only get the task needed, this is gathered from the global object. Arg 2 should always be the task name
+  // passed from the original execution.
+  var masterTaskName = global.process.argv[2];
+  var masterTaskObj = tasks[masterTaskName];
 
-				// Create full url and get rid of public 
-				var fullUrl = folder.replace( './public', '' ) + '/' + fileName
+  // Generate both sets of tasks ready for use.
+  genTasks(masterTaskObj, 'pretasks');
+  genTasks(masterTaskObj, 'subtasks');
 
-				// Ignore root index.html
-				// @todo come up with a better way to ignore files (start support dirs with underscore perhaps?)
-				if ( '/index.html' === fullUrl ) {
-					return false;
-				}
+  gulp.task(masterTaskName, gulp.series(masterTaskObj.pretasks, masterTaskObj.subtasks), function () {
 
-				// Add list item with anchor with full url
-				fileTree += '<li><a href="' + fullUrl + '" class="gs-nav__link">' + cleanName( fileName ) + '</a></li>';
-			}
+    if (masterTaskObj.watch.active) {
+      gulp.watch([masterTaskObj.watch.files], masterTaskObj.subtasks, masterTaskObj.callbackFn());
+    }
+  });
 
-		});
+  // This task simply displays information about the other tasks available.
+  const listTask = require('./gulp/tasks/tasklist');
+  gulp.task('default', listTask(null, gulp, sitesettings, need));
 
-		fileTree += '</ul>';
-
-		return fileTree;
-	};
-
-	// Create the file and add the HTML string
-	fs.writeFile('templates/_nav.html', getFilesRecursive('./public', 1), 'utf8', function() {
-		gutil.log( gutil.colors.bold.underline( 'nav.html file created' ) );
-	});
-
-	done();
-} ) );
-
-
-// Create CNAME file in public directory.
-gulp.task( 'cname', function( done ) {
-	var cname = 'rcwdl.first10.co.uk';
-	fs.writeFile( 'public/CNAME', cname, function( err ) {
-		if (err) throw err;
-	});
-	done();
-} );
-
-
-// Styleguide tasks
-gulp.task( 'generate', gulp.series( 'publicDir', 'copyTemplates', 'copyCSS', 'copyJS', 'copyFonts', 'copyImages', 'createNav', 'copyTemplates', 'cname', function( done ) {
-	done();
-} ) );
-
-
-gulp.task( 'view', gulp.series( 'generate', function( done ){
-	browserSync.init({
-		server: {
-			baseDir: "./public"
-		}
-	});
-} ) );
-
-
-// @todo update with paths object
-gulp.task( 'develop', function( done ){
-	browserSync.init({
-		server: {
-			baseDir: "./public"
-		}
-	});
-	gulp.watch( './templates/**/*.scss', gulp.series( 'copyCSS' ) );
-	gulp.watch( [ 'templates/**/*.js', '!templates/assets/js/**/*.js' ], gulp.series( 'copyJS' ) );
-	gulp.watch( 'templates/**/*.html', gulp.series( 'copyTemplates' ) );
-	gulp.watch( "public/**/*.*" ).on("change", browserSync.reload);
-} );
+  // Generate all the simple low level tasks.
+  // var allTasks = simple_task_list.forEach(function (task) {
+  //   getTask(task, gulp, sitesettings, need, tasksooj);
+  // });
+}());
