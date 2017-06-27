@@ -13,9 +13,26 @@ button {
 
 
 
+////////////////////////////////////////////   Type Styles   ////////////////////////////////////////////
+//                                                                Size at each breakpoint
+//               Class                    Base styles             default      small       x-large
+$type-styles: (
+                ('alpha',                'heading-base',           2em,        2.5em,      3.125em),
+                ('beta',                 'heading-base',           1.875em,    2.25em,     2.625em),
+                ('gamma',                'heading-base',           1.625em,    2em,        2.25em),
+                ('delta',                'heading-base',           1.5em,      1.875em,    2em),
+                ('espilon',              'heading-base',           1.375em,    1.625em,    1.75em),
+                ('zeta',                 'heading-base',           1.25em,     1.5em,      1.625em),
+                ('rc-head--display',     'heading--heavy-upper',   1.875em,    2.5em,      3.125em),
+                ('rc-head--headline',    'heading--heavy-upper',   1.375em,    1.75em,     2em),
+                ('rc-head--subheadline', 'heading-base',           1.125em,    1.375em,    1.5em),
+                ('rc-head--article',     'heading-base',           1em,        1.25em,     1.375em)
+);
 
-// Default Headings
-h1, h2, h3, h4, h5, h6 {
+$type-breakpoints: ('small', 'x-large');
+
+
+%heading-base {
 	color: colour('brand', 'red');;
 	font-weight: 300;
 	line-height: 1.25;
@@ -23,194 +40,36 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: .5em;
 }
 
-h1 {
-	font-size: 2em;// 32
-	
-	@media (get-breakpoint('small')) {
-		font-size: 2.5em; // 40
-	}
-
-	@media ( get-breakpoint('x-large') ) {
-		font-size: 3.125em;	// 50
-	}
+%heading--heavy-upper {
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
-h2 {
-	font-size: 1.875em; // 30
-	
-	@media (get-breakpoint('small')) {
-		font-size: 2.25em; // 36
-	}
+@each $style in $type-styles {
+  .#{nth($style, 1)} {
+    @extend %#{nth($style, 2)};
+    font-size: nth($style, 3);
 
-	@media ( get-breakpoint('x-large') ) {
-		font-size: 2.625em;	//42
-	}
+    @each $breakpoint in $type-breakpoints {
+      @media (get-breakpoint($breakpoint)) {
+        font-size: nth($style, index($type-breakpoints, $breakpoint) + 3)
+      }
+    }
+  }
 }
-
-h3 {
-	font-size: 1.625em; // 26
-	
-	@media (get-breakpoint('small')) {
-		font-size: 2em; // 32
-	}
-
-	@media ( get-breakpoint('x-large') ) {
-		font-size: 2.25em;	//36
-	}
-}
-
-h4 {
-	font-size: 1.5em; // 24
-	
-	@media (get-breakpoint('small')) {
-		font-size: 1.875em; // 30
-	}
-
-	@media ( get-breakpoint('x-large') ) {
-		font-size: 2em; // 32
-	}
-}
-
-h5 {
-	font-size: 1.375em; // 22
-	
-	@media (get-breakpoint('small')) {
-		font-size: 1.625em; // 26
-	}
-
-	@media ( get-breakpoint('x-large') ) {
-		font-size: 1.75em; // 28
-	}
-}
-
-
-h6 {
-	font-size: 1.25em; // 20
-	
-	@media (get-breakpoint('small')) {
-		font-size: 1.5em; // 24
-	}
-
-	@media ( get-breakpoint('x-large') ) {
-		font-size: 1.625em; // 26
-	}
-}
-
-
-
-// Modifier Headings
-.rc-head--display {
-	font-weight: 700;
-	text-transform: uppercase;
-	font-size: 1.875em; // 30
-	
-	@media (get-breakpoint('small')) {
-		font-size: 2.5em; // 40
-	}
-
-	@media ( get-breakpoint('x-large') ) {
-		font-size: 3.125em;	// 50
-	}
-}
-
-.rc-head--headline {
-	font-weight: 700;
-	text-transform: uppercase;
-	font-size: 1.375em; // 22
-	
-	@media (get-breakpoint('small')) {
-		font-size: 1.75em; // 28
-	}
-
-	@media ( get-breakpoint('x-large') ) {
-		font-size: 2em; // 32
-	}
-}
-
-.rc-head--subheadline {
-	font-weight: 300;
-	font-size: 1.125em; // 18
-	
-	@media (get-breakpoint('small')) {
-		font-size: 1.375em; // 22
-	}
-
-	@media ( get-breakpoint('x-large') ) {
-		font-size: 1.5em; // 24
-	}
-}
-
-.rc-head--article {
-	font-size: 1em; // 16
-	
-	@media (get-breakpoint('small')) {
-		font-size: 1.25em; // 20
-	}
-
-	@media ( get-breakpoint('x-large') ) {
-		font-size: 1.375em; // 22
-	}
-}
-
-
 
 
 // Paragraph
 p {
-	line-height: 1.5;
-
-	a {
-		display: inline-block;
-		vertical-align: bottom;
-		position: relative;
-		z-index: 1;
-		color: colour('functional', 'functional');
-		transition: color 0.2s ease-in;
-		overflow: hidden;
-
-		&:before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: colour('functional', 'functional');
-			z-index: -1;
-			transform: translateY( 110% );
-			transition: transform .2s ease-in-out, background-color .2s ease-in-out;
-		}
-
-		&:hover, &:focus {
-			color: colour('brand', 'white');
-			text-decoration: none;
-
-			&:before {
-				transform: translateY( 0% );
-			}
-		}
-
-		&:focus {
-			outline: none;
-		}
-
-		&:active {
-			&:before {
-				background-color: colour('functional', 'functional', 'dark');
-			}
-		}
-	}
+  line-height: 1.5;
 }
 
-
-
-// Blockquote
 blockquote {
-	border-left: 3px solid colour('brand', 'red');
-	margin-left: 0;
-	padding-left: 2em;
+  border-left: 3px solid colour('brand', 'red');
+  margin-left: 0;
+  padding-left: 2em;
 
-	p {
-		color: colour('functional', 'text');
-	}
+  & > p {
+    color: colour('functional', 'text');
+  }
 }
