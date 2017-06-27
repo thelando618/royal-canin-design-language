@@ -13,3 +13,47 @@
 @mixin red-accent($direction, $width) {
   border-#{$direction}: $width solid colour('brand', 'red');
 }
+
+
+// Inline style link
+.styled-link {
+  display: inline-block;
+  vertical-align: bottom;
+  position: relative;
+  z-index: 1;
+  color: colour('functional', 'functional');
+  transition: color 0.2s ease-in;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: colour('functional', 'functional');
+    z-index: -1;
+    transform: translateY( 110% );
+    transition: transform .2s ease-in-out, background-color .2s ease-in-out;
+  }
+
+  &:hover, &:focus {
+    color: colour('brand', 'white');
+    text-decoration: none;
+
+    &:before {
+      transform: translateY( 0% );
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    &:before {
+      background-color: colour('functional', 'functional', 'dark');
+    }
+  }
+}

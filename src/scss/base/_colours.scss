@@ -75,48 +75,38 @@
       $n: index($getPalette, $colour);
       $colourName: nth(map-keys($getPalette), $n);
 
+
       .colour-bkgrnd-#{$colourName} {
         background-color: $colour;
-
-        &.dark-tone-example:hover,
-        &.dark-tone-example:focus {
-          background-color: colour(nth(map-keys($colours), $i), $colourName, 'dark');
-        }
-
-        &.darker-tone-example:hover,
-        &.darker-tone-example:focus {
-          background-color: colour(nth(map-keys($colours), $i), $colourName, 'darker');
-        }
       }
+      .colour-bkgrnd-#{$colourName}--dark {
+        background-color: colour(nth(map-keys($colours), $i), $colourName, 'dark');
+      }
+      .colour-bkgrnd-#{$colourName}--darker {
+        background-color: colour(nth(map-keys($colours), $i), $colourName, 'darker');
+      }
+
 
       .colour-text-#{$colourName} {
         color: $colour;
-
-        &.dark-tone-example:hover,
-        &.dark-tone-example:focus {
-          color: colour(nth(map-keys($colours), $i), $colourName, 'dark');
-        }
-
-        &.darker-tone-example:hover,
-        &.darker-tone-example:focus {
-          color: colour(nth(map-keys($colours), $i), $colourName, 'darker');
-        }
       }
+      .colour-text-#{$colourName}--dark {
+        color: colour(nth(map-keys($colours), $i), $colourName, 'dark');
+      }
+      .colour-text-#{$colourName}--darker {
+        color: colour(nth(map-keys($colours), $i), $colourName, 'darker');
+      }
+
 
       .colour-border-#{$colourName} {
         border-color: $colour;
-
-        &.dark-tone-example:hover,
-        &.dark-tone-example:focus {
-          border-color: colour(nth(map-keys($colours), $i), $colourName, 'dark');
-        }
-
-        &.darker-tone-example:hover,
-        &.darker-tone-example:focus {
-          border-color: colour(nth(map-keys($colours), $i), $colourName, 'darker');
-        }
       }
-
+      .colour-border-#{$colourName}--dark {
+        border-color: colour(nth(map-keys($colours), $i), $colourName, 'dark');
+      }
+      .colour-border-#{$colourName}--darker {
+        border-color: colour(nth(map-keys($colours), $i), $colourName, 'darker');
+      }
     }
   }
 }

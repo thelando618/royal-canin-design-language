@@ -1,4 +1,5 @@
-[role="alert"], .alert {
+[role="alert"],
+.alert {
 	text-align: center;
 	border: 2px solid colour('brand', 'red');
 	border-radius: 25px;
@@ -7,7 +8,7 @@
 	margin-bottom: 1em;
     @extend %feature-width-restriction;
 
-	strong {
+	& > strong {
 		font-weight: 300;
 	}
 
