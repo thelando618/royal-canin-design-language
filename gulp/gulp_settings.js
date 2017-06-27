@@ -22,12 +22,12 @@ location['gensass'] = [];
 location['gensass']['icons'] = location['stylessrc'] + '/svgs';
 
 location['cssdest'] = 'dist/css';
-location['cssoutput'] = 'royal.canin.styles.css';
-location['cssoutput-min'] = 'royal.canin.styles.min.css';
+location['cssoutput'] = 'royal-canin.styles.css';
+location['cssoutput-min'] = 'royal-canin.styles.min.css';
 
 location['jsdest'] = 'dist/js';
-location['jsoutput'] = 'royal.canin.js';
-location['jsoutput-min'] = 'royal.canin.min.js';
+location['jsoutput'] = 'royal-canin.js';
+location['jsoutput-min'] = 'royal-canin.min.js';
 
 const watch = {
   sass: [location['stylessrc'] + '/**/*.scss', location['stylessrc'] + '/*.scss'],
