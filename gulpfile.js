@@ -25,7 +25,7 @@
   const tasks = {
     'dev': {
       subtasks: ['combineMq'],
-      pretasks: ['sass'],
+      pretasks: ['sass', 'jsProcessing'],
       watch: {
         active: false,
         files: [sitesettings.watch.sass]

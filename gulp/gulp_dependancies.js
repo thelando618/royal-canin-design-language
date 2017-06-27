@@ -1,5 +1,7 @@
 let need = {};
 
+need.path = require('path');
+
 need.changed = require('gulp-changed');
 // Needed to compile sass to css.
 need.sass = require('gulp-sass');
@@ -19,5 +21,10 @@ need.rename = require('gulp-rename');
 need.gulpif = require('gulp-if');
 
 need.colors = require('colors');
+
+need.eslint = require('gulp-eslint');
+
+need.concat = require('gulp-concat');
+need.uglify = require('gulp-uglify');
 
 module.exports = need;

@@ -24,7 +24,7 @@ var icon = {
  * @param  {number} zoom     The zoom level of the Map
  * @return {object}          The Map
  */
-function create_map ( selector, center, zoom ) {
+function create_map (selector, center, zoom) {
   /**
    * Sets default number for zoom
    * @type {number}
@@ -35,7 +35,7 @@ function create_map ( selector, center, zoom ) {
    * Exit the function if any of the arguments passed are empty
    * @return {bool} false
    */
-  if ( null === selector || typeof center === 'undefined' || typeof zoom === 'undefined' ) {
+  if (null === selector || typeof center === 'undefined' || typeof zoom === 'undefined') {
     return false;
   }
 
@@ -43,7 +43,7 @@ function create_map ( selector, center, zoom ) {
    * Creates the new map with arguments passed and some defaults
    * @type {google}
    */
-  var new_map = new google.maps.Map( selector, {
+  var new_map = new google.maps.Map(selector, {
     center: center,
     scrollwheel: false,
     zoom: zoom,
@@ -137,7 +137,7 @@ function create_map ( selector, center, zoom ) {
         ]
       }
     ]
-  } );
+  });
 
   return new_map;
 }
@@ -145,15 +145,15 @@ function create_map ( selector, center, zoom ) {
 /**
  * Create a Google Maps Marker
  * @param  {object}   position  The desired position of the Marker
- * @param  {object}   map       The Map to apply the Marker to      
+ * @param  {object}   map       The Map to apply the Marker to
  * @return {object}             The Marker applied to the Map
  */
-function create_marker ( position, map ) {
+function create_marker (position, map) {
   /**
    * Exit the function if any of the arguments passed are empty
    * @return {bool} false
    */
-  if ( typeof position === 'undefined' || typeof map === 'undefined', false === map ) {
+  if (typeof position === 'undefined' || typeof map === 'undefined', false === map) {
     return false;
   }
 
@@ -177,12 +177,12 @@ function create_marker ( position, map ) {
  * @param  {object} map     The Map that the Marker is applied to
  * @return {object}         The InfoWindow applied to the Marker
  */
-function create_infobox ( content, marker, map ) {
+function create_infobox (content, marker, map) {
   /**
    * Exit the function if any of the arguments passed are empty
    * @return {bool} false
    */
-  if ( typeof content === 'undefined' || typeof marker === 'undefined' || typeof map === 'undefined' ) {
+  if (typeof content === 'undefined' || typeof marker === 'undefined' || typeof map === 'undefined') {
     return false;
   }
 
@@ -190,17 +190,17 @@ function create_infobox ( content, marker, map ) {
     content: content
   });
 
-  marker.addListener( 'click', function() {    
-    new_infowindow.open( map, marker );
+  marker.addListener('click', function() {
+    new_infowindow.open(map, marker);
 
     make_visible = 'rc-map__overlay--visible';
 
     // Add class
-    if ( new_infowindow.content.classList )
-      new_infowindow.content.classList.add( make_visible );
+    if (new_infowindow.content.classList)
+      new_infowindow.content.classList.add(make_visible);
     else
       new_infowindow.content.make_visible += ' ' + make_visible;
-  } );
+  });
 
   return new_infowindow;
 }
@@ -209,10 +209,10 @@ function create_infobox ( content, marker, map ) {
 
 
 
-// 
+//
 // Following would live in custom scripts file
 // -------------------------------------------------------------------------------------------------------------------------------------------- //
-// 
+//
 
 /**
  * Object containing lat/lng of key locations
@@ -235,7 +235,7 @@ var key_locations = {
  */
 function initMap() {
 
-  if (document.getElementById( 'map_royal_canin' ) !== null) {
+  if (document.getElementById('map_royal_canin') !== null) {
     // Royal Canin Map
     var map_royal_canin = create_map(document.getElementById('map_royal_canin'), key_locations.royal_canin, 17);
 

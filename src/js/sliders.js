@@ -7,7 +7,7 @@
 
 /**
  * Checks if document is ready
- * @param  {Function} fn Whatever is passed in the ready function 
+ * @param  {Function} fn Whatever is passed in the ready function
  */
 function ready(fn) {
   if (document.readyState != 'loading'){
@@ -24,12 +24,12 @@ function ready(fn) {
 
 // @todo - Will live in scripts file
 // Native document ready
-ready( function(  ) {
+ready(function() {
 
-	// Get element
-	var range = document.getElementById( 'rc-slider-demo' );
+  // Get element
+  var range = document.getElementById('rc-slider-demo');
 
-	if (range !== null) {
+  if (range !== null) {
 
     // Create Slider
     noUiSlider.create(range, {
@@ -50,4 +50,4 @@ ready( function(  ) {
   }
 
 
-} );
+});

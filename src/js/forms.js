@@ -7,7 +7,7 @@
 
 /**
  * Checks if document is ready
- * @param  {Function} fn Whatever is passed in the ready function 
+ * @param  {Function} fn Whatever is passed in the ready function
  */
 function ready(fn) {
   if (document.readyState != 'loading'){
@@ -40,23 +40,23 @@ var form_fields = {
    * Which fields to apply the behaviour to
    * @param  {NodeList} targets The fields passed to the Method as a NodeList
    */
-  init: function( targets ) {
+  init: function(targets) {
     var that = this;
 
-    for ( var i = 0; i < targets.length; i++ ) {
+    for (var i = 0; i < targets.length; i++) {
       (function(i) {
 
         var span = targets[i];
-        
-        var input = span.querySelector( 'input' ) || span.querySelector( 'textarea' );
 
-        input.addEventListener( 'focus', function( event ) {  
-          that.fill_check( span, input );
-        } );
+        var input = span.querySelector('input') || span.querySelector('textarea');
 
-        input.addEventListener( 'blur', function( event ) {
-          that.fill_check( span, input );
-        } );
+        input.addEventListener('focus', function(event) {
+          that.fill_check(span, input);
+        });
+
+        input.addEventListener('blur', function(event) {
+          that.fill_check(span, input);
+        });
 
       }(i));
 
@@ -68,13 +68,13 @@ var form_fields = {
    * @param  {Object} target The fields wrapping element
    * @param  {Object} input  The field to check
    */
-  fill_check: function( target, input ) {
+  fill_check: function(target, input) {
     var is_filled = 0 < input.value.length;
 
-    if ( true === is_filled ) {
-      this.fill_class( target, input, 'rc-input--filled', 'add' );
+    if (true === is_filled) {
+      this.fill_class(target, input, 'rc-input--filled', 'add');
     } else {
-      this.fill_class( target, input, 'rc-input--filled', 'remove' );
+      this.fill_class(target, input, 'rc-input--filled', 'remove');
     }
   },
 
@@ -86,21 +86,21 @@ var form_fields = {
    * @param  {String} instruction The instruction for whether to add or remove the class
    * @return {Boolean}            Return false if instruction is not valid
    */
-  fill_class: function( target, input, fill_class, instruction ) {
-    if ( 'add' === instruction ) {
-      if ( target.classList ) {
-        target.classList.add( fill_class );
+  fill_class: function(target, input, fill_class, instruction) {
+    if ('add' === instruction) {
+      if (target.classList) {
+        target.classList.add(fill_class);
       } else {
         target.fill_class += ' ' + fill_class;
       }
-    } else if ( 'remove' === instruction ) {
-      if ( target.classList ) {
-        target.classList.remove( fill_class );
+    } else if ('remove' === instruction) {
+      if (target.classList) {
+        target.classList.remove(fill_class);
       } else {
-        target.fill_class = target.fill_class.replace( new RegExp('(^|\\b)' + fill_class.split(' ').join('|') + '(\\b|$)', 'gi'), ' ' );
+        target.fill_class = target.fill_class.replace(new RegExp('(^|\\b)' + fill_class.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
       }
     } else {
-      console.error( 'Invalid instruction to fill_class method' );
+      console.error('Invalid instruction to fill_class method');
       return false;
     }
   }
@@ -121,9 +121,9 @@ var pwd_fields = {
    * Runs create_toggle method for each password input found
    * @param  {object} targets All password inputs found
    */
-  init: function( targets ) {
-    for ( var i = 0; i < targets.length; i++ ) {
-      pwd_fields.create_toggle( targets[i], i );
+  init: function(targets) {
+    for (var i = 0; i < targets.length; i++) {
+      pwd_fields.create_toggle(targets[i], i);
     }
   },
 
@@ -131,56 +131,56 @@ var pwd_fields = {
    * Create a button to allow password visibility toggling
    * @param  {object} target The input that the button should be attached to
    */
-  create_toggle: function( target, index ) {
+  create_toggle: function(target, index) {
     // The wrapping element
     var wrap = target.parentNode;
 
     // Get input from wrap
-    var input = wrap.querySelector( 'input' );
+    var input = wrap.querySelector('input');
 
     // Set an attribute on the input
-    input.setAttribute( 'data-toggle', 'pwd-' + index );
+    input.setAttribute('data-toggle', 'pwd-' + index);
 
 
     // Create button
-    var btn = document.createElement( 'button' );
-    
+    var btn = document.createElement('button');
+
     // Add class to button
-    if ( btn.classList ) {
-      btn.classList.add( this.button_class );
+    if (btn.classList) {
+      btn.classList.add(this.button_class);
     } else {
       btn.fill_class += ' ' + this.button_class;
     }
 
     // Set an attribute on the button that matches the input
-    btn.setAttribute( 'id', 'pwd-' + index );
+    btn.setAttribute('id', 'pwd-' + index);
 
     // Create span for inside button
-    var span = document.createElement( 'span' );
-    
+    var span = document.createElement('span');
+
     // Add text to span
     span.innerText = this.button_text;
-    
+
     // Add class to span
-    if ( span.classList ) {
-      span.classList.add( this.button_span );
+    if (span.classList) {
+      span.classList.add(this.button_span);
     } else {
       span.fill_class += ' ' + this.button_span;
     }
 
     // Add span to button
-    btn.appendChild( span );
+    btn.appendChild(span);
 
     // Add button to wrapping element
-    wrap.appendChild( btn );
-    
+    wrap.appendChild(btn);
+
     // Toggle field type
-    this.toggle_type( btn, wrap );
+    this.toggle_type(btn, wrap);
 
     // Listen for input blur
-    this.input_blur( input );
+    this.input_blur(input);
 
-    this.input_input( input );
+    this.input_input(input);
   },
 
 
@@ -189,57 +189,57 @@ var pwd_fields = {
    * @param  {object} target The input that the button should be attached to
    * @return {[type]} [description]
    */
-  toggle_type: function( button, wrap ) {
-    button.addEventListener( 'click', function( event ) {
-      var btn_id = button.getAttribute( 'id' );
-      var input_target = wrap.querySelector( '[data-toggle=' + btn_id + ']' );
+  toggle_type: function(button, wrap) {
+    button.addEventListener('click', function(event) {
+      var btn_id = button.getAttribute('id');
+      var input_target = wrap.querySelector('[data-toggle=' + btn_id + ']');
 
       var className = 'rc-input--filled';
-      
-      if ( true === hasClass( wrap, className ) ) {
-        if ( 'text' === input_target.type ) {
+
+      if (true === hasClass(wrap, className)) {
+        if ('text' === input_target.type) {
           input_target.type = 'password';
         } else {
           input_target.type = 'text';
 
           // Start timer
-          pwd_fields.timeout( input_target, 3000 );
+          pwd_fields.timeout(input_target, 3000);
         }
       }
-    } );
+    });
   },
 
   /**
    * Listen for keyboard events on input and stop clear timeout if detected
    * @param  {Object} input The input to attach the event listener to
    */
-  input_input: function( input ) {    
-    input.addEventListener( 'keydown', function( event ) {
-      clearTimeout( pwd_fields.the_timer );
-    } );
+  input_input: function(input) {
+    input.addEventListener('keydown', function(event) {
+      clearTimeout(pwd_fields.the_timer);
+    });
   },
 
   /**
    * Listen for the blur event and start a timeout when detected
    * @param  {Object} input The input to attach the event listener to
    */
-  input_blur: function( input ) {
-    input.addEventListener( 'blur', function( event ) {
-      if ( 'text' === input.type ) {
-        pwd_fields.timeout( input, 500 );
+  input_blur: function(input) {
+    input.addEventListener('blur', function(event) {
+      if ('text' === input.type) {
+        pwd_fields.timeout(input, 500);
       }
-    } );
+    });
   },
 
   /**
    * Will obscure password if no user interaction after a given period
    * @param  {object} target The input that the button should be attached to.
    */
-  timeout: function( input, time ) {
-    if ( 'text' === input.type ) {
-      pwd_fields.the_timer = setTimeout( function( event ) {
+  timeout: function(input, time) {
+    if ('text' === input.type) {
+      pwd_fields.the_timer = setTimeout(function(event) {
         input.type = 'password';
-      }, time );
+      }, time);
     }
   }
 }
@@ -253,15 +253,15 @@ var pwd_fields = {
 
 
 /* @todo Would live in main scripts file */
-var inputs = document.querySelectorAll( '.rc-input' );
-var pwds = document.querySelectorAll( 'input[type="password"]' );
+var inputs = document.querySelectorAll('.rc-input');
+var pwds = document.querySelectorAll('input[type="password"]');
 
 
 // Native document ready
-ready( function(  ) {
-  form_fields.init( inputs );
-  pwd_fields.init( pwds );
-} );
+ready(function() {
+  form_fields.init(inputs);
+  pwd_fields.init(pwds);
+});
 
 // jQuery document ready
 $(function() {
@@ -278,16 +278,16 @@ $(function() {
     yearFirst: true,
   }
 
-  $( '[data-toggle="datepicker-ddmmyyyy"]' ).datepicker( datepicker_ddmmyyyy );
-  $( '[data-toggle="datepicker-yyyymm"]' ).datepicker( datepicker_yyyymm );
+  $('[data-toggle="datepicker-ddmmyyyy"]').datepicker(datepicker_ddmmyyyy);
+  $('[data-toggle="datepicker-yyyymm"]').datepicker(datepicker_yyyymm);
 
-  $( '[data-toggle^="datepicker"]' ).on( "click", function( event ) {
+  $('[data-toggle^="datepicker"]').on("click", function(event) {
     var that = null;
-    that = $( this );
+    that = $(this);
 
-    $( '.rc-datepicker__clear' ).unbind( 'click' ).on( 'click', function ( event ) {
-      event.preventDefault(  );
-      $( that ).datepicker( 'reset' );
+    $('.rc-datepicker__clear').unbind('click').on('click', function (event) {
+      event.preventDefault();
+      $(that).datepicker('reset');
     });
   });
 
