@@ -32,6 +32,15 @@
   }
 }
 
+%icon-arrow-down {
+  &::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 39.5' aria-labelledby='svg-arrow-down-bold' role='img'%3E %3Ctitle id='svg-arrow-down-bold' lang='en'%3Earrow-down-bold%3C/title%3E %3Cstyle%3E .st0%7Bfill:%23FFFFFF;%7D %3C/style%3E %3Cpath d='M32 39.5h-.1c-1.9 0-3.7-.8-5.1-2.2L2.2 12.7C-.7 9.8-.7 5.1 2.2 2.1c2.9-2.9 7.6-2.9 10.6 0L32 21.4 51.3 2.2c2.9-2.9 7.6-2.9 10.6 0C63.3 3.6 64 5.6 64 7.5s-.7 3.8-2.2 5.3L37.3 37.3c-1.4 1.4-3.3 2.1-5.1 2.2H32z' class='st0' %3E%3C/path%3E %3C/svg%3E");
+  }
+}
+
+/////////////////////////////////////// Button Base Styles ///////////////////////////////////////
+
+
 %button {
   display: inline-block;
   text-decoration: none;
@@ -111,59 +120,6 @@
   @extend %button;
 }
 
-%button-with-icon {
-  @extend %button;
-
-  &::after {
-    content: '';
-  }
-}
-
-/////////////////////////////////////// Primary Button ///////////////////////////////////////
-
-.button--icon-arrow-down {
-  @extend %button-with-icon;
-
-  &::after {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 39.5' aria-labelledby='svg-arrow-down-bold' role='img'%3E %3Ctitle id='svg-arrow-down-bold' lang='en'%3Earrow-down-bold%3C/title%3E %3Cstyle%3E .st0%7Bfill:%23FFFFFF;%7D %3C/style%3E %3Cpath d='M32 39.5h-.1c-1.9 0-3.7-.8-5.1-2.2L2.2 12.7C-.7 9.8-.7 5.1 2.2 2.1c2.9-2.9 7.6-2.9 10.6 0L32 21.4 51.3 2.2c2.9-2.9 7.6-2.9 10.6 0C63.3 3.6 64 5.6 64 7.5s-.7 3.8-2.2 5.3L37.3 37.3c-1.4 1.4-3.3 2.1-5.1 2.2H32z' class='st0' %3E%3C/path%3E %3C/svg%3E");
-  }
-}
-
-.button--icon-arrow-right {
-  @extend %button-with-icon;
-  @extend %icon-arrow-right;
-}
-
-.button--icon-check {
-  @extend %button-with-icon;
-  @extend %icon-check;
-}
-
-.button--icon-search {
-  @extend %button-with-icon;
-
-  &::after {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' aria-labelledby='svg-search' role='img'%3E %3Ctitle id='svg-search' lang='en'%3Esearch%3C/title%3E %3Cstyle%3E .st0%7Bfill:%23FFFFFF;%7D %3C/style%3E %3Cpath d='M56.1 8c-5.3-5.3-12.3-8-19.2-8-7 0-13.9 2.7-19.2 8-9.3 9.3-10.5 23.8-3.4 34.4L1.6 55c-2.1 2.1-2.1 5.4 0 7.5s5.4 2.1 7.5 0l12.6-12.6c4.6 3.1 9.8 4.6 15.1 4.6 7 0 13.9-2.7 19.2-8 10.7-10.7 10.7-27.9.1-38.5zm-4.9 33.5c-3.8 3.8-8.9 5.9-14.3 5.9s-10.5-2.1-14.3-5.9c-7.9-7.9-7.9-20.7 0-28.6C26.4 9.1 31.5 7 36.9 7s10.5 2.1 14.3 5.9 5.9 8.9 5.9 14.3-2.1 10.5-5.9 14.3z' class='st0'/%3E %3C/svg%3E");
-  }
-}
-
-.button--small {
-  @extend %button;
-  @extend %button--small;
-
-}
-
-.button--medium {
-  @extend %button;
-  @extend %button--medium;
-
-}
-
-.button--large {
-  @extend %button;
-  @extend %button--large;
-}
-
 
 /////////////////////////////////////// Secondary Button ///////////////////////////////////////
 
@@ -186,38 +142,6 @@
 
 .button--secondary {
   @extend %button--secondary;
-}
-
-.button--secondary--icon-arrow-right {
-  @extend %button--secondary;
-  @extend %icon-arrow-right;
-}
-
-.button--secondary--icon-check {
-  @extend %button--secondary;
-  @extend %icon-check;
-}
-
-.button--secondary--icon-search {
-  @extend %button--secondary;
-  @extend %icon-search;
-}
-
-.button--secondary--small {
-  @extend %button--secondary;
-  @extend %button--small;
-
-}
-
-.button--secondary--medium {
-  @extend %button--secondary;
-  @extend %button--medium;
-
-}
-
-.button--secondary--large {
-  @extend %button--secondary;
-  @extend %button--large;
 }
 
 /////////////////////////////////////// Tertiary Button ///////////////////////////////////////
@@ -245,36 +169,52 @@
 }
 
 
-.button--tertiary--icon-arrow-right {
-  @extend %button--tertiary;
-  @extend %icon-arrow-right;
+$buttons: ('secondary', 'tertiary', 'icon-search', 'icon-check', 'icon-arrow-right');
+$variants: ('large', 'medium', 'small');
+$icons: ('icon-search', 'icon-arrow-right', 'icon-check');
+
+
+// Simple button size variants.
+@each $variant in $variants {
+  .button--#{$variant},
+  %button--#{$variant} {
+    @extend %button;
+    @extend %button--#{$variant};
+  }
 }
 
-.button--tertiary--icon-check {
-  @extend %button--tertiary;
-  @extend %icon-check;
+// Simple button icon variants.
+@each $icon in $icons {
+  .button--#{$icon},
+  %button--#{$icon} {
+    @extend %button--#{$icon};
+    &::after {
+      content: '';
+    }
+  }
 }
 
-.button--tertiary--icon-search {
-  @extend %button--tertiary;
-  @extend %icon-search;
+// Button size variants.
+@each $button in $buttons {
+  @each $variant in $variants {
+    .button--#{$button}--#{$variant} {
+      @extend %button--#{$button};
+      @extend %button--#{$variant};
+    }
+  }
 }
 
-.button--tertiary--small {
-  @extend %button--tertiary;
-  @extend %button--small;
-
-}
-
-.button--tertiary--medium {
-  @extend %button--tertiary;
-  @extend %button--medium;
-
-}
-
-.button--tertiary--large {
-  @extend %button--tertiary;
-  @extend %button--large;
+// Button icon variants.
+@each $button in $buttons {
+  @each $icon in $icons {
+    .button--#{$button}--#{$icon} {
+      @extend %button--#{$button};
+      @extend %#{$icon};
+      &::after {
+        content: '';
+      }
+    }
+  }
 }
 
 /////////////////////////////////////// Functional Button ///////////////////////////////////////

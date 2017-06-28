@@ -1,136 +1,184 @@
-.interactive--pager {
-	display: inline-block;
-	width: 1em;
-	height: 1em;
-	margin: 0 .25em;
-	background-color: colour('brand', 'light-grey');
-	border: 2px solid transparent;
-	border-radius: 100%;
-	overflow: hidden;
-	transition: background-color .2s ease-in-out, border .2s ease-in-out;
-	color: transparent;
-    padding: 0;
+%pager {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin: 0 .25em;
+  background-color: colour('brand', 'light-grey');
+  border: 2px solid transparent;
+  border-radius: 100%;
+  overflow: hidden;
+  transition: background-color .2s ease-in-out, border .2s ease-in-out;
+  color: transparent;
+  padding: 0;
 
-	&:hover, &:focus {
-		border-color: colour('brand', 'red');
-	}
-
-	&.interactive--pager--active {
-		background-color: colour('brand', 'red');
-
-		&:hover, &:focus {
-			background-color: colour('brand', 'red', 'dark');
-		}
-
-		&:active {
-			background-color: colour('brand', 'red', 'darker');
-		}
-	}
+  &:hover, &:focus {
+    border-color: colour('brand', 'red');
+  }
 }
 
-.interactive--navigation, 
-.interactive--navigation--round, 
-.interactive--response {
-	display: inline-block;
-	padding: 1em;
-	transition: background-color .2s ease-in-out;
-	background-color: colour('brand', 'red');;
-	overflow: hidden;
-	border: 1px solid rgba( 0, 0, 0, .15 );
-		
-	svg {
-		position: relative;
-		display: block;
-		width: 1.25em;
-		height: 1.25em;
-		fill: colour('brand', 'white');
-		transition: fill .2s ease-in-out;
-	}
-
-	&:hover, &:focus {
-		background-color: colour('brand', 'red', 'dark');
-	}
-
-	&:active {
-		background-color: colour('brand', 'red', 'dark');
-	}
-	
-	&.interactive-grey{
-		background-color: colour('brand', 'red');
-		svg{
-			fill: colour('brand', 'red');
-		}
-	}
+%floating-button {
+  padding: 1.5em;
+  box-shadow: 0 2px 4px #f1f1f1;
+  background: colour('brand', 'white');
 }
 
-.interactive--navigation--round, .interactive--response {
-	border-radius: 100%;	
+.pager {
+  @extend %pager;
 }
 
-.interactive--response {
-	border: 1px solid colour('brand', 'light-grey');
+%pager--active {
+  background-color: colour('brand', 'red');
 
-	svg {
-		fill: colour('brand', 'medium-grey');
-	}
+  &:hover,
+  &:focus {
+    background-color: colour('brand', 'red', 'dark');
+  }
 
-	&:hover, &:focus {
-		background-color: colour('brand', 'white', 'dark');
-	}
-
-	&:active {
-		background-color: colour('brand', 'white', 'darker');
-	}
+  &:active {
+    background-color: colour('brand', 'red', 'darker');
+  }
 }
 
-.interactive--navigation--round {
-	border-radius: 100%;
-	overflow: hidden;
-	background-color: colour('brand', 'red');;
-
-	svg {
-		fill: colour('brand', 'white');
-	}
-
-	&:hover, &:focus {
-		background-color: colour('brand', 'red', 'dark');
-	}
-
-	&:active {
-		background-color: colour('brand', 'red', 'darker');;
-	}
+.pager--active {
+  @extend %pager--active;
 }
 
-.interactive--navigation--prev {
-	svg {
-		right: 1px;
-	}
+%interactive--navigation {
+  display: inline-block;
+  padding: 1em;
+  transition: background-color .2s ease-in-out;
+  background-color: colour('brand', 'red');;
+  overflow: hidden;
+  border: 1px solid rgba( 0, 0, 0, .15 );
+
+  & > svg {
+    position: relative;
+    display: block;
+    width: 1.25em;
+    height: 1.25em;
+    fill: colour('brand', 'white');
+    transition: fill .2s ease-in-out;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: colour('brand', 'red', 'dark');
+  }
+
+  &:active {
+    background-color: colour('brand', 'red', 'dark');
+  }
 }
 
-.interactive--navigation--next {
-	svg {
-		left: 1px;
-	}
+.interactive-grey {
+  background-color: colour('brand', 'red');
+
+  svg {
+    fill: colour('brand', 'red');
+  }
 }
 
-.interactive--response--affirmative {
-	padding: 1.5em;
-	box-shadow: 0 2px 4px #f1f1f1;
-	background: colour('brand', 'white');
-	&:hover, &:focus, &.interactive--response--active {
-		svg {
-			fill: colour('functional', 'success');;
-		}
-	}
+%interactive--navigation--round {
+  @extend %interactive--navigation;
+  border-radius: 100%;
 }
 
-.interactive--response--negative {
-	padding: 1.5em;
-	box-shadow: 0 2px 4px #f1f1f1;
-	background: colour('brand', 'white');
-	&:hover, &:focus, &.interactive--response--active {
-		svg {
-			fill: colour('brand', 'red');
-		}
-	}
+%response {
+  border: 1px solid colour('brand', 'light-grey');
+  @extend %interactive--navigation--round;
+  background-color: white;
+
+  svg {
+    fill: colour('brand', 'medium-grey');
+  }
+
+  &:hover, &:focus {
+    background-color: colour('brand', 'white', 'dark');
+  }
+
+  &:active {
+    background-color: colour('brand', 'white', 'darker');
+  }
+}
+
+.navigation--round {
+  @extend %interactive--navigation--round;
+  overflow: hidden;
+  background-color: colour('brand', 'red');
+
+  svg {
+    fill: colour('brand', 'white');
+  }
+
+  &:hover,
+  &:focus {
+    background-color: colour('brand', 'red', 'dark');
+  }
+
+  &:active {
+    background-color: colour('brand', 'red', 'darker');
+  }
+}
+
+%navigation--prev {
+  @extend %interactive--navigation;
+
+  & > svg {
+    right: 1px;
+  }
+}
+
+%navigation--next {
+  @extend %interactive--navigation;
+
+  & > svg {
+    left: 1px;
+  }
+}
+
+.navigation--next {
+   @extend %navigation--next;
+}
+
+.navigation--prev {
+  @extend %navigation--prev;
+}
+
+
+.response--affirmative {
+  @extend %response;
+  @extend %floating-button;
+
+  svg {
+    fill: colour('functional', 'success');
+  }
+
+  &:hover,
+  &:focus,
+  &.interactive--response--active {
+
+
+  }
+}
+
+.response--negative {
+  @extend %response;
+  @extend %floating-button;
+
+  svg {
+    fill: colour('brand', 'red');
+  }
+
+  &:hover,
+  &:focus,
+  &.interactive--response--active {
+  }
+}
+
+.navigation--round--prev {
+  @extend %navigation--next;
+}
+
+.navigation--round--next {
+  @extend %navigation--prev;
 }

@@ -9,7 +9,7 @@ location['images'] = 'images';
 
 // Raw assets like svgs for conversion etc.
 location['rawfiles'] = [];
-location['rawfiles']['folder'] = 'raw';
+location['rawfiles']['folder'] = 'src';
 location['rawfiles']['svgs'] = location['rawfiles']['folder'] + '/svgs';
 location['rawfiles']['imgs'] = location['rawfiles']['folder'] + '/imgs';
 
@@ -28,6 +28,9 @@ location['cssoutput-min'] = 'royal-canin.styles.min.css';
 location['jsdest'] = 'dist/js';
 location['jsoutput'] = 'royal-canin.js';
 location['jsoutput-min'] = 'royal-canin.min.js';
+
+location['imgdest'] = 'dist/img';
+location['imgoutput'] = 'icons';
 
 const watch = {
   sass: [location['stylessrc'] + '/**/*.scss', location['stylessrc'] + '/*.scss'],

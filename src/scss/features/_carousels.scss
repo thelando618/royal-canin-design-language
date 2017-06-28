@@ -368,8 +368,7 @@ $hero-bp-large: 1000px;
 
 		.slick-active {
 			.interactive--pager {
-				// @extend 01-components/interactive/_interactice.scss
-				@extend .interactive--pager--active;
+				@extend %pager--active;
 			}
 		}
 	}

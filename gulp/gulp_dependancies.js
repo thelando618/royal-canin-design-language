@@ -27,4 +27,6 @@ need.eslint = require('gulp-eslint');
 need.concat = require('gulp-concat');
 need.uglify = require('gulp-uglify');
 
+need.svgSprite = require('gulp-svg-sprite')
+
 module.exports = need;

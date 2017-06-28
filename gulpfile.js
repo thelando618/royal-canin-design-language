@@ -25,7 +25,7 @@
   const tasks = {
     'dev': {
       subtasks: ['combineMq'],
-      pretasks: ['sass', 'jsProcessing'],
+      pretasks: ['svgSprites', 'sass', 'jsProcessing'],
       watch: {
         active: false,
         files: [sitesettings.watch.sass]
@@ -37,6 +37,17 @@
     'tasklist': {
       subtasks: [],
       pretasks: ['tasklist'],
+      watch: {
+        active: false,
+        files: [sitesettings.watch.sass]
+      },
+      linting: {
+        testSass: true
+      }
+    },
+    'svgSprites': {
+      subtasks: [],
+      pretasks: ['svgSprites'],
       watch: {
         active: false,
         files: [sitesettings.watch.sass]
