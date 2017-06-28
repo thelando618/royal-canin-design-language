@@ -64,7 +64,7 @@ $hero-bp-large: 1000px;
 .hero__title {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  color: colour('brand', 'red');;
+  color: colour('brand', 'red');
 }
 
 .hero__description {
@@ -405,7 +405,7 @@ video.hero__bg {
     }
 
     .slick-current {
-      border-color: colour('brand', 'red');;
+      border-color: colour('brand', 'red');
     }
   }
 
@@ -424,6 +424,7 @@ video.hero__bg {
   z-index: 99;
   top: 50%;
   margin-top: - $navigation-nextprev-height / 2;
+  cursor: pointer;
 }
 
 .navigation--next {

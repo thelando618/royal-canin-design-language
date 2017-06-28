@@ -195,7 +195,7 @@ input[data-toggle^="datepicker"] {
     }
 
     &:after {
-      background-color: colour('brand', 'red');;
+      background-color: colour('brand', 'red');
       z-index: 2;
       width: 0;
     }
@@ -561,7 +561,7 @@ input[data-toggle^="datepicker"] {
     }
 
     .select2-selection__choice {
-      background-color: colour('brand', 'red');;
+      background-color: colour('brand', 'red');
       color: colour('brand', 'white');
       cursor: default;
       display: inline-block;

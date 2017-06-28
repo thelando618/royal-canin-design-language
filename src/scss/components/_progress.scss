@@ -11,7 +11,7 @@
   }
 
   .rc-progress__value--outside {
-    color: colour('functional', 'success');;
+    color: colour('functional', 'success');
     margin-left: 0;
   }
 
@@ -38,7 +38,7 @@
   }
 
   progress[value]::-moz-progress-bar {
-    background-color: colour('functional', 'success');;
+    background-color: colour('functional', 'success');
     border-radius: 50px;
     overflow: hidden;
     transition: width .4s ease-in-out;
@@ -46,14 +46,14 @@
 
   progress::-ms-fill {
     border: none;
-    background-color: colour('functional', 'success');;
+    background-color: colour('functional', 'success');
     border-radius: 50px;
     overflow: hidden;
     transition: width .4s ease-in-out;
   }
 
   progress[value]::-webkit-progress-value {
-    background-color: colour('functional', 'success');;
+    background-color: colour('functional', 'success');
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
@@ -83,7 +83,7 @@
     }
 
     .rc-progress--fallback__value {
-      background-color: colour('functional', 'success');;
+      background-color: colour('functional', 'success');
       text-indent: 100%;
       white-space: nowrap;
       overflow: hidden;
@@ -140,7 +140,7 @@
 
   .complete {
     button {
-      background-color: colour('functional', 'success');;
+      background-color: colour('functional', 'success');
       border-color: colour('brand', 'light-grey');
     }
   }

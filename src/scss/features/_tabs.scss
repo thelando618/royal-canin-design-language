@@ -60,7 +60,7 @@
         left: 0;
         width: 100%;
         height: 4px;
-        background-color: colour('brand', 'red');;
+        background-color: colour('brand', 'red');
         margin: 0;
 
       }
@@ -68,7 +68,7 @@
       // Targeting IE9 as it is having issues with borders
       .no-flexbox & {
         &.active {
-          background-color: colour('brand', 'red');;
+          background-color: colour('brand', 'red');
           color: colour('brand', 'white');
         }
       }
