@@ -51,46 +51,6 @@ ul, ol {
   @extend %list--align;
   box-shadow: 0 0 4px rgba( 0, 0, 0, .1 );
 
-  & > li > .list--significance__item {
-    border-bottom: 1px solid colour('brand', 'medium-grey', 'lighter');
-    margin-bottom: 0;
-    // @todo make transition into a variable?
-    display: block;
-    padding: 1em;
-    padding-right: 3.5em;
-    text-decoration: none;
-    color: colour('functional', 'text');
-    background-color: #FFFFFF;
-    transition: background 0.1s ease-in;
-
-    &:last-child {
-      border-bottom-color: transparent;
-    }
-
-    &:hover,
-    &:focus {
-      background-color: colour('brand', 'lighter-grey', 'lighter');
-    }
-
-    &.active {
-      background-color: colour('brand', 'lighter-grey', 'lighter');
-      border-left: 4px solid colour('brand', 'red');
-
-      &:before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        margin-top: -4px;
-        left: 0;
-        width: 0;
-        height: 0;
-        border-top: 4px solid transparent;
-        border-left: 4px solid colour('brand', 'red');
-        border-bottom: 4px solid transparent;
-      }
-    }
-  }
-
   svg {
     display: block;
     width: 1.5em;
@@ -100,6 +60,46 @@ ul, ol {
     margin-top: -.75em;
     right: 1em;
     fill: colour('brand', 'medium-grey');
+  }
+}
+
+.list--significance__item {
+  border-bottom: 1px solid colour('brand', 'medium-grey', 'lighter');
+  margin-bottom: 0;
+  // @todo make transition into a variable?
+  display: block;
+  padding: 1em;
+  padding-right: 3.5em;
+  text-decoration: none;
+  color: colour('functional', 'text');
+  background-color: #FFFFFF;
+  transition: background 0.1s ease-in;
+
+  &:last-child {
+    border-bottom-color: transparent;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: colour('brand', 'lighter-grey', 'lighter');
+  }
+
+  &.active {
+    background-color: colour('brand', 'lighter-grey', 'lighter');
+    border-left: 4px solid colour('brand', 'red');
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      margin-top: -4px;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-top: 4px solid transparent;
+      border-left: 4px solid colour('brand', 'red');
+      border-bottom: 4px solid transparent;
+    }
   }
 }
 
