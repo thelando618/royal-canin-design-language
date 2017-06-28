@@ -105,6 +105,23 @@
     progress.updateValue(value);
   };
 
+  // Move this to Scripts
+  $(function () {
+    $('.rc-progress').Progress(); // Initiate all Progress elements
+  });
+
+
+// Move this to GS scripts
+  $(function () {
+
+    $('.update-progress-demo').on('click', function(event) {
+      $('.rc-progress-demo').updateProgress(50);
+      $('.rc-progress-demo .rc-progress__progressElem').attr('value', 50)
+    });
+
+
+  });
+
 })(jQuery, window, document);
 
 
@@ -112,21 +129,3 @@
 
 
 
-// Move this to Scripts
-$(function () {
-  $('.rc-progress').Progress(); // Initiate all Progress elements
-});
-
-
-
-
-
-// Move this to GS scripts
-$(function () {
-
-  $('.update-progress-demo').on('click', function(event) {
-    $('.rc-progress-demo').updateProgress(50);
-  });
-
-
-});
