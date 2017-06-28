@@ -55,6 +55,7 @@
   border-radius: 50px;
   margin-bottom: 1em;
   transition: background-color 0.2s ease-in;
+  border-radius: 3px;
 
   &::after {
     position: relative;
@@ -68,7 +69,8 @@
     background: center/contain no-repeat;
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background-color: colour('brand', 'red', 'dark');
     color: colour('brand', 'white');
   }
@@ -93,10 +95,6 @@
       background-color: colour('brand', 'light-grey');
       color: colour('brand', 'medium-grey');
     }
-  }
-
-  @media(get-breakpoint('small')) {
-    border-radius: 3px;
   }
 }
 
@@ -212,6 +210,22 @@ $icons: ('icon-search', 'icon-arrow-right', 'icon-check');
       @extend %#{$icon};
       &::after {
         content: '';
+      }
+    }
+  }
+}
+
+// Button icon variants.
+@each $button in $buttons {
+  @each $icon in $icons {
+    @each $variant in $variants {
+      .button--#{$button}--#{$icon}--#{$variant} {
+        @extend %button--#{$button};
+        @extend %button--#{$variant};
+        @extend %#{$icon};
+        &::after {
+          content: '';
+        }
       }
     }
   }

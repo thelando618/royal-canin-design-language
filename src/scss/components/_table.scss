@@ -9,15 +9,15 @@ table	{
 
   th, td {
     border-right: 1px solid colour('brand', 'light-grey', 'lighter');
-  	padding: .875em 1em;
+    padding: .875em 1em;
 
-  	&:first-child {
-  		text-align: left;
-  	}
+    &:first-child {
+      text-align: left;
+    }
 
-  	&:last-child {
-  		border-right: none;
-  	}
+    &:last-child {
+      border-right: none;
+    }
   }
 
   .table--highlight {
@@ -25,26 +25,26 @@ table	{
     color: colour('brand', 'white');
   }
 
-	thead {
+  thead {
     .table--highlight {
       background-color: colour('brand', 'red', 'dark');
     }
-	}
+  }
 
-	tbody {
-		tr:nth-child( even ) {
+  tbody {
+    tr:nth-child( even ) {
       background-color: colour('brand', 'light-grey');
 
       .table--highlight {
         background-color: colour('brand', 'red', 'dark');
       }
-		}
-	}
+    }
+  }
 
-	th {
+  th {
     background-color: colour('brand', 'light-grey');
-    color: colour('brand', 'red');;
-	}
+    color: colour('brand', 'red');
+  }
 
   // Removes margin from custom checkbox element, where used.
   label {
@@ -53,9 +53,9 @@ table	{
 }
 
 .table--blank {
-	tbody {
-		tr:nth-child( even ) {
-			background-color: inherit;
-		}
-	}
+  tbody {
+    tr:nth-child( even ) {
+      background-color: inherit;
+    }
+  }
 }
