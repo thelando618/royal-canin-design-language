@@ -673,9 +673,7 @@ input[data-toggle^="datepicker"] {
 }
 
 .select2-container--focus {
-  .select2-selection--single, .select2-selection--multiple {
-    outline: 0;
-  }
+  outline: solid colour('brand', 'red');
 }
 
 .select2-container--open {
