@@ -41,7 +41,7 @@
 /////////////////////////////////////// Button Base Styles ///////////////////////////////////////
 
 
-%button {
+[class^="button"] {
   display: inline-block;
   text-decoration: none;
   cursor: pointer;
@@ -55,7 +55,6 @@
   border-radius: 50px;
   margin-bottom: 1em;
   transition: background-color 0.2s ease-in;
-  border-radius: 3px;
 
   &::after {
     position: relative;
@@ -96,6 +95,14 @@
       color: colour('brand', 'medium-grey');
     }
   }
+
+  @media (get-breakpoint('small')) {
+    border-radius: 3px;
+  }
+}
+
+[class*="--icon-"]::after {
+  content: '';
 }
 
 %button--small {
@@ -114,15 +121,10 @@
 }
 
 
-.button {
-  @extend %button;
-}
-
 
 /////////////////////////////////////// Secondary Button ///////////////////////////////////////
 
 %button--secondary {
-  @extend %button;
   border-color: colour('brand', 'red');
   color: colour('brand', 'red');
   background-color: transparent;
@@ -145,7 +147,6 @@
 /////////////////////////////////////// Tertiary Button ///////////////////////////////////////
 
 %button--tertiary {
-  @extend %button;
   border-color: colour('functional', 'text');
   color: colour('functional', 'text');
   background-color: transparent;
@@ -167,7 +168,7 @@
 }
 
 
-$buttons: ('secondary', 'tertiary', 'icon-search', 'icon-check', 'icon-arrow-right');
+$buttons: ('secondary', 'tertiary');
 $variants: ('large', 'medium', 'small');
 $icons: ('icon-search', 'icon-arrow-right', 'icon-check');
 
@@ -176,7 +177,6 @@ $icons: ('icon-search', 'icon-arrow-right', 'icon-check');
 @each $variant in $variants {
   .button--#{$variant},
   %button--#{$variant} {
-    @extend %button;
     @extend %button--#{$variant};
   }
 }
@@ -185,10 +185,7 @@ $icons: ('icon-search', 'icon-arrow-right', 'icon-check');
 @each $icon in $icons {
   .button--#{$icon},
   %button--#{$icon} {
-    @extend %button--#{$icon};
-    &::after {
-      content: '';
-    }
+    @extend %#{$icon};
   }
 }
 
@@ -208,9 +205,6 @@ $icons: ('icon-search', 'icon-arrow-right', 'icon-check');
     .button--#{$button}--#{$icon} {
       @extend %button--#{$button};
       @extend %#{$icon};
-      &::after {
-        content: '';
-      }
     }
   }
 }
@@ -223,9 +217,6 @@ $icons: ('icon-search', 'icon-arrow-right', 'icon-check');
         @extend %button--#{$button};
         @extend %button--#{$variant};
         @extend %#{$icon};
-        &::after {
-          content: '';
-        }
       }
     }
   }
@@ -234,7 +225,6 @@ $icons: ('icon-search', 'icon-arrow-right', 'icon-check');
 /////////////////////////////////////// Functional Button ///////////////////////////////////////
 
 .button--functional {
-  @extend %button;
   background-color: colour('functional', 'functional');
 
   &:hover,
@@ -267,7 +257,6 @@ $icons: ('icon-search', 'icon-arrow-right', 'icon-check');
 }
 
 .button--functional--success {
-  @extend %button;
   background-color: colour('functional', 'success');
 
   &:hover,
@@ -287,7 +276,6 @@ $icons: ('icon-search', 'icon-arrow-right', 'icon-check');
 
 
 .button--functional--fail {
-  @extend %button;
   background-color: colour('brand', 'red');
 
   &:hover,

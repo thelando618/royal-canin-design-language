@@ -77,7 +77,7 @@
 
 
       .colour-bkgrnd-#{$colourName} {
-        background-color: $colour;
+        background-color: colour(nth(map-keys($colours), $i), $colourName);
       }
       .colour-bkgrnd-#{$colourName}--dark {
         background-color: colour(nth(map-keys($colours), $i), $colourName, 'dark');
@@ -88,7 +88,7 @@
 
 
       .colour-text-#{$colourName} {
-        color: $colour;
+        color: colour(nth(map-keys($colours), $i), $colourName);
       }
       .colour-text-#{$colourName}--dark {
         color: colour(nth(map-keys($colours), $i), $colourName, 'dark');
@@ -99,7 +99,7 @@
 
 
       .colour-border-#{$colourName} {
-        border-color: $colour;
+        border-color: colour(nth(map-keys($colours), $i), $colourName);
       }
       .colour-border-#{$colourName}--dark {
         border-color: colour(nth(map-keys($colours), $i), $colourName, 'dark');
