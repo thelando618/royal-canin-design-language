@@ -70,7 +70,8 @@
       height: 2.5em;
     }
 
-    .rc-progress--fallback__value, .rc-progress--fallback__bar {
+    .rc-progress--fallback__value,
+    .rc-progress--fallback__bar {
       position: absolute;
       top: 0;
       left: 0;
@@ -132,7 +133,7 @@
   }
 
   &:last-of-type {
-    &:after {
+    &::after {
       display: none;
     }
   }
@@ -160,12 +161,12 @@
     &::before {
       font-size: 1.25em;
     }
-  }
 
-  &::after {
-    width: 1.25rem;
-    height: .3rem;
-    top: -.1.5rem;
+    &::after {
+      width: 1.25rem;
+      height: .3rem;
+      top: -.1 .5rem;
+    }
   }
 
   .rc-progress-stepped__item::after {
@@ -182,12 +183,13 @@
     &:before {
       font-size: 1.25em;
     }
-  }
 
-  &:after {
-    width: 2rem;
-    height: .4rem;
-    top: -.2rem;
+    &::after {
+      width: 2rem;
+      height: .4rem;
+      top: -.2rem;
+    }
+
   }
 
   .rc-progress-stepped__item::after {

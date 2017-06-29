@@ -436,7 +436,7 @@ video.hero__bg {
 }
 
 .rc-carousel__dots > li > button {
-  @extend %pager;
+  @extend %pager__item__link;
 }
 
 .rc-carousel__dots > .slick-active > button {

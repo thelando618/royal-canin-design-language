@@ -1,7 +1,6 @@
 .card {
-  display: flex;
-  flex: 0 1 310px;
   max-width: 310px;
+  display: flex;
   position: relative;
   margin-bottom: 1em;
   @extend %on-white-outline;
@@ -177,58 +176,5 @@
     border-top: 1px solid colour('brand', 'light-grey');
     margin: 0;
     font-weight: 700;
-  }
-}
-
-// Groups of Cards
-.cards {
-  @include container;
-
-  @media ( min-width: 700px ) {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: stretch;
-    justify-content: space-between;
-  }
-}
-
-@media ( min-width: 700px ) {
-  .cards--3 {
-    .card {
-      flex: 0 1 32%;
-      flex-grow: 1;
-    }
-
-    .no-flexbox & {
-      .card {
-        @include gallery( 4 of 12 );
-      }
-    }
-  }
-
-  .cards--4 {
-    .card {
-      flex: 0 1 49%;
-    }
-
-    .no-flexbox & {
-      .card {
-        @include gallery( 6 of 12 );
-      }
-    }
-  }
-}
-
-@media ( get-breakpoint('large') ) {
-  .cards--4 {
-    .card {
-      flex: 0 1 24%;
-    }
-
-    .no-flexbox & {
-      .card {
-        @include gallery( 3 of 12 );
-      }
-    }
   }
 }

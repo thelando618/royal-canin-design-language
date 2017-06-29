@@ -65,7 +65,9 @@
     margin-left: .5rem;
     margin-right: - button-icon-right-pull( 1.25, .5rem );
     top: -1px;
-    background: center/contain no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   &:hover,
