@@ -27,7 +27,7 @@
       subtasks: ['combineMq'],
       pretasks: ['svgSprites', 'sass', 'jsProcessing'],
       watch: {
-        active: false,
+        active: true,
         files: [sitesettings.watch.sass]
       },
       linting: {
@@ -92,12 +92,14 @@
   genTasks(masterTaskObj, 'pretasks');
   genTasks(masterTaskObj, 'subtasks');
 
-  gulp.task(masterTaskName, gulp.series(masterTaskObj.pretasks, masterTaskObj.subtasks), function () {
+  console.log(masterTaskName);
+
+  gulp.task(masterTaskName, gulp.series(masterTaskObj.pretasks, masterTaskObj.subtasks, function() {
 
     if (masterTaskObj.watch.active) {
-      gulp.watch([masterTaskObj.watch.files], masterTaskObj.subtasks, masterTaskObj.callbackFn());
+      gulp.watch([masterTaskObj.watch.files], gulp.series(masterTaskObj.pretasks, masterTaskObj.subtasks));
     }
-  });
+  }));
 
   // This task simply displays information about the other tasks available.
   const listTask = require('./gulp/tasks/tasklist');

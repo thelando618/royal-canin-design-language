@@ -103,7 +103,7 @@ $social-color-youtube: #CD201F;
     }
 
     &:active {
-      background: colour('brand', 'red', 'darker');
+      background: colour('brand', 'red', 'dark');
     }
   }
 }
@@ -121,7 +121,7 @@ $social-color-youtube: #CD201F;
     }
 
     &:active {
-      background: colour('brand', 'white', 'darker');
+      background: colour('brand', 'white', 'dark');
     }
   }
 }
@@ -137,7 +137,7 @@ $social-color-youtube: #CD201F;
   ul {
     margin-top: .25em;
     background-color: colour('brand', 'white');
-    border: 1px solid colour('brand', 'medium-grey', 'lighter');
+    border: 1px solid colour('brand', 'medium-grey', 'light');
     padding: .75em;
 
     &:before, &:after {
@@ -153,7 +153,7 @@ $social-color-youtube: #CD201F;
     &:before {
       transform: translateX( -.5em ) translateY( -.5em ) rotate( 45deg );
       z-index: 1;
-      border: 1px solid colour('brand', 'medium-grey', 'lighter');
+      border: 1px solid colour('brand', 'medium-grey', 'light');
     }
 
     &:after {

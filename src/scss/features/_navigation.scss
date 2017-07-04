@@ -1,0 +1,41 @@
+.nav-toggle {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 80px;
+  cursor: pointer;
+  
+  @media ( get-breakpoint('large') ) {
+    display: none;
+  }
+
+  & > hr {
+    display: block;
+    height: 2px;
+    width: 30px;
+    margin: .65em 0;
+    border: none;
+    background-color: rgba( 0, 0, 0, .75 );
+    transition: width 0.2s ease-in;
+
+    &:nth-child(1) {
+      width: 22px;
+    }
+
+    &:nth-child(3) {
+      width: 24px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+   & > hr {
+      &:nth-child(1), &:nth-child(3) {
+        width: 30px;
+      }
+    }
+  }
+}

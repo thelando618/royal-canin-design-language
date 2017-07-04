@@ -55,19 +55,15 @@ $gs-light-grey: #f3f3f3;
   text-rendering: geometricPrecision;
 }
 
-.gs-present{
-	margin-bottom: 2em;
-}
-
 .gs-present--white {
   background-color: lightgrey;
 }
 
-.gs-nav {
-	background-color: #ffffff;
-	display: block;
+.navigation {
+  background-color: colour('brand', 'white');
+  display: block;
   z-index: 10;
-  color: #212121;
+  color: colour('functional', 'text');
   font-size: .75em;
   position: relative;
 
@@ -85,55 +81,12 @@ $gs-light-grey: #f3f3f3;
   	}
   }
 
-  #gs-nav-trigger {
-  	position: absolute;
-  	top: 0;
-  	right: 0;
-  	bottom: 0;
-  	width: 80px;
-  	display: flex;
-  	align-items: center;
-  	flex: 1 0 auto;
-  	justify-content: center;
-
-  	hr {
-  		display: block;
-  		height: 2px;
-  		width: 30px;
-			margin: .65em 0;
-  		border: none;
-  		background-color: rgba( 0, 0, 0, .75 );
-  		transition: width 0.2s ease-in;
-
-  		&:nth-child(1) {
-  			width: 22px;
-  		}
-
-  		&:nth-child(3) {
-  			width: 24px;
-  		}
-  	}
-
-  	&:hover, &:focus {
-	  	hr {
-	  		&:nth-child(1), &:nth-child(3) {
-	  			width: 30px;
-	  		}
-	  	}
-  	}
-  }
-
   .gs-nav__nav {
   	height: 0px;
   	overflow: hidden;
   	transition: height 0.3s ease-in-out;
-
-		// Only direct LIs
-		> ul > li {
-			border-bottom: 1px solid rgba( 0, 0, 0, .15 );
-		}
 		
-		&.visible{
+		&.visible {
 			height: auto;
 		}
   }
@@ -156,45 +109,12 @@ $gs-light-grey: #f3f3f3;
 		}
 	}
 
-	// Nested ULs
-  ul ul {
-  	margin-left: 1em;
-  	height: 0px;
-  }
-
-	.active {
-		border-bottom-color: transparent;
-
-		> ul{
-			padding-bottom: 2em;
-		}
-
-		> ul {
-			height: auto;
-		}
-
-		> a {
-			&:after {
-				content: '';
-				width: 0;
-				height: 0;
-				border-left: 4px solid transparent;
-				border-right: 4px solid transparent;
-				border-bottom: 4px solid #212121;
-				position: absolute;
-				top: 50%;
-				right: 1.5em;
-				margin-top: -2px;
-			}
-		}
-	}
-
 	@media ( get-breakpoint('x-large') ) {
 	  position: fixed;
 	  top: 0;
 	  left: 0;
 	  bottom: 0;
-	  width: 240px;
+	  width: $navigation-width;
 	  font-size: .825em;
 	  border-right: 1px solid rgba( 0, 0, 0, .15 );
 	  overflow: scroll;
@@ -218,7 +138,9 @@ $gs-light-grey: #f3f3f3;
 	}
 }
 
-.gs-nav__link {
+
+
+.navigation__link {
   display: block;
   position: relative;
   text-decoration: none;
@@ -230,6 +152,42 @@ $gs-light-grey: #f3f3f3;
   &:focus {
     background: #f3f3f3;
   }
+}
+
+.section > ul {
+  height: 0;
+}
+
+.section .navigation__list-item {
+  border-bottom-color: transparent;
+
+  & > .navigation__link {
+    padding-left: 2rem;
+  }
+}
+
+.components-subitem.section .navigation__list-item > .navigation__link{
+  padding-left: 4rem;
+}
+
+.navigation__list-item > ul {
+  margin: 0;
+  padding: 0;
+}
+
+.section > .navigation__link.open {
+  border-bottom-color: transparent;
+
+  & + ul {
+    height: auto;
+  }
+}
+
+
+
+.navigation__list-item {
+  border-bottom: 1px solid rgba( 0, 0, 0, .15 );
+  margin: 0;
 }
 
 .gs-nav__section {
@@ -250,7 +208,7 @@ $gs-light-grey: #f3f3f3;
   font-weight: 500;
 }
 
-.gs-nav__section > .gs-nav__trigger {
+.navigation__link {
   position: relative;
 
   &::after {
@@ -270,7 +228,7 @@ $gs-light-grey: #f3f3f3;
   }
 }
 
-.gs-nav__section > .gs-nav__trigger.triggered {
+.section > .navigation__link.open {
   &::after {
     transform: rotate(0deg);
     opacity: 1;

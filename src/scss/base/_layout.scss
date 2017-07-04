@@ -14,6 +14,8 @@
   clear: both;
 }
 
+
+
 $grid--standard: (
         columns: 12,  // The number of columns in your grid
         gutters: 1/4, // The size of a gutter in relation to a single column
@@ -23,3 +25,122 @@ $grid--no-gutters: (
         columns: 12,  // The number of columns in your grid
         gutters: 0, // The size of a gutter in relation to a single column
 );
+
+
+
+///////////// Layouts Utilities ////////////////
+
+$max-widths: (
+        'large':  1240,
+        'medium': 800,
+        'small': 300
+);
+
+@function get-maxWidth($name) {
+  @return map-get($max-widths, $name) * 1px;
+}
+
+$spacers: (
+        'large':  (3rem, 3.5rem, 4rem, 4.5rem, 6rem),
+        'medium': (2rem, 2.5rem, 3rem, 4rem, 4.5rem),
+        'small': (.5rem, .5rem, 1rem, 1.5rem, 1.75rem)
+);
+
+$spacingTypes: map-keys($spacers);
+@each $spacer in $spacingTypes {
+  .spacer-#{$spacer} {
+    $breakpointSizes: map-keys($breakpoints);
+    padding: nth(map-get($spacers, $spacer), 1);
+
+
+    $counter: 1;
+    @each $breakpoint in $breakpointSizes {
+      @media (get-breakpoint($breakpoint)) {
+        padding: nth(map-get($spacers, $spacer), $counter);
+      }
+      $counter: $counter + 1;
+    }
+  }
+  .spacer-sides-#{$spacer} {
+    $breakpointSizes: map-keys($breakpoints);
+    padding: 0 nth(map-get($spacers, $spacer), 1);
+
+    $counter: 1;
+    @each $breakpoint in $breakpointSizes {
+      @media (get-breakpoint($breakpoint)) {
+        padding: 0 nth(map-get($spacers, $spacer), $counter);
+      }
+      $counter: $counter + 1;
+    }
+  }
+
+  .spacer-bottom-#{$spacer} {
+    $breakpointSizes: map-keys($breakpoints);
+
+    margin-bottom: nth(map-get($spacers, $spacer), 1);
+
+    $counter: 1;
+    @each $breakpoint in $breakpointSizes {
+      @media (get-breakpoint($breakpoint)) {
+        margin-bottom: nth(map-get($spacers, $spacer), $counter);
+      }
+      $counter: $counter + 1;
+    }
+  }
+}
+
+///////////// Layouts ////////////////
+
+$navigation-width: 240px;
+
+.navigation + div {
+  max-width: get-maxWidth('large');
+  margin: 0 auto;
+  width: 90%;
+}
+
+@media ( get-breakpoint('x-large') ) {
+  .navigation + div {
+    padding-left: $navigation-width;
+  }
+}
+
+
+@media ( get-breakpoint('x-large') ) {
+
+  %layout--two-one--base {
+    display: block;
+    width: 100%;
+
+    & > div {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+
+  .layout--one-two {
+    @extend %layout--two-one--base;
+    & > div:nth-child(1) {
+      width: 33%;
+      padding-right: 2%;
+    }
+
+    & > div:nth-child(2) {
+      width: 66%;
+      padding-left: 2%;
+    }
+  }
+
+  .layout--two-one {
+    @extend %layout--two-one--base;
+    & > div:nth-child(1) {
+      width: 66%;
+      padding-right: 2%;
+    }
+
+    & > div:nth-child(2) {
+      width: 33%;
+      padding-left: 2%;
+    }
+  }
+}

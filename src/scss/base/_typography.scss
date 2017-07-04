@@ -26,7 +26,8 @@ $type-styles: (
                 ('rc-head--display',     'heading--heavy-upper',   1.875em,    2.5em,      3.125em),
                 ('rc-head--headline',    'heading--heavy-upper',   1.375em,    1.75em,     2em),
                 ('rc-head--subheadline', 'heading-base',           1.125em,    1.375em,    1.5em),
-                ('rc-head--article',     'heading-base',           1em,        1.25em,     1.375em)
+                ('rc-head--article',     'heading-base',           1em,        1.25em,     1.375em),
+                ('label',                'emphasised-text',        1em,        1.1em,     1.2em)
 );
 
 $type-breakpoints: ('small', 'x-large');
@@ -36,13 +37,18 @@ $type-breakpoints: ('small', 'x-large');
 	color: colour('brand', 'red');
 	font-weight: 300;
 	line-height: 1.25;
-	margin-top: 1em;
+	margin-top: 0;
 	margin-bottom: .5em;
 }
 
 %heading--heavy-upper {
   font-weight: 700;
   text-transform: uppercase;
+}
+
+%emphasised-text {
+  font-weight: 500;
+  margin-bottom: .75em;
 }
 
 @each $style in $type-styles {

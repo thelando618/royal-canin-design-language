@@ -123,7 +123,7 @@
 }
 
 [disabled] .noUi-connect {
-  background: colour('brand', 'light-grey', 'lighter');
+  background: colour('brand', 'light-grey', 'light');
 }
 
 [disabled] .noUi-handle,
@@ -155,7 +155,7 @@
 
 .noUi-marker {
   position: absolute;
-  background: colour('brand', 'light-grey', 'lighter');
+  background: colour('brand', 'light-grey', 'light');
 }
 
 .noUi-pips-horizontal {
@@ -174,7 +174,7 @@
 .noUi-tooltip {
   display: block;
   position: absolute;
-  border: 1px solid colour('brand', 'light-grey', 'lighter');
+  border: 1px solid colour('brand', 'light-grey', 'light');
   border-radius: 3px;
   background: white;
   color: black;

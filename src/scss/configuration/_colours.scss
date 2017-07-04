@@ -3,7 +3,6 @@ $colours: (
                 'red':  #E2001A,
                 'medium-grey': #87888A,
                 'light-grey':  #EAEAEA,
-                'lighter-grey': #F7F7F7,
                 'white': #FFF
         ),
         'functional': (
@@ -11,15 +10,10 @@ $colours: (
                 'functional': #8EC9D6,
                 'success': #5FCC78,
                 'error': #C71838
-        ),
-        'portal': (
-                'light-grey': #f3f3f3
         )
 );
 
 $tint-tone: (
-        'darker': -15,
-        'dark': -5,
-        'light': 5,
-        'lighter': 10
+        'dark': -20,
+        'light': 15
 );

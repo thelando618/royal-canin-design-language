@@ -20,7 +20,7 @@ input:required {
   }
 
   &:disabled {
-    background-color: colour('brand', 'medium-grey', 'lighter');
+    background-color: colour('brand', 'medium-grey', 'light');
 
     & + label {
       opacity: .3;
@@ -48,7 +48,7 @@ input:required {
 textarea {
   resize: vertical;
   height: 200px;
-  background: colour('brand', 'lighter-grey');
+  background: colour('brand', 'light-grey', 'light');
 }
 
 input[type="checkbox"],
@@ -167,7 +167,7 @@ input[data-toggle^="datepicker"] {
     margin-bottom: 0;
     padding: .75em;
     box-shadow: none;
-    background: colour('brand', 'lighter-grey');
+    background: colour('brand', 'light-grey', 'light');
   }
 
   label,
@@ -344,7 +344,7 @@ input[data-toggle^="datepicker"] {
   position: absolute;
   z-index: 1;
   box-sizing: content-box;
-  box-shadow: 0 0 1em colour('brand', 'medium-grey', 'lighter');
+  box-shadow: 0 0 1em colour('brand', 'medium-grey', 'light');
 }
 
 .datepicker-panel {
@@ -472,7 +472,7 @@ input[data-toggle^="datepicker"] {
   }
 
   &:active {
-    background-color: colour('brand', 'white', 'darker');
+    background-color: colour('brand', 'white', 'dark');
   }
 }
 
@@ -644,11 +644,11 @@ input[data-toggle^="datepicker"] {
       opacity: .5;
     }
     .select2-results__option[aria-selected=true] {
-      background-color: colour('functional', 'functional', 'lighter');
+      background-color: colour('functional', 'functional', 'light');
     }
 
     .select2-results__option--highlighted[aria-selected] {
-      background-color: colour('functional', 'functional', 'lighter');
+      background-color: colour('functional', 'functional', 'light');
     }
   }
 }
@@ -657,7 +657,7 @@ input[data-toggle^="datepicker"] {
   display: block;
 
   .select2-search__field {
-    border-bottom: 1px solid colour('brand', 'medium-grey', 'lighter');
+    border-bottom: 1px solid colour('brand', 'medium-grey', 'light');
     padding: .75em;
     margin-bottom: 0;
     box-shadow: none;

@@ -81,7 +81,7 @@
   }
 
   &:active {
-    background-color: colour('brand', 'red', 'darker');
+    background-color: colour('brand', 'red', 'dark');
   }
 
   &:disabled {
@@ -201,20 +201,23 @@ $icons: ('icon-search', 'icon-arrow-right', 'icon-check');
   }
 }
 
-// Button icon variants.
-@each $button in $buttons {
-  @each $icon in $icons {
-    .button--#{$button}--#{$icon} {
-      @extend %button--#{$button};
-      @extend %#{$icon};
-    }
-  }
-}
 
 // Button icon variants.
 @each $button in $buttons {
   @each $icon in $icons {
+
+    .button--#{$button}--#{$icon} {
+      @extend %button--#{$button};
+      @extend %#{$icon};
+    }
+
     @each $variant in $variants {
+
+      .button--#{$icon}--#{$variant} {
+        @extend %button--#{$variant};
+        @extend %#{$icon};
+      }
+
       .button--#{$button}--#{$icon}--#{$variant} {
         @extend %button--#{$button};
         @extend %button--#{$variant};
@@ -235,17 +238,17 @@ $icons: ('icon-search', 'icon-arrow-right', 'icon-check');
   }
 
   &:active {
-    background-color: colour('functional', 'functional', 'darker');
+    background-color: colour('functional', 'functional', 'dark');
   }
 }
 
 .button--functional--loading {
-  background-color: colour('functional', 'functional', 'darker');
+  background-color: colour('functional', 'functional', 'dark');
 
   &:hover,
   &:focus,
   &:active {
-    background-color: colour('functional', 'functional', 'darker');
+    background-color: colour('functional', 'functional', 'dark');
   }
 
   &::after {
@@ -267,7 +270,7 @@ $icons: ('icon-search', 'icon-arrow-right', 'icon-check');
   }
 
   &:active {
-    background-color: colour('functional', 'success', 'darker');
+    background-color: colour('functional', 'success', 'dark');
   }
 
   &::after {
@@ -286,7 +289,7 @@ $icons: ('icon-search', 'icon-arrow-right', 'icon-check');
   }
 
   &:active {
-    background-color: colour('brand', 'red', 'darker');
+    background-color: colour('brand', 'red', 'dark');
   }
 
   &::after {

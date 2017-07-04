@@ -64,7 +64,7 @@ ul, ol {
 }
 
 .list--significance__item {
-  border-bottom: 1px solid colour('brand', 'medium-grey', 'lighter');
+  border-bottom: 1px solid colour('brand', 'medium-grey', 'light');
   margin-bottom: 0;
   // @todo make transition into a variable?
   display: block;
@@ -81,11 +81,11 @@ ul, ol {
 
   &:hover,
   &:focus {
-    background-color: colour('brand', 'lighter-grey', 'lighter');
+    background-color: colour('brand', 'light-grey', 'light');
   }
 
   &.active {
-    background-color: colour('brand', 'lighter-grey', 'lighter');
+    background-color: colour('brand', 'light-grey', 'light');
     border-left: 4px solid colour('brand', 'red');
 
     &:before {

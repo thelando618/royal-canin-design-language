@@ -19,7 +19,7 @@
 
 	&.alert--success {
 		border-color: colour('functional', 'success');
-		color: colour('functional', 'success', 'darker');
+		color: colour('functional', 'success', 'dark');
 		background-color: transparentize( colour('functional', 'success'), .9 );
 	}
 
