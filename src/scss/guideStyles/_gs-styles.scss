@@ -8,44 +8,8 @@
 */
 
 
-/* 
-	Info: Gulp Styleguide Sub Navigation
-	Dest: _lists
-	Note: The positioning rules may have to stay here
-*/
-
-// DIN Pro
-@font-face {
-  font-family: 'DIN Pro';
-  src: url('../fonts/din_pro.woff2') format('woff2'),
-  url('../fonts/din_pro.woff') format('woff'),
-  url('../fonts/din_pro.ttf') format('truetype');
-  font-style: normal;
-  font-weight: 300;
-}
-
-// DIN Pro Medium
-@font-face {
-  font-family: 'DIN Pro';
-  src: url('../fonts/din_pro_medium.woff2') format('woff2'),
-  url('../fonts/din_pro_medium.woff') format('woff'),
-  url('../fonts/din_pro_medium.ttf') format('truetype');
-  font-style: normal;
-  font-weight: 500;
-}
-
-// DIN Pro Bold
-@font-face {
-  font-family: 'DIN Pro';
-  src: url('../fonts/din_pro_bold.woff2') format('woff2'),
-  url('../fonts/din_pro_bold.woff') format('woff'),
-  url('../fonts/din_pro_bold.ttf') format('truetype');
-  font-style: normal;
-  font-weight: 700;
-}
 
 // Font stack variable
-$font-din: "DIN Pro", 'Avenir', Helvetica, Arial, sans-serif;
 
 // Colours
 
@@ -57,137 +21,6 @@ $gs-light-grey: #f3f3f3;
 
 .gs-present--white {
   background-color: lightgrey;
-}
-
-.navigation {
-  background-color: colour('brand', 'white');
-  display: block;
-  z-index: 10;
-  color: colour('functional', 'text');
-  font-size: .75em;
-  position: relative;
-
-  .gs-nav__header {
-  	position: relative;
-  }
-
-  .gs-logo {
-  	margin: 0;
-  	padding: 0.5em 1em;
-  	border-bottom: 1px solid rgba( 0, 0, 0, .15 );
-
-  	img {
-  		max-width: 100px;
-  	}
-  }
-
-  .gs-nav__nav {
-  	height: 0px;
-  	overflow: hidden;
-  	transition: height 0.3s ease-in-out;
-		
-		&.visible {
-			height: auto;
-		}
-  }
-
-  ul {
-  	// See if this can be put into a class that lives in _nav.html
-  	list-style-type: none;
-  	margin: 0;
-  	padding: 0;
-  	transition: height 0.3s ease-in-out;
-  }
-
-	li {
-		overflow: hidden;
-		ul {
-			a {
-				padding-top: 1em;
-				padding-bottom: 1em;
-			}
-		}
-	}
-
-	@media ( get-breakpoint('x-large') ) {
-	  position: fixed;
-	  top: 0;
-	  left: 0;
-	  bottom: 0;
-	  width: $navigation-width;
-	  font-size: .825em;
-	  border-right: 1px solid rgba( 0, 0, 0, .15 );
-	  overflow: scroll;
-
-	  .gs-logo {
-		  padding: 0;
-		  
-	  	img {
-	  		max-width: 120px;
-	  		margin: 0.7em auto;
-	  	}
-	  }
-
-	  .gs-nav__nav {
-	  	height: auto !important; // Exists to override any JS applied from toggling the mobile nav.
-	  }
-
-	  #gs-nav-trigger {
-	  	display: none;
-	  }
-	}
-}
-
-
-
-.navigation__link {
-  display: block;
-  position: relative;
-  text-decoration: none;
-  color: inherit;
-  padding: 1.2em 0 1.2em 1.2em;
-  transition: color .1s ease-in;
-  text-transform: capitalize;
-
-  &:focus {
-    background: #f3f3f3;
-  }
-}
-
-.section > ul {
-  height: 0;
-}
-
-.section .navigation__list-item {
-  border-bottom-color: transparent;
-
-  & > .navigation__link {
-    padding-left: 2rem;
-  }
-}
-
-.components-subitem.section .navigation__list-item > .navigation__link{
-  padding-left: 4rem;
-}
-
-.navigation__list-item > ul {
-  margin: 0;
-  padding: 0;
-}
-
-.section > .navigation__link.open {
-  border-bottom-color: transparent;
-
-  & + ul {
-    height: auto;
-  }
-}
-
-
-
-.navigation__list-item {
-  border-bottom: 1px solid rgba( 0, 0, 0, .15 );
-  margin: 0;
 }
 
 .gs-nav__section {
@@ -228,7 +61,7 @@ $gs-light-grey: #f3f3f3;
   }
 }
 
-.section > .navigation__link.open {
+.section:not(.test-subitem) > .navigation__link.open {
   &::after {
     transform: rotate(0deg);
     opacity: 1;
@@ -419,93 +252,6 @@ $gs-light-grey: #f3f3f3;
 	Dest: n/a 
 	Note: These rules will likely have to remain in a Gulp Styleguide Sass partial
 */
-
-
-.gs-splash{
-	
-	.gs-stage__content__head-tag{
-		
-		@media ( min-width: 1280px ) {
-			margin-bottom: 1em;
-		}
-	}
-}
-
-.gs-splash_card{
-	border: 1px solid #EAEAEA;
-	position: relative;
-	
-	a{
-		text-decoration: none;
-	}
-	
-	.gs-splash__card__header{
-		background: #F7F7F7;
-		position: relative;
-		
-		.icon-play{
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 45px;
-			height: 45px;
-			background: colour('functional', 'functional');
-			display: block;
-			padding: 0.5em;
-			text-align: center;
-			line-height: 36px;
-			cursor: pointer;
-			
-			svg{
-				fill: colour('brand', 'white');
-				width: 25px;
-				height: 22px;
-			}
-			
-			&:hover{
-				background: colour('functional', 'functional', 'dark');
-			}
-		}
-		
-		img{
-			margin: 0 auto;
-		}
-	}
-	
-	.gs-splash__card__body {
-		height: 150px;
-		padding: 1em;
-		
-		h3{
-			margin: 0;
-			font-size: 1.75em;
-		}
-		
-		svg{
-			fill: #e2001a;
-			width: 40px;
-			position: absolute;
-			bottom: 1.5em;
-			right: 1.5em;
-		}
-		
-		@media (get-breakpoint('small')) {
-			
-			h3{
-				font-size: 1.35em;
-			}	
-		}
-		
-		@media ( min-width: 1280px ) {
-			
-			h3{
-				font-size: 1.75em;
-			}	
-		}
-	}
-}
-
-
 
 
 

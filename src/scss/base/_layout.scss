@@ -46,6 +46,10 @@ $spacers: (
         'small': (.5rem, .5rem, 1rem, 1.5rem, 1.75rem)
 );
 
+@function get-spacer($size) {
+  @return nth(map-get($spacers, $size), 3);
+}
+
 $spacingTypes: map-keys($spacers);
 @each $spacer in $spacingTypes {
   .spacer-#{$spacer} {
@@ -94,9 +98,12 @@ $spacingTypes: map-keys($spacers);
 $navigation-width: 240px;
 
 .navigation + div {
-  max-width: get-maxWidth('large');
-  margin: 0 auto;
+  margin: get-spacer('small') auto;
   width: 90%;
+
+  @media (get-breakpoint('small')) {
+  margin: get-spacer('large') auto;
+  }
 }
 
 @media ( get-breakpoint('x-large') ) {

@@ -1,0 +1,80 @@
+.card--featured {
+  @extend %on-white-outline;
+  position: relative;
+
+  & > a {
+    text-decoration: none;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 2.5rem;
+      height: 2.5rem;
+      background-color: green;
+    }
+  }
+
+  .card--featured__header {
+    position: relative;
+    background-color: colour('brand', 'light-grey', 'light');
+
+    .icon-play {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 45px;
+      height: 45px;
+      background: colour('functional', 'functional');
+      display: block;
+      padding: 0.5em;
+      text-align: center;
+      line-height: 36px;
+      cursor: pointer;
+
+      &:hover {
+        background: colour('functional', 'functional', 'dark');
+      }
+      &::after {
+        content: 'ICON MISSING';
+      }
+    }
+
+    img{
+      margin: 0 auto;
+    }
+  }
+
+  .card--featured__body {
+    height: 150px;
+    padding: 1em;
+
+    h3{
+      margin: 0;
+      font-size: 1.75em;
+    }
+
+    svg{
+      fill: #e2001a;
+      width: 40px;
+      position: absolute;
+      bottom: 1.5em;
+      right: 1.5em;
+    }
+
+    @media (get-breakpoint('small')) {
+
+      h3{
+        font-size: 1.35em;
+      }
+    }
+
+    @media ( min-width: 1280px ) {
+
+      h3{
+        font-size: 1.75em;
+      }
+    }
+  }
+}

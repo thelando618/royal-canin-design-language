@@ -34,11 +34,11 @@ $type-breakpoints: ('small', 'x-large');
 
 
 %heading-base {
-	color: colour('brand', 'red');
-	font-weight: 300;
-	line-height: 1.25;
-	margin-top: 0;
-	margin-bottom: .5em;
+  color: colour('brand', 'red');
+  font-weight: 300;
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: .5em;
 }
 
 %heading--heavy-upper {
@@ -61,6 +61,11 @@ $type-breakpoints: ('small', 'x-large');
         font-size: nth($style, index($type-breakpoints, $breakpoint) + 3)
       }
     }
+  }
+
+  .#{nth($style, 1)}--black {
+    @extend .#{nth($style, 1)};
+    color: colour('functional', 'text');
   }
 }
 
