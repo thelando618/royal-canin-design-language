@@ -5,11 +5,5 @@ Thumbs.db
 # Node
 node_modules/
 
-# Sass
-.sass-cache/*
-/sass-cache
-
-# Styleguide
-# On gh-pages branch, acknowledge public directiory
-# public
-dist
+# Styleguide generated assets. To be removed when we move to live complied workflow.
+# dist
