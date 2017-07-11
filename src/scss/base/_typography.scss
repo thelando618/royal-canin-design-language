@@ -27,7 +27,7 @@ $type-styles: (
                 ('rc-head--headline',    'heading--heavy-upper',   1.375em,    1.75em,     2em),
                 ('rc-head--subheadline', 'heading-base',           1.125em,    1.375em,    1.5em),
                 ('rc-head--article',     'heading-base',           1em,        1.25em,     1.375em),
-                ('label',                'emphasised-text',        1em,        1.1em,     1.2em)
+                ('label',                'emphasised-text',        1em,        1.1em,      1.2em)
 );
 
 $type-breakpoints: ('small', 'x-large');
@@ -67,6 +67,19 @@ $type-breakpoints: ('small', 'x-large');
     @extend .#{nth($style, 1)};
     color: colour('functional', 'text');
   }
+}
+
+
+.font--regular {
+  font-weight: 300;
+}
+
+.font--medium {
+  font-weight: 500;
+}
+
+.font--bold {
+  font-weight: 700;
 }
 
 

@@ -70,7 +70,6 @@ ul, ol {
   display: block;
   padding: 1em;
   padding-right: 3.5em;
-  text-decoration: none;
   color: colour('functional', 'text');
   background-color: #FFFFFF;
   transition: background 0.1s ease-in;
@@ -101,6 +100,11 @@ ul, ol {
       border-bottom: 4px solid transparent;
     }
   }
+}
+
+.list--significance__link {
+  text-decoration: none;
+  color: colour('functional', 'text');
 }
 
 %list--icon {
