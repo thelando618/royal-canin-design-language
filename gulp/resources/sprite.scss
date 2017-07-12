@@ -1,0 +1,34 @@
+{{#hasMixin}}@mixin {{mixinName}} {
+	background: url("sprite.css.svg") no-repeat;
+}
+
+{{#hasCommon}}.{{commonName}} {
+	@include {{mixinName}};
+}
+
+{{/hasCommon}}{{/hasMixin}}{{^hasMixin}}{{#hasCommon}}.{{/hasCommon}}{{^hasCommon}}%{{/hasCommon}}{{commonName}} {
+    background-image: url("sprite.css.svg");
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+}
+
+{{/hasMixin}}{{#shapes}}{{#selector.shape}}{{expression}}{{^last}},
+{{/last}}{{/selector.shape}} {
+  &::after {
+	{{^hasCommon}}{{#hasMixin}}@include {{mixinName}};{{/hasMixin}}{{^hasMixin}}@extend %{{commonName}};{{/hasMixin}}
+	{{/hasCommon}}background-position: {{position.relative.xy}};{{#dimensions.inline}}
+	width: {{width.outer}}px;
+	height: {{height.outer}}px;{{/dimensions.inline}}
+  }
+}{{#dimensions.extra}}
+
+{{#selector.dimensions}}{{expression}}{{^last}},
+{{/last}}{{/selector.dimensions}} {
+  &::after {
+	width: {{width.outer}}px;
+	height: {{height.outer}}px;
+  }
+}{{/dimensions.extra}}
+
+{{/shapes}}

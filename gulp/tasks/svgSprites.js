@@ -11,9 +11,12 @@ module.exports = function (task, gulp, sitesettings, need, taskObj) {
     log: 'debug',
     mode					: {
       css					: {			// Create a «css» sprite
-        render			: {
+        dest: '.',
+        bust: false,
+        render		: {
           scss		: {
-            dest: 'icons.scss'
+            dest: '../../src/icons/icons.scss',
+            template: './gulp/resources/sprite.scss'
           }		// Render a Sass stylesheet
         },
         prefix: '.'
@@ -23,7 +26,7 @@ module.exports = function (task, gulp, sitesettings, need, taskObj) {
       whitespace	: '-',
       spacing			: {                         // Spacing related options
         padding		: 0,                        // Padding around all shapes
-        box         : 'content'               // Padding strategy (similar to CSS `box-sizing`)
+        box       : 'border'               // Padding strategy (similar to CSS `box-sizing`)
       },
       dimension		: {                         // Dimension related options
         maxWidth	: 50,                       // Max. shape width
@@ -51,6 +54,6 @@ module.exports = function (task, gulp, sitesettings, need, taskObj) {
       .on('error', function(error){
         console.log(error);
       })
-      .pipe(gulp.dest('./src/icons/'))
+      .pipe(gulp.dest('./dist/icons'))
   })
 }

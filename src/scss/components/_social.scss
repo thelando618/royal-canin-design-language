@@ -32,16 +32,6 @@ $social-color-youtube: #CD201F;
   .social-links__item {
     margin: 0;
   }
-
-  svg {
-    display: block;
-    width: 1em;
-    height: 1em;
-    margin: 0;
-    line-height: 1;
-    fill: colour('brand', 'white');
-    transition: transform .2s ease-in-out;
-  }
 }
 
 .social-links {
@@ -50,15 +40,25 @@ $social-color-youtube: #CD201F;
 
 %social-link {
   display: block;
-  padding: .5em;
+  position: relative;
+  width: 50px;
+  height: 50px;
   border-radius: 100%;
-  background-color: navy;
+  transform: scale(0.8);
   transition: background-color .2s ease-in-out;
 
+  &::after {
+    height: 65px;
+    width: 65px;
+    position: absolute;
+    top: .75rem;
+    left: .75rem;
+    transform: scale(0.4);
+    transform-origin: 0 0;
+  }
+
   &:hover {
-    svg {
-      transform: scale( 1.125 );
-    }
+      transform: scale( 0.9 );
   }
 }
 
@@ -71,23 +71,23 @@ $social-color-youtube: #CD201F;
 
 .social__network--facebook {
   @extend %social-link;
-  background: $social-color-facebook;
+  background-color: $social-color-facebook;
 }
 
 .social__network--instagram {
   @extend %social-link;
-  background: $social-color-instagram-fallback; // IE9
-  background: $social-color-instagram;
+  background-color: $social-color-instagram-fallback; // IE9
+  background-image: $social-color-instagram;
 }
 
 .social__network--twitter {
   @extend %social-link;
-  background: $social-color-twitter;
+  background-color: $social-color-twitter;
 }
 
 .social__network--youtube {
   @extend %social-link;
-  background: $social-color-youtube;
+  background-color: $social-color-youtube;
 }
 
 .social-links__label {
@@ -102,14 +102,14 @@ $social-color-youtube: #CD201F;
   @extend %social-links;
 
   .social-links__item > a {
-    background: colour('brand', 'red');
+    background-color: colour('brand', 'red');
 
     &:hover, &:focus {
-      background: colour('brand', 'red', 'dark');
+      background-color: colour('brand', 'red', 'dark');
     }
 
     &:active {
-      background: colour('brand', 'red', 'dark');
+      background-color: colour('brand', 'red', 'dark');
     }
   }
 }
@@ -118,18 +118,14 @@ $social-color-youtube: #CD201F;
   @extend %social-links;
 
   .social-links__item > a {
-    background: colour('brand', 'white');
-
-    svg {
-      fill: colour('brand', 'red');
-    }
+    background-color: colour('brand', 'white');
 
     &:hover, &:focus {
-      background: colour('brand', 'white', 'dark');
+      background-color: colour('brand', 'white', 'dark');
     }
 
     &:active {
-      background: colour('brand', 'white', 'dark');
+      background-color: colour('brand', 'white', 'dark');
     }
   }
 }
