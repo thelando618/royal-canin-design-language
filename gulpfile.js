@@ -28,7 +28,7 @@
       pretasks: ['svgSprites', 'sass', 'jsProcessing'],
       watch: {
         active: true,
-        files: [sitesettings.watch.sass]
+        files: [sitesettings.watch.sass, sitesettings.watch.js]
       },
       linting: {
         testSass: true
@@ -46,8 +46,19 @@
       }
     },
     'svgSprites': {
+      subtasks: ['svgSprites'],
+      pretasks: [],
+      watch: {
+        active: false,
+        files: [sitesettings.watch.sass]
+      },
+      linting: {
+        testSass: true
+      }
+    },
+    'prepAssets': {
       subtasks: [],
-      pretasks: ['svgSprites'],
+      pretasks: ['svgo'],
       watch: {
         active: false,
         files: [sitesettings.watch.sass]

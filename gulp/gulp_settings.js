@@ -25,6 +25,9 @@ location['cssdest'] = 'dist/css';
 location['cssoutput'] = 'royal-canin.styles.css';
 location['cssoutput-min'] = 'royal-canin.styles.min.css';
 
+
+location['js'] = 'src/js'
+
 location['jsdest'] = 'dist/js';
 location['jsoutput'] = 'royal-canin.js';
 location['jsoutput-min'] = 'royal-canin.min.js';

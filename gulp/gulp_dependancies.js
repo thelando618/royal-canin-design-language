@@ -1,4 +1,4 @@
-let need = {};
+var need = {};
 
 need.path = require('path');
 
@@ -27,6 +27,7 @@ need.eslint = require('gulp-eslint');
 need.concat = require('gulp-concat');
 need.uglify = require('gulp-uglify');
 
-need.svgSprite = require('gulp-svg-sprite')
+need.svgSprite = require('gulp-svg-sprite');
+need.recolorSvg = require("gulp-recolor-svg");
 
 module.exports = need;
