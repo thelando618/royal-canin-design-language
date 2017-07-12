@@ -119,6 +119,7 @@ $social-color-youtube: #CD201F;
 
   .social-links__item > a {
     background-color: colour('brand', 'white');
+    background-image: none;
 
     &:hover, &:focus {
       background-color: colour('brand', 'white', 'dark');

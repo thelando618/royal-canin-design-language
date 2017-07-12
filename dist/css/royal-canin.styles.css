@@ -4208,6 +4208,7 @@ ul svg,ol svg {
 
 .social-links--red-icons .social-links__item > a {
   background-color: #FFF;
+  background-image: none;
 }
 
 .social-links--red-icons .social-links__item > a:hover,.social-links--red-icons .social-links__item > a:focus {
