@@ -269,998 +269,593 @@ sup {
   display: none;
 }
 
-.svgs--Arrow,.svgs--Basket,.svgs--Basket_Red,.svgs--Basket_White,.svgs--Bowl,.svgs--Bowl_Red,.svgs--Bowl_White,.svgs--Calendar,.svgs--Calendar_Light,.svgs--Calendar_Red,.svgs--Check_Heavy,.svgs--Check_Heavy_Red,.svgs--Check_Heavy_Success,.svgs--Check_Light,.svgs--Clock,.svgs--Clock_Light,.svgs--Clock_Red,.svgs--Cross,.svgs--Cross_Heavy,.svgs--Cross_Heavy_Error,.svgs--Cross_Heavy_Red,.svgs--Cross_Light,.svgs--Cross_Red,.svgs--Crown,.svgs--Crown_Red,.svgs--Crown_White,.svgs--Down_Arrow,.svgs--Down_Arrow_Heavy,.svgs--Down_Arrow_Heavy_Light,.svgs--Down_Arrow_Heavy_Red,.svgs--Down_Arrow_Light,.svgs--Down_Arrow_Red,.svgs--Eye_Heavy,.svgs--Eye_Heavy_Light_Copy,.svgs--Eye_Heavy_Red,.svgs--Generic_Icon,.svgs--Generic_Icon_Light,.svgs--Generic_Icon_Red,.svgs--Left_Arrow,.svgs--Left_Arrow_Heavy_Light,.svgs--Left_Arrow_Red,.svgs--Left_Heavy_Arrow,.svgs--Left_Heavy_Arrow_Red,.svgs--Loader,.svgs--Loader_Light,.svgs--Loader_Red,.svgs--Location,.svgs--Location_Red,.svgs--Loyalty_Heavy,.svgs--Loyalty_Heavy_Light,.svgs--Loyalty_Heavy_Red,.svgs--MacBook,.svgs--MacBook_Light,.svgs--MacBook_Red,.svgs--Mail,.svgs--Mail_Light,.svgs--Mail_Red,.svgs--Mobile,.svgs--Mobile_Light,.svgs--Mobile_Red,.svgs--Play,.svgs--Play_Light,.svgs--Play_Red,.svgs--Player,.svgs--Player_Light,.svgs--Player_Red,.svgs--Pointer,.svgs--Pointer_Light,.svgs--Pointer_Red,.svgs--Right_Arrow,.svgs--Right_Arrow_Heavy,.svgs--Right_Arrow_Heavy_Light,.svgs--Right_Arrow_Heavy_Red,.svgs--Right_Arrow_Light,.svgs--Right_Arrow_Red,.svgs--Search,.svgs--Search_Light,.svgs--Search_Red,.svgs--Select_Down_Arrow,.svgs--Select_Down_Arrow_Light,.svgs--Select_Down_Arrow_Red,.svgs--Select_Up_Arrow,.svgs--Select_Up_Arrow_Light,.svgs--Select_Up_Arrow_Red,.svgs--Speech,.svgs--Speech_Light,.svgs--Speech_Red,.svgs--Star,.svgs--Star_Light,.svgs--Star_Red,.svgs--Success,.svgs--Success_Light,.svgs--Success_Red,.svgs--Toggle,.svgs--Toggle_Light,.svgs--Toggle_Red,.svgs--Up_Arrow,.svgs--Up_Arrow_Heavy,.svgs--Up_Arrow_Heavy_Light,.svgs--Up_Arrow_Heavy_Red,.svgs--Up_Arrow_Light,.svgs--Up_Arrow_Red,.svgs--User,.svgs--User_Light,.svgs--User_Red,.svgs--Vet,.svgs--Vet_Red,.svgs--Volume,.svgs--Volume_Light,.svgs--Volume_Red {
-  background: url("svg/sprite.css-e7bbbc94.svg") no-repeat;
+.calendar--black,.calendar--grey,.calendar--red,.check--black,.check--grey,.check--red,.check--v2--black,.check--v2--grey,.check--v2--red,.chevron--down--black,.chevron--down--grey,.chevron--down--red,.chevron--heavy--down--black,.chevron--heavy--down--grey,.chevron--heavy--down--red,.male--grey,.male--red,.partner--black,.partner--grey,.partner--red,.pharmacy--black,.pharmacy--grey,.pharmacy--red,.phone--black,.phone--grey,.phone--red,.pintrest--black,.pintrest--grey,.pintrest--red,.play--black,.play--grey,.play--red,.play--v2--black,.play--v2--grey,.play--v2--red,.rating--black,.rating--grey,.rating--red,.search--black,.search--grey,.search--red,.shelter--black,.shelter--grey,.shelter--red,.speciality-retailer--black,.speciality-retailer--grey,.speciality-retailer--red,.toggle--black,.toggle--grey,.toggle--red,.user--black,.user--grey,.user--red,.vet--black,.vet--grey,.vet--red,.vet-v2--black,.vet-v2--grey,.vet-v2--red,.view--black,.view--grey,.view--red,.volume--black,.volume--grey,.volume--red {
+  background: url("svg/sprite.css-27396f42.svg") no-repeat;
 }
 
-.svgs--Arrow {
-  background-position: 10% 0;
+.calendar--black {
+  background-position: 12.5% 0;
 }
 
-.svgs--Arrow-dims {
-  width: 20px;
-  height: 20px;
+.calendar--black-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Basket {
-  background-position: 70% 66.66666666666667%;
+.calendar--grey {
+  background-position: 25% 71.42857142857143%;
 }
 
-.svgs--Basket-dims {
-  width: 20px;
-  height: 20px;
+.calendar--grey-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Basket_Red {
-  background-position: 0 11.11111111111111%;
+.calendar--red {
+  background-position: 0 14.285714285714286%;
 }
 
-.svgs--Basket_Red-dims {
-  width: 20px;
-  height: 20px;
+.calendar--red-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Basket_White {
-  background-position: 10% 11.11111111111111%;
+.check--black {
+  background-position: 12.5% 14.285714285714286%;
 }
 
-.svgs--Basket_White-dims {
-  width: 20px;
-  height: 20px;
+.check--black-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Bowl {
-  background-position: 20% 0;
+.check--grey {
+  background-position: 25% 0;
 }
 
-.svgs--Bowl-dims {
-  width: 20px;
-  height: 20px;
+.check--grey-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Bowl_Red {
-  background-position: 20% 11.11111111111111%;
+.check--red {
+  background-position: 25% 14.285714285714286%;
 }
 
-.svgs--Bowl_Red-dims {
-  width: 20px;
-  height: 20px;
+.check--red-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Bowl_White {
-  background-position: 0 22.22222222222222%;
+.check--v2--black {
+  background-position: 0 28.571428571428573%;
 }
 
-.svgs--Bowl_White-dims {
-  width: 20px;
-  height: 20px;
+.check--v2--black-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Calendar {
-  background-position: 10% 22.22222222222222%;
+.check--v2--grey {
+  background-position: 12.5% 28.571428571428573%;
 }
 
-.svgs--Calendar-dims {
-  width: 20px;
-  height: 20px;
+.check--v2--grey-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Calendar_Light {
-  background-position: 20% 22.22222222222222%;
+.check--v2--red {
+  background-position: 25% 28.571428571428573%;
 }
 
-.svgs--Calendar_Light-dims {
-  width: 20px;
-  height: 20px;
+.check--v2--red-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Calendar_Red {
-  background-position: 30% 0;
+.chevron--down--black {
+  background-position: 37.5% 0;
 }
 
-.svgs--Calendar_Red-dims {
-  width: 20px;
-  height: 20px;
+.chevron--down--black-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Check_Heavy {
-  background-position: 30% 11.11111111111111%;
+.chevron--down--grey {
+  background-position: 37.5% 14.285714285714286%;
 }
 
-.svgs--Check_Heavy-dims {
-  width: 20px;
-  height: 20px;
+.chevron--down--grey-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Check_Heavy_Red {
-  background-position: 30% 22.22222222222222%;
+.chevron--down--red {
+  background-position: 37.5% 28.571428571428573%;
 }
 
-.svgs--Check_Heavy_Red-dims {
-  width: 20px;
-  height: 20px;
+.chevron--down--red-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Check_Heavy_Success {
-  background-position: 0 33.333333333333336%;
+.chevron--heavy--down--black {
+  background-position: 0 42.857142857142854%;
 }
 
-.svgs--Check_Heavy_Success-dims {
-  width: 20px;
-  height: 20px;
+.chevron--heavy--down--black-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Check_Light {
-  background-position: 10% 33.333333333333336%;
+.chevron--heavy--down--grey {
+  background-position: 12.5% 42.857142857142854%;
 }
 
-.svgs--Check_Light-dims {
-  width: 20px;
-  height: 20px;
+.chevron--heavy--down--grey-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Clock {
-  background-position: 20% 33.333333333333336%;
+.chevron--heavy--down--red {
+  background-position: 25% 42.857142857142854%;
 }
 
-.svgs--Clock-dims {
-  width: 20px;
-  height: 20px;
+.chevron--heavy--down--red-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Clock_Light {
-  background-position: 30% 33.333333333333336%;
+.male--grey {
+  background-position: 37.5% 42.857142857142854%;
 }
 
-.svgs--Clock_Light-dims {
-  width: 20px;
-  height: 20px;
+.male--grey-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Clock_Red {
-  background-position: 40% 0;
-}
-
-.svgs--Clock_Red-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Cross {
-  background-position: 40% 11.11111111111111%;
-}
-
-.svgs--Cross-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Cross_Heavy {
-  background-position: 40% 22.22222222222222%;
-}
-
-.svgs--Cross_Heavy-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Cross_Heavy_Error {
-  background-position: 40% 33.333333333333336%;
-}
-
-.svgs--Cross_Heavy_Error-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Cross_Heavy_Red {
-  background-position: 0 44.44444444444444%;
-}
-
-.svgs--Cross_Heavy_Red-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Cross_Light {
-  background-position: 10% 44.44444444444444%;
-}
-
-.svgs--Cross_Light-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Cross_Red {
-  background-position: 20% 44.44444444444444%;
-}
-
-.svgs--Cross_Red-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Crown {
-  background-position: 30% 44.44444444444444%;
-}
-
-.svgs--Crown-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Crown_Red {
-  background-position: 40% 44.44444444444444%;
-}
-
-.svgs--Crown_Red-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Crown_White {
+.male--red {
   background-position: 50% 0;
 }
 
-.svgs--Crown_White-dims {
-  width: 20px;
-  height: 20px;
+.male--red-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Down_Arrow {
-  background-position: 50% 11.11111111111111%;
+.partner--black {
+  background-position: 50% 14.285714285714286%;
 }
 
-.svgs--Down_Arrow-dims {
-  width: 20px;
-  height: 20px;
+.partner--black-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Down_Arrow_Heavy {
-  background-position: 50% 22.22222222222222%;
+.partner--grey {
+  background-position: 50% 28.571428571428573%;
 }
 
-.svgs--Down_Arrow_Heavy-dims {
-  width: 20px;
-  height: 20px;
+.partner--grey-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Down_Arrow_Heavy_Light {
-  background-position: 50% 33.333333333333336%;
+.partner--red {
+  background-position: 50% 42.857142857142854%;
 }
 
-.svgs--Down_Arrow_Heavy_Light-dims {
-  width: 20px;
-  height: 20px;
+.partner--red-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Down_Arrow_Heavy_Red {
-  background-position: 50% 44.44444444444444%;
+.pharmacy--black {
+  background-position: 0 57.142857142857146%;
 }
 
-.svgs--Down_Arrow_Heavy_Red-dims {
-  width: 20px;
-  height: 20px;
+.pharmacy--black-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Down_Arrow_Light {
-  background-position: 0 55.55555555555556%;
+.pharmacy--grey {
+  background-position: 12.5% 57.142857142857146%;
 }
 
-.svgs--Down_Arrow_Light-dims {
-  width: 20px;
-  height: 20px;
+.pharmacy--grey-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Down_Arrow_Red {
-  background-position: 10% 55.55555555555556%;
+.pharmacy--red {
+  background-position: 25% 57.142857142857146%;
 }
 
-.svgs--Down_Arrow_Red-dims {
-  width: 20px;
-  height: 20px;
+.pharmacy--red-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Eye_Heavy {
-  background-position: 20% 55.55555555555556%;
+.phone--black {
+  background-position: 37.5% 57.142857142857146%;
 }
 
-.svgs--Eye_Heavy-dims {
-  width: 20px;
-  height: 20px;
+.phone--black-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Eye_Heavy_Light_Copy {
-  background-position: 30% 55.55555555555556%;
+.phone--grey {
+  background-position: 50% 57.142857142857146%;
 }
 
-.svgs--Eye_Heavy_Light_Copy-dims {
-  width: 20px;
-  height: 20px;
+.phone--grey-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Eye_Heavy_Red {
-  background-position: 40% 55.55555555555556%;
+.phone--red {
+  background-position: 62.5% 0;
 }
 
-.svgs--Eye_Heavy_Red-dims {
-  width: 20px;
-  height: 20px;
+.phone--red-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Generic_Icon {
-  background-position: 50% 55.55555555555556%;
+.pintrest--black {
+  background-position: 62.5% 14.285714285714286%;
 }
 
-.svgs--Generic_Icon-dims {
-  width: 20px;
-  height: 20px;
+.pintrest--black-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Generic_Icon_Light {
-  background-position: 60% 0;
+.pintrest--grey {
+  background-position: 62.5% 28.571428571428573%;
 }
 
-.svgs--Generic_Icon_Light-dims {
-  width: 20px;
-  height: 20px;
+.pintrest--grey-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Generic_Icon_Red {
-  background-position: 60% 11.11111111111111%;
+.pintrest--red {
+  background-position: 62.5% 42.857142857142854%;
 }
 
-.svgs--Generic_Icon_Red-dims {
-  width: 20px;
-  height: 20px;
+.pintrest--red-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Left_Arrow {
-  background-position: 60% 22.22222222222222%;
+.play--black {
+  background-position: 62.5% 57.142857142857146%;
 }
 
-.svgs--Left_Arrow-dims {
-  width: 20px;
-  height: 20px;
+.play--black-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Left_Arrow_Heavy_Light {
-  background-position: 60% 33.333333333333336%;
+.play--grey {
+  background-position: 0 71.42857142857143%;
 }
 
-.svgs--Left_Arrow_Heavy_Light-dims {
-  width: 20px;
-  height: 20px;
+.play--grey-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Left_Arrow_Red {
-  background-position: 60% 44.44444444444444%;
+.play--red {
+  background-position: 12.5% 71.42857142857143%;
 }
 
-.svgs--Left_Arrow_Red-dims {
-  width: 20px;
-  height: 20px;
+.play--red-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Left_Heavy_Arrow {
-  background-position: 60% 55.55555555555556%;
-}
-
-.svgs--Left_Heavy_Arrow-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Left_Heavy_Arrow_Red {
-  background-position: 0 66.66666666666667%;
-}
-
-.svgs--Left_Heavy_Arrow_Red-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Loader {
-  background-position: 10% 66.66666666666667%;
-}
-
-.svgs--Loader-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Loader_Light {
-  background-position: 20% 66.66666666666667%;
-}
-
-.svgs--Loader_Light-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Loader_Red {
-  background-position: 30% 66.66666666666667%;
-}
-
-.svgs--Loader_Red-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Location {
-  background-position: 40% 66.66666666666667%;
-}
-
-.svgs--Location-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Location_Red {
-  background-position: 50% 66.66666666666667%;
-}
-
-.svgs--Location_Red-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Loyalty_Heavy {
-  background-position: 60% 66.66666666666667%;
-}
-
-.svgs--Loyalty_Heavy-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Loyalty_Heavy_Light {
-  background-position: 70% 0;
-}
-
-.svgs--Loyalty_Heavy_Light-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Loyalty_Heavy_Red {
-  background-position: 70% 11.11111111111111%;
-}
-
-.svgs--Loyalty_Heavy_Red-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--MacBook {
-  background-position: 70% 22.22222222222222%;
-}
-
-.svgs--MacBook-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--MacBook_Light {
-  background-position: 70% 33.333333333333336%;
-}
-
-.svgs--MacBook_Light-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--MacBook_Red {
-  background-position: 70% 44.44444444444444%;
-}
-
-.svgs--MacBook_Red-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Mail {
-  background-position: 70% 55.55555555555556%;
-}
-
-.svgs--Mail-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Mail_Light {
+.play--v2--black {
   background-position: 0 0;
 }
 
-.svgs--Mail_Light-dims {
-  width: 20px;
-  height: 20px;
+.play--v2--black-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Mail_Red {
-  background-position: 0 77.77777777777777%;
+.play--v2--grey {
+  background-position: 37.5% 71.42857142857143%;
 }
 
-.svgs--Mail_Red-dims {
-  width: 20px;
-  height: 20px;
+.play--v2--grey-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Mobile {
-  background-position: 10% 77.77777777777777%;
+.play--v2--red {
+  background-position: 50% 71.42857142857143%;
 }
 
-.svgs--Mobile-dims {
-  width: 20px;
-  height: 20px;
+.play--v2--red-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Mobile_Light {
-  background-position: 20% 77.77777777777777%;
+.rating--black {
+  background-position: 62.5% 71.42857142857143%;
 }
 
-.svgs--Mobile_Light-dims {
-  width: 20px;
-  height: 20px;
+.rating--black-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Mobile_Red {
-  background-position: 30% 77.77777777777777%;
+.rating--grey {
+  background-position: 75% 0;
 }
 
-.svgs--Mobile_Red-dims {
-  width: 20px;
-  height: 20px;
+.rating--grey-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Play {
-  background-position: 40% 77.77777777777777%;
+.rating--red {
+  background-position: 75% 14.285714285714286%;
 }
 
-.svgs--Play-dims {
-  width: 20px;
-  height: 20px;
+.rating--red-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Play_Light {
-  background-position: 50% 77.77777777777777%;
+.search--black {
+  background-position: 75% 28.571428571428573%;
 }
 
-.svgs--Play_Light-dims {
-  width: 20px;
-  height: 20px;
+.search--black-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Play_Red {
-  background-position: 60% 77.77777777777777%;
+.search--grey {
+  background-position: 75% 42.857142857142854%;
 }
 
-.svgs--Play_Red-dims {
-  width: 20px;
-  height: 20px;
+.search--grey-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Player {
-  background-position: 70% 77.77777777777777%;
+.search--red {
+  background-position: 75% 57.142857142857146%;
 }
 
-.svgs--Player-dims {
-  width: 20px;
-  height: 20px;
+.search--red-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Player_Light {
-  background-position: 80% 0;
+.shelter--black {
+  background-position: 75% 71.42857142857143%;
 }
 
-.svgs--Player_Light-dims {
-  width: 20px;
-  height: 20px;
+.shelter--black-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Player_Red {
-  background-position: 80% 11.11111111111111%;
+.shelter--grey {
+  background-position: 0 85.71428571428571%;
 }
 
-.svgs--Player_Red-dims {
-  width: 20px;
-  height: 20px;
+.shelter--grey-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Pointer {
-  background-position: 80% 22.22222222222222%;
+.shelter--red {
+  background-position: 12.5% 85.71428571428571%;
 }
 
-.svgs--Pointer-dims {
-  width: 20px;
-  height: 20px;
+.shelter--red-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Pointer_Light {
-  background-position: 80% 33.333333333333336%;
+.speciality-retailer--black {
+  background-position: 25% 85.71428571428571%;
 }
 
-.svgs--Pointer_Light-dims {
-  width: 20px;
-  height: 20px;
+.speciality-retailer--black-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Pointer_Red {
-  background-position: 80% 44.44444444444444%;
+.speciality-retailer--grey {
+  background-position: 37.5% 85.71428571428571%;
 }
 
-.svgs--Pointer_Red-dims {
-  width: 20px;
-  height: 20px;
+.speciality-retailer--grey-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Right_Arrow {
-  background-position: 80% 55.55555555555556%;
+.speciality-retailer--red {
+  background-position: 50% 85.71428571428571%;
 }
 
-.svgs--Right_Arrow-dims {
-  width: 20px;
-  height: 20px;
+.speciality-retailer--red-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Right_Arrow_Heavy {
-  background-position: 80% 66.66666666666667%;
+.toggle--black {
+  background-position: 62.5% 85.71428571428571%;
 }
 
-.svgs--Right_Arrow_Heavy-dims {
-  width: 20px;
-  height: 20px;
+.toggle--black-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Right_Arrow_Heavy_Light {
-  background-position: 80% 77.77777777777777%;
+.toggle--grey {
+  background-position: 75% 85.71428571428571%;
 }
 
-.svgs--Right_Arrow_Heavy_Light-dims {
-  width: 20px;
-  height: 20px;
+.toggle--grey-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Right_Arrow_Heavy_Red {
-  background-position: 0 88.88888888888889%;
+.toggle--red {
+  background-position: 87.5% 0;
 }
 
-.svgs--Right_Arrow_Heavy_Red-dims {
-  width: 20px;
-  height: 20px;
+.toggle--red-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Right_Arrow_Light {
-  background-position: 10% 88.88888888888889%;
+.user--black {
+  background-position: 87.5% 14.285714285714286%;
 }
 
-.svgs--Right_Arrow_Light-dims {
-  width: 20px;
-  height: 20px;
+.user--black-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Right_Arrow_Red {
-  background-position: 20% 88.88888888888889%;
+.user--grey {
+  background-position: 87.5% 28.571428571428573%;
 }
 
-.svgs--Right_Arrow_Red-dims {
-  width: 20px;
-  height: 20px;
+.user--grey-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Search {
-  background-position: 30% 88.88888888888889%;
+.user--red {
+  background-position: 87.5% 42.857142857142854%;
 }
 
-.svgs--Search-dims {
-  width: 20px;
-  height: 20px;
+.user--red-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Search_Light {
-  background-position: 40% 88.88888888888889%;
+.vet--black {
+  background-position: 87.5% 57.142857142857146%;
 }
 
-.svgs--Search_Light-dims {
-  width: 20px;
-  height: 20px;
+.vet--black-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Search_Red {
-  background-position: 50% 88.88888888888889%;
+.vet--grey {
+  background-position: 87.5% 71.42857142857143%;
 }
 
-.svgs--Search_Red-dims {
-  width: 20px;
-  height: 20px;
+.vet--grey-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Select_Down_Arrow {
-  background-position: 60% 88.88888888888889%;
+.vet--red {
+  background-position: 87.5% 85.71428571428571%;
 }
 
-.svgs--Select_Down_Arrow-dims {
-  width: 20px;
-  height: 20px;
+.vet--red-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Select_Down_Arrow_Light {
-  background-position: 70% 88.88888888888889%;
-}
-
-.svgs--Select_Down_Arrow_Light-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Select_Down_Arrow_Red {
-  background-position: 80% 88.88888888888889%;
-}
-
-.svgs--Select_Down_Arrow_Red-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Select_Up_Arrow {
-  background-position: 90% 0;
-}
-
-.svgs--Select_Up_Arrow-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Select_Up_Arrow_Light {
-  background-position: 90% 11.11111111111111%;
-}
-
-.svgs--Select_Up_Arrow_Light-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Select_Up_Arrow_Red {
-  background-position: 90% 22.22222222222222%;
-}
-
-.svgs--Select_Up_Arrow_Red-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Speech {
-  background-position: 90% 33.333333333333336%;
-}
-
-.svgs--Speech-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Speech_Light {
-  background-position: 90% 44.44444444444444%;
-}
-
-.svgs--Speech_Light-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Speech_Red {
-  background-position: 90% 55.55555555555556%;
-}
-
-.svgs--Speech_Red-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Star {
-  background-position: 90% 66.66666666666667%;
-}
-
-.svgs--Star-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Star_Light {
-  background-position: 90% 77.77777777777777%;
-}
-
-.svgs--Star_Light-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Star_Red {
-  background-position: 90% 88.88888888888889%;
-}
-
-.svgs--Star_Red-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Success {
+.vet-v2--black {
   background-position: 0 100%;
 }
 
-.svgs--Success-dims {
-  width: 20px;
-  height: 20px;
+.vet-v2--black-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Success_Light {
-  background-position: 10% 100%;
+.vet-v2--grey {
+  background-position: 12.5% 100%;
 }
 
-.svgs--Success_Light-dims {
-  width: 20px;
-  height: 20px;
+.vet-v2--grey-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Success_Red {
-  background-position: 20% 100%;
+.vet-v2--red {
+  background-position: 25% 100%;
 }
 
-.svgs--Success_Red-dims {
-  width: 20px;
-  height: 20px;
+.vet-v2--red-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Toggle {
-  background-position: 30% 100%;
+.view--black {
+  background-position: 37.5% 100%;
 }
 
-.svgs--Toggle-dims {
-  width: 20px;
-  height: 20px;
+.view--black-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Toggle_Light {
-  background-position: 40% 100%;
-}
-
-.svgs--Toggle_Light-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Toggle_Red {
+.view--grey {
   background-position: 50% 100%;
 }
 
-.svgs--Toggle_Red-dims {
-  width: 20px;
-  height: 20px;
+.view--grey-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Up_Arrow {
-  background-position: 60% 100%;
+.view--red {
+  background-position: 62.5% 100%;
 }
 
-.svgs--Up_Arrow-dims {
-  width: 20px;
-  height: 20px;
+.view--red-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Up_Arrow_Heavy {
-  background-position: 70% 100%;
+.volume--black {
+  background-position: 75% 100%;
 }
 
-.svgs--Up_Arrow_Heavy-dims {
-  width: 20px;
-  height: 20px;
+.volume--black-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Up_Arrow_Heavy_Light {
-  background-position: 80% 100%;
+.volume--grey {
+  background-position: 87.5% 100%;
 }
 
-.svgs--Up_Arrow_Heavy_Light-dims {
-  width: 20px;
-  height: 20px;
+.volume--grey-dims {
+  width: 64px;
+  height: 64px;
 }
 
-.svgs--Up_Arrow_Heavy_Red {
-  background-position: 90% 100%;
-}
-
-.svgs--Up_Arrow_Heavy_Red-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Up_Arrow_Light {
+.volume--red {
   background-position: 100% 0;
 }
 
-.svgs--Up_Arrow_Light-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Up_Arrow_Red {
-  background-position: 100% 11.11111111111111%;
-}
-
-.svgs--Up_Arrow_Red-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--User {
-  background-position: 100% 22.22222222222222%;
-}
-
-.svgs--User-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--User_Light {
-  background-position: 100% 33.333333333333336%;
-}
-
-.svgs--User_Light-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--User_Red {
-  background-position: 100% 44.44444444444444%;
-}
-
-.svgs--User_Red-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Vet {
-  background-position: 100% 55.55555555555556%;
-}
-
-.svgs--Vet-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Vet_Red {
-  background-position: 100% 66.66666666666667%;
-}
-
-.svgs--Vet_Red-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Volume {
-  background-position: 100% 77.77777777777777%;
-}
-
-.svgs--Volume-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Volume_Light {
-  background-position: 100% 88.88888888888889%;
-}
-
-.svgs--Volume_Light-dims {
-  width: 20px;
-  height: 20px;
-}
-
-.svgs--Volume_Red {
-  background-position: 100% 100%;
-}
-
-.svgs--Volume_Red-dims {
-  width: 20px;
-  height: 20px;
+.volume--red-dims {
+  width: 64px;
+  height: 64px;
 }
 
 .screen-reader-text {
@@ -4788,24 +4383,6 @@ video.hero__bg {
   position: relative;
 }
 
-.rc-tabs:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50px;
-  height: 60px;
-  z-index: 0;
-  background: rgba(243, 243, 243, 0);
-  background: -moz-linear-gradient(left, rgba(243, 243, 243, 0) 0%, #f3f3f3 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(243, 243, 243, 0)), color-stop(100%, #f3f3f3));
-  background: -webkit-linear-gradient(left, rgba(243, 243, 243, 0) 0%, #f3f3f3 100%);
-  background: -o-linear-gradient(left, rgba(243, 243, 243, 0) 0%, #f3f3f3 100%);
-  background: -ms-linear-gradient(left, rgba(243, 243, 243, 0) 0%, #f3f3f3 100%);
-  background: linear-gradient(to right, rgba(243, 243, 243, 0) 0%, #f3f3f3 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#f3f3f3', GradientType=1 );
-}
-
 .rc-tabs .rc-tabs__triggers {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
@@ -4833,27 +4410,6 @@ video.hero__bg {
   line-height: 1;
   font-weight: 300;
   border-radius: 0;
-}
-
-.rc-tabs .rc-tabs__triggers__trigger.active {
-  position: relative;
-}
-
-.rc-tabs .rc-tabs__triggers__trigger.active:after {
-  content: '';
-  top: inherit;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background-color: #E2001A;
-  margin: 0;
-}
-
-.no-flexbox .rc-tabs .rc-tabs__triggers__trigger.active.active {
-  background-color: #E2001A;
-  color: #FFF;
 }
 
 .rc-tabs .rc-tabs__content {
@@ -4928,6 +4484,36 @@ video.hero__bg {
 .no-flexbox .rc-tabs--side .rc-tabs__triggers .rc-tabs__triggers__trigger {
   display: block;
   height: 100%;
+}
+
+.rc-tabs__controller {
+  background-color: transparent;
+  color: #444444;
+}
+
+.rc-tabs__controller:hover,.rc-tabs__controller:focus {
+  background-color: transparent;
+  color: #444444;
+}
+
+.rc-tabs__controller[aria-selected="true"] {
+  position: relative;
+}
+
+.rc-tabs__controller[aria-selected="true"]:after {
+  content: '';
+  top: inherit;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #E2001A;
+  margin: 0;
+}
+
+.rc-tabs__content__single[aria-hidden="true"] {
+  display: none;
 }
 
 @font-face {
