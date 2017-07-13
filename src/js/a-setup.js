@@ -27,3 +27,14 @@ RCWDL.utilities.toggleClass = function (target, className, addRemove) {
     }
   }
 }
+
+RCWDL.utilities.wrap = function (el, wrapper) {
+  el.parentNode.insertBefore(wrapper, el);
+  wrapper.appendChild(el);
+}
+
+RCWDL.utilities.triggerResize = function () {
+  var evt = document.createEvent("HTMLEvents");
+  evt.initEvent('resize', true, false);
+  window.dispatchEvent(evt);
+};

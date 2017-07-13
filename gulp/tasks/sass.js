@@ -11,7 +11,8 @@ module.exports = function (task, gulp, sitesettings, need, taskObj) {
       'node_modules/susy/sass',
       'node_modules/normalize.css',
       'node_modules/choices.js/assets/styles/scss',
-      'node_modules/pikaday/scss'
+      'node_modules/pikaday/scss',
+      'node_modules/tiny-slider/dist'
     ],
     precision: 3,
     outputStyle: 'expanded'

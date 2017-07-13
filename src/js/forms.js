@@ -322,12 +322,13 @@ RCWDL.features.Datepickers = {
     // Check if we actually have any datepickers on the page.
     if (datepickers !== null) {
       // Check if this browser supports the type date.
-      if (Modernizr.inputtypes.date === true) {
+      if (Modernizr.inputtypes.date === false) {
 
         if (Array.isArray(datepickers)) {
           datepickers.forEach(function (picker) {
             picker.setAttribute('type', 'text');
             picker.setAttribute('placeholder', 'Select a date');
+
             new Pikaday(
               {
                 field: picker,
@@ -339,8 +340,7 @@ RCWDL.features.Datepickers = {
         else {
           datepickers.setAttribute('type', 'text');
           datepickers.setAttribute('placeholder', 'Select a date');
-          //text
-          console.log(datepickers.getAttribute('data-js-dateformat'))
+
           new Pikaday(
             {
               field: datepickers,

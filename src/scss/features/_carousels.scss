@@ -233,144 +233,6 @@ video.hero__bg {
   }
 }
 
-/* Slick - Core */
-.slick-slider {
-  position: relative;
-  display: block;
-  user-select: none;
-  touch-action: pan-y;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.slick-list {
-  position: relative;
-  overflow: hidden;
-  display: block;
-  margin: 0;
-  padding: 0;
-
-  &:focus {
-    outline: none;
-  }
-
-  &.dragging {
-    cursor: pointer;
-    cursor: hand;
-  }
-}
-
-.slick-slider .slick-track,
-.slick-slider .slick-list {
-  transform: translate3d(0, 0, 0);
-}
-
-.slick-track {
-  position: relative;
-  left: 0;
-  top: 0;
-  display: block;
-
-  &:before,
-  &:after {
-    content: "";
-    display: table;
-  }
-
-  &:after {
-    clear: both;
-  }
-
-  .slick-loading & {
-    visibility: hidden;
-  }
-}
-
-.slick-slide {
-  float: left;
-  height: 100%;
-  min-height: 1px;
-  padding: 1em;
-
-  [dir="rtl"] & {
-    float: right;
-  }
-
-  img {
-    display: block;
-  }
-
-  &.slick-loading img {
-    display: none;
-  }
-
-  display: none;
-
-  &.dragging img {
-    pointer-events: none;
-  }
-
-  .slick-initialized & {
-    display: block;
-  }
-
-  .slick-loading & {
-    visibility: hidden;
-  }
-
-  .slick-vertical & {
-    display: block;
-    height: auto;
-    border: 1px solid transparent;
-  }
-
-  @media ( get-breakpoint('x-small') ) {
-    padding: 2em;
-  }
-}
-
-/* Slick - Custom */
-.rc-carousel {
-  .interactive--navigation {
-    position: absolute;
-    top: 50%;
-    transform: translateY( -50% );
-    z-index: 20;
-    padding: 0.5em;
-    background: colour('brand', 'light-grey');
-    border: none;
-
-    svg{
-      fill: colour('brand', 'red');
-    }
-
-    &.interactive--navigation--prev {
-      left: 0;
-    }
-    &.interactive--navigation--next {
-      right: 0;
-    }
-  }
-
-  .rc-carousel__dots {
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    bottom: 20px;
-
-    li {
-      display: inline-block;
-      vertical-align: middle;
-      margin-bottom: 0;
-    }
-
-    .slick-active {
-      .interactive--pager {
-        @extend %pager--active;
-      }
-    }
-  }
-}
 
 .rc-carousel--hero {
   .interactive--navigation {
@@ -384,61 +246,61 @@ video.hero__bg {
   }
 }
 
-.rc-carousel--gallery {
-  figure {
-    margin-bottom: 0;
-  }
 
-  .slick-slide {
-    transition: border .3s ease-in-out;
-    cursor: pointer;
+////////////// Tiny Slider styling ////////////////
 
-    &:focus {
-      outline: none;
-    }
-  }
-
-  &.rc-carousel--gallery__thumbs {
-    .slick-slide {
-      padding: .25rem;
-      border: 2px solid transparent;
-    }
-
-    .slick-current {
-      border-color: colour('brand', 'red');
-    }
-  }
-
-  @media(get-breakpoint('small')) {
-    &.rc-carousel--gallery__thumbs {
-      .slick-slide {
-        padding: .5rem;
-      }
-    }
-  }
+[data-tns-hidden="x"] {
+  position: relative;
 }
 
-.navigation--next,
-.navigation--prev {
+[data-controls] {
+  background-color: transparent;
   position: absolute;
+  height: 50px;
   z-index: 99;
   top: 50%;
   margin-top: - $navigation-nextprev-height / 2;
   cursor: pointer;
+  transform: scale(0.6);
+
+  & .navigation--prev,
+  & .navigation--next {
+    @extend .chevron--left--white;
+    padding: 0;
+
+    &::after {
+      width: 65px;
+      height: 65px;
+      transform: scale(0.5);
+    }
+  }
+
+  & .navigation--next::after {
+    transform: scale(0.5) rotate(180deg);
+  }
 }
 
-.navigation--next {
-  right: 0;
+[data-controls="prev"] {
+  left: -1rem;
 }
 
-.navigation--prev {
-  left: 0;
+[data-controls="next"] {
+  right: -1rem;
 }
 
-.rc-carousel__dots > li > button {
+[data-tns-role="nav"] {
+  text-align: center;
+  margin: get-spacer('small');
+
+  & > button {
+    display: inline-block;
+  }
+}
+
+[data-tns-role="nav"] > button {
   @extend %pager__item__link;
 }
 
-.rc-carousel__dots > .slick-active > button {
+[data-tns-role="nav"] > button[aria-selected="true"] {
   background-color: colour('brand', 'red');
 }
