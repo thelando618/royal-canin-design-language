@@ -25,7 +25,7 @@
   const tasks = {
     'dev': {
       subtasks: ['combineMq'],
-      pretasks: ['svgSprites', 'sass', 'jsProcessing'],
+      pretasks: ['sass', 'jsProcessing'],
       watch: {
         active: true,
         files: [sitesettings.watch.sass, sitesettings.watch.js]
@@ -116,8 +116,4 @@
   const listTask = require('./gulp/tasks/tasklist');
   gulp.task('default', listTask(null, gulp, sitesettings, need));
 
-  // Generate all the simple low level tasks.
-  // var allTasks = simple_task_list.forEach(function (task) {
-  //   getTask(task, gulp, sitesettings, need, tasksooj);
-  // });
 }());

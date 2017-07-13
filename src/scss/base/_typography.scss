@@ -4,11 +4,13 @@ input,
 textarea,
 select,
 button {
-	font: 300 .875em $font-din; // weight size/line-height family
+  font-family: $font-din; // weight size/line-height family
+  font-weight: 300;
+  font-size: .875em;
 
-	@media (get-breakpoint('small')) {
-		font-size: 1em;
-	}
+  @media (get-breakpoint('small')) {
+    font-size: 1em;
+  }
 }
 
 

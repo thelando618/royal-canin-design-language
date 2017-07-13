@@ -126,6 +126,32 @@
   }
 }
 
+.navigation__link {
+  position: relative;
+  @extend .chevron--down--red;
+
+  &::after {
+    transform: rotate(180deg) scale(0.25);
+    opacity: 0;
+    transition: transform .5s ease, opacity .3s ease;
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 65px;
+    background-repeat: no-repeat;
+  }
+}
+
+.navigation__link.open {
+  font-weight: 500;
+
+  .section > &::after {
+    transform: rotate(0) scale(0.25);
+    opacity: 1;
+  }
+}
 
 
 .navigation__list-item {

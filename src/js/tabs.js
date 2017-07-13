@@ -3,7 +3,7 @@ RCWDL.features.Tabs = {
     var tabsets = document.getElementsByClassName(target);
 
     // Skip if no sets of tabs are found.
-    if(tabsets.length > 0) {
+    if (tabsets.length > 0) {
       // Loop through all the returned results, these should be sets of tabs.
       Object.keys(tabsets).forEach(function (tabset) {
         RCWDL.features.Tabs.hideTabs(tabsets[tabset]);
@@ -46,6 +46,6 @@ RCWDL.features.Tabs = {
     target[0].setAttribute('aria-hidden', 'false');
     this.setAttribute('aria-selected', 'true');
   }
-}
+};
 
 RCWDL.ready(RCWDL.features.Tabs.init('rc-tabs'));

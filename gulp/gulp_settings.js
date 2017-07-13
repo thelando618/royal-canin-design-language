@@ -26,7 +26,11 @@ location['cssoutput'] = 'royal-canin.styles.css';
 location['cssoutput-min'] = 'royal-canin.styles.min.css';
 
 
-location['js'] = 'src/js'
+location['js'] = 'src/js';
+location['js-dependencies'] = [
+  'node_modules/choices.js/assets/scripts/dist/choices.min.js',
+  'node_modules/pikaday/pikaday.js'
+];
 
 location['jsdest'] = 'dist/js';
 location['jsoutput'] = 'royal-canin.js';

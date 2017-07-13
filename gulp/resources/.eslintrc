@@ -5,10 +5,9 @@
   },
   "globals": {
     "domready": true,
-    "jQuery": true,
-    "_": true,
     "matchMedia": true,
     "Modernizr": true,
+    "RCWDL": true
   },
   "rules": {
     // Errors.

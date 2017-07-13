@@ -293,12 +293,64 @@ $(function() {
 
 
 
-  /**
-   * Initialise JS Select menus
-   * @type {Object} Configuration options
-   */
-  $('select').select2({
-    placeholder: 'Select an option',
-    minimumResultsForSearch: Infinity,
-  });
+
 });
+
+RCWDL.features.Selects = function () {
+  var selects = document.querySelector('[data-js-select]');
+
+  // Check if we actually have any selects on the page.
+  if (selects !== null && selects.length > 0) {
+    new Choices('[data-js-select]',
+      {
+        placeholder: true,
+        placeholderValue: 'Select an option',
+        searchEnabled: false,
+        shouldSort: false
+      }
+    )
+  }
+};
+
+RCWDL.ready(RCWDL.features.Selects());
+
+
+RCWDL.features.Datepickers = {
+  init: function () {
+    var datepickers = document.querySelector('[type="date"]');
+
+    // Check if we actually have any datepickers on the page.
+    if (datepickers !== null) {
+      // Check if this browser supports the type date.
+      if (Modernizr.inputtypes.date === true) {
+
+        if (Array.isArray(datepickers)) {
+          datepickers.forEach(function (picker) {
+            picker.setAttribute('type', 'text');
+            picker.setAttribute('placeholder', 'Select a date');
+            new Pikaday(
+              {
+                field: picker,
+                format: picker.getAttribute('data-js-dateformat')
+              }
+            )
+          })
+        }
+        else {
+          datepickers.setAttribute('type', 'text');
+          datepickers.setAttribute('placeholder', 'Select a date');
+          //text
+          console.log(datepickers.getAttribute('data-js-dateformat'))
+          new Pikaday(
+            {
+              field: datepickers,
+              format: datepickers.getAttribute('data-js-dateformat')
+            }
+          )
+        }
+      }
+    }
+}
+};
+
+RCWDL.ready(RCWDL.features.Datepickers.init());

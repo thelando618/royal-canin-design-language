@@ -3,11 +3,12 @@ module.exports = function (task, gulp, sitesettings, need, taskObj) {
 
   const rules = need.path.join(__dirname, '../resources/.eslintrc');
   const location = sitesettings.location;
+  let js = location['js-dependencies']
 
-  console.log(rules);
+  js.push('src/js/**/*.js');
 
   gulp.task('jsProcessing', function () {
-    return gulp.src(['src/js/**/*.js','!node_modules/**'])
+    return gulp.src(js)
       .pipe(need.eslint({configFile: rules}))
       .pipe(need.eslint.formatEach('compact', process.stderr))
       .pipe(need.concat(location['jsoutput']))

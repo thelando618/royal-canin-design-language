@@ -25,8 +25,8 @@ module.exports = function (task, gulp, sitesettings, need, taskObj) {
     shape: {
       whitespace	: '-',
       spacing			: {                         // Spacing related options
-        padding		: 0,                        // Padding around all shapes
-        box       : 'border'               // Padding strategy (similar to CSS `box-sizing`)
+        padding		: 10,                        // Padding around all shapes
+        box       : 'border'                  // Padding strategy (similar to CSS `box-sizing`)
       },
       dimension		: {                         // Dimension related options
         maxWidth	: 50,                       // Max. shape width

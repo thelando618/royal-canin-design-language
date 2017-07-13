@@ -1,24 +1,31 @@
 module.exports = function (task, gulp, sitesettings, need, taskObj) {
   'use strict';
 
-
   const taskDetails = taskObj[global.process.argv[2]],
     enableSassLint = taskDetails.linting.testSass;
 
   const location = sitesettings.location;
 
   const sassOptions = {
-    includePaths: ['node_modules/susy/sass', 'node_modules/normalize.css'],
+    includePaths: [
+      'node_modules/susy/sass',
+      'node_modules/normalize.css',
+      'node_modules/choices.js/assets/styles/scss',
+      'node_modules/pikaday/scss'
+    ],
     precision: 3,
     outputStyle: 'expanded'
   };
 
   const sassOptionsMin = {
-    includePaths: ['node_modules/susy/sass', 'node_modules/normalize.css'],
+    includePaths: [
+      'node_modules/susy/sass',
+      'node_modules/normalize.css',
+      'node_modules/choices.js/assets/styles/scss'
+    ],
     precision: 3,
     outputStyle: 'compressed'
   };
-
 
   const processors = [
     need.stylelint(location.linting.sass),
@@ -27,9 +34,6 @@ module.exports = function (task, gulp, sitesettings, need, taskObj) {
       throwError: true
     })
   ];
-
-   // outputStyle
-
 
   gulp.task('sass', function () {
     return gulp.src(location['stylessrc'] + '/' + location['csssource'])
