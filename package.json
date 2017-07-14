@@ -29,7 +29,8 @@
     "stylelint": "^7.11.1",
     "susy": "^2.2.12",
     "svg-sprite": "^1.3.7",
-    "tiny-slider": "^1.5.5"
+    "tiny-slider": "^1.5.5",
+    "tippy.js": "^1.1.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

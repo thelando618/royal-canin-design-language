@@ -265,7 +265,7 @@ video.hero__bg {
 
   & .navigation--prev,
   & .navigation--next {
-    @extend .chevron--left--white;
+    @extend .rc-icon-chevron--left--white;
     padding: 0;
 
     &::after {

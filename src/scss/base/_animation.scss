@@ -1,8 +1,36 @@
+// ToDo: this could/should be turned into a mixin.
 @keyframes steady-spin {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(0deg) scale(0.2);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(360deg) scale(0.2);
+  }
+}
+
+@keyframes steady-spin-small {
+  0% {
+    transform: rotate(0deg) scale(0.3);
+  }
+  100% {
+    transform: rotate(360deg) scale(0.3);
+  }
+}
+
+@keyframes steady-spin-medium {
+  0% {
+    transform: rotate(0deg) scale(0.4);
+  }
+  100% {
+    transform: rotate(360deg) scale(0.4);
+  }
+}
+
+@keyframes steady-spin-large {
+  0% {
+    transform: rotate(0deg) scale(0.55);
+  }
+  100% {
+    transform: rotate(360deg) scale(0.55);
   }
 }

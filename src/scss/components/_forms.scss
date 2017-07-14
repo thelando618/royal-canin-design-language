@@ -492,7 +492,7 @@ input[data-toggle^="datepicker"] {
 }
 
 [role="listbox"].choices::after {
-  @extend .chevron--heavy--down--red;
+  @extend .rc-icon-chevron--heavy--down--red;
   height: 64px;
   width: 64px;
   border: none;

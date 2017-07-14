@@ -59,7 +59,7 @@ $navigation-nextprev-height: 65px;
 
 %interactive--navigation {
   display: inline-block;
-  padding: 1em;
+  padding: 1em 0.25em;
   transition: background-color .2s ease-in-out;
   background-color: colour('brand', 'red');
   overflow: hidden;
@@ -74,6 +74,11 @@ $navigation-nextprev-height: 65px;
 
   &:active {
     background-color: colour('brand', 'red', 'dark');
+  }
+
+  &::after {
+    transform: scale(0.5);
+    transform-origin: 50% 0;
   }
 }
 
@@ -129,11 +134,13 @@ $navigation-nextprev-height: 65px;
 
 %navigation--prev {
   @extend %interactive--navigation;
+  @extend .rc-icon-chevron--left--white;
 
 }
 
 %navigation--next {
   @extend %interactive--navigation;
+  @extend .rc-icon-chevron--right--white;
 }
 
 .navigation--next {

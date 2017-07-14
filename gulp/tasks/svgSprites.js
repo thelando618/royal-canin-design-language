@@ -19,7 +19,7 @@ module.exports = function (task, gulp, sitesettings, need, taskObj) {
             template: './gulp/resources/sprite.scss'
           }		// Render a Sass stylesheet
         },
-        prefix: '.'
+        prefix: '.rc-icon-'
       }
     },
     shape: {

@@ -9,8 +9,10 @@
 {{/hasCommon}}{{/hasMixin}}{{^hasMixin}}{{#hasCommon}}.{{/hasCommon}}{{^hasCommon}}%{{/hasCommon}}{{commonName}} {
     background-image: url("sprite.css.svg");
     background-repeat: no-repeat;
-    display: block;
+    display: inline-block;
     content: '';
+    height: 65px;
+    width: 65px;
 }
 
 {{/hasMixin}}{{#shapes}}{{#selector.shape}}{{expression}}{{^last}},
@@ -21,14 +23,7 @@
 	width: {{width.outer}}px;
 	height: {{height.outer}}px;{{/dimensions.inline}}
   }
-}{{#dimensions.extra}}
+}
 
-{{#selector.dimensions}}{{expression}}{{^last}},
-{{/last}}{{/selector.dimensions}} {
-  &::after {
-	width: {{width.outer}}px;
-	height: {{height.outer}}px;
-  }
-}{{/dimensions.extra}}
 
 {{/shapes}}

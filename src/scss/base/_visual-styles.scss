@@ -2,6 +2,10 @@
   border: 1px solid colour('brand', 'light-grey');
 }
 
+.outline-light {
+  @extend %on-white-outline;
+}
+
 %feature-width-restriction {
   max-width: 700px;
 }
@@ -24,10 +28,14 @@
   color: colour('functional', 'functional');
   transition: color 0.2s ease-in;
   overflow: hidden;
+  background-color: transparent;
+  border: none;
+  user-select: none;
 
   &:before {
     content: '';
     position: absolute;
+    pointer-events: none;
     top: 0;
     left: 0;
     width: 100%;

@@ -128,7 +128,7 @@
 
 .navigation__link {
   position: relative;
-  @extend .chevron--down--red;
+  @extend .rc-icon-chevron--down--red;
 
   &::after {
     transform: rotate(180deg) scale(0.25);
