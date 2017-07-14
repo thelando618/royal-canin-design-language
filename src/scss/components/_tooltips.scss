@@ -1,6 +1,4 @@
 .rc-tooltip {
-  position: absolute;
-  left: -110%;
   z-index: 1000;
   display: inline-block;
   background-color: colour('brand', 'white');
@@ -21,79 +19,28 @@
   }
 }
 
+.tippy-tooltip {
+  background-color: transparent;
+}
+
+.tippy-tooltip {
+  color: colour('functional', 'text');
+  padding: 0;
+  box-shadow: 0 .5em 1em rgba( 0, 0, 0, .1 );
+}
+
+.tippy-popper[x-placement^=top] [x-arrow].arrow-big {
+  border-top-color: white;
+}
+
+.tippy-popper[x-placement^=right] [x-arrow].arrow-big {
+   border-right-color: white;
+}
+
+.tippy-popper[x-placement^=right] {
+  top: -65px !important;
+}
+
 .rc-tooltip__pad {
-  padding: 1em;
-}
-
-.rc-tooltip__icon {
-  float: left;
-  line-height: 1;
-
-  svg {
-    fill: colour('brand', 'red');
-    width: 2em;
-    height: 2em;
-    margin-top: .25em;
-    margin-right: 1em;
-    margin-bottom: .5em
-  }
-}
-
-.rc-tooltip__title {
-  margin: 0;
-}
-
-.rc-tooltip__arrow {
-  position: absolute;
-  top: 100%;
-  left: 10%;
-  width: 0;
-  height: 0;
-  border-left: .5rem solid transparent;
-  border-right: .5rem solid transparent;
-  border-top: .5rem solid colour('brand', 'white');
-}
-
-.rc-tooltip__arrow--top {
-  top: 0;
-  border-top: none;
-  border-bottom: .5rem solid colour('brand', 'white');
-  margin-top: -.5rem;
-}
-
-.rc-tabs--side {
-  font-size: .875em;
-}
-
-.rc-tooltip--popout__popout {
-  border-radius: 3px;
-
-  & > ul {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  & > ul > li {
-    margin-bottom: 0;
-  }
-
-  .list--icon {
-    padding: .625rem 1rem;
-  }
-
-  a {
-    display: inline-block;
-    font-size: .875em;
-    text-decoration: none;
-    color: inherit;
-    line-height: 1;
-  }
-
-  button,
-  .button {
-    border: none;
-    border-radius: 0;
-    width: 100%;
-    text-align: left;
-  }
+  padding: get-spacer('small');
 }
