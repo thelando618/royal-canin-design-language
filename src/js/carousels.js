@@ -10,7 +10,7 @@ RCWDL.features.Carousel = {
 
     var carousels = document.querySelectorAll(targetClass);
 
-    if (carousels !== null) {
+    if (carousels !== null && carousels.length > 0) {
       if (carousels.length > 1) {
         carousels.forEach(function (carousel) {
           RCWDL.features.Carousel.create(carousel);

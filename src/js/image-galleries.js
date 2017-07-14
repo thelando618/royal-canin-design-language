@@ -1,16 +1,9 @@
-/**
- *
- * Image Gallery javascript
- *
- */
-
-
 RCWDL.features.ImageGallery = {
   init: function (targetClass, options) {
 
     var imageGalleries = document.querySelectorAll(targetClass);
 
-    if (imageGalleries !== null) {
+    if (imageGalleries !== null && imageGalleries.length > 0) {
       if (imageGalleries.length > 1) {
         imageGalleries.forEach(function (imageGallery) {
           RCWDL.features.Carousel.create(imageGallery, options);
