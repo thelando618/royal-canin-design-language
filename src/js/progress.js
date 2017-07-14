@@ -4,128 +4,60 @@
  *
  */
 
-;(function ($, window, document, undefined) {
+RCWDL.features.Progress = {
+  init: function (targetClass) {
+    var progElms = document.querySelectorAll(targetClass);
+    var demo = document.querySelectorAll('[data-js-demo="update-progress-demo"]');
 
-  "use strict";
-
-  var Progress = window.Progress || {};
-
-  Progress = (function() {
-    function Progress(element, settings) {
-
-      // The element
-      this.progress = (element);
-      // The Progress element
-      this.progressElem = $(this.progress).children('progress');
-      // The Fallback Span
-      this.progressFall = $(this.progress).find('.rc-progress--fallback__value');
-
-      // Setup Object to contain properties related to the value
-      this.valueProps = {
-        "class" : "rc-progress__value",
-        "percent" : ""
-      }
-
-      this.init();
-    }
-    return Progress;
-  }());
-
-  // Helper
-  Progress.prototype.valueAsPercentage = function(number) {
-    return number + '%';
-  }
-
-  // Add accessibility method to upate rc-progress--fallback__value Inner text
-
-  Progress.prototype.init = function(element) {
-    // Ready
-    $(this.progress).addClass('rc-progress-init');
-    // Trigger method
-    this.getValue();
-  }
-
-  Progress.prototype.getValue = function(element) {
-    // Get the data attribute value
-    this.progressValue = $(this.progress).data('value');
-
-    // Set property to vaue
-    this.valueProps.percent = this.valueAsPercentage(this.progressValue);
-
-    // Trigger method
-    this.prepareValue(this.progressValue);
-  }
-
-  Progress.prototype.updateValue = function(newValue) {
-
-    this.valueProps.percent = this.valueAsPercentage(newValue);
-
-    if (Modernizr.progressbar) {
-      this.progress.data('value', newValue);
-      this.progress.attr('data-value', newValue);
-      this.progressElem[0].value = newValue;
-    } else {
-      this.progressFall.css('width', this.valueAsPercentage(newValue));
-      this.progressFall.text('Progress: ' + this.valueAsPercentage(newValue));
+    if (typeof demo !== 'undefined') {
+      console.log(demo[0]);
+      RCWDL.features.Progress.demo(demo[0]);
     }
 
-    $(this.progress).children('.rc-progress__value').remove();
+    progElms.forEach(function (el) {
 
-    this.prepareValue(newValue);
-  }
+      var val = el.getAttribute('value');
+      var label = document.createElement("span");
 
-  Progress.prototype.prepareValue = function(prepValue) {
+      label.setAttribute('id',  el.getAttribute('id') + '--label')
 
-    // If the number is less than 10, add another class to the class array
-    if (10 > prepValue) {
-      this.valueProps.class = 'rc-progress__value rc-progress__value--outside';
-    } else {
-      this.valueProps.class = 'rc-progress__value';
-    }
+      // Initial styles for label.
+      label.innerHTML = val + '%';
+      label.style.position = 'absolute';
+      label.style.top = '0.75em';
+      label.style.left = val + '%';
+      label.style.marginLeft = '-3em';
+      label.style.color = 'white';
 
-    this.displayValue();
-  }
+      el.parentNode.appendChild(label);
 
-  Progress.prototype.displayValue = function(element) {
+      // Add observer to progress element to update the label on change.
+      var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          var label = document.querySelectorAll('#' + mutation.target.id + '--label');
 
-    this.valueContainer = '<div class="' + this.valueProps.class + '" style="left: ' + this.valueProps.percent + '">' + this.valueProps.percent + '</div>';
-    $(this.progress).append(this.valueContainer);
-  }
+          if (mutation.target.attributes[1].value >= 101) {
+            mutation.target.attributes[1].value = 100;
+          }
 
-  // Initiate all Progress Elements.
-  $.fn.Progress = function () {
-    return this.each(function () {
-      var progress = new Progress(this);
+          label[0].style.left = mutation.target.attributes[1].value + '%';
+          label[0].innerHTML = mutation.target.attributes[1].value + '%';
+        });
+      });
+
+      observer.observe(el, {
+        attributes: true, childList: false, characterData: false
+      });
+    })
+  },
+  demo: function (demo) {
+    demo.addEventListener('click', function (event) {
+      var target = event.target.getAttribute('data-js-demo');
+      var el = document.querySelectorAll('#' + target);
+      var current = el[0].getAttribute('value');
+      el[0].setAttribute('value', parseInt(current) + 10);
     });
-  };
+  }
+}
 
-  // Invoke Update Progress Method
-  $.fn.updateProgress = function(value) {
-    var progress = new Progress(this);
-    progress.updateValue(value);
-  };
-
-  // Move this to Scripts
-  $(function () {
-    $('.rc-progress').Progress(); // Initiate all Progress elements
-  });
-
-
-// Move this to GS scripts
-  $(function () {
-
-    $('.update-progress-demo').on('click', function(event) {
-      $('.rc-progress-demo').updateProgress(50);
-      $('.rc-progress-demo .rc-progress__progressElem').attr('value', 50)
-    });
-
-
-  });
-
-})(jQuery, window, document);
-
-
-
-
-
-
+RCWDL.ready(RCWDL.features.Progress.init('progress'));
