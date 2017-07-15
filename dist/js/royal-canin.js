@@ -3517,16 +3517,17 @@ RCWDL.utilities = {};
 
 // Function to handle when DOM is ready.
 RCWDL.ready = function (fn) {
-  if (document.readyState != 'loading'){
+  'use strict';
+  if (document.readyState !== 'loading') {
     fn();
-  } else {
+  }
+  else {
     document.addEventListener('DOMContentLoaded', fn);
   }
-}
-
-
+};
 
 RCWDL.utilities.toggleClass = function (target, className, addRemove) {
+  'use strict';
   // IE 8+ support.
   if (target.classList) {
     target.classList[addRemove]('hidden');
@@ -3539,18 +3540,21 @@ RCWDL.utilities.toggleClass = function (target, className, addRemove) {
       target.className = target.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
     }
   }
-}
+};
 
 RCWDL.utilities.wrap = function (el, wrapper) {
+  'use strict';
   el.parentNode.insertBefore(wrapper, el);
   wrapper.appendChild(el);
-}
+};
 
 RCWDL.utilities.triggerResize = function () {
-  var evt = document.createEvent("HTMLEvents");
+  'use strict';
+  var evt = document.createEvent('HTMLEvents');
   evt.initEvent('resize', true, false);
   window.dispatchEvent(evt);
 };
+
 /**
  *
  * Carousel javascript
@@ -3560,6 +3564,7 @@ RCWDL.utilities.triggerResize = function () {
 
 RCWDL.features.Carousel = {
   init: function (targetClass) {
+    'use strict';
 
     var carousels = document.querySelectorAll(targetClass);
 
@@ -3567,7 +3572,7 @@ RCWDL.features.Carousel = {
       if (carousels.length > 1) {
         carousels.forEach(function (carousel) {
           RCWDL.features.Carousel.create(carousel);
-        })
+        });
       }
       else {
         RCWDL.features.Carousel.create(carousels[0]);
@@ -3575,6 +3580,7 @@ RCWDL.features.Carousel = {
     }
   },
   create: function (carousel) {
+    'use strict';
     tns({
       container: carousel,
       items: 1,
@@ -3587,329 +3593,147 @@ RCWDL.features.Carousel = {
       touch: true
     });
   }
-}
+};
 
 RCWDL.ready(RCWDL.features.Carousel.init('.rc-carousel'));
+
 /**
+ * Function factory object for adding features to form elements.
  *
- * File forms.js.
- *
+ * @type {{labels: RCWDL.features.FormElements.labels, passwordField: RCWDL.features.FormElements.passwordField}}
  */
-
-
-/**
- * Checks if document is ready
- * @param  {Function} fn Whatever is passed in the ready function
- */
-function ready(fn) {
-  if (document.readyState != 'loading'){
-    fn();
-  } else {
-    document.addEventListener('DOMContentLoaded', fn);
-  }
-}
-
-/**
- * Checks whether a particular element has a class
- * @param  {Object}  el        The element to check
- * @param  {String}  className The class to test for
- * @return {Boolean}           true or false
- */
-function hasClass(el, className) {
-  return el.classList ? el.classList.contains(className) : new RegExp('\\b'+ className+'\\b').test(el.className);
-}
-
-
-
-
-
-/**
- * Applies JS behaviour to form input fields
- * @type {Object}
- */
-var form_fields = {
-  /**
-   * Which fields to apply the behaviour to
-   * @param  {NodeList} targets The fields passed to the Method as a NodeList
-   */
-  init: function(targets) {
-    var that = this;
-
-    for (var i = 0; i < targets.length; i++) {
-      (function(i) {
-
-        var span = targets[i];
-
-        var input = span.querySelector('input') || span.querySelector('textarea');
-
-        input.addEventListener('focus', function(event) {
-          that.fill_check(span, input);
-        });
-
-        input.addEventListener('blur', function(event) {
-          that.fill_check(span, input);
-        });
-
-      }(i));
-
-    }
-  },
+RCWDL.features.FormElements = {
 
   /**
-   * Checks whether the input field is empty
-   * @param  {Object} target The fields wrapping element
-   * @param  {Object} input  The field to check
+   * To enhance the label behaviour (Moving the label out of the input when in use), we also want to keep the label out
+   * after the focus ends on the input. To keep this as light as possible, we just improve the DOM behaviour by
+   * keeping the value attribute up to date. With this we can then target the state with css.
+   *
+   * @param {String} target
+   * Css selector.
    */
-  fill_check: function(target, input) {
-    var is_filled = 0 < input.value.length;
+  labels: function (target) {
+    'use strict';
+    var inputs = document.querySelectorAll(target);
+    var targets = [];
 
-    if (true === is_filled) {
-      this.fill_class(target, input, 'rc-input--filled', 'add');
-    } else {
-      this.fill_class(target, input, 'rc-input--filled', 'remove');
-    }
-  },
-
-  /**
-   * Controls the addition and removal of a class
-   * @param  {Object} target      The fields wrapping element to apply the class to
-   * @param  {Object} input       The input that is being tested @todo May not be needed in this method
-   * @param  {String} fill_class  The class to be added / removed
-   * @param  {String} instruction The instruction for whether to add or remove the class
-   * @return {Boolean}            Return false if instruction is not valid
-   */
-  fill_class: function(target, input, fill_class, instruction) {
-    if ('add' === instruction) {
-      if (target.classList) {
-        target.classList.add(fill_class);
-      } else {
-        target.fill_class += ' ' + fill_class;
+    inputs.forEach(function (inputList) {
+      var items = inputList.querySelectorAll(
+        '[type="text"], ' +
+        '[type="textbox"], ' +
+        '[type="password"], ' +
+        '[type="email"], ' +
+        '[type="number"], ' +
+        '[type="tel"], ' +
+        'textarea, ' +
+        '[type="url"], ' +
+        '[type="search"]');
+      // Make sure the wrapper we're targeting actually has inputs inside.
+      if (items.length > 0) {
+        targets.push(inputList);
       }
-    } else if ('remove' === instruction) {
-      if (target.classList) {
-        target.classList.remove(fill_class);
-      } else {
-        target.fill_class = target.fill_class.replace(new RegExp('(^|\\b)' + fill_class.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+    });
+
+    targets.forEach(function (input) {
+      // Make sure all the elements have been setup correctly and add value attributes if they're missing.
+      if (input.getElementsByTagName('textarea').length > 0 &&
+          input.getElementsByTagName('textarea')[0].getAttribute('value') === null) {
+        input.getElementsByTagName('textarea')[0].setAttribute('value', '');
       }
-    } else {
-      console.error('Invalid instruction to fill_class method');
-      return false;
-    }
-  }
-}
+      else if (input.getElementsByTagName('input')[0].getAttribute('value') === null) {
+        input.getElementsByTagName('input')[0].setAttribute('value', '');
+      }
 
-
-/**
- * Applies JS behaviour to form password fields
- * @type {Object}
- */
-var pwd_fields = {
-  the_timer: null,
-  button_text: 'Toggle Password Visiblility',
-  button_class: 'rc-input--password__toggle',
-  button_span: 'screen-reader-text',
-
-  /**
-   * Runs create_toggle method for each password input found
-   * @param  {object} targets All password inputs found
-   */
-  init: function(targets) {
-    for (var i = 0; i < targets.length; i++) {
-      pwd_fields.create_toggle(targets[i], i);
-    }
+      // Attach an event handler to each input and trigger when a value is input.
+      input.addEventListener('input', function (event) {
+        // Update the attribute to match the DOM state.
+        event.target.setAttribute('value', event.target.value);
+      });
+    });
   },
 
   /**
-   * Create a button to allow password visibility toggling
-   * @param  {object} target The input that the button should be attached to
+   * Adds show/hide toggle to password inputs.
+   * @param {String} target
+   * Css selector for targeting.
    */
-  create_toggle: function(target, index) {
-    // The wrapping element
-    var wrap = target.parentNode;
+  passwordField: function (target) {
+    'use strict';
+    var inputs = document.querySelectorAll(target);
 
-    // Get input from wrap
-    var input = wrap.querySelector('input');
+    inputs.forEach(function (input) {
+      var eye = document.createElement('button');
 
-    // Set an attribute on the input
-    input.setAttribute('data-toggle', 'pwd-' + index);
+      // Initial styles and screen reader text for label.
+      eye.innerHTML = '<span class="screen-reader-text">Toggle password visibility</span>';
+      eye.classList.add('rc-input--password__toggle');
 
+      input.parentNode.appendChild(eye);
 
-    // Create button
-    var btn = document.createElement('button');
+      eye.addEventListener('click', function (event) {
+        var input = event.target.parentNode.querySelector('input');
 
-    // Add class to button
-    if (btn.classList) {
-      btn.classList.add(this.button_class);
-    } else {
-      btn.fill_class += ' ' + this.button_class;
-    }
-
-    // Set an attribute on the button that matches the input
-    btn.setAttribute('id', 'pwd-' + index);
-
-    // Create span for inside button
-    var span = document.createElement('span');
-
-    // Add text to span
-    span.innerText = this.button_text;
-
-    // Add class to span
-    if (span.classList) {
-      span.classList.add(this.button_span);
-    } else {
-      span.fill_class += ' ' + this.button_span;
-    }
-
-    // Add span to button
-    btn.appendChild(span);
-
-    // Add button to wrapping element
-    wrap.appendChild(btn);
-
-    // Toggle field type
-    this.toggle_type(btn, wrap);
-
-    // Listen for input blur
-    this.input_blur(input);
-
-    this.input_input(input);
-  },
-
-
-  /**
-   * Handles toggling input type
-   * @param  {object} target The input that the button should be attached to
-   * @return {[type]} [description]
-   */
-  toggle_type: function(button, wrap) {
-    button.addEventListener('click', function(event) {
-      var btn_id = button.getAttribute('id');
-      var input_target = wrap.querySelector('[data-toggle=' + btn_id + ']');
-
-      var className = 'rc-input--filled';
-
-      if (true === hasClass(wrap, className)) {
-        if ('text' === input_target.type) {
-          input_target.type = 'password';
-        } else {
-          input_target.type = 'text';
-
-          // Start timer
-          pwd_fields.timeout(input_target, 3000);
+        // Toggle between types.
+        switch (input.getAttribute('type')) {
+          case 'password':
+            input.setAttribute('type', 'text');
+            break;
+          case 'text':
+            input.setAttribute('type', 'password');
+            break;
         }
-      }
+      });
     });
-  },
-
-  /**
-   * Listen for keyboard events on input and stop clear timeout if detected
-   * @param  {Object} input The input to attach the event listener to
-   */
-  input_input: function(input) {
-    input.addEventListener('keydown', function(event) {
-      clearTimeout(pwd_fields.the_timer);
-    });
-  },
-
-  /**
-   * Listen for the blur event and start a timeout when detected
-   * @param  {Object} input The input to attach the event listener to
-   */
-  input_blur: function(input) {
-    input.addEventListener('blur', function(event) {
-      if ('text' === input.type) {
-        pwd_fields.timeout(input, 500);
-      }
-    });
-  },
-
-  /**
-   * Will obscure password if no user interaction after a given period
-   * @param  {object} target The input that the button should be attached to.
-   */
-  timeout: function(input, time) {
-    if ('text' === input.type) {
-      pwd_fields.the_timer = setTimeout(function(event) {
-        input.type = 'password';
-      }, time);
-    }
   }
-}
+};
 
+RCWDL.ready(RCWDL.features.FormElements.labels('.rc-input'));
+RCWDL.ready(RCWDL.features.FormElements.passwordField('[type="password"]'));
 
-
-
-
-
-
-
-
-/* @todo Would live in main scripts file */
-var inputs = document.querySelectorAll('.rc-input');
-var pwds = document.querySelectorAll('input[type="password"]');
-
-
-// Native document ready
-ready(function() {
-  form_fields.init(inputs);
-  pwd_fields.init(pwds);
-});
-
-// jQuery document ready
-$(function() {
-  var datepicker_ddmmyyyy = {
-    format: 'dd-mm-yyyy',
-    template: '<div class="datepicker-container rc-datepicker"><div class="datepicker-panel" data-view="years picker"><ul class="datepicker-header"><li data-view="years prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.5 64" aria-labelledby="svg-arrow-left" role="img"><title id="svg-arrow-left" lang="en">arrow-left</title><path d="M1 29.5L29.5 1c1.4-1.4 3.6-1.4 5 0s1.4 3.6 0 5l-26 26 26 26c1.4 1.4 1.4 3.6 0 5-.7.7-1.6 1-2.5 1-.9 0-1.8-.3-2.5-1L1 34.5c-1.3-1.4-1.3-3.6 0-5z"></path></svg></li><li data-view="years current"></li><li data-view="years next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.5 64" aria-labelledby="svg-arrow-right" role="img"><title id="svg-arrow-right" lang="en">arrow-right</title><path d="M34.5 34.5L6 63c-.7.7-1.6 1-2.5 1s-1.8-.3-2.5-1c-1.4-1.4-1.4-3.6 0-5l26-26L1 6C-.4 4.6-.4 2.4 1 1S4.6-.4 6 1l28.5 28.5c1.4 1.4 1.4 3.6 0 5z"></path></svg></li></ul><ul data-view="years"></ul></div><div class="datepicker-panel" data-view="months picker"><ul class="datepicker-header"><li data-view="year prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.5 64" aria-labelledby="svg-arrow-left" role="img"><title id="svg-arrow-left" lang="en">arrow-left</title><path d="M1 29.5L29.5 1c1.4-1.4 3.6-1.4 5 0s1.4 3.6 0 5l-26 26 26 26c1.4 1.4 1.4 3.6 0 5-.7.7-1.6 1-2.5 1-.9 0-1.8-.3-2.5-1L1 34.5c-1.3-1.4-1.3-3.6 0-5z"></path></svg></li><li data-view="year current"></li><li data-view="year next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.5 64" aria-labelledby="svg-arrow-right" role="img"><title id="svg-arrow-right" lang="en">arrow-right</title><path d="M34.5 34.5L6 63c-.7.7-1.6 1-2.5 1s-1.8-.3-2.5-1c-1.4-1.4-1.4-3.6 0-5l26-26L1 6C-.4 4.6-.4 2.4 1 1S4.6-.4 6 1l28.5 28.5c1.4 1.4 1.4 3.6 0 5z"></path></svg></li></ul><ul data-view="months"></ul></div><div class="datepicker-panel" data-view="days picker"><ul class="datepicker-header"><li data-view="month prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.5 64" aria-labelledby="svg-arrow-left" role="img"><title id="svg-arrow-left" lang="en">arrow-left</title><path d="M1 29.5L29.5 1c1.4-1.4 3.6-1.4 5 0s1.4 3.6 0 5l-26 26 26 26c1.4 1.4 1.4 3.6 0 5-.7.7-1.6 1-2.5 1-.9 0-1.8-.3-2.5-1L1 34.5c-1.3-1.4-1.3-3.6 0-5z"></path></svg></li><li data-view="month current"></li><li data-view="month next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.5 64" aria-labelledby="svg-arrow-right" role="img"><title id="svg-arrow-right" lang="en">arrow-right</title><path d="M34.5 34.5L6 63c-.7.7-1.6 1-2.5 1s-1.8-.3-2.5-1c-1.4-1.4-1.4-3.6 0-5l26-26L1 6C-.4 4.6-.4 2.4 1 1S4.6-.4 6 1l28.5 28.5c1.4 1.4 1.4 3.6 0 5z"></path></svg></li></ul><ul data-view="week"></ul><ul data-view="days"></ul></div><a href="#" class="rc-datepicker__clear">Clear <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="svg-cross" role="img"><title id="svg-cross" lang="en">cross</title><path d="M44.6 32l16.8-16.8c3.5-3.5 3.5-9.1 0-12.6s-9.1-3.5-12.6 0L32 19.4 15.2 2.6C11.7-.9 6.1-.9 2.6 2.6s-3.5 9.1 0 12.6L19.4 32 2.6 48.8c-3.5 3.5-3.5 9.1 0 12.6 1.7 1.7 4 2.6 6.3 2.6s4.5-.9 6.3-2.6L32 44.6l16.8 16.8c1.7 1.7 4 2.6 6.3 2.6s4.5-.9 6.3-2.6c3.5-3.5 3.5-9.1 0-12.6L44.6 32z"></path></svg></a></div>',
-    weekStart: 1,
-    yearFirst: true,
-  }
-
-  var datepicker_yyyymm = {
-    format: 'yyyy-mm',
-    template: '<div class="datepicker-container rc-datepicker"><div class="datepicker-panel" data-view="years picker"><ul class="datepicker-header"><li data-view="years prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.5 64" aria-labelledby="svg-arrow-left" role="img"><title id="svg-arrow-left" lang="en">arrow-left</title><path d="M1 29.5L29.5 1c1.4-1.4 3.6-1.4 5 0s1.4 3.6 0 5l-26 26 26 26c1.4 1.4 1.4 3.6 0 5-.7.7-1.6 1-2.5 1-.9 0-1.8-.3-2.5-1L1 34.5c-1.3-1.4-1.3-3.6 0-5z"></path></svg></li><li data-view="years current"></li><li data-view="years next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.5 64" aria-labelledby="svg-arrow-right" role="img"><title id="svg-arrow-right" lang="en">arrow-right</title><path d="M34.5 34.5L6 63c-.7.7-1.6 1-2.5 1s-1.8-.3-2.5-1c-1.4-1.4-1.4-3.6 0-5l26-26L1 6C-.4 4.6-.4 2.4 1 1S4.6-.4 6 1l28.5 28.5c1.4 1.4 1.4 3.6 0 5z"></path></svg></li></ul><ul data-view="years"></ul></div><div class="datepicker-panel" data-view="months picker"><ul class="datepicker-header"><li data-view="year prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.5 64" aria-labelledby="svg-arrow-left" role="img"><title id="svg-arrow-left" lang="en">arrow-left</title><path d="M1 29.5L29.5 1c1.4-1.4 3.6-1.4 5 0s1.4 3.6 0 5l-26 26 26 26c1.4 1.4 1.4 3.6 0 5-.7.7-1.6 1-2.5 1-.9 0-1.8-.3-2.5-1L1 34.5c-1.3-1.4-1.3-3.6 0-5z"></path></svg></li><li data-view="year current"></li><li data-view="year next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.5 64" aria-labelledby="svg-arrow-right" role="img"><title id="svg-arrow-right" lang="en">arrow-right</title><path d="M34.5 34.5L6 63c-.7.7-1.6 1-2.5 1s-1.8-.3-2.5-1c-1.4-1.4-1.4-3.6 0-5l26-26L1 6C-.4 4.6-.4 2.4 1 1S4.6-.4 6 1l28.5 28.5c1.4 1.4 1.4 3.6 0 5z"></path></svg></li></ul><ul data-view="months"></ul></div><a href="#" class="rc-datepicker__clear">Clear <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="svg-cross" role="img"><title id="svg-cross" lang="en">cross</title><path d="M44.6 32l16.8-16.8c3.5-3.5 3.5-9.1 0-12.6s-9.1-3.5-12.6 0L32 19.4 15.2 2.6C11.7-.9 6.1-.9 2.6 2.6s-3.5 9.1 0 12.6L19.4 32 2.6 48.8c-3.5 3.5-3.5 9.1 0 12.6 1.7 1.7 4 2.6 6.3 2.6s4.5-.9 6.3-2.6L32 44.6l16.8 16.8c1.7 1.7 4 2.6 6.3 2.6s4.5-.9 6.3-2.6c3.5-3.5 3.5-9.1 0-12.6L44.6 32z"></path></svg></a></div>',
-    yearFirst: true,
-  }
-
-  $('[data-toggle="datepicker-ddmmyyyy"]').datepicker(datepicker_ddmmyyyy);
-  $('[data-toggle="datepicker-yyyymm"]').datepicker(datepicker_yyyymm);
-
-  $('[data-toggle^="datepicker"]').on("click", function(event) {
-    var that = null;
-    that = $(this);
-
-    $('.rc-datepicker__clear').unbind('click').on('click', function (event) {
-      event.preventDefault();
-      $(that).datepicker('reset');
-    });
-  });
-
-
-
-
-});
-
-RCWDL.features.Selects = function () {
-  var selects = document.querySelector('[data-js-select]');
+/**
+ * Converts selector element into Choices.js selectors with improved accessibility and styling.
+ *
+ * @param {String} selector
+ * CSS selector for targeting select elements. Default: [data-js-select]
+ * @constructor
+ */
+RCWDL.features.Selects = function (selector) {
+  'use strict';
+  selector = selector || '[data-js-select]';
+  var selects = document.querySelector(selector);
 
   // Check if we actually have any selects on the page.
   if (selects !== null && selects.length > 0) {
-    new Choices('[data-js-select]',
+    new Choices(selector,
       {
         placeholder: true,
         placeholderValue: 'Select an option',
         searchEnabled: false,
         shouldSort: false
       }
-    )
+    );
   }
 };
 
 RCWDL.ready(RCWDL.features.Selects());
 
+/**
+ * Function generate fallback datepicker calendars when the element type date isn't supported.
+ *
+ * @type {{init: RCWDL.features.Datepickers.init, createDatePicker: RCWDL.features.Datepickers.createDatePicker}}
+ */
 
 RCWDL.features.Datepickers = {
-  init: function () {
-    var datepickers = document.querySelector('[type="date"]');
+
+  /**
+   * Initialisation function to check for and cycle through target elements.
+   * @param {String} selector
+   * Css selector. Default: [type="date"]
+   */
+  init: function (selector) {
+    'use strict';
+    selector = selector || '[type="date"]';
+    var datepickers = document.querySelector(selector);
 
     // Check if we actually have any datepickers on the page.
     if (datepickers !== null) {
@@ -3918,36 +3742,40 @@ RCWDL.features.Datepickers = {
 
         if (Array.isArray(datepickers)) {
           datepickers.forEach(function (picker) {
-            picker.setAttribute('type', 'text');
-            picker.setAttribute('placeholder', 'Select a date');
-
-            new Pikaday(
-              {
-                field: picker,
-                format: picker.getAttribute('data-js-dateformat')
-              }
-            )
-          })
+            RCWDL.features.Datepickers.createDatePicker(picker);
+          });
         }
         else {
-          datepickers.setAttribute('type', 'text');
-          datepickers.setAttribute('placeholder', 'Select a date');
-
-          new Pikaday(
-            {
-              field: datepickers,
-              format: datepickers.getAttribute('data-js-dateformat')
-            }
-          )
+          RCWDL.features.Datepickers.createDatePicker(datepickers);
         }
       }
     }
-}
+  },
+
+  /**
+   * Receives node objects for processing into date pickers.
+   * @param {Node} picker
+   * Single Node to be process into date picker.
+   */
+  createDatePicker: function (picker) {
+    'use strict';
+    picker.setAttribute('type', 'text');
+    picker.setAttribute('placeholder', 'Select a date');
+
+    new Pikaday(
+      {
+        field: picker,
+        format: picker.getAttribute('data-js-dateformat')
+      }
+    );
+  }
 };
 
 RCWDL.ready(RCWDL.features.Datepickers.init());
+
 RCWDL.features.ImageGallery = {
   init: function (targetClass, options) {
+    'use strict';
 
     var imageGalleries = document.querySelectorAll(targetClass);
 
@@ -3956,7 +3784,7 @@ RCWDL.features.ImageGallery = {
         imageGalleries.forEach(function (imageGallery) {
           RCWDL.features.Carousel.create(imageGallery, options);
           RCWDL.features.ImageGallery.wrapAndRemoveDots(imageGallery.parentNode.parentNode);
-        })
+        });
       }
       else {
         RCWDL.features.ImageGallery.create(imageGalleries[0], options);
@@ -3965,24 +3793,26 @@ RCWDL.features.ImageGallery = {
     }
   },
   create: function (imageGallery, options) {
+    'use strict';
 
-    var options = typeof options === 'object' ? options : {
-        container: imageGallery,
-        items: 1,
-        slideBy: 'page',
-        autoplay: true,
-        controlsText: [
-          '<span class="navigation--prev"><span class="screen-reader-text">Previous</span></span>',
-          '<span class="navigation--next"><span class="screen-reader-text">Next</span></span>'
-        ],
-        touch: true,
-        autoplayTimeout: 4000,
-        speed: 500
-      }
+    options = typeof options === 'object' ? options : {
+      container: imageGallery,
+      items: 1,
+      slideBy: 'page',
+      autoplay: true,
+      controlsText: [
+        '<span class="navigation--prev"><span class="screen-reader-text">Previous</span></span>',
+        '<span class="navigation--next"><span class="screen-reader-text">Next</span></span>'
+      ],
+      touch: true,
+      autoplayTimeout: 4000,
+      speed: 500
+    };
 
     tns(options);
   },
   wrapAndRemoveDots: function (item) {
+    'use strict';
     // Create an element to wrap the gallery with so we can easily target it later.
     // TNS wraps the markup so this is required to restrict the width etc.
     var wrapper = document.createElement('div');
@@ -3995,9 +3825,10 @@ RCWDL.features.ImageGallery = {
     // Trigger resize to make sure the gallery adjusts to the correct size.
     RCWDL.utilities.triggerResize();
   }
-}
+};
 
 RCWDL.ready(RCWDL.features.ImageGallery.init('.rc-carousel--gallery'));
+
 /**
  *
  * File maps.js.
@@ -4259,20 +4090,21 @@ function initMap() {
 
 RCWDL.features.Progress = {
   init: function (targetClass) {
+    'use strict';
+
     var progElms = document.querySelectorAll(targetClass);
     var demo = document.querySelectorAll('[data-js-demo="update-progress-demo"]');
 
-    if (typeof demo !== 'undefined') {
-      console.log(demo[0]);
+    if (typeof demo !== 'undefined' && demo.length > 0) {
       RCWDL.features.Progress.demo(demo[0]);
     }
 
     progElms.forEach(function (el) {
 
       var val = el.getAttribute('value');
-      var label = document.createElement("span");
+      var label = document.createElement('span');
 
-      label.setAttribute('id',  el.getAttribute('id') + '--label')
+      label.setAttribute('id', el.getAttribute('id') + '--label');
 
       // Initial styles for label.
       label.innerHTML = val + '%';
@@ -4285,8 +4117,8 @@ RCWDL.features.Progress = {
       el.parentNode.appendChild(label);
 
       // Add observer to progress element to update the label on change.
-      var observer = new MutationObserver(function(mutations) {
-        mutations.forEach(function(mutation) {
+      var observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
           var label = document.querySelectorAll('#' + mutation.target.id + '--label');
 
           if (mutation.target.attributes[1].value >= 101) {
@@ -4301,9 +4133,12 @@ RCWDL.features.Progress = {
       observer.observe(el, {
         attributes: true, childList: false, characterData: false
       });
-    })
+    });
   },
+
   demo: function (demo) {
+    'use strict';
+
     demo.addEventListener('click', function (event) {
       var target = event.target.getAttribute('data-js-demo');
       var el = document.querySelectorAll('#' + target);
@@ -4311,7 +4146,7 @@ RCWDL.features.Progress = {
       el[0].setAttribute('value', parseInt(current) + 10);
     });
   }
-}
+};
 
 RCWDL.ready(RCWDL.features.Progress.init('progress'));
 
@@ -4371,6 +4206,8 @@ ready(function() {
 
 RCWDL.features.Tabs = {
   init: function (target) {
+    'use strict';
+
     var tabsets = document.getElementsByClassName(target);
 
     // Skip if no sets of tabs are found.
@@ -4386,6 +4223,8 @@ RCWDL.features.Tabs = {
     }
   },
   hideTabs: function (tabsets) {
+    'use strict';
+
     var tabs = tabsets.getElementsByClassName('rc-tabs__controller');
 
     // Loop through the triggers adding event handlers.
@@ -4406,6 +4245,8 @@ RCWDL.features.Tabs = {
     });
   },
   tabClick: function (e) {
+    'use strict';
+
     e.preventDefault();
     // Get the target content container using the hash.
     var target = document.querySelectorAll(this.getAttribute('href'));
@@ -4423,6 +4264,8 @@ RCWDL.ready(RCWDL.features.Tabs.init('rc-tabs'));
 
 RCWDL.features.Tooltip = {
   init: function (target) {
+    'use strict';
+
     var tooltips = document.querySelectorAll(target);
 
     if (typeof tooltips === 'object') {
@@ -4439,10 +4282,10 @@ RCWDL.features.Tooltip = {
             interactive: true,
             trigger: 'click'
           }
-          )
-      })
+        );
+      });
     }
   }
-}
+};
 
 RCWDL.ready(RCWDL.features.Tooltip.init('[data-tooltip]'));

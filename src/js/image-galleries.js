@@ -1,5 +1,6 @@
 RCWDL.features.ImageGallery = {
   init: function (targetClass, options) {
+    'use strict';
 
     var imageGalleries = document.querySelectorAll(targetClass);
 
@@ -8,7 +9,7 @@ RCWDL.features.ImageGallery = {
         imageGalleries.forEach(function (imageGallery) {
           RCWDL.features.Carousel.create(imageGallery, options);
           RCWDL.features.ImageGallery.wrapAndRemoveDots(imageGallery.parentNode.parentNode);
-        })
+        });
       }
       else {
         RCWDL.features.ImageGallery.create(imageGalleries[0], options);
@@ -17,24 +18,26 @@ RCWDL.features.ImageGallery = {
     }
   },
   create: function (imageGallery, options) {
+    'use strict';
 
-    var options = typeof options === 'object' ? options : {
-        container: imageGallery,
-        items: 1,
-        slideBy: 'page',
-        autoplay: true,
-        controlsText: [
-          '<span class="navigation--prev"><span class="screen-reader-text">Previous</span></span>',
-          '<span class="navigation--next"><span class="screen-reader-text">Next</span></span>'
-        ],
-        touch: true,
-        autoplayTimeout: 4000,
-        speed: 500
-      }
+    options = typeof options === 'object' ? options : {
+      container: imageGallery,
+      items: 1,
+      slideBy: 'page',
+      autoplay: true,
+      controlsText: [
+        '<span class="navigation--prev"><span class="screen-reader-text">Previous</span></span>',
+        '<span class="navigation--next"><span class="screen-reader-text">Next</span></span>'
+      ],
+      touch: true,
+      autoplayTimeout: 4000,
+      speed: 500
+    };
 
     tns(options);
   },
   wrapAndRemoveDots: function (item) {
+    'use strict';
     // Create an element to wrap the gallery with so we can easily target it later.
     // TNS wraps the markup so this is required to restrict the width etc.
     var wrapper = document.createElement('div');
@@ -47,6 +50,6 @@ RCWDL.features.ImageGallery = {
     // Trigger resize to make sure the gallery adjusts to the correct size.
     RCWDL.utilities.triggerResize();
   }
-}
+};
 
 RCWDL.ready(RCWDL.features.ImageGallery.init('.rc-carousel--gallery'));

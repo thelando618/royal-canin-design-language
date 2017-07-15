@@ -7,6 +7,7 @@
 
 RCWDL.features.Carousel = {
   init: function (targetClass) {
+    'use strict';
 
     var carousels = document.querySelectorAll(targetClass);
 
@@ -14,7 +15,7 @@ RCWDL.features.Carousel = {
       if (carousels.length > 1) {
         carousels.forEach(function (carousel) {
           RCWDL.features.Carousel.create(carousel);
-        })
+        });
       }
       else {
         RCWDL.features.Carousel.create(carousels[0]);
@@ -22,6 +23,7 @@ RCWDL.features.Carousel = {
     }
   },
   create: function (carousel) {
+    'use strict';
     tns({
       container: carousel,
       items: 1,
@@ -34,6 +36,6 @@ RCWDL.features.Carousel = {
       touch: true
     });
   }
-}
+};
 
 RCWDL.ready(RCWDL.features.Carousel.init('.rc-carousel'));

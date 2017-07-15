@@ -1,5 +1,7 @@
 RCWDL.features.Tabs = {
   init: function (target) {
+    'use strict';
+
     var tabsets = document.getElementsByClassName(target);
 
     // Skip if no sets of tabs are found.
@@ -15,6 +17,8 @@ RCWDL.features.Tabs = {
     }
   },
   hideTabs: function (tabsets) {
+    'use strict';
+
     var tabs = tabsets.getElementsByClassName('rc-tabs__controller');
 
     // Loop through the triggers adding event handlers.
@@ -35,6 +39,8 @@ RCWDL.features.Tabs = {
     });
   },
   tabClick: function (e) {
+    'use strict';
+
     e.preventDefault();
     // Get the target content container using the hash.
     var target = document.querySelectorAll(this.getAttribute('href'));

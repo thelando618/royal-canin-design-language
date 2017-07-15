@@ -1,5 +1,7 @@
 RCWDL.features.Tooltip = {
   init: function (target) {
+    'use strict';
+
     var tooltips = document.querySelectorAll(target);
 
     if (typeof tooltips === 'object') {
@@ -16,10 +18,10 @@ RCWDL.features.Tooltip = {
             interactive: true,
             trigger: 'click'
           }
-          )
-      })
+        );
+      });
     }
   }
-}
+};
 
 RCWDL.ready(RCWDL.features.Tooltip.init('[data-tooltip]'));
