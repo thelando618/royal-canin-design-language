@@ -101,6 +101,10 @@ $social-color-youtube: #CD201F;
 .social-links--red-bkgrnd {
   @extend %social-links;
 
+  & .social__network--instagram {
+    background-image: none;
+  }
+
   .social-links__item > a {
     background-color: colour('brand', 'red');
 
