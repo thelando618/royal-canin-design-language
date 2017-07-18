@@ -48,7 +48,7 @@ module.exports = function (task, gulp, sitesettings, need, taskObj) {
       // dir has now been created, including the directory it is to be placed in
     });
 
-    return gulp.src(path.join(__dirname, '../../' + location['rawfiles']['svgs'] + '/coloured/*.svg'))
+    return gulp.src(path.join(__dirname, '../../' + location['rawfiles']['svgs'] + '/output/*.svg'))
       .pipe(plumber())
       .pipe(need.svgSprite(config))
       .on('error', function(error){
