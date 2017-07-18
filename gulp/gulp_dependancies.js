@@ -27,6 +27,9 @@ need.eslint = require('gulp-eslint');
 need.concat = require('gulp-concat');
 need.uglify = require('gulp-uglify');
 
+need.inline = require('gulp-inline-fonts');
+need.merge  = require('merge-stream');
+
 need.svgSprite = require('gulp-svg-sprite');
 need.recolorSvg = require("gulp-recolor-svg");
 

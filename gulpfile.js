@@ -58,7 +58,7 @@
     },
     'prepAssets': {
       subtasks: [],
-      pretasks: ['svgo'],
+      pretasks: ['svgo', 'convertType'],
       watch: {
         active: false,
         files: [sitesettings.watch.sass]

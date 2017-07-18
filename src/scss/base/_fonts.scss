@@ -1,17 +1,4 @@
-@each $familyname, $filename, $weight, $style in $typefaces {
-
-  @font-face {
-    font-family: $familyname;
-    src:
-            url('#{$typeface-location}#{$filename}.eot');
-    src:
-            url('#{$typeface-location}#{$filename}.eot?#iefix') format('embedded-opentype'),
-            url('#{$typeface-location}#{$filename}.woff2') format('woff2'),
-            url('#{$typeface-location}#{$filename}.woff') format('woff'),
-            url('#{$typeface-location}#{$familyname}.ttf') format('truetype');
-    font-style: $style;
-    font-weight: $weight;
-  }
+@each $familyname, $weight, $style in $typefaces {
 
   // Make the class/placeholder string valid by removing spaces and converting to lowercase.
   $className: str-replace(to_lower_case($familyname), ' ', '-');
