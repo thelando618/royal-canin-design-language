@@ -137,10 +137,14 @@
     content: '';
     position: absolute;
     right: 0;
-    top: 0;
+    top: -1em;
     bottom: 0;
     width: 65px;
     background-repeat: no-repeat;
+
+    @media (get-breakpoint('small')) {
+      top: -.75em;
+    }
   }
 }
 

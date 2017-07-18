@@ -18,7 +18,6 @@
 }
 
 %floating-button {
-  padding: 1.5em;
   box-shadow: 0 2px 4px #f1f1f1;
   background: colour('brand', 'white');
 }
@@ -59,7 +58,6 @@ $navigation-nextprev-height: 65px;
 
 %interactive--navigation {
   display: inline-block;
-  padding: 1em 0.25em;
   transition: background-color .2s ease-in-out;
   background-color: colour('brand', 'red');
   overflow: hidden;
@@ -78,7 +76,6 @@ $navigation-nextprev-height: 65px;
 
   &::after {
     transform: scale(0.5);
-    transform-origin: 50% 0;
   }
 }
 
@@ -156,9 +153,7 @@ $navigation-nextprev-height: 65px;
   @extend %response;
   @extend %floating-button;
 
-  svg {
-    fill: colour('functional', 'success');
-  }
+  @extend .rc-icon-check--green;
 
   &:hover,
   &:focus,
@@ -171,6 +166,7 @@ $navigation-nextprev-height: 65px;
 .response--negative {
   @extend %response;
   @extend %floating-button;
+  @extend .rc-icon-cross--red;
 
   svg {
     fill: colour('brand', 'red');

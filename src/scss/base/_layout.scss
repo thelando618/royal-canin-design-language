@@ -4,17 +4,27 @@
 
 
 // Clears
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  display: table;
+%clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
 }
 
-.clearfix:after {
+%clearfix:after {
   clear: both;
 }
 
+.clearfix {
+  @extend %clearfix;
+}
 
+
+section {
+  position: relative;
+  @extend %clearfix;
+}
 
 $grid--standard: (
         columns: 12,  // The number of columns in your grid
@@ -116,23 +126,25 @@ $navigation-width: 240px;
 @media ( get-breakpoint('x-large') ) {
 
   %layout--two-one--base {
-    display: block;
     width: 100%;
+    display: block;
+    display: flex;
 
-    & > div {
+    & > .rc-column {
       display: inline-block;
       vertical-align: top;
+      flex: 1;
     }
   }
 
   .layout--one-two {
     @extend %layout--two-one--base;
-    & > div:nth-child(1) {
+    & > .rc-column:nth-child(1) {
       width: 33%;
       padding-right: 2%;
     }
 
-    & > div:nth-child(2) {
+    & > .rc-column:nth-child(2) {
       width: 66%;
       padding-left: 2%;
     }
@@ -140,14 +152,76 @@ $navigation-width: 240px;
 
   .layout--two-one {
     @extend %layout--two-one--base;
-    & > div:nth-child(1) {
+    & > .rc-column:nth-child(1) {
       width: 66%;
       padding-right: 2%;
     }
 
-    & > div:nth-child(2) {
+    & > .rc-column:nth-child(2) {
       width: 33%;
       padding-left: 2%;
     }
   }
+}
+
+%layout--two-one--base-small > .rc-column {
+    & > img,
+    & > figure > img {
+      margin: 0 auto;
+    }
+}
+
+.layout--one-centered {
+  max-width: get-maxWidth('medium');
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.layout--one-two {
+  @extend %layout--two-one--base-small;
+}
+
+.layout--two-one {
+  @extend %layout--two-one--base-small;
+}
+
+.vertical-align {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+%stick {
+  position: absolute;
+}
+
+.stick-left {
+  @extend %stick;
+  left: 0;
+  right: auto;
+}
+
+.stick-right {
+  @extend %stick;
+  right: 0;
+  left: auto;
+}
+
+%show-at-large-only {
+  display: none;
+
+  @media (get-breakpoint('large')) {
+    display: block;
+  }
+}
+
+.show-at-large-only {
+  @extend %show-at-large-only;
+}
+
+.max-width--large {
+  display: block;
+  max-width: get-maxWidth('large');
+  margin-left: auto;
+  margin-right: auto;
 }
