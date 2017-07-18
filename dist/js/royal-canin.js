@@ -3518,6 +3518,7 @@ RCWDL.utilities = {};
 // Function to handle when DOM is ready.
 RCWDL.ready = function (fn) {
   'use strict';
+
   if (document.readyState !== 'loading') {
     fn();
   }
@@ -3528,6 +3529,7 @@ RCWDL.ready = function (fn) {
 
 RCWDL.utilities.toggleClass = function (target, className, addRemove) {
   'use strict';
+
   // IE 8+ support.
   if (target.classList) {
     target.classList[addRemove]('hidden');
@@ -3544,25 +3546,167 @@ RCWDL.utilities.toggleClass = function (target, className, addRemove) {
 
 RCWDL.utilities.wrap = function (el, wrapper) {
   'use strict';
+
   el.parentNode.insertBefore(wrapper, el);
   wrapper.appendChild(el);
 };
 
 RCWDL.utilities.triggerResize = function () {
   'use strict';
+
   var evt = document.createEvent('HTMLEvents');
   evt.initEvent('resize', true, false);
   window.dispatchEvent(evt);
 };
 
+RCWDL.utilities.hasClass = function (el, className) {
+  'use strict';
+
+  if (el.classList) {
+    return el.classList.contains(className);
+  }
+  else {
+    return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);
+  }
+};
+
+RCWDL.utilities.triggerAndTargetClassModifier = {
+
+  /**
+   * Add event handler to elements with specified css selector, when specified event triggers,
+   * toggle the the supplied class name on both the trigger and target element.
+   *
+   * @param {String} event
+   * Event type to add handler to.
+   *
+   * @param {String} trigger
+   * Element selector that will be used to toggle the modifier class.
+   *
+   * @param {String} target
+   * Element selector that will be targeted when the event fires.
+   *
+   * @param {String} modifier
+   * Class added to both the trigger and target elements.
+   *
+   * @param {Number} depth
+   * Numeric value used to help toggles that climb the DOM to stop after a set amount of increments.
+   *
+   */
+  init: function (event, trigger, target, modifier, depth) {
+    'use strict';
+
+    // Find the nodes we will use as triggers.
+    if (typeof document.querySelector(trigger) === 'object' && document.querySelector(trigger) !== null) {
+      this.attach(event, document.querySelectorAll(trigger), target, modifier, depth);
+    }
+  },
+  attach: function (event, targetNodes, target, modifier, depth) {
+    'use strict';
+
+    // Loop through the list of nodes and attached events to each.
+    if (event === 'load') {
+      for (var i = 0; i < (targetNodes.length); i++) {
+        this.action(targetNodes[i], target, modifier, depth);
+      }
+    }
+    else {
+      if (targetNodes.length > 0) {
+        for (var b = 0; b < (targetNodes.length); b++) {
+          targetNodes[b].addEventListener(event, function (event) { this.action(event.target, target, modifier, depth); });
+        }
+      }
+      else {
+        targetNodes.addEventListener(event, function (event) { this.action(event.target, target, modifier, depth); });
+      }
+    }
+  },
+  action: function (targetNode, target, modifier, depth) {
+    'use strict';
+
+    // Store the node in a temporary variable, which we will replace as we climb the DOM.
+    var currentNode = targetNode;
+    var classNoDot = modifier.replace(/^\./, '');
+    var toggle = !RCWDL.utilities.hasClass(targetNode, classNoDot) ? 'add' : 'remove';
+
+    if (depth > 0) {
+      for (var i = 0; i < depth; i++) {
+        currentNode = this.climbTreeAndToggle(currentNode, target, modifier, i);
+      }
+    }
+    else if (/data-js-trigger/i.test(target)) {
+      document.querySelectorAll('[data-js-target]').forEach(function (item) {
+        RCWDL.utilities.triggerAndTargetClassModifier.removeModifier(item, classNoDot);
+      });
+
+      document.querySelectorAll(target).forEach(function (item) {
+        RCWDL.utilities.triggerAndTargetClassModifier.removeModifier(item, classNoDot);
+      });
+
+      var childTarget = document.querySelector('[data-js-target="' + targetNode.getAttribute('data-js-trigger') + '"]');
+      childTarget.classList[toggle](classNoDot);
+
+      // Toggle the active class on the trigger.
+      targetNode.classList[toggle](classNoDot);
+    }
+  },
+  removeModifier: function (item, modifier) {
+    'use strict';
+
+    if (item.classList) {
+      item.classList.remove(modifier);
+    }
+    else {
+      item.modifier = item.modifier.replace(new RegExp('(^|\\b)' + modifier.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+    }
+  },
+  climbTreeAndToggle: function (currentNode, target, modifier) {
+    'use strict';
+
+    while (!this.classCheck(currentNode, target.target) && currentNode !== null) {
+      // Check the node for the target class and climb the DOM if not found.
+      currentNode = currentNode.parentNode;
+    }
+
+    if (target.siblingCheck) {
+      var childTarget = currentNode.querySelector(target.targetClass);
+      childTarget.classList.toggle(modifier.replace(/^\./, ''));
+    }
+    else {
+      // Toggle the active class on the target.
+      currentNode.classList.toggle(modifier.replace(/^\./, ''));
+    }
+    return currentNode.parentNode;
+  },
+  classCheck: function classCheck(el, className) {
+    'use strict';
+
+    try {
+      // Try and find the class with contains function, use RegEx for older browsers.
+      if (el.classList) {
+        return el.classList.contains(className.replace(/^\./, ''));
+      }
+      else {
+        return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);
+      }
+    }
+    catch (e) {
+      throw new Error('Css Selector: "' + className + '" doesn\'t appear to be in the DOM');
+    }
+  }
+};
+
 /**
- *
- * Carousel javascript
- *
+ * Takes a selector and converts into a carousel using the tiny-slider library.
+ * @type {{init: RCWDL.features.Carousel.init, create: RCWDL.features.Carousel.create}}
  */
-
-
 RCWDL.features.Carousel = {
+
+  /**
+   * Find all the elements with the supplied selector.
+   *
+   * @param {String} targetClass
+   * Css selector to target.
+   */
   init: function (targetClass) {
     'use strict';
 
@@ -3579,6 +3723,13 @@ RCWDL.features.Carousel = {
       }
     }
   },
+
+  /**
+   * Create a carousel from the supplied node item.
+   *
+   * @param {Node} carousel
+   * Node item.
+   */
   create: function (carousel) {
     'use strict';
     tns({
@@ -3595,7 +3746,7 @@ RCWDL.features.Carousel = {
   }
 };
 
-RCWDL.ready(RCWDL.features.Carousel.init('.rc-carousel'));
+RCWDL.ready(RCWDL.features.Carousel.init('[data-js-carousel]'));
 
 /**
  * Function factory object for adding features to form elements.
@@ -3773,6 +3924,11 @@ RCWDL.features.Datepickers = {
 
 RCWDL.ready(RCWDL.features.Datepickers.init());
 
+/**
+ * Variant on the carousel function. Creates very simple carousels used for small image galleries.
+ *
+ * @type {{init: RCWDL.features.ImageGallery.init, create: RCWDL.features.ImageGallery.create, wrapAndRemoveDots: RCWDL.features.ImageGallery.wrapAndRemoveDots}}
+ */
 RCWDL.features.ImageGallery = {
   init: function (targetClass, options) {
     'use strict';
@@ -3792,6 +3948,16 @@ RCWDL.features.ImageGallery = {
       }
     }
   },
+
+  /**
+   * Create an image gallery carousel from the supplied node item.
+   *
+   * @param {Node} imageGallery
+   * Node item for converting.
+   *
+   * @param {Object} options
+   * Object with options for tiny slider library.
+   */
   create: function (imageGallery, options) {
     'use strict';
 
@@ -3811,6 +3977,13 @@ RCWDL.features.ImageGallery = {
 
     tns(options);
   },
+
+  /**
+   * With the lack of programmatic enable/disable of UI dots we have to remove these manually.
+   *
+   * @param {Node} item
+   * Node item to have dots removed.
+   */
   wrapAndRemoveDots: function (item) {
     'use strict';
     // Create an element to wrap the gallery with so we can easily target it later.
@@ -4083,16 +4256,24 @@ function initMap() {
 
 
 /**
- *
- * File Progress.js.
- *
+ * Extension of the HTML element progress.
+ * @type {{init: RCWDL.features.Progress.init, demo: RCWDL.features.Progress.demo}}
  */
-
 RCWDL.features.Progress = {
+
+  /**
+   * Setup the progress element with a label to reflect the current
+   * value and a mutation observer to update this on changes.
+   *
+   * @param {String} targetClass
+   * Css selector.
+   */
   init: function (targetClass) {
     'use strict';
 
     var progElms = document.querySelectorAll(targetClass);
+
+    // Look for the demo element.
     var demo = document.querySelectorAll('[data-js-demo="update-progress-demo"]');
 
     if (typeof demo !== 'undefined' && demo.length > 0) {
@@ -4136,6 +4317,12 @@ RCWDL.features.Progress = {
     });
   },
 
+  /**
+   * Demo function purely here to drive the demo on the portal. Simply aitches an
+   * event to a button to update the progress barr.
+   *
+   * @param {Node} demo
+   */
   demo: function (demo) {
     'use strict';
 
@@ -4151,47 +4338,63 @@ RCWDL.features.Progress = {
 RCWDL.ready(RCWDL.features.Progress.init('progress'));
 
 /**
+ * Adds an interactive UI slider where you can set the min/max and steps, inputs are then reflected in the nested input element.
  *
- * File sliders.js.
- *
+ * @type {{init: RCWDL.features.Slider.init, create: RCWDL.features.Slider.create, setupKeyboard: RCWDL.features.Slider.setupKeyboard, updateInput: RCWDL.features.Slider.updateInput}}
  */
+RCWDL.features.Slider = {
 
+  /**
+   * Receives a css selector and transforms the target wrapper div and input into a slider.
+   *
+   * @param {String} selector
+   * Css selector for finding targets for conversion.
+   */
+  init: function (selector) {
+    'use strict';
+    var range = document.querySelectorAll(selector);
 
-/**
- * Checks if document is ready
- * @param  {Function} fn Whatever is passed in the ready function
- */
-function ready(fn) {
-  if (document.readyState != 'loading'){
-    fn();
-  } else {
-    document.addEventListener('DOMContentLoaded', fn);
-  }
-}
+    if (typeof range[1] !== 'undefined') {
+      if (range.length > 0) {
 
+        range.forEach(function (item) {
+          // Create Slider
+          RCWDL.features.Slider.create(item);
+        });
+      }
+      else {
+        RCWDL.features.Slider.create(range[0]);
+      }
+    }
+  },
 
+  /**
+   * Create the slider using the found node items.
+   *
+   * @param {Node} item
+   * Node item to be converted.
+   */
+  create: function (item) {
+    'use strict';
 
+    // Setup initial values for the slider and input.
+    var min = parseInt(item.getAttribute('data-js-min')) || 0;
+    var max = parseInt(item.getAttribute('data-js-max')) || 100;
+    var start = parseInt(item.getAttribute('data-js-start')) || min;
+    var step = parseInt(item.getAttribute('data-js-step')) || max / 10;
 
+    var sliderInput = item.getElementsByTagName('input');
+    sliderInput[0].value = start;
+    sliderInput[0].style.display = 'none';
 
-
-// @todo - Will live in scripts file
-// Native document ready
-ready(function() {
-
-  // Get element
-  var range = document.getElementById('rc-slider-demo');
-
-  if (range !== null) {
-
-    // Create Slider
-    noUiSlider.create(range, {
-      start: [0],
+    noUiSlider.create(item, {
+      start: [start],
       connect: [true, false],
       behaviour: 'tap-drag',
-      step: 10,
+      step: step,
       range: {
-        'min': 0,
-        'max': 100
+        min: min,
+        max: max
       },
       pips: {
         mode: 'steps',
@@ -4199,29 +4402,130 @@ ready(function() {
         density: 2
       }
     });
+
+    RCWDL.features.Slider.setupKeyboard(item);
+    RCWDL.features.Slider.updateInput(item);
+  },
+
+  /**
+   *	Extended the functionality/accessibility of noUiSlider by adding keyboard control.
+   *
+   *	@param {Node} slider
+   *  DOM node item for manipulation.
+   */
+  setupKeyboard: function (slider) {
+    'use strict';
+
+    // handles keyboard updates
+    // see http://refreshless.com/nouislider/examples/#section-keypress
+    slider.addEventListener('keydown', function (event) {
+      var value = Number(this.noUiSlider.get());
+      var step = this.noUiSlider.steps()[0][1];
+      var handleSteps = step / event.target.getAttribute('aria-valuemax');
+
+      switch (event.which) {
+        case 40: // down
+        case 37: // left
+          // decrements value by a single step
+          this.noUiSlider.set(value - step);
+          break;
+
+        case 38: // up
+        case 39: // right
+          // increments value by a single step
+          this.noUiSlider.set(value + step);
+          break;
+
+        case 34: // page down
+          // decrements value by 10 steps
+          this.noUiSlider.set(value - (step * 3));
+          break;
+
+        case 33: // page up
+          // increments value by 10 steps
+          this.noUiSlider.set(value + (step * 3));
+          break;
+
+        case 36: // home
+          this.noUiSlider.set(0);
+          break;
+
+        case 35: // end
+          this.noUiSlider.set(handleSteps * step);
+          break;
+
+        default:
+          return;
+      }
+
+      event.preventDefault();
+    });
+  },
+
+  /**
+   * Whenever the slider is updated/set also update the nested input.
+   *
+   * @param {Node} slider
+   * DOM node item for manipulation.
+   */
+  updateInput: function (slider) {
+    'use strict';
+
+    slider.noUiSlider.on('set', function (event, targetClass) {
+      var thisInput = document.querySelector('#' + this.target.attributes['data-js-slider'].value);
+      thisInput.value = arguments[0];
+    });
   }
+};
 
+RCWDL.ready(RCWDL.features.Slider.init('[data-js-slider]'));
 
-});
-
+/**
+ * Enables the ability to create interactive tabbed navigation for stacked content.
+ *
+ * @type {{init: RCWDL.features.Tabs.init, hideTabs: RCWDL.features.Tabs.hideTabs, tabClick: RCWDL.features.Tabs.tabClick}}
+ */
 RCWDL.features.Tabs = {
+
+  /**
+   * Initialise the interaction on target selector.
+   *
+   * @param {String} target
+   * Css selector.
+   */
   init: function (target) {
     'use strict';
 
-    var tabsets = document.getElementsByClassName(target);
+    var tabsets = document.querySelectorAll(target);
 
-    // Skip if no sets of tabs are found.
-    if (tabsets.length > 0) {
-      // Loop through all the returned results, these should be sets of tabs.
-      Object.keys(tabsets).forEach(function (tabset) {
-        RCWDL.features.Tabs.hideTabs(tabsets[tabset]);
+    if (typeof tabsets[0] !== 'undefined') {
+      // Skip if no sets of tabs are found.
+      if (tabsets.length > 0) {
+        // Loop through all the returned results, these should be sets of tabs.
+        Object.keys(tabsets).forEach(function (tabset) {
+          RCWDL.features.Tabs.hideTabs(tabsets[tabset]);
+
+          // fake a click on the first item.
+          var defaultItem = tabsets[tabset].querySelectorAll('.rc-tabs__triggers > li:first-child a');
+          defaultItem[0].click();
+        });
+      }
+      else {
+        RCWDL.features.Tabs.hideTabs(tabsets[0]);
 
         // fake a click on the first item.
-        var defaultItem = tabsets[tabset].querySelectorAll('.rc-tabs__triggers > li:first-child a');
+        var defaultItem = tabsets[0].querySelectorAll('.rc-tabs__triggers > li:first-child a');
         defaultItem[0].click();
-      });
+      }
     }
   },
+
+  /**
+   * Hide all the tabs for a given tab set.
+   *
+   * @param {Node} tabsets
+   * Wrapper containing a set of tabs and controller (rc-tabs__controller).
+   */
   hideTabs: function (tabsets) {
     'use strict';
 
@@ -4244,10 +4548,17 @@ RCWDL.features.Tabs = {
       target[0].setAttribute('aria-hidden', 'true');
     });
   },
-  tabClick: function (e) {
+
+  /**
+   * Event bound to tab controllers click events.
+   *
+   * @param {Object} event
+   * Event object.
+   */
+  tabClick: function (event) {
     'use strict';
 
-    e.preventDefault();
+    event.preventDefault();
     // Get the target content container using the hash.
     var target = document.querySelectorAll(this.getAttribute('href'));
 
@@ -4260,9 +4571,21 @@ RCWDL.features.Tabs = {
   }
 };
 
-RCWDL.ready(RCWDL.features.Tabs.init('rc-tabs'));
+RCWDL.ready(RCWDL.features.Tabs.init('[data-js-rc-tabs]'));
 
+/**
+ * Tool tip functionality added with tippy js library.
+ *
+ * @type {{init: RCWDL.features.Tooltip.init}}
+ */
 RCWDL.features.Tooltip = {
+
+  /**
+   * Initialise the tippy library against the targetting selector.
+   *
+   * @param {String} target
+   * Css selector used for targeting.
+   */
   init: function (target) {
     'use strict';
 

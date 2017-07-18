@@ -1,14 +1,22 @@
 /**
- *
- * File Progress.js.
- *
+ * Extension of the HTML element progress.
+ * @type {{init: RCWDL.features.Progress.init, demo: RCWDL.features.Progress.demo}}
  */
-
 RCWDL.features.Progress = {
+
+  /**
+   * Setup the progress element with a label to reflect the current
+   * value and a mutation observer to update this on changes.
+   *
+   * @param {String} targetClass
+   * Css selector.
+   */
   init: function (targetClass) {
     'use strict';
 
     var progElms = document.querySelectorAll(targetClass);
+
+    // Look for the demo element.
     var demo = document.querySelectorAll('[data-js-demo="update-progress-demo"]');
 
     if (typeof demo !== 'undefined' && demo.length > 0) {
@@ -52,6 +60,12 @@ RCWDL.features.Progress = {
     });
   },
 
+  /**
+   * Demo function purely here to drive the demo on the portal. Simply aitches an
+   * event to a button to update the progress barr.
+   *
+   * @param {Node} demo
+   */
   demo: function (demo) {
     'use strict';
 

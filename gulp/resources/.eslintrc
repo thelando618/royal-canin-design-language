@@ -7,7 +7,12 @@
     "domready": true,
     "matchMedia": true,
     "Modernizr": true,
-    "RCWDL": true
+    "RCWDL": true,
+    "tns": true,
+    "Choices": true,
+    "Pikaday": true,
+    "noUiSlider": true,
+    "tippy": true
   },
   "rules": {
     // Errors.

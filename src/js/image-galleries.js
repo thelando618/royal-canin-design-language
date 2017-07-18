@@ -1,3 +1,8 @@
+/**
+ * Variant on the carousel function. Creates very simple carousels used for small image galleries.
+ *
+ * @type {{init: RCWDL.features.ImageGallery.init, create: RCWDL.features.ImageGallery.create, wrapAndRemoveDots: RCWDL.features.ImageGallery.wrapAndRemoveDots}}
+ */
 RCWDL.features.ImageGallery = {
   init: function (targetClass, options) {
     'use strict';
@@ -17,6 +22,16 @@ RCWDL.features.ImageGallery = {
       }
     }
   },
+
+  /**
+   * Create an image gallery carousel from the supplied node item.
+   *
+   * @param {Node} imageGallery
+   * Node item for converting.
+   *
+   * @param {Object} options
+   * Object with options for tiny slider library.
+   */
   create: function (imageGallery, options) {
     'use strict';
 
@@ -36,6 +51,13 @@ RCWDL.features.ImageGallery = {
 
     tns(options);
   },
+
+  /**
+   * With the lack of programmatic enable/disable of UI dots we have to remove these manually.
+   *
+   * @param {Node} item
+   * Node item to have dots removed.
+   */
   wrapAndRemoveDots: function (item) {
     'use strict';
     // Create an element to wrap the gallery with so we can easily target it later.

@@ -1,4 +1,16 @@
+/**
+ * Tool tip functionality added with tippy js library.
+ *
+ * @type {{init: RCWDL.features.Tooltip.init}}
+ */
 RCWDL.features.Tooltip = {
+
+  /**
+   * Initialise the tippy library against the targetting selector.
+   *
+   * @param {String} target
+   * Css selector used for targeting.
+   */
   init: function (target) {
     'use strict';
 

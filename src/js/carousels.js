@@ -1,11 +1,15 @@
 /**
- *
- * Carousel javascript
- *
+ * Takes a selector and converts into a carousel using the tiny-slider library.
+ * @type {{init: RCWDL.features.Carousel.init, create: RCWDL.features.Carousel.create}}
  */
-
-
 RCWDL.features.Carousel = {
+
+  /**
+   * Find all the elements with the supplied selector.
+   *
+   * @param {String} targetClass
+   * Css selector to target.
+   */
   init: function (targetClass) {
     'use strict';
 
@@ -22,6 +26,13 @@ RCWDL.features.Carousel = {
       }
     }
   },
+
+  /**
+   * Create a carousel from the supplied node item.
+   *
+   * @param {Node} carousel
+   * Node item.
+   */
   create: function (carousel) {
     'use strict';
     tns({
@@ -38,4 +49,4 @@ RCWDL.features.Carousel = {
   }
 };
 
-RCWDL.ready(RCWDL.features.Carousel.init('.rc-carousel'));
+RCWDL.ready(RCWDL.features.Carousel.init('[data-js-carousel]'));
