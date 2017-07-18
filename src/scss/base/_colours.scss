@@ -1,0 +1,105 @@
+// ----------------------------------------------------------------------
+
+// Colours
+
+// ----------------------------------------------------------------------
+
+////
+/// @author James Drawneek
+/// @group First 10 Digital
+////
+
+/// Manage colours by grouping and looping variables.
+///  Utility classes are also generated:
+///  .colour-bkgrnd-red {
+///   background-color: #E2001A;
+///  }
+///
+///  .colour-text-red {
+///   color: #E2001A;
+///  }
+///
+/// @example scss - Basic Usage Sass
+///    .component-id-like-red-text {
+///        color: colour('brand', 'red');
+///    }
+///
+/// @example scss - Tint/tone usage. Outputs the target colour at -10% lightness.
+///    .component-id-like--dark-red-text {
+///        color: colour('brand', 'red', 'dark');
+///    }
+///
+
+$properties: (
+                ('bkgrnd', 'background-color')
+                ('text', 'color')
+                ('border', 'border-color')
+);
+
+@function colour($palette, $name, $tintTone: null) {
+  $getPalette: map-get($colours, $palette);
+
+  @if $getPalette != null {
+    $getColour: map-get( map-get($colours, $palette), $name);
+
+    @if $getColour != null {
+
+      @if $tintTone != null {
+        @if map-has-key($tint-tone, $tintTone) {
+          @return scale_color($getColour, $lightness: map-get($tint-tone, $tintTone) * 1%);
+
+        }
+        @else {
+          @error 'The tint used -> #{$tintTone} doesn\'t exsist. Please use: #{$tint-tone}';
+        }
+      }
+
+      @else {
+        @return $getColour;
+      }
+
+    } @else {
+      @error 'The colour #{$name} doesn\'t appear to be in the palette #{$palette}';
+    }
+  }
+  @else {
+    @error 'The palette #{$palette} doesn\'t exsist';
+  }
+}
+
+@each $palette in $colours {
+  // Get the index of the current loop, use that to get the key.
+  $i: index($colours, $palette);
+
+
+  // Fetch the colours list from the current palette.
+  $getPalette: map-get($colours, nth(map-keys($colours), $i));
+
+  @each $colour in $getPalette {
+
+    // For each colour get the key to be used in classes.
+    $n: index($getPalette, $colour);
+    $colourName: nth(map-keys($getPalette), $n);
+
+
+
+    // Loop through the properties list to generate a class for each property and each variant.
+    @each $shortname, $prop in $properties {
+
+      .colour-#{$colourName}__#{$shortname} {
+        #{$prop}: colour(nth(map-keys($colours), $i), $colourName);
+      }
+      @if nth(map-keys($colours), $i) == 'brand' or $colourName != 'white' {
+
+        @each $value in $tint-tone {
+          $v: index($tint-tone, $value);
+          $name: nth(map-keys($tint-tone), $v);
+
+          .colour-#{$colourName}--#{$name}__#{$shortname} {
+            #{$prop}: colour(nth(map-keys($colours), $i), $colourName, #{$name});
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.rc-tooltip {
+  z-index: 1000;
+  display: inline-block;
+  background-color: colour('brand', 'white');
+  width: auto;
+  max-width: 80%;
+  box-shadow: 0 .5em 1em rgba( 0, 0, 0, .1 );
+
+  p {
+    margin: 0;
+  }
+
+  > p {
+    font-size: .875em;
+  }
+
+  @media ( get-breakpoint('x-small') ) {
+    max-width: 480px;
+  }
+}
+
+.tippy-tooltip {
+  background-color: transparent;
+}
+
+.tippy-tooltip {
+  color: colour('functional', 'text');
+  padding: 0;
+  box-shadow: 0 .5em 1em rgba( 0, 0, 0, .1 );
+}
+
+.tippy-popper[x-placement^=top] [x-arrow].arrow-big {
+  border-top-color: white;
+}
+
+.tippy-popper[x-placement^=right] [x-arrow].arrow-big {
+   border-right-color: white;
+}
+
+.tippy-popper[x-placement^=right] {
+  top: -65px !important;
+}
+
+.rc-tooltip__pad {
+  padding: get-spacer('small');
+}

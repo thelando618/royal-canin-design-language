@@ -1,0 +1,313 @@
+/////////////////////////////////////// Button Base Styles ///////////////////////////////////////
+[class^="button"] {
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  background-color: colour('brand', 'red');
+  color: colour('brand', 'white');
+  font-weight: 500;
+  font-size: .675em;
+  padding: .3rem 1rem;
+  line-height: 1.5;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  margin-bottom: 1em;
+  transition: background-color 0.2s ease-in;
+
+  &::after {
+    position: absolute;
+    right: 1em;
+    top: -1.9em;
+    display: inline-block;
+    vertical-align: middle;
+    width: 65px;
+    height: 65px;
+    transform: scale(0.2);
+    transform-origin: 100%;
+    background-repeat: no-repeat;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: colour('brand', 'red', 'dark');
+    color: colour('brand', 'white');
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    background-color: colour('brand', 'red', 'dark');
+  }
+
+  &:disabled {
+    background-color: colour('brand', 'light-grey');
+    color: colour('brand', 'medium-grey');
+    border-color: transparent;
+    cursor: not-allowed;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: colour('brand', 'light-grey');
+      color: colour('brand', 'medium-grey');
+    }
+  }
+
+  @media (get-breakpoint('small')) {
+    border-radius: 3px;
+  }
+}
+
+[class*="--icon-"]::after {
+  content: '';
+}
+
+%button--small {
+  font-size: .875em;
+  padding: .425rem 1.5rem;
+
+  &::after {
+    transform: scale(0.3);
+    top: -1.2em;
+  }
+}
+
+%button--medium {
+  font-size: 1em;
+  padding: .625rem 2.5rem;
+
+  &::after {
+    transform: scale(0.4);
+    top: -.7em;
+  }
+}
+
+%button--large {
+  font-size: 1.2em;
+  padding: .825rem 3.5rem;
+
+  &::after {
+    transform: scale(0.55);
+    top: -.3em;
+  }
+}
+
+
+
+/////////////////////////////////////// Secondary Button ///////////////////////////////////////
+
+%button--secondary {
+  border-color: colour('brand', 'red');
+  color: colour('brand', 'red');
+  background-color: transparent;
+
+  &:hover, &:focus {
+    background-color: colour('brand', 'red');
+    color: colour('brand', 'white');
+  }
+
+  &:active {
+    background-color: colour('brand', 'red', 'dark');
+    border-color: colour('brand', 'red', 'dark');
+  }
+}
+
+.button--secondary {
+  @extend %button--secondary;
+}
+
+/////////////////////////////////////// Tertiary Button ///////////////////////////////////////
+
+%button--tertiary {
+  border-color: colour('functional', 'text');
+  color: colour('functional', 'text');
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    background-color: colour('functional', 'text');
+    color: colour('brand', 'white');
+  }
+
+  &:active {
+    background-color: colour('functional', 'text', 'dark');
+    border-color: colour('functional', 'text', 'dark');
+  }
+}
+
+.button--tertiary {
+  @extend %button--tertiary;
+}
+
+
+$buttons: ('secondary', 'tertiary');
+$variants: ('large', 'medium', 'small');
+
+
+// Simple button size variants.
+@each $variant in $variants {
+  .button--#{$variant},
+  %button--#{$variant} {
+    @extend %button--#{$variant};
+  }
+}
+
+// Button size variants.
+@each $button in $buttons {
+  @each $variant in $variants {
+    .button--#{$button}--#{$variant} {
+      @extend %button--#{$button};
+      @extend %button--#{$variant};
+    }
+  }
+}
+
+
+/////////////////////////////////////// Functional Button ///////////////////////////////////////
+
+.button--functional {
+  background-color: colour('functional', 'functional');
+  padding-right: 4em;
+
+  &::after {
+    @extend .rc-icon-arrow--right--white;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: colour('functional', 'functional', 'dark');
+  }
+}
+
+.button--functional--loading {
+  padding-right: 4em;
+  background-color: colour('functional', 'functional', 'dark');
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: colour('functional', 'functional', 'dark');
+  }
+
+  &::after {
+    top: -2em;
+    right: -10px;
+    transform-origin: 47% 53%;
+    @extend .rc-icon-loader--white;
+    animation: steady-spin 1s infinite linear;
+
+    .no-cssanimations & {
+      background-image: url('../images/loading.gif');
+    }
+  }
+}
+
+.button--functional--loading.button--large:after {
+  right: 2px;
+  top: -.4em;
+  animation: steady-spin-large 1s infinite linear;
+}
+
+.button--functional--loading.button--medium:after {
+  right: 2px;
+  top: -.8em;
+  animation: steady-spin-medium 1s infinite linear;
+}
+
+.button--functional--loading.button--small:after {
+  right: 2px;
+  top: -1.3em;
+  animation: steady-spin-small 1s infinite linear;
+}
+
+.button--functional--success {
+  padding-right: 4em;
+  background-color: colour('functional', 'success');
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: colour('functional', 'success', 'dark');
+  }
+
+  &::after {
+    @extend .rc-icon-check--white;
+  }
+}
+
+
+
+.button--functional--fail {
+  padding-right: 4em;
+  background-color: colour('brand', 'red');
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: colour('brand', 'red', 'dark');
+  }
+
+  &::after {
+    @extend .rc-icon-cross--white;
+  }
+}
+
+.button--full--width {
+  width: 100%;
+}
+
+@media ( max-width: 640px ) {
+
+  .button--full--width--mobile {
+    width: 100%;
+  }
+}
+
+/////////////////////////////////////// Button Panel ///////////////////////////////////////
+
+
+.button--panel {
+  background: colour('brand', 'white');
+  border-radius: 0;
+  color: colour('brand', 'red');
+  padding: 0;
+  width: 100%;
+  font-size: 2em;
+  padding-top: 1em;
+  text-align: center;
+  max-width: 375px;
+  border: 1px solid rgba( 0, 0, 0, .15 );
+
+  & > img {
+    margin: 0 auto;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: colour('brand', 'red');
+    background: colour('brand', 'white');
+    text-decoration: underline;
+  }
+}
+
+
+[class^="button"][class*="icon-"] {
+  padding-right: 4em;
+
+  &.rc-icon-check {
+    @extend .rc-icon-check--white;
+  }
+
+  &.rc-icon-arrow-right {
+    @extend .rc-icon-arrow--right--white;
+  }
+
+  &.rc-icon-search {
+    @extend .rc-icon-search--white;
+  }
+}

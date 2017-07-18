@@ -1,0 +1,27 @@
+.rc-map {
+  height: 400px;
+  @extend %feature-width-restriction;
+}
+
+.rc-map__overlay {
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  transition: visibility .25s ease-in-out .25s, opacity .25s ease-in-out .25s;
+  padding: .5em 0;
+  position: relative;
+  left: 0;
+  box-shadow: none;
+  font-family: $font-din;
+
+  p {
+    font-size: 1em;
+  }
+}
+
+.rc-map__overlay--visible {
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+}

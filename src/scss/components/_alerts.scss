@@ -1,0 +1,30 @@
+[role="alert"],
+.alert {
+	text-align: center;
+	border: 2px solid colour('brand', 'red');
+	border-radius: 25px;
+	padding: 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+    @extend %feature-width-restriction;
+
+	& > strong {
+		font-weight: 300;
+	}
+
+	&.alert--error {
+		background-color: transparentize( colour('brand', 'red'), .9 );
+		color: colour('brand', 'red');
+	}
+
+	&.alert--success {
+		border-color: colour('functional', 'success');
+		color: colour('functional', 'success', 'dark');
+		background-color: transparentize( colour('functional', 'success'), .9 );
+	}
+
+	// @todo make this into a variable?
+	@media (get-breakpoint('small')) {
+		border-radius: 50px;
+	}
+}

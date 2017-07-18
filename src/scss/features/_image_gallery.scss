@@ -1,0 +1,5 @@
+.gallery-wrapper {
+  @extend %feature-width-restriction;
+  @extend %on-white-outline;
+  margin: 0 auto;
+}

@@ -1,0 +1,197 @@
+.rc-progress {
+  position: relative;
+
+  .rc-progress__value {
+    position: absolute;
+    top: 0;
+    margin-left: -3em;
+    color: #FFFFFF;
+    padding: .75em .5em;
+    line-height: 1;
+  }
+
+  .rc-progress__value--outside {
+    color: colour('functional', 'success');
+    margin-left: 0;
+  }
+
+  .rc-progress__progressElem {
+    border-radius: 50px;
+    overflow: hidden;
+  }
+
+  progress[value] {
+    position: relative;
+    height: 2.5em;
+    appearance: none;
+    width: 100%;
+    display: block;
+    border: none;
+    transition: width .2s ease-in-out;
+  }
+
+  progress[value]::-webkit-progress-bar {
+    background-color: #FFFFFF;
+    border-radius: 50px;
+    overflow: hidden;
+    transition: width .2s ease-in-out;
+  }
+
+  progress[value]::-moz-progress-bar {
+    background-color: colour('functional', 'success');
+    border-radius: 50px;
+    overflow: hidden;
+    transition: width .4s ease-in-out;
+  }
+
+  progress::-ms-fill {
+    border: none;
+    background-color: colour('functional', 'success');
+    border-radius: 50px;
+    overflow: hidden;
+    transition: width .4s ease-in-out;
+  }
+
+  progress[value]::-webkit-progress-value {
+    background-color: colour('functional', 'success');
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    transition: width .4s ease-in-out;
+  }
+
+  // Fallback Styles
+  // These don't seem to be applied when comma separated with progress element selectors
+  .no-progressbar & {
+    .rc-progress--fallback {
+      position: relative;
+      height: 2.5em;
+    }
+
+    .rc-progress--fallback__value,
+    .rc-progress--fallback__bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .rc-progress--fallback__bar {
+      background-color: #FFFFFF;
+    }
+
+    .rc-progress--fallback__value {
+      background-color: colour('functional', 'success');
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+}
+
+.rc-progress-stepped {
+  text-align: center;
+
+  ol {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  .rc-progress-stepped__item[disabled] {
+    .rc-progress-stepped__link {
+      opacity: .5;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.complete {
+  .rc-progress-stepped__link {
+    background-color: colour('functional', 'success');
+    border-color: colour('brand', 'light-grey');
+  }
+}
+
+.rc-progress-stepped__item {
+  float: left;
+  margin: 0 .5rem;
+
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    background-color: colour('brand', 'light-grey');
+    width: 1rem;
+    height: .2rem;
+    top: 1rem;
+    right: -1rem;
+  }
+
+  &:last-of-type {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.rc-progress-stepped__link {
+  border-radius: 100%;
+  padding: 0;
+  display: block;
+  line-height: 1.6rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: colour('brand', 'light-grey');
+  color: colour('functional', 'text');
+  border: 4px solid transparent;
+}
+
+
+@media (get-breakpoint('x-small') ) {
+  .rc-progress-stepped__link {
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2rem;
+
+    &::before {
+      font-size: 1.25em;
+    }
+
+    &::after {
+      width: 1.25rem;
+      height: .3rem;
+    }
+  }
+
+  .rc-progress-stepped__item::after {
+    top: 1.3rem;
+  }
+}
+
+@media (get-breakpoint('small')) {
+  .rc-progress-stepped__link {
+    width: 3.5rem;
+    height: 3.5rem;
+    line-height: 3rem;
+
+    &:before {
+      font-size: 1.25em;
+    }
+
+    &::after {
+      width: 2rem;
+      height: .4rem;
+      top: -.2rem;
+    }
+
+  }
+
+  .rc-progress-stepped__item::after {
+    top: 1.6rem;
+  }
+}
