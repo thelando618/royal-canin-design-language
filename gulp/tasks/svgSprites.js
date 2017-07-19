@@ -15,11 +15,12 @@ module.exports = function (task, gulp, sitesettings, need, taskObj) {
         bust: false,
         render		: {
           scss		: {
-            dest: '../../src/icons/icons.scss',
+            dest: '../src/icons/icons.scss',
             template: './gulp/resources/sprite.scss'
           }		// Render a Sass stylesheet
         },
-        prefix: '.rc-icon-'
+        prefix: '.rc-icon-',
+        sprite: 'royal-canin.sprite.svg'
       }
     },
     shape: {
@@ -54,6 +55,6 @@ module.exports = function (task, gulp, sitesettings, need, taskObj) {
       .on('error', function(error){
         console.log(error);
       })
-      .pipe(gulp.dest('./dist/icons'))
+      .pipe(gulp.dest('./dist'))
   })
 }
