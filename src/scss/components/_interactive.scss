@@ -1,0 +1,197 @@
+%pager__item__link {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin: 0 .25em;
+  background-color: colour('brand', 'light-grey');
+  border: 2px solid transparent;
+  border-radius: 100%;
+  overflow: hidden;
+  transition: background-color .2s ease-in-out, border .2s ease-in-out;
+  color: transparent;
+  padding: 0;
+  cursor: pointer;
+
+  &:hover, &:focus {
+    border-color: colour('brand', 'red');
+  }
+}
+
+%floating-button {
+  box-shadow: 0 2px 4px #f1f1f1;
+  background: colour('brand', 'white');
+}
+
+.pager {
+  margin: 0;
+  padding: 0;
+}
+
+.pager__item {
+  list-style: none;
+  display: inline-block;
+}
+
+.pager__item__link {
+  @extend %pager__item__link;
+}
+
+%pager--active {
+  background-color: colour('brand', 'red');
+
+  &:hover,
+  &:focus {
+    background-color: colour('brand', 'red', 'dark');
+  }
+
+  &:active {
+    background-color: colour('brand', 'red', 'dark');
+  }
+}
+
+.pager--active {
+  @extend %pager--active;
+}
+
+// This is used in carousel to correctly position vertically. 65px is the current setting for icon heights.
+$navigation-nextprev-height: 65px;
+
+%interactive--navigation {
+  display: inline-block;
+  transition: background-color .2s ease-in-out;
+  background-color: colour('brand', 'red');
+  overflow: hidden;
+  border: 1px solid rgba( 0, 0, 0, .15 );
+  height: $navigation-nextprev-height;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: colour('brand', 'red', 'dark');
+  }
+
+  &:active {
+    background-color: colour('brand', 'red', 'dark');
+  }
+
+  &::after {
+    transform: scale(0.5);
+  }
+}
+
+.interactive-grey {
+  background-color: colour('brand', 'red');
+
+  svg {
+    fill: colour('brand', 'red');
+  }
+}
+
+%interactive--navigation--round {
+  @extend %interactive--navigation;
+  border-radius: 100%;
+}
+
+%response {
+  border: 1px solid colour('brand', 'light-grey');
+  @extend %interactive--navigation--round;
+  background-color: white;
+
+  svg {
+    fill: colour('brand', 'medium-grey');
+  }
+
+  &:hover, &:focus {
+    background-color: colour('brand', 'white', 'dark');
+  }
+
+  &:active {
+    background-color: colour('brand', 'white', 'dark');
+  }
+}
+
+.navigation--round {
+  @extend %interactive--navigation--round;
+  overflow: hidden;
+  background-color: colour('brand', 'red');
+
+  svg {
+    fill: colour('brand', 'white');
+  }
+
+  &:hover,
+  &:focus {
+    background-color: colour('brand', 'red', 'dark');
+  }
+
+  &:active {
+    background-color: colour('brand', 'red', 'dark');
+  }
+}
+
+%navigation--prev {
+  @extend %interactive--navigation;
+  @extend .rc-icon-chevron--left--white;
+
+}
+
+%navigation--next {
+  @extend %interactive--navigation;
+  @extend .rc-icon-chevron--right--white;
+}
+
+.navigation--next {
+   @extend %navigation--next;
+}
+
+.navigation--prev {
+  @extend %navigation--prev;
+}
+
+
+.response--affirmative {
+  @extend %response;
+  @extend %floating-button;
+
+  @extend .rc-icon-check--green;
+
+  &:hover,
+  &:focus,
+  &.interactive--response--active {
+
+
+  }
+}
+
+.response--negative {
+  @extend %response;
+  @extend %floating-button;
+  @extend .rc-icon-cross--red;
+
+  svg {
+    fill: colour('brand', 'red');
+  }
+
+  &:hover,
+  &:focus,
+  &.interactive--response--active {
+  }
+}
+
+.navigation--round--prev {
+  border-radius: 100%;
+  @extend %navigation--next;
+
+  & > svg {
+    left: -2px;
+  }
+}
+
+.navigation--round--next {
+  border-radius: 100%;
+  @extend %navigation--prev;
+
+  & > svg {
+    right: -2px;
+  }
+}

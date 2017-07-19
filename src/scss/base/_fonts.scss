@@ -1,0 +1,15 @@
+@each $familyname, $weight, $style in $typefaces {
+
+  // Make the class/placeholder string valid by removing spaces and converting to lowercase.
+  $className: str-replace(to_lower_case($familyname), ' ', '-');
+
+  %#{$className}--#{$weight} {
+    font-family: $familyname;
+    font-style: $style;
+    font-weight: $weight;
+  }
+
+    .#{$className}--#{$weight} {
+      @extend %#{$className}--#{$weight};
+  }
+}

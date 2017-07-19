@@ -1,0 +1,206 @@
+.navigation {
+  background-color: colour('brand', 'white');
+  display: block;
+  z-index: 10;
+  color: colour('functional', 'text');
+  font-size: .75em;
+  position: relative;
+
+  .gs-nav__header {
+    position: relative;
+  }
+
+  .gs-logo {
+    margin: 0;
+    padding: 0.5em 1em;
+    border-bottom: 1px solid rgba( 0, 0, 0, .15 );
+
+    img {
+      max-width: 100px;
+    }
+  }
+
+  .gs-nav__nav {
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+
+    &.visible {
+      height: auto;
+    }
+  }
+
+  ul {
+    // See if this can be put into a class that lives in _nav.html
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    transition: height 0.3s ease-in-out;
+  }
+
+  li {
+    overflow: hidden;
+    ul {
+      a {
+        padding-top: 1em;
+        padding-bottom: 1em;
+      }
+    }
+  }
+
+  @media ( get-breakpoint('x-large') ) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: $navigation-width;
+    font-size: .825em;
+    border-right: 1px solid rgba( 0, 0, 0, .15 );
+    overflow: scroll;
+
+    .gs-logo {
+      padding: 0;
+
+      img {
+        max-width: 120px;
+        margin: 0.7em auto;
+      }
+    }
+
+    .gs-nav__nav {
+      height: auto !important; // Exists to override any JS applied from toggling the mobile nav.
+    }
+
+    #gs-nav-trigger {
+      display: none;
+    }
+  }
+}
+
+
+.navigation__link {
+  display: block;
+  background-color: colour('brand', 'white');
+  border: none;
+  width: 100%;
+  text-align: left;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  padding: 1.2em 0 1.2em 1.2em;
+  transition: color .1s ease-in;
+  text-transform: capitalize;
+  cursor: pointer;
+
+  &:focus {
+    background: colour('brand', 'light-grey');
+  }
+}
+
+.section > ul {
+  height: 0;
+}
+
+.section .navigation__list-item {
+  border-bottom-color: transparent;
+
+  & > .navigation__link {
+    padding-left: 2rem;
+  }
+}
+
+.toplevel .section .navigation__list-item > .navigation__link {
+  padding-left: 4rem;
+}
+
+.navigation__list-item > ul {
+  margin: 0;
+  padding: 0;
+}
+
+.section > .navigation__link.open {
+  border-bottom-color: transparent;
+
+  & + ul {
+    height: auto;
+  }
+}
+
+.navigation__link {
+  position: relative;
+  @extend .rc-icon-chevron--down--red;
+
+  &::after {
+    transform: rotate(180deg) scale(0.25);
+    opacity: 0;
+    transition: transform .5s ease, opacity .3s ease;
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -1em;
+    bottom: 0;
+    width: 65px;
+    background-repeat: no-repeat;
+
+    @media (get-breakpoint('small')) {
+      top: -.75em;
+    }
+  }
+}
+
+.navigation__link.open {
+  font-weight: 500;
+
+  .section > &::after {
+    transform: rotate(0) scale(0.25);
+    opacity: 1;
+  }
+}
+
+
+.navigation__list-item {
+  border-bottom: 1px solid rgba( 0, 0, 0, .15 );
+  margin: 0;
+}
+
+.nav-toggle {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 80px;
+  cursor: pointer;
+  
+  @media ( get-breakpoint('large') ) {
+    display: none;
+  }
+
+  & > hr {
+    display: block;
+    height: 2px;
+    width: 30px;
+    margin: .65em 0;
+    border: none;
+    background-color: rgba( 0, 0, 0, .75 );
+    transition: width 0.2s ease-in;
+
+    &:nth-child(1) {
+      width: 22px;
+    }
+
+    &:nth-child(3) {
+      width: 24px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+   & > hr {
+      &:nth-child(1), &:nth-child(3) {
+        width: 30px;
+      }
+    }
+  }
+}

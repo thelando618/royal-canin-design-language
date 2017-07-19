@@ -1,0 +1,20 @@
+$breakpoints: (
+    'x-small' : 480,
+    'small'   : 640,
+    'med'     : 800,
+    'large'   : 960,
+    'x-large' : 1024,
+);
+
+
+@function get-breakpoint($size) {
+  $breakpoint-size: map-get($breakpoints, $size);
+
+  @if $breakpoint-size != null {
+    @return 'min-width: #{$breakpoint-size}px';
+  }
+
+  @else {
+    @error 'The breakpoint size: #{$size} wasn\'t found. Try: $breakpoint-size';
+  }
+}
