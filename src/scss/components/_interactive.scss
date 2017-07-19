@@ -81,10 +81,6 @@ $navigation-nextprev-height: 65px;
 
 .interactive-grey {
   background-color: colour('brand', 'red');
-
-  svg {
-    fill: colour('brand', 'red');
-  }
 }
 
 %interactive--navigation--round {
@@ -96,10 +92,6 @@ $navigation-nextprev-height: 65px;
   border: 1px solid colour('brand', 'light-grey');
   @extend %interactive--navigation--round;
   background-color: white;
-
-  svg {
-    fill: colour('brand', 'medium-grey');
-  }
 
   &:hover, &:focus {
     background-color: colour('brand', 'white', 'dark');
@@ -114,10 +106,6 @@ $navigation-nextprev-height: 65px;
   @extend %interactive--navigation--round;
   overflow: hidden;
   background-color: colour('brand', 'red');
-
-  svg {
-    fill: colour('brand', 'white');
-  }
 
   &:hover,
   &:focus {
@@ -152,7 +140,6 @@ $navigation-nextprev-height: 65px;
 .response--affirmative {
   @extend %response;
   @extend %floating-button;
-
   @extend .rc-icon-check--green;
 
   &:hover,
@@ -168,10 +155,6 @@ $navigation-nextprev-height: 65px;
   @extend %floating-button;
   @extend .rc-icon-cross--red;
 
-  svg {
-    fill: colour('brand', 'red');
-  }
-
   &:hover,
   &:focus,
   &.interactive--response--active {
@@ -182,16 +165,41 @@ $navigation-nextprev-height: 65px;
   border-radius: 100%;
   @extend %navigation--next;
 
-  & > svg {
-    left: -2px;
-  }
 }
 
 .navigation--round--next {
   border-radius: 100%;
   @extend %navigation--prev;
 
-  & > svg {
-    right: -2px;
+}
+
+%menu-toggle {
+  background-color: transparent;
+  border: none;
+  position: fixed;
+  z-index: 999;
+  top: -.5em;
+  transform: scale(0.5)  rotate(0deg);
+  transition: transform .3s ease-in-out;
+  cursor: pointer;
+
+  @media (get-breakpoint('large')) {
+    display: none;
   }
+
+  &.open {
+    transform: scale(0.4) rotate(90deg);
+  }
+}
+
+.menu-toggle--left {
+  @extend %menu-toggle;
+  left: 0;
+  right: auto;
+}
+
+.menu-toggle--right {
+  @extend %menu-toggle;
+  left: auto;
+  right: 0;
 }
