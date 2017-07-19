@@ -1,5 +1,5 @@
 {{#hasMixin}}@mixin {{mixinName}} {
-	background: url("sprite.css.svg") no-repeat;
+	background: url("royal-canin.sprite.svg") no-repeat;
 }
 
 {{#hasCommon}}.{{commonName}} {
@@ -7,7 +7,7 @@
 }
 
 {{/hasCommon}}{{/hasMixin}}{{^hasMixin}}{{#hasCommon}}.{{/hasCommon}}{{^hasCommon}}%{{/hasCommon}}{{commonName}} {
-    background-image: url("sprite.css.svg");
+    background-image: url("royal-canin.sprite.svg");
     background-repeat: no-repeat;
     display: inline-block;
     content: '';
