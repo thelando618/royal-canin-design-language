@@ -10,9 +10,8 @@
       position: absolute;
       bottom: 0;
       right: 0;
-      width: 2.5rem;
-      height: 2.5rem;
-      background-color: green;
+      transform: scale(0.5);
+      @extend .rc-icon-arrow--right--red;
     }
   }
 

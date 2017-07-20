@@ -4,29 +4,43 @@
   z-index: 10;
   color: colour('functional', 'text');
   font-size: .75em;
-  position: relative;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  & > nav > ul {
+    z-index: 5;
+    transform: translate(0px, -200%);
+    transform-origin: top;
+    transition: transform .5s ease-in;
+    position: absolute;
+    background-color: colour('brand', 'white');
+    width: 100%;
+  }
+
+  &.open > nav > ul {
+    transform: translate(0px, 0px);
+    transition: transform .5s ease-in;
+  }
 
   .gs-nav__header {
     position: relative;
   }
 
   .gs-logo {
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    background-color: colour('brand', 'white');
     margin: 0;
-    padding: 0.5em 1em;
+    height: 70px;
     border-bottom: 1px solid rgba( 0, 0, 0, .15 );
 
-    img {
-      max-width: 100px;
-    }
-  }
-
-  .gs-nav__nav {
-    height: 0px;
-    overflow: hidden;
-    transition: height 0.3s ease-in-out;
-
-    &.visible {
-      height: auto;
+    &::after {
+      transform: scale(2.5) translate(0);
+      transform-origin: 0;
+      position: absolute;
+      top: 15px;
     }
   }
 
@@ -48,7 +62,7 @@
     }
   }
 
-  @media ( get-breakpoint('x-large') ) {
+  @media ( get-breakpoint('large') ) {
     position: fixed;
     top: 0;
     left: 0;
@@ -78,6 +92,30 @@
 }
 
 
+@media (get-breakpoint('large')) {
+
+  .navigation {
+    position: fixed;
+    top: 0;
+  }
+
+  .navigation > nav > ul {
+    position: relative;
+    width: auto;
+    transform: translate(0px, 0px);
+    transition: transform .5s ease-in;
+  }
+
+  .navigation .gs-logo {
+    width: 100%;
+
+    &::after {
+      width: 75px;
+      left: 25px;
+    }
+  }
+}
+
 .navigation__link {
   display: block;
   background-color: colour('brand', 'white');
@@ -94,6 +132,10 @@
 
   &:focus {
     background: colour('brand', 'light-grey');
+  }
+
+  &.current-page {
+    font-weight: bolder;
   }
 }
 
@@ -137,7 +179,7 @@
     content: '';
     position: absolute;
     right: 0;
-    top: -1em;
+    top: -1.85em;
     bottom: 0;
     width: 65px;
     background-repeat: no-repeat;
@@ -163,44 +205,3 @@
   margin: 0;
 }
 
-.nav-toggle {
-  border: none;
-  background-color: transparent;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 80px;
-  cursor: pointer;
-  
-  @media ( get-breakpoint('large') ) {
-    display: none;
-  }
-
-  & > hr {
-    display: block;
-    height: 2px;
-    width: 30px;
-    margin: .65em 0;
-    border: none;
-    background-color: rgba( 0, 0, 0, .75 );
-    transition: width 0.2s ease-in;
-
-    &:nth-child(1) {
-      width: 22px;
-    }
-
-    &:nth-child(3) {
-      width: 24px;
-    }
-  }
-
-  &:hover,
-  &:focus {
-   & > hr {
-      &:nth-child(1), &:nth-child(3) {
-        width: 30px;
-      }
-    }
-  }
-}

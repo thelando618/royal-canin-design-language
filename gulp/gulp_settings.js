@@ -21,7 +21,7 @@ location['csssource'] = '*.styles.scss';
 location['gensass'] = [];
 location['gensass']['icons'] = location['stylessrc'] + '/svgs';
 
-location['cssdest'] = 'dist/css';
+location['cssdest'] = 'dist';
 location['cssoutput'] = 'royal-canin.styles.css';
 location['cssoutput-min'] = 'royal-canin.styles.min.css';
 
@@ -31,15 +31,16 @@ location['js-dependencies'] = [
   'node_modules/choices.js/assets/scripts/dist/choices.min.js',
   'node_modules/pikaday/pikaday.js',
   'node_modules/tiny-slider/dist/tiny-slider.js',
+  'node_modules/nouislider/distribute/nouislider.min.js',
   'node_modules/tippy.js/dist/tippy.min.js'
 ];
 
-location['jsdest'] = 'dist/js';
+location['jsdest'] = 'dist';
 location['jsoutput'] = 'royal-canin.js';
 location['jsoutput-min'] = 'royal-canin.min.js';
 
 location['imgdest'] = 'dist/img';
-location['imgoutput'] = 'icons';
+location['imgoutput'] = '';
 
 const watch = {
   sass: [location['stylessrc'] + '/**/*.scss', location['stylessrc'] + '/*.scss'],
