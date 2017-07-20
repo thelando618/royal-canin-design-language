@@ -1553,7 +1553,7 @@ sup {
   float: left;
 }
 
-.rc-icon-arrow--right--black::after,.rc-icon-arrow--right--red::after,.card--featured > a::after,.rc-icon-arrow--right--white::after,.button--functional::after,[class^="button"][class*="icon-"].rc-icon-arrow-right::after,.rc-icon-basket--black::after,.rc-icon-basket--red::after,.rc-icon-basket--white::after,.rc-icon-bowl--black::after,.rc-icon-bowl--red::after,.rc-icon-bowl--white::after,.rc-icon-calendar--black::after,.rc-icon-calendar--red::after,.rc-icon-calendar--white::after,.rc-icon-check--black::after,.rc-icon-check--green::after,.response--affirmative::after,.rc-icon-check--red::after,.rc-icon-check--v2--black::after,.rc-icon-check--v2--red::after,.rc-icon-check--v2--white::after,.rc-icon-check--white::after,.button--functional--success::after,[class^="button"][class*="icon-"].rc-icon-check::after,.rc-icon-chevron--down--black::after,.rc-icon-chevron--down--red::after,.navigation__link::after,.rc-icon-chevron--down--white::after,.rc-icon-chevron--heavy--down--black::after,.rc-icon-chevron--heavy--down--red::after,[role="listbox"].choices::after,.rc-icon-chevron--heavy--down--white::after,.rc-icon-chevron--heavy--up--black::after,.rc-icon-chevron--heavy--up--red::after,.rc-icon-chevron--heavy--up--white::after,.rc-icon-chevron--left--black::after,.rc-icon-chevron--left--red::after,.rc-icon-chevron--left--white::after,.navigation--prev::after,.navigation--round--next::after,[data-controls] .navigation--prev::after,[data-controls] .navigation--next::after,.rc-icon-chevron--right--black::after,.rc-icon-chevron--right--red::after,.rc-icon-chevron--right--white::after,.navigation--next::after,.navigation--round--prev::after,.rc-icon-chevron--up--black::after,.rc-icon-chevron--up--red::after,.rc-icon-chevron--up--white::after,.rc-icon-clock--black::after,.rc-icon-clock--red::after,.rc-icon-clock--white::after,.rc-icon-comment--black::after,.rc-icon-comment--red::after,.rc-icon-comment--white::after,.rc-icon-cross--black::after,.rc-icon-cross--red::after,.response--negative::after,.rc-icon-cross--white::after,.button--functional--fail::after,.rc-icon-crown--black::after,.rc-icon-crown--red::after,.rc-icon-crown--white::after,.rc-icon-facebook--black::after,.rc-icon-facebook--red::after,.rc-icon-facebook--white::after,.rc-icon-female--black::after,.rc-icon-female--red::after,.rc-icon-female--white::after,.rc-icon-groomer--black::after,.rc-icon-groomer--red::after,.rc-icon-groomer--white::after,.rc-icon-heart--black::after,.rc-icon-heart--red::after,.rc-icon-heart--white::after,.rc-icon-instagram--black::after,.rc-icon-instagram--red::after,.rc-icon-instagram--white::after,.rc-icon-loader--black::after,.rc-icon-loader--red::after,.rc-icon-loader--white::after,.button--functional--loading::after,.rc-icon-location--black::after,.rc-icon-location--red::after,.rc-icon-location--white::after,.rc-icon-macbook--black::after,.rc-icon-macbook--red::after,.rc-icon-macbook--white::after,.rc-icon-mail--black::after,.rc-icon-mail--red::after,.rc-icon-mail--white::after,.rc-icon-male--black::after,.rc-icon-male--red::after,.rc-icon-male--white::after,.rc-icon-partner--black::after,.rc-icon-partner--red::after,.rc-icon-partner--white::after,.rc-icon-pharmacy--black::after,.rc-icon-pharmacy--red::after,.rc-icon-pharmacy--white::after,.rc-icon-phone--black::after,.rc-icon-phone--red::after,.rc-icon-phone--white::after,.rc-icon-pintrest--black::after,.rc-icon-pintrest--red::after,.rc-icon-pintrest--white::after,.rc-icon-play--black::after,.rc-icon-play--red::after,.rc-icon-play--v2--black::after,.rc-icon-play--v2--red::after,.rc-icon-play--v2--white::after,.rc-icon-play--white::after,.rc-icon-rating--black::after,.rc-icon-rating--red::after,.rc-icon-rating--white::after,.rc-icon-search--black::after,.rc-icon-search--red::after,.rc-icon-search--white::after,[class^="button"][class*="icon-"].rc-icon-search::after,.rc-icon-shelter--black::after,.rc-icon-shelter--red::after,.rc-icon-shelter--white::after,.rc-icon-speciality-retailer--black::after,.rc-icon-speciality-retailer--red::after,.rc-icon-speciality-retailer--white::after,.rc-icon-toggle--black::after,.rc-icon-toggle--red::after,.rc-icon-toggle--white::after,.rc-icon-twitter--black::after,.rc-icon-twitter--red::after,.rc-icon-twitter--white::after,.rc-icon-user--black::after,.rc-icon-user--red::after,.rc-icon-user--white::after,.rc-icon-vet--black::after,.rc-icon-vet--red::after,.rc-icon-vet--white::after,.rc-icon-vet-v2--black::after,.rc-icon-vet-v2--red::after,.rc-icon-vet-v2--white::after,.rc-icon-view--black::after,.rc-icon-view--red::after,.rc-icon-view--white::after,.rc-icon-volume--black::after,.rc-icon-volume--red::after,.rc-icon-volume--white::after,.rc-icon-youtube--black::after,.rc-icon-youtube--red::after,.rc-icon-youtube--white::after {
+.rc-icon-arrow--right--black::after,.rc-icon-arrow--right--red::after,.card--featured > a::after,.rc-icon-arrow--right--white::after,.button--functional::after,[class^="button"][class*="icon-"].rc-icon-arrow-right::after,.rc-icon-basket--black::after,.rc-icon-basket--red::after,.rc-icon-basket--white::after,.rc-icon-bowl--black::after,.rc-icon-bowl--red::after,.rc-icon-bowl--white::after,.rc-icon-calendar--black::after,.rc-icon-calendar--red::after,.rc-icon-calendar--white::after,.rc-icon-check--black::after,.rc-icon-check--green::after,.response--affirmative::after,.rc-icon-check--red::after,.rc-icon-check--v2--black::after,.rc-icon-check--v2--red::after,.rc-icon-check--v2--white::after,.rc-icon-check--white::after,.button--functional--success::after,[class^="button"][class*="icon-"].rc-icon-check::after,.rc-icon-chevron--down--black::after,.rc-icon-chevron--down--red::after,.navigation__link::after,.rc-icon-chevron--down--white::after,.rc-icon-chevron--heavy--down--black::after,.rc-icon-chevron--heavy--down--red::after,[role="listbox"].choices::after,.rc-icon-chevron--heavy--down--white::after,.rc-icon-chevron--heavy--up--black::after,.rc-icon-chevron--heavy--up--red::after,.rc-icon-chevron--heavy--up--white::after,.rc-icon-chevron--left--black::after,.rc-icon-chevron--left--red::after,.rc-icon-chevron--left--white::after,.navigation--prev::after,.navigation--round--next::after,[data-controls] .navigation--prev::after,[data-controls] .navigation--next::after,.rc-icon-chevron--right--black::after,.rc-icon-chevron--right--red::after,.rc-icon-chevron--right--white::after,.navigation--next::after,.navigation--round--prev::after,.rc-icon-chevron--up--black::after,.rc-icon-chevron--up--red::after,.rc-icon-chevron--up--white::after,.rc-icon-clock--black::after,.rc-icon-clock--red::after,.rc-icon-clock--white::after,.rc-icon-comment--black::after,.rc-icon-comment--red::after,.rc-icon-comment--white::after,.rc-icon-cross--black::after,.rc-icon-cross--red::after,.response--negative::after,.rc-icon-cross--white::after,.button--functional--fail::after,.rc-icon-crown--black::after,.rc-icon-crown--red::after,.rc-icon-crown--white::after,.rc-icon-facebook--black::after,.rc-icon-facebook--red::after,.rc-icon-facebook--white::after,.rc-icon-female--black::after,.rc-icon-female--red::after,.rc-icon-female--white::after,.rc-icon-groomer--black::after,.rc-icon-groomer--red::after,.rc-icon-groomer--white::after,.rc-icon-heart--black::after,.rc-icon-heart--red::after,.rc-icon-heart--white::after,.rc-icon-instagram--black::after,.rc-icon-instagram--red::after,.rc-icon-instagram--white::after,.rc-icon-loader--black::after,.rc-icon-loader--red::after,.rc-icon-loader--white::after,.button--functional--loading::after,.rc-icon-location--black::after,.rc-icon-location--red::after,.rc-icon-location--white::after,.rc-icon-macbook--black::after,.rc-icon-macbook--red::after,.rc-icon-macbook--white::after,.rc-icon-mail--black::after,.rc-icon-mail--red::after,.rc-icon-mail--white::after,.rc-icon-male--black::after,.rc-icon-male--red::after,.rc-icon-male--white::after,.rc-icon-partner--black::after,.rc-icon-partner--red::after,.rc-icon-partner--white::after,.rc-icon-pharmacy--black::after,.rc-icon-pharmacy--red::after,.rc-icon-pharmacy--white::after,.rc-icon-phone--black::after,.rc-icon-phone--red::after,.rc-icon-phone--white::after,.rc-icon-pintrest--black::after,.rc-icon-pintrest--red::after,.rc-icon-pintrest--white::after,.rc-icon-play--black::after,.rc-icon-play--red::after,.rc-icon-play--v2--black::after,.rc-icon-play--v2--red::after,.rc-icon-play--v2--white::after,.rc-icon-play--white::after,.rc-icon-rating--black::after,.rc-icon-rating--red::after,.rc-icon-rating--white::after,.rc-icon-royal-canin-crown::after,.rc-icon-royal-canin-primary::after,.rc-icon-royal-canin-secondary::after,.rc-icon-search--black::after,.rc-icon-search--red::after,.rc-icon-search--white::after,[class^="button"][class*="icon-"].rc-icon-search::after,.rc-icon-shelter--black::after,.rc-icon-shelter--red::after,.rc-icon-shelter--white::after,.rc-icon-speciality-retailer--black::after,.rc-icon-speciality-retailer--red::after,.rc-icon-speciality-retailer--white::after,.rc-icon-toggle--black::after,.rc-icon-toggle--red::after,.rc-icon-toggle--white::after,.rc-icon-twitter--black::after,.rc-icon-twitter--red::after,.rc-icon-twitter--white::after,.rc-icon-user--black::after,.rc-icon-user--red::after,.rc-icon-user--white::after,.rc-icon-vet--black::after,.rc-icon-vet--red::after,.rc-icon-vet--white::after,.rc-icon-vet-v2--black::after,.rc-icon-vet-v2--red::after,.rc-icon-vet-v2--white::after,.rc-icon-view--black::after,.rc-icon-view--red::after,.rc-icon-view--white::after,.rc-icon-volume--black::after,.rc-icon-volume--red::after,.rc-icon-volume--white::after,.rc-icon-youtube--black::after,.rc-icon-youtube--red::after,.rc-icon-youtube--white::after {
   background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-0-2");
   background-repeat: no-repeat;
   display: inline-block;
@@ -1567,7 +1567,7 @@ sup {
 }
 
 .rc-icon-arrow--right--red::after,.card--featured > a::after {
-  background-position: 72.72727272727273% 18.181818181818183%;
+  background-position: 72.72727272727273% 36.36363636363637%;
 }
 
 .rc-icon-arrow--right--white::after,.button--functional::after,[class^="button"][class*="icon-"].rc-icon-arrow-right::after {
@@ -1827,7 +1827,7 @@ sup {
 }
 
 .rc-icon-loader--white::after,.button--functional--loading::after {
-  background-position: 0 0;
+  background-position: 72.72727272727273% 18.181818181818183%;
 }
 
 .rc-icon-location--black::after {
@@ -1835,7 +1835,7 @@ sup {
 }
 
 .rc-icon-location--red::after {
-  background-position: 72.72727272727273% 36.36363636363637%;
+  background-position: 0 0;
 }
 
 .rc-icon-location--white::after {
@@ -1962,136 +1962,148 @@ sup {
   background-position: 81.81818181818181% 81.81818181818181%;
 }
 
-.rc-icon-search--black::after {
+.rc-icon-royal-canin-crown::after {
   background-position: 90.9090909090909% 0;
 }
 
+.rc-icon-royal-canin-primary::after {
+  background-position: 90.9090909090909% 5.5721156254696655%;
+}
+
+.rc-icon-royal-canin-secondary::after {
+  background-position: 90.9090909090909% 10.72207339106598%;
+}
+
+.rc-icon-search--black::after {
+  background-position: 90.9090909090909% 16.03896103896104%;
+}
+
 .rc-icon-search--red::after {
-  background-position: 90.9090909090909% 9.090909090909092%;
+  background-position: 90.9090909090909% 25.12987012987013%;
 }
 
 .rc-icon-search--white::after,[class^="button"][class*="icon-"].rc-icon-search::after {
-  background-position: 90.9090909090909% 18.181818181818183%;
+  background-position: 90.9090909090909% 34.22077922077922%;
 }
 
 .rc-icon-shelter--black::after {
-  background-position: 90.9090909090909% 27.272727272727273%;
+  background-position: 90.9090909090909% 43.311688311688314%;
 }
 
 .rc-icon-shelter--red::after {
-  background-position: 90.9090909090909% 36.36363636363637%;
+  background-position: 90.9090909090909% 52.4025974025974%;
 }
 
 .rc-icon-shelter--white::after {
-  background-position: 90.9090909090909% 45.45454545454545%;
+  background-position: 90.9090909090909% 61.493506493506494%;
 }
 
 .rc-icon-speciality-retailer--black::after {
-  background-position: 90.9090909090909% 54.54545454545455%;
+  background-position: 90.9090909090909% 70.58441558441558%;
 }
 
 .rc-icon-speciality-retailer--red::after {
-  background-position: 90.9090909090909% 63.63636363636363%;
+  background-position: 90.9090909090909% 79.67532467532467%;
 }
 
 .rc-icon-speciality-retailer--white::after {
-  background-position: 90.9090909090909% 72.72727272727273%;
-}
-
-.rc-icon-toggle--black::after {
-  background-position: 90.9090909090909% 81.81818181818181%;
-}
-
-.rc-icon-toggle--red::after {
   background-position: 0 90.9090909090909%;
 }
 
-.rc-icon-toggle--white::after {
+.rc-icon-toggle--black::after {
   background-position: 9.090909090909092% 90.9090909090909%;
 }
 
-.rc-icon-twitter--black::after {
+.rc-icon-toggle--red::after {
   background-position: 18.181818181818183% 90.9090909090909%;
 }
 
-.rc-icon-twitter--red::after {
+.rc-icon-toggle--white::after {
   background-position: 27.272727272727273% 90.9090909090909%;
 }
 
-.rc-icon-twitter--white::after {
+.rc-icon-twitter--black::after {
   background-position: 36.36363636363637% 90.9090909090909%;
 }
 
-.rc-icon-user--black::after {
+.rc-icon-twitter--red::after {
   background-position: 45.45454545454545% 90.9090909090909%;
 }
 
-.rc-icon-user--red::after {
+.rc-icon-twitter--white::after {
   background-position: 54.54545454545455% 90.9090909090909%;
 }
 
-.rc-icon-user--white::after {
+.rc-icon-user--black::after {
   background-position: 63.63636363636363% 90.9090909090909%;
 }
 
-.rc-icon-vet--black::after {
+.rc-icon-user--red::after {
   background-position: 72.72727272727273% 90.9090909090909%;
 }
 
-.rc-icon-vet--red::after {
+.rc-icon-user--white::after {
   background-position: 81.81818181818181% 90.9090909090909%;
 }
 
-.rc-icon-vet--white::after {
+.rc-icon-vet--black::after {
   background-position: 90.9090909090909% 90.9090909090909%;
 }
 
-.rc-icon-vet-v2--black::after {
+.rc-icon-vet--red::after {
   background-position: 100% 0;
 }
 
-.rc-icon-vet-v2--red::after {
+.rc-icon-vet--white::after {
   background-position: 100% 9.090909090909092%;
 }
 
-.rc-icon-vet-v2--white::after {
+.rc-icon-vet-v2--black::after {
   background-position: 100% 18.181818181818183%;
 }
 
-.rc-icon-view--black::after {
+.rc-icon-vet-v2--red::after {
   background-position: 100% 27.272727272727273%;
 }
 
-.rc-icon-view--red::after {
+.rc-icon-vet-v2--white::after {
   background-position: 100% 36.36363636363637%;
 }
 
-.rc-icon-view--white::after {
+.rc-icon-view--black::after {
   background-position: 100% 45.45454545454545%;
 }
 
-.rc-icon-volume--black::after {
+.rc-icon-view--red::after {
   background-position: 100% 54.54545454545455%;
 }
 
-.rc-icon-volume--red::after {
+.rc-icon-view--white::after {
   background-position: 100% 63.63636363636363%;
 }
 
-.rc-icon-volume--white::after {
+.rc-icon-volume--black::after {
   background-position: 100% 72.72727272727273%;
 }
 
-.rc-icon-youtube--black::after {
+.rc-icon-volume--red::after {
   background-position: 100% 81.81818181818181%;
 }
 
-.rc-icon-youtube--red::after {
+.rc-icon-volume--white::after {
   background-position: 100% 90.9090909090909%;
 }
 
-.rc-icon-youtube--white::after {
+.rc-icon-youtube--black::after {
   background-position: 0 100%;
+}
+
+.rc-icon-youtube--red::after {
+  background-position: 9.090909090909092% 100%;
+}
+
+.rc-icon-youtube--white::after {
+  background-position: 18.181818181818183% 100%;
 }
 
 .screen-reader-text {
