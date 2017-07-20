@@ -240,15 +240,14 @@ $variants: ('large', 'medium', 'small');
 }
 
 
-
 .button--functional--fail {
   padding-right: 4em;
-  background-color: colour('brand', 'red');
+  background-color: colour('functional', 'error');
 
   &:hover,
   &:focus,
   &:active {
-    background-color: colour('brand', 'red', 'dark');
+    background-color: colour('functional', 'error', 'dark');
   }
 
   &::after {
