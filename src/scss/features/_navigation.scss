@@ -28,15 +28,19 @@
   }
 
   .gs-logo {
+    width: 100%;
     position: relative;
     z-index: 10;
     background-color: colour('brand', 'white');
     margin: 0;
-    padding: 0.5em 1em;
+    height: 70px;
     border-bottom: 1px solid rgba( 0, 0, 0, .15 );
 
-    img {
-      max-width: 100px;
+    &::after {
+      transform: scale(2.5) translate(0);
+      transform-origin: 0;
+      position: absolute;
+      top: 15px;
     }
   }
 
@@ -58,7 +62,7 @@
     }
   }
 
-  @media ( get-breakpoint('x-large') ) {
+  @media ( get-breakpoint('large') ) {
     position: fixed;
     top: 0;
     left: 0;
@@ -89,16 +93,26 @@
 
 
 @media (get-breakpoint('large')) {
+
   .navigation {
     position: fixed;
-    width: auto;
     top: 0;
   }
+
   .navigation > nav > ul {
     position: relative;
     width: auto;
     transform: translate(0px, 0px);
     transition: transform .5s ease-in;
+  }
+
+  .navigation .gs-logo {
+    width: 100%;
+
+    &::after {
+      width: 75px;
+      left: 25px;
+    }
   }
 }
 

@@ -178,7 +178,7 @@ $navigation-nextprev-height: 65px;
   border: none;
   position: fixed;
   z-index: 999;
-  top: -.5em;
+  top: 0;
   transform: scale(0.5)  rotate(0deg);
   transition: transform .3s ease-in-out;
   cursor: pointer;
