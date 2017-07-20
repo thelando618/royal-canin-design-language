@@ -15,7 +15,7 @@ RCWDL.features.Slider = {
     'use strict';
     var range = document.querySelectorAll(selector);
 
-    if (typeof range[1] !== 'undefined') {
+    if (typeof range[0] !== 'undefined') {
       if (range.length > 0) {
 
         range.forEach(function (item) {
