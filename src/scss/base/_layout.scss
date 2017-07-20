@@ -110,6 +110,7 @@ $navigation-width: 240px;
 .navigation + div {
   margin: get-spacer('small') auto;
   width: 90%;
+  margin-top: 90px;
 
   @media (get-breakpoint('small')) {
   margin: get-spacer('large') auto;
