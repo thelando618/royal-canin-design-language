@@ -28,7 +28,14 @@ RCWDL.features.Tooltip = {
             arrowSize: 'big',
             position: tooltip.getAttribute('data-tooltip-direction') || 'top',
             interactive: true,
-            trigger: 'click'
+            trigger: 'click',
+            popperOptions: {
+              modifiers: {
+                flip: {
+                  behavior: ['right', 'bottom']
+                }
+              }
+            }
           }
         );
       });

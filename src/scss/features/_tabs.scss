@@ -4,7 +4,7 @@
   position: relative;
 
   .rc-tabs__triggers {
-    overflow-y: scroll;
+    overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     margin-top: 0;
     margin-bottom: 0;

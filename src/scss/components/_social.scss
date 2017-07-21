@@ -172,6 +172,14 @@ $social-color-youtube: #CD201F;
       margin-left: -1em;
     }
   }
+
+  &.social--label--side > .social__label {
+    padding-right: 1em;
+  }
+}
+
+.social--label--top > .social__label {
+  display: block;
 }
 
 .social--label--side.social--box {
