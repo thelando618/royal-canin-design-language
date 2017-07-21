@@ -2473,9 +2473,21 @@ body {
 
 section {
   position: relative;
-}
-
-.spacer-large {
+}/**
+  * Get Max Width function
+  *
+  * Used to create consistency across max width values.
+  *
+  * @param {String} $name Name of the max width found in the $max-width sass map.
+  * @returns {Number}
+  *//**
+  * Get Spacer function
+  *
+  * Used to create consistency across spacing.
+  *
+  * @param {String} $name Name of the spacer found in the $spacers sass map. Current uses the middle value (3).
+  * @returns {Number}
+  */.spacer-large {
   padding: 3rem;
 }
 
@@ -2559,7 +2571,6 @@ section {
 }
 
 .max-width--large {
-  display: block;
   max-width: 1240px;
   margin-left: auto;
   margin-right: auto;
@@ -2948,7 +2959,7 @@ blockquote > p {
 
 .button--medium::after,.button--secondary--medium::after,.button--tertiary--medium::after {
   transform: scale(0.4);
-  top: -.7em;
+  top: -.65em;
 }
 
 .button--large,.button--secondary--large,.button--tertiary--large {
@@ -3214,6 +3225,10 @@ input[type="file"] {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='Layer_1' viewBox='0 0 64 64'%3E %3Cstyle%3E .st0%7Bfill:%23E2001A;%7D %3C/style%3E %3Ccircle cx='32' cy='32' r='32' class='st0'/%3E %3C/svg%3E");
 }
 
+input:required,textarea:required,select:required,input:required:required {
+  background-color: #ececec;
+}
+
 .rc-input {
   display: block;
   position: relative;
@@ -3334,168 +3349,6 @@ input[type="file"] {
 
 .gs-present.gs-form-field {
   margin-bottom: 1em;
-}/*!
- * Datepicker v0.5.2
- * https://github.com/fengyuanchen/datepicker
- *
- * Copyright (c) 2014-2017 Fengyuan Chen
- * Released under the MIT license
- *
- * Date: 2017-04-08T12:04:53.399Z
- */.datepicker-container {
-  font-size: .75em;
-  position: fixed;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 280px;
-  padding: 2px;
-  user-select: none;
-  background-color: #FFFFFF;
-  direction: ltr !important;
-  -ms-touch-action: none;
-  touch-action: none;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-}
-
-.datepicker-container:before,.datepicker-container:after {
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  content: ' ';
-  border: .5em solid transparent;
-  top: -.5em;
-  left: 1em;
-  border-top: 0;
-  border-bottom-color: #FFFFFF;
-}
-
-.datepicker-dropdown {
-  position: absolute;
-  z-index: 1;
-  box-sizing: content-box;
-  box-shadow: 0 0 1em #939496;
-}
-
-.datepicker-panel ul {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.datepicker-panel ul:before,.datepicker-panel ul:after {
-  display: table;
-  content: ' ';
-}
-
-.datepicker-panel ul:after {
-  clear: both;
-}
-
-.datepicker-panel ul[data-view='years'] > li,.datepicker-panel ul[data-view='months'] > li {
-  width: 42.5px;
-}
-
-.datepicker-panel ul[data-view='week'] > li,.datepicker-panel ul[data-view='week'] > li:hover {
-  cursor: default;
-  background-color: #fff;
-}
-
-.datepicker-panel li {
-  float: left;
-  width: 36px;
-  list-style: none;
-  cursor: pointer;
-  text-align: center;
-  background-color: #EAEAEA;
-  border-radius: 3px;
-  padding: .25em 0;
-  margin: 2px;
-  transition: background-color .1s ease-in-out;
-}
-
-.datepicker-panel li svg {
-  height: .875em;
-  margin: 0;
-  fill: #E2001A;
-  pointer-events: none;
-  vertical-align: baseline;
-}
-
-.datepicker-panel li:hover {
-  background-color: #ececec;
-}
-
-.datepicker-panel li[data-view='years current'],.datepicker-panel li[data-view='year current'],.datepicker-panel li[data-view='month current'] {
-  width: 220px !important;
-}
-
-.datepicker-panel .datepicker-header li {
-  border-radius: 0;
-  width: 24px;
-}
-
-.datepicker-panel .muted,.datepicker-panel .muter:hover {
-  color: #EAEAEA;
-  background-color: #FFF;
-}
-
-.datepicker-panel .highlighted {
-  background-color: #FFF;
-}
-
-.datepicker-panel .highlighted:hover {
-  background-color: #ececec;
-}
-
-.datepicker-panel .picked,.datepicker-panel .picked:hover {
-  background-color: #8EC9D6;
-  color: #FFF;
-}
-
-.datepicker-panel .disabled,.datepicker-panel .disabled:hover {
-  cursor: default;
-  color: #ccc;
-  background-color: #fff;
-}
-
-.datepicker-panel .disabled svg,.datepicker-panel .disabled:hover svg {
-  opacity: .5;
-}
-
-.datepicker-panel .disabled.highlighted,.datepicker-panel .disabled:hover.highlighted {
-  background-color: #c7c7c7;
-}
-
-.datepicker-hide {
-  display: none;
-}
-
-.rc-datepicker__clear {
-  display: inline-block;
-  text-decoration: none;
-  padding: .75em;
-  margin: .5em;
-  float: right;
-  line-height: 1;
-  color: inherit;
-}
-
-.rc-datepicker__clear svg {
-  display: inline-block;
-  width: .75em;
-  height: .75em;
-  margin-left: .25em;
-}
-
-.rc-datepicker__clear:hover,.rc-datepicker__clear:focus {
-  background-color: #d9d9d9;
-}
-
-.rc-datepicker__clear:active {
-  background-color: #d9d9d9;
 }
 
 [role="listbox"].choices {
@@ -4414,6 +4267,14 @@ ul svg,ol svg {
   margin-left: -1em;
 }
 
+.social--box.social--label--side > .social__label {
+  padding-right: 1em;
+}
+
+.social--label--top > .social__label {
+  display: block;
+}
+
 table {
   display: block;
   overflow-x: auto;
@@ -4469,10 +4330,9 @@ table label {
 
 .rc-tooltip {
   z-index: 1000;
-  display: inline-block;
+  display: block;
   background-color: #FFF;
   width: auto;
-  max-width: 80%;
   box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.1);
 }
 
@@ -4502,12 +4362,20 @@ table label {
   border-right-color: white;
 }
 
+.tippy-popper[x-placement^=bottom] [x-arrow].arrow-big {
+  border-bottom-color: white;
+}
+
 .tippy-popper[x-placement^=right] {
   top: -65px !important;
 }
 
 .rc-tooltip__pad {
   padding: 1rem;
+}
+
+[x-placement="bottom"].tippy-popper {
+  margin-top: -120px;
 }
 
 .card--featured {
@@ -5818,12 +5686,15 @@ video.hero__bg {
     width: 100%;
     display: block;
     display: flex;
+    flex: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
   }
 
   .layout--one-two > .rc-column,.layout--two-one > .rc-column {
     display: inline-block;
     vertical-align: top;
-    flex: 1;
   }
 
   .layout--one-two > .rc-column > img,.layout--two-one > .rc-column > img,.layout--one-two > .rc-column > figure,.layout--two-one > .rc-column > figure {
