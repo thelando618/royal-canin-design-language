@@ -46,6 +46,15 @@ $max-widths: (
         'small': 300
 );
 
+
+/**
+  * Get Max Width function
+  *
+  * Used to create consistency across max width values.
+  *
+  * @param {String} $name Name of the max width found in the $max-width sass map.
+  * @returns {Number}
+  */
 @function get-maxWidth($name) {
   @return map-get($max-widths, $name) * 1px;
 }
@@ -56,9 +65,25 @@ $spacers: (
         'small': (.5rem, .5rem, 1rem, 1.5rem, 1.75rem)
 );
 
+/**
+  * Get Spacer function
+  *
+  * Used to create consistency across spacing.
+  *
+  * @param {String} $name Name of the spacer found in the $spacers sass map. Current uses the middle value (3).
+  * @returns {Number}
+  */
 @function get-spacer($size) {
   @return nth(map-get($spacers, $size), 3);
 }
+
+//////////// Generate spacer utility classes using the $spacers sass map. ////////////
+// Each utility class gets a name value from the key then loops
+// through each breakpoint set it $breakpoints and applied the
+// value of the named spacer index value === index value of
+// breakpoint. So 'small' being the first breakpoint it gets the
+// first value from the current spacer value set.
+//////////////////////////////////////////////////////////////////////////////////////
 
 $spacingTypes: map-keys($spacers);
 @each $spacer in $spacingTypes {
@@ -130,11 +155,14 @@ $navigation-width: 240px;
     width: 100%;
     display: block;
     display: flex;
+    flex: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 
     & > .rc-column {
       display: inline-block;
       vertical-align: top;
-      flex: 1;
 
       & > img,
       & > figure {
@@ -234,7 +262,6 @@ $navigation-width: 240px;
 }
 
 .max-width--large {
-  display: block;
   max-width: get-maxWidth('large');
   margin-left: auto;
   margin-right: auto;
