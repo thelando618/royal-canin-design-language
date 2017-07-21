@@ -2,7 +2,13 @@ var RCWDL = {};
 RCWDL.features = {};
 RCWDL.utilities = {};
 
-// Function to handle when DOM is ready.
+/**
+ * This method take a function and executes it when the DOM is ready.
+ * This is similar to $(document).ready() but does not require jQuery.
+ *
+ * @param {Object} fn
+ * Function object to be executed when ready.
+ */
 RCWDL.ready = function (fn) {
   'use strict';
 
@@ -14,16 +20,47 @@ RCWDL.ready = function (fn) {
   }
 };
 
-RCWDL.utilities.toggleClass = function (target, className, addRemove) {
+/**
+ * Used to add/remove classes on a target element.
+ *
+ * @param {Node} target
+ * Targeted DOM node item.
+ *
+ * @param {String} className
+ * Class name to be toggled.
+ */
+RCWDL.utilities.toggleClass = function (target, className) {
   'use strict';
+  var hasClass = null;
+  var addRemove = null;
+
+  if (target.classList) {
+    hasClass = target.classList.contains(className);
+  }
+  else {
+    hasClass = new RegExp('(^| )' + className + '( |$)', 'gi').test(target.className);
+  }
+
+  switch (hasClass) {
+    case true:
+      addRemove = 'remove';
+      break;
+
+    case false:
+      addRemove = 'add';
+      break;
+
+    default:
+      throw new Error('Has Class option used with method RCWDL.utilities.toggleClass is invaild.')
+  }
 
   // IE 8+ support.
   if (target.classList) {
-    target.classList[addRemove]('hidden');
+    target.classList[addRemove](className);
   }
   else {
     if (addRemove === 'add') {
-      target.className += ' hidden';
+      target.className += className;
     }
     else {
       target.className = target.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
@@ -31,6 +68,15 @@ RCWDL.utilities.toggleClass = function (target, className, addRemove) {
   }
 };
 
+/**
+ * Takes two DOM nodes and wraps one around the other.
+ *
+ * @param {Node} el
+ * The DOM node item to be wrapped.
+ *
+ * @param {Node} wrapper
+ * The DOM node item to become the wrapper.
+ */
 RCWDL.utilities.wrap = function (el, wrapper) {
   'use strict';
 
@@ -38,6 +84,10 @@ RCWDL.utilities.wrap = function (el, wrapper) {
   wrapper.appendChild(el);
 };
 
+/**
+ * Triggers a fake page resize. This is sometimes useful to force window redraws or recalculations if you're manipulation
+ * elements in the DOM.
+ */
 RCWDL.utilities.triggerResize = function () {
   'use strict';
 
@@ -46,6 +96,17 @@ RCWDL.utilities.triggerResize = function () {
   window.dispatchEvent(evt);
 };
 
+/**
+ * Checks if target DOM node has a class.
+ *
+ * @param {Node} el
+ * DOM node element to check for class against.
+ *
+ * @param {String} className
+ * CSS class name to look for.
+ *
+ * @returns {boolean}
+ */
 RCWDL.utilities.hasClass = function (el, className) {
   'use strict';
 

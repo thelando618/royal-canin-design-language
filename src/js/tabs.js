@@ -59,7 +59,7 @@ RCWDL.features.Tabs = {
       // Find the target using the href attribute.
       var target = tabsets.querySelectorAll(itemHref);
 
-      RCWDL.utilities.toggleClass(target[0], 'hidden', 'add');
+      RCWDL.utilities.toggleClass(target[0], 'hidden');
 
       // Reset the ARIA attributes on the controller and target.
       tabs[item].setAttribute('aria-selected', 'false');
@@ -81,7 +81,7 @@ RCWDL.features.Tabs = {
     var target = document.querySelectorAll(this.getAttribute('href'));
 
     RCWDL.features.Tabs.hideTabs(this.parentNode.parentNode.parentNode);
-    RCWDL.utilities.toggleClass(target[0], 'hidden', 'remove');
+    RCWDL.utilities.toggleClass(target[0], 'hidden');
 
     // Set the ARIA attributes on the controller and target.
     target[0].setAttribute('aria-hidden', 'false');
