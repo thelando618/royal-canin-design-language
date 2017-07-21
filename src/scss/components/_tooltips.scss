@@ -1,9 +1,8 @@
 .rc-tooltip {
   z-index: 1000;
-  display: inline-block;
+  display: block;
   background-color: colour('brand', 'white');
   width: auto;
-  max-width: 80%;
   box-shadow: 0 .5em 1em rgba( 0, 0, 0, .1 );
 
   p {
@@ -37,10 +36,19 @@
    border-right-color: white;
 }
 
+.tippy-popper[x-placement^=bottom] [x-arrow].arrow-big {
+  border-bottom-color: white;
+}
+
 .tippy-popper[x-placement^=right] {
   top: -65px !important;
 }
 
 .rc-tooltip__pad {
   padding: get-spacer('small');
+}
+
+
+[x-placement="bottom"].tippy-popper {
+  margin-top: -120px;
 }
