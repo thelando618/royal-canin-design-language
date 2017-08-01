@@ -2853,7 +2853,12 @@ blockquote > p {
 }
 
 .breadcrumb__link {
+  color: #939496;
   text-decoration: none;
+}
+
+.breadcrumb__link:hover,.breadcrumb__link:focus {
+  color: #E2001A;
 }
 
 .breadcrumb__link:after {

@@ -12,9 +12,11 @@
 }
 
 .breadcrumb__link {
+  color: colour('brand', 'medium-grey', 'light');
   text-decoration: none;
 
   &:hover, &:focus {
+    color: colour('brand', 'red');
   }
 
   &:after {
