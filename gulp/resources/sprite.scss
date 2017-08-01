@@ -1,5 +1,5 @@
 {{#hasMixin}}@mixin {{mixinName}} {
-	background: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-2-0") no-repeat;
+	background: url("royal-canin.sprite.svg") no-repeat;
 }
 
 {{#hasCommon}}.{{commonName}} {
@@ -7,7 +7,7 @@
 }
 
 {{/hasCommon}}{{/hasMixin}}{{^hasMixin}}{{#hasCommon}}.{{/hasCommon}}{{^hasCommon}}%{{/hasCommon}}{{commonName}} {
-    background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-2-0");
+    background-image: url("royal-canin.sprite.svg");
     background-repeat: no-repeat;
     display: inline-block;
     content: '';
