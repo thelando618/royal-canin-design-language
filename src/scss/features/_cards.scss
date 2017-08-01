@@ -50,26 +50,6 @@
     }
   }
 
-  @media ( max-width: 700px ) {
-    .button {
-      padding: 0;
-      color: colour('functional', 'functional');
-      background-color: transparent;
-      font-size: 1em;
-      font-weight: 300;
-      text-decoration: underline;
-      border-radius: 0;
-
-      &:hover, &:focus {
-        color: #FFFFFF;
-      }
-
-      &:after {
-        display: none;
-      }
-    }
-  }
-
   @media ( get-breakpoint('x-small') ) {
     .card__header {
       padding-left: 1em;
