@@ -47,5 +47,10 @@ const watch = {
   js: [location['js'] + '/*.js']
 };
 
+const deploy = {
+  version: '1-2-0'
+}
+
 exports.location = location;
 exports.watch = watch;
+exports.deploy = deploy
