@@ -18,7 +18,7 @@
   &::after {
     position: absolute;
     right: 1em;
-    top: -1.9em;
+    top: -2.1em;
     display: inline-block;
     vertical-align: middle;
     width: 65px;
@@ -58,6 +58,10 @@
 
   @media (get-breakpoint('small')) {
     border-radius: 3px;
+
+    &::after {
+      top: -1.85em
+    }
   }
 }
 
@@ -71,12 +75,11 @@
 
   &::after {
     transform: scale(0.3);
-    top: -1.6em;
+    top: -1.4em;
   }
-  
+
   @media ( get-breakpoint('small')) {
     &::after {
-      transform: scale(0.3);
       top: -1.15em;
     }
   }
@@ -88,7 +91,13 @@
 
   &::after {
     transform: scale(0.4);
-    top: -.65em;
+    top: -.85em;
+  }
+
+  @media ( get-breakpoint('small')) {
+    &::after {
+      top: -.65em;
+    }
   }
 }
 
@@ -98,7 +107,13 @@
 
   &::after {
     transform: scale(0.55);
-    top: -.3em;
+    top: -.45em;
+  }
+
+  @media ( get-breakpoint('small')) {
+    &::after {
+      top: -.35em;
+    }
   }
 }
 
