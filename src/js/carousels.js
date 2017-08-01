@@ -39,6 +39,7 @@ RCWDL.features.Carousel = {
       container: carousel,
       items: 1,
       slideBy: 'page',
+      mouseDrag: true,
       autoplay: false,
       controlsText: [
         '<span class="navigation--prev"><span class="screen-reader-text">Previous</span></span>',
