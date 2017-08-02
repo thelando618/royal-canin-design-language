@@ -7,5 +7,4 @@ node_modules/
 
 # Styleguide generated assets. To be removed when we move to live complied workflow.
 # dist
-src/svgs/coloured
 icons.scss
