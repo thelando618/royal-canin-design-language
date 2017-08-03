@@ -2,7 +2,9 @@ module.exports = function (task, gulp, sitesettings, need, taskObj) {
   'use strict';
 
   const taskDetails = taskObj[global.process.argv[2]],
-    enableSassLint = taskDetails.linting.testSass;
+    enableSassLint = taskDetails.linting.testSass,
+    env = taskObj[global.process.argv[2]]['env'],
+    version = sitesettings['deploy']['version'];
 
   const location = sitesettings.location;
 
@@ -44,6 +46,7 @@ module.exports = function (task, gulp, sitesettings, need, taskObj) {
       .pipe(need.gulpif(enableSassLint, need.postcss(processors, {syntax: need.syntax_scss})))
       .pipe(need.sass(sassOptions))
       .pipe(need.rename(location['cssoutput']))
+      .pipe(need.gulpif(env === 'production', need.replace(`url("royal-canin.sprite.svg")`, `url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=${version}")`)))
       .pipe(gulp.dest(location['cssdest']))
       .pipe(need.sass(sassOptionsMin))
       .pipe(need.rename(

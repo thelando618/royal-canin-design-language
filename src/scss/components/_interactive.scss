@@ -188,7 +188,7 @@ $navigation-nextprev-height: 65px;
   }
 
   &.open {
-    transform: scale(0.4) rotate(90deg);
+    @extend .rc-icon-cross--red;
   }
 }
 

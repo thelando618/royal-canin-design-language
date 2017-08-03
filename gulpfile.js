@@ -32,7 +32,20 @@
       },
       linting: {
         testSass: true
-      }
+      },
+      env: 'development'
+    },
+    'compile': {
+      subtasks: ['combineMq'],
+      pretasks: ['sass', 'jsProcessing'],
+      watch: {
+        active: false,
+        files: [sitesettings.watch.sass, sitesettings.watch.js]
+      },
+      linting: {
+        testSass: false
+      },
+      env: 'production'
     },
     'tasklist': {
       subtasks: [],

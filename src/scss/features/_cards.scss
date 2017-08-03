@@ -1,9 +1,12 @@
 .card {
-  max-width: 310px;
   display: flex;
   position: relative;
   margin-bottom: 1em;
   @extend %on-white-outline;
+
+  @media ( get-breakpoint('small') ) {
+    max-width: 310px;
+  }
 
   .card__image {
     margin: 0;
@@ -30,7 +33,7 @@
 
   .card__title {
     font-size: 1em;
-    margin: .25em 0;
+    margin: .25em 0 1em;
     font-weight: 300;
     color: colour('functional', 'text');
   }
@@ -47,26 +50,6 @@
 
     .card__image {
       width: 30%;
-    }
-  }
-
-  @media ( max-width: 700px ) {
-    .button {
-      padding: 0;
-      color: colour('functional', 'functional');
-      background-color: transparent;
-      font-size: 1em;
-      font-weight: 300;
-      text-decoration: underline;
-      border-radius: 0;
-
-      &:hover, &:focus {
-        color: #FFFFFF;
-      }
-
-      &:after {
-        display: none;
-      }
     }
   }
 
@@ -91,7 +74,7 @@
     .card__image {
       max-width: 100%;
       width: 100%;
-      flex: 0 0 120px;
+      flex: 0 0 200px;
     }
 
     .card__header {

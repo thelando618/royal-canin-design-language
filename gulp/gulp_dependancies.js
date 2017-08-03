@@ -32,5 +32,6 @@ need.merge  = require('merge-stream');
 
 need.svgSprite = require('gulp-svg-sprite');
 need.recolorSvg = require("gulp-recolor-svg");
+need.replace = require('gulp-replace');
 
 module.exports = need;

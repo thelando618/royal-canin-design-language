@@ -4,7 +4,7 @@ const tap = require('gulp-tap');
 
 function recolour(file, t, variants, dist) {
   // Create regex for finding fills in svgs files.
-  const rgx = new RegExp(/fill.+?(?=;|")/, 'g');
+  const rgx = new RegExp(/fill:.+?(?=;|")/, 'g');
   // Get the full path and split into an array.
   const filePath = file.history[0].split('/');
   // Get the file name and split that into name and extension.

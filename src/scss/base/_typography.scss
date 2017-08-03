@@ -6,11 +6,7 @@ select,
 button {
   font-family: $font-din; // weight size/line-height family
   font-weight: 300;
-  font-size: .875em;
-
-  @media (get-breakpoint('small')) {
-    font-size: 1em;
-  }
+  font-size: 1em;
 }
 
 

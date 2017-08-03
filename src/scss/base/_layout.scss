@@ -266,3 +266,25 @@ $navigation-width: 240px;
   margin-left: auto;
   margin-right: auto;
 }
+
+
+.layout--cols--one-two-three-four {
+
+  & > .col {
+    width: 100%;
+    vertical-align: top;
+
+    @media (get-breakpoint('small')) {
+      width: 49%;
+    }
+
+    @media (get-breakpoint('med')) {
+      width: 32%;
+    }
+
+    @media (get-breakpoint('large')) {
+      width: 24%;
+
+    }
+  }
+}
