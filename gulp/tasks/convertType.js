@@ -1,16 +1,22 @@
 module.exports = function (task, gulp, sitesettings, need, taskObj) {
 
-
   gulp.task('convertType', function (done) {
     // create an accumulated stream
     var fontStream = need.merge();
 
-    [['regular', 300], ['medium', 500], ['bold', 700]].forEach(function (weight) {
-      // a regular version
-      fontStream.add(gulp.src(`src/fonts/din_pro_${weight[0]}.woff2`)
-        .pipe(need.inline({name: 'DIN Pro', weight: weight[1], format: ['woff2']})));
+    var convertOptions = {
+        outTypes: ['woff'],
+        autoHint: true
+    }
 
-      return fontStream.pipe(need.concat('typeImport.scss')).pipe(gulp.dest('./src/scss/resources'));
+    need.fontconvert.convertFonts('src/fonts/orig', './src/fonts/hinted', function(){
+    }, convertOptions);
+
+    [['regular', 300], ['medium', 500], ['bold', 700]].forEach(function (weight) {
+        fontStream.add(gulp.src(`src/fonts/hinted/dinpro-${weight[0]}/*`)
+            .pipe(need.inline({name: 'DIN Pro', weight: weight[0], format: ['woff']})));
+
+        return fontStream.pipe(need.concat('typeImport.scss')).pipe(gulp.dest('./src/scss/resources'));
     });
 
     done();

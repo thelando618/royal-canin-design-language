@@ -28,6 +28,7 @@ need.concat = require('gulp-concat');
 need.uglify = require('gulp-uglify');
 
 need.inline = require('gulp-inline-fonts');
+need.fontconvert = require('fontconvert-tool');
 need.merge  = require('merge-stream');
 
 need.svgSprite = require('gulp-svg-sprite');
