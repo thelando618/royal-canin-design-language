@@ -14,7 +14,7 @@ module.exports = function (task, gulp, sitesettings, need, taskObj) {
 
     [['regular', 300], ['medium', 500], ['bold', 700]].forEach(function (weight) {
         fontStream.add(gulp.src(`src/fonts/hinted/dinpro-${weight[0]}/*`)
-            .pipe(need.inline({name: 'DIN Pro', weight: weight[0], format: ['woff']})));
+            .pipe(need.inline({name: 'DIN Pro', weight: weight[1], format: ['woff']})));
 
         return fontStream.pipe(need.concat('typeImport.scss')).pipe(gulp.dest('./src/scss/resources'));
     });
