@@ -4,7 +4,7 @@ const tap = require('gulp-tap');
 
 function recolour(file, t, variants, dist) {
   // Create regex for finding fills in svgs files.
-  const rgx = new RegExp(/fill.+?(?=;|")/, 'g');
+  const rgx = new RegExp(/fill:.+?(?=;|")/, 'g');
   // Get the full path and split into an array.
   const filePath = file.history[0].split('/');
   // Get the file name and split that into name and extension.
@@ -15,12 +15,7 @@ function recolour(file, t, variants, dist) {
     // Convert the file binary into a string and find/replace the fill with each variant.
     let svg = file._contents.toString().replace(rgx, 'fill:' + variant.colour);
 
-    fs.writeFileSync(dist + fileName[0] + variant.suffix + '.' + fileName[1], svg, function(err) {
-      if (err) {
-        console.log(err);
-        throw err;
-      }
-    });
+    fs.writeFileSync(dist + fileName[0] + variant.suffix + '.' + fileName[1], svg);
   });
 }
 
