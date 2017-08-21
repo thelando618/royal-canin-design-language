@@ -5,6 +5,7 @@
   "main": "src/scss/royal-canin.styles.scss",
   "dependencies": {
     "choices.js": "^2.8.7",
+    "fontconvert-tool": "^1.0.2",
     "gulp-cli": "^1.3.0",
     "gulp-if": "^2.0.2",
     "gulp-plumber": "^1.1.0",
