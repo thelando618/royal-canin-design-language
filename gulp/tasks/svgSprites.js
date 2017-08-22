@@ -56,5 +56,8 @@ module.exports = function (task, gulp, sitesettings, need, taskObj) {
         console.log(error);
       })
       .pipe(gulp.dest('./dist'))
+      .on('end', function () {
+        done();
+      })
   })
 }
