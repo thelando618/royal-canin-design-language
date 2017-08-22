@@ -26,6 +26,7 @@
     'dev': {
       subtasks: ['combineMq'],
       pretasks: ['sass', 'jsProcessing'],
+      orderedTasks: ['svgo', 'svgSprites'],
       watch: {
         active: true,
         files: [sitesettings.watch.sass, sitesettings.watch.js]
@@ -48,18 +49,6 @@
       },
       env: 'production'
     },
-    'compile': {
-      subtasks: ['combineMq'],
-      pretasks: ['sass', 'jsProcessing'],
-      watch: {
-        active: false,
-        files: [sitesettings.watch.sass, sitesettings.watch.js]
-      },
-      linting: {
-        testSass: false
-      },
-      env: 'production'
-    },
     'tasklist': {
       subtasks: [],
       pretasks: ['tasklist'],
@@ -71,20 +60,10 @@
         testSass: false
       }
     },
-    'svgSprites': {
-      subtasks: ['svgSprites'],
-      pretasks: [],
-      watch: {
-        active: false,
-        files: [sitesettings.watch.sass]
-      },
-      linting: {
-        testSass: false
-      }
-    },
     'prepAssets': {
       subtasks: [],
-      pretasks: ['svgo', 'convertType'],
+      pretasks: ['convertType'],
+      orderedTasks: ['svgo', 'svgSprites'],
       watch: {
         active: false,
         files: [sitesettings.watch.sass]
@@ -134,13 +113,11 @@
     genTasks(masterTaskObj, 'pretasks');
     genTasks(masterTaskObj, 'subtasks');
 
-    gulp.task(masterTaskName, typeof masterTaskObj.orderedTasks === 'undefined' ? gulp.series(masterTaskObj.pretasks, masterTaskObj.subtasks) : gulp.series(gulp.series(masterTaskObj.orderedTasks), masterTaskObj.pretasks, masterTaskObj.subtasks), function () {
+    gulp.task(masterTaskName, typeof masterTaskObj.orderedTasks === 'undefined' ? gulp.series(masterTaskObj.pretasks, masterTaskObj.subtasks) : gulp.series(gulp.series(masterTaskObj.orderedTasks), masterTaskObj.pretasks, masterTaskObj.subtasks, function () {
       if (masterTaskObj.watch.active) {
-        gulp.watch([masterTaskObj.watch.files],
-          typeof masterTaskObj.orderedTasks === 'undefined' ? gulp.series(masterTaskObj.pretasks, masterTaskObj.subtasks) : gulp.series(gulp.series(masterTaskObj.orderedTasks), masterTaskObj.pretasks, masterTaskObj.subtasks)
-        );
+        gulp.watch([masterTaskObj.watch.files], gulp.series(masterTaskObj.pretasks, masterTaskObj.subtasks));
       }
-    });
+    }));
   }
 
   // This task simply displays information about the other tasks available.
