@@ -1553,7 +1553,7 @@ sup {
   float: left;
 }
 
-.rc-icon-arrow--right--black::after,.rc-icon-arrow--right--red::after,.card--featured > a::after,.rc-icon-arrow--right--white::after,[class*="button--secondary"].rc-icon-arrow--right--red:hover::after,.card--featured > a[class*="button--secondary"]:hover::after,[class*="button--secondary"].rc-icon-arrow--right--red:focus::after,.card--featured > a[class*="button--secondary"]:focus::after,.button--functional::after,[class^="button"][class*="icon-"].rc-icon-arrow-right::after,.rc-icon-basket--black::after,.rc-icon-basket--red::after,.rc-icon-basket--white::after,.rc-icon-bowl--black::after,.rc-icon-bowl--red::after,.rc-icon-bowl--white::after,.rc-icon-calendar--black::after,.rc-icon-calendar--red::after,.rc-icon-calendar--white::after,.rc-icon-check--black::after,.rc-icon-check--green::after,.response--affirmative::after,.rc-icon-check--red::after,.rc-icon-check--v2--black::after,.rc-icon-check--v2--red::after,.rc-icon-check--v2--white::after,.rc-icon-check--white::after,.button--functional--success::after,[class^="button"][class*="icon-"].rc-icon-check::after,.rc-icon-chevron--down--black::after,.rc-icon-chevron--down--red::after,.navigation__link::after,.rc-icon-chevron--down--white::after,.rc-icon-chevron--heavy--down--black::after,.rc-icon-chevron--heavy--down--red::after,[role="listbox"].choices::after,.rc-icon-chevron--heavy--down--white::after,.rc-icon-chevron--heavy--up--black::after,.rc-icon-chevron--heavy--up--red::after,.rc-icon-chevron--heavy--up--white::after,.rc-icon-chevron--left--black::after,.rc-icon-chevron--left--red::after,.rc-icon-chevron--left--white::after,.navigation--prev::after,.navigation--round--next::after,[data-controls] .navigation--prev::after,[data-controls] .navigation--next::after,.rc-icon-chevron--right--black::after,.rc-icon-chevron--right--red::after,.rc-icon-chevron--right--white::after,.navigation--next::after,.navigation--round--prev::after,.rc-icon-chevron--up--black::after,.rc-icon-chevron--up--red::after,.rc-icon-chevron--up--white::after,.rc-icon-clock--black::after,.rc-icon-clock--red::after,.rc-icon-clock--white::after,.rc-icon-comment--black::after,.rc-icon-comment--red::after,.rc-icon-comment--white::after,.rc-icon-cross--black::after,.rc-icon-cross--red::after,.response--negative::after,.open.menu-toggle--left::after,.open.menu-toggle--right::after,.rc-icon-cross--white::after,.button--functional--fail::after,.rc-icon-facebook--black::after,.rc-icon-facebook--red::after,.rc-icon-facebook--white::after,.rc-icon-female--black::after,.rc-icon-female--red::after,.rc-icon-female--white::after,.rc-icon-groomer--black::after,.rc-icon-groomer--red::after,.rc-icon-groomer--white::after,.rc-icon-heart--black::after,.rc-icon-heart--red::after,.rc-icon-heart--white::after,.rc-icon-instagram--black::after,.rc-icon-instagram--red::after,.rc-icon-instagram--white::after,.rc-icon-loader--black::after,.rc-icon-loader--red::after,.rc-icon-loader--white::after,.button--functional--loading::after,.rc-icon-location--black::after,.rc-icon-location--red::after,.rc-icon-location--white::after,.rc-icon-macbook--black::after,.rc-icon-macbook--red::after,.rc-icon-macbook--white::after,.rc-icon-mail--black::after,.rc-icon-mail--red::after,.rc-icon-mail--white::after,.rc-icon-male--black::after,.rc-icon-male--red::after,.rc-icon-male--white::after,.rc-icon-partner--black::after,.rc-icon-partner--red::after,.rc-icon-partner--white::after,.rc-icon-pharmacy--black::after,.rc-icon-pharmacy--red::after,.rc-icon-pharmacy--white::after,.rc-icon-phone--black::after,.rc-icon-phone--red::after,.rc-icon-phone--white::after,.rc-icon-pintrest--black::after,.rc-icon-pintrest--red::after,.rc-icon-pintrest--white::after,.rc-icon-play--black::after,.rc-icon-play--red::after,.rc-icon-play--v2--black::after,.rc-icon-play--v2--red::after,.rc-icon-play--v2--white::after,.rc-icon-play--white::after,.rc-icon-rating--black::after,.rc-icon-rating--red::after,.rc-icon-rating--white::after,.rc-icon-royal-canin-crown::after,.rc-icon-royal-canin-primary::after,.rc-icon-royal-canin-secondary::after,.rc-icon-search--black::after,.rc-icon-search--red::after,.rc-icon-search--white::after,[class^="button"][class*="icon-"].rc-icon-search::after,.rc-icon-shelter--black::after,.rc-icon-shelter--red::after,.rc-icon-shelter--white::after,.rc-icon-speciality-retailer--black::after,.rc-icon-speciality-retailer--red::after,.rc-icon-speciality-retailer--white::after,.rc-icon-toggle--black::after,.rc-icon-toggle--red::after,.rc-icon-toggle--white::after,.rc-icon-twitter--black::after,.rc-icon-twitter--red::after,.rc-icon-twitter--white::after,.rc-icon-user--black::after,.rc-icon-user--red::after,.rc-icon-user--white::after,.rc-icon-vet--black::after,.rc-icon-vet--red::after,.rc-icon-vet--white::after,.rc-icon-vet-v2--black::after,.rc-icon-vet-v2--red::after,.rc-icon-vet-v2--white::after,.rc-icon-view--black::after,.rc-icon-view--red::after,.rc-icon-view--white::after,.rc-icon-volume--black::after,.rc-icon-volume--red::after,.rc-icon-volume--white::after,.rc-icon-youtube--black::after,.rc-icon-youtube--red::after,.rc-icon-youtube--white::after {
+.rc-icon-arrow--right--black::after,.rc-icon-arrow--right--red::after,.card--featured > a::after,.rc-icon-arrow--right--white::after,[class*="button--secondary"].rc-icon-arrow--right--red:hover::after,.card--featured > a[class*="button--secondary"]:hover::after,[class*="button--secondary"].rc-icon-arrow--right--red:focus::after,.card--featured > a[class*="button--secondary"]:focus::after,.button--functional::after,[class^="button"][class*="icon-"].rc-icon-arrow-right::after,.rc-icon-basket--black::after,.rc-icon-basket--red::after,.rc-icon-basket--white::after,.rc-icon-bowl--black::after,.rc-icon-bowl--red::after,.rc-icon-bowl--white::after,.rc-icon-calendar--black::after,.rc-icon-calendar--red::after,.rc-icon-calendar--white::after,.rc-icon-cat--black::after,.rc-icon-cat--red::after,.rc-icon-cat--white::after,.rc-icon-check--black::after,.rc-icon-check--green::after,.response--affirmative::after,.rc-icon-check--red::after,.rc-icon-check--v2--black::after,.rc-icon-check--v2--red::after,.rc-icon-check--v2--white::after,.rc-icon-check--white::after,.button--functional--success::after,[class^="button"][class*="icon-"].rc-icon-check::after,.rc-icon-chevron--down--black::after,.rc-icon-chevron--down--red::after,.navigation__link::after,.rc-icon-chevron--down--white::after,.rc-icon-chevron--heavy--down--black::after,.rc-icon-chevron--heavy--down--red::after,[role="listbox"].choices::after,.rc-icon-chevron--heavy--down--white::after,.rc-icon-chevron--heavy--up--black::after,.rc-icon-chevron--heavy--up--red::after,.rc-icon-chevron--heavy--up--white::after,.rc-icon-chevron--left--black::after,.rc-icon-chevron--left--red::after,.rc-icon-chevron--left--white::after,.navigation--prev::after,.navigation--round--next::after,[data-controls] .navigation--prev::after,[data-controls] .navigation--next::after,.rc-icon-chevron--right--black::after,.rc-icon-chevron--right--red::after,.rc-icon-chevron--right--white::after,.navigation--next::after,.navigation--round--prev::after,.rc-icon-chevron--up--black::after,.rc-icon-chevron--up--red::after,.rc-icon-chevron--up--white::after,.rc-icon-clock--black::after,.rc-icon-clock--red::after,.rc-icon-clock--white::after,.rc-icon-comment--black::after,.rc-icon-comment--red::after,.rc-icon-comment--white::after,.rc-icon-cross--black::after,.rc-icon-cross--red::after,.response--negative::after,.open.menu-toggle--left::after,.open.menu-toggle--right::after,.rc-icon-cross--white::after,.button--functional--fail::after,.rc-icon-crown--black::after,.rc-icon-crown--red::after,.rc-icon-crown--white::after,.rc-icon-dog--black::after,.rc-icon-dog--red::after,.rc-icon-dog--white::after,.rc-icon-facebook--black::after,.rc-icon-facebook--red::after,.rc-icon-facebook--white::after,.rc-icon-female--black::after,.rc-icon-female--red::after,.rc-icon-female--white::after,.rc-icon-groomer--black::after,.rc-icon-groomer--red::after,.rc-icon-groomer--white::after,.rc-icon-heart--black::after,.rc-icon-heart--red::after,.rc-icon-heart--white::after,.rc-icon-instagram--black::after,.rc-icon-instagram--red::after,.rc-icon-instagram--white::after,.rc-icon-loader--black::after,.rc-icon-loader--red::after,.rc-icon-loader--white::after,.button--functional--loading::after,.rc-icon-location--black::after,.rc-icon-location--red::after,.rc-icon-location--white::after,.rc-icon-macbook--black::after,.rc-icon-macbook--red::after,.rc-icon-macbook--white::after,.rc-icon-mail--black::after,.rc-icon-mail--red::after,.rc-icon-mail--white::after,.rc-icon-male--black::after,.rc-icon-male--red::after,.rc-icon-male--white::after,.rc-icon-partner--black::after,.rc-icon-partner--red::after,.rc-icon-partner--white::after,.rc-icon-partners--black::after,.rc-icon-partners--red::after,.rc-icon-partners--white::after,.rc-icon-pharmacy--black::after,.rc-icon-pharmacy--red::after,.rc-icon-pharmacy--white::after,.rc-icon-phone--black::after,.rc-icon-phone--red::after,.rc-icon-phone--white::after,.rc-icon-pintrest--black::after,.rc-icon-pintrest--red::after,.rc-icon-pintrest--white::after,.rc-icon-play--black::after,.rc-icon-play--red::after,.rc-icon-play--v2--black::after,.rc-icon-play--v2--red::after,.rc-icon-play--v2--white::after,.rc-icon-play--white::after,.rc-icon-rating--black::after,.rc-icon-rating--red::after,.rc-icon-rating--white::after,.rc-icon-royal-canin-crown::after,.rc-icon-royal-canin-primary::after,.rc-icon-royal-canin-secondary::after,.rc-icon-science--black::after,.rc-icon-science--red::after,.rc-icon-science--white::after,.rc-icon-search--black::after,.rc-icon-search--red::after,.rc-icon-search--white::after,[class^="button"][class*="icon-"].rc-icon-search::after,.rc-icon-shelter--black::after,.rc-icon-shelter--red::after,.rc-icon-shelter--white::after,.rc-icon-speciality-retailer--black::after,.rc-icon-speciality-retailer--red::after,.rc-icon-speciality-retailer--white::after,.rc-icon-toggle--black::after,.rc-icon-toggle--red::after,.rc-icon-toggle--white::after,.rc-icon-twitter--black::after,.rc-icon-twitter--red::after,.rc-icon-twitter--white::after,.rc-icon-user--black::after,.rc-icon-user--red::after,.rc-icon-user--white::after,.rc-icon-vet--black::after,.rc-icon-vet--red::after,.rc-icon-vet--white::after,.rc-icon-vet-v2--black::after,.rc-icon-vet-v2--red::after,.rc-icon-vet-v2--white::after,.rc-icon-view--black::after,.rc-icon-view--red::after,.rc-icon-view--white::after,.rc-icon-volume--black::after,.rc-icon-volume--red::after,.rc-icon-volume--white::after,.rc-icon-youtube--black::after,.rc-icon-youtube--red::after,.rc-icon-youtube--white::after {
   background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-2-1");
   background-repeat: no-repeat;
   display: inline-block;
@@ -1563,535 +1563,595 @@ sup {
 }
 
 .rc-icon-arrow--right--black::after {
-  background-position: 9.090909090909092% 0;
+  background-position: 8.333333333333334% 0;
 }
 
 .rc-icon-arrow--right--red::after,.card--featured > a::after {
-  background-position: 72.72727272727273% 18.181818181818183%;
+  background-position: 16.666666666666668% 68.96551724137932%;
 }
 
 .rc-icon-arrow--right--white::after,[class*="button--secondary"].rc-icon-arrow--right--red:hover::after,.card--featured > a[class*="button--secondary"]:hover::after,[class*="button--secondary"].rc-icon-arrow--right--red:focus::after,.card--featured > a[class*="button--secondary"]:focus::after,.button--functional::after,[class^="button"][class*="icon-"].rc-icon-arrow-right::after {
-  background-position: 0 9.090909090909092%;
+  background-position: 0 8.620689655172415%;
 }
 
 .rc-icon-basket--black::after {
-  background-position: 9.090909090909092% 9.090909090909092%;
+  background-position: 8.333333333333334% 8.620689655172415%;
 }
 
 .rc-icon-basket--red::after {
-  background-position: 18.181818181818183% 0;
+  background-position: 16.666666666666668% 0;
 }
 
 .rc-icon-basket--white::after {
-  background-position: 18.181818181818183% 9.090909090909092%;
+  background-position: 16.666666666666668% 8.620689655172415%;
 }
 
 .rc-icon-bowl--black::after {
-  background-position: 0 18.181818181818183%;
+  background-position: 0 17.24137931034483%;
 }
 
 .rc-icon-bowl--red::after {
-  background-position: 9.090909090909092% 18.181818181818183%;
+  background-position: 8.333333333333334% 17.24137931034483%;
 }
 
 .rc-icon-bowl--white::after {
-  background-position: 18.181818181818183% 18.181818181818183%;
+  background-position: 16.666666666666668% 17.24137931034483%;
 }
 
 .rc-icon-calendar--black::after {
-  background-position: 27.272727272727273% 0;
+  background-position: 25% 0;
 }
 
 .rc-icon-calendar--red::after {
-  background-position: 27.272727272727273% 9.090909090909092%;
+  background-position: 25% 8.620689655172415%;
 }
 
 .rc-icon-calendar--white::after {
-  background-position: 27.272727272727273% 18.181818181818183%;
+  background-position: 25% 17.24137931034483%;
+}
+
+.rc-icon-cat--black::after {
+  background-position: 0 25.862068965517242%;
+}
+
+.rc-icon-cat--red::after {
+  background-position: 8.333333333333334% 25.862068965517242%;
+}
+
+.rc-icon-cat--white::after {
+  background-position: 16.666666666666668% 25.862068965517242%;
 }
 
 .rc-icon-check--black::after {
-  background-position: 0 27.272727272727273%;
+  background-position: 25% 25.862068965517242%;
 }
 
 .rc-icon-check--green::after,.response--affirmative::after {
-  background-position: 9.090909090909092% 27.272727272727273%;
+  background-position: 33.333333333333336% 0;
 }
 
 .rc-icon-check--red::after {
-  background-position: 18.181818181818183% 27.272727272727273%;
+  background-position: 33.333333333333336% 8.620689655172415%;
 }
 
 .rc-icon-check--v2--black::after {
-  background-position: 27.272727272727273% 27.272727272727273%;
+  background-position: 33.333333333333336% 17.24137931034483%;
 }
 
 .rc-icon-check--v2--red::after {
-  background-position: 36.36363636363637% 0;
+  background-position: 33.333333333333336% 25.862068965517242%;
 }
 
 .rc-icon-check--v2--white::after {
-  background-position: 36.36363636363637% 9.090909090909092%;
+  background-position: 0 34.48275862068966%;
 }
 
 .rc-icon-check--white::after,.button--functional--success::after,[class^="button"][class*="icon-"].rc-icon-check::after {
-  background-position: 36.36363636363637% 18.181818181818183%;
+  background-position: 8.333333333333334% 34.48275862068966%;
 }
 
 .rc-icon-chevron--down--black::after {
-  background-position: 36.36363636363637% 27.272727272727273%;
+  background-position: 16.666666666666668% 34.48275862068966%;
 }
 
 .rc-icon-chevron--down--red::after,.navigation__link::after {
-  background-position: 0 36.36363636363637%;
+  background-position: 25% 34.48275862068966%;
 }
 
 .rc-icon-chevron--down--white::after {
-  background-position: 9.090909090909092% 36.36363636363637%;
+  background-position: 33.333333333333336% 34.48275862068966%;
 }
 
 .rc-icon-chevron--heavy--down--black::after {
-  background-position: 18.181818181818183% 36.36363636363637%;
+  background-position: 41.666666666666664% 0;
 }
 
 .rc-icon-chevron--heavy--down--red::after,[role="listbox"].choices::after {
-  background-position: 27.272727272727273% 36.36363636363637%;
+  background-position: 41.666666666666664% 8.620689655172415%;
 }
 
 .rc-icon-chevron--heavy--down--white::after {
-  background-position: 36.36363636363637% 36.36363636363637%;
+  background-position: 41.666666666666664% 17.24137931034483%;
 }
 
 .rc-icon-chevron--heavy--up--black::after {
-  background-position: 45.45454545454545% 0;
+  background-position: 41.666666666666664% 25.862068965517242%;
 }
 
 .rc-icon-chevron--heavy--up--red::after {
-  background-position: 45.45454545454545% 9.090909090909092%;
+  background-position: 41.666666666666664% 34.48275862068966%;
 }
 
 .rc-icon-chevron--heavy--up--white::after {
-  background-position: 45.45454545454545% 18.181818181818183%;
+  background-position: 0 43.10344827586207%;
 }
 
 .rc-icon-chevron--left--black::after {
-  background-position: 45.45454545454545% 27.272727272727273%;
+  background-position: 8.333333333333334% 43.10344827586207%;
 }
 
 .rc-icon-chevron--left--red::after {
-  background-position: 45.45454545454545% 36.36363636363637%;
+  background-position: 16.666666666666668% 43.10344827586207%;
 }
 
 .rc-icon-chevron--left--white::after,.navigation--prev::after,.navigation--round--next::after,[data-controls] .navigation--prev::after,[data-controls] .navigation--next::after {
-  background-position: 0 45.45454545454545%;
+  background-position: 25% 43.10344827586207%;
 }
 
 .rc-icon-chevron--right--black::after {
-  background-position: 9.090909090909092% 45.45454545454545%;
+  background-position: 33.333333333333336% 43.10344827586207%;
 }
 
 .rc-icon-chevron--right--red::after {
-  background-position: 18.181818181818183% 45.45454545454545%;
+  background-position: 41.666666666666664% 43.10344827586207%;
 }
 
 .rc-icon-chevron--right--white::after,.navigation--next::after,.navigation--round--prev::after {
-  background-position: 27.272727272727273% 45.45454545454545%;
+  background-position: 50% 0;
 }
 
 .rc-icon-chevron--up--black::after {
-  background-position: 36.36363636363637% 45.45454545454545%;
+  background-position: 50% 8.620689655172415%;
 }
 
 .rc-icon-chevron--up--red::after {
-  background-position: 45.45454545454545% 45.45454545454545%;
+  background-position: 50% 17.24137931034483%;
 }
 
 .rc-icon-chevron--up--white::after {
-  background-position: 54.54545454545455% 0;
+  background-position: 50% 25.862068965517242%;
 }
 
 .rc-icon-clock--black::after {
-  background-position: 54.54545454545455% 9.090909090909092%;
+  background-position: 50% 34.48275862068966%;
 }
 
 .rc-icon-clock--red::after {
-  background-position: 54.54545454545455% 18.181818181818183%;
+  background-position: 50% 43.10344827586207%;
 }
 
 .rc-icon-clock--white::after {
-  background-position: 54.54545454545455% 27.272727272727273%;
+  background-position: 0 51.724137931034484%;
 }
 
 .rc-icon-comment--black::after {
-  background-position: 54.54545454545455% 36.36363636363637%;
+  background-position: 8.333333333333334% 51.724137931034484%;
 }
 
 .rc-icon-comment--red::after {
-  background-position: 54.54545454545455% 45.45454545454545%;
+  background-position: 16.666666666666668% 51.724137931034484%;
 }
 
 .rc-icon-comment--white::after {
-  background-position: 0 54.54545454545455%;
+  background-position: 25% 51.724137931034484%;
 }
 
 .rc-icon-cross--black::after {
-  background-position: 9.090909090909092% 54.54545454545455%;
+  background-position: 33.333333333333336% 51.724137931034484%;
 }
 
 .rc-icon-cross--red::after,.response--negative::after,.open.menu-toggle--left::after,.open.menu-toggle--right::after {
-  background-position: 18.181818181818183% 54.54545454545455%;
+  background-position: 41.666666666666664% 51.724137931034484%;
 }
 
 .rc-icon-cross--white::after,.button--functional--fail::after {
-  background-position: 27.272727272727273% 54.54545454545455%;
+  background-position: 50% 51.724137931034484%;
+}
+
+.rc-icon-crown--black::after {
+  background-position: 58.333333333333336% 0;
+}
+
+.rc-icon-crown--red::after {
+  background-position: 58.333333333333336% 8.620689655172415%;
+}
+
+.rc-icon-crown--white::after {
+  background-position: 58.333333333333336% 17.24137931034483%;
+}
+
+.rc-icon-dog--black::after {
+  background-position: 58.333333333333336% 25.862068965517242%;
+}
+
+.rc-icon-dog--red::after {
+  background-position: 58.333333333333336% 34.48275862068966%;
+}
+
+.rc-icon-dog--white::after {
+  background-position: 58.333333333333336% 43.10344827586207%;
 }
 
 .rc-icon-facebook--black::after {
-  background-position: 36.36363636363637% 54.54545454545455%;
+  background-position: 58.333333333333336% 51.724137931034484%;
 }
 
 .rc-icon-facebook--red::after {
-  background-position: 45.45454545454545% 54.54545454545455%;
+  background-position: 0 60.3448275862069%;
 }
 
 .rc-icon-facebook--white::after {
-  background-position: 54.54545454545455% 54.54545454545455%;
+  background-position: 8.333333333333334% 60.3448275862069%;
 }
 
 .rc-icon-female--black::after {
-  background-position: 63.63636363636363% 0;
+  background-position: 16.666666666666668% 60.3448275862069%;
 }
 
 .rc-icon-female--red::after {
-  background-position: 63.63636363636363% 9.090909090909092%;
+  background-position: 25% 60.3448275862069%;
 }
 
 .rc-icon-female--white::after {
-  background-position: 63.63636363636363% 18.181818181818183%;
+  background-position: 33.333333333333336% 60.3448275862069%;
 }
 
 .rc-icon-groomer--black::after {
-  background-position: 63.63636363636363% 27.272727272727273%;
+  background-position: 41.666666666666664% 60.3448275862069%;
 }
 
 .rc-icon-groomer--red::after {
-  background-position: 63.63636363636363% 36.36363636363637%;
+  background-position: 50% 60.3448275862069%;
 }
 
 .rc-icon-groomer--white::after {
-  background-position: 63.63636363636363% 45.45454545454545%;
+  background-position: 58.333333333333336% 60.3448275862069%;
 }
 
 .rc-icon-heart--black::after {
-  background-position: 63.63636363636363% 54.54545454545455%;
+  background-position: 66.66666666666667% 0;
 }
 
 .rc-icon-heart--red::after {
-  background-position: 0 63.63636363636363%;
+  background-position: 66.66666666666667% 8.620689655172415%;
 }
 
 .rc-icon-heart--white::after {
-  background-position: 9.090909090909092% 63.63636363636363%;
+  background-position: 66.66666666666667% 17.24137931034483%;
 }
 
 .rc-icon-instagram--black::after {
-  background-position: 18.181818181818183% 63.63636363636363%;
+  background-position: 66.66666666666667% 25.862068965517242%;
 }
 
 .rc-icon-instagram--red::after {
-  background-position: 27.272727272727273% 63.63636363636363%;
+  background-position: 66.66666666666667% 34.48275862068966%;
 }
 
 .rc-icon-instagram--white::after {
-  background-position: 36.36363636363637% 63.63636363636363%;
+  background-position: 66.66666666666667% 43.10344827586207%;
 }
 
 .rc-icon-loader--black::after {
-  background-position: 45.45454545454545% 63.63636363636363%;
+  background-position: 66.66666666666667% 51.724137931034484%;
 }
 
 .rc-icon-loader--red::after {
-  background-position: 54.54545454545455% 63.63636363636363%;
+  background-position: 66.66666666666667% 60.3448275862069%;
 }
 
 .rc-icon-loader--white::after,.button--functional--loading::after {
-  background-position: 63.63636363636363% 63.63636363636363%;
+  background-position: 0 68.96551724137932%;
 }
 
 .rc-icon-location--black::after {
-  background-position: 72.72727272727273% 0;
+  background-position: 8.333333333333334% 68.96551724137932%;
 }
 
 .rc-icon-location--red::after {
-  background-position: 72.72727272727273% 9.090909090909092%;
-}
-
-.rc-icon-location--white::after {
   background-position: 0 0;
 }
 
+.rc-icon-location--white::after {
+  background-position: 25% 68.96551724137932%;
+}
+
 .rc-icon-macbook--black::after {
-  background-position: 72.72727272727273% 27.272727272727273%;
+  background-position: 33.333333333333336% 68.96551724137932%;
 }
 
 .rc-icon-macbook--red::after {
-  background-position: 72.72727272727273% 36.36363636363637%;
+  background-position: 41.666666666666664% 68.96551724137932%;
 }
 
 .rc-icon-macbook--white::after {
-  background-position: 72.72727272727273% 45.45454545454545%;
+  background-position: 50% 68.96551724137932%;
 }
 
 .rc-icon-mail--black::after {
-  background-position: 72.72727272727273% 54.54545454545455%;
+  background-position: 58.333333333333336% 68.96551724137932%;
 }
 
 .rc-icon-mail--red::after {
-  background-position: 72.72727272727273% 63.63636363636363%;
+  background-position: 66.66666666666667% 68.96551724137932%;
 }
 
 .rc-icon-mail--white::after {
-  background-position: 0 72.72727272727273%;
+  background-position: 75% 0;
 }
 
 .rc-icon-male--black::after {
-  background-position: 9.090909090909092% 72.72727272727273%;
+  background-position: 75% 8.620689655172415%;
 }
 
 .rc-icon-male--red::after {
-  background-position: 18.181818181818183% 72.72727272727273%;
+  background-position: 75% 17.24137931034483%;
 }
 
 .rc-icon-male--white::after {
-  background-position: 27.272727272727273% 72.72727272727273%;
+  background-position: 75% 25.862068965517242%;
 }
 
 .rc-icon-partner--black::after {
-  background-position: 36.36363636363637% 72.72727272727273%;
+  background-position: 75% 34.48275862068966%;
 }
 
 .rc-icon-partner--red::after {
-  background-position: 45.45454545454545% 72.72727272727273%;
+  background-position: 75% 43.10344827586207%;
 }
 
 .rc-icon-partner--white::after {
-  background-position: 54.54545454545455% 72.72727272727273%;
+  background-position: 75% 51.724137931034484%;
+}
+
+.rc-icon-partners--black::after {
+  background-position: 75% 60.3448275862069%;
+}
+
+.rc-icon-partners--red::after {
+  background-position: 75% 68.96551724137932%;
+}
+
+.rc-icon-partners--white::after {
+  background-position: 0 77.58620689655173%;
 }
 
 .rc-icon-pharmacy--black::after {
-  background-position: 63.63636363636363% 72.72727272727273%;
+  background-position: 8.333333333333334% 77.58620689655173%;
 }
 
 .rc-icon-pharmacy--red::after {
-  background-position: 72.72727272727273% 72.72727272727273%;
+  background-position: 16.666666666666668% 77.58620689655173%;
 }
 
 .rc-icon-pharmacy--white::after {
-  background-position: 81.81818181818181% 0;
+  background-position: 25% 77.58620689655173%;
 }
 
 .rc-icon-phone--black::after {
-  background-position: 81.81818181818181% 9.090909090909092%;
+  background-position: 33.333333333333336% 77.58620689655173%;
 }
 
 .rc-icon-phone--red::after {
-  background-position: 81.81818181818181% 18.181818181818183%;
+  background-position: 41.666666666666664% 77.58620689655173%;
 }
 
 .rc-icon-phone--white::after {
-  background-position: 81.81818181818181% 27.272727272727273%;
+  background-position: 50% 77.58620689655173%;
 }
 
 .rc-icon-pintrest--black::after {
-  background-position: 81.81818181818181% 36.36363636363637%;
+  background-position: 58.333333333333336% 77.58620689655173%;
 }
 
 .rc-icon-pintrest--red::after {
-  background-position: 81.81818181818181% 45.45454545454545%;
+  background-position: 66.66666666666667% 77.58620689655173%;
 }
 
 .rc-icon-pintrest--white::after {
-  background-position: 81.81818181818181% 54.54545454545455%;
+  background-position: 75% 77.58620689655173%;
 }
 
 .rc-icon-play--black::after {
-  background-position: 81.81818181818181% 63.63636363636363%;
+  background-position: 83.33333333333333% 0;
 }
 
 .rc-icon-play--red::after {
-  background-position: 81.81818181818181% 72.72727272727273%;
+  background-position: 83.33333333333333% 8.620689655172415%;
 }
 
 .rc-icon-play--v2--black::after {
-  background-position: 0 81.81818181818181%;
+  background-position: 83.33333333333333% 17.24137931034483%;
 }
 
 .rc-icon-play--v2--red::after {
-  background-position: 9.090909090909092% 81.81818181818181%;
+  background-position: 83.33333333333333% 25.862068965517242%;
 }
 
 .rc-icon-play--v2--white::after {
-  background-position: 18.181818181818183% 81.81818181818181%;
+  background-position: 83.33333333333333% 34.48275862068966%;
 }
 
 .rc-icon-play--white::after {
-  background-position: 27.272727272727273% 81.81818181818181%;
+  background-position: 83.33333333333333% 43.10344827586207%;
 }
 
 .rc-icon-rating--black::after {
-  background-position: 36.36363636363637% 81.81818181818181%;
+  background-position: 83.33333333333333% 51.724137931034484%;
 }
 
 .rc-icon-rating--red::after {
-  background-position: 45.45454545454545% 81.81818181818181%;
+  background-position: 83.33333333333333% 60.3448275862069%;
 }
 
 .rc-icon-rating--white::after {
-  background-position: 54.54545454545455% 81.81818181818181%;
+  background-position: 83.33333333333333% 68.96551724137932%;
 }
 
 .rc-icon-royal-canin-crown::after {
-  background-position: 63.63636363636363% 79.19447901346307%;
+  background-position: 83.33333333333333% 75.2229824121503%;
 }
 
 .rc-icon-royal-canin-primary::after {
-  background-position: 72.72727272727273% 78.90386253193728%;
+  background-position: 0 83.2897053924135%;
 }
 
 .rc-icon-royal-canin-secondary::after {
-  background-position: 81.81818181818181% 78.49978194505016%;
+  background-position: 8.333333333333334% 82.88437629506838%;
+}
+
+.rc-icon-science--black::after {
+  background-position: 91.66666666666667% 0;
+}
+
+.rc-icon-science--red::after {
+  background-position: 91.66666666666667% 8.620689655172415%;
+}
+
+.rc-icon-science--white::after {
+  background-position: 91.66666666666667% 17.24137931034483%;
 }
 
 .rc-icon-search--black::after {
-  background-position: 90.9090909090909% 0;
+  background-position: 91.66666666666667% 25.862068965517242%;
 }
 
 .rc-icon-search--red::after {
-  background-position: 90.9090909090909% 9.090909090909092%;
+  background-position: 91.66666666666667% 34.48275862068966%;
 }
 
 .rc-icon-search--white::after,[class^="button"][class*="icon-"].rc-icon-search::after {
-  background-position: 90.9090909090909% 18.181818181818183%;
+  background-position: 91.66666666666667% 43.10344827586207%;
 }
 
 .rc-icon-shelter--black::after {
-  background-position: 90.9090909090909% 27.272727272727273%;
+  background-position: 91.66666666666667% 51.724137931034484%;
 }
 
 .rc-icon-shelter--red::after {
-  background-position: 90.9090909090909% 36.36363636363637%;
+  background-position: 91.66666666666667% 60.3448275862069%;
 }
 
 .rc-icon-shelter--white::after {
-  background-position: 90.9090909090909% 45.45454545454545%;
+  background-position: 91.66666666666667% 68.96551724137932%;
 }
 
 .rc-icon-speciality-retailer--black::after {
-  background-position: 90.9090909090909% 54.54545454545455%;
+  background-position: 91.66666666666667% 77.58620689655173%;
 }
 
 .rc-icon-speciality-retailer--red::after {
-  background-position: 90.9090909090909% 63.63636363636363%;
+  background-position: 0 91.32512315270937%;
 }
 
 .rc-icon-speciality-retailer--white::after {
-  background-position: 90.9090909090909% 72.72727272727273%;
+  background-position: 8.333333333333334% 91.32512315270937%;
 }
 
 .rc-icon-toggle--black::after {
-  background-position: 90.9090909090909% 81.81818181818181%;
+  background-position: 16.666666666666668% 91.32512315270937%;
 }
 
 .rc-icon-toggle--red::after {
-  background-position: 0 90.9090909090909%;
+  background-position: 25% 91.32512315270937%;
 }
 
 .rc-icon-toggle--white::after {
-  background-position: 9.090909090909092% 90.9090909090909%;
+  background-position: 33.333333333333336% 91.32512315270937%;
 }
 
 .rc-icon-twitter--black::after {
-  background-position: 18.181818181818183% 90.9090909090909%;
+  background-position: 41.666666666666664% 91.32512315270937%;
 }
 
 .rc-icon-twitter--red::after {
-  background-position: 27.272727272727273% 90.9090909090909%;
+  background-position: 50% 91.32512315270937%;
 }
 
 .rc-icon-twitter--white::after {
-  background-position: 36.36363636363637% 90.9090909090909%;
+  background-position: 58.333333333333336% 91.32512315270937%;
 }
 
 .rc-icon-user--black::after {
-  background-position: 45.45454545454545% 90.9090909090909%;
+  background-position: 66.66666666666667% 91.32512315270937%;
 }
 
 .rc-icon-user--red::after {
-  background-position: 54.54545454545455% 90.9090909090909%;
+  background-position: 75% 91.32512315270937%;
 }
 
 .rc-icon-user--white::after {
-  background-position: 63.63636363636363% 90.9090909090909%;
+  background-position: 83.33333333333333% 91.32512315270937%;
 }
 
 .rc-icon-vet--black::after {
-  background-position: 72.72727272727273% 90.9090909090909%;
+  background-position: 91.66666666666667% 91.32512315270937%;
 }
 
 .rc-icon-vet--red::after {
-  background-position: 81.81818181818181% 90.9090909090909%;
-}
-
-.rc-icon-vet--white::after {
-  background-position: 90.9090909090909% 90.9090909090909%;
-}
-
-.rc-icon-vet-v2--black::after {
   background-position: 100% 0;
 }
 
+.rc-icon-vet--white::after {
+  background-position: 100% 8.620689655172415%;
+}
+
+.rc-icon-vet-v2--black::after {
+  background-position: 100% 17.24137931034483%;
+}
+
 .rc-icon-vet-v2--red::after {
-  background-position: 100% 9.090909090909092%;
+  background-position: 100% 25.862068965517242%;
 }
 
 .rc-icon-vet-v2--white::after {
-  background-position: 100% 18.181818181818183%;
+  background-position: 100% 34.48275862068966%;
 }
 
 .rc-icon-view--black::after {
-  background-position: 100% 27.272727272727273%;
+  background-position: 100% 43.10344827586207%;
 }
 
 .rc-icon-view--red::after {
-  background-position: 100% 36.36363636363637%;
+  background-position: 100% 51.724137931034484%;
 }
 
 .rc-icon-view--white::after {
-  background-position: 100% 45.45454545454545%;
+  background-position: 100% 60.3448275862069%;
 }
 
 .rc-icon-volume--black::after {
-  background-position: 100% 54.54545454545455%;
+  background-position: 100% 68.96551724137932%;
 }
 
 .rc-icon-volume--red::after {
-  background-position: 100% 63.63636363636363%;
+  background-position: 100% 77.58620689655173%;
 }
 
 .rc-icon-volume--white::after {
-  background-position: 100% 72.72727272727273%;
+  background-position: 100% 86.20689655172414%;
 }
 
 .rc-icon-youtube--black::after {
-  background-position: 100% 81.81818181818181%;
+  background-position: 0 99.94581280788178%;
 }
 
 .rc-icon-youtube--red::after {
-  background-position: 100% 90.9090909090909%;
+  background-position: 8.333333333333334% 99.94581280788178%;
 }
 
 .rc-icon-youtube--white::after {
-  background-position: 0 100%;
+  background-position: 16.666666666666668% 99.94581280788178%;
 }
 
 .screen-reader-text {
