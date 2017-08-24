@@ -8,6 +8,14 @@
   top: 0;
   width: 100%;
 
+  & .logo-svg {
+    width: 150px;
+    height: 80px;
+    transform: translateX(-50%);
+    position: relative;
+    left: 50%;
+  }
+
   & > nav > ul {
     z-index: 5;
     transform: translate(0px, -200%);

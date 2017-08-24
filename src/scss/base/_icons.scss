@@ -1,6 +1,15 @@
+[class^="rc-icon-"].small {
+  transform: scale(0.5);
+}
+
 [class^="rc-icon-"] {
   height: 64px;
   width: 64px;
   position: relative;
   display: inline-block;
+  transform-origin: 50% 50%;
+}
+
+[class^="rc-icon-"].large {
+  transform: scale(2);
 }
