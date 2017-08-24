@@ -35,3 +35,25 @@ $logo--primary-height--small: 50px;
   width: $logo--primary-width--small;
   height: $logo--primary-height--small;
 }
+
+
+.logo--crown--badge {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: colour('brand', 'white');
+  border-radius: 999px;
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+
+  & .logo-svg {
+    position: relative;
+    left: -2px;
+    top: 2px;
+  }
+
+  & .logo--crown {
+    width: 35px;
+    height: 25px;
+  }
+}

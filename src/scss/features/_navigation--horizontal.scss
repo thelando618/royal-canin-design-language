@@ -52,6 +52,7 @@ $nav-heights: (
     top: 0;
     bottom: auto;
     height: get-nav-height('med-up');
+
     &.scrolled {
       height: get-nav-height('med-up-scrolled');
     }
@@ -59,9 +60,11 @@ $nav-heights: (
 
   @media (get-breakpoint('large')) {
     height: get-nav-height('large-up');
+
     &.scrolled {
       height: get-nav-height('large-up-scrolled');
-      [class^="rc-logo-"]{
+
+      [class^="rc-logo-"] {
         font-size: 3.5rem;
       }
     }
@@ -76,7 +79,6 @@ $nav-heights: (
   border-right: solid 2px colour('brand', 'light-grey');
   font-size: 1.5rem;
   display: inline-block; // Fallback
-  margin-right: -4px;
   display: flex;
   align-items: center;
   justify-content: center;
