@@ -1,9 +1,46 @@
+// ----------------------------------------------------------------------
+
+// Breakpoints
+
+// ----------------------------------------------------------------------
+
+////
+/// @group First 10 Digital
+////
+
+/// Manage breakpoints by grouping and looping variables.
+///
+/// @example scss - Basic Usage Sass
+///  @media (get-breakpoint('small')) {
+///   margin: 0;
+///  }
+///
+/// @example scss - Basic Usage Sass
+///  @media (get-breakpoint('small')) {
+///   margin: 0;
+///  }
+///
+/// Utility classes are also generated:
+///  @media (max-width: 800px) {
+///   .med-up {
+///    display: none !important;
+///    }
+///   }
+///
+///  @media (min-width: 800px) {
+///   .med-down {
+///    display: none !important;
+///    }
+///   }
+///
+
 $breakpoints: (
-    'x-small' : 480,
-    'small'   : 640,
-    'med'     : 800,
-    'large'   : 960,
-    'x-large' : 1024,
+        'x-small' : 480,
+        'small'   : 640,
+        'med'     : 800,
+        'large'   : 960,
+        'x-large' : 1024,
+        'xxx-large': 1440
 );
 
 
@@ -14,6 +51,18 @@ $breakpoints: (
     @return 'min-width: #{$breakpoint-size}px';
   }
 
+  @else {
+    @error 'The breakpoint size: #{$size} wasn\'t found. Try: $breakpoint-size';
+  }
+}
+
+
+@function get-breakpoint-down($size) {
+  $breakpoint-size: map-get($breakpoints, $size);
+
+  @if $breakpoint-size != null {
+    @return 'max-width: #{$breakpoint-size}px';
+  }
   @else {
     @error 'The breakpoint size: #{$size} wasn\'t found. Try: $breakpoint-size';
   }

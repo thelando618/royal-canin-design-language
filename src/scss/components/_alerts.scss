@@ -1,30 +1,59 @@
 [role="alert"],
 .alert {
-	text-align: center;
-	border: 2px solid colour('brand', 'red');
-	border-radius: 25px;
-	padding: 1em;
-	margin-top: 1em;
-	margin-bottom: 1em;
-    @extend %feature-width-restriction;
+  text-align: center;
+  border: 2px solid colour('brand', 'red');
+  border-radius: 25px;
+  padding: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  @extend %feature-width-restriction;
 
-	& > strong {
-		font-weight: 300;
-	}
+  & > strong {
+    font-weight: 300;
+  }
 
-	&.alert--error {
-		background-color: transparentize( colour('brand', 'red'), .9 );
-		color: colour('brand', 'red');
-	}
+  &.alert--error {
+    background-color: transparentize( colour('brand', 'red'), .9 );
+    color: colour('brand', 'red');
+  }
 
-	&.alert--success {
-		border-color: colour('functional', 'success');
-		color: colour('functional', 'success', 'dark');
-		background-color: transparentize( colour('functional', 'success'), .9 );
-	}
+  &.alert--success {
+    border-color: colour('functional', 'success');
+    color: colour('functional', 'success', 'dark');
+    background-color: transparentize( colour('functional', 'success'), .9 );
+  }
 
-	// @todo make this into a variable?
-	@media (get-breakpoint('small')) {
-		border-radius: 50px;
-	}
+  &.alert--info {
+    background-color: colour('functional', 'text');
+    color: colour('brand', 'white');
+    max-width: 99999px;
+    width: 100%;
+    border: none;
+    padding-right: 2.5rem;
+    border-radius: 0;
+    text-align: left;
+    min-height: 1rem;
+    position: absolute;
+
+    & > a {
+      color: colour('brand', 'white');
+    }
+  }
+
+  // @todo make this into a variable?
+  @media (get-breakpoint('small')) {
+    border-radius: 50px;
+  }
+}
+
+
+.alert__close {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  & .rc-icon-cross--white::after {
+    transform: scale(0.3);
+    transform-origin: 50% 50%;
+  }
 }

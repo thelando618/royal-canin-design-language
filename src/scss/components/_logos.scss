@@ -1,70 +1,71 @@
-%crown-logo {
-  width: 150px;
-  height: 60px;
+%svg-base {
+  min-height: 60px;
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+}
+.logo-svg {
+  width: 100%;
+  height: auto;
+  right: auto;
+  margin: 0;
+  text-align: center;
 
-  &::after {
-    width: 75px;
-    height: 30px;
-    transform: scale(2.5);
-    transform-origin: 0 0;
+  & switch {
+    display: inline-block;
   }
 }
 
-.rc-icon-royal-canin-secondary,
-.rc-icon-royal-canin-primary,
-.rc-icon-royal-canin-crown {
-  @extend %crown-logo;
+//.hide-me-from-older-browsers {
+//  display: none;
+//  visibility: hidden;
+//}
+
+svg|g.hide-me-from-older-browsers {
+  display: inline;
+  visibility: visible;
 }
 
-.rc-icon-royal-canin-crown {
+$logo--primary-width: 150px;
+$logo--primary-height: 100px;
 
-  &::after {
-    height: 45px;
-    width: 70px;
+$logo--primary-width--small: 100px;
+$logo--primary-height--small: 50px;
+
+.logo--primary {
+  @extend %svg-base;
+}
+
+.logo--secondary {
+  @extend %svg-base;
+}
+
+.logo--crown {
+  @extend %svg-base;
+}
+
+
+.logo--crown--badge {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: colour('brand', 'white');
+  border-radius: 999px;
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+
+  & .logo-svg {
+    position: relative;
+    left: -2px;
+    top: 2px;
   }
-}
 
-.rc-icon-royal-canin-secondary {
-
-  &::after {
-    height: 40px;
-    transform: scale(2.5) translate(-9px, -7px);
-  }
-}
-
-.rc-icon-royal-canin-primary {
-  height: 64px;
-
-  &::after {
-    height: 32px;
-    width: 65px;
-    transform: scale(2.75) translate(-3px, -9px);
-  }
-}
-
-.rc-icon-royal-canin-crown {
-  &::after {
-    transform: scale(1.75) translate(8px, -6px);
-  }
-}
-
-.rc-icon-royal-canin-secondary.large,
-.rc-icon-royal-canin-primary.large {
-  width: 300px;
-  height: 200px;
-
-  &::after {
-    transform: scale(4) translate(-2px, 2px);
-  }
-}
-
-.rc-icon-royal-canin-crown.large {
-  width: 200px;
-  height: 200px;
-
-  &::after {
-    transform: scale(4) translate(-1px, 2px);
-    height: 37px;
-    width: 60px;
+  & .logo--crown {
+    width: 35px;
+    height: 25px;
   }
 }

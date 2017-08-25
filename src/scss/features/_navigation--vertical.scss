@@ -1,12 +1,20 @@
 .navigation {
   background-color: colour('brand', 'white');
   display: block;
-  z-index: 10;
+  z-index: 11;
   color: colour('functional', 'text');
   font-size: .75em;
   position: fixed;
   top: 0;
   width: 100%;
+
+  & .logo-svg {
+    width: 150px;
+    height: 80px;
+    transform: translateX(-50%);
+    position: relative;
+    left: 50%;
+  }
 
   & > nav > ul {
     z-index: 5;
@@ -30,6 +38,7 @@
     left: 0;
     right: 0;
     overflow-y: auto;
+    background-color: colour('brand', 'white');
   }
 
   .gs-nav__header {
