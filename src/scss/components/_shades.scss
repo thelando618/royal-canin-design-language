@@ -1,0 +1,13 @@
+%shade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 8;
+}
+
+.shade--grey {
+  background-color: rgba(colour('brand', 'medium-grey'), 0.75);
+  @extend %shade;
+}
