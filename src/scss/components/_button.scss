@@ -65,6 +65,15 @@
   }
 }
 
+button {
+  cursor: pointer;
+}
+
+.reset-button {
+  border: none;
+  background-color: transparent;
+}
+
 [class*="--icon-"]::after {
   content: '';
 }

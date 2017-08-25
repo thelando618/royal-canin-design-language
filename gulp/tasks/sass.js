@@ -1,12 +1,26 @@
 module.exports = function (task, gulp, sitesettings, need, taskObj) {
   'use strict';
 
+  const exec = require('child_process').exec;
+
+  /**
+   * Helper function to wrap exec for easy returning and callbacks.
+   *
+   * @param {String} command
+   * Command to be passed on to the exec function.
+   *
+   * @param callback
+   */
+  function execute(command, callback) {
+    exec(command, function(error, stdout, stderr){
+      callback(stdout);
+    });
+  }
+
   const taskDetails = taskObj[global.process.argv[2]],
     enableSassLint = taskDetails.linting.testSass,
     env = taskObj[global.process.argv[2]]['env'],
-    version = sitesettings['deploy']['version'];
-
-  const location = sitesettings.location;
+    location = sitesettings.location;
 
   const sassOptions = {
     includePaths: [
@@ -39,24 +53,44 @@ module.exports = function (task, gulp, sitesettings, need, taskObj) {
     })
   ];
 
-  gulp.task('sass', function () {
-    return gulp.src(location['stylessrc'] + '/' + location['csssource'])
-      .pipe(need.sassGlob())
-      .pipe(need.changed(location['csssource']))
-      .pipe(need.gulpif(enableSassLint, need.postcss(processors, {syntax: need.syntax_scss})))
-      .pipe(need.sass(sassOptions))
-      .pipe(need.rename(location['cssoutput']))
-      .pipe(need.gulpif(env === 'production', need.replace(`url("royal-canin.sprite.svg")`, `url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=${version}")`)))
-      .pipe(gulp.dest(location['cssdest']))
-      .pipe(need.sass(sassOptionsMin))
-      .pipe(need.rename(
-        function (path) {
-          path.basename += ".min.";
-          path.extname = "css"
-        }))
-      .pipe(gulp.dest(location['cssdest']))
-      .on('end', function () {
-        console.log(need.colors.inverse.green('----------- DEV sass files changed -----------'));
-      });
+  gulp.task('sass', function (done) {
+
+    let version = null;
+
+    var getVersion = new Promise(function (resolve, reject) {
+      // If we're about to do a release make sure the version number is passed for use in url string replacements.
+      if (taskObj[global.process.argv[2]]['env'] === 'production') {
+        execute(`git describe --exact-match --tags $(git log -n1 --pretty='%h')`, function(res) {
+          version = res.slice(3).replace(/\./g, '-').replace(/\n/g, '');
+          resolve(version);
+        })
+      }
+      else {
+        resolve(null);
+      }
+    });
+
+    getVersion.then(function (version) {
+      return gulp.src(location['stylessrc'] + '/' + location['csssource'])
+        .pipe(need.sassGlob())
+        .pipe(need.changed(location['csssource']))
+        .pipe(need.gulpif(enableSassLint, need.postcss(processors, {syntax: need.syntax_scss})))
+        .pipe(need.sass(sassOptions))
+        .pipe(need.rename(location['cssoutput']))
+        .pipe(need.gulpif(env === 'production', need.replace(`url("royal-canin.sprite.svg")`, `url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=${version}")`)))
+        .pipe(gulp.dest(location['cssdest']))
+        .pipe(need.sass(sassOptionsMin))
+        .pipe(need.rename(
+          function (path) {
+            path.basename += ".min.";
+            path.extname = "css"
+          }))
+        .pipe(gulp.dest(location['cssdest']))
+        .on('end', function () {
+          console.log(need.colors.inverse.green('----------- DEV sass files changed -----------'));
+          done();
+        });
+
+    });
   });
 };

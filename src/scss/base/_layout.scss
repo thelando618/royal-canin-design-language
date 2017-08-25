@@ -16,6 +16,11 @@
   clear: both;
 }
 
+%spacing-reset {
+  margin: 0;
+  padding: 0;
+}
+
 .clearfix {
   @extend %clearfix;
 }
@@ -60,9 +65,9 @@ $max-widths: (
 }
 
 $spacers: (
-        'large':  (3rem, 3.5rem, 4rem, 4.5rem, 6rem),
-        'medium': (2rem, 2.5rem, 3rem, 4rem, 4.5rem),
-        'small': (.5rem, .5rem, 1rem, 1.5rem, 1.75rem)
+        'large':  (3rem, 3.5rem, 4rem, 4.5rem, 6rem, 7rem),
+        'medium': (2rem, 2.5rem, 3rem, 4rem, 4.5rem, 5rem),
+        'small': (.5rem, .5rem, 1rem, 1.5rem, 1.75rem, 2rem)
 );
 
 /**
@@ -77,13 +82,16 @@ $spacers: (
   @return nth(map-get($spacers, $size), 3);
 }
 
-//////////// Generate spacer utility classes using the $spacers sass map. ////////////
-// Each utility class gets a name value from the key then loops
-// through each breakpoint set it $breakpoints and applied the
-// value of the named spacer index value === index value of
-// breakpoint. So 'small' being the first breakpoint it gets the
-// first value from the current spacer value set.
-//////////////////////////////////////////////////////////////////////////////////////
+/**
+  * Generate spacer utility classes using the $spacers sass map.
+  *
+  * Each utility class gets a name value from the key then loops
+  * through each breakpoint set it $breakpoints and applied the
+  * value of the named spacer index value === index value of
+  * breakpoint. So 'small' being the first breakpoint it gets the
+  * first value from the current spacer value set.
+  */
+
 
 $spacingTypes: map-keys($spacers);
 @each $spacer in $spacingTypes {
@@ -285,6 +293,19 @@ $navigation-width: 240px;
     @media (get-breakpoint('large')) {
       width: 24%;
 
+    }
+  }
+}
+
+.layout--four-repeat {
+  display: flex;
+  flex-wrap: wrap;
+
+  & .rc-column {
+    width: 50%;
+
+    @media (get-breakpoint('med')) {
+      width: 25%;
     }
   }
 }

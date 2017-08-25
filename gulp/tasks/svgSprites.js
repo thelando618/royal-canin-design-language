@@ -56,5 +56,10 @@ module.exports = function (task, gulp, sitesettings, need, taskObj) {
         console.log(error);
       })
       .pipe(gulp.dest('./dist'))
+      .on('end', function () {
+        console.log('Moving inline SVGs.')
+        fs.copySync('./src/svgs/inline/', './dist/', {overwrite: true});
+        done();
+      })
   })
 }

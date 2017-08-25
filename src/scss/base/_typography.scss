@@ -9,6 +9,11 @@ button {
   font-size: 1em;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  // This is to stop some browsers enforcing their own weights on h tags.
+  font-weight: 300;
+}
+
 
 
 ////////////////////////////////////////////   Type Styles   ////////////////////////////////////////////
@@ -78,6 +83,10 @@ $type-breakpoints: ('small', 'x-large');
 
 .font--bold {
   font-weight: 700;
+}
+
+.text-centered {
+  text-align: center;
 }
 
 

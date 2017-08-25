@@ -20,6 +20,7 @@ function recolour(file, t, variants, dist) {
 }
 
 module.exports = function (task, gulp, sitesettings, need, taskObj) {
+
   gulp.task('svgo', function(done) {
 
     fs.ensureDir('./src/svgs/output/', function (err) {
@@ -35,18 +36,12 @@ module.exports = function (task, gulp, sitesettings, need, taskObj) {
               ],
               './src/svgs/output/')
           })).on('data', function (file) {
-          const fileList = fs.readdirSync('./src/svgs/for_colouring/');
-          const filePath = file.history[0].split('/');
-
-          if (filePath[filePath.length - 1] === fileList[fileList.length - 1]) {
-            fs.copy(path.join(__dirname, '../../' + sitesettings.location['rawfiles']['svgs'] + '/singles'), path.join(__dirname, '../../' + sitesettings.location['rawfiles']['svgs'] + '/output'), function (err) {
-              if (err) return console.error(err)
-            })
-          }
+        }).on('end', function () {
+          fs.copy(path.join(__dirname, '../../' + sitesettings.location['rawfiles']['svgs'] + '/singles'), path.join(__dirname, '../../' + sitesettings.location['rawfiles']['svgs'] + '/output'), function (err) {
+            if (err) return console.error(err);
+            done();
+          })
         });
-
-        done();
-
       });
     });
   })

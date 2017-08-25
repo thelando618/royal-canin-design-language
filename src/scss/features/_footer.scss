@@ -1,0 +1,121 @@
+.site-footer {
+  background: colour('functional', 'text');
+  position: relative;
+
+  & .outlined {
+    border: solid 1px colour('brand', 'white');
+    padding: get-spacer('small') / 2 0;
+    font-weight: 300;
+    border-radius: 50px;
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.5rem;
+    color: colour('brand', 'white');
+
+    svg {
+      height: 1.5rem;
+      fill: colour('brand', 'white');
+    }
+  }
+
+  & .breadcrumb__list {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+
+  .breadcrumbs {
+    padding: get-spacer('small') * 2 0;
+    margin-bottom: get-spacer('small') * 2;
+    border-bottom: solid 1px colour('functional', 'text', 'light');
+    position: relative;
+  }
+}
+
+.site-footer__wrapper {
+  padding: get-spacer('small');
+}
+
+.site-footer__navigation__label {
+  color: colour('brand', 'white');
+  font-size: 1rem;
+  margin-bottom: get-spacer('small');
+}
+
+.rc-navigation--footer {
+  text-align: center;
+
+  @media (get-breakpoint('med')) {
+    text-align: left;
+  }
+}
+
+.rc-navigation--footer > ul {
+  margin-bottom: get-spacer('small') * 2;
+
+  .rc-navigation__list-item {
+    margin-bottom: get-spacer('small') / 2;
+  }
+}
+
+.rc-navigation--footer .rc-navigation__link {
+  text-decoration: none;
+  color: colour('brand', 'medium-grey', 'light');
+  @extend .rc-icon-chevron--right--white;
+
+  &::after {
+    display: none;
+  }
+
+  @media (get-breakpoint('x-large')) {
+    position: relative;
+    padding-left: 1.25rem;
+
+    &::after {
+      display: block;
+      transform: scale(0.25) translateY(5px);
+      transform-origin: 0 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+}
+
+.sub-footer {
+  background: colour('brand', 'light-grey');
+  padding: get-spacer('small');
+
+  @media (get-breakpoint('x-large')) {
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  & .sub-navigation__list {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  @media (get-breakpoint('x-large')) {
+
+    & .sub-navigation:nth-child(2) .sub-navigation__list-item {
+      margin-left: 1.5rem;
+
+      &::after {
+        left: -1.5rem;
+        right: auto;
+      }
+
+      &:first-child::after {
+        display: none;
+      }
+
+      &:last-child::after {
+        display: block;
+      }
+    }
+  }
+}

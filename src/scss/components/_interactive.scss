@@ -178,17 +178,11 @@ $navigation-nextprev-height: 65px;
   border: none;
   position: fixed;
   z-index: 999;
-  top: 0;
-  transform: scale(0.5)  rotate(0deg);
-  transition: transform .3s ease-in-out;
   cursor: pointer;
+  top: 0;
 
   @media (get-breakpoint('large')) {
     display: none;
-  }
-
-  &.open {
-    @extend .rc-icon-cross--red;
   }
 }
 
@@ -196,10 +190,12 @@ $navigation-nextprev-height: 65px;
   @extend %menu-toggle;
   left: 0;
   right: auto;
+  transform: translate(1.25rem, 1.25rem);
 }
 
 .menu-toggle--right {
   @extend %menu-toggle;
   left: auto;
   right: 0;
+  transform: translate(-1.25rem, 1.25rem);
 }
