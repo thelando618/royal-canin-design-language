@@ -62,8 +62,20 @@
     },
     'prepAssets': {
       subtasks: [],
-      pretasks: ['convertType'],
+      pretasks: ['svg2png'],
       orderedTasks: ['svgo', 'svgSprites'],
+      watch: {
+        active: false,
+        files: [sitesettings.watch.sass]
+      },
+      linting: {
+        testSass: false
+      }
+    },
+    'convertTypefaces': {
+      subtasks: [],
+      pretasks: ['convertType'],
+      orderedTasks: [],
       watch: {
         active: false,
         files: [sitesettings.watch.sass]
