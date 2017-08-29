@@ -17,7 +17,7 @@
 
   &::after {
     position: absolute;
-    right: 1em;
+    right: 2em;
     top: -2.1em;
     display: inline-block;
     vertical-align: middle;
@@ -57,10 +57,21 @@
   }
 
   @media (get-breakpoint('small')) {
-    border-radius: 3px;
 
     &::after {
       top: -1.85em
+    }
+  }
+
+  &.fill-width {
+    width: 100%;
+    text-align: center;
+  }
+
+  @media (get-breakpoint-down('med')) {
+    &.fill-width--just-mobile {
+      width: 100%;
+      text-align: center;
     }
   }
 }
@@ -79,50 +90,38 @@ button {
 }
 
 %button--small {
+  $button-icon-padding: 1.5rem;
   font-size: .875em;
-  padding: .425rem 1.5rem;
+  padding: .425rem $button-icon-padding;
 
   &::after {
     transform: scale(0.3);
-    top: -1.4em;
-  }
-
-  @media ( get-breakpoint('small')) {
-    &::after {
-      top: -1.15em;
-    }
+    top: -1.15em;
+    right: $button-icon-padding / 2;
   }
 }
 
 %button--medium {
+  $button-icon-padding: 2.5rem;
   font-size: 1em;
-  padding: .625rem 2.5rem;
+  padding: .625rem $button-icon-padding;
 
   &::after {
     transform: scale(0.4);
-    top: -.85em;
-  }
-
-  @media ( get-breakpoint('small')) {
-    &::after {
-      top: -.65em;
-    }
+    top: -.65em;
+    right: $button-icon-padding / 2;
   }
 }
 
 %button--large {
+  $button-icon-padding: 3.5rem;
   font-size: 1.2em;
-  padding: .825rem 3.5rem;
+  padding: .825rem $button-icon-padding;
 
   &::after {
     transform: scale(0.55);
-    top: -.45em;
-  }
-
-  @media ( get-breakpoint('small')) {
-    &::after {
-      top: -.35em;
-    }
+    top: -.35em;
+    right: $button-icon-padding / 2;
   }
 }
 

@@ -1554,7 +1554,7 @@ sup {
 }
 
 .rc-icon-arrow--right--black::after,.rc-icon-arrow--right--red::after,.card--featured > a::after,.rc-icon-arrow--right--white::after,[class*="button--secondary"].rc-icon-arrow--right--red:hover::after,.card--featured > a[class*="button--secondary"]:hover::after,[class*="button--secondary"].rc-icon-arrow--right--red:focus::after,.card--featured > a[class*="button--secondary"]:focus::after,.button--functional::after,[class^="button"][class*="icon-"].rc-icon-arrow-right::after,.rc-icon-basket--black::after,.rc-icon-basket--red::after,.rc-icon-basket--white::after,.rc-icon-bowl--black::after,.rc-icon-bowl--red::after,.rc-icon-bowl--white::after,.rc-icon-calendar--black::after,.rc-icon-calendar--red::after,.rc-icon-calendar--white::after,.rc-icon-cat--black::after,.rc-icon-cat--red::after,.rc-icon-cat--white::after,.rc-icon-check--black::after,.rc-icon-check--green::after,.response--affirmative::after,.rc-icon-check--red::after,.rc-icon-check--v2--black::after,.rc-icon-check--v2--red::after,.rc-icon-check--v2--white::after,.rc-icon-check--white::after,.button--functional--success::after,[class^="button"][class*="icon-"].rc-icon-check::after,.rc-icon-chevron--down--black::after,.rc-icon-chevron--down--red::after,.navigation__link::after,.rc-icon-chevron--down--white::after,.rc-icon-chevron--heavy--down--black::after,.rc-icon-chevron--heavy--down--red::after,[role="listbox"].choices::after,.rc-icon-chevron--heavy--down--white::after,.rc-icon-chevron--heavy--up--black::after,.rc-icon-chevron--heavy--up--red::after,.rc-icon-chevron--heavy--up--white::after,.rc-icon-chevron--left--black::after,.rc-icon-chevron--left--red::after,.rc-icon-chevron--left--white::after,.navigation--prev::after,.navigation--round--next::after,[data-controls] .navigation--prev::after,[data-controls] .navigation--next::after,.rc-icon-chevron--right--black::after,.rc-icon-chevron--right--red::after,.rc-icon-chevron--right--white::after,.breadcrumb__list-item > a::after,.navigation--next::after,.navigation--round--prev::after,.rc-navigation--footer .rc-navigation__link::after,.rc-icon-chevron--up--black::after,.rc-icon-chevron--up--red::after,.rc-icon-chevron--up--white::after,.rc-icon-clock--black::after,.rc-icon-clock--red::after,.rc-icon-clock--white::after,.rc-icon-comment--black::after,.rc-icon-comment--red::after,.rc-icon-comment--white::after,.rc-icon-cross--black::after,.search-bar > [aria-label="Close"]::after,.rc-icon-cross--red::after,.response--negative::after,.rc-icon-cross--white::after,.button--functional--fail::after,.rc-icon-crown--black::after,.rc-icon-crown--red::after,.rc-icon-crown--white::after,.rc-icon-dog--black::after,.rc-icon-dog--red::after,.rc-icon-dog--white::after,.rc-icon-facebook--black::after,.rc-icon-facebook--red::after,.rc-icon-facebook--white::after,.rc-icon-female--black::after,.rc-icon-female--red::after,.rc-icon-female--white::after,.rc-icon-groomer--black::after,.rc-icon-groomer--red::after,.rc-icon-groomer--white::after,.rc-icon-heart--black::after,.rc-icon-heart--red::after,.rc-icon-heart--white::after,.rc-icon-instagram--black::after,.rc-icon-instagram--red::after,.rc-icon-instagram--white::after,.rc-icon-loader--black::after,.search-bar > [type="search"]:focus ~ [aria-label="Close"]::after,.rc-icon-loader--red::after,.rc-icon-loader--white::after,.button--functional--loading::after,.rc-icon-location--black::after,.rc-icon-location--red::after,.rc-icon-location--white::after,.rc-icon-macbook--black::after,.rc-icon-macbook--red::after,.rc-icon-macbook--white::after,.rc-icon-mail--black::after,.rc-icon-mail--red::after,.rc-icon-mail--white::after,.rc-icon-male--black::after,.rc-icon-male--red::after,.rc-icon-male--white::after,.rc-icon-partner--black::after,.rc-icon-partner--red::after,.rc-icon-partner--white::after,.rc-icon-partners--black::after,.rc-icon-partners--red::after,.rc-icon-partners--white::after,.rc-icon-pharmacy--black::after,.rc-icon-pharmacy--red::after,.rc-icon-pharmacy--white::after,.rc-icon-phone--black::after,.rc-icon-phone--red::after,.rc-icon-phone--white::after,.rc-icon-pintrest--black::after,.rc-icon-pintrest--red::after,.rc-icon-pintrest--white::after,.rc-icon-play--black::after,.rc-icon-play--red::after,.rc-icon-play--v2--black::after,.rc-icon-play--v2--red::after,.rc-icon-play--v2--white::after,.rc-icon-play--white::after,.rc-icon-rating--black::after,.rc-icon-rating--red::after,.rc-icon-rating--white::after,.rc-icon-royal-canin-crown::after,.rc-icon-royal-canin-primary::after,.rc-icon-royal-canin-secondary::after,.rc-icon-science--black::after,.rc-icon-science--red::after,.rc-icon-science--white::after,.rc-icon-search--black::after,.rc-icon-search--red::after,.search-bar > [type="submit"]::after,.rc-icon-search--white::after,[class^="button"][class*="icon-"].rc-icon-search::after,.rc-icon-shelter--black::after,.rc-icon-shelter--red::after,.rc-icon-shelter--white::after,.rc-icon-speciality-retailer--black::after,.rc-icon-speciality-retailer--red::after,.rc-icon-speciality-retailer--white::after,.rc-icon-toggle--black::after,.rc-icon-toggle--red::after,.rc-icon-toggle--white::after,.rc-icon-twitter--black::after,.rc-icon-twitter--red::after,.rc-icon-twitter--white::after,.rc-icon-user--black::after,.rc-icon-user--red::after,.rc-icon-user--white::after,.rc-icon-vet--black::after,.rc-icon-vet--red::after,.rc-icon-vet--white::after,.rc-icon-vet-v2--black::after,.rc-icon-vet-v2--red::after,.rc-icon-vet-v2--white::after,.rc-icon-view--black::after,.rc-icon-view--red::after,.rc-icon-view--white::after,.rc-icon-volume--black::after,.rc-icon-volume--red::after,.rc-icon-volume--white::after,.rc-icon-youtube--black::after,.rc-icon-youtube--red::after,.rc-icon-youtube--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-0");
+  background-image: url("royal-canin.sprite.svg");
   background-repeat: no-repeat;
   display: inline-block;
   content: '';
@@ -3035,7 +3035,7 @@ blockquote > p {
 
 [class^="button"]::after {
   position: absolute;
-  right: 1em;
+  right: 2em;
   top: -2.1em;
   display: inline-block;
   vertical-align: middle;
@@ -3071,6 +3071,11 @@ blockquote > p {
   color: #87888A;
 }
 
+[class^="button"].fill-width {
+  width: 100%;
+  text-align: center;
+}
+
 button {
   cursor: pointer;
 }
@@ -3086,32 +3091,35 @@ button {
 
 .button--small,.button--secondary--small,.button--tertiary--small {
   font-size: .875em;
-  padding: .425rem 1.5rem;
+  padding: 0.425rem 1.5rem;
 }
 
 .button--small::after,.button--secondary--small::after,.button--tertiary--small::after {
   transform: scale(0.3);
-  top: -1.4em;
+  top: -1.15em;
+  right: 0.75rem;
 }
 
 .button--medium,.button--secondary--medium,.button--tertiary--medium {
   font-size: 1em;
-  padding: .625rem 2.5rem;
+  padding: 0.625rem 2.5rem;
 }
 
 .button--medium::after,.button--secondary--medium::after,.button--tertiary--medium::after {
   transform: scale(0.4);
-  top: -.85em;
+  top: -.65em;
+  right: 1.25rem;
 }
 
 .button--large,.button--secondary--large,.button--tertiary--large {
   font-size: 1.2em;
-  padding: .825rem 3.5rem;
+  padding: 0.825rem 3.5rem;
 }
 
 .button--large::after,.button--secondary--large::after,.button--tertiary--large::after {
   transform: scale(0.55);
-  top: -.45em;
+  top: -.35em;
+  right: 1.75rem;
 }
 
 .button--secondary,.button--secondary--large,.button--secondary--medium,.button--secondary--small {
@@ -5688,24 +5696,8 @@ video.hero__bg {
     border-radius: 50px;
   }
 
-  [class^="button"] {
-    border-radius: 3px;
-  }
-
   [class^="button"]::after {
     top: -1.85em;
-  }
-
-  .button--small::after,.button--secondary--small::after,.button--tertiary--small::after {
-    top: -1.15em;
-  }
-
-  .button--medium::after,.button--secondary--medium::after,.button--tertiary--medium::after {
-    top: -.65em;
-  }
-
-  .button--large::after,.button--secondary--large::after,.button--tertiary--large::after {
-    top: -.35em;
   }
 
   .rc-progress-stepped__link {
@@ -6435,6 +6427,11 @@ video.hero__bg {
 }
 
 @media (max-width: 800px) {
+  [class^="button"].fill-width--just-mobile {
+    width: 100%;
+    text-align: center;
+  }
+
   .rc-navigation__item:nth-of-type(1),.rc-navigation__item:nth-of-type(5) {
     width: 20%;
   }
