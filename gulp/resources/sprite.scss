@@ -1,27 +1,17 @@
-{{#hasMixin}}@mixin {{mixinName}} {
-	background: url("royal-canin.sprite.svg") no-repeat;
-}
-
-{{#hasCommon}}.{{commonName}} {
-	@include {{mixinName}};
-}
-
-{{/hasCommon}}{{/hasMixin}}{{^hasMixin}}{{#hasCommon}}.{{/hasCommon}}{{^hasCommon}}%{{/hasCommon}}{{commonName}} {
+[class*="rc-icon-"]::after {
+    display: inline-block;
     background-image: url("royal-canin.sprite.svg");
     background-repeat: no-repeat;
-    display: inline-block;
     content: '';
-    height: 65px;
-    width: 65px;
+    height: 45px;
+    width: 45px;
 }
 
-{{/hasMixin}}{{#shapes}}{{#selector.shape}}{{expression}}{{^last}},
+{{#shapes}}{{#selector.shape}}{{expression}}{{^last}},
 {{/last}}{{/selector.shape}} {
   &::after {
-	{{^hasCommon}}{{#hasMixin}}@include {{mixinName}};{{/hasMixin}}{{^hasMixin}}@extend %{{commonName}};{{/hasMixin}}
-	{{/hasCommon}}background-position: {{position.relative.xy}};{{#dimensions.inline}}
-	width: {{width.outer}}px;
-	height: {{height.outer}}px;{{/dimensions.inline}}
+    background-image: url("royal-canin.sprite.svg");
+	background-position: {{position.relative.xy}};
   }
 }
 
