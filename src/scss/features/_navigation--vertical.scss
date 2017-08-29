@@ -196,10 +196,11 @@
     transition: transform .5s ease, opacity .3s ease;
     content: '';
     position: absolute;
-    right: 0;
+    right: 1rem;
     top: 0;
     bottom: 0;
-    width: 38px;
+    width: 47px;
+    height: 47px;
     background-repeat: no-repeat;
   }
 }

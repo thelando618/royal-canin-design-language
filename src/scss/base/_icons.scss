@@ -14,3 +14,11 @@
 [class^="rc-icon-"].large {
   transform: scale(4);
 }
+
+%extend-icon-base {
+  content: '';
+  display: block;
+  background-repeat: no-repeat;
+  width: 45px;
+  height: 45px;
+}

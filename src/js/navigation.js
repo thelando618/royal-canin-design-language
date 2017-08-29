@@ -18,14 +18,9 @@ RCWDL.ready(RCWDL.navigation.changeNavigationOnScroll());
 
 RCWDL.navigation.burgerToggle = function (triggerSelector, targetSelector) {
 
-
   var targets = document.querySelectorAll(triggerSelector);
-
-  console.log(targets);
-  console.log(typeof targets);
-
-
-  if (targets.length > 1) {
+  
+  if (targets !== null) {
     targets.forEach(function (item) {
       item.addEventListener('click', function (e) {
         e.target
@@ -36,17 +31,6 @@ RCWDL.navigation.burgerToggle = function (triggerSelector, targetSelector) {
       });
     })
   }
-  else {
-    targets.addEventListener('click', function (e) {
-        e.target
-          .querySelector(targetSelector)
-          .contentDocument
-          .querySelector('.svg-toggle')
-          .classList.toggle('active');
-      });
-  }
-
-
 
 };
 

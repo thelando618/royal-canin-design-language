@@ -53,8 +53,6 @@
   @extend %pager--active;
 }
 
-// This is used in carousel to correctly position vertically. 65px is the current setting for icon heights.
-$navigation-nextprev-height: 65px;
 
 %interactive--navigation {
   display: inline-block;
@@ -62,7 +60,6 @@ $navigation-nextprev-height: 65px;
   background-color: colour('brand', 'red');
   overflow: hidden;
   border: 1px solid rgba( 0, 0, 0, .15 );
-  height: $navigation-nextprev-height;
   cursor: pointer;
 
   &:hover,
@@ -72,10 +69,6 @@ $navigation-nextprev-height: 65px;
 
   &:active {
     background-color: colour('brand', 'red', 'dark');
-  }
-
-  &::after {
-    transform: scale(0.5);
   }
 }
 
@@ -92,6 +85,9 @@ $navigation-nextprev-height: 65px;
   border: 1px solid colour('brand', 'light-grey');
   @extend %interactive--navigation--round;
   background-color: white;
+  height: auto;
+  width: auto;
+  padding: .5rem;
 
   &:hover, &:focus {
     background-color: colour('brand', 'white', 'dark');
@@ -119,13 +115,23 @@ $navigation-nextprev-height: 65px;
 
 %navigation--prev {
   @extend %interactive--navigation;
-  @extend .rc-icon-chevron--left--white;
+
+  &::after {
+    transform: translate(-3px, -2px);
+    @extend %extend-icon-base;
+    @extend .rc-icon-chevron--left--white::after;
+  }
 
 }
 
 %navigation--next {
   @extend %interactive--navigation;
-  @extend .rc-icon-chevron--right--white;
+
+  &::after {
+    transform: translate(-2px, -1px);
+    @extend %extend-icon-base;
+    @extend .rc-icon-chevron--right--white::after;
+  }
 }
 
 .navigation--next {
@@ -140,20 +146,26 @@ $navigation-nextprev-height: 65px;
 .response--affirmative {
   @extend %response;
   @extend %floating-button;
-  @extend .rc-icon-check--green;
+
+  &::after {
+    @extend %extend-icon-base;
+    @extend .rc-icon-check--green::after;
+  }
 
   &:hover,
   &:focus,
   &.interactive--response--active {
-
-
   }
 }
 
 .response--negative {
   @extend %response;
   @extend %floating-button;
-  @extend .rc-icon-cross--red;
+
+  &::after {
+    @extend %extend-icon-base;
+    @extend .rc-icon-cross--red::after;
+  }
 
   &:hover,
   &:focus,
