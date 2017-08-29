@@ -191,20 +191,17 @@
   @extend .rc-icon-chevron--down--red;
 
   &::after {
-    transform: rotate(180deg) scale(0.25);
+    transform: rotate(180deg);
     opacity: 0;
     transition: transform .5s ease, opacity .3s ease;
     content: '';
     position: absolute;
-    right: 0;
-    top: -1.85em;
+    right: 1rem;
+    top: 0;
     bottom: 0;
-    width: 65px;
+    width: 47px;
+    height: 47px;
     background-repeat: no-repeat;
-
-    @media (get-breakpoint('small')) {
-      top: -.75em;
-    }
   }
 }
 
@@ -212,7 +209,7 @@
   font-weight: 500;
 
   .section > &::after {
-    transform: rotate(0) scale(0.25);
+    transform: rotate(0);
     opacity: 1;
   }
 }
