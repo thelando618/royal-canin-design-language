@@ -16,17 +16,22 @@ RCWDL.navigation.changeNavigationOnScroll = function () {
 
 RCWDL.ready(RCWDL.navigation.changeNavigationOnScroll());
 
-RCWDL.navigation.burgerToggle = function () {
-  var toggle = document.getElementById('menu-toggle');
-  if (toggle !== null) {
-    toggle.addEventListener('click', function () {
-      var a = document.getElementById('menu-toggle-svg');
-      var svgContent = a.contentDocument;
-      var target = svgContent.querySelector('.svg-menu-toggle');
+RCWDL.navigation.burgerToggle = function (triggerSelector, targetSelector) {
 
-      target.classList.toggle('active');
-    });
+  var targets = document.querySelectorAll(triggerSelector);
+  
+  if (targets !== null) {
+    targets.forEach(function (item) {
+      item.addEventListener('click', function (e) {
+        e.target
+          .querySelector(targetSelector)
+          .contentDocument
+          .querySelector('.svg-toggle')
+          .classList.toggle('active');
+      });
+    })
   }
+
 };
 
-RCWDL.ready(RCWDL.navigation.burgerToggle());
+RCWDL.ready(RCWDL.navigation.burgerToggle('[data-js-animate-svg]', '[data-js-animate-svg-target]'));

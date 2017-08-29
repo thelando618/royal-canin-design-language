@@ -1,15 +1,24 @@
 [class^="rc-icon-"].small {
-  transform: scale(0.5);
+  transform: scale(1);
 }
 
 [class^="rc-icon-"] {
-  height: 64px;
-  width: 64px;
+  transform: scale(2);
+  height: 32px;
+  width: 32px;
   position: relative;
   display: inline-block;
-  transform-origin: 50% 50%;
+  transform-origin: 32px 32px;
 }
 
 [class^="rc-icon-"].large {
-  transform: scale(2);
+  transform: scale(4);
+}
+
+%extend-icon-base {
+  content: '';
+  display: block;
+  background-repeat: no-repeat;
+  width: 45px;
+  height: 45px;
 }

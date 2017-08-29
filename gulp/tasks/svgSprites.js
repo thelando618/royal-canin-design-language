@@ -30,11 +30,14 @@ module.exports = function (task, gulp, sitesettings, need, taskObj) {
         box       : 'border'                  // Padding strategy (similar to CSS `box-sizing`)
       },
       dimension		: {                         // Dimension related options
-        maxWidth	: 50,                       // Max. shape width
-        maxHeight	: 50,                       // Max. shape height
+        maxWidth	: 64,                       // Max. shape width
+        maxHeight	: 64,                       // Max. shape height
         precision	: 2,                        // Floating point precision
         attributes 	: false                   // Width and height attributes on embedded shapes
       }
+    },
+    svg						: {							// General options for created SVG files
+      dimensionAttributes	: true
     }
   }
 

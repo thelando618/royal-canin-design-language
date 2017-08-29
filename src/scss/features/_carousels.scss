@@ -259,33 +259,32 @@ video.hero__bg {
   height: 50px;
   z-index: 99;
   top: 50%;
-  margin-top: - $navigation-nextprev-height / 2;
+  margin-top: -32px;
   cursor: pointer;
   transform: scale(0.6);
 
   & .navigation--prev,
   & .navigation--next {
-    @extend .rc-icon-chevron--left--white;
+
     padding: 0;
 
     &::after {
-      width: 65px;
-      height: 65px;
-      transform: scale(0.5);
+      @extend %extend-icon-base;
+      @extend .rc-icon-chevron--left--white::after;
     }
   }
 
   & .navigation--next::after {
-    transform: scale(0.5) rotate(180deg);
+    transform: rotate(180deg);
   }
 }
 
 [data-controls="prev"] {
-  left: -1rem;
+  left: -10px;
 }
 
 [data-controls="next"] {
-  right: -1rem;
+  right: -10px;
 }
 
 [data-tns-role="nav"] {
