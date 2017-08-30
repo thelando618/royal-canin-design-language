@@ -29,7 +29,7 @@
     max-width: 99999px;
     width: 100%;
     border: none;
-    padding-right: 2.5rem;
+    padding-right: 3rem;
     border-radius: 0;
     text-align: left;
     min-height: 1rem;
@@ -49,11 +49,7 @@
 
 .alert__close {
   position: absolute;
-  right: 0;
-  top: 0;
-
-  & .rc-icon-cross--white::after {
-    transform: scale(0.3);
-    transform-origin: 50% 50%;
-  }
+  right: .5em;
+  top: 50%;
+  transform: translateY(-50%);
 }

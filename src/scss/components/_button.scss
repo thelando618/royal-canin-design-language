@@ -324,6 +324,10 @@ $variants: ('large', 'medium', 'small');
   padding-right: 0;
 }
 
+[class*="button"][class*="icon-"] {
+  padding-right: 4em;
+}
+
 .button--medium[class*="icon-"],
 .button--small[class*="icon-"],
 .button--large[class*="icon-"] {

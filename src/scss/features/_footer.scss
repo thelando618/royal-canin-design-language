@@ -61,10 +61,12 @@
 
 .rc-navigation--footer .rc-navigation__link {
   text-decoration: none;
+  display: block;
   color: colour('brand', 'medium-grey', 'light');
-  @extend .rc-icon-chevron--right--white;
 
   &::after {
+    @extend %extend-icon-base;
+    @extend .rc-icon-chevron--right--white::after;
     display: none;
   }
 
@@ -74,11 +76,11 @@
 
     &::after {
       display: block;
-      transform: scale(0.25) translateY(5px);
       transform-origin: 0 0;
       position: absolute;
-      left: 0;
-      top: 0;
+      left: -.5em;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 }
