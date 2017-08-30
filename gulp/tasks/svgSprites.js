@@ -26,13 +26,13 @@ module.exports = function (task, gulp, sitesettings, need, taskObj) {
     shape: {
       whitespace	: '-',
       spacing			: {                         // Spacing related options
-        padding		: 10,                       // Padding around all shapes
+        padding		: 0,                       // Padding around all shapes
         box       : 'border'                  // Padding strategy (similar to CSS `box-sizing`)
       },
       dimension		: {                         // Dimension related options
-        maxWidth	: 64,                       // Max. shape width
-        maxHeight	: 64,                       // Max. shape height
-        precision	: 2,                        // Floating point precision
+        maxWidth	: 32,                       // Max. shape width
+        maxHeight	: 32,                       // Max. shape height
+        precision	: 10,                        // Floating point precision
         attributes 	: false                   // Width and height attributes on embedded shapes
       }
     },
