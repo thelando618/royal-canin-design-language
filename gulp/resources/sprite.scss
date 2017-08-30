@@ -3,8 +3,8 @@
     background-image: url("royal-canin.sprite.svg");
     background-repeat: no-repeat;
     content: '';
-    height: 45px;
-    width: 45px;
+    height: 32px;
+    width: 32px;
 }
 
 {{#shapes}}{{#selector.shape}}{{expression}}{{^last}},

@@ -18,12 +18,10 @@
   &::after {
     position: absolute;
     right: 2em;
-    top: -2.1em;
-    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
     vertical-align: middle;
-    width: 65px;
-    height: 65px;
-    transform: scale(0.2);
     transform-origin: 100%;
     background-repeat: no-repeat;
   }
@@ -56,13 +54,6 @@
     }
   }
 
-  @media (get-breakpoint('small')) {
-
-    &::after {
-      top: -1.85em
-    }
-  }
-
   &.fill-width {
     width: 100%;
     text-align: center;
@@ -92,11 +83,10 @@ button {
 %button--small {
   $button-icon-padding: 1.5rem;
   font-size: .875em;
-  padding: .425rem $button-icon-padding;
+  padding: .5rem $button-icon-padding;
 
   &::after {
-    transform: scale(0.3);
-    top: -1.15em;
+    display: block;
     right: $button-icon-padding / 2;
   }
 }
@@ -107,8 +97,7 @@ button {
   padding: .625rem $button-icon-padding;
 
   &::after {
-    transform: scale(0.4);
-    top: -.65em;
+    display: block;
     right: $button-icon-padding / 2;
   }
 }
@@ -119,8 +108,7 @@ button {
   padding: .825rem $button-icon-padding;
 
   &::after {
-    transform: scale(0.55);
-    top: -.35em;
+    display: block;
     right: $button-icon-padding / 2;
   }
 }
@@ -154,7 +142,7 @@ $icons: ('icon-arrow--right');
 @each $icon in $icons {
   [class*="button--secondary"].rc-#{$icon}--red::after:hover,
   [class*="button--secondary"].rc-#{$icon}--red::after:focus {
-    @extend .rc-#{$icon}--white;
+    @extend .rc-#{$icon}--white::after;
   }
 }
 
@@ -211,10 +199,10 @@ $variants: ('large', 'medium', 'small');
 
 .button--functional {
   background-color: colour('functional', 'functional');
-  padding-right: 4em;
 
   &::after {
-    @extend .rc-icon-arrow--right--white;
+    @extend %extend-icon-base;
+    @extend .rc-icon-arrow--right--white::after;
   }
 
   &:hover,
@@ -224,8 +212,10 @@ $variants: ('large', 'medium', 'small');
   }
 }
 
+// Generate the animation used for the spinning icon.
+@include generateAnimation(steady-spin, translateY, translateY(-50%));
+
 .button--functional--loading {
-  padding-right: 4em;
   background-color: colour('functional', 'functional', 'dark');
 
   &:hover,
@@ -235,11 +225,11 @@ $variants: ('large', 'medium', 'small');
   }
 
   &::after {
-    top: -2em;
-    right: -10px;
-    transform-origin: 47% 53%;
-    @extend .rc-icon-loader--white;
-    animation: steady-spin 1s infinite linear;
+    right: 20px;
+    transform-origin: 46% 0%;
+    @extend %extend-icon-base;
+    @extend .rc-icon-loader--white::after;
+    animation: animatePlusTransform(steady-spin, 1s infinite linear, translateY, translateY(-50%));
 
     .no-cssanimations & {
       background-image: url('../images/loading.gif');
@@ -247,26 +237,20 @@ $variants: ('large', 'medium', 'small');
   }
 }
 
-.button--functional--loading.button--large:after {
-  right: 2px;
-  top: -.4em;
-  animation: steady-spin-large 1s infinite linear;
-}
 
-.button--functional--loading.button--medium:after {
-  right: 2px;
-  top: -.8em;
-  animation: steady-spin-medium 1s infinite linear;
+
+// Only add the padding on the larger buttons with the icon.
+[class*="button--functional"].button--large,
+[class*="button--functional"].button--medium,
+[class*="button--functional"].button--small {
+  padding-right: 4em;
 }
 
 .button--functional--loading.button--small:after {
-  right: 2px;
-  top: -1.3em;
-  animation: steady-spin-small 1s infinite linear;
+  right: .5em;
 }
 
 .button--functional--success {
-  padding-right: 4em;
   background-color: colour('functional', 'success');
 
   &:hover,
@@ -276,13 +260,13 @@ $variants: ('large', 'medium', 'small');
   }
 
   &::after {
-    @extend .rc-icon-check--white;
+    @extend %extend-icon-base;
+    @extend .rc-icon-check--white::after;
   }
 }
 
 
 .button--functional--fail {
-  padding-right: 4em;
   background-color: colour('functional', 'error');
 
   &:hover,
@@ -292,7 +276,8 @@ $variants: ('large', 'medium', 'small');
   }
 
   &::after {
-    @extend .rc-icon-cross--white;
+    @extend %extend-icon-base;
+    @extend .rc-icon-cross--white::after;
   }
 }
 
@@ -335,19 +320,27 @@ $variants: ('large', 'medium', 'small');
   }
 }
 
+.button [class*="icon-"] {
+  padding-right: 0;
+}
 
-[class^="button"][class*="icon-"] {
+.button--medium[class*="icon-"],
+.button--small[class*="icon-"],
+.button--large[class*="icon-"] {
   padding-right: 4em;
 
   &.rc-icon-check {
-    @extend .rc-icon-check--white;
+    @extend %extend-icon-base;
+    @extend .rc-icon-check--white::after;
   }
 
   &.rc-icon-arrow-right {
-    @extend .rc-icon-arrow--right--white;
+    @extend %extend-icon-base;
+    @extend .rc-icon-arrow--right--white::after;
   }
 
   &.rc-icon-search {
-    @extend .rc-icon-search--white;
+    @extend %extend-icon-base;
+    @extend .rc-icon-search--white::after;
   }
 }
