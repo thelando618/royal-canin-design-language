@@ -1555,1515 +1555,1515 @@ sup {
 
 [class*="rc-icon-"]::after {
   display: inline-block;
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+  background-image: url("royal-canin.sprite.svg");
   background-repeat: no-repeat;
   content: '';
   height: 32px;
   width: 32px;
 }
 
-.rc-icon-actions--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-actions--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 5.882352941176471% 0;
 }
 
-.rc-icon-actions--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-actions--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 70.58823529411765% 37.5%;
 }
 
-.rc-icon-actions--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-actions--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 0 6.25%;
 }
 
-.rc-icon-address-book--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-address-book--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 5.882352941176471% 6.25%;
 }
 
-.rc-icon-address-book--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-address-book--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 11.764705882352942% 0;
 }
 
-.rc-icon-address-book--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-address-book--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 11.764705882352942% 6.25%;
 }
 
-.rc-icon-arrow--down--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-arrow--down--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 0 12.5%;
 }
 
-.rc-icon-arrow--down--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-arrow--down--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 5.882352941176471% 12.5%;
 }
 
-.rc-icon-arrow--down--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-arrow--down--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 11.764705882352942% 12.5%;
 }
 
-.rc-icon-arrow--go--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-arrow--go--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 17.647058823529413% 0;
 }
 
-.rc-icon-arrow--go--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-arrow--go--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 17.647058823529413% 6.25%;
 }
 
-.rc-icon-arrow--go--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-arrow--go--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 17.647058823529413% 12.5%;
 }
 
-.rc-icon-arrow--left--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-arrow--left--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 0 18.75%;
 }
 
-.rc-icon-arrow--left--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-arrow--left--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 5.882352941176471% 18.75%;
 }
 
-.rc-icon-arrow--left--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-arrow--left--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 11.764705882352942% 18.75%;
 }
 
-.rc-icon-arrow--right--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-arrow--right--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 17.647058823529413% 18.75%;
 }
 
-.rc-icon-arrow--right--red::after,.card--featured > a::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-arrow--right--light::after,[class*="button--secondary"].rc-icon-arrow--right--red:hover::after,.card--featured > a[class*="button--secondary"]:hover::after,[class*="button--secondary"].rc-icon-arrow--right--red:focus::after,.card--featured > a[class*="button--secondary"]:focus::after,.button--functional::after,.button--medium[class*="icon-"].rc-icon-arrow-right,.button--small[class*="icon-"].rc-icon-arrow-right,.button--large[class*="icon-"].rc-icon-arrow-right {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 23.529411764705884% 0;
 }
 
-.rc-icon-arrow--right--white::after,[class*="button--secondary"].rc-icon-arrow--right--red:hover::after,.card--featured > a[class*="button--secondary"]:hover::after,[class*="button--secondary"].rc-icon-arrow--right--red:focus::after,.card--featured > a[class*="button--secondary"]:focus::after,.button--functional::after,.button--medium[class*="icon-"].rc-icon-arrow-right,.button--small[class*="icon-"].rc-icon-arrow-right,.button--large[class*="icon-"].rc-icon-arrow-right {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-arrow--right--red::after,.card--featured > a::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 23.529411764705884% 6.25%;
 }
 
-.rc-icon-arrow--up--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-arrow--up--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 23.529411764705884% 12.5%;
 }
 
-.rc-icon-arrow--up--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-arrow--up--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 23.529411764705884% 18.75%;
 }
 
-.rc-icon-arrow--up--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-arrow--up--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 0 25%;
 }
 
-.rc-icon-bag--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-bag--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 5.882352941176471% 25%;
 }
 
-.rc-icon-bag--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-bag--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 11.764705882352942% 25%;
 }
 
-.rc-icon-bag--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-bag--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 17.647058823529413% 25%;
 }
 
-.rc-icon-basket--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-basket--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 23.529411764705884% 25%;
 }
 
-.rc-icon-basket--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-basket--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 29.41176470588235% 0;
 }
 
-.rc-icon-basket--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-basket--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 29.41176470588235% 6.25%;
 }
 
-.rc-icon-bookmark--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-bookmark--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 29.41176470588235% 12.5%;
 }
 
-.rc-icon-bookmark--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-bookmark--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 29.41176470588235% 18.75%;
 }
 
-.rc-icon-bookmark--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-bookmark--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 29.41176470588235% 25%;
 }
 
-.rc-icon-bowl--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-bowl--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 0 31.25%;
 }
 
-.rc-icon-bowl--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-bowl--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 5.882352941176471% 31.25%;
 }
 
-.rc-icon-bowl--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-bowl--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 11.764705882352942% 31.25%;
 }
 
-.rc-icon-calendar--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-calendar--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 17.647058823529413% 31.25%;
 }
 
-.rc-icon-calendar--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-calendar--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 23.529411764705884% 31.25%;
 }
 
-.rc-icon-calendar--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-calendar--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 29.41176470588235% 31.25%;
 }
 
-.rc-icon-check--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-check--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 35.294117647058826% 0;
 }
 
 .rc-icon-check--green::after,.response--affirmative::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+  background-image: url("royal-canin.sprite.svg");
   background-position: 35.294117647058826% 6.25%;
 }
 
-.rc-icon-check--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-check--light::after,.button--functional--success::after,.button--medium[class*="icon-"].rc-icon-check,.button--small[class*="icon-"].rc-icon-check,.button--large[class*="icon-"].rc-icon-check {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 35.294117647058826% 12.5%;
 }
 
-.rc-icon-check--white::after,.button--functional--success::after,.button--medium[class*="icon-"].rc-icon-check,.button--small[class*="icon-"].rc-icon-check,.button--large[class*="icon-"].rc-icon-check {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-check--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 35.294117647058826% 18.75%;
 }
 
-.rc-icon-chevron--down--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-chevron--down--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 35.294117647058826% 25%;
 }
 
-.rc-icon-chevron--down--red::after,.navigation__link::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-chevron--down--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 35.294117647058826% 31.25%;
 }
 
-.rc-icon-chevron--down--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-chevron--down--red::after,.navigation__link::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 0 37.5%;
 }
 
-.rc-icon-chevron--heavy--down--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-chevron--heavy--down--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 5.882352941176471% 37.5%;
 }
 
-.rc-icon-chevron--heavy--down--red::after,[role="listbox"].choices::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-chevron--heavy--down--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 11.764705882352942% 37.5%;
 }
 
-.rc-icon-chevron--heavy--down--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-chevron--heavy--down--red::after,[role="listbox"].choices::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 17.647058823529413% 37.5%;
 }
 
-.rc-icon-chevron--heavy--up--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-chevron--heavy--up--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 23.529411764705884% 37.5%;
 }
 
-.rc-icon-chevron--heavy--up--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-chevron--heavy--up--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 29.41176470588235% 37.5%;
 }
 
-.rc-icon-chevron--heavy--up--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-chevron--heavy--up--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 35.294117647058826% 37.5%;
 }
 
-.rc-icon-chevron--left--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-chevron--left--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 41.1764705882353% 0;
 }
 
-.rc-icon-chevron--left--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-chevron--left--light::after,.navigation--prev::after,.navigation--round--next::after,[data-controls] .navigation--prev::after,[data-controls] .navigation--next::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 41.1764705882353% 6.25%;
 }
 
-.rc-icon-chevron--left--white::after,.navigation--prev::after,.navigation--round--next::after,[data-controls] .navigation--prev::after,[data-controls] .navigation--next::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-chevron--left--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 41.1764705882353% 12.5%;
 }
 
-.rc-icon-chevron--right--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-chevron--right--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 41.1764705882353% 18.75%;
 }
 
-.rc-icon-chevron--right--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-chevron--right--light::after,.breadcrumb__list-item > a::after,.navigation--next::after,.navigation--round--prev::after,.rc-navigation--footer .rc-navigation__link::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 41.1764705882353% 25%;
 }
 
-.rc-icon-chevron--right--white::after,.breadcrumb__list-item > a::after,.navigation--next::after,.navigation--round--prev::after,.rc-navigation--footer .rc-navigation__link::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-chevron--right--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 41.1764705882353% 31.25%;
 }
 
-.rc-icon-chevron--up--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-chevron--up--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 41.1764705882353% 37.5%;
 }
 
-.rc-icon-chevron--up--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-chevron--up--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 0 43.75%;
 }
 
-.rc-icon-chevron--up--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-chevron--up--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 5.882352941176471% 43.75%;
 }
 
-.rc-icon-clock--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-clock--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 11.764705882352942% 43.75%;
 }
 
-.rc-icon-clock--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-clock--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 17.647058823529413% 43.75%;
 }
 
-.rc-icon-clock--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-clock--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 23.529411764705884% 43.75%;
 }
 
-.rc-icon-close--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-close--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 29.41176470588235% 43.75%;
 }
 
-.rc-icon-close--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-close--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 35.294117647058826% 43.75%;
 }
 
-.rc-icon-close--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-close--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 41.1764705882353% 43.75%;
 }
 
-.rc-icon-comment--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-comment--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 47.05882352941177% 0;
 }
 
-.rc-icon-comment--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-comment--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 47.05882352941177% 6.25%;
 }
 
-.rc-icon-comment--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-comment--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 47.05882352941177% 12.5%;
 }
 
-.rc-icon-cross--black::after,.search-bar > [aria-label="Close"]::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-cross--dark::after,.search-bar > [aria-label="Close"]::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 47.05882352941177% 18.75%;
 }
 
-.rc-icon-cross--red::after,.response--negative::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-cross--light::after,.button--functional--fail::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 47.05882352941177% 25%;
 }
 
-.rc-icon-cross--white::after,.button--functional--fail::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-cross--red::after,.response--negative::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 47.05882352941177% 31.25%;
 }
 
-.rc-icon-device--computer--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-device--computer--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 47.05882352941177% 37.5%;
 }
 
-.rc-icon-device--computer--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-device--computer--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 47.05882352941177% 43.75%;
 }
 
-.rc-icon-device--computer--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-device--computer--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 0 50%;
 }
 
-.rc-icon-device--mobile--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-device--mobile--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 5.882352941176471% 50%;
 }
 
-.rc-icon-device--mobile--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-device--mobile--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 11.764705882352942% 50%;
 }
 
-.rc-icon-device--mobile--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-device--mobile--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 17.647058823529413% 50%;
 }
 
-.rc-icon-device--tablet--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-device--tablet--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 23.529411764705884% 50%;
 }
 
-.rc-icon-device--tablet--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-device--tablet--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 29.41176470588235% 50%;
 }
 
-.rc-icon-device--tablet--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-device--tablet--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 35.294117647058826% 50%;
 }
 
-.rc-icon-doc--image--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-doc--image--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 41.1764705882353% 50%;
 }
 
-.rc-icon-doc--image--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-doc--image--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 47.05882352941177% 50%;
 }
 
-.rc-icon-doc--image--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-doc--image--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 52.94117647058823% 0;
 }
 
-.rc-icon-doc--pdf--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-doc--pdf--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 52.94117647058823% 6.25%;
 }
 
-.rc-icon-doc--pdf--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-doc--pdf--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 52.94117647058823% 12.5%;
 }
 
-.rc-icon-doc--pdf--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-doc--pdf--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 52.94117647058823% 18.75%;
 }
 
-.rc-icon-doc--video--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-doc--video--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 52.94117647058823% 25%;
 }
 
-.rc-icon-doc--video--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-doc--video--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 52.94117647058823% 31.25%;
 }
 
-.rc-icon-doc--video--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-doc--video--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 52.94117647058823% 37.5%;
 }
 
-.rc-icon-documents--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-documents--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 52.94117647058823% 43.75%;
 }
 
-.rc-icon-documents--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-documents--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 52.94117647058823% 50%;
 }
 
-.rc-icon-documents--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-documents--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 0 56.25%;
 }
 
-.rc-icon-edit--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-edit--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 5.882352941176471% 56.25%;
 }
 
-.rc-icon-edit--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-edit--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 11.764705882352942% 56.25%;
 }
 
-.rc-icon-edit--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-edit--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 17.647058823529413% 56.25%;
 }
 
-.rc-icon-email--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-email--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 23.529411764705884% 56.25%;
 }
 
-.rc-icon-email--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-email--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 29.41176470588235% 56.25%;
 }
 
-.rc-icon-email--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-email--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 35.294117647058826% 56.25%;
 }
 
-.rc-icon-expert-advice--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-expert-advice--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 41.1764705882353% 56.25%;
 }
 
-.rc-icon-expert-advice--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-expert-advice--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 47.05882352941177% 56.25%;
 }
 
-.rc-icon-expert-advice--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-expert-advice--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 52.94117647058823% 56.25%;
 }
 
-.rc-icon-facebook--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-facebook--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 58.8235294117647% 0;
 }
 
-.rc-icon-facebook--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-facebook--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 58.8235294117647% 6.25%;
 }
 
-.rc-icon-facebook--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-facebook--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 58.8235294117647% 12.5%;
 }
 
-.rc-icon-feedback--failure--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-feedback--failure--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 58.8235294117647% 18.75%;
 }
 
-.rc-icon-feedback--failure--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-feedback--failure--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 58.8235294117647% 25%;
 }
 
-.rc-icon-feedback--failure--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-feedback--failure--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 58.8235294117647% 31.25%;
 }
 
-.rc-icon-feedback--success--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-feedback--success--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 58.8235294117647% 37.5%;
 }
 
-.rc-icon-feedback--success--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-feedback--success--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 58.8235294117647% 43.75%;
 }
 
-.rc-icon-feedback--success--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-feedback--success--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 58.8235294117647% 50%;
 }
 
-.rc-icon-feedback--warning--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-feedback--warning--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 58.8235294117647% 56.25%;
 }
 
-.rc-icon-feedback--warning--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-feedback--warning--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 0 62.5%;
 }
 
-.rc-icon-feedback--warning--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-feedback--warning--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 5.882352941176471% 62.5%;
 }
 
-.rc-icon-female--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-female--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 11.764705882352942% 62.5%;
 }
 
-.rc-icon-female--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-female--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 17.647058823529413% 62.5%;
 }
 
-.rc-icon-female--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-female--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 23.529411764705884% 62.5%;
 }
 
-.rc-icon-filter--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-filter--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 29.41176470588235% 62.5%;
 }
 
-.rc-icon-filter--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-filter--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 35.294117647058826% 62.5%;
 }
 
-.rc-icon-filter--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-filter--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 41.1764705882353% 62.5%;
 }
 
-.rc-icon-food--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-food--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 47.05882352941177% 62.5%;
 }
 
-.rc-icon-food--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-food--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 52.94117647058823% 62.5%;
 }
 
-.rc-icon-food--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-food--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 58.8235294117647% 62.5%;
 }
 
-.rc-icon-forward--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-forward--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 64.70588235294117% 0;
 }
 
-.rc-icon-forward--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-forward--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 64.70588235294117% 6.25%;
 }
 
-.rc-icon-forward--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-forward--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 64.70588235294117% 12.5%;
 }
 
-.rc-icon-get-location--2--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-get-location--2--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 64.70588235294117% 18.75%;
 }
 
-.rc-icon-get-location--2--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-get-location--2--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 64.70588235294117% 25%;
 }
 
-.rc-icon-get-location--2--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-get-location--2--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 64.70588235294117% 31.25%;
 }
 
-.rc-icon-get-location--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-get-location--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 64.70588235294117% 37.5%;
 }
 
-.rc-icon-get-location--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-get-location--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 64.70588235294117% 43.75%;
 }
 
-.rc-icon-get-location--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-get-location--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 64.70588235294117% 50%;
 }
 
-.rc-icon-google-plus--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-google-plus--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 64.70588235294117% 56.25%;
 }
 
-.rc-icon-google-plus--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-google-plus--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 64.70588235294117% 62.5%;
 }
 
-.rc-icon-google-plus--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-google-plus--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 0 68.75%;
 }
 
-.rc-icon-groomer--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-groomer--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 5.882352941176471% 68.75%;
 }
 
-.rc-icon-groomer--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-groomer--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 11.764705882352942% 68.75%;
 }
 
-.rc-icon-groomer--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-groomer--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 17.647058823529413% 68.75%;
 }
 
-.rc-icon-health-benefits--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-health-benefits--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 23.529411764705884% 68.75%;
 }
 
-.rc-icon-health-benefits--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-health-benefits--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 29.41176470588235% 68.75%;
 }
 
-.rc-icon-health-benefits--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-health-benefits--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 35.294117647058826% 68.75%;
 }
 
-.rc-icon-help--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-help--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 41.1764705882353% 68.75%;
 }
 
-.rc-icon-help--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-help--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 47.05882352941177% 68.75%;
 }
 
-.rc-icon-help--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-help--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 52.94117647058823% 68.75%;
 }
 
-.rc-icon-hide--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-hide--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 58.8235294117647% 68.75%;
 }
 
-.rc-icon-hide--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-hide--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 64.70588235294117% 68.75%;
 }
 
-.rc-icon-hide--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-hide--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 70.58823529411765% 0;
 }
 
-.rc-icon-home--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-home--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 70.58823529411765% 6.25%;
 }
 
-.rc-icon-home--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-home--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 70.58823529411765% 12.5%;
 }
 
-.rc-icon-home--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-home--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 70.58823529411765% 18.75%;
 }
 
-.rc-icon-info--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-info--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 70.58823529411765% 25%;
 }
 
-.rc-icon-info--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-info--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 70.58823529411765% 31.25%;
 }
 
-.rc-icon-info--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-info--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 0 0;
 }
 
-.rc-icon-instagram--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-instagram--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 70.58823529411765% 43.75%;
 }
 
-.rc-icon-instagram--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-instagram--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 70.58823529411765% 50%;
 }
 
-.rc-icon-instagram--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-instagram--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 70.58823529411765% 56.25%;
 }
 
-.rc-icon-knowledge-respect--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-knowledge-respect--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 70.58823529411765% 62.5%;
 }
 
-.rc-icon-knowledge-respect--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-knowledge-respect--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 70.58823529411765% 68.75%;
 }
 
-.rc-icon-knowledge-respect--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-knowledge-respect--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 0 75%;
 }
 
-.rc-icon-like--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-like--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 5.882352941176471% 75%;
 }
 
-.rc-icon-like--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-like--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 11.764705882352942% 75%;
 }
 
-.rc-icon-like--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-like--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 17.647058823529413% 75%;
 }
 
-.rc-icon-loader--black::after,.search-bar > [type="search"]:focus ~ [aria-label="Close"]::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-loader--dark::after,.search-bar > [type="search"]:focus ~ [aria-label="Close"]::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 23.529411764705884% 75%;
 }
 
-.rc-icon-loader--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-loader--light::after,.button--functional--loading::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 29.41176470588235% 75%;
 }
 
-.rc-icon-loader--white::after,.button--functional--loading::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-loader--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 35.294117647058826% 75%;
 }
 
-.rc-icon-lock--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-lock--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 41.1764705882353% 75%;
 }
 
-.rc-icon-lock--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-lock--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 47.05882352941177% 75%;
 }
 
-.rc-icon-lock--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-lock--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 52.94117647058823% 75%;
 }
 
-.rc-icon-male--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-male--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 58.8235294117647% 75%;
 }
 
-.rc-icon-male--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-male--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 64.70588235294117% 75%;
 }
 
-.rc-icon-male--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-male--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 70.58823529411765% 75%;
 }
 
-.rc-icon-menu--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-menu--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 76.47058823529412% 0;
 }
 
-.rc-icon-menu--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-menu--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 76.47058823529412% 6.25%;
 }
 
-.rc-icon-menu--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-menu--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 76.47058823529412% 12.5%;
 }
 
-.rc-icon-minus--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-minus--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 76.47058823529412% 18.75%;
 }
 
-.rc-icon-minus--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-minus--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 76.47058823529412% 25%;
 }
 
-.rc-icon-minus--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-minus--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 76.47058823529412% 31.25%;
 }
 
-.rc-icon-mouse-pointer--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-mouse-pointer--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 76.47058823529412% 37.5%;
 }
 
-.rc-icon-mouse-pointer--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-mouse-pointer--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 76.47058823529412% 43.75%;
 }
 
-.rc-icon-mouse-pointer--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-mouse-pointer--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 76.47058823529412% 50%;
 }
 
-.rc-icon-news--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-news--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 76.47058823529412% 56.25%;
 }
 
-.rc-icon-news--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-news--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 76.47058823529412% 62.5%;
 }
 
-.rc-icon-news--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-news--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 76.47058823529412% 68.75%;
 }
 
-.rc-icon-nutritional-philosophy--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-nutritional-philosophy--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 76.47058823529412% 75%;
 }
 
-.rc-icon-nutritional-philosophy--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-nutritional-philosophy--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 0 81.25%;
 }
 
-.rc-icon-nutritional-philosophy--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-nutritional-philosophy--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 5.882352941176471% 81.25%;
 }
 
-.rc-icon-pharmacy--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-pharmacy--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 11.764705882352942% 81.25%;
 }
 
-.rc-icon-pharmacy--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-pharmacy--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 17.647058823529413% 81.25%;
 }
 
-.rc-icon-pharmacy--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-pharmacy--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 23.529411764705884% 81.25%;
 }
 
-.rc-icon-pin--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-pin--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 29.41176470588235% 81.25%;
 }
 
-.rc-icon-pin--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-pin--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 35.294117647058826% 81.25%;
 }
 
-.rc-icon-pin--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-pin--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 41.1764705882353% 81.25%;
 }
 
-.rc-icon-pinterest--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-pinterest--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 47.05882352941177% 81.25%;
 }
 
-.rc-icon-pinterest--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-pinterest--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 52.94117647058823% 81.25%;
 }
 
-.rc-icon-pinterest--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-pinterest--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 58.8235294117647% 81.25%;
 }
 
-.rc-icon-plus--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-plus--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 64.70588235294117% 81.25%;
 }
 
-.rc-icon-plus--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-plus--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 70.58823529411765% 81.25%;
 }
 
-.rc-icon-plus--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-plus--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 76.47058823529412% 81.25%;
 }
 
-.rc-icon-print--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-print--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 82.3529411764706% 0;
 }
 
-.rc-icon-print--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-print--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 82.3529411764706% 6.25%;
 }
 
-.rc-icon-print--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-print--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 82.3529411764706% 12.5%;
 }
 
-.rc-icon-quality--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-quality--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 82.3529411764706% 18.75%;
 }
 
-.rc-icon-quality--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-quality--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 82.3529411764706% 25%;
 }
 
-.rc-icon-quality--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-quality--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 82.3529411764706% 31.25%;
 }
 
-.rc-icon-rate--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-rate--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 82.3529411764706% 37.5%;
 }
 
-.rc-icon-rate--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-rate--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 82.3529411764706% 43.75%;
 }
 
-.rc-icon-rate--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-rate--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 82.3529411764706% 50%;
 }
 
-.rc-icon-refresh--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-refresh--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 82.3529411764706% 56.25%;
 }
 
-.rc-icon-refresh--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-refresh--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 82.3529411764706% 62.5%;
 }
 
-.rc-icon-refresh--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-refresh--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 82.3529411764706% 68.75%;
 }
 
-.rc-icon-rss--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-rss--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 82.3529411764706% 75%;
 }
 
-.rc-icon-rss--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-rss--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 82.3529411764706% 81.25%;
 }
 
-.rc-icon-rss--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-rss--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 0 87.5%;
 }
 
-.rc-icon-search--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-search--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 5.882352941176471% 87.5%;
 }
 
-.rc-icon-search--red::after,.search-bar > [type="submit"]::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-search--light::after,.button--medium[class*="icon-"].rc-icon-search,.button--small[class*="icon-"].rc-icon-search,.button--large[class*="icon-"].rc-icon-search {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 11.764705882352942% 87.5%;
 }
 
-.rc-icon-search--white::after,.button--medium[class*="icon-"].rc-icon-search,.button--small[class*="icon-"].rc-icon-search,.button--large[class*="icon-"].rc-icon-search {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-search--red::after,.search-bar > [type="submit"]::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 17.647058823529413% 87.5%;
 }
 
-.rc-icon-settings--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-settings--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 23.529411764705884% 87.5%;
 }
 
-.rc-icon-settings--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-settings--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 29.41176470588235% 87.5%;
 }
 
-.rc-icon-settings--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-settings--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 35.294117647058826% 87.5%;
 }
 
-.rc-icon-share--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-share--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 41.1764705882353% 87.5%;
 }
 
-.rc-icon-share--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-share--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 47.05882352941177% 87.5%;
 }
 
-.rc-icon-share--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-share--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 52.94117647058823% 87.5%;
 }
 
-.rc-icon-shelter--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-shelter--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 58.8235294117647% 87.5%;
 }
 
-.rc-icon-shelter--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-shelter--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 64.70588235294117% 87.5%;
 }
 
-.rc-icon-shelter--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-shelter--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 70.58823529411765% 87.5%;
 }
 
-.rc-icon-shop--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-shop--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 76.47058823529412% 87.5%;
 }
 
-.rc-icon-shop--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-shop--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 82.3529411764706% 87.5%;
 }
 
-.rc-icon-shop--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-shop--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 88.23529411764706% 0;
 }
 
-.rc-icon-sustainable-development--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-sustainable-development--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 88.23529411764706% 6.25%;
 }
 
-.rc-icon-sustainable-development--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-sustainable-development--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 88.23529411764706% 12.5%;
 }
 
-.rc-icon-sustainable-development--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-sustainable-development--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 88.23529411764706% 18.75%;
 }
 
-.rc-icon-text--decrease--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-text--decrease--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 88.23529411764706% 25%;
 }
 
-.rc-icon-text--decrease--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-text--decrease--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 88.23529411764706% 31.25%;
 }
 
-.rc-icon-text--decrease--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-text--decrease--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 88.23529411764706% 37.5%;
 }
 
-.rc-icon-text--increase--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-text--increase--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 88.23529411764706% 43.75%;
 }
 
-.rc-icon-text--increase--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-text--increase--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 88.23529411764706% 50%;
 }
 
-.rc-icon-text--increase--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-text--increase--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 88.23529411764706% 56.25%;
 }
 
-.rc-icon-toggle--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-toggle--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 88.23529411764706% 62.5%;
 }
 
-.rc-icon-toggle--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-toggle--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 88.23529411764706% 68.75%;
 }
 
-.rc-icon-toggle--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-toggle--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 88.23529411764706% 75%;
 }
 
-.rc-icon-twitter--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-twitter--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 88.23529411764706% 81.25%;
 }
 
-.rc-icon-twitter--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-twitter--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 88.23529411764706% 87.5%;
 }
 
-.rc-icon-twitter--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-twitter--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 0 93.75%;
 }
 
-.rc-icon-unlock--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-unlock--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 5.882352941176471% 93.75%;
 }
 
-.rc-icon-unlock--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-unlock--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 11.764705882352942% 93.75%;
 }
 
-.rc-icon-unlock--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-unlock--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 17.647058823529413% 93.75%;
 }
 
-.rc-icon-user--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-user--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 23.529411764705884% 93.75%;
 }
 
-.rc-icon-user--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-user--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 29.41176470588235% 93.75%;
 }
 
-.rc-icon-user--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-user--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 35.294117647058826% 93.75%;
 }
 
-.rc-icon-user-add--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-user-add--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 41.1764705882353% 93.75%;
 }
 
-.rc-icon-user-add--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-user-add--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 47.05882352941177% 93.75%;
 }
 
-.rc-icon-user-add--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-user-add--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 52.94117647058823% 93.75%;
 }
 
-.rc-icon-vet--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-vet--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 58.8235294117647% 93.75%;
 }
 
-.rc-icon-vet--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-vet--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 64.70588235294117% 93.75%;
 }
 
-.rc-icon-vet--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-vet--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 70.58823529411765% 93.75%;
 }
 
-.rc-icon-vet-v2--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-vet-v2--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 76.47058823529412% 93.75%;
 }
 
-.rc-icon-vet-v2--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-vet-v2--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 82.3529411764706% 93.75%;
 }
 
-.rc-icon-vet-v2--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-vet-v2--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 88.23529411764706% 93.75%;
 }
 
-.rc-icon-video--back--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-video--back--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 94.11764705882354% 0;
 }
 
-.rc-icon-video--back--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-video--back--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 94.11764705882354% 6.25%;
 }
 
-.rc-icon-video--back--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-video--back--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 94.11764705882354% 12.5%;
 }
 
-.rc-icon-video--collapse--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-video--collapse--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 94.11764705882354% 18.75%;
 }
 
-.rc-icon-video--collapse--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-video--collapse--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 94.11764705882354% 25%;
 }
 
-.rc-icon-video--collapse--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-video--collapse--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 94.11764705882354% 31.25%;
 }
 
-.rc-icon-video--expand--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-video--expand--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 94.11764705882354% 37.5%;
 }
 
-.rc-icon-video--expand--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-video--expand--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 94.11764705882354% 43.75%;
 }
 
-.rc-icon-video--expand--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-video--expand--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 94.11764705882354% 50%;
 }
 
-.rc-icon-video--fast-forward--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-video--fast-forward--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 94.11764705882354% 56.25%;
 }
 
-.rc-icon-video--fast-forward--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-video--fast-forward--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 94.11764705882354% 62.5%;
 }
 
-.rc-icon-video--fast-forward--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-video--fast-forward--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 94.11764705882354% 68.75%;
 }
 
-.rc-icon-video--pause--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-video--pause--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 94.11764705882354% 75%;
 }
 
-.rc-icon-video--pause--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-video--pause--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 94.11764705882354% 81.25%;
 }
 
-.rc-icon-video--pause--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-video--pause--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 94.11764705882354% 87.5%;
 }
 
-.rc-icon-video--play--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-video--play--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 94.11764705882354% 93.75%;
 }
 
-.rc-icon-video--play--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-video--play--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 0 100%;
 }
 
-.rc-icon-video--play--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-video--play--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 5.882352941176471% 100%;
 }
 
-.rc-icon-video--rewind--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-video--rewind--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 11.764705882352942% 100%;
 }
 
-.rc-icon-video--rewind--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-video--rewind--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 17.647058823529413% 100%;
 }
 
-.rc-icon-video--rewind--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-video--rewind--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 23.529411764705884% 100%;
 }
 
-.rc-icon-video--skip--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-video--skip--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 29.41176470588235% 100%;
 }
 
-.rc-icon-video--skip--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-video--skip--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 35.294117647058826% 100%;
 }
 
-.rc-icon-video--skip--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-video--skip--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 41.1764705882353% 100%;
 }
 
-.rc-icon-video--stop--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-video--stop--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 47.05882352941177% 100%;
 }
 
-.rc-icon-video--stop--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-video--stop--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 52.94117647058823% 100%;
 }
 
-.rc-icon-video--stop--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-video--stop--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 58.8235294117647% 100%;
 }
 
-.rc-icon-video--volume--off--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-video--volume--off--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 64.70588235294117% 100%;
 }
 
-.rc-icon-video--volume--off--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-video--volume--off--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 70.58823529411765% 100%;
 }
 
-.rc-icon-video--volume--off--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-video--volume--off--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 76.47058823529412% 100%;
 }
 
-.rc-icon-video--volume--on--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-video--volume--on--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 82.3529411764706% 100%;
 }
 
-.rc-icon-video--volume--on--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-video--volume--on--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 88.23529411764706% 100%;
 }
 
-.rc-icon-video--volume--on--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-video--volume--on--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 94.11764705882354% 100%;
 }
 
-.rc-icon-view--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-view--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 100% 0;
 }
 
-.rc-icon-view--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-view--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 100% 6.25%;
 }
 
-.rc-icon-view--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-view--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 100% 12.5%;
 }
 
-.rc-icon-volume--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-volume--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 100% 18.75%;
 }
 
-.rc-icon-volume--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-volume--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 100% 25%;
 }
 
-.rc-icon-volume--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-volume--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 100% 31.25%;
 }
 
-.rc-icon-weight--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-weight--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 100% 37.5%;
 }
 
-.rc-icon-weight--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-weight--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 100% 43.75%;
 }
 
-.rc-icon-weight--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-weight--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 100% 50%;
 }
 
-.rc-icon-youtube--black::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-youtube--dark::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 100% 56.25%;
 }
 
-.rc-icon-youtube--red::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-youtube--light::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 100% 62.5%;
 }
 
-.rc-icon-youtube--white::after {
-  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=1-3-3");
+.rc-icon-youtube--red::after {
+  background-image: url("royal-canin.sprite.svg");
   background-position: 100% 68.75%;
 }
 
@@ -3413,11 +3413,11 @@ body {
 }
 
 [class^="rc-icon-"].small {
-  transform: scale(1);
+  transform: scale(0.5);
 }
 
 [class^="rc-icon-"] {
-  transform: scale(2);
+  transform: scale(1);
   height: 32px;
   width: 32px;
   position: relative;
@@ -3426,10 +3426,10 @@ body {
 }
 
 [class^="rc-icon-"].large {
-  transform: scale(4);
+  transform: scale(2);
 }
 
-.breadcrumb__list-item > a::after,.button--functional::after,.button--functional--loading::after,.button--functional--success::after,.button--functional--fail::after,.button--medium[class*="icon-"].rc-icon-check,.button--small[class*="icon-"].rc-icon-check,.button--large[class*="icon-"].rc-icon-check,.button--medium[class*="icon-"].rc-icon-arrow-right,.button--small[class*="icon-"].rc-icon-arrow-right,.button--large[class*="icon-"].rc-icon-arrow-right,.button--medium[class*="icon-"].rc-icon-search,.button--small[class*="icon-"].rc-icon-search,.button--large[class*="icon-"].rc-icon-search,.navigation--prev::after,.navigation--round--next::after,.navigation--next::after,.navigation--round--prev::after,.response--affirmative::after,.response--negative::after,[data-controls] .navigation--prev::after,[data-controls] .navigation--next::after,.rc-navigation--footer .rc-navigation__link::after {
+.breadcrumb__list-item > a::after,.button--functional::after,.button--functional--loading::after,.button--functional--success::after,.button--functional--fail::after,.button--medium[class*="icon-"].rc-icon-check,.button--small[class*="icon-"].rc-icon-check,.button--large[class*="icon-"].rc-icon-check,.button--medium[class*="icon-"].rc-icon-arrow-right,.button--small[class*="icon-"].rc-icon-arrow-right,.button--large[class*="icon-"].rc-icon-arrow-right,.button--medium[class*="icon-"].rc-icon-search,.button--small[class*="icon-"].rc-icon-search,.button--large[class*="icon-"].rc-icon-search,.navigation--prev::after,.navigation--round--next::after,.navigation--next::after,.navigation--round--prev::after,.response--affirmative::after,.response--negative::after,.search-bar > [type="search"]:focus ~ [aria-label="Close"]::after,.search-bar > [aria-label="Close"]::after,.search-bar > [type="submit"]::after,[data-controls] .navigation--prev::after,[data-controls] .navigation--next::after,.rc-navigation--footer .rc-navigation__link::after {
   content: '';
   display: block;
   background-repeat: no-repeat;
