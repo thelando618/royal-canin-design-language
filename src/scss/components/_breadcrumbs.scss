@@ -14,16 +14,17 @@
 
   & > a {
     // ToDo: switch to grey icon.
-    @extend .rc-icon-chevron--right--white;
     position: relative;
     padding-right: 1.25rem;
 
     &::after {
-      transform: scale(0.25) translateY(8px);
+      @extend %extend-icon-base;
+      @extend .rc-icon-chevron--right--white::after;
       transform-origin: 100% 0;
       position: absolute;
       right: -0.5rem;
-      top: 0;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 
@@ -33,7 +34,7 @@
 }
 
 .breadcrumb__link.logo--badge__wrapper::after {
-  transform: scale(0.25) translateY(15px);
+  transform: translate(6px, -42%);
 }
 
 .breadcrumb__link {

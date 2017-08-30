@@ -44,21 +44,18 @@ $social-color-youtube: #CD201F;
   width: 50px;
   height: 50px;
   border-radius: 100%;
-  transform: scale(0.8);
   transition: background-color .2s ease-in-out;
 
   &::after {
-    height: 65px;
-    width: 65px;
     position: absolute;
-    top: .75rem;
-    left: .75rem;
-    transform: scale(0.4);
     transform-origin: 0 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   &:hover {
-      transform: scale( 0.9 );
+      transform: scale( 1.1 );
   }
 }
 
