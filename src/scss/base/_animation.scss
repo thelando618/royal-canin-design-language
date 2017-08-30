@@ -1,36 +1,47 @@
 // ToDo: this could/should be turned into a mixin.
 @keyframes steady-spin {
   0% {
-    transform: rotate(0deg) scale(0.2);
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg) scale(0.2);
+    transform: rotate(360deg);
   }
 }
 
-@keyframes steady-spin-small {
-  0% {
-    transform: rotate(0deg) scale(0.3);
-  }
-  100% {
-    transform: rotate(360deg) scale(0.3);
-  }
-}
 
 @keyframes steady-spin-medium {
   0% {
-    transform: rotate(0deg) scale(0.4);
+    transform: rotate(0deg) scale(2);
   }
   100% {
-    transform: rotate(360deg) scale(0.4);
+    transform: rotate(360deg) scale(2);
   }
 }
 
 @keyframes steady-spin-large {
   0% {
-    transform: rotate(0deg) scale(0.55);
+    transform: rotate(0deg) scale(4);
   }
   100% {
-    transform: rotate(360deg) scale(0.55);
+    transform: rotate(360deg) scale(4);
+  }
+}
+
+@mixin generateAnimation($animate, $transform, $transformPlusValue) {
+  @if $animate == steady-spin {
+    @keyframes steady-spin-#{$transform} {
+      0% {
+        transform: rotate(0deg) $transformPlusValue;
+      }
+      100% {
+        transform: rotate(360deg) $transformPlusValue;
+      }
+    }
+  }
+}
+
+@function animatePlusTransform($animate, $settings, $transform, $transformPlusValue) {
+  @if $animate == steady-spin {
+    @return steady-spin-#{$transform} $settings;
   }
 }
