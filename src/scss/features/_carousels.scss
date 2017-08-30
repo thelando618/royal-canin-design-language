@@ -259,9 +259,8 @@ video.hero__bg {
   height: 50px;
   z-index: 99;
   top: 50%;
-  margin-top: -32px;
+  margin-top: -16px;
   cursor: pointer;
-  transform: scale(0.6);
 
   & .navigation--prev,
   & .navigation--next {
@@ -280,11 +279,11 @@ video.hero__bg {
 }
 
 [data-controls="prev"] {
-  left: -10px;
+  left: 0;
 }
 
 [data-controls="next"] {
-  right: -10px;
+  right: 0;
 }
 
 [data-tns-role="nav"] {
