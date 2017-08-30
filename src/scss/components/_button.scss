@@ -142,7 +142,7 @@ $icons: ('icon-arrow--right');
 @each $icon in $icons {
   [class*="button--secondary"].rc-#{$icon}--red::after:hover,
   [class*="button--secondary"].rc-#{$icon}--red::after:focus {
-    @extend .rc-#{$icon}--white::after;
+    @extend .rc-#{$icon}--light::after;
   }
 }
 
@@ -202,7 +202,7 @@ $variants: ('large', 'medium', 'small');
 
   &::after {
     @extend %extend-icon-base;
-    @extend .rc-icon-arrow--right--white::after;
+    @extend .rc-icon-arrow--right--light::after;
   }
 
   &:hover,
@@ -228,7 +228,7 @@ $variants: ('large', 'medium', 'small');
     right: 20px;
     transform-origin: 46% 0%;
     @extend %extend-icon-base;
-    @extend .rc-icon-loader--white::after;
+    @extend .rc-icon-loader--light::after;
     animation: animatePlusTransform(steady-spin, 1s infinite linear, translateY, translateY(-50%));
 
     .no-cssanimations & {
@@ -261,7 +261,7 @@ $variants: ('large', 'medium', 'small');
 
   &::after {
     @extend %extend-icon-base;
-    @extend .rc-icon-check--white::after;
+    @extend .rc-icon-check--light::after;
   }
 }
 
@@ -277,7 +277,7 @@ $variants: ('large', 'medium', 'small');
 
   &::after {
     @extend %extend-icon-base;
-    @extend .rc-icon-cross--white::after;
+    @extend .rc-icon-cross--light::after;
   }
 }
 
@@ -335,16 +335,16 @@ $variants: ('large', 'medium', 'small');
 
   &.rc-icon-check {
     @extend %extend-icon-base;
-    @extend .rc-icon-check--white::after;
+    @extend .rc-icon-check--light::after;
   }
 
   &.rc-icon-arrow-right {
     @extend %extend-icon-base;
-    @extend .rc-icon-arrow--right--white::after;
+    @extend .rc-icon-arrow--right--light::after;
   }
 
   &.rc-icon-search {
     @extend %extend-icon-base;
-    @extend .rc-icon-search--white::after;
+    @extend .rc-icon-search--light::after;
   }
 }
