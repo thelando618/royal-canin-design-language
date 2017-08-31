@@ -331,19 +331,18 @@ input:required, textarea:required, select:required, input:required:required {
 
 [role="listbox"].choices::after {
   @extend .rc-icon-chevron--heavy--down--red;
-  height: 64px;
-  width: 64px;
+  height: 32px;
+  width: 32px;
   border: none;
-  transform: scale(0.4);
-  top: -.5em;
-  right: -.5em;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1rem;
   position: absolute;
   cursor: pointer;
 }
 
 [role="listbox"].choices.is-focused::after {
-  transform: scale(0.4) rotate(180deg);
-  top: -.25em;
+  transform: translateY(-50%) rotate(180deg);
 }
 
 [role="listbox"].choices .choices__item--selectable.is-highlighted {

@@ -19,7 +19,7 @@
 
     &::after {
       @extend %extend-icon-base;
-      @extend .rc-icon-chevron--right--white::after;
+      @extend .rc-icon-chevron--right--light::after;
       transform-origin: 100% 0;
       position: absolute;
       right: -0.5rem;

@@ -118,7 +118,7 @@
 
   &::after {
     @extend %extend-icon-base;
-    @extend .rc-icon-chevron--left--white::after;
+    @extend .rc-icon-chevron--left--light::after;
   }
 
 }
@@ -128,7 +128,7 @@
 
   &::after {
     @extend %extend-icon-base;
-    @extend .rc-icon-chevron--right--white::after;
+    @extend .rc-icon-chevron--right--light::after;
   }
 }
 

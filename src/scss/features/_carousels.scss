@@ -269,7 +269,7 @@ video.hero__bg {
 
     &::after {
       @extend %extend-icon-base;
-      @extend .rc-icon-chevron--left--white::after;
+      @extend .rc-icon-chevron--left--light::after;
     }
   }
 
