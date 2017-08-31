@@ -17,9 +17,13 @@
     }
 
     &:focus ~ [aria-label="Close"] {
-      @extend .rc-icon-loader--black;
       transform: scale(2) translateY(-23%);
       pointer-events: none;
+
+      &::after {
+        @extend %extend-icon-base;
+        @extend .rc-icon-loader--dark::after;
+      }
     }
 
     &:focus ~ [aria-label="Close"]::after {
@@ -47,13 +51,18 @@
   }
 
   & > [aria-label="Close"] {
-    @extend .rc-icon-cross--black;
     left: auto;
     right: .5rem;
+
+    &::after {
+      @extend %extend-icon-base;
+      @extend .rc-icon-cross--dark::after;
+    }
   }
 
-  & > [type="submit"] {
-    @extend .rc-icon-search--red;
+  & > [type="submit"]::after {
+    @extend %extend-icon-base;
+    @extend .rc-icon-search--red::after;
   }
 
   & > label::before {

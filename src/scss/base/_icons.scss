@@ -1,9 +1,9 @@
 [class^="rc-icon-"].small {
-  transform: scale(1);
+  transform: scale(0.5);
 }
 
 [class^="rc-icon-"] {
-  transform: scale(2);
+  transform: scale(1);
   height: 32px;
   width: 32px;
   position: relative;
@@ -12,7 +12,7 @@
 }
 
 [class^="rc-icon-"].large {
-  transform: scale(4);
+  transform: scale(2);
 }
 
 %extend-icon-base {
