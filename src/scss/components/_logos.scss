@@ -8,6 +8,7 @@
   bottom:0;
   right:0;
 }
+
 .logo-svg {
   width: 100%;
   height: auto;
@@ -61,7 +62,7 @@ $logo--primary-height--small: 50px;
   & .logo-svg {
     position: relative;
     left: -2px;
-    top: 2px;
+    top: -14px;
   }
 
   & .logo--crown {
