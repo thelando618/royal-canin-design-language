@@ -1,0 +1,104 @@
+.layout-container {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.layout-container .rc-column {
+  padding: 12px;
+  padding-bottom: 0;
+  text-align: left;
+  display: inline-block;
+  width: 100%;
+
+  &:last-child {
+    padding-bottom: 12px;
+  }
+}
+
+@media (get-breakpoint('med')) {
+
+  .layout-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .layout-container .rc-column {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    display: inline-block;
+    padding: 12px;
+  }
+
+  .rc-column {
+    .single-column & {
+      width: 100%;
+    }
+
+    .two-column & {
+      width: 49.8%;
+    }
+
+    .three-column & {
+      width: 33%;
+    }
+
+    .three-column &.double-width  {
+      width: 66%;
+    }
+
+    .four-column & {
+      width: 24%;
+    }
+
+    .four-column &.double-width {
+      width: 48%;
+    }
+
+    .five-column & {
+      width: 19%;
+    }
+
+    .five-column &.double-width {
+      width: 38%;
+    }
+
+    .five-column &.triple-width {
+      width: 57%;
+    }
+
+    .five-column &.quad-width {
+      width: 78%;
+    }
+
+    .three-column &.double-width  {
+      width: 66%;
+    }
+  }
+
+  .layout-container {
+    .double-width {
+      flex-grow: 2;
+      flex-shrink: 2;
+      flex-basis: 22px;
+    }
+
+    .triple-width {
+      flex-grow: 3;
+      flex-shrink: 3;
+      flex-basis: 66px;
+    }
+
+    .quad-width {
+      flex-grow: 4;
+      flex-shrink: 4;
+      flex-basis: 88px;
+    }
+  }
+
+  .reverse-layout {
+    flex-direction: row-reverse;
+  }
+}
