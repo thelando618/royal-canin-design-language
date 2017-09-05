@@ -143,3 +143,17 @@ ul, ol {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 39.5' aria-labelledby='svg-arrow-down-bold' role='img'%3E %3Ctitle id='svg-arrow-down-bold' lang='en'%3Earrow-down-bold%3C/title%3E %3Cpath d='M32 39.5h-.1c-1.9 0-3.7-.8-5.1-2.2L2.2 12.7C-.7 9.8-.7 5.1 2.2 2.1c2.9-2.9 7.6-2.9 10.6 0L32 21.4 51.3 2.2c2.9-2.9 7.6-2.9 10.6 0C63.3 3.6 64 5.6 64 7.5s-.7 3.8-2.2 5.3L37.3 37.3c-1.4 1.4-3.3 2.1-5.1 2.2H32z'%3E%3C/path%3E %3C/svg%3E");
   }
 }
+
+.list--icon  {
+  position: relative;
+
+  & > a {
+    line-height: 32px;
+  }
+
+  &::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}

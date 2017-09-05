@@ -218,3 +218,10 @@ $navigation-width: 240px;
   margin-left: auto;
   margin-right: auto;
 }
+
+
+.text-column-padding-right {
+  @media (get-breakpoint('large')) {
+    padding-right: get-spacer('medium');
+  }
+}

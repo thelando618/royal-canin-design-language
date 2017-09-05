@@ -78,28 +78,11 @@
     .button__value {
       display: none;
     }
-
-    svg {
-      margin: 0 auto;
-    }
   }
 
   .rc-tabs__triggers__trigger {
     padding: .75em 1em;
     border-bottom: none;
-
-    svg {
-      fill: colour('brand', 'medium-grey');
-    }
-
-    &.active {
-      background-color: colour('brand', 'white');
-      border-bottom: none;
-
-      svg {
-        fill: colour('brand', 'red');
-      }
-    }
   }
 
   .no-flexbox & {
@@ -121,12 +104,23 @@
 .rc-tabs__controller {
   background-color: transparent;
   color: colour('functional' , 'text');
-
+  border-radius: 0;
 
   &:hover,
   &:focus {
     background-color: transparent;
     color: colour('functional' , 'text');
+  }
+
+  &[aria-selected="true"]::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: colour('brand', 'red');
   }
 }
 

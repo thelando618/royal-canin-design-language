@@ -63,6 +63,9 @@
   & > [type="submit"]::after {
     @extend %extend-icon-base;
     @extend .rc-icon-search--red::after;
+    // This is overridden to stop the top of the icon being clipped.
+    // ToDo: Investigate why clipping occurs.
+    height: 33px;
   }
 
   & > label::before {

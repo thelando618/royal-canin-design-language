@@ -38,6 +38,10 @@
     & > a {
       color: colour('brand', 'white');
     }
+
+    & .alert__close > .rc-icon-cross--light {
+      transform-origin: 16% 42%;
+    }
   }
 
   // @todo make this into a variable?
@@ -49,7 +53,9 @@
 
 .alert__close {
   position: absolute;
-  right: .5em;
+  right: 1em;
   top: 50%;
   transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
 }
