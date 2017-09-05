@@ -73,8 +73,7 @@ module.exports = function (task, gulp, sitesettings, need, taskObj) {
           fs.emptyDirSync(rawFlagPath + '/svgo');
 
           // Create the flag sprite map.
-          gulp.src(`${rawFlagPath}/svg/*.svg`)
-          // return gulp.src(path.join(__dirname, '../../', `${rawFlagPath}/svg/*`))
+          return gulp.src(`${rawFlagPath}/svg/*.svg`)
             .pipe(need.svgmin())
             .pipe(plumber())
             .pipe(need.svgSprite(flagConfig))
@@ -84,8 +83,9 @@ module.exports = function (task, gulp, sitesettings, need, taskObj) {
             .pipe(gulp.dest('./dist'))
             .on('end', function () {
               console.log('Finished creating flag sprite.');
+              done();
 
-              gulp.src(path.join(__dirname, '../../dist/royal-canin.sprite--flags.svg'))
+              return gulp.src(path.join(__dirname, '../../dist/royal-canin.sprite--flags.svg'))
                 .pipe(tap(function(file, t) {
                   const filePath = file.history[0].split('/')
                   const fileName = filePath.slice(filePath.length - 1);
@@ -96,9 +96,6 @@ module.exports = function (task, gulp, sitesettings, need, taskObj) {
                     output: [ [`./${sitesettings.location['jsdest']}/${splitName[0]}.${splitName[1]}.png`, 'png', '80%'] ]
                   })
                 }))
-                .on('end', function (res) {
-                  done();
-                })
             })
         });
 
