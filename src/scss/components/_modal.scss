@@ -1,0 +1,73 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 87px;
+  left: 50%;
+  min-width: 90%;
+  max-width: 100%;
+  z-index: 12;
+  animation-direction: reverse;
+
+  transform: translateX(-50%);
+  background-color: colour('brand', 'white');
+  padding: get-spacer('small');
+
+  @media (get-breakpoint('large')) {
+    transform: translateY(-25%) translateX(-50%);
+    top: 25%;
+    min-width: 80%;
+    padding: get-spacer('medium');
+  }
+
+  @media (get-breakpoint('x-large')) {
+    min-width: 70%;
+    padding: get-spacer('large');
+  }
+
+  @media (get-breakpoint('xxx-large')) {
+    min-width: 50%;
+    padding: get-spacer('large');
+  }
+
+  & > .logo-svg {
+    width: 75px;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+  }
+
+  &.open {
+    display: block;
+    animation: fadeIn 1s;
+  }
+}
+
+.modal + .shade {
+  display: none;
+  animation: fadeIn 1s;
+  animation-direction: reverse;
+}
+
+.modal.open + .shade {
+  display: block;
+  animation: fadeIn 1s;
+}
+
+.modal__content {
+  padding: get-spacer('medium') 0;
+}
+
+.modal__title {
+  display: block;
+  text-align: center;
+}
+
+.modal__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  & > span {
+    pointer-events: none;
+  }
+}
