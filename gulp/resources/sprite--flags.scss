@@ -1,0 +1,17 @@
+[class*="rc-flags-"]::after {
+    display: inline-block;
+    background-image: url("royal-canin.sprite--flags.png");
+    background-repeat: no-repeat;
+    content: '';
+    height: 60px;
+    width: 64px;
+}
+
+{{#shapes}}{{#selector.shape}}{{expression}}{{^last}},
+{{/last}}{{/selector.shape}} {
+  &::after {
+    background-image: url("royal-canin.sprite--flags.png");
+	background-position: {{position.relative.xy}};
+  }
+}
+{{/shapes}}
