@@ -53,7 +53,6 @@ $hero-bp-large: 1000px;
 }
 
 .hero__fg {
-  @include container( 1000px );
   position: relative;
   z-index: 5;
   overflow: hidden;

@@ -3676,11 +3676,11 @@ RCWDL.utilities.triggerAndTargetClassModifier = {
     else {
       if (targetNodes.length > 0) {
         for (var b = 0; b < (targetNodes.length); b++) {
-          targetNodes[b].addEventListener(event, function (event) { RCWDL.utilities.triggerAndTargetClassModifier.action(event.target, target, modifier, depth); });
+          targetNodes[b].addEventListener(event, function (event) { RCWDL.utilities.triggerAndTargetClassModifier.action(event.currentTarget, target, modifier, depth); });
         }
       }
       else {
-        targetNodes.addEventListener(event, function (event) { RCWDL.utilities.triggerAndTargetClassModifier.action(event.target, target, modifier, depth); });
+        targetNodes.addEventListener(event, function (event) { RCWDL.utilities.triggerAndTargetClassModifier.action(event.currentTarget, target, modifier, depth); });
       }
     }
   },

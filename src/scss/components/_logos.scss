@@ -15,10 +15,16 @@
   right: auto;
   margin: 0;
   text-align: center;
+  pointer-events: none;
 
   & switch {
     display: inline-block;
   }
+}
+
+.svg-wrapper-link {
+  display: block;
+  position: relative;
 }
 
 //.hide-me-from-older-browsers {

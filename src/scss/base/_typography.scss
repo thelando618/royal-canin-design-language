@@ -95,11 +95,18 @@ p {
   line-height: 1.5;
 }
 
-blockquote {
+q {
+  font-size: 1.25em;
+  font-style: italic;
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+blockquote, q {
   border-left: 3px solid colour('brand', 'red');
   margin-left: 0;
-  padding-left: 2em;
+  padding: 2em;
   line-height: 140%;
+  display: block;
 
   & > p {
     color: colour('functional', 'text');

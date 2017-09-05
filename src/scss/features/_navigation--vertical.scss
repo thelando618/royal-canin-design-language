@@ -191,7 +191,7 @@
   @extend .rc-icon-chevron--down--red;
 
   &::after {
-    transform: rotate(180deg);
+    transform: rotate(180deg) scale(0.5);
     opacity: 0;
     transition: transform .5s ease, opacity .3s ease;
     content: '';
@@ -210,7 +210,7 @@
   font-weight: 500;
 
   .section > &::after {
-    transform: rotate(0);
+    transform: rotate(0) scale(0.5);
     opacity: 1;
   }
 }

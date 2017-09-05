@@ -1,42 +1,50 @@
-.rc-grid {
-	@include container( 1440px );
-    margin-left: - gutter( 22 );
-    margin-right: - gutter( 22 );
-
-	.rc-col {
-		margin-bottom: gutter( 11 );
-	}
-}
 @media (get-breakpoint('small')) {
+
+  %col-settings {
+    padding: 6px;
+    float: left;
+  }
+
+  .rc-grid {
+    margin: 0 -6px;
+  }
+
   .rc-col--20 {
-    @include span(2.4 of 12 split);
+    width: (2.4 / 12) * 100%;
+    @extend %col-settings;
   }
 
   .rc-col--25 {
-    @include span(3 of 12 split);
+    width: (3 / 12) * 100%;
+    @extend %col-settings;
   }
 
   .rc-col--33 {
-    @include span(4 of 12 split);
+    width: (4 / 12) * 100%;
+    @extend %col-settings;
   }
 
   .rc-col--50 {
-    @include span(6 of 12 split);
+    width: (6 / 12) * 100%;
+    @extend %col-settings;
   }
 
   .rc-col--66 {
-    @include span(8 of 12 split);
+    width: (8 / 12) * 100%;
+    @extend %col-settings;
   }
 
   .rc-col--75 {
-    @include span(9 of 12 split);
+    width: (9 / 12) * 100%;
+    @extend %col-settings;
   }
 
   .rc-col--80 {
-    @include span(9.6 of 12 split);
+    width: (9.6 / 12) * 100%;
+    @extend %col-settings;
   }
 
   .rc-col--100 {
-    @include span(12 of 12 split);
+    width: 100%;
   }
 }
