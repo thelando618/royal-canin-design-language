@@ -1,0 +1,86 @@
+.language-selector__item {
+  line-height: 35px;
+  list-style: none;
+  float: left;
+  text-align: left;
+  padding-left: 40px;
+  margin-bottom: 1rem;
+  width: 50%;
+
+  @media (get-breakpoint('med')) {
+    width: 20%;
+  }
+}
+
+.language-selector__link {
+  cursor: pointer;
+}
+
+.language-selector__country-name {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  line-height: 120%;
+}
+
+.language-selector.rc-tabs {
+  max-width: 99999px;
+
+  & .rc-tabs__content__single,
+  & .rc-tabs__content {
+    padding: 0;
+  }
+}
+
+.language-selector .rc-tabs__controller {
+  text-align: center;
+  padding: 1rem;
+}
+
+.language-selector__tooltip {
+  padding: 1rem 2rem 1rem 1rem;
+
+  & > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  & ul > li > a {
+    text-decoration: none;
+    color: colour('functional', 'text');
+  }
+}
+
+.region-holder {
+  display: block;
+  height: 100px;
+  width: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  &.africa {
+    background-image: url("africa.png");
+  }
+
+  &.asia {
+    background-image: url("asia.png");
+  }
+
+  &.europe {
+    background-image: url("europe.png");
+  }
+
+  &.north-america {
+    background-image: url("north-america.png");
+  }
+
+  &.oceania {
+    background-image: url("oceania.png");
+  }
+
+  &.south-america {
+    background-image: url("south-america.png");
+  }
+}

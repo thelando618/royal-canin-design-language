@@ -1,0 +1,11 @@
+.flag--round {
+  @extend %round-image;
+  height: 60px;
+  width: 58px;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  border: 1px solid colour('brand', 'medium-grey');
+}

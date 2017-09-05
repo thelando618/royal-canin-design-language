@@ -17,7 +17,8 @@
     }
 
     &:focus ~ [aria-label="Close"] {
-      transform: scale(2) translateY(-23%);
+      transform: translateY(-50%);
+      top: 50%;
       pointer-events: none;
 
       &::after {
@@ -29,7 +30,7 @@
     &:focus ~ [aria-label="Close"]::after {
         top: -2em;
         right: -10px;
-        transform-origin: 50% 50%;
+        transform-origin: 46% 50%;
         animation: steady-spin 1s infinite linear;
 
         .no-cssanimations & {
@@ -40,19 +41,18 @@
 
   & > button {
     position: absolute;
-    left: .5rem;
+    left: 1rem;
     top: 50%;
     transform: translateY(-50%);
 
     &::after {
-      transform: scale(.5);
       transform-origin: 50% 50%;
     }
   }
 
   & > [aria-label="Close"] {
     left: auto;
-    right: .5rem;
+    right: 1rem;
 
     &::after {
       @extend %extend-icon-base;
@@ -63,6 +63,9 @@
   & > [type="submit"]::after {
     @extend %extend-icon-base;
     @extend .rc-icon-search--red::after;
+    // This is overridden to stop the top of the icon being clipped.
+    // ToDo: Investigate why clipping occurs.
+    height: 33px;
   }
 
   & > label::before {

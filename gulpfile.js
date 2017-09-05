@@ -1,6 +1,6 @@
 (function () {
   const gulp = require('gulp');
-  //const debug = require('gulp-debug');
+  // const debug = require('gulp-debug');
   // Use this to debug pipes.
   // .pipe(debug({title: 'Streams open :'}))
 
@@ -24,9 +24,9 @@
 // Tasks
   const tasks = {
     'dev': {
-      subtasks: ['combineMq'],
-      pretasks: ['sass', 'jsProcessing'],
-      orderedTasks: ['svgo', 'svgSprites'],
+      subtasks: ['moveAssets'],
+      pretasks: ['jsProcessing', 'sass'],
+      orderedTasks: ['svgo'],
       watch: {
         active: true,
         files: [sitesettings.watch.sass, sitesettings.watch.js]
@@ -37,9 +37,9 @@
       env: 'development'
     },
     'prepForRelease': {
-      subtasks: ['combineMq'],
+      subtasks: ['combineMq', 'moveAssets'],
       pretasks: ['sass', 'jsProcessing'],
-      orderedTasks: ['svgo', 'convertType', 'svgSprites'],
+      orderedTasks: ['svgo', 'convertType', 'svgSprites', 'flags'],
       watch: {
         active: false,
         files: [sitesettings.watch.sass, sitesettings.watch.js]
@@ -61,8 +61,8 @@
       }
     },
     'prepAssets': {
-      subtasks: [],
-      pretasks: ['svg2png'],
+      subtasks: ['moveAssets'],
+      pretasks: ['flags', 'svg2png'],
       orderedTasks: ['svgo', 'svgSprites'],
       watch: {
         active: false,

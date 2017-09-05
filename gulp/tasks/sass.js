@@ -37,7 +37,6 @@ module.exports = function (task, gulp, sitesettings, need, taskObj) {
 
   const sassOptionsMin = {
     includePaths: [
-      'node_modules/susy/sass',
       'node_modules/normalize.css',
       'node_modules/choices.js/assets/styles/scss'
     ],
@@ -77,7 +76,14 @@ module.exports = function (task, gulp, sitesettings, need, taskObj) {
         .pipe(need.gulpif(enableSassLint, need.postcss(processors, {syntax: need.syntax_scss})))
         .pipe(need.sass(sassOptions))
         .pipe(need.rename(location['cssoutput']))
+        // ToDo: Find a nicer way to replace image urls.
         .pipe(need.gulpif(env === 'production', need.replace(`url("royal-canin.sprite.svg")`, `url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=${version}")`)))
+        .pipe(need.gulpif(env === 'production', need.replace(`url("africa.png")`, `url("https://d3moonnr9fkxfg.cloudfront.net/africa.png?v=${version}")`)))
+        .pipe(need.gulpif(env === 'production', need.replace(`url("asia.png")`, `url("https://d3moonnr9fkxfg.cloudfront.net/asia.png?v=${version}")`)))
+        .pipe(need.gulpif(env === 'production', need.replace(`url("europe.png")`, `url("https://d3moonnr9fkxfg.cloudfront.net/europe.png?v=${version}")`)))
+        .pipe(need.gulpif(env === 'production', need.replace(`url("north-america.png")`, `url("https://d3moonnr9fkxfg.cloudfront.net/north-america.png?v=${version}")`)))
+        .pipe(need.gulpif(env === 'production', need.replace(`url("oceania.png")`, `url("https://d3moonnr9fkxfg.cloudfront.net/oceania.png?v=${version}")`)))
+        .pipe(need.gulpif(env === 'production', need.replace(`url("south-america.png")`, `url("https://d3moonnr9fkxfg.cloudfront.net/south-america.png?v=${version}")`)))
         .pipe(gulp.dest(location['cssdest']))
         .pipe(need.sass(sassOptionsMin))
         .pipe(need.rename(
