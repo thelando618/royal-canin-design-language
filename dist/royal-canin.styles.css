@@ -4868,7 +4868,9 @@ blockquote > p,q > p {
   display: inline-block;
   width: 35px;
   height: 35px;
-  background: center/cover no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   margin-bottom: 0;
   border-radius: 100%;
   overflow: hidden;
