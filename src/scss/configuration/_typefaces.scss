@@ -1,10 +1,9 @@
-$typeface-location: '../assets/fonts/';
             // Font name             weight     style
-$typefaces: ('DIN Pro',              300,       normal),
-            ('DIN Pro',              500,       normal),
-            ('DIN Pro',              700,       normal);
+$typefaces: ('RC TYPE',              300,       normal),
+            ('RC TYPE',              500,       normal),
+            ('RC TYPE',              700,       normal);
 
 
 
 // Font stack variable
-$font-din: "DIN Pro", 'Avenir', Helvetica, Arial, sans-serif;
+$font-din: "RC TYPE", 'Avenir', Helvetica, Arial, sans-serif;

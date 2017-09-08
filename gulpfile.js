@@ -74,8 +74,8 @@
     },
     'convertTypefaces': {
       subtasks: [],
-      pretasks: ['convertType'],
-      orderedTasks: [],
+      pretasks: ['sass'],
+      orderedTasks: ['convertType'],
       watch: {
         active: false,
         files: [sitesettings.watch.sass]
