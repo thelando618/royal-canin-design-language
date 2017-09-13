@@ -6,8 +6,7 @@ label {
 
 input,
 textarea,
-select,
-input:required {
+select {
   display: block;
   width: 100%;
   font-size: 1.125em;
@@ -27,13 +26,15 @@ input:required {
     }
   }
 
-  &.error, &:invalid {
+  &.error,
+  &:invalid {
     color: colour('brand', 'red');
     border: 1px solid colour('brand', 'red');
     background-color: transparentize( colour('brand', 'red'), .9 );
 
     & + label {
       &:after {
+        background-color: colour('brand', 'red');
         width: 100%;
       }
     }
@@ -41,7 +42,6 @@ input:required {
 
   &:required {
     background-color: transparent;
-    border-color: transparent;
   }
 }
 
@@ -55,7 +55,7 @@ input[type="reset"] {
 textarea {
   resize: vertical;
   height: 200px;
-  background: colour('brand', 'light-grey', 'light');
+  background-color: colour('tertiary', 'grey--light');
 }
 
 input[type="checkbox"],
@@ -114,7 +114,7 @@ input[type="file"] {
       border: 1px solid colour('brand', 'medium-grey');
       width: 1.5rem;
       height: 1.5rem;
-      background-color: colour('brand', 'light-grey');
+      background-color: colour('tertiary', 'grey--light');
       transition: border-color 0.2s, background-color 0.2s;
       margin-right: .5rem;
     }
@@ -158,7 +158,7 @@ input[type="file"] {
 }
 
 input:required, textarea:required, select:required, input:required:required {
-  background-color: colour('brand', 'light-grey', 'light');
+  background-color: colour('tertiary', 'grey--light');
 }
 
 
@@ -173,7 +173,7 @@ input:required, textarea:required, select:required, input:required:required {
     margin-bottom: 0;
     padding: .75em;
     box-shadow: none;
-    background: colour('brand', 'light-grey', 'light');
+    background-color: colour('tertiary', 'grey--light');
   }
 
   label,
@@ -195,13 +195,13 @@ input:required, textarea:required, select:required, input:required:required {
       left: 0;
       width: 100%;
       background-color: colour('brand', 'medium-grey');
-      height: 3px;
+      height: 2px;
       z-index: 1;
       transition: width .3s ease-in-out, background-color .2s ease-in-out;
     }
 
     &:after {
-      background-color: colour('brand', 'red');
+      background-color: colour('functional', 'functional');
       z-index: 2;
       width: 0;
     }
@@ -236,6 +236,7 @@ input:required, textarea:required, select:required, input:required:required {
 
     & + label {
       &:after {
+        background-color: colour('functional', 'functional');
         width: 100%;
       }
     }
@@ -323,7 +324,7 @@ input:required, textarea:required, select:required, input:required:required {
   cursor: pointer;
 
   & > .choices__inner {
-    background-color: white;
+    background-color: colour('tertiary', 'grey--light');
     border: none;
     border-radius: 0;
   }
@@ -372,7 +373,7 @@ input:required, textarea:required, select:required, input:required:required {
 
   & > input[type="checkbox"] + label::before {
     border: none;
-    background-color: colour('brand', 'light-grey');
+    background-color: colour('tertiary', 'grey--light');
     border-radius: 0;
     height: 2.5rem;
     width: 2.5rem;
@@ -381,7 +382,7 @@ input:required, textarea:required, select:required, input:required:required {
   }
 
   & > input[type="checkbox"]:checked + label::before {
-    background-color: colour('brand', 'light-grey');
+    background-color: colour('tertiary', 'grey--light');
   }
 }
 
