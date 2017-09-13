@@ -178,6 +178,12 @@ $navigation-width: 240px;
   transform: translateY(-50%);
 }
 
+.horizontal-align {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .center-align {
   position: absolute;
   top: 50%;
