@@ -2886,7 +2886,7 @@ template {
 .rc-icon-arrow--right--light::after, [class*="button--secondary"].rc-icon-arrow--right--red:hover::after, .card--featured > a[class*="button--secondary"]:hover::after,
 [class*="button--secondary"].rc-icon-arrow--right--red:focus::after, .card--featured > a[class*="button--secondary"]:focus::after, .button--functional::after, .button--medium[class*="icon-"].rc-icon-arrow-right,
 .button--small[class*="icon-"].rc-icon-arrow-right,
-.button--large[class*="icon-"].rc-icon-arrow-right {
+.button--large[class*="icon-"].rc-icon-arrow-right, .form--text-submit > button::after {
   background-image: url("royal-canin.sprite.svg");
   background-position: 23.529411764705884% 0;
 }
@@ -4670,6 +4670,78 @@ template {
   border-color: #e11b3f;
 }
 
+.colour-grey--light__bkgrnd {
+  background-color: #F6F6F6;
+}
+
+.colour-grey--light--dark__bkgrnd {
+  background-color: #d1d1d1;
+}
+
+.colour-grey--light--light__bkgrnd {
+  background-color: #f7f7f7;
+}
+
+.colour-grey--light__text {
+  color: #F6F6F6;
+}
+
+.colour-grey--light--dark__text {
+  color: #d1d1d1;
+}
+
+.colour-grey--light--light__text {
+  color: #f7f7f7;
+}
+
+.colour-grey--light__border {
+  border-color: #F6F6F6;
+}
+
+.colour-grey--light--dark__border {
+  border-color: #d1d1d1;
+}
+
+.colour-grey--light--light__border {
+  border-color: #f7f7f7;
+}
+
+.colour-blue--light__bkgrnd {
+  background-color: #E7F4F7;
+}
+
+.colour-blue--light--dark__bkgrnd {
+  background-color: #b1dbe5;
+}
+
+.colour-blue--light--light__bkgrnd {
+  background-color: #e9f5f8;
+}
+
+.colour-blue--light__text {
+  color: #E7F4F7;
+}
+
+.colour-blue--light--dark__text {
+  color: #b1dbe5;
+}
+
+.colour-blue--light--light__text {
+  color: #e9f5f8;
+}
+
+.colour-blue--light__border {
+  border-color: #E7F4F7;
+}
+
+.colour-blue--light--dark__border {
+  border-color: #b1dbe5;
+}
+
+.colour-blue--light--light__border {
+  border-color: #e9f5f8;
+}
+
 .rc-type--300 {
   font-family: "RC TYPE";
   font-style: normal;
@@ -4726,7 +4798,7 @@ body {
 .button--small[class*="icon-"].rc-icon-arrow-right,
 .button--large[class*="icon-"].rc-icon-arrow-right, .button--medium[class*="icon-"].rc-icon-search,
 .button--small[class*="icon-"].rc-icon-search,
-.button--large[class*="icon-"].rc-icon-search, .navigation--prev::after, .navigation--round--next::after, .navigation--next::after, .navigation--round--prev::after, .response--affirmative::after, .response--negative::after, .search-bar > [type="search"]:focus ~ [aria-label="Close"]::after, .search-bar > [aria-label="Close"]::after, .search-bar > [type="submit"]::after, [data-controls] .navigation--prev::after,
+.button--large[class*="icon-"].rc-icon-search, .navigation--prev::after, .navigation--round--next::after, .navigation--next::after, .navigation--round--prev::after, .response--affirmative::after, .response--negative::after, .form--text-submit > button::after, .search-bar > [type="search"]:focus ~ [aria-label="Close"]::after, .search-bar > [aria-label="Close"]::after, .search-bar > [type="submit"]::after, [data-controls] .navigation--prev::after,
 [data-controls] .navigation--next::after, .rc-navigation--footer .rc-navigation__link::after {
   content: '';
   display: block;
@@ -5168,6 +5240,12 @@ section {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.horizontal-align {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .center-align {
@@ -6068,8 +6146,7 @@ label {
 
 input,
 textarea,
-select,
-input:required {
+select {
   display: block;
   width: 100%;
   font-size: 1.125em;
@@ -6080,22 +6157,19 @@ input:required {
 
 input:focus,
 textarea:focus,
-select:focus,
-input:required:focus {
+select:focus {
   outline: none;
 }
 
 input:disabled,
 textarea:disabled,
-select:disabled,
-input:required:disabled {
+select:disabled {
   background-color: #8d8f91;
 }
 
 input:disabled + label,
 textarea:disabled + label,
-select:disabled + label,
-input:required:disabled + label {
+select:disabled + label {
   opacity: .3;
 }
 
@@ -6103,9 +6177,7 @@ input.error, input:invalid,
 textarea.error,
 textarea:invalid,
 select.error,
-select:invalid,
-input:required.error,
-input:required:invalid {
+select:invalid {
   color: #EC001A;
   border: 1px solid #EC001A;
   background-color: rgba(236, 0, 26, 0.1);
@@ -6115,18 +6187,15 @@ input.error + label:after, input:invalid + label:after,
 textarea.error + label:after,
 textarea:invalid + label:after,
 select.error + label:after,
-select:invalid + label:after,
-input:required.error + label:after,
-input:required:invalid + label:after {
+select:invalid + label:after {
+  background-color: #EC001A;
   width: 100%;
 }
 
 input:required,
 textarea:required,
-select:required,
-input:required:required {
+select:required {
   background-color: transparent;
-  border-color: transparent;
 }
 
 input[type="submit"],
@@ -6139,7 +6208,7 @@ input[type="reset"] {
 textarea {
   resize: vertical;
   height: 200px;
-  background: #ececec;
+  background-color: #F6F6F6;
 }
 
 input[type="checkbox"],
@@ -6193,7 +6262,7 @@ input[type="file"] {
   border: 1px solid #808285;
   width: 1.5rem;
   height: 1.5rem;
-  background-color: #EAEAEA;
+  background-color: #F6F6F6;
   transition: border-color 0.2s, background-color 0.2s;
   margin-right: .5rem;
 }
@@ -6223,7 +6292,7 @@ input[type="file"] {
 }
 
 input:required, textarea:required, select:required, input:required:required {
-  background-color: #ececec;
+  background-color: #F6F6F6;
 }
 
 .rc-input {
@@ -6238,7 +6307,7 @@ input:required, textarea:required, select:required, input:required:required {
   margin-bottom: 0;
   padding: .75em;
   box-shadow: none;
-  background: #ececec;
+  background-color: #F6F6F6;
 }
 
 .rc-input label,
@@ -6258,13 +6327,13 @@ input:required, textarea:required, select:required, input:required:required {
   left: 0;
   width: 100%;
   background-color: #808285;
-  height: 3px;
+  height: 2px;
   z-index: 1;
   transition: width .3s ease-in-out, background-color .2s ease-in-out;
 }
 
 .rc-input label:after {
-  background-color: #EC001A;
+  background-color: #5ca9ad;
   z-index: 2;
   width: 0;
 }
@@ -6293,6 +6362,7 @@ input:required, textarea:required, select:required, input:required:required {
 
 .rc-input input:focus + label:after,
 .rc-input textarea:focus + label:after {
+  background-color: #5ca9ad;
   width: 100%;
 }
 
@@ -6365,7 +6435,7 @@ input:required, textarea:required, select:required, input:required:required {
 }
 
 [role="listbox"].choices > .choices__inner {
-  background-color: white;
+  background-color: #F6F6F6;
   border: none;
   border-radius: 0;
 }
@@ -6409,7 +6479,7 @@ input:required, textarea:required, select:required, input:required:required {
 
 .featured-option > input[type="checkbox"] + label::before {
   border: none;
-  background-color: #EAEAEA;
+  background-color: #F6F6F6;
   border-radius: 0;
   height: 2.5rem;
   width: 2.5rem;
@@ -6418,7 +6488,7 @@ input:required, textarea:required, select:required, input:required:required {
 }
 
 .featured-option > input[type="checkbox"]:checked + label::before {
-  background-color: #EAEAEA;
+  background-color: #F6F6F6;
 }
 
 ::-webkit-calendar-picker-indicator {
@@ -6610,19 +6680,25 @@ input:required, textarea:required, select:required, input:required:required {
 .layout-container {
   display: inline-block;
   width: 100%;
+}
+
+.no-flexbox .layout-container {
   text-align: center;
 }
 
 .layout-container .rc-column {
   padding: 12px;
   padding-bottom: 0;
-  text-align: left;
   display: inline-block;
   width: 100%;
 }
 
 .layout-container .rc-column:last-child {
   padding-bottom: 12px;
+}
+
+.rc-column {
+  position: relative;
 }
 
 @media (min-width: 800px) {
@@ -6894,6 +6970,31 @@ ul svg, ol svg {
   visibility: visible;
   opacity: 1;
   height: auto;
+}
+
+.form--text-submit {
+  position: relative;
+  z-index: 0;
+}
+
+.form--text-submit > button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 3rem;
+  border-radius: 0;
+  margin: 0;
+  z-index: 1;
+}
+
+.form--text-submit > button::after {
+  z-index: 0;
+  right: 0.5rem;
+}
+
+.form--text-submit label {
+  z-index: 0;
 }
 
 .modal {
