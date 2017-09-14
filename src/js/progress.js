@@ -61,10 +61,10 @@ RCWDL.features.Progress = {
   },
 
   /**
-   * Demo function purely here to drive the demo on the portal. Simply aitches an
-   * event to a button to update the progress barr.
+   * Demo function purely here to drive the demo on the portal. Simply attaches an
+   * event to a button to update the progress bar.
    *
-   * @param {Node} demo
+   * @param {Node} demo Node item to add event listener to.
    */
   demo: function (demo) {
     'use strict';

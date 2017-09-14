@@ -8,8 +8,11 @@ RCWDL.utilities = {};
  *
  * @param {Object} fn
  * Function object to be executed when ready.
+ *
+ * @return {function}
+ * Returns function result.
  */
-RCWDL.ready  = function (fn) {
+RCWDL.ready = function (fn) {
   'use strict';
 
   var ready_event_fired = false;
@@ -22,7 +25,7 @@ RCWDL.ready  = function (fn) {
       }
       ready_event_fired = true;
       return fn();
-    }
+    };
 
     // The DOM ready check for Internet Explorer
     var do_scroll_check = function () {
@@ -34,44 +37,48 @@ RCWDL.ready  = function (fn) {
       // http://javascript.nwbox.com/IEContentLoaded/
       try {
         document.documentElement.doScroll('left');
-      } catch(e) {
+      }
+      catch (e) {
         setTimeout(do_scroll_check, 1);
         return;
       }
-
       // Execute any waiting functions
       return idempotent_fn();
-    }
+    };
 
     // If the browser ready event has already occured
-    if (document.readyState === "complete") {
-      return idempotent_fn()
+    if (document.readyState === 'complete') {
+      return idempotent_fn();
     }
 
     // Mozilla, Opera and webkit nightlies currently support this event
     if (document.addEventListener) {
 
       // Use the handy event callback
-      document.addEventListener("DOMContentLoaded", idempotent_fn, false);
+      document.addEventListener('DOMContentLoaded', idempotent_fn, false);
 
       // A fallback to window.onload, that will always work
-      window.addEventListener("load", idempotent_fn, false);
+      window.addEventListener('load', idempotent_fn, false);
 
       // If IE event model is used
-    } else if (document.attachEvent) {
+    }
+    else if (document.attachEvent) {
 
       // ensure firing before onload; maybe late but safe also for iframes
-      document.attachEvent("onreadystatechange", idempotent_fn);
+      document.attachEvent('onreadystatechange', idempotent_fn);
 
       // A fallback to window.onload, that will always work
-      window.attachEvent("onload", idempotent_fn);
+      window.attachEvent('onload', idempotent_fn);
 
       // If IE and not a frame: continually check to see if the document is ready
       var toplevel = false;
 
       try {
-        toplevel = window.frameElement == null;
-      } catch (e) {}
+        toplevel = window.frameElement === null;
+      }
+      catch (e) {
+        // Fall through.
+      }
 
       if (document.documentElement.doScroll && toplevel) {
         return do_scroll_check();
@@ -84,14 +91,16 @@ RCWDL.ready  = function (fn) {
 /**
  * This replaces the usual click method as IE doesn't follow every other browser that uses the MouseEvent class.
  *
- * @param htmlObject {Node} Item to trigger click event on.
+ * @param {Node} htmlObject Item to trigger click event on.
  */
 RCWDL.click = function click(htmlObject) {
+  'use strict';
   (function (window) {
     try {
       new MouseEvent('test');
       return false; // No need to polyfill
-    } catch (e) {
+    }
+    catch (e) {
       // Need to polyfill - fall through
     }
 
@@ -103,7 +112,7 @@ RCWDL.click = function click(htmlObject) {
       mouseEvent.initMouseEvent(eventType, params.bubbles, params.cancelable, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
 
       return mouseEvent;
-    }
+    };
 
     MouseEvent.prototype = Event.prototype;
 
@@ -111,9 +120,9 @@ RCWDL.click = function click(htmlObject) {
   })(window);
 
   var event = new MouseEvent('click', {
-    'view': window,
-    'bubbles': true,
-    'cancelable': true
+    view: window,
+    bubbles: true,
+    cancelable: true
   });
 
   htmlObject.dispatchEvent(event);
@@ -122,11 +131,12 @@ RCWDL.click = function click(htmlObject) {
 /**
  * Cross browser position from top function.
  *
- * @returns {Integer}
+ * @return {Integer} Pixels from the top of the page.
  */
-RCWDL.posTop = function() {
-  return typeof window.pageYOffset != 'undefined' ? window.pageYOffset: document.documentElement.scrollTop? document.documentElement.scrollTop: document.body.scrollTop? document.body.scrollTop:0;
-}
+RCWDL.posTop = function () {
+  'use strict';
+  return typeof window.pageYOffset != 'undefined' ? window.pageYOffset: document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ? document.body.scrollTop : 0;
+};
 
 /**
  * Used to add/remove classes on a target element.
@@ -159,7 +169,7 @@ RCWDL.utilities.toggleClass = function (target, className) {
       break;
 
     default:
-      throw new Error('Has Class option used with method RCWDL.utilities.toggleClass is invaild.')
+      throw new Error('Has Class option used with method RCWDL.utilities.toggleClass is invaild.');
   }
 
   // IE 8+ support.
@@ -213,7 +223,7 @@ RCWDL.utilities.triggerResize = function () {
  * @param {String} className
  * CSS class name to look for.
  *
- * @returns {boolean}
+ * @return {boolean} Returns whether the nodeItem has the supplied class.
  */
 RCWDL.utilities.hasClass = function (el, className) {
   'use strict';
@@ -282,7 +292,6 @@ RCWDL.utilities.triggerAndTargetClassModifier = {
     // Store the node in a temporary variable, which we will replace as we climb the DOM.
     var currentNode = targetNode;
     var classNoDot = modifier.replace(/^\./, '');
-    var toggle = !RCWDL.utilities.hasClass(targetNode, classNoDot) ? 'add' : 'remove';
 
     if (depth > 0) {
       for (var i = 0; i < depth; i++) {
@@ -295,18 +304,18 @@ RCWDL.utilities.triggerAndTargetClassModifier = {
         RCWDL.utilities.triggerAndTargetClassModifier.removeModifier(dataTargets[item], classNoDot);
       });
 
-      var  targets = document.querySelectorAll(target);
+      var targets = document.querySelectorAll(target);
       Object.keys(targets).forEach(function (item) {
         RCWDL.utilities.triggerAndTargetClassModifier.removeModifier(targets[item], classNoDot);
       });
 
       var childTarget = document.querySelector('[data-js-target="' + targetNode.getAttribute('data-js-trigger') + '"]');
       if (childTarget !== null) {
-        childTarget.classList[toggle](classNoDot);
+        RCWDL.utilities.toggleClass(childTarget, classNoDot);
       }
 
       // Toggle the active class on the trigger.
-      targetNode.classList[toggle](classNoDot);
+      RCWDL.utilities.toggleClass(targetNode, classNoDot);
     }
   },
   removeModifier: function (item, modifier) {
@@ -329,11 +338,11 @@ RCWDL.utilities.triggerAndTargetClassModifier = {
 
     if (target.siblingCheck) {
       var childTarget = currentNode.querySelector(target.targetClass);
-      childTarget.classList.toggle(modifier.replace(/^\./, ''));
+      RCWDL.utilities.toggleClass(childTarget, modifier.replace(/^\./, ''));
     }
     else {
       // Toggle the active class on the target.
-      currentNode.classList.toggle(modifier.replace(/^\./, ''));
+      RCWDL.utilities.toggleClass(currentNode, modifier.replace(/^\./, ''));
     }
     return currentNode.parentNode;
   },
