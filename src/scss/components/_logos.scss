@@ -1,14 +1,3 @@
-%svg-base {
-  min-height: 60px;
-  width:100%;
-  height:100%;
-  position:fixed;
-  top:0;
-  left:0;
-  bottom:0;
-  right:0;
-}
-
 .logo-svg {
   width: 100%;
   height: auto;
@@ -16,25 +5,11 @@
   margin: 0;
   text-align: center;
   pointer-events: none;
-
-  & switch {
-    display: inline-block;
-  }
 }
 
 .svg-wrapper-link {
   display: block;
   position: relative;
-}
-
-//.hide-me-from-older-browsers {
-//  display: none;
-//  visibility: hidden;
-//}
-
-svg|g.hide-me-from-older-browsers {
-  display: inline;
-  visibility: visible;
 }
 
 $logo--primary-width: 150px;
@@ -44,15 +19,14 @@ $logo--primary-width--small: 100px;
 $logo--primary-height--small: 50px;
 
 .logo--primary {
-  @extend %svg-base;
+  min-height: 60px;
 }
 
 .logo--secondary {
-  @extend %svg-base;
 }
 
 .logo--crown {
-  @extend %svg-base;
+  max-height: 30px;
 }
 
 
@@ -68,7 +42,7 @@ $logo--primary-height--small: 50px;
   & .logo-svg {
     position: relative;
     left: -2px;
-    top: -14px;
+    top: 1px;
   }
 
   & .logo--crown {

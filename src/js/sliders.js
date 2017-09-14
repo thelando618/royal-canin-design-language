@@ -18,9 +18,9 @@ RCWDL.features.Slider = {
     if (typeof range[0] !== 'undefined') {
       if (range.length > 0) {
 
-        range.forEach(function (item) {
+        Object.keys(range).forEach(function (item) {
           // Create Slider
-          RCWDL.features.Slider.create(item);
+          RCWDL.features.Slider.create(range[item]);
         });
       }
       else {

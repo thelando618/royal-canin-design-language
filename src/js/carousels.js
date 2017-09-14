@@ -17,8 +17,8 @@ RCWDL.features.Carousel = {
 
     if (carousels !== null && carousels.length > 0) {
       if (carousels.length > 1) {
-        carousels.forEach(function (carousel) {
-          RCWDL.features.Carousel.create(carousel);
+        Object.keys(carousels).forEach(function (carousel) {
+          RCWDL.features.Carousel.create(carousels[carousel]);
         });
       }
       else {

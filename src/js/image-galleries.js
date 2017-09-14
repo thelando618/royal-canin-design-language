@@ -9,11 +9,11 @@ RCWDL.features.ImageGallery = {
 
     var imageGalleries = document.querySelectorAll(targetClass);
 
-    if (imageGalleries !== null && imageGalleries.length > 0) {
-      if (imageGalleries.length > 1) {
-        imageGalleries.forEach(function (imageGallery) {
-          RCWDL.features.Carousel.create(imageGallery, options);
-          RCWDL.features.ImageGallery.wrapAndRemoveDots(imageGallery.parentNode.parentNode);
+    if (imageGalleries !== null && Object.keys(imageGalleries).length > 0) {
+      if (Object.keys(imageGalleries).length > 1) {
+        Object.keys(imageGalleries).forEach(function (imageGallery) {
+          RCWDL.features.Carousel.create(imageGalleries[imageGallery], options);
+          RCWDL.features.ImageGallery.wrapAndRemoveDots(imageGalleries[imageGallery].parentNode.parentNode);
         });
       }
       else {

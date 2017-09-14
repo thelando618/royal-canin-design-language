@@ -25,7 +25,7 @@ RCWDL.features.Tabs = {
 
           // fake a click on the first item.
           var defaultItem = tabsets[tabset].querySelectorAll('.rc-tabs__triggers > li:first-child a');
-          defaultItem[0].click();
+          RCWDL.click(defaultItem[0]);
         });
       }
       else {
@@ -33,7 +33,7 @@ RCWDL.features.Tabs = {
 
         // fake a click on the first item.
         var defaultItem = tabsets[0].querySelectorAll('.rc-tabs__triggers > li:first-child a');
-        defaultItem[0].click();
+        RCWDL.click(defaultItem[0]);
       }
     }
   },

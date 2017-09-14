@@ -65,3 +65,19 @@
     }
   }
 }
+
+
+$borders: ('top', 'bottom', 'left', 'right');
+
+
+@each $border in $borders {
+  .border-#{$border} {
+    border-#{$border}-style: solid;
+    border-#{$border}-width: 1px;
+  }
+}
+
+.border-all {
+  border-style: solid;
+  border-width: 1px;
+}

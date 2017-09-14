@@ -23,12 +23,12 @@ RCWDL.features.Progress = {
       RCWDL.features.Progress.demo(demo[0]);
     }
 
-    progElms.forEach(function (el) {
+    Object.keys(progElms).forEach(function (el) {
 
-      var val = el.getAttribute('value');
+      var val = progElms[el].getAttribute('value');
       var label = document.createElement('span');
 
-      label.setAttribute('id', el.getAttribute('id') + '--label');
+      label.setAttribute('id', progElms[el].getAttribute('id') + '--label');
 
       // Initial styles for label.
       label.innerHTML = val + '%';
@@ -61,10 +61,10 @@ RCWDL.features.Progress = {
   },
 
   /**
-   * Demo function purely here to drive the demo on the portal. Simply aitches an
-   * event to a button to update the progress barr.
+   * Demo function purely here to drive the demo on the portal. Simply attaches an
+   * event to a button to update the progress bar.
    *
-   * @param {Node} demo
+   * @param {Node} demo Node item to add event listener to.
    */
   demo: function (demo) {
     'use strict';
