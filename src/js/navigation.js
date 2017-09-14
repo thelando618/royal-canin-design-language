@@ -5,7 +5,9 @@ RCWDL.navigation.changeNavigationOnScroll = function () {
   if (navigationBar !== null) {
     window.addEventListener('scroll', function () {
       var navigationBar = document.querySelector('.rc-navigation__bar');
-      if (document.body.scrollTop > 100) {
+
+      console.log(RCWDL.posTop());
+      if (RCWDL.posTop() > 100) {
         navigationBar.classList.add('scrolled');
       } else {
         navigationBar.classList.remove('scrolled');
@@ -21,8 +23,8 @@ RCWDL.navigation.burgerToggle = function (triggerSelector, targetSelector) {
   var targets = document.querySelectorAll(triggerSelector);
   
   if (targets !== null) {
-    targets.forEach(function (item) {
-      item.addEventListener('click', function (e) {
+    Object.keys(targets).forEach(function (item) {
+      targets[item].addEventListener('click', function (e) {
         e.target
           .querySelector(targetSelector)
           .contentDocument

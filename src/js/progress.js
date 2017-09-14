@@ -23,12 +23,12 @@ RCWDL.features.Progress = {
       RCWDL.features.Progress.demo(demo[0]);
     }
 
-    progElms.forEach(function (el) {
+    Object.keys(progElms).forEach(function (el) {
 
-      var val = el.getAttribute('value');
+      var val = progElms[el].getAttribute('value');
       var label = document.createElement('span');
 
-      label.setAttribute('id', el.getAttribute('id') + '--label');
+      label.setAttribute('id', progElms[el].getAttribute('id') + '--label');
 
       // Initial styles for label.
       label.innerHTML = val + '%';

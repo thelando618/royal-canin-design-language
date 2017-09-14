@@ -9,16 +9,124 @@ RCWDL.utilities = {};
  * @param {Object} fn
  * Function object to be executed when ready.
  */
-RCWDL.ready = function (fn) {
+RCWDL.ready  = function (fn) {
   'use strict';
 
-  if (document.readyState !== 'loading') {
-    fn();
-  }
-  else {
-    document.addEventListener('DOMContentLoaded', fn);
-  }
+  var ready_event_fired = false;
+  var ready_event_listener = function () {
+
+    // Create an idempotent version of the 'fn' function
+    var idempotent_fn = function () {
+      if (ready_event_fired) {
+        return;
+      }
+      ready_event_fired = true;
+      return fn();
+    }
+
+    // The DOM ready check for Internet Explorer
+    var do_scroll_check = function () {
+      if (ready_event_fired) {
+        return;
+      }
+
+      // If IE is used, use the trick by Diego Perini
+      // http://javascript.nwbox.com/IEContentLoaded/
+      try {
+        document.documentElement.doScroll('left');
+      } catch(e) {
+        setTimeout(do_scroll_check, 1);
+        return;
+      }
+
+      // Execute any waiting functions
+      return idempotent_fn();
+    }
+
+    // If the browser ready event has already occured
+    if (document.readyState === "complete") {
+      return idempotent_fn()
+    }
+
+    // Mozilla, Opera and webkit nightlies currently support this event
+    if (document.addEventListener) {
+
+      // Use the handy event callback
+      document.addEventListener("DOMContentLoaded", idempotent_fn, false);
+
+      // A fallback to window.onload, that will always work
+      window.addEventListener("load", idempotent_fn, false);
+
+      // If IE event model is used
+    } else if (document.attachEvent) {
+
+      // ensure firing before onload; maybe late but safe also for iframes
+      document.attachEvent("onreadystatechange", idempotent_fn);
+
+      // A fallback to window.onload, that will always work
+      window.attachEvent("onload", idempotent_fn);
+
+      // If IE and not a frame: continually check to see if the document is ready
+      var toplevel = false;
+
+      try {
+        toplevel = window.frameElement == null;
+      } catch (e) {}
+
+      if (document.documentElement.doScroll && toplevel) {
+        return do_scroll_check();
+      }
+    }
+  };
+  return ready_event_listener;
 };
+
+/**
+ * This replaces the usual click method as IE doesn't follow every other browser that uses the MouseEvent class.
+ *
+ * @param htmlObject {Node} Item to trigger click event on.
+ */
+RCWDL.click = function click(htmlObject) {
+  (function (window) {
+    try {
+      new MouseEvent('test');
+      return false; // No need to polyfill
+    } catch (e) {
+      // Need to polyfill - fall through
+    }
+
+    // Polyfills DOM4 MouseEvent
+
+    var MouseEvent = function (eventType, params) {
+      params = params || {bubbles: false, cancelable: false};
+      var mouseEvent = document.createEvent('MouseEvent');
+      mouseEvent.initMouseEvent(eventType, params.bubbles, params.cancelable, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+
+      return mouseEvent;
+    }
+
+    MouseEvent.prototype = Event.prototype;
+
+    window.MouseEvent = MouseEvent;
+  })(window);
+
+  var event = new MouseEvent('click', {
+    'view': window,
+    'bubbles': true,
+    'cancelable': true
+  });
+
+  htmlObject.dispatchEvent(event);
+};
+
+/**
+ * Cross browser position from top function.
+ *
+ * @returns {Integer}
+ */
+RCWDL.posTop = function() {
+  return typeof window.pageYOffset != 'undefined' ? window.pageYOffset: document.documentElement.scrollTop? document.documentElement.scrollTop: document.body.scrollTop? document.body.scrollTop:0;
+}
 
 /**
  * Used to add/remove classes on a target element.
@@ -182,16 +290,20 @@ RCWDL.utilities.triggerAndTargetClassModifier = {
       }
     }
     else if (/data-js-trigger/i.test(target)) {
-      document.querySelectorAll('[data-js-target]').forEach(function (item) {
-        RCWDL.utilities.triggerAndTargetClassModifier.removeModifier(item, classNoDot);
+      var dataTargets = document.querySelectorAll('[data-js-target]');
+      Object.keys(dataTargets).forEach(function (item) {
+        RCWDL.utilities.triggerAndTargetClassModifier.removeModifier(dataTargets[item], classNoDot);
       });
 
-      document.querySelectorAll(target).forEach(function (item) {
-        RCWDL.utilities.triggerAndTargetClassModifier.removeModifier(item, classNoDot);
+      var  targets = document.querySelectorAll(target);
+      Object.keys(targets).forEach(function (item) {
+        RCWDL.utilities.triggerAndTargetClassModifier.removeModifier(targets[item], classNoDot);
       });
 
       var childTarget = document.querySelector('[data-js-target="' + targetNode.getAttribute('data-js-trigger') + '"]');
-      childTarget.classList[toggle](classNoDot);
+      if (childTarget !== null) {
+        childTarget.classList[toggle](classNoDot);
+      }
 
       // Toggle the active class on the trigger.
       targetNode.classList[toggle](classNoDot);
