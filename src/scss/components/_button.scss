@@ -137,14 +137,36 @@ button {
   @extend %button--secondary;
 }
 
-$icons: ('icon-arrow--right');
+$icons: ('icon-arrow--right', 'icon-chevron--right');
 
 @each $icon in $icons {
-  [class*="button--secondary"].rc-#{$icon}--red::after:hover,
-  [class*="button--secondary"].rc-#{$icon}--red::after:focus {
+  [class*="button"].rc-#{$icon}--red::after:hover,
+  [class*="button"].rc-#{$icon}--red::after:focus {
     @extend .rc-#{$icon}--light::after;
   }
 }
+
+@each $icon in $icons {
+  [class*="button"].rc-#{$icon}--dark::after:hover,
+  [class*="button"].rc-#{$icon}--dark::after:focus {
+    @extend .rc-#{$icon}--light::after;
+  }
+}
+
+@each $icon in $icons {
+  [class*="button"].rc-#{$icon}--light::after:hover,
+  [class*="button"].rc-#{$icon}--light::after:focus {
+    @extend .rc-#{$icon}--dark::after;
+  }
+}
+
+@each $icon in $icons {
+  [class*="button--functional"].rc-#{$icon}--light::after:hover,
+  [class*="button--functional"].rc-#{$icon}--light::after:focus {
+    @extend .rc-#{$icon}--light::after;
+  }
+}
+
 
 
 
