@@ -45,6 +45,15 @@ select {
   }
 }
 
+// ToDo: Replace with Required styling.
+input:required:invalid {
+  border: none;
+
+  & + label::after {
+    background-color: transparent;
+  }
+}
+
 input[type="submit"],
 input[type="reset"] {
   display: inline-block;
@@ -347,7 +356,7 @@ input:required, textarea:required, select:required, input:required:required {
 }
 
 [role="listbox"].choices .choices__item--selectable.is-highlighted {
-  background-color: colour('functional', 'functional');
+  background-color: colour('tertiary', 'blue--light');
 }
 
 .choices__list--multiple .choices__item {
