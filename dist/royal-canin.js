@@ -3815,11 +3815,16 @@ RCWDL.utilities.triggerAndTargetClassModifier = {
       }
     }
     else if (/data-js-trigger/i.test(target)) {
-      var dataTargets = document.querySelectorAll('[data-js-target]');
-      Object.keys(dataTargets).forEach(function (item) {
-        RCWDL.utilities.triggerAndTargetClassModifier.removeModifier(dataTargets[item], classNoDot);
-      });
 
+      if (RCWDL.utilities.hasClass(targetNode)) {
+        // Remove all the modifier classes from other toggle elements.
+        var dataTargets = document.querySelectorAll('[data-js-target=' + targetNode.getAttribute('data-js-trigger') + ']');
+        Object.keys(dataTargets).forEach(function (item) {
+          RCWDL.utilities.triggerAndTargetClassModifier.removeModifier(dataTargets[item], classNoDot); 
+        });
+      }
+
+      // Remove the modifier class from anything matching the data attribute selector.
       var targets = document.querySelectorAll(target);
       Object.keys(targets).forEach(function (item) {
         RCWDL.utilities.triggerAndTargetClassModifier.removeModifier(targets[item], classNoDot);
@@ -3829,7 +3834,8 @@ RCWDL.utilities.triggerAndTargetClassModifier = {
       if (childTarget !== null) {
         RCWDL.utilities.toggleClass(childTarget, classNoDot);
       }
-
+    }
+    else {
       // Toggle the active class on the trigger.
       RCWDL.utilities.toggleClass(targetNode, classNoDot);
     }
