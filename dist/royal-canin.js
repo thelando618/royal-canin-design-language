@@ -3524,16 +3524,134 @@ RCWDL.utilities = {};
  *
  * @param {Object} fn
  * Function object to be executed when ready.
+ *
+ * @return {function}
+ * Returns function result.
  */
 RCWDL.ready = function (fn) {
   'use strict';
 
-  if (document.readyState !== 'loading') {
-    fn();
-  }
-  else {
-    document.addEventListener('DOMContentLoaded', fn);
-  }
+  var ready_event_fired = false;
+  var ready_event_listener = function () {
+
+    // Create an idempotent version of the 'fn' function
+    var idempotent_fn = function () {
+      if (ready_event_fired) {
+        return;
+      }
+      ready_event_fired = true;
+      return fn();
+    };
+
+    // The DOM ready check for Internet Explorer
+    var do_scroll_check = function () {
+      if (ready_event_fired) {
+        return;
+      }
+
+      // If IE is used, use the trick by Diego Perini
+      // http://javascript.nwbox.com/IEContentLoaded/
+      try {
+        document.documentElement.doScroll('left');
+      }
+      catch (e) {
+        setTimeout(do_scroll_check, 1);
+        return;
+      }
+      // Execute any waiting functions
+      return idempotent_fn();
+    };
+
+    // If the browser ready event has already occured
+    if (document.readyState === 'complete') {
+      return idempotent_fn();
+    }
+
+    // Mozilla, Opera and webkit nightlies currently support this event
+    if (document.addEventListener) {
+
+      // Use the handy event callback
+      document.addEventListener('DOMContentLoaded', idempotent_fn, false);
+
+      // A fallback to window.onload, that will always work
+      window.addEventListener('load', idempotent_fn, false);
+
+      // If IE event model is used
+    }
+    else if (document.attachEvent) {
+
+      // ensure firing before onload; maybe late but safe also for iframes
+      document.attachEvent('onreadystatechange', idempotent_fn);
+
+      // A fallback to window.onload, that will always work
+      window.attachEvent('onload', idempotent_fn);
+
+      // If IE and not a frame: continually check to see if the document is ready
+      var toplevel = false;
+
+      try {
+        toplevel = window.frameElement === null;
+      }
+      catch (e) {
+        // Fall through.
+      }
+
+      if (document.documentElement.doScroll && toplevel) {
+        return do_scroll_check();
+      }
+    }
+  };
+  return ready_event_listener;
+};
+
+/**
+ * This replaces the usual click method as IE doesn't follow every other browser that uses the MouseEvent class.
+ *
+ * @param {Node} htmlObject Item to trigger click event on.
+ */
+RCWDL.click = function click(htmlObject) {
+  'use strict';
+  (function (window) {
+    try {
+      new MouseEvent('test');
+      return false; // No need to polyfill
+    }
+    catch (e) {
+      // Need to polyfill - fall through
+    }
+
+    // Polyfills DOM4 MouseEvent
+
+    var MouseEvent = function (eventType, params) {
+      params = params || {bubbles: false, cancelable: false};
+      var mouseEvent = document.createEvent('MouseEvent');
+      mouseEvent.initMouseEvent(eventType, params.bubbles, params.cancelable, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+
+      return mouseEvent;
+    };
+
+    MouseEvent.prototype = Event.prototype;
+
+    window.MouseEvent = MouseEvent;
+  })(window);
+
+  var event = new MouseEvent('click', {
+    view: window,
+    bubbles: true,
+    cancelable: true
+  });
+
+  htmlObject.dispatchEvent(event);
+};
+
+/**
+ * Cross browser position from top function.
+ *
+ * @return {Integer} Pixels from the top of the page.
+ */
+RCWDL.posTop = function () {
+  'use strict';
+  return typeof window.pageYOffset != 'undefined' ? window.pageYOffset: document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ? document.body.scrollTop : 0;
 };
 
 /**
@@ -3567,7 +3685,7 @@ RCWDL.utilities.toggleClass = function (target, className) {
       break;
 
     default:
-      throw new Error('Has Class option used with method RCWDL.utilities.toggleClass is invaild.')
+      throw new Error('Has Class option used with method RCWDL.utilities.toggleClass is invaild.');
   }
 
   // IE 8+ support.
@@ -3621,7 +3739,7 @@ RCWDL.utilities.triggerResize = function () {
  * @param {String} className
  * CSS class name to look for.
  *
- * @returns {boolean}
+ * @return {boolean} Returns whether the nodeItem has the supplied class.
  */
 RCWDL.utilities.hasClass = function (el, className) {
   'use strict';
@@ -3690,7 +3808,6 @@ RCWDL.utilities.triggerAndTargetClassModifier = {
     // Store the node in a temporary variable, which we will replace as we climb the DOM.
     var currentNode = targetNode;
     var classNoDot = modifier.replace(/^\./, '');
-    var toggle = !RCWDL.utilities.hasClass(targetNode, classNoDot) ? 'add' : 'remove';
 
     if (depth > 0) {
       for (var i = 0; i < depth; i++) {
@@ -3698,19 +3815,29 @@ RCWDL.utilities.triggerAndTargetClassModifier = {
       }
     }
     else if (/data-js-trigger/i.test(target)) {
-      document.querySelectorAll('[data-js-target]').forEach(function (item) {
-        RCWDL.utilities.triggerAndTargetClassModifier.removeModifier(item, classNoDot);
-      });
 
-      document.querySelectorAll(target).forEach(function (item) {
-        RCWDL.utilities.triggerAndTargetClassModifier.removeModifier(item, classNoDot);
+      if (RCWDL.utilities.hasClass(targetNode)) {
+        // Remove all the modifier classes from other toggle elements.
+        var dataTargets = document.querySelectorAll('[data-js-target=' + targetNode.getAttribute('data-js-trigger') + ']');
+        Object.keys(dataTargets).forEach(function (item) {
+          RCWDL.utilities.triggerAndTargetClassModifier.removeModifier(dataTargets[item], classNoDot); 
+        });
+      }
+
+      // Remove the modifier class from anything matching the data attribute selector.
+      var targets = document.querySelectorAll(target);
+      Object.keys(targets).forEach(function (item) {
+        RCWDL.utilities.triggerAndTargetClassModifier.removeModifier(targets[item], classNoDot);
       });
 
       var childTarget = document.querySelector('[data-js-target="' + targetNode.getAttribute('data-js-trigger') + '"]');
-      childTarget.classList[toggle](classNoDot);
-
+      if (childTarget !== null) {
+        RCWDL.utilities.toggleClass(childTarget, classNoDot);
+      }
+    }
+    else {
       // Toggle the active class on the trigger.
-      targetNode.classList[toggle](classNoDot);
+      RCWDL.utilities.toggleClass(targetNode, classNoDot);
     }
   },
   removeModifier: function (item, modifier) {
@@ -3733,11 +3860,11 @@ RCWDL.utilities.triggerAndTargetClassModifier = {
 
     if (target.siblingCheck) {
       var childTarget = currentNode.querySelector(target.targetClass);
-      childTarget.classList.toggle(modifier.replace(/^\./, ''));
+      RCWDL.utilities.toggleClass(childTarget, modifier.replace(/^\./, ''));
     }
     else {
       // Toggle the active class on the target.
-      currentNode.classList.toggle(modifier.replace(/^\./, ''));
+      RCWDL.utilities.toggleClass(currentNode, modifier.replace(/^\./, ''));
     }
     return currentNode.parentNode;
   },
@@ -3778,8 +3905,8 @@ RCWDL.features.Carousel = {
 
     if (carousels !== null && carousels.length > 0) {
       if (carousels.length > 1) {
-        carousels.forEach(function (carousel) {
-          RCWDL.features.Carousel.create(carousel);
+        Object.keys(carousels).forEach(function (carousel) {
+          RCWDL.features.Carousel.create(carousels[carousel]);
         });
       }
       else {
@@ -3833,8 +3960,8 @@ RCWDL.features.FormElements = {
     var inputs = document.querySelectorAll(target);
     var targets = [];
 
-    inputs.forEach(function (inputList) {
-      var items = inputList.querySelectorAll(
+    Object.keys(inputs).forEach(function (inputList) {
+      var items = inputs[inputList].querySelectorAll(
         '[type="text"], ' +
         '[type="textbox"], ' +
         '[type="password"], ' +
@@ -3846,7 +3973,7 @@ RCWDL.features.FormElements = {
         '[type="search"]');
       // Make sure the wrapper we're targeting actually has inputs inside.
       if (items.length > 0) {
-        targets.push(inputList);
+        targets.push(inputs[inputList]);
       }
     });
 
@@ -3877,14 +4004,14 @@ RCWDL.features.FormElements = {
     'use strict';
     var inputs = document.querySelectorAll(target);
 
-    inputs.forEach(function (input) {
+    Object.keys(inputs).forEach(function (input) {
       var eye = document.createElement('button');
 
       // Initial styles and screen reader text for label.
       eye.innerHTML = '<span class="screen-reader-text">Toggle password visibility</span>';
       eye.classList.add('rc-input--password__toggle');
 
-      input.parentNode.appendChild(eye);
+      inputs[input].parentNode.appendChild(eye);
 
       eye.addEventListener('click', function (event) {
         var input = event.target.parentNode.querySelector('input');
@@ -4000,11 +4127,11 @@ RCWDL.features.ImageGallery = {
 
     var imageGalleries = document.querySelectorAll(targetClass);
 
-    if (imageGalleries !== null && imageGalleries.length > 0) {
-      if (imageGalleries.length > 1) {
-        imageGalleries.forEach(function (imageGallery) {
-          RCWDL.features.Carousel.create(imageGallery, options);
-          RCWDL.features.ImageGallery.wrapAndRemoveDots(imageGallery.parentNode.parentNode);
+    if (imageGalleries !== null && Object.keys(imageGalleries).length > 0) {
+      if (Object.keys(imageGalleries).length > 1) {
+        Object.keys(imageGalleries).forEach(function (imageGallery) {
+          RCWDL.features.Carousel.create(imageGalleries[imageGallery], options);
+          RCWDL.features.ImageGallery.wrapAndRemoveDots(imageGalleries[imageGallery].parentNode.parentNode);
         });
       }
       else {
@@ -4322,14 +4449,19 @@ function initMap() {
 
 RCWDL.navigation = {};
 
+/**
+ * Adds class to body if the navigation bar is in use.
+ */
 RCWDL.navigation.changeNavigationOnScroll = function () {
+  'use strict';
   var navigationBar = document.querySelector('.rc-navigation__bar');
   if (navigationBar !== null) {
     window.addEventListener('scroll', function () {
       var navigationBar = document.querySelector('.rc-navigation__bar');
-      if (document.body.scrollTop > 100) {
+      if (RCWDL.posTop() > 100) {
         navigationBar.classList.add('scrolled');
-      } else {
+      }
+      else {
         navigationBar.classList.remove('scrolled');
       }
     });
@@ -4338,25 +4470,31 @@ RCWDL.navigation.changeNavigationOnScroll = function () {
 
 RCWDL.ready(RCWDL.navigation.changeNavigationOnScroll());
 
+/**
+ * Added toggle to svgs to target their internal svg/paths to trigger animations.
+ *
+ * @param {String} triggerSelector Css selector supplied for targeting the trigger elements.
+ * @param {String} targetSelector Css selector supplied for targeting the target elements.
+ */
 RCWDL.navigation.burgerToggle = function (triggerSelector, targetSelector) {
+  'use strict';
 
   var targets = document.querySelectorAll(triggerSelector);
-  
   if (targets !== null) {
-    targets.forEach(function (item) {
-      item.addEventListener('click', function (e) {
+    Object.keys(targets).forEach(function (item) {
+      targets[item].addEventListener('click', function (e) {
         e.target
           .querySelector(targetSelector)
           .contentDocument
           .querySelector('.svg-toggle')
           .classList.toggle('active');
       });
-    })
+    });
   }
-
 };
 
 RCWDL.ready(RCWDL.navigation.burgerToggle('[data-js-animate-svg]', '[data-js-animate-svg-target]'));
+
 /**
  * Extension of the HTML element progress.
  * @type {{init: RCWDL.features.Progress.init, demo: RCWDL.features.Progress.demo}}
@@ -4382,12 +4520,12 @@ RCWDL.features.Progress = {
       RCWDL.features.Progress.demo(demo[0]);
     }
 
-    progElms.forEach(function (el) {
+    Object.keys(progElms).forEach(function (el) {
 
-      var val = el.getAttribute('value');
+      var val = progElms[el].getAttribute('value');
       var label = document.createElement('span');
 
-      label.setAttribute('id', el.getAttribute('id') + '--label');
+      label.setAttribute('id', progElms[el].getAttribute('id') + '--label');
 
       // Initial styles for label.
       label.innerHTML = val + '%';
@@ -4420,10 +4558,10 @@ RCWDL.features.Progress = {
   },
 
   /**
-   * Demo function purely here to drive the demo on the portal. Simply aitches an
-   * event to a button to update the progress barr.
+   * Demo function purely here to drive the demo on the portal. Simply attaches an
+   * event to a button to update the progress bar.
    *
-   * @param {Node} demo
+   * @param {Node} demo Node item to add event listener to.
    */
   demo: function (demo) {
     'use strict';
@@ -4459,9 +4597,9 @@ RCWDL.features.Slider = {
     if (typeof range[0] !== 'undefined') {
       if (range.length > 0) {
 
-        range.forEach(function (item) {
+        Object.keys(range).forEach(function (item) {
           // Create Slider
-          RCWDL.features.Slider.create(item);
+          RCWDL.features.Slider.create(range[item]);
         });
       }
       else {
@@ -4609,7 +4747,7 @@ RCWDL.features.Tabs = {
 
           // fake a click on the first item.
           var defaultItem = tabsets[tabset].querySelectorAll('.rc-tabs__triggers > li:first-child a');
-          defaultItem[0].click();
+          RCWDL.click(defaultItem[0]);
         });
       }
       else {
@@ -4617,7 +4755,7 @@ RCWDL.features.Tabs = {
 
         // fake a click on the first item.
         var defaultItem = tabsets[0].querySelectorAll('.rc-tabs__triggers > li:first-child a');
-        defaultItem[0].click();
+        RCWDL.click(defaultItem[0]);
       }
     }
   },
@@ -4694,16 +4832,16 @@ RCWDL.features.Tooltip = {
     var tooltips = document.querySelectorAll(target);
 
     if (typeof tooltips === 'object') {
-      tooltips.forEach(function (tooltip) {
+      Object.keys(tooltips).forEach(function (tooltip) {
 
-        tippy(tooltip,
+        tippy(tooltips[tooltip],
           {
-            html: document.getElementById(tooltip.getAttribute('data-tooltip')),
-            offset: tooltip.getAttribute('data-tooltip-direction') === 'top' ? 0 : 0,
-            distance: tooltip.getAttribute('data-tooltip-direction') === 'top' ? 100 : 50,
+            html: document.getElementById(tooltips[tooltip].getAttribute('data-tooltip')),
+            offset: tooltips[tooltip].getAttribute('data-tooltip-direction') === 'top' ? 0 : 0,
+            distance: tooltips[tooltip].getAttribute('data-tooltip-direction') === 'top' ? 100 : 50,
             arrow: true,
             arrowSize: 'big',
-            position: tooltip.getAttribute('data-tooltip-direction') || 'top',
+            position: tooltips[tooltip].getAttribute('data-tooltip-direction') || 'top',
             interactive: true,
             trigger: 'click',
             popperOptions: {

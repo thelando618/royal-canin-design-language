@@ -1,4 +1,6 @@
 .navigation {
+  overflow-x: hidden;
+  overflow-y: auto;
   background-color: colour('brand', 'white');
   display: block;
   z-index: 11;
@@ -7,6 +9,10 @@
   position: fixed;
   top: 0;
   width: 100%;
+
+  @media ( get-breakpoint-down('large') ) {
+    overflow-y: hidden;
+  }
 
   & .logo-svg {
     width: 150px;
@@ -88,7 +94,8 @@
     width: $navigation-width;
     font-size: .825em;
     border-right: 1px solid rgba( 0, 0, 0, .15 );
-    overflow: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
 
     .gs-logo {
       padding: 0;

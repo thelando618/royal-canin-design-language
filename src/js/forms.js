@@ -18,8 +18,8 @@ RCWDL.features.FormElements = {
     var inputs = document.querySelectorAll(target);
     var targets = [];
 
-    inputs.forEach(function (inputList) {
-      var items = inputList.querySelectorAll(
+    Object.keys(inputs).forEach(function (inputList) {
+      var items = inputs[inputList].querySelectorAll(
         '[type="text"], ' +
         '[type="textbox"], ' +
         '[type="password"], ' +
@@ -31,7 +31,7 @@ RCWDL.features.FormElements = {
         '[type="search"]');
       // Make sure the wrapper we're targeting actually has inputs inside.
       if (items.length > 0) {
-        targets.push(inputList);
+        targets.push(inputs[inputList]);
       }
     });
 
@@ -62,14 +62,14 @@ RCWDL.features.FormElements = {
     'use strict';
     var inputs = document.querySelectorAll(target);
 
-    inputs.forEach(function (input) {
+    Object.keys(inputs).forEach(function (input) {
       var eye = document.createElement('button');
 
       // Initial styles and screen reader text for label.
       eye.innerHTML = '<span class="screen-reader-text">Toggle password visibility</span>';
       eye.classList.add('rc-input--password__toggle');
 
-      input.parentNode.appendChild(eye);
+      inputs[input].parentNode.appendChild(eye);
 
       eye.addEventListener('click', function (event) {
         var input = event.target.parentNode.querySelector('input');

@@ -10,19 +10,18 @@
 .breadcrumb__list-item {
   display: inline-block;
   vertical-align: middle;
-  margin-right: 1rem;
 
   & > a {
     // ToDo: switch to grey icon.
     position: relative;
-    padding-right: 1.25rem;
+    padding-right: 1.75rem;
 
     &::after {
       @extend %extend-icon-base;
       @extend .rc-icon-chevron--right--light::after;
       transform-origin: 100% 0;
       position: absolute;
-      right: -0.5rem;
+      right: -0.25rem;
       top: 50%;
       transform: translateY(-50%);
     }
@@ -34,7 +33,7 @@
 }
 
 .breadcrumb__link.logo--badge__wrapper::after {
-  transform: translate(6px, -42%);
+  transform: translateY(-42%);
 }
 
 .breadcrumb__link {

@@ -1,19 +1,25 @@
 .layout-container {
   display: inline-block;
   width: 100%;
-  text-align: center;
+
+  .no-flexbox & {
+    text-align: center;
+  }
 }
 
 .layout-container .rc-column {
   padding: 12px;
   padding-bottom: 0;
-  text-align: left;
   display: inline-block;
   width: 100%;
 
   &:last-child {
     padding-bottom: 12px;
   }
+}
+
+.rc-column {
+  position: relative;
 }
 
 @media (get-breakpoint('med')) {

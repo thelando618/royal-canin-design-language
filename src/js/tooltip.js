@@ -17,16 +17,16 @@ RCWDL.features.Tooltip = {
     var tooltips = document.querySelectorAll(target);
 
     if (typeof tooltips === 'object') {
-      tooltips.forEach(function (tooltip) {
+      Object.keys(tooltips).forEach(function (tooltip) {
 
-        tippy(tooltip,
+        tippy(tooltips[tooltip],
           {
-            html: document.getElementById(tooltip.getAttribute('data-tooltip')),
-            offset: tooltip.getAttribute('data-tooltip-direction') === 'top' ? 0 : 0,
-            distance: tooltip.getAttribute('data-tooltip-direction') === 'top' ? 100 : 50,
+            html: document.getElementById(tooltips[tooltip].getAttribute('data-tooltip')),
+            offset: tooltips[tooltip].getAttribute('data-tooltip-direction') === 'top' ? 0 : 0,
+            distance: tooltips[tooltip].getAttribute('data-tooltip-direction') === 'top' ? 100 : 50,
             arrow: true,
             arrowSize: 'big',
-            position: tooltip.getAttribute('data-tooltip-direction') || 'top',
+            position: tooltips[tooltip].getAttribute('data-tooltip-direction') || 'top',
             interactive: true,
             trigger: 'click',
             popperOptions: {
