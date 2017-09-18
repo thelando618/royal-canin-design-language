@@ -81,3 +81,13 @@ $borders: ('top', 'bottom', 'left', 'right');
   border-style: solid;
   border-width: 1px;
 }
+
+//---------------- Shadows --------------//
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    box-shadow: inset $top $left $blur $color;
+  } @else {
+    box-shadow: $top $left $blur $color;
+  }
+}
