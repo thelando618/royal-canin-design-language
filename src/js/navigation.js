@@ -22,11 +22,41 @@ RCWDL.navigation.changeNavigationOnScroll = function () {
 RCWDL.ready(RCWDL.navigation.changeNavigationOnScroll());
 
 /**
+ * Hides and shows the search bar and shade, prevents duplicate shades showing.
+ *
+ * @param {String} searchBarTriggerSelector Selector for the search bar trigger.
+ * 
+ */
+
+RCWDL.navigation.searchBar = function (searchBarTriggerSelector) {
+  'use strict';
+
+  var searchBarTrigger = document.querySelector(searchBarTriggerSelector);
+  var mainNav = document.querySelector('.rc-main-navigation__wrapper');
+  var shade = document.querySelector('.shade');
+
+  searchBarTrigger.addEventListener('click', function(){
+      if (RCWDL.utilities.hasClass(mainNav, 'open')) {
+        shade.style.visibility = 'hidden';
+      }
+      else {
+        shade.removeAttribute('style');
+      }
+  });
+
+  RCWDL.ready(RCWDL.utilities.triggerAndTargetClassModifier.init('click', searchBarTriggerSelector, '[data-js-trigger]', '.open', null));
+};
+
+RCWDL.ready(RCWDL.navigation.searchBar('[data-js-trigger="search-bar"]'));
+
+
+/**
  * Added toggle to svgs to target their internal svg/paths to trigger animations.
  *
  * @param {String} triggerSelector Css selector supplied for targeting the trigger elements.
  * @param {String} targetSelector Css selector supplied for targeting the target elements.
  */
+
 RCWDL.navigation.burgerToggle = function (triggerSelector, targetSelector) {
   'use strict';
 

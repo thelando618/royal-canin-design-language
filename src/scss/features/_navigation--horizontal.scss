@@ -1,11 +1,11 @@
 
 $nav-heights: (
-  "mobile-footer":      55,
-  "med-down":           70,
-  "med-up":             80,
-  "med-up-scrolled":    60,
-  "large-up":           100,
-  "large-up-scrolled":  80
+  'mobile-footer':      55,
+  'med-down':           70,
+  'med-up':             80,
+  'med-up-scrolled':    60,
+  'large-up':           100,
+  'large-up-scrolled':  80
 );
 
 @function get-nav-height($height) {
@@ -14,29 +14,29 @@ $nav-heights: (
 }
 
 .rc-header-navigation {
-    height: get-nav-height("med-down");
-    border-bottom: solid 1px colour("brand", "light-grey");
-    background-color: colour("brand", "white");
+    height: get-nav-height('med-down');
+    border-bottom: solid 1px colour('brand', 'light-grey');
+    background-color: colour('brand', 'white');
     position: fixed;
     top: 0;
-    max-width: get-maxWidth("x-large");
+    max-width: get-maxWidth('x-large');
     width: 100%;
-    z-index: 9;
-    transition: movementSetting("transition", "base");
+    z-index: 12;
+    transition: movementSetting('transition', 'base');
     
-    @media (breakpoint-up("med")) {
-        height: get-nav-height("med-up");
+    @media (get-breakpoint('med')) {
+        height: get-nav-height('med-up');
         
         &.scrolled {
-            height: get-nav-height("med-up-scrolled");
+            height: get-nav-height('med-up-scrolled');
         }
     }
 
-    @media (breakpoint-up("large")) {
-        height: get-nav-height("large-up");
+    @media (get-breakpoint('large')) {
+        height: get-nav-height('large-up');
         
         &.scrolled {
-            height: get-nav-height("large-up-scrolled");
+            height: get-nav-height('large-up-scrolled');
         }
     }
 
@@ -47,11 +47,11 @@ $nav-heights: (
         height: 100%;
         position: relative;
         margin: 0;
-        padding: 0 get-spacer("small");
+        padding: 0 get-spacer('small');
     }
 
     &.scrolled {
-        @include box-shadow(2px, 0, 8px, rgba($black, .1));
+        @include box-shadow(2px, 0, 8px, rgba(black, .1));
 
         & .svg-logo {
             &:first-of-type {
@@ -65,17 +65,17 @@ $nav-heights: (
 }
 
 .rc-header-navigation__item {
-    @media (breakpoint-up("med")) {
-        margin: 0 get-spacer("small") / 4;
+    @media (get-breakpoint('med')) {
+        margin: 0 get-spacer('small') / 4;
     }
 
     & [class^="rc-icon"] {
         transform: scale(.6);
         opacity: .2;
         filter: saturate(0);
-        transition:  movementSetting("transition", "base");
+        transition:  movementSetting('transition', 'base');
 
-        @media (breakpoint-up("med")) {
+        @media (get-breakpoint('med')) {
             transform: scale(.8);
         }
     }
@@ -100,7 +100,7 @@ $nav-heights: (
         height: 60px;
 
         &::after {
-            content: ""; 
+            content: ''; 
             position: absolute; 
             top: 0; 
             right: 0; 
@@ -114,9 +114,9 @@ $nav-heights: (
 
       &:first-of-type {
         height: 45px;
-        transition:  movementSetting("transition", "base");
+        transition: movementSetting('transition', 'base');
 
-        @media (breakpoint-up("med")){
+        @media (get-breakpoint('med')){
             height: 60px;
         }
       }
@@ -124,7 +124,7 @@ $nav-heights: (
       &:last-of-type {
         height: 30px;
         opacity: 0;
-        transition:  movementSetting("transition", "base");
+        transition: movementSetting('transition', 'base');
       }
     }
 }
@@ -133,6 +133,24 @@ $nav-heights: (
     position: absolute;
     top: 0;
     margin: 0;
-    display: none;
     width: 100%;
+    opacity: 0;
+    transition: movementSetting('transition', 'base');
+    z-index: -1;
+
+    &.open {
+      opacity: 1;
+      z-index: 12;
+    }
+
+    & + .shade {
+      display: none;
+      animation: fadeIn .3s;
+      animation-direction: reverse;
+    }
+
+    &.open + .shade {
+      display: block;
+      animation: fadeIn .3s;
+    }
 }

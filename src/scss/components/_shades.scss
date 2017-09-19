@@ -11,3 +11,8 @@
   background-color: rgba(colour('brand', 'medium-grey'), 0.75);
   @extend %shade;
 }
+
+.shade--black {
+  background-color: rgba(black, .5);
+  @extend %shade;
+}
