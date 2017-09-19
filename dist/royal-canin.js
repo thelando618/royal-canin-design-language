@@ -4477,11 +4477,11 @@ RCWDL.ready(RCWDL.navigation.changeNavigationOnScroll());
  * 
  */
 
-RCWDL.navigation.searchBar = function (searchBarTriggerSelector) {
+RCWDL.navigation.searchBar = function (searchBarTriggerSelector, mainNavSelector) {
   'use strict';
 
   var searchBarTrigger = document.querySelector(searchBarTriggerSelector);
-  var mainNav = document.querySelector('.rc-main-navigation__wrapper');
+  var mainNav = document.querySelector(mainNavSelector);
   var shade = document.querySelector('.shade');
 
   searchBarTrigger.addEventListener('click', function(){
@@ -4496,7 +4496,7 @@ RCWDL.navigation.searchBar = function (searchBarTriggerSelector) {
   RCWDL.ready(RCWDL.utilities.triggerAndTargetClassModifier.init('click', searchBarTriggerSelector, '[data-js-trigger]', '.open', null));
 };
 
-RCWDL.ready(RCWDL.navigation.searchBar('[data-js-trigger="search-bar"]'));
+RCWDL.ready(RCWDL.navigation.searchBar('[data-js-trigger="search-bar"]', '.rc-main-navigation__wrapper'));
 
 
 /**
