@@ -226,6 +226,12 @@ $navigation-width: 240px;
   margin-right: auto;
 }
 
+.max-width--x-large {
+  max-width: get-maxWidth('x-large');
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 .text-column-padding-right {
   @media (get-breakpoint('large')) {

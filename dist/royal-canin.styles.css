@@ -4643,6 +4643,12 @@ section {
   margin-right: auto;
 }
 
+.max-width--x-large {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -7134,7 +7140,7 @@ video.hero__bg {
   margin-bottom: 2rem;
 }
 
-.rc-navigation--footer > ul .rc-navigation__list-item {
+.rc-navigation--footer > ul .rc-navigation__item {
   margin-bottom: 0.5rem;
 }
 
@@ -7330,11 +7336,18 @@ video.hero__bg {
 .rc-header-navigation__search-bar {
   position: absolute;
   top: 0;
+  bottom: 0;
   margin: 0;
   width: 100%;
   opacity: 0;
   transition: 0.2s ease;
   z-index: -1;
+}
+
+.rc-header-navigation__search-bar > [type="search"] {
+  height: 100%;
+  padding: 0;
+  padding-left: 5rem;
 }
 
 .rc-header-navigation__search-bar.open {

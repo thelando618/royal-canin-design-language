@@ -12,7 +12,7 @@ $nav-heights: (
   $nav-height: map-get($nav-heights, $height);
   @return #{$nav-height}px;
 }
-
+  
 .rc-header-navigation {
     height: get-nav-height('med-down');
     border-bottom: solid 1px colour('brand', 'light-grey');
@@ -132,11 +132,18 @@ $nav-heights: (
 .rc-header-navigation__search-bar {
     position: absolute;
     top: 0;
+    bottom: 0;
     margin: 0;
     width: 100%;
     opacity: 0;
     transition: movementSetting('transition', 'base');
     z-index: -1;
+
+    & > [type="search"] {
+        height: 100%;
+        padding: 0;
+        padding-left: 5rem;
+    }
 
     &.open {
       opacity: 1;
