@@ -35,13 +35,13 @@ RCWDL.navigation.searchBar = function (searchBarTriggerSelector, mainNavSelector
   var mainNav = document.querySelector(mainNavSelector);
   var shade = document.querySelector('.shade');
 
-  searchBarTrigger.addEventListener('click', function(){
-      if (RCWDL.utilities.hasClass(mainNav, 'open')) {
-        shade.style.visibility = 'hidden';
-      }
-      else {
-        shade.removeAttribute('style');
-      }
+  searchBarTrigger.addEventListener('click', function () {
+    if (RCWDL.utilities.hasClass(mainNav, 'open')) {
+      shade.style.visibility = 'hidden';
+    }
+    else {
+      shade.removeAttribute('style');
+    }
   });
 
   RCWDL.ready(RCWDL.utilities.triggerAndTargetClassModifier.init('click', searchBarTriggerSelector, '[data-js-trigger]', '.open', null));

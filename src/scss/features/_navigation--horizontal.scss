@@ -81,7 +81,7 @@ $nav-heights: (
     }
 
     &:hover [class^="rc-icon"],
-    [class^="rc-icon"].open{
+    [class^="rc-icon"].open {
         opacity: 1;
         filter: saturate(100%);
         cursor: pointer;
