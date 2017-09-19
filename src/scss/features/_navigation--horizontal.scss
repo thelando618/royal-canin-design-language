@@ -12,6 +12,12 @@ $nav-heights: (
   $nav-height: map-get($nav-heights, $height);
   @return #{$nav-height}px;
 }
+
+@media (get-breakpoint-down('med')) {
+    .body--fixed-nav {
+        padding-top: get-nav-height('med-down');
+    }
+}
   
 .rc-header-navigation {
     height: get-nav-height('med-down');
@@ -80,8 +86,8 @@ $nav-heights: (
         }
     }
 
-    &:hover [class^="rc-icon"],
-    [class^="rc-icon"].open {
+    & .rc-icon-close--red,
+    &:hover [class^="rc-icon"] {
         opacity: 1;
         filter: saturate(100%);
         cursor: pointer;
@@ -138,6 +144,7 @@ $nav-heights: (
     opacity: 0;
     transition: movementSetting('transition', 'base');
     z-index: -1;
+    border-bottom: none;
 
     & > [type="search"] {
         height: 100%;

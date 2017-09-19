@@ -9,8 +9,12 @@
     width: 100%;
     padding: 2rem;
     padding-left: 5rem;
-    color: colour('functional', 'text');
+    color: colour('brand', 'light-grey');
     line-height: 2em;
+    
+    &::-webkit-input-placeholder {
+      color: colour('brand', 'light-grey', 'dark');
+    }
 
     &:focus + label::after {
       display: none;
