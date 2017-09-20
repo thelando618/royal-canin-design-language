@@ -4450,30 +4450,61 @@ function initMap() {
 RCWDL.navigation = {};
 
 /**
- * Adds class to body if the navigation bar is in use.
+ * Changes all navigation bars on scroll
+ *
+ * @param {String} headerNavSelector Selector for the header navigation div 
+ * 
+ * @param {String} mobileFooterNavSelector Selector for the mobile footer navigation div
+ * 
+ * @param {String} mainNavSelector Selector for the main navigation div
  */
-RCWDL.navigation.changeNavigationOnScroll = function () {
+
+RCWDL.navigation.changeNavigationOnScroll = function (headerNavSelector, mobileFooterNavSelector, mainNavSelector) {
   'use strict';
-  var navigationBar = document.querySelector('.rc-navigation__bar');
-  if (navigationBar !== null) {
+
+  var headerNav = document.querySelector(headerNavSelector);
+
+  if (headerNav !== null) {
     window.addEventListener('scroll', function () {
-      var navigationBar = document.querySelector('.rc-navigation__bar');
+      var headerNav = document.querySelector(headerNavSelector);
+
       if (RCWDL.posTop() > 100) {
-        navigationBar.classList.add('scrolled');
+        headerNav.classList.add('scrolled');
       }
       else {
-        navigationBar.classList.remove('scrolled');
+        headerNav.classList.remove('scrolled');
       }
+    });
+  }
+
+  var footerNav = document.querySelector(mobileFooterNavSelector);
+  var mainNav = document.querySelector(mainNavSelector);
+
+  if (footerNav !== null) {
+    var previous = window.scrollY;
+    window.addEventListener('scroll', function () {
+
+      if (window.scrollY > previous) {
+        if (!mainNav.classList.contains('open')) {
+          footerNav.classList.add('scrolled');
+        }
+      }
+      else {
+        footerNav.classList.remove('scrolled');
+      }
+      previous = window.scrollY;
     });
   }
 };
 
-RCWDL.ready(RCWDL.navigation.changeNavigationOnScroll());
+RCWDL.ready(RCWDL.navigation.changeNavigationOnScroll('.rc-header-navigation', '.rc-mobile-footer-navigation', '.rc-main-navigation'));
 
 /**
- * Hides and shows the search bar and shade, prevents duplicate shades showing.
+ * Hides and shows the search bar and shade, prevents duplicate shades showing when nav is open.
  *
  * @param {String} searchBarTriggerSelector Selector for the search bar trigger.
+ * 
+ * @param {String} mainNavSelector Selector for the main navigation wrapper.
  * 
  */
 
@@ -4482,16 +4513,22 @@ RCWDL.navigation.searchBar = function (searchBarTriggerSelector, mainNavSelector
 
   var searchBarTrigger = document.querySelector(searchBarTriggerSelector);
   var mainNav = document.querySelector(mainNavSelector);
-  var shade = document.querySelector('.shade');
+  var shades = document.querySelectorAll('.shade');
 
-  searchBarTrigger.addEventListener('click', function () {
-    if (RCWDL.utilities.hasClass(mainNav, 'open')) {
-      shade.style.visibility = 'hidden';
-    }
-    else {
-      shade.removeAttribute('style');
-    }
-  });
+  if (mainNav != null) {
+    searchBarTrigger.addEventListener('click', function () {
+      if (RCWDL.utilities.hasClass(mainNav, 'open')) {
+        for (var i = 0; i < shades.length - 1; i++) {
+          shades[i].style.visibility = 'hidden';
+        }
+      }
+      else {
+        shades.forEach(function (shade) {
+          shade.removeAttribute('style');
+        });
+      }
+    });
+  }
 
   RCWDL.ready(RCWDL.utilities.triggerAndTargetClassModifier.init('click', searchBarTriggerSelector, '[data-js-trigger]', '.open', null));
 };
@@ -4524,6 +4561,7 @@ RCWDL.navigation.burgerToggle = function (triggerSelector, targetSelector) {
 };
 
 RCWDL.ready(RCWDL.navigation.burgerToggle('[data-js-animate-svg]', '[data-js-animate-svg-target]'));
+
 /**
  * Extension of the HTML element progress.
  * @type {{init: RCWDL.features.Progress.init, demo: RCWDL.features.Progress.demo}}

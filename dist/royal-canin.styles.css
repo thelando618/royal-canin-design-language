@@ -5762,6 +5762,15 @@ input:required,textarea:required,select:required,input:required:required {
   top: 0;
 }
 
+.menu-toggle-icon {
+  height: 32px;
+  width: 36px;
+  margin-top: 9px;
+  margin-left: 9px;
+  display: inline-block;
+  pointer-events: none;
+}
+
 .menu-toggle--left {
   left: 0;
   right: auto;
