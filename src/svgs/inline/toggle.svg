@@ -5,7 +5,7 @@
         /* <![CDATA[ */
 
 .svg-toggle {
-  fill: #d1d1d1;
+  fill: #C4C4C4;
   pointer-events: all;
   cursor: pointer;
   transform: scale(0.8);

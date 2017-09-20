@@ -9,7 +9,6 @@ RCWDL.navigation = {};
  * 
  * @param {String} mainNavSelector Selector for the main navigation div
  */
-
 RCWDL.navigation.changeNavigationOnScroll = function (headerNavSelector, mobileFooterNavSelector, mainNavSelector) {
   'use strict';
 
@@ -58,25 +57,16 @@ RCWDL.ready(RCWDL.navigation.changeNavigationOnScroll('.rc-header-navigation', '
  * @param {String} mainNavSelector Selector for the main navigation wrapper.
  * 
  */
-
 RCWDL.navigation.searchBar = function (searchBarTriggerSelector, mainNavSelector) {
   'use strict';
 
   var searchBarTrigger = document.querySelector(searchBarTriggerSelector);
   var mainNav = document.querySelector(mainNavSelector);
-  var shades = document.querySelectorAll('.shade');
 
   if (mainNav != null) {
     searchBarTrigger.addEventListener('click', function () {
       if (RCWDL.utilities.hasClass(mainNav, 'open')) {
-        for (var i = 0; i < shades.length - 1; i++) {
-          shades[i].style.visibility = 'hidden';
-        }
-      }
-      else {
-        shades.forEach(function (shade) {
-          shade.removeAttribute('style');
-        });
+        mainNav.classList.remove('open');
       }
     });
   }
@@ -86,18 +76,19 @@ RCWDL.navigation.searchBar = function (searchBarTriggerSelector, mainNavSelector
 
 RCWDL.ready(RCWDL.navigation.searchBar('[data-js-trigger="search-bar"]', '.rc-main-navigation__wrapper'));
 
-
 /**
  * Added toggle to svgs to target their internal svg/paths to trigger animations.
  *
  * @param {String} triggerSelector Css selector supplied for targeting the trigger elements.
+ * 
  * @param {String} targetSelector Css selector supplied for targeting the target elements.
+ * 
  */
-
 RCWDL.navigation.burgerToggle = function (triggerSelector, targetSelector) {
   'use strict';
 
   var targets = document.querySelectorAll(triggerSelector);
+
   if (targets !== null) {
     Object.keys(targets).forEach(function (item) {
       targets[item].addEventListener('click', function (e) {
