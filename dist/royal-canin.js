@@ -4519,6 +4519,8 @@ RCWDL.navigation.searchBar = function (searchBarTriggerSelector, mainNavSelector
     searchBarTrigger.addEventListener('click', function () {
       if (RCWDL.utilities.hasClass(mainNav, 'open')) {
         mainNav.classList.remove('open');
+        document.body.style.overflow = ''; // Always allow page scrolling when search open
+
         if (mainNavToggler !== null) {
           mainNavToggler.contentDocument
             .querySelector('.svg-toggle')
