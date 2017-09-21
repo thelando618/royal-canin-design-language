@@ -4515,8 +4515,8 @@ RCWDL.navigation.searchBar = function (searchBarTriggerSelector, mainNavSelector
   var mainNav = document.querySelector(mainNavSelector);
   var mainNavToggler = document.querySelector('[data-js-animate-svg-target]');
 
-  if (mainNav != null) {
-    searchBarTrigger.addEventListener('click', function () {
+  searchBarTrigger.addEventListener('click', function () {
+    if (mainNav != null) {
       if (RCWDL.utilities.hasClass(mainNav, 'open')) {
         mainNav.classList.remove('open');
         document.body.style.overflow = ''; // Always allow page scrolling when search open
@@ -4527,13 +4527,26 @@ RCWDL.navigation.searchBar = function (searchBarTriggerSelector, mainNavSelector
             .classList.remove('active');
         }
       }
+    }
+    Array.prototype.filter.call(searchBarTrigger.parentNode.children, function (child) {
+      if (child !== searchBarTrigger) {
+        child.classList.toggle('fade');
+      }
+      else {
+        child.classList.toggle('active');
+      }
     });
-  }
+  });
 
   RCWDL.ready(RCWDL.utilities.triggerAndTargetClassModifier.init('click', searchBarTriggerSelector, '[data-js-trigger]', '.open', null));
 };
 
-RCWDL.ready(RCWDL.navigation.searchBar('[data-js-trigger="search-bar"]', '.rc-main-navigation__wrapper'));
+if (window.innerWidth < 800) {
+  RCWDL.ready(RCWDL.navigation.searchBar('[data-js-trigger="search-bar-mobile"]', '.rc-main-navigation__wrapper'));
+}
+else {
+  RCWDL.ready(RCWDL.navigation.searchBar('[data-js-trigger="search-bar"]', '.rc-main-navigation__wrapper'));
+}
 
 
 /**
@@ -4552,11 +4565,19 @@ RCWDL.navigation.burgerToggle = function (triggerSelector, targetSelector) {
   if (targets !== null) {
     Object.keys(targets).forEach(function (item) {
       targets[item].addEventListener('click', function (e) {
+        var listNode = e.target.parentNode.parentNode;
+
         e.target
           .querySelector(targetSelector)
           .contentDocument
           .querySelector('.svg-toggle')
           .classList.toggle('active');
+
+        Array.prototype.filter.call(listNode.parentNode.children, function (child) {
+          if (child !== listNode) {
+            child.classList.toggle('fade');
+          }
+        });
       });
     });
   }
