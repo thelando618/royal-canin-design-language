@@ -33,7 +33,7 @@ section {
 
 $grid--standard: (
 	columns: 12,  // The number of columns in your grid
-	gutters: 1/4, // The size of a gutter in relation to a single column
+	gutters: 1 / 4, // The size of a gutter in relation to a single column
 );
 
 $grid--no-gutters: ( 
@@ -118,7 +118,7 @@ $spacingTypes: map-keys($spacers);
 			$counter: $counter + 1;
 		}
 	}
-	
+
 	.spacer-bottom-#{$spacer} {
 		$breakpointSizes: map-keys($breakpoints);
 
