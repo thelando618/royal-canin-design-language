@@ -12,7 +12,7 @@
     color: colour('brand', 'light-grey');
     line-height: 2em;
     
-    &::-webkit-input-placeholder {
+    &::placeholder {
       color: colour('brand', 'light-grey', 'dark');
     }
 

@@ -4457,6 +4457,7 @@ RCWDL.navigation = {};
  * @param {String} mobileFooterNavSelector Selector for the mobile footer navigation div
  * 
  * @param {String} mainNavSelector Selector for the main navigation div
+ * 
  */
 RCWDL.navigation.changeNavigationOnScroll = function (headerNavSelector, mobileFooterNavSelector, mainNavSelector) {
   'use strict';
@@ -4480,10 +4481,10 @@ RCWDL.navigation.changeNavigationOnScroll = function (headerNavSelector, mobileF
   var mainNav = document.querySelector(mainNavSelector);
 
   if (footerNav !== null) {
-    var previous = window.scrollY;
+    var previous = RCWDL.posTop();
     window.addEventListener('scroll', function () {
 
-      if (window.scrollY > previous) {
+      if (RCWDL.posTop() > previous) {
         if (!mainNav.classList.contains('open')) {
           footerNav.classList.add('scrolled');
         }
@@ -4491,15 +4492,16 @@ RCWDL.navigation.changeNavigationOnScroll = function (headerNavSelector, mobileF
       else {
         footerNav.classList.remove('scrolled');
       }
-      previous = window.scrollY;
+      previous = RCWDL.posTop();
     });
   }
 };
 
 RCWDL.ready(RCWDL.navigation.changeNavigationOnScroll('.rc-header-navigation', '.rc-mobile-footer-navigation', '.rc-main-navigation'));
 
+
 /**
- * Hides and shows the search bar and shade, prevents duplicate shades showing when nav is open.
+ * Hides and shows the search bar and shade, closes nav and replaces with search bar if nav already open.
  *
  * @param {String} searchBarTriggerSelector Selector for the search bar trigger.
  * 
@@ -4511,11 +4513,17 @@ RCWDL.navigation.searchBar = function (searchBarTriggerSelector, mainNavSelector
 
   var searchBarTrigger = document.querySelector(searchBarTriggerSelector);
   var mainNav = document.querySelector(mainNavSelector);
+  var mainNavToggler = document.querySelector('[data-js-animate-svg-target]');
 
   if (mainNav != null) {
     searchBarTrigger.addEventListener('click', function () {
       if (RCWDL.utilities.hasClass(mainNav, 'open')) {
         mainNav.classList.remove('open');
+        if (mainNavToggler !== null) {
+          mainNavToggler.contentDocument
+            .querySelector('.svg-toggle')
+            .classList.remove('active');
+        }
       }
     });
   }
@@ -4524,6 +4532,7 @@ RCWDL.navigation.searchBar = function (searchBarTriggerSelector, mainNavSelector
 };
 
 RCWDL.ready(RCWDL.navigation.searchBar('[data-js-trigger="search-bar"]', '.rc-main-navigation__wrapper'));
+
 
 /**
  * Added toggle to svgs to target their internal svg/paths to trigger animations.

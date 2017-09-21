@@ -1,170 +1,167 @@
 
 $nav-heights: (
-  'mobile-footer':      55,
-  'med-down':           70,
-  'med-up':             80,
-  'med-up-scrolled':    60,
-  'large-up':           100,
-  'large-up-scrolled':  80
+	'mobile-footer':      55,
+	'med-down':           70,
+	'med-up':             80,
+	'med-up-scrolled':    60,
+	'large-up':           100,
+	'large-up-scrolled':  80
 );
 
 @function get-nav-height($height) {
-  $nav-height: map-get($nav-heights, $height);
-  @return #{$nav-height}px;
+	$nav-height: map-get($nav-heights, $height);
+	@return #{$nav-height}px;
 }
 
 @media (get-breakpoint-down('med')) {
-    .body--fixed-nav {
-        padding-top: get-nav-height('med-down');
-    }
+	.body--fixed-nav {
+		padding-top: get-nav-height('med-down');
+	}
 }
   
 .rc-header-navigation {
-    height: get-nav-height('med-down');
-    border-bottom: solid 1px colour('brand', 'light-grey');
-    background-color: colour('brand', 'white');
-    position: fixed;
-    top: 0;
-    max-width: get-maxWidth('x-large');
-    width: 100%;
-    z-index: 12;
-    transition: movementSetting('transition', 'base');
-    
-    @media (get-breakpoint('med')) {
-        height: get-nav-height('med-up');
-        
-        &.scrolled {
-            height: get-nav-height('med-up-scrolled');
-        }
-    }
+	height: get-nav-height('med-down');
+	border-bottom: solid 1px colour('brand', 'light-grey');
+	background-color: colour('brand', 'white');
+	position: fixed;
+	top: 0;
+	max-width: get-maxWidth('x-large');
+	width: 100%;
+	z-index: 12;
+	transition: movementSetting('transition', 'base');
+	
+	@media (get-breakpoint('med')) {
+		height: get-nav-height('med-up');
+		
+		&.scrolled {
+			height: get-nav-height('med-up-scrolled');
+		}
+	}
 
-    @media (get-breakpoint('large')) {
-        height: get-nav-height('large-up');
-        
-        &.scrolled {
-            height: get-nav-height('large-up-scrolled');
-        }
-    }
+	@media (get-breakpoint('large')) {
+		height: get-nav-height('large-up');
+		
+		&.scrolled {
+			height: get-nav-height('large-up-scrolled');
+		}
+	}
 
-    & > ul {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        height: 100%;
-        position: relative;
-        margin: 0;
-        padding: 0 get-spacer('small');
-    }
+	& > ul {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		height: 100%;
+		position: relative;
+		margin: 0;
+		padding: 0 get-spacer('small');
+	}
 
-    &.scrolled {
-        @include box-shadow(2px, 0, 8px, rgba(black, .1));
+	&.scrolled {
+		@include box-shadow(2px, 0, 8px, rgba(black, .1));
 
-        & .svg-logo {
-            &:first-of-type {
-                opacity: 0;
-            }
-            &:last-of-type {
-                opacity: 1;
-            }
-        }
-    }
+		& .svg-logo {
+			&:first-of-type {
+				opacity: 0;
+			}
+			&:last-of-type {
+				opacity: 1;
+			}
+		}
+	}
 }
 
 .rc-header-navigation__item {
-    @media (get-breakpoint('med')) {
-        margin: 0 get-spacer('small') / 4;
-    }
+	@media (get-breakpoint('med')) {
+		margin: 0 get-spacer('small') / 4;
+	}
 
-    & [class^="rc-icon"] {
-        transform: scale(.6);
-        opacity: .2;
-        filter: saturate(0);
-        transition:  movementSetting('transition', 'base');
+	& [class^="rc-icon"] {
+		transform: scale(.6);
+		opacity: .2;
+		filter: saturate(0);
+		transition:  movementSetting('transition', 'base');
 
-        @media (get-breakpoint('med')) {
-            transform: scale(.8);
-        }
-    }
+		@media (get-breakpoint('med')) {
+			transform: scale(.8);
+		}
+	}
 
-    & .rc-icon-close--red,
-    &:hover [class^="rc-icon"] {
-        opacity: 1;
-        filter: saturate(100%);
-        cursor: pointer;
-    }
+	& .rc-icon-close--red,
+	&:hover [class^="rc-icon"] {
+		opacity: 1;
+		filter: saturate(100%);
+		cursor: pointer;
+	}
 
-    &:first-of-type {
-        margin-right: auto;
-    }
+	&:first-of-type {
+		margin-right: auto;
+	}
 }
 
 .rc-header-navigation__logo {
-    & > .svg-link {
-        position: relative;
-        display: inline-block;
-        width: 200px;
-        height: 60px;
+	& > .svg-link {
+		position: relative;
+		display: inline-block;
+		width: 200px;
+		height: 60px;
 
-        &::after {
-            content: ''; 
-            position: absolute; 
-            top: 0; 
-            right: 0; 
-            bottom: 0; 
-            left: 0;
-          }
-    }
-    
-    & .switch {
-        pointer-events: none;
+		&::after {
+			content: ''; 
+			position: absolute; 
+			top: 0; 
+			right: 0; 
+			bottom: 0; 
+			left: 0;
+		}
+	}
+	
+	& .switch {
+		pointer-events: none;
 
-      &:first-of-type {
-        height: 45px;
-        transition: movementSetting('transition', 'base');
+	  &:first-of-type {
+		height: 45px;
+		transition: movementSetting('transition', 'base');
 
-        @media (get-breakpoint('med')){
-            height: 60px;
-        }
-      }
-      
-      &:last-of-type {
-        height: 30px;
-        opacity: 0;
-        transition: movementSetting('transition', 'base');
-      }
-    }
+		@media (get-breakpoint('med')){
+			height: 60px;
+		}
+	  }
+	  
+	  &:last-of-type {
+		height: 30px;
+		opacity: 0;
+		transition: movementSetting('transition', 'base');
+	  }
+	}
 }
 
 .rc-header-navigation__search-bar {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: 0;
-    width: 100%;
-    opacity: 0;
-    transition: movementSetting('transition', 'base');
-    z-index: -1;
-    border-bottom: none;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: 0;
+	width: 100%;
+	z-index: 12; // Above shade
+	display: none;
+	animation: fadeIn .3s;
+	animation-direction: reverse;
+	border-bottom: none;
 
-    & > [type="search"] {
-        height: 100%;
-        padding: 0;
-        padding-left: 5rem;
-    }
+	& > [type="search"] {
+		height: 100%;
+		padding: 0;
+		padding-left: 5rem;
+	}
 
-    &.open {
-      opacity: 1;
-      z-index: 12;
-    }
+	&.open,
+	&.open + .shade {
+		display: block;
+		animation: fadeIn .3s;
+	}
 
-    & + .shade {
-      display: none;
-      animation: fadeIn .3s;
-      animation-direction: reverse;
-    }
-
-    &.open + .shade {
-      display: block;
-      animation: fadeIn .3s;
-    }
+	& + .shade {
+		display: none;
+		animation: fadeIn .3s;
+		animation-direction: reverse;
+	}
 }
