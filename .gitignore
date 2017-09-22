@@ -9,6 +9,7 @@ node_modules/
 # dist
 src/svgs/coloured
 src/svgs/output
+src/svgs/flags
 icons.scss
 royal-canin.sprite--flags.svg
 .eslintrc.json
