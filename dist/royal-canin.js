@@ -3667,10 +3667,10 @@ RCWDL.utilities.getSiblings = function (el) {
   'use strict';
 
   var siblings = [];
-  el = el.parentNode.firstChild;
+  el = el.parentNode.children[0];
   do {
     siblings.push(el);
-  } while (el = el.nextSibling);
+  } while (el = el.nextElementSibling);
   return siblings;
 };
 
