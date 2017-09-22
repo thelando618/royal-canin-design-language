@@ -1,56 +1,53 @@
-*, *:before, *:after {
-  box-sizing: inherit;
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
 }
-
 
 // Clears
 %clearfix {
-  &:before,
-  &:after {
-    content: " ";
-    display: table;
-  }
+	&::before,
+	&::after {
+		content: "";
+		display: table;
+	}
 }
 
-%clearfix:after {
-  clear: both;
+%clearfix::after {
+	clear: both;
 }
 
 %spacing-reset {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 .clearfix {
-  @extend %clearfix;
+	@extend %clearfix;
 }
 
-
 section {
-  position: relative;
-  @extend %clearfix;
+	position: relative;
+	@extend %clearfix;
 }
 
 $grid--standard: (
-        columns: 12,  // The number of columns in your grid
-        gutters: 1/4, // The size of a gutter in relation to a single column
+	columns: 12,  // The number of columns in your grid
+	gutters: 1 / 4, // The size of a gutter in relation to a single column
 );
 
-$grid--no-gutters: (
-        columns: 12,  // The number of columns in your grid
-        gutters: 0, // The size of a gutter in relation to a single column
+$grid--no-gutters: ( 
+	columns: 12, // The number of columns in your grid
+	gutters: 0, // The size of a gutter in relation to a single column
 );
-
-
 
 ///////////// Layouts Utilities ////////////////
-
-$max-widths: (
-        'large':  1240,
-        'medium': 800,
-        'small': 300
+$max-widths: ( 
+	'x-large': 1440,
+	'large': 1240,
+	'medium': 800,
+	'small': 300
 );
-
 
 /**
   * Get Max Width function
@@ -61,13 +58,13 @@ $max-widths: (
   * @returns {Number}
   */
 @function get-maxWidth($name) {
-  @return map-get($max-widths, $name) * 1px;
+	@return map-get($max-widths, $name) * 1px;
 }
 
-$spacers: (
-        'large':  (3rem, 3.5rem, 4rem, 4.5rem, 6rem, 7rem),
-        'medium': (2rem, 2.5rem, 3rem, 4rem, 4.5rem, 5rem),
-        'small': (.5rem, .5rem, 1rem, 1.5rem, 1.75rem, 2rem)
+$spacers: ( 
+	'large': (3rem, 3.5rem, 4rem, 4.5rem, 6rem, 7rem),
+	'medium': (2rem, 2.5rem, 3rem, 4rem, 4.5rem, 5rem),
+	'small': (.5rem, .5rem, 1rem, 1.5rem, 1.75rem, 2rem)
 );
 
 /**
@@ -79,8 +76,9 @@ $spacers: (
   * @returns {Number}
   */
 @function get-spacer($size) {
-  @return nth(map-get($spacers, $size), 3);
+	@return nth(map-get($spacers, $size), 3);
 }
+
 
 /**
   * Generate spacer utility classes using the $spacers sass map.
@@ -95,45 +93,45 @@ $spacers: (
 
 $spacingTypes: map-keys($spacers);
 @each $spacer in $spacingTypes {
-  .spacer-#{$spacer} {
-    $breakpointSizes: map-keys($breakpoints);
-    padding: nth(map-get($spacers, $spacer), 1);
+	.spacer-#{$spacer} {
+		$breakpointSizes: map-keys($breakpoints);
+		padding: nth(map-get($spacers, $spacer), 1);
 
 
-    $counter: 1;
-    @each $breakpoint in $breakpointSizes {
-      @media (get-breakpoint($breakpoint)) {
-        padding: nth(map-get($spacers, $spacer), $counter);
-      }
-      $counter: $counter + 1;
-    }
-  }
-  .spacer-sides-#{$spacer} {
-    $breakpointSizes: map-keys($breakpoints);
-    padding: 0 nth(map-get($spacers, $spacer), 1);
+		$counter: 1;
+		@each $breakpoint in $breakpointSizes {
+			@media (get-breakpoint($breakpoint)) {
+				padding: nth(map-get($spacers, $spacer), $counter);
+			}
+			$counter: $counter + 1;
+		}
+	}
+	.spacer-sides-#{$spacer} {
+		$breakpointSizes: map-keys($breakpoints);
+		padding: 0 nth(map-get($spacers, $spacer), 1);
 
-    $counter: 1;
-    @each $breakpoint in $breakpointSizes {
-      @media (get-breakpoint($breakpoint)) {
-        padding: 0 nth(map-get($spacers, $spacer), $counter);
-      }
-      $counter: $counter + 1;
-    }
-  }
+		$counter: 1;
+		@each $breakpoint in $breakpointSizes {
+			@media (get-breakpoint($breakpoint)) {
+				padding: 0 nth(map-get($spacers, $spacer), $counter);
+			}
+			$counter: $counter + 1;
+		}
+	}
 
-  .spacer-bottom-#{$spacer} {
-    $breakpointSizes: map-keys($breakpoints);
+	.spacer-bottom-#{$spacer} {
+		$breakpointSizes: map-keys($breakpoints);
 
-    margin-bottom: nth(map-get($spacers, $spacer), 1);
+		margin-bottom: nth(map-get($spacers, $spacer), 1);
 
-    $counter: 1;
-    @each $breakpoint in $breakpointSizes {
-      @media (get-breakpoint($breakpoint)) {
-        margin-bottom: nth(map-get($spacers, $spacer), $counter);
-      }
-      $counter: $counter + 1;
-    }
-  }
+		$counter: 1;
+		@each $breakpoint in $breakpointSizes {
+			@media (get-breakpoint($breakpoint)) {
+				margin-bottom: nth(map-get($spacers, $spacer), $counter);
+			}
+			$counter: $counter + 1;
+		}
+	}
 }
 
 ///////////// Layouts ////////////////
@@ -141,93 +139,99 @@ $spacingTypes: map-keys($spacers);
 $navigation-width: 240px;
 
 .navigation + div {
-  margin: get-spacer('small') auto;
-  width: 90%;
-  margin-top: 90px;
+	margin: get-spacer('small') auto;
+	width: 90%;
+	margin-top: 90px;
 
-  @media (get-breakpoint('small')) {
-  margin: get-spacer('large') auto;
-  }
+	@media (get-breakpoint('small')) {
+		margin: get-spacer('large') auto;
+	}
 }
 
-@media ( get-breakpoint('large') ) {
-  .navigation + div {
-    padding-left: $navigation-width;
-  }
+@media (get-breakpoint('large')) {
+	.navigation + div {
+		padding-left: $navigation-width;
+	}
 }
 
 
 %layout--two-one--base-small > .rc-column {
-    & > img,
-    & > figure > img {
-      margin: 0 auto;
-    }
+	& > img,
+	& > figure > img {
+		margin: 0 auto;
+	}
 }
 
 .layout--one-two {
-  @extend %layout--two-one--base-small;
+	@extend %layout--two-one--base-small;
 }
 
 .layout--two-one {
-  @extend %layout--two-one--base-small;
+	@extend %layout--two-one--base-small;
 }
 
 .vertical-align {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .horizontal-align {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 .center-align {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
 }
 
 %stick {
-  position: absolute;
+	position: absolute;
 }
 
 .stick-left {
-  @extend %stick;
-  left: 0;
-  right: auto;
+	@extend %stick;
+	left: 0;
+	right: auto;
 }
 
 .stick-right {
-  @extend %stick;
-  right: 0;
-  left: auto;
+	@extend %stick;
+	right: 0;
+	left: auto;
 }
 
 %show-at-large-only {
-  display: none;
+	display: none;
 
-  @media (get-breakpoint('large')) {
-    display: block;
-  }
+	@media (get-breakpoint('large')) {
+		display: block;
+	}
 }
 
 .show-at-large-only {
-  @extend %show-at-large-only;
+	@extend %show-at-large-only;
 }
 
 .max-width--large {
-  max-width: get-maxWidth('large');
-  margin-left: auto;
-  margin-right: auto;
+	max-width: get-maxWidth('large');
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.max-width--x-large {
+	max-width: get-maxWidth('x-large');
+	margin-left: auto;
+	margin-right: auto;
 }
 
 
 .text-column-padding-right {
-  @media (get-breakpoint('large')) {
-    padding-right: get-spacer('medium');
-  }
+	@media (get-breakpoint('large')) {
+		padding-right: get-spacer('medium');
+	}
 }

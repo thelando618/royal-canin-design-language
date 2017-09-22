@@ -54,7 +54,7 @@
 .rc-navigation--footer > ul {
   margin-bottom: get-spacer('small') * 2;
 
-  .rc-navigation__list-item {
+  .rc-navigation__item {
     margin-bottom: get-spacer('small') / 2;
   }
 }
@@ -92,7 +92,6 @@
   @media (get-breakpoint('x-large')) {
     display: flex;
     justify-content: space-between;
-
   }
 
   & .sub-navigation__list {
