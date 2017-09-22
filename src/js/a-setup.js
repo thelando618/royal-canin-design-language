@@ -139,6 +139,26 @@ RCWDL.posTop = function () {
 };
 
 /**
+ * Get all siblings of an element.
+ *
+ * @param {Node} el
+ * Target DOM node item.
+ * 
+ * @return {Node}
+ * Returns siblings.
+ */
+RCWDL.utilities.getSiblings = function (el) {
+  'use strict';
+
+  var siblings = [];
+  el = el.parentNode.children[0];
+  do {
+    siblings.push(el);
+  } while (el = el.nextElementSibling);
+  return siblings;
+};
+
+/**
  * Used to add/remove classes on a target element.
  *
  * @param {Node} target
@@ -185,6 +205,49 @@ RCWDL.utilities.toggleClass = function (target, className) {
     }
   }
 };
+
+/**
+ * Used to add classes on a target element.
+ *
+ * @param {Node} target
+ * Targeted DOM node item.
+ *
+ * @param {String} className
+ * Class name to be added.
+ */
+RCWDL.utilities.addClass = function (target, className) {
+  'use strict';
+
+  if (target.classList) {
+    target.classList.add(className);
+  }
+  // IE 8+ support.
+  else {
+    target.className += ' ' + className;
+  }
+};
+
+/**
+ * Used to remove classes on a target element.
+ *
+ * @param {Node} target
+ * Targeted DOM node item.
+ *
+ * @param {String} className
+ * Class name to be removed.
+ */
+RCWDL.utilities.removeClass = function (target, className) {
+  'use strict';
+
+  if (target.classList) {
+    target.classList.remove(className);
+  }
+  // IE 8+ support.
+  else {
+    target.className = target.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+  }
+};
+
 
 /**
  * Takes two DOM nodes and wraps one around the other.

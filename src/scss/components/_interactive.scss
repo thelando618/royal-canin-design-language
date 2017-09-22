@@ -196,6 +196,15 @@
   }
 }
 
+.menu-toggle-icon {
+  height: 32px;
+  width: 36px;
+  margin-top: 9px;
+  margin-left: 9px;
+  display: inline-block;
+  pointer-events: none;
+}
+
 .menu-toggle--left {
   @extend %menu-toggle;
   left: 0;
