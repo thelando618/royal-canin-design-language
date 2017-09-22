@@ -20,10 +20,10 @@ RCWDL.navigation.changeNavigationOnScroll = function (headerNavSelector, mobileF
       var headerNav = document.querySelector(headerNavSelector);
 
       if (RCWDL.posTop() > 100) {
-        headerNav.classList.add('scrolled');
+        RCWDL.utilities.addClass(headerNav, 'scrolled');
       }
       else {
-        headerNav.classList.remove('scrolled');
+        RCWDL.utilities.removeClass(headerNav, 'scrolled');
       }
     });
   }
@@ -36,12 +36,12 @@ RCWDL.navigation.changeNavigationOnScroll = function (headerNavSelector, mobileF
     window.addEventListener('scroll', function () {
 
       if (RCWDL.posTop() > previous) {
-        if (!mainNav.classList.contains('open')) {
-          footerNav.classList.add('scrolled');
+        if (!RCWDL.utilities.hasClass(mainNav, 'open')) {
+          RCWDL.utilities.addClass(footerNav, 'scrolled');
         }
       }
       else {
-        footerNav.classList.remove('scrolled');
+        RCWDL.utilities.removeClass(footerNav, 'scrolled');
       }
       previous = RCWDL.posTop();
     });
@@ -69,24 +69,27 @@ RCWDL.navigation.searchBar = function (searchBarTriggerSelector, mainNavSelector
   searchBarTrigger.addEventListener('click', function () {
     if (mainNav != null) {
       if (RCWDL.utilities.hasClass(mainNav, 'open')) {
-        mainNav.classList.remove('open');
+        RCWDL.utilities.removeClass(mainNav, 'open');
         document.body.style.overflow = ''; // Always allow page scrolling when search open
 
         if (mainNavToggler !== null) {
-          mainNavToggler.contentDocument
-            .querySelector('.svg-toggle')
-            .classList.remove('active');
+          var svg = mainNavToggler.contentDocument.querySelector('.svg-toggle');
+          RCWDL.utilities.removeClass(svg, 'active');
         }
       }
     }
-    Array.prototype.filter.call(searchBarTrigger.parentNode.children, function (child) {
-      if (child !== searchBarTrigger) {
-        child.classList.toggle('fade');
+
+    var siblings = RCWDL.utilities.getSiblings(searchBarTrigger);
+
+    siblings.forEach(function (sibling) {
+      if (sibling !== searchBarTrigger) {
+        RCWDL.utilities.toggleClass(sibling, 'fade');
       }
       else {
-        child.classList.toggle('active');
+        RCWDL.utilities.toggleClass(searchBarTrigger, 'active');
       }
     });
+
   });
 
   RCWDL.ready(RCWDL.utilities.triggerAndTargetClassModifier.init('click', searchBarTriggerSelector, '[data-js-trigger]', '.open', null));
@@ -117,16 +120,14 @@ RCWDL.navigation.burgerToggle = function (triggerSelector, targetSelector) {
     Object.keys(targets).forEach(function (item) {
       targets[item].addEventListener('click', function (e) {
         var listNode = e.target.parentNode.parentNode;
+        var svg = e.target.querySelector(targetSelector).contentDocument.querySelector('.svg-toggle');
+        var siblings = RCWDL.utilities.getSiblings(listNode);
 
-        e.target
-          .querySelector(targetSelector)
-          .contentDocument
-          .querySelector('.svg-toggle')
-          .classList.toggle('active');
+        RCWDL.utilities.toggleClass(svg, 'active');
 
-        Array.prototype.filter.call(listNode.parentNode.children, function (child) {
-          if (child !== listNode) {
-            child.classList.toggle('fade');
+        siblings.forEach(function (sibling) {
+          if (sibling !== listNode) {
+            RCWDL.utilities.toggleClass(sibling, 'fade');
           }
         });
       });
