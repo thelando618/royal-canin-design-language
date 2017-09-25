@@ -4578,31 +4578,32 @@ RCWDL.navigation.searchBar = function (searchBarTriggerSelector, mainNavSelector
   var mainNav = document.querySelector(mainNavSelector);
   var mainNavToggler = document.querySelector('[data-js-animate-svg-target]');
 
-  searchBarTrigger.addEventListener('click', function () {
-    if (mainNav != null) {
-      if (RCWDL.utilities.hasClass(mainNav, 'open')) {
-        RCWDL.utilities.removeClass(mainNav, 'open');
-        document.body.style.overflow = ''; // Always allow page scrolling when search open
+  if (searchBarTrigger !== null) {
+    searchBarTrigger.addEventListener('click', function () {
+      if (mainNav != null) {
+        if (RCWDL.utilities.hasClass(mainNav, 'open')) {
+          RCWDL.utilities.removeClass(mainNav, 'open');
+          document.body.style.overflow = ''; // Always allow page scrolling when search open
 
-        if (mainNavToggler !== null) {
-          var svg = mainNavToggler.contentDocument.querySelector('.svg-toggle');
-          RCWDL.utilities.removeClass(svg, 'active');
+          if (mainNavToggler !== null) {
+            var svg = mainNavToggler.contentDocument.querySelector('.svg-toggle');
+            RCWDL.utilities.removeClass(svg, 'active');
+          }
         }
       }
-    }
 
-    var siblings = RCWDL.utilities.getSiblings(searchBarTrigger);
+      var siblings = RCWDL.utilities.getSiblings(searchBarTrigger);
 
-    siblings.forEach(function (sibling) {
-      if (sibling !== searchBarTrigger) {
-        RCWDL.utilities.toggleClass(sibling, 'fade');
-      }
-      else {
-        RCWDL.utilities.toggleClass(searchBarTrigger, 'active');
-      }
+      siblings.forEach(function (sibling) {
+        if (sibling !== searchBarTrigger) {
+          RCWDL.utilities.toggleClass(sibling, 'fade');
+        }
+        else {
+          RCWDL.utilities.toggleClass(searchBarTrigger, 'active');
+        }
+      });
     });
-
-  });
+  }
 
   RCWDL.ready(RCWDL.utilities.triggerAndTargetClassModifier.init('click', searchBarTriggerSelector, '[data-js-trigger]', '.open', null));
 };
