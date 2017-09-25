@@ -1,8 +1,8 @@
-[class^="rc-icon-"].small {
+[class*="rc-icon-"].small {
   transform: scale(0.5);
 }
 
-[class^="rc-icon-"] {
+[class*="rc-icon-"] {
   transform: scale(1);
   height: 32px;
   width: 32px;
@@ -11,7 +11,7 @@
   transform-origin: 32px 32px;
 }
 
-[class^="rc-icon-"].large {
+[class*="rc-icon-"].large {
   transform: scale(2);
 }
 
