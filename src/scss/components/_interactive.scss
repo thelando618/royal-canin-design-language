@@ -218,3 +218,41 @@
   right: 0;
   transform: translate(-1.25rem, 1.25rem);
 }
+
+
+////////// Styles used to animate the toggle svg //////////
+
+.toggle-svg .bar {
+  fill: colour('brand', 'light-grey');
+  pointer-events: all;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.menu-toggle-icon.open .bar {
+  fill: #e2001a;
+}
+
+.toggle-svg .bar-1 {
+  transform: scaleX(0.7);
+}
+
+.toggle-svg .bar-3 {
+  transform: scaleX(0.8);
+}
+
+.toggle-svg.open .bar-1 {
+  transform: scaleX(1) rotate(45deg) translateX(-1px);
+  transform-origin: top left;
+}
+.toggle-svg.open .bar-2 {
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.toggle-svg.open .bar-3 {
+  transform: scaleX(1) rotate(-45deg) translateX(-1px);
+  transform-origin: bottom left;
+}
+
+////////////////////////////////////////////////////////////
+

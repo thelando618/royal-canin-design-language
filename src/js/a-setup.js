@@ -432,3 +432,62 @@ RCWDL.utilities.triggerAndTargetClassModifier = {
     }
   }
 };
+
+
+
+/**
+ * Looks for objects tagged with the data-js-import-interactive-svg attribute then write them into the DOM.
+ *
+ * @param {String} interactiveSvg
+ * Css selector used to target objects containing svgs.
+ **
+ */
+RCWDL.utilities.svgAnimation = function (interactiveSvg) {
+  'use strict';
+
+  function fetchXML  (url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.onreadystatechange = function (evt) {
+      //Do not explicitly handle errors, those should be
+      //visible via console output in the browser.
+      if (xhr.readyState === 4) {
+        callback(xhr.responseXML);
+      }
+    };
+    xhr.send(null);
+  }
+
+  var svgs = document.querySelectorAll(interactiveSvg);
+
+  if (svgs !== null) {
+    // Import the svgs from the data url.
+    Object.keys(svgs).forEach(function (svg) {
+
+      var dataUrl = svgs[svg].getAttribute('data');
+      var classes = svgs[svg].getAttribute('class');
+      var dataTarget = svgs[svg].getAttribute('data-js-target');
+
+      fetchXML(dataUrl, function (newSVGDoc) {
+        // Import it into the current DOM.
+        var importedSvg = document.importNode(newSVGDoc.documentElement, true);
+
+        classes.split(' ').forEach(function (singleClass) {
+          RCWDL.utilities.addClass(importedSvg, singleClass);
+        });
+
+        importedSvg.setAttribute('data-js-target', dataTarget);
+
+        svgs[svg].parentNode.replaceChild(importedSvg, svgs[svg]);
+
+        // Attach the class modifier action after the item has been added to the DOM.
+        RCWDL.utilities.triggerAndTargetClassModifier.init('click', '[data-js-trigger="' + dataTarget + '"]', '[data-js-trigger]', '.open', null);
+        RCWDL.utilities.triggerAndTargetClassModifier.init('click', '[data-js-trigger="' + dataTarget + '"]', 'svg-toggle', '.active', null);
+
+      });
+
+    });
+  }
+};
+
+RCWDL.ready(RCWDL.utilities.svgAnimation('[data-js-import-interactive-svg]'));

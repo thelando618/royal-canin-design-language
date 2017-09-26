@@ -102,38 +102,3 @@ if (window.innerWidth < 800) {
 else {
   RCWDL.ready(RCWDL.navigation.searchBar('[data-js-trigger="search-bar"]', '.rc-main-navigation__wrapper'));
 }
-
-
-/**
- * Added toggle to svgs to target their internal svg/paths to trigger animations.
- *
- * @param {String} triggerSelector Css selector supplied for targeting the trigger elements.
- * 
- * @param {String} targetSelector Css selector supplied for targeting the target elements.
- * 
- */
-RCWDL.navigation.burgerToggle = function (triggerSelector, targetSelector) {
-  'use strict';
-
-  var targets = document.querySelectorAll(triggerSelector);
-
-  if (targets !== null) {
-    Object.keys(targets).forEach(function (item) {
-      targets[item].addEventListener('click', function (e) {
-        var listNode = e.target.parentNode.parentNode;
-        var svg = e.target.querySelector(targetSelector).contentDocument.querySelector('.svg-toggle');
-        var siblings = RCWDL.utilities.getSiblings(listNode);
-
-        RCWDL.utilities.toggleClass(svg, 'active');
-
-        siblings.forEach(function (sibling) {
-          if (sibling !== listNode) {
-            RCWDL.utilities.toggleClass(sibling, 'fade');
-          }
-        });
-      });
-    });
-  }
-};
-
-RCWDL.ready(RCWDL.navigation.burgerToggle('[data-js-animate-svg]', '[data-js-animate-svg-target]'));

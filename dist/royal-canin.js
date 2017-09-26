@@ -3949,6 +3949,64 @@ RCWDL.utilities.triggerAndTargetClassModifier = {
   }
 };
 
+
+
+/**
+ * Looks for objects tagged with the data-js-import-interactive-svg attribute then write them into the DOM.
+ *
+ * @param {String} interactiveSvg
+ * Css selector used to target objects containing svgs.
+ **
+ */
+RCWDL.utilities.svgAnimation = function (interactiveSvg) {
+  'use strict';
+
+  function fetchXML  (url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.onreadystatechange = function (evt) {
+      //Do not explicitly handle errors, those should be
+      //visible via console output in the browser.
+      if (xhr.readyState === 4) {
+        callback(xhr.responseXML);
+      }
+    };
+    xhr.send(null);
+  }
+
+  var svgs = document.querySelectorAll(interactiveSvg);
+
+  if (svgs !== null) {
+    // Import the svgs from the data url.
+    Object.keys(svgs).forEach(function (svg) {
+
+      var dataUrl = svgs[svg].getAttribute('data');
+      var classes = svgs[svg].getAttribute('class');
+      var dataTarget = svgs[svg].getAttribute('data-js-target');
+
+      fetchXML(dataUrl, function (newSVGDoc) {
+        // Import it into the current DOM.
+        var importedSvg = document.importNode(newSVGDoc.documentElement, true);
+
+        classes.split(' ').forEach(function (singleClass) {
+          RCWDL.utilities.addClass(importedSvg, singleClass);
+        });
+
+        importedSvg.setAttribute('data-js-target', dataTarget);
+
+        svgs[svg].parentNode.replaceChild(importedSvg, svgs[svg]);
+
+        // Attach the class modifier action after the item has been added to the DOM.
+        RCWDL.utilities.triggerAndTargetClassModifier.init('click', '[data-js-trigger="' + dataTarget + '"]', '[data-js-trigger]', '.open', null);
+        RCWDL.utilities.triggerAndTargetClassModifier.init('click', '[data-js-trigger="' + dataTarget + '"]', 'svg-toggle', '.active', null);
+
+      });
+
+    });
+  }
+};
+
+RCWDL.ready(RCWDL.utilities.svgAnimation('[data-js-import-interactive-svg]'));
 /**
  * Takes a selector and converts into a carousel using the tiny-slider library.
  * @type {{init: RCWDL.features.Carousel.init, create: RCWDL.features.Carousel.create}}
@@ -4614,41 +4672,6 @@ if (window.innerWidth < 800) {
 else {
   RCWDL.ready(RCWDL.navigation.searchBar('[data-js-trigger="search-bar"]', '.rc-main-navigation__wrapper'));
 }
-
-
-/**
- * Added toggle to svgs to target their internal svg/paths to trigger animations.
- *
- * @param {String} triggerSelector Css selector supplied for targeting the trigger elements.
- * 
- * @param {String} targetSelector Css selector supplied for targeting the target elements.
- * 
- */
-RCWDL.navigation.burgerToggle = function (triggerSelector, targetSelector) {
-  'use strict';
-
-  var targets = document.querySelectorAll(triggerSelector);
-
-  if (targets !== null) {
-    Object.keys(targets).forEach(function (item) {
-      targets[item].addEventListener('click', function (e) {
-        var listNode = e.target.parentNode.parentNode;
-        var svg = e.target.querySelector(targetSelector).contentDocument.querySelector('.svg-toggle');
-        var siblings = RCWDL.utilities.getSiblings(listNode);
-
-        RCWDL.utilities.toggleClass(svg, 'active');
-
-        siblings.forEach(function (sibling) {
-          if (sibling !== listNode) {
-            RCWDL.utilities.toggleClass(sibling, 'fade');
-          }
-        });
-      });
-    });
-  }
-};
-
-RCWDL.ready(RCWDL.navigation.burgerToggle('[data-js-animate-svg]', '[data-js-animate-svg-target]'));
 
 /**
  * Extension of the HTML element progress.

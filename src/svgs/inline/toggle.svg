@@ -1,54 +1,6 @@
-<svg class="inline-svg toggle-svg" width="32" height="32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+<svg class="" width="32" height="32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 	  viewBox="0 0 32 32" xml:space="preserve" preserveAspectRatio="xMaxYMax meet">
-
-<style>
-        /* <![CDATA[ */
-
-.svg-toggle {
-  fill: #C4C4C4;
-  pointer-events: all;
-  cursor: pointer;
-  transform: scale(0.8);
-  transform-origin: center;
-}
-
-.svg-toggle .bar {
-  transition: .2s ease;
-}
-
-.svg-toggle.active {
-}
-
-.svg-toggle.active .bar {
-  fill: #e2001a;
-}
-
-.svg-toggle .bar-1 {
-  transform: scaleX(0.7);
-}
-.svg-toggle .bar-2 {
-}
-.svg-toggle .bar-3 {
-  transform: scaleX(0.8);
-}
-
-.svg-toggle.active .bar-1 {
-  transform: scaleX(1) rotate(45deg) translateX(-1px);
-  transform-origin: top left;
-}
-.svg-toggle.active .bar-2 {
-  transform: scaleX(0);
-  transform-origin: left;
-}
-.svg-toggle.active .bar-3 {
-  transform: scaleX(1) rotate(-45deg) translateX(-1px);
-  transform-origin: bottom left;
-}
-
-/* ]]> */
-</style>
-
-        <title>Mobile Menu</title>
+     <title>Mobile Menu</title>
 
         <g class="svg-toggle">
         
