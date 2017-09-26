@@ -27,13 +27,14 @@
     background-color: colour('functional', 'text');
     color: colour('brand', 'white');
     max-width: 99999px;
-    width: 100%;
     border: none;
     padding-right: 3rem;
     border-radius: 0;
     text-align: left;
     min-height: 1rem;
     position: absolute;
+    left: 0;
+    right: 0;
 
     & > a {
       color: colour('brand', 'white');
