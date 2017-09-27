@@ -1,9 +1,9 @@
 /**
  * Adds an interactive UI slider where you can set the min/max and steps, inputs are then reflected in the nested input element.
  *
- * @type {{init: RCWDL.features.Slider.init, create: RCWDL.features.Slider.create, setupKeyboard: RCWDL.features.Slider.setupKeyboard, updateInput: RCWDL.features.Slider.updateInput}}
+ * @type {{init: RCDL.features.Slider.init, create: RCDL.features.Slider.create, setupKeyboard: RCDL.features.Slider.setupKeyboard, updateInput: RCDL.features.Slider.updateInput}}
  */
-RCWDL.features.Slider = {
+RCDL.features.Slider = {
 
   /**
    * Receives a css selector and transforms the target wrapper div and input into a slider.
@@ -20,11 +20,11 @@ RCWDL.features.Slider = {
 
         Object.keys(range).forEach(function (item) {
           // Create Slider
-          RCWDL.features.Slider.create(range[item]);
+          RCDL.features.Slider.create(range[item]);
         });
       }
       else {
-        RCWDL.features.Slider.create(range[0]);
+        RCDL.features.Slider.create(range[0]);
       }
     }
   },
@@ -64,8 +64,8 @@ RCWDL.features.Slider = {
       }
     });
 
-    RCWDL.features.Slider.setupKeyboard(item);
-    RCWDL.features.Slider.updateInput(item);
+    RCDL.features.Slider.setupKeyboard(item);
+    RCDL.features.Slider.updateInput(item);
   },
 
   /**
@@ -139,4 +139,4 @@ RCWDL.features.Slider = {
   }
 };
 
-RCWDL.ready(RCWDL.features.Slider.init('[data-js-slider]'));
+RCDL.ready(RCDL.features.Slider.init('[data-js-slider]'));

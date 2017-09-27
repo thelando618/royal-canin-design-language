@@ -1,9 +1,9 @@
 /**
  * Function factory object for adding features to form elements.
  *
- * @type {{labels: RCWDL.features.FormElements.labels, passwordField: RCWDL.features.FormElements.passwordField}}
+ * @type {{labels: RCDL.features.FormElements.labels, passwordField: RCDL.features.FormElements.passwordField}}
  */
-RCWDL.features.FormElements = {
+RCDL.features.FormElements = {
 
   /**
    * To enhance the label behaviour (Moving the label out of the input when in use), we also want to keep the label out
@@ -88,8 +88,8 @@ RCWDL.features.FormElements = {
   }
 };
 
-RCWDL.ready(RCWDL.features.FormElements.labels('.rc-input'));
-RCWDL.ready(RCWDL.features.FormElements.passwordField('[type="password"]'));
+RCDL.ready(RCDL.features.FormElements.labels('.rc-input'));
+RCDL.ready(RCDL.features.FormElements.passwordField('[type="password"]'));
 
 /**
  * Converts selector element into Choices.js selectors with improved accessibility and styling.
@@ -98,7 +98,7 @@ RCWDL.ready(RCWDL.features.FormElements.passwordField('[type="password"]'));
  * CSS selector for targeting select elements. Default: [data-js-select]
  * @constructor
  */
-RCWDL.features.Selects = function (selector) {
+RCDL.features.Selects = function (selector) {
   'use strict';
   selector = selector || '[data-js-select]';
   var selects = document.querySelector(selector);
@@ -116,15 +116,15 @@ RCWDL.features.Selects = function (selector) {
   }
 };
 
-RCWDL.ready(RCWDL.features.Selects());
+RCDL.ready(RCDL.features.Selects());
 
 /**
  * Function generate fallback datepicker calendars when the element type date isn't supported.
  *
- * @type {{init: RCWDL.features.Datepickers.init, createDatePicker: RCWDL.features.Datepickers.createDatePicker}}
+ * @type {{init: RCDL.features.Datepickers.init, createDatePicker: RCDL.features.Datepickers.createDatePicker}}
  */
 
-RCWDL.features.Datepickers = {
+RCDL.features.Datepickers = {
 
   /**
    * Initialisation function to check for and cycle through target elements.
@@ -143,11 +143,11 @@ RCWDL.features.Datepickers = {
 
         if (Array.isArray(datepickers)) {
           datepickers.forEach(function (picker) {
-            RCWDL.features.Datepickers.createDatePicker(picker);
+            RCDL.features.Datepickers.createDatePicker(picker);
           });
         }
         else {
-          RCWDL.features.Datepickers.createDatePicker(datepickers);
+          RCDL.features.Datepickers.createDatePicker(datepickers);
         }
       }
     }
@@ -172,4 +172,4 @@ RCWDL.features.Datepickers = {
   }
 };
 
-RCWDL.ready(RCWDL.features.Datepickers.init());
+RCDL.ready(RCDL.features.Datepickers.init());

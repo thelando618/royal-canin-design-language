@@ -1,9 +1,9 @@
 /**
  * Tool tip functionality added with tippy js library.
  *
- * @type {{init: RCWDL.features.Tooltip.init}}
+ * @type {{init: RCDL.features.Tooltip.init}}
  */
-RCWDL.features.Tooltip = {
+RCDL.features.Tooltip = {
 
   /**
    * Initialise the tippy library against the targetting selector.
@@ -43,4 +43,4 @@ RCWDL.features.Tooltip = {
   }
 };
 
-RCWDL.ready(RCWDL.features.Tooltip.init('[data-tooltip]'));
+RCDL.ready(RCDL.features.Tooltip.init('[data-tooltip]'));

@@ -1,8 +1,8 @@
 /**
  * Takes a selector and converts into a carousel using the tiny-slider library.
- * @type {{init: RCWDL.features.Carousel.init, create: RCWDL.features.Carousel.create}}
+ * @type {{init: RCDL.features.Carousel.init, create: RCDL.features.Carousel.create}}
  */
-RCWDL.features.Carousel = {
+RCDL.features.Carousel = {
 
   /**
    * Find all the elements with the supplied selector.
@@ -18,11 +18,11 @@ RCWDL.features.Carousel = {
     if (carousels !== null && carousels.length > 0) {
       if (carousels.length > 1) {
         Object.keys(carousels).forEach(function (carousel) {
-          RCWDL.features.Carousel.create(carousels[carousel]);
+          RCDL.features.Carousel.create(carousels[carousel]);
         });
       }
       else {
-        RCWDL.features.Carousel.create(carousels[0]);
+        RCDL.features.Carousel.create(carousels[0]);
       }
     }
   },
@@ -50,4 +50,4 @@ RCWDL.features.Carousel = {
   }
 };
 
-RCWDL.ready(RCWDL.features.Carousel.init('[data-js-carousel]'));
+RCDL.ready(RCDL.features.Carousel.init('[data-js-carousel]'));

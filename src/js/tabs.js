@@ -1,9 +1,9 @@
 /**
  * Enables the ability to create interactive tabbed navigation for stacked content.
  *
- * @type {{init: RCWDL.features.Tabs.init, hideTabs: RCWDL.features.Tabs.hideTabs, tabClick: RCWDL.features.Tabs.tabClick}}
+ * @type {{init: RCDL.features.Tabs.init, hideTabs: RCDL.features.Tabs.hideTabs, tabClick: RCDL.features.Tabs.tabClick}}
  */
-RCWDL.features.Tabs = {
+RCDL.features.Tabs = {
 
   /**
    * Initialise the interaction on target selector.
@@ -21,19 +21,19 @@ RCWDL.features.Tabs = {
       if (tabsets.length > 0) {
         // Loop through all the returned results, these should be sets of tabs.
         Object.keys(tabsets).forEach(function (tabset) {
-          RCWDL.features.Tabs.hideTabs(tabsets[tabset]);
+          RCDL.features.Tabs.hideTabs(tabsets[tabset]);
 
           // fake a click on the first item.
           var defaultItem = tabsets[tabset].querySelectorAll('.rc-tabs__triggers > li:first-child a');
-          RCWDL.click(defaultItem[0]);
+          RCDL.click(defaultItem[0]);
         });
       }
       else {
-        RCWDL.features.Tabs.hideTabs(tabsets[0]);
+        RCDL.features.Tabs.hideTabs(tabsets[0]);
 
         // fake a click on the first item.
         var defaultItem = tabsets[0].querySelectorAll('.rc-tabs__triggers > li:first-child a');
-        RCWDL.click(defaultItem[0]);
+        RCDL.click(defaultItem[0]);
       }
     }
   },
@@ -54,12 +54,12 @@ RCWDL.features.Tabs = {
       var itemHref = tabs[item].getAttribute('href');
 
       // Add an event listener to each instance.
-      tabs[item].addEventListener('click', RCWDL.features.Tabs.tabClick);
+      tabs[item].addEventListener('click', RCDL.features.Tabs.tabClick);
 
       // Find the target using the href attribute.
       var target = tabsets.querySelectorAll(itemHref);
 
-      RCWDL.utilities.toggleClass(target[0], 'hidden');
+      RCDL.utilities.toggleClass(target[0], 'hidden');
 
       // Reset the ARIA attributes on the controller and target.
       tabs[item].setAttribute('aria-selected', 'false');
@@ -80,8 +80,8 @@ RCWDL.features.Tabs = {
     // Get the target content container using the hash.
     var target = document.querySelectorAll(this.getAttribute('href'));
 
-    RCWDL.features.Tabs.hideTabs(this.parentNode.parentNode.parentNode);
-    RCWDL.utilities.toggleClass(target[0], 'hidden');
+    RCDL.features.Tabs.hideTabs(this.parentNode.parentNode.parentNode);
+    RCDL.utilities.toggleClass(target[0], 'hidden');
 
     // Set the ARIA attributes on the controller and target.
     target[0].setAttribute('aria-hidden', 'false');
@@ -89,4 +89,4 @@ RCWDL.features.Tabs = {
   }
 };
 
-RCWDL.ready(RCWDL.features.Tabs.init('[data-js-rc-tabs]'));
+RCDL.ready(RCDL.features.Tabs.init('[data-js-rc-tabs]'));
