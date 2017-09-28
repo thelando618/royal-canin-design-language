@@ -4716,7 +4716,7 @@ h1,h2,h3,h4,h5,h6 {
   margin-top: 0;
 }
 
-.alpha,.alpha--black,.beta,.beta--black,.gamma,.gamma--black,.delta,.delta--black,.espilon,.espilon--black,.zeta,.zeta--black,.rc-head--subheadline,.rc-head--subheadline--black,.rc-head--article,.rc-head--article--black {
+.alpha,.alpha--black,.rc-replace-header-styles h1,.beta,.beta--black,.rc-replace-header-styles h2,.gamma,.gamma--black,.rc-replace-header-styles h3,.delta,.delta--black,.rc-replace-header-styles h4,.espilon,.espilon--black,.rc-replace-header-styles h5,.zeta,.zeta--black,.rc-replace-header-styles h6,.rc-head--subheadline,.rc-head--subheadline--black,.rc-head--article,.rc-head--article--black {
   color: #EC001A;
   font-weight: 300;
   line-height: 1.25;
@@ -4734,7 +4734,7 @@ h1,h2,h3,h4,h5,h6 {
   margin-bottom: .75em;
 }
 
-.alpha,.alpha--black {
+.alpha,.alpha--black,.rc-replace-header-styles h1 {
   font-size: 2em;
 }
 
@@ -4742,7 +4742,7 @@ h1,h2,h3,h4,h5,h6 {
   color: #333333;
 }
 
-.beta,.beta--black {
+.beta,.beta--black,.rc-replace-header-styles h2 {
   font-size: 1.875em;
 }
 
@@ -4750,7 +4750,7 @@ h1,h2,h3,h4,h5,h6 {
   color: #333333;
 }
 
-.gamma,.gamma--black {
+.gamma,.gamma--black,.rc-replace-header-styles h3 {
   font-size: 1.625em;
 }
 
@@ -4758,7 +4758,7 @@ h1,h2,h3,h4,h5,h6 {
   color: #333333;
 }
 
-.delta,.delta--black {
+.delta,.delta--black,.rc-replace-header-styles h4 {
   font-size: 1.5em;
 }
 
@@ -4766,7 +4766,7 @@ h1,h2,h3,h4,h5,h6 {
   color: #333333;
 }
 
-.espilon,.espilon--black {
+.espilon,.espilon--black,.rc-replace-header-styles h5 {
   font-size: 1.375em;
 }
 
@@ -4774,7 +4774,7 @@ h1,h2,h3,h4,h5,h6 {
   color: #333333;
 }
 
-.zeta,.zeta--black {
+.zeta,.zeta--black,.rc-replace-header-styles h6 {
   font-size: 1.25em;
 }
 
@@ -7927,27 +7927,27 @@ video.hero__bg {
     margin: 1em auto;
   }
 
-  .alpha,.alpha--black {
+  .alpha,.alpha--black,.rc-replace-header-styles h1 {
     font-size: 2.5em;
   }
 
-  .beta,.beta--black {
+  .beta,.beta--black,.rc-replace-header-styles h2 {
     font-size: 2.25em;
   }
 
-  .gamma,.gamma--black {
+  .gamma,.gamma--black,.rc-replace-header-styles h3 {
     font-size: 2em;
   }
 
-  .delta,.delta--black {
+  .delta,.delta--black,.rc-replace-header-styles h4 {
     font-size: 1.875em;
   }
 
-  .espilon,.espilon--black {
+  .espilon,.espilon--black,.rc-replace-header-styles h5 {
     font-size: 1.625em;
   }
 
-  .zeta,.zeta--black {
+  .zeta,.zeta--black,.rc-replace-header-styles h6 {
     font-size: 1.5em;
   }
 
@@ -8550,27 +8550,27 @@ video.hero__bg {
     margin-bottom: 1.75rem;
   }
 
-  .alpha,.alpha--black {
+  .alpha,.alpha--black,.rc-replace-header-styles h1 {
     font-size: 3.125em;
   }
 
-  .beta,.beta--black {
+  .beta,.beta--black,.rc-replace-header-styles h2 {
     font-size: 2.625em;
   }
 
-  .gamma,.gamma--black {
+  .gamma,.gamma--black,.rc-replace-header-styles h3 {
     font-size: 2.25em;
   }
 
-  .delta,.delta--black {
+  .delta,.delta--black,.rc-replace-header-styles h4 {
     font-size: 2em;
   }
 
-  .espilon,.espilon--black {
+  .espilon,.espilon--black,.rc-replace-header-styles h5 {
     font-size: 1.75em;
   }
 
-  .zeta,.zeta--black {
+  .zeta,.zeta--black,.rc-replace-header-styles h6 {
     font-size: 1.625em;
   }
 

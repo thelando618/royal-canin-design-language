@@ -113,3 +113,21 @@ blockquote, q {
     color: colour('functional', 'text');
   }
 }
+
+
+$styleMapping: (
+                ('h1', 'alpha'),
+                ('h2', 'beta'),
+                ('h3', 'gamma'),
+                ('h4', 'delta'),
+                ('h5', 'espilon'),
+                ('h6', 'zeta')
+);
+
+.rc-replace-header-styles {
+  @each $tag, $style in $styleMapping {
+    #{$tag} {
+      @extend .#{$style};
+    }
+  }
+}
