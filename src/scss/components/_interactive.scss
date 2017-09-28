@@ -229,7 +229,7 @@
   transition: .2s ease;
 }
 
-.menu-toggle-icon.open .bar {
+[data-js-import-interactive-svg-trigger].svg-active .bar {
   fill: #e2001a;
 }
 
@@ -241,15 +241,15 @@
   transform: scaleX(0.8);
 }
 
-.toggle-svg.open .bar-1 {
+[data-js-import-interactive-svg-trigger].svg-active .bar-1 {
   transform: scaleX(1) rotate(45deg) translateX(-1px);
   transform-origin: top left;
 }
-.toggle-svg.open .bar-2 {
+[data-js-import-interactive-svg-trigger].svg-active .bar-2 {
   transform: scaleX(0);
   transform-origin: left;
 }
-.toggle-svg.open .bar-3 {
+[data-js-import-interactive-svg-trigger].svg-active .bar-3 {
   transform: scaleX(1) rotate(-45deg) translateX(-1px);
   transform-origin: bottom left;
 }
