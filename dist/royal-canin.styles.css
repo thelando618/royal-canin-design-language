@@ -4492,20 +4492,20 @@ body {
   position: relative;
 }
 
-[class*="rc-icon-"].small {
+[class*="rc-icon-"].small::after {
   transform: scale(0.5);
 }
 
-[class*="rc-icon-"] {
+[class*="rc-icon-"]::after {
   transform: scale(1);
   height: 32px;
   width: 32px;
   position: relative;
   display: inline-block;
-  transform-origin: 32px 32px;
+  transform-origin: 50% 50%;
 }
 
-[class*="rc-icon-"].large {
+[class*="rc-icon-"].large::after {
   transform: scale(2);
 }
 
@@ -4596,6 +4596,14 @@ section {
   margin-top: 90px;
 }
 
+body::before {
+  clear: both;
+  content: "";
+  display: table;
+  margin-top: -1px;
+  height: 0;
+}
+
 .layout--one-two > .rc-column > img,.layout--two-one > .rc-column > img,.layout--one-two > .rc-column > figure > img,.layout--two-one > .rc-column > figure > img {
   margin: 0 auto;
 }
@@ -4619,8 +4627,12 @@ section {
   transform: translateY(-50%) translateX(-50%);
 }
 
-.stick-left,.stick-right {
+.stick-left,.stick-right,.stick-bottom {
   position: absolute;
+}
+
+.fixed-bottom {
+  position: fixed;
 }
 
 .stick-left {
@@ -4631,6 +4643,16 @@ section {
 .stick-right {
   right: 0;
   left: auto;
+}
+
+.stick-bottom {
+  bottom: 0;
+  top: auto;
+}
+
+.fixed-bottom {
+  bottom: 0;
+  top: auto;
 }
 
 .show-at-large-only {
@@ -4948,9 +4970,9 @@ blockquote > p,q > p {
   border-radius: 0;
   text-align: left;
   min-height: 1rem;
-  position: absolute;
   left: 0;
   right: 0;
+  z-index: 9999;
 }
 
 [role="alert"].alert--info > a,.alert.alert--info > a {
@@ -5791,7 +5813,7 @@ input:required,textarea:required,select:required,input:required:required {
   transition: .2s ease;
 }
 
-.menu-toggle-icon.open .bar {
+[data-js-import-interactive-svg-trigger].svg-active .bar {
   fill: #e2001a;
 }
 
@@ -5803,17 +5825,17 @@ input:required,textarea:required,select:required,input:required:required {
   transform: scaleX(0.8);
 }
 
-.toggle-svg.open .bar-1 {
+[data-js-import-interactive-svg-trigger].svg-active .bar-1 {
   transform: scaleX(1) rotate(45deg) translateX(-1px);
   transform-origin: top left;
 }
 
-.toggle-svg.open .bar-2 {
+[data-js-import-interactive-svg-trigger].svg-active .bar-2 {
   transform: scaleX(0);
   transform-origin: left;
 }
 
-.toggle-svg.open .bar-3 {
+[data-js-import-interactive-svg-trigger].svg-active .bar-3 {
   transform: scaleX(1) rotate(-45deg) translateX(-1px);
   transform-origin: bottom left;
 }
@@ -8392,6 +8414,10 @@ video.hero__bg {
 
   .navigation + div {
     padding-left: 240px;
+  }
+
+  .has-left-side-bar > [role="alert"].alert--info {
+    left: 240px;
   }
 
   .show-at-large-only {
