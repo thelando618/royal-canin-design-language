@@ -1,17 +1,17 @@
-[class*="rc-icon-"].small {
+[class*="rc-icon-"].small::after {
   transform: scale(0.5);
 }
 
-[class*="rc-icon-"] {
+[class*="rc-icon-"]::after {
   transform: scale(1);
   height: 32px;
   width: 32px;
   position: relative;
   display: inline-block;
-  transform-origin: 32px 32px;
+  transform-origin: 50% 50%;
 }
 
-[class*="rc-icon-"].large {
+[class*="rc-icon-"].large::after {
   transform: scale(2);
 }
 
