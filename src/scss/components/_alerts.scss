@@ -32,9 +32,9 @@
     border-radius: 0;
     text-align: left;
     min-height: 1rem;
-    position: absolute;
     left: 0;
     right: 0;
+    z-index: 9999;
 
     & > a {
       color: colour('brand', 'white');
