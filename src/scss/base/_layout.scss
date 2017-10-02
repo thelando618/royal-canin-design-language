@@ -228,10 +228,35 @@ body::before {
   top: auto;
 }
 
+.stick-top {
+  @extend %stick;
+  top: 0;
+  bottom: auto;
+}
+
 .fixed-bottom {
   @extend %fixed;
   bottom: 0;
   top: auto;
+}
+
+.fixed-top {
+   @extend %fixed;
+   top: 0;
+   bottom: auto;
+ }
+
+.fixed-vertically {
+  @extend %fixed;
+  top: 0;
+  bottom: 0;
+}
+
+.lock-top-bottom-fixed {
+  position: fixed !important;
+  top: get-spacer('small') !important;
+  bottom: get-spacer('small') !important;
+  transform: translateX(-50%) !important;
 }
 
 %show-at-large-only {
