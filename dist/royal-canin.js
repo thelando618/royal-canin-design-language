@@ -3992,8 +3992,6 @@ RCDL.utilities.svgAnimation = function (interactiveSvg) {
           RCDL.utilities.addClass(importedSvg, singleClass);
         });
 
-        console.log(svgs[svg].parentNode);
-
         importedSvg.setAttribute('data-js-import-interactive-svg', dataTarget);
 
         svgs[svg].parentNode.replaceChild(importedSvg, svgs[svg]);
@@ -4002,12 +4000,12 @@ RCDL.utilities.svgAnimation = function (interactiveSvg) {
         RCDL.utilities.triggerAndTargetClassModifier.init('click', '[data-js-import-interactive-svg-trigger="' + dataTarget + '"]', '[data-js-import-interactive-svg="' + dataTarget + '"]', '.svg-active', null);
 
       });
-
     });
   }
 };
 
 RCDL.ready(RCDL.utilities.svgAnimation('[data-js-import-interactive-svg]'));
+
 RCDL.features.alerts = {
   /**
    * Add the default functionality for alerts. Remove alert if close button clicked.
