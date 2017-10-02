@@ -211,6 +211,11 @@
     height: 32px;
     background-repeat: no-repeat;
   }
+
+  &.modal__toggle::after {
+    opacity: 1;
+    transform: scale(0.5);
+  }
 }
 
 .navigation__link.open {
@@ -224,10 +229,6 @@
 
 
 .navigation__list-item {
-  border-bottom: 1px solid rgba(0, 0, 0, .15);
+  border-bottom: 1px solid colour('tertiary', 'grey--light');
   margin: 0;
-}
-
-.navigation__list-item.toplevel:first-child {
-  border-top: 1px solid rgba(0, 0, 0, .15);
 }

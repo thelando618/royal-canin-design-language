@@ -85,9 +85,25 @@ $borders: ('top', 'bottom', 'left', 'right');
 //---------------- Shadows --------------//
 
 @mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+
   @if $inset {
     box-shadow: inset $top $left $blur $color;
-  } @else {
+  }
+  @else {
     box-shadow: $top $left $blur $color;
   }
+
+}
+
+@mixin get-boxshadow($type, $colour) {
+
+  @if $type == 'medium' {
+    @include box-shadow(2px, 0, 8px, rgba($colour, .1));
+  }
+
+}
+
+.boxshadow--medium,
+%boxshadow--medium {
+ @include get-boxshadow('medium', 'black');
 }
