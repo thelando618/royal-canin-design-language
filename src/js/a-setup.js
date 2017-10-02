@@ -476,8 +476,6 @@ RCDL.utilities.svgAnimation = function (interactiveSvg) {
           RCDL.utilities.addClass(importedSvg, singleClass);
         });
 
-        console.log(svgs[svg].parentNode);
-
         importedSvg.setAttribute('data-js-import-interactive-svg', dataTarget);
 
         svgs[svg].parentNode.replaceChild(importedSvg, svgs[svg]);
@@ -486,7 +484,6 @@ RCDL.utilities.svgAnimation = function (interactiveSvg) {
         RCDL.utilities.triggerAndTargetClassModifier.init('click', '[data-js-import-interactive-svg-trigger="' + dataTarget + '"]', '[data-js-import-interactive-svg="' + dataTarget + '"]', '.svg-active', null);
 
       });
-
     });
   }
 };
