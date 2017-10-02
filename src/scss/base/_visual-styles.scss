@@ -105,5 +105,5 @@ $borders: ('top', 'bottom', 'left', 'right');
 
 .boxshadow--medium,
 %boxshadow--medium {
- @include get-boxshadow('medium', 'black');
+ @include get-boxshadow('medium', black);
 }
