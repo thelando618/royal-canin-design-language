@@ -235,3 +235,11 @@ $navigation-width: 240px;
 		padding-right: get-spacer('medium');
 	}
 }
+
+.hidden-panel {
+	display: none;
+	
+	&.open {
+	  display: block;
+	}
+}

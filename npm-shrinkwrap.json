@@ -2277,7 +2277,8 @@
     "flatten": {
       "version": "1.0.2",
       "resolved": "https://registry.npmjs.org/flatten/-/flatten-1.0.2.tgz",
-      "integrity": "sha1-2uRqnXj74lKSJYzB54CkHZXAN4I="
+      "integrity": "sha1-2uRqnXj74lKSJYzB54CkHZXAN4I=",
+      "dev": true
     },
     "fontconvert-tool": {
       "version": "1.0.2",
@@ -4550,7 +4551,8 @@
     "indexes-of": {
       "version": "1.0.1",
       "resolved": "https://registry.npmjs.org/indexes-of/-/indexes-of-1.0.1.tgz",
-      "integrity": "sha1-8w9xbI4r00bHtn0985FVZqfAVgc="
+      "integrity": "sha1-8w9xbI4r00bHtn0985FVZqfAVgc=",
+      "dev": true
     },
     "inflight": {
       "version": "1.0.6",
@@ -6839,7 +6841,8 @@
     "postcss-media-query-parser": {
       "version": "0.2.3",
       "resolved": "https://registry.npmjs.org/postcss-media-query-parser/-/postcss-media-query-parser-0.2.3.tgz",
-      "integrity": "sha1-J7Ocb02U+Bsac7j3Y1HGCeXO8kQ="
+      "integrity": "sha1-J7Ocb02U+Bsac7j3Y1HGCeXO8kQ=",
+      "dev": true
     },
     "postcss-reporter": {
       "version": "4.0.0",
@@ -6855,7 +6858,8 @@
     "postcss-resolve-nested-selector": {
       "version": "0.1.1",
       "resolved": "https://registry.npmjs.org/postcss-resolve-nested-selector/-/postcss-resolve-nested-selector-0.1.1.tgz",
-      "integrity": "sha1-Kcy8fDfe36wwTp//C/FZaz9qDk4="
+      "integrity": "sha1-Kcy8fDfe36wwTp//C/FZaz9qDk4=",
+      "dev": true
     },
     "postcss-scss": {
       "version": "1.0.2",
@@ -6870,6 +6874,7 @@
       "version": "2.2.3",
       "resolved": "https://registry.npmjs.org/postcss-selector-parser/-/postcss-selector-parser-2.2.3.tgz",
       "integrity": "sha1-+UN3iGBsPJrO4W/+jYsWKX8nu5A=",
+      "dev": true,
       "requires": {
         "flatten": "1.0.2",
         "indexes-of": "1.0.1",
@@ -6879,7 +6884,8 @@
     "postcss-value-parser": {
       "version": "3.3.0",
       "resolved": "https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-3.3.0.tgz",
-      "integrity": "sha1-h/OPnxj3dKSrTIojL1xc6IcqnRU="
+      "integrity": "sha1-h/OPnxj3dKSrTIojL1xc6IcqnRU=",
+      "dev": true
     },
     "prelude-ls": {
       "version": "1.1.2",
@@ -8049,18 +8055,6 @@
         }
       }
     },
-    "stylelint-scss": {
-      "version": "2.1.0",
-      "resolved": "https://registry.npmjs.org/stylelint-scss/-/stylelint-scss-2.1.0.tgz",
-      "integrity": "sha512-xlaN1tdMj3mlNtw1pAjbIQqThghU3e+XGyHwhyr/obtB0R+Vt9VF3F3oYaVawx1JAzW78CuDku/CkPlnrgmHZA==",
-      "requires": {
-        "lodash": "4.17.4",
-        "postcss-media-query-parser": "0.2.3",
-        "postcss-resolve-nested-selector": "0.1.1",
-        "postcss-selector-parser": "2.2.3",
-        "postcss-value-parser": "3.3.0"
-      }
-    },
     "sugarss": {
       "version": "0.2.0",
       "resolved": "https://registry.npmjs.org/sugarss/-/sugarss-0.2.0.tgz",
@@ -8773,7 +8767,8 @@
     "uniq": {
       "version": "1.0.1",
       "resolved": "https://registry.npmjs.org/uniq/-/uniq-1.0.1.tgz",
-      "integrity": "sha1-sxxa6CVIRKOoKBVBzisEuGWnNP8="
+      "integrity": "sha1-sxxa6CVIRKOoKBVBzisEuGWnNP8=",
+      "dev": true
     },
     "unique-random": {
       "version": "0.1.1",

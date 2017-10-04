@@ -1,0 +1,103 @@
+
+.rc-key-links-navigation {
+    @media (get-breakpoint('med')) {
+     display: flex;
+     justify-content: space-between;   
+     background-color: colour('brand', 'white');
+     padding: get-spacer('small');
+     border-bottom: solid 1px colour('brand', 'light-grey');
+    }
+}
+
+.rc-key-links-navigation__secondary {
+    @media (get-breakpoint-down('med')) {
+
+        & .rc-key-links-navigation__item {
+            padding: get-spacer('small') / 1.4;
+            font-size: .8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}    
+
+.rc-key-links-navigation__primary,
+.rc-key-links-navigation__secondary {
+    margin: 0;
+    
+    @media (get-breakpoint('med')) {
+        display: flex;
+    }
+}
+
+.rc-key-links-navigation__item {
+    position: initial;
+    border-bottom: solid 1px colour("brand", "light-grey");
+    padding: get-spacer('small') / 1.2 get-spacer('small');
+    margin-bottom: 0;
+    transition: 0.2s ease all;
+  
+    & [class^="rc-icon-"], & [class^="rc-flag"] {
+      position: absolute;
+      right: get-spacer('small') / 2;
+      margin-top: -4px;
+    }
+  
+    &.open [class^="rc-icon"] {
+      opacity: 1;
+      filter: saturate(100%);
+      cursor: pointer;
+    }
+    
+    @media (get-breakpoint('med')) {
+        position: relative;
+        background-color: transparent;
+        font-size: 1rem;
+        padding: 0;
+        padding-left: get-spacer('small') * 3;
+        border-bottom: none;
+        margin: 0 get-spacer('small') / 2;
+        border-left: solid 1px colour('brand', 'light-grey');
+
+        &:first-of-type {
+            border-left: none;
+            margin-left: 0;
+        }
+
+        & [class^="rc-icon"], & [class^="rc-flag"] {
+            left: get-spacer('small') / 2;
+            margin-top: -5px;
+        }
+    }
+
+    & .rc-navigation__link {
+        @extend %main-nav-link;
+        color: colour('functional', 'text');
+    }
+}
+
+.rc-key-links-navigation__button {
+    width: 100%;
+    background-color: colour('tertiary', 'grey--light');
+    border-bottom: solid 1px colour('brand', 'light-grey');
+    padding: get-spacer('small');
+    padding-bottom: get-spacer('small') / 2;
+    font-size: .7rem;
+    
+    & > [class^="rc-icon"] {
+        display: block;
+        margin: auto;
+        margin-top: -5px;
+    }
+    
+    &.open {
+        & > [class^="rc-icon"] {
+            transform: rotate(180deg) scale(.5);
+        }
+    }
+}
+
+.rc-key-links__panel {
+    background-color: colour('tertiary', 'grey--light');
+}

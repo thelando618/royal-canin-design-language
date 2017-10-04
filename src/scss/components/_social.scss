@@ -206,3 +206,13 @@ $social-color-youtube: #CD201F;
 
   }
 }
+
+.social--small {
+  margin-top: get-spacer('small');
+  font-size: .8rem;
+  padding-bottom: get-spacer('small');
+
+  [class^="social__network--"] {
+      transform: scale(.6);
+  }
+}
