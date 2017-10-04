@@ -25,9 +25,10 @@
   border-bottom: solid 1px colour('brand', 'light-grey');
   padding: get-spacer('small') / 1.2 get-spacer('small');
   margin-bottom: 0;
-  transition: 0.2s ease all;
+  transition: movementSetting('transition', 'base');
 
-  & [class^="rc-icon-"], & [class^="rc-flag"] {
+  & [class^="rc-icon-"],
+  & [class^="rc-flag"] {
     position: absolute;
     right: get-spacer('small') / 2;
     margin-top: -5px;
@@ -129,7 +130,7 @@
 //-------------------------------- Desktop - Main Nav ------------------------------------//
 ////////////////////////////////////////////////////////////////////////////////////////////
 
-@media (get-breakpoint('med')){
+@media (get-breakpoint('med')) {
   
   .rc-main-navigation__wrapper {
     top: get-nav-height('med-up');
@@ -271,7 +272,7 @@
   }
 }
 
-@media (get-breakpoint('large')){
+@media (get-breakpoint('large')) {
 
   .rc-main-navigation__wrapper {
     top: get-nav-height('large-up');

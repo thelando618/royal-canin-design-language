@@ -33,12 +33,12 @@
 
 .rc-key-links-navigation__item {
     position: initial;
-    border-bottom: solid 1px colour("brand", "light-grey");
+    border-bottom: solid 1px colour('brand', 'light-grey');
     padding: get-spacer('small') / 1.2 get-spacer('small');
     margin-bottom: 0;
-    transition: 0.2s ease all;
+    transition: movementSetting('transition', 'base');
   
-    & [class^="rc-icon-"], & [class^="rc-flag"] {
+    & [class^="rc-icon-"] {
       position: absolute;
       right: get-spacer('small') / 2;
       margin-top: -4px;
@@ -65,7 +65,7 @@
             margin-left: 0;
         }
 
-        & [class^="rc-icon"], & [class^="rc-flag"] {
+        & [class^="rc-icon"] {
             left: get-spacer('small') / 2;
             margin-top: -5px;
         }
