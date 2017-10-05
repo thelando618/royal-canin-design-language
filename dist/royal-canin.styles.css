@@ -7272,12 +7272,8 @@ video.hero__bg {
   background-image: url("south-america.png");
 }
 
-.rc-header-navigation + div {
+.body--fixed-top-navigation {
   margin-top: 70px;
-}
-
-.rc-header-navigation + .fullpage {
-  margin-top: 0;
 }
 
 .rc-header-navigation {
@@ -8314,7 +8310,7 @@ video.hero__bg {
     width: 20%;
   }
 
-  .rc-header-navigation + div {
+  .body--fixed-top-navigation {
     margin-top: 80px;
   }
 
@@ -8407,7 +8403,7 @@ video.hero__bg {
     font-size: 1.375em;
   }
 
-  .rc-header-navigation + div {
+  .body--fixed-top-navigation {
     margin-top: 100px;
   }
 
