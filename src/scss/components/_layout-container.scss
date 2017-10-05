@@ -39,6 +39,11 @@
     padding: 12px;
   }
 
+  .rc-column.center-align-contents {
+    display: flex;
+    align-items: center;
+  }
+
   .rc-column {
     .single-column & {
       width: 100%;

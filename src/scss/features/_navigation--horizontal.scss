@@ -13,12 +13,22 @@ $nav-heights: (
 	@return #{$nav-height}px;
 }
 
-@media (get-breakpoint-down('med')) {
-	.body--fixed-nav {
-		padding-top: get-nav-height('med-down');
+.body--fixed-top-navigation {
+	margin-top: get-nav-height('med-down');
+}
+
+@media (get-breakpoint('med')) {
+	.body--fixed-top-navigation {
+		margin-top: get-nav-height('med-up');
 	}
 }
-  
+
+@media (get-breakpoint('large')) {
+	.body--fixed-top-navigation {
+		margin-top: get-nav-height('large-up');
+	}
+}
+
 .rc-header-navigation {
 	height: get-nav-height('med-down');
 	border-bottom: solid 1px colour('brand', 'light-grey');
@@ -79,7 +89,7 @@ $nav-heights: (
 		transform: scale(.6);
 		opacity: .2;
 		filter: saturate(0);
-		transition:  movementSetting('transition', 'base');
+		transition: movementSetting('transition', 'base');
 
 		@media (get-breakpoint('med')) {
 			transform: scale(.8);

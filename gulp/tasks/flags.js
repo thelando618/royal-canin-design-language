@@ -67,7 +67,7 @@ module.exports = function (task, gulp, sitesettings, need, taskObj) {
       // Empty that directory of old copies.
       fs.emptyDir(rawFlagPath, function (err) {
 
-        execute(`git clone git@github.com:emcrisostomo/flags ${rawFlagPath}`, function(res) {
+        execute(`git clone --depth=1 git@github.com:emcrisostomo/flags ${rawFlagPath} && rm -rf ${rawFlagPath}/.git`, function(res) {
           'use strict'
 
           fs.emptyDirSync(rawFlagPath + '/svgo');
@@ -102,12 +102,5 @@ module.exports = function (task, gulp, sitesettings, need, taskObj) {
       })
 
     })
-
-    //const files = fs.readdirSync(path);
-
-    // Move the required files into position.
-
-
-
   })
 };

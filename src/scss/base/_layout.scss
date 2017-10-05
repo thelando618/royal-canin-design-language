@@ -136,6 +136,14 @@ $spacingTypes: map-keys($spacers);
 
 ///////////// Layouts ////////////////
 
+.container {
+	height: 100%;
+	max-width: get-maxWidth('x-large');
+	background: colour('brand', 'white');
+	margin: auto;
+	position: relative;
+}  
+
 $navigation-width: 240px;
 
 .navigation + div {
