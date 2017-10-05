@@ -7433,10 +7433,10 @@ video.hero__bg {
   border-bottom: solid 1px #EAEAEA;
   padding: 0.833rem 1rem;
   margin-bottom: 0;
-  transition: 0.2s ease all;
+  transition: 0.2s ease;
 }
 
-.rc-key-links-navigation__item [class^="rc-icon-"],.rc-key-links-navigation__item [class^="rc-flag"] {
+.rc-key-links-navigation__item [class^="rc-icon-"] {
   position: absolute;
   right: 0.5rem;
   margin-top: -4px;
@@ -7501,7 +7501,7 @@ video.hero__bg {
   border-bottom: solid 1px #EAEAEA;
   padding: 0.833rem 1rem;
   margin-bottom: 0;
-  transition: 0.2s ease all;
+  transition: 0.2s ease;
 }
 
 .rc-main-navigation__primary > .rc-main-navigation__item [class^="rc-icon-"],.rc-main-navigation__secondary > .rc-main-navigation__item [class^="rc-icon-"],.rc-main-navigation__tertiary > .rc-main-navigation__item [class^="rc-icon-"],.rc-main-navigation__primary > .rc-main-navigation__item [class^="rc-flag"],.rc-main-navigation__secondary > .rc-main-navigation__item [class^="rc-flag"],.rc-main-navigation__tertiary > .rc-main-navigation__item [class^="rc-flag"] {
@@ -8545,7 +8545,7 @@ video.hero__bg {
     margin-left: 0;
   }
 
-  .rc-key-links-navigation__item [class^="rc-icon"],.rc-key-links-navigation__item [class^="rc-flag"] {
+  .rc-key-links-navigation__item [class^="rc-icon"] {
     left: 0.5rem;
     margin-top: -5px;
   }

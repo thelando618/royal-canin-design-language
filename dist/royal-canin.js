@@ -4662,26 +4662,28 @@ RCWDL.navigation.toggleNavigation = function (mainNavSelector, mainNavTogglerSel
 
   RCWDL.ready(RCWDL.utilities.triggerAndTargetClassModifier.init('click', mainNavTogglerSelector, '[data-js-trigger]', '.open', null));
 
-  var mainNavWrapper = document.querySelector(mainNavSelector).parentNode;
+  var mainNav = document.querySelector(mainNavSelector);
   var mainNavTogglers = document.querySelectorAll(mainNavTogglerSelector);
 
-  mainNavTogglers.forEach(function (mainNavToggler) {
-    mainNavToggler.addEventListener('click', function () {
-      RCWDL.utilities.toggleClass(mainNavToggler.parentNode, 'active');
+  if (mainNav !== null && mainNavTogglers !== null) {
+    mainNavTogglers.forEach(function (mainNavToggler) {
+      mainNavToggler.addEventListener('click', function () {
+        RCWDL.utilities.toggleClass(mainNavToggler.parentNode, 'active');
 
-      /**
-       * Prevent page scroll when nav is open
-       */
-      if (mainNavWrapper !== null) {
+        /**
+         * Prevent page scroll when nav is open
+         */
+        var mainNavWrapper = mainNav.parentNode;
         if (RCWDL.utilities.hasClass(mainNavWrapper, 'open')) {
           document.body.style.overflow = 'hidden';
         }
         else {
           document.body.style.overflow = '';
         }
-      }
+      });
     });
-  });
+  }
+
 };
 
 RCWDL.ready(RCWDL.navigation.toggleNavigation('.rc-main-navigation', '[data-js-trigger="main-nav"]'));
@@ -4701,26 +4703,29 @@ RCWDL.navigation.openCloseItems = function (mainNavSelector, mainNavItemSelector
   'use strict';
 
   var mainNav = document.querySelector(mainNavSelector);
-  var mainNavItems = mainNav.querySelectorAll(mainNavItemSelector);
   var triggerType = window.innerWidth > 800 ? 'mouseover' : 'click';
 
-  mainNavItems.forEach(function (mainNavItem) {
-    mainNavItem.addEventListener(triggerType, function () {
+  if (mainNav !== null) {
+    var mainNavItems = mainNav.querySelectorAll(mainNavItemSelector);
 
-      var nodeSiblings = RCWDL.utilities.getSiblings(mainNavItem.parentNode);
+    mainNavItems.forEach(function (mainNavItem) {
+      mainNavItem.addEventListener(triggerType, function () {
 
-      nodeSiblings.forEach(function (sibling) {
-        if (sibling !== mainNavItem.parentNode) {
-          RCWDL.utilities.removeClass(sibling, 'open');
-          RCWDL.utilities.removeClass(sibling, 'open--desktop');
-        }
-        else {
-          RCWDL.utilities.addClass(sibling, 'open');
-        }
+        var nodeSiblings = RCWDL.utilities.getSiblings(mainNavItem.parentNode);
+
+        nodeSiblings.forEach(function (sibling) {
+          if (sibling !== mainNavItem.parentNode) {
+            RCWDL.utilities.removeClass(sibling, 'open');
+            RCWDL.utilities.removeClass(sibling, 'open--desktop');
+          }
+          else {
+            RCWDL.utilities.addClass(sibling, 'open');
+          }
+        });
+
       });
-
     });
-  });
+  }
 };
 
 RCWDL.ready(RCWDL.navigation.openCloseItems('.rc-main-navigation', '.rc-main-navigation__item-text'));
@@ -4860,6 +4865,7 @@ RCWDL.navigation.expandAndScrollTo = function (buttonSelector, buttonTargetSelec
 if (window.innerWidth < 800) {
   RCWDL.ready(RCWDL.navigation.expandAndScrollTo('[data-js-trigger="more-info"]', '[data-js-target="more-info"]', '.rc-main-navigation'));
 }
+
 /**
  * Extension of the HTML element progress.
  * @type {{init: RCWDL.features.Progress.init, demo: RCWDL.features.Progress.demo}}
