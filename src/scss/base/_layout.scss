@@ -146,22 +146,21 @@ $spacingTypes: map-keys($spacers);
 
 $navigation-width: 240px;
 
-.navigation + div {
+.body--fixed-side-navigation {
 	margin: get-spacer('small') auto;
+	margin-top: 0;
 	width: 90%;
-	margin-top: 90px;
+	padding-top: 100px;
 
 	@media (get-breakpoint('small')) {
 		margin: get-spacer('large') auto;
+		padding-top: 0;
 	}
-}
 
-@media (get-breakpoint('large')) {
-	.navigation + div {
+	@media (get-breakpoint('large')) {
 		padding-left: $navigation-width;
 	}
 }
-
 
 %layout--two-one--base-small > .rc-column {
 	& > img,
