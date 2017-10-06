@@ -37,7 +37,7 @@ $nav-heights: (
 	top: 0;
 	max-width: get-maxWidth('x-large');
 	width: 100%;
-	z-index: 12;
+	z-index: 11;
 	transition: movementSetting('transition', 'base');
 	
 	@media (get-breakpoint('med')) {

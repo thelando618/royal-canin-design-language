@@ -1,17 +1,52 @@
 .navigation {
-  overflow-x: hidden;
-  overflow-y: auto;
-  background-color: colour('brand', 'white');
   display: block;
-  z-index: 11;
   color: colour('functional', 'text');
   font-size: .75em;
-  position: fixed;
-  top: 0;
   width: 100%;
+  height: 82px;
+  position: fixed;
+  z-index: 11;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  
+  @media (get-breakpoint('large')) {
+    position: fixed;
+    height: 100%;
+    bottom: 0;
+    width: $navigation-width;
+    font-size: .825em;
+    border-right: 1px solid rgba( 0, 0, 0, .15 );
+    background-color: colour('brand', 'white');
+  }
+  
+  @media (get-breakpoint-down('large')) {
+    & nav {
+      position: absolute;
+      background-color: colour('brand', 'white');
+      z-index: 10;
+      top: -200%;
+      width: 100%;
+      transition: movementSetting('transition', 'base');
+    }
 
-  @media ( get-breakpoint-down('large') ) {
-    overflow-y: hidden;
+    &.open {
+      height: 100%;
+      
+      & nav {
+        top: 82px;
+      }
+    }
+    
+
+    & .svg-wrapper-link {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 82px;
+      z-index: 11;
+    }
   }
 
   & .logo-svg {
@@ -22,121 +57,19 @@
     left: 50%;
   }
 
-  & > nav > ul {
-    z-index: 5;
-    transform: translate(0px, -200%);
-    transform-origin: top;
-    transition: transform .5s ease-in;
-    position: absolute;
-    background-color: colour('brand', 'white');
-    width: 100%;
-  }
-
-  &.open > nav > ul {
-    transform: translate(0px, 0px);
-    transition: transform .5s ease-in;
-  }
-
-  &.open > nav {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    overflow-y: auto;
-    background-color: colour('brand', 'white');
-  }
-
-  .gs-nav__header {
-    position: relative;
-  }
-
-  .gs-logo {
-    width: 100%;
-    position: relative;
-    z-index: 10;
-    background-color: colour('brand', 'white');
-    margin: 0;
-    height: 70px;
-    border-bottom: 1px solid rgba( 0, 0, 0, .15 );
-
-    &::after {
-      transform: scale(2.5) translate(0);
-      transform-origin: 0;
-      position: absolute;
-      top: 15px;
-    }
-  }
-
-  ul {
-    // See if this can be put into a class that lives in _nav.html
-    list-style-type: none;
+  & ul {
     margin: 0;
     padding: 0;
-    transition: height 0.3s ease-in-out;
+    list-style-type: none;
+    transition: height .3s ease-in-out;
   }
 
-  li {
+  & li {
     overflow: hidden;
-    ul {
-      a {
-        padding-top: 1em;
-        padding-bottom: 1em;
-      }
-    }
-  }
 
-  @media ( get-breakpoint('large') ) {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: $navigation-width;
-    font-size: .825em;
-    border-right: 1px solid rgba( 0, 0, 0, .15 );
-    overflow-y: auto;
-    overflow-x: hidden;
-
-    .gs-logo {
-      padding: 0;
-
-      img {
-        max-width: 120px;
-        margin: 0.7em auto;
-      }
-    }
-
-    .gs-nav__nav {
-      height: auto !important; // Exists to override any JS applied from toggling the mobile nav.
-    }
-
-    #gs-nav-trigger {
-      display: none;
-    }
-  }
-}
-
-
-@media (get-breakpoint('large')) {
-
-  .navigation {
-    position: fixed;
-    top: 0;
-  }
-
-  .navigation > nav > ul {
-    position: relative;
-    width: auto;
-    transform: translate(0px, 0px);
-    transition: transform .5s ease-in;
-  }
-
-  .navigation .gs-logo {
-    width: 100%;
-
-    &::after {
-      width: 75px;
-      left: 25px;
+    & ul a {
+      padding-top: 1em;
+      padding-bottom: 1em;
     }
   }
 }
@@ -198,7 +131,7 @@
   @extend .rc-icon-chevron--down--red;
 
   &::after {
-    transform: rotate(180deg) scale(0.5);
+    transform: rotate(180deg) scale(.5);
     opacity: 0;
     transition: transform .5s ease, opacity .3s ease;
     content: '';
@@ -217,7 +150,7 @@
   font-weight: 500;
 
   .section > &::after {
-    transform: rotate(0) scale(0.5);
+    transform: rotate(0) scale(.5);
     opacity: 1;
   }
 }
