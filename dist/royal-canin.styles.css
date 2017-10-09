@@ -919,6 +919,7 @@ sup {
   outline: 0;
   -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  pointer-events: none;
 }
 
 .tippy-popper.html-template {
@@ -1499,7 +1500,6 @@ sup {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #333;
-  pointer-events: none;
 }
 
 .tippy-tooltip--small {
@@ -4488,10 +4488,6 @@ sup {
   font-size: 100%;
 }
 
-body {
-  position: relative;
-}
-
 [class^="rc-icon-"].small {
   transform: scale(0.5);
 }
@@ -6798,10 +6794,6 @@ table label {
 
 .tippy-popper[x-placement^=bottom] [x-arrow].arrow-big {
   border-bottom-color: white;
-}
-
-.tippy-popper[x-placement^=right] {
-  top: -65px !important;
 }
 
 .rc-tooltip__pad {

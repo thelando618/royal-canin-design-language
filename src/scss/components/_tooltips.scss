@@ -40,10 +40,6 @@
   border-bottom-color: white;
 }
 
-.tippy-popper[x-placement^=right] {
-  top: -65px !important;
-}
-
 .rc-tooltip__pad {
   padding: get-spacer('small');
 }
