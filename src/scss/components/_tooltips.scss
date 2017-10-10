@@ -18,6 +18,10 @@
   }
 }
 
+[data-tooltip] {
+  cursor: pointer;
+}
+
 .tippy-tooltip {
   background-color: transparent;
 }
@@ -38,10 +42,6 @@
 
 .tippy-popper[x-placement^=bottom] [x-arrow].arrow-big {
   border-bottom-color: white;
-}
-
-.tippy-popper[x-placement^=right] {
-  top: -65px !important;
 }
 
 .rc-tooltip__pad {

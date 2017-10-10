@@ -1,7 +1,6 @@
 [role="alert"],
 .alert {
   text-align: center;
-  border: 2px solid colour('brand', 'red');
   border-radius: 25px;
   padding: 1em;
   margin-top: 1em;
@@ -13,14 +12,13 @@
   }
 
   &.alert--error {
-    background-color: transparentize( colour('brand', 'red'), .9 );
-    color: colour('brand', 'red');
+    background-color: colour('brand', 'red');
+    color: colour('brand', 'white');
   }
 
   &.alert--success {
-    border-color: colour('functional', 'success');
-    color: colour('functional', 'success', 'dark');
-    background-color: transparentize( colour('functional', 'success'), .9 );
+    background-color: colour('functional', 'success');
+    color: colour('brand', 'white');
   }
 
   &.alert--info {
