@@ -5509,6 +5509,10 @@ input:required,textarea:required,select:required,input:required:required {
   padding-left: 0;
 }
 
+.rc-input--white input {
+  background-color: #FFF;
+}
+
 .rc-input--btn {
   display: block;
   max-width: 300px;
@@ -5545,6 +5549,10 @@ input:required,textarea:required,select:required,input:required:required {
   background-color: #F6F6F6;
   border: none;
   border-radius: 0;
+}
+
+[role="listbox"].choices--white > .choices__inner {
+  background-color: #FFF;
 }
 
 [role="listbox"].choices::after {

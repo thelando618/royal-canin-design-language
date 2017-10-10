@@ -290,6 +290,12 @@ input:required, textarea:required, select:required, input:required:required {
   }
 }
 
+.rc-input--white {
+  & input {
+    background-color: colour('brand', 'white');
+  }
+}
+
 .rc-input--btn {
   display: block;
   max-width: 300px;
@@ -336,6 +342,12 @@ input:required, textarea:required, select:required, input:required:required {
     background-color: colour('tertiary', 'grey--light');
     border: none;
     border-radius: 0;
+  }
+}
+
+[role="listbox"].choices--white {
+  & > .choices__inner {
+    background-color: colour('brand', 'white');
   }
 }
 
