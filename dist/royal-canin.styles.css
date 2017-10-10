@@ -6780,6 +6780,10 @@ table label {
   font-size: .875em;
 }
 
+[data-tooltip] {
+  cursor: pointer;
+}
+
 .tippy-tooltip {
   background-color: transparent;
 }

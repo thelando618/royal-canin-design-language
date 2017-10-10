@@ -18,6 +18,10 @@
   }
 }
 
+[data-tooltip] {
+  cursor: pointer;
+}
+
 .tippy-tooltip {
   background-color: transparent;
 }
