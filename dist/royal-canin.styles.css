@@ -5960,6 +5960,12 @@ ul svg,ol svg {
 
 .logo--primary {
   min-height: 60px;
+  max-height: 100px;
+}
+
+.logo--secondary {
+  min-height: 20px;
+  max-height: 80px;
 }
 
 .logo--crown {
