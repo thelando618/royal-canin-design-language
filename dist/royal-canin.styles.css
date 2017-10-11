@@ -4738,6 +4738,14 @@ section {
   margin-right: auto;
 }
 
+.hidden {
+  display: none;
+}
+
+.hidden.visible {
+  display: block;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -5365,6 +5373,11 @@ label {
   margin-bottom: .75em;
 }
 
+label .required::after {
+  content: '*';
+  color: #EC001A;
+}
+
 input,textarea,select {
   display: block;
   width: 100%;
@@ -5392,21 +5405,14 @@ input.error,input:invalid,textarea.error,textarea:invalid,select.error,select:in
   background-color: rgba(236, 0, 26, 0.1);
 }
 
-input.error + label:after,input:invalid + label:after,textarea.error + label:after,textarea:invalid + label:after,select.error + label:after,select:invalid + label:after {
+input.error + label::after,input:invalid + label::after,textarea.error + label::after,textarea:invalid + label::after,select.error + label::after,select:invalid + label::after {
   background-color: #EC001A;
   width: 100%;
 }
 
-input:required,textarea:required,select:required {
-  background-color: transparent;
-}
-
-input:required:invalid {
-  border: none;
-}
-
-input:required:invalid + label::after {
-  background-color: transparent;
+[data-js-input-message] {
+  color: #EC001A;
+  margin-bottom: 1rem;
 }
 
 input[type="submit"],input[type="reset"] {
@@ -5490,10 +5496,6 @@ input[type="file"] {
 
 .rc-input--custom input[type="radio"]:checked + label:before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='Layer_1' viewBox='0 0 64 64'%3E %3Cstyle%3E .st0%7Bfill:%23E2001A;%7D %3C/style%3E %3Ccircle cx='32' cy='32' r='32' class='st0'/%3E %3C/svg%3E");
-}
-
-input:required,textarea:required,select:required,input:required:required {
-  background-color: #F6F6F6;
 }
 
 .rc-input {

@@ -2,6 +2,13 @@ label {
   display: inline-block;
   font-size: 1em;
   margin-bottom: .75em;
+
+  & .required {
+    &::after {
+      content: '*';
+      color: colour('brand', 'red');
+    }
+  }
 }
 
 input,
@@ -31,27 +38,17 @@ select {
     color: colour('brand', 'red');
     border: 1px solid colour('brand', 'red');
     background-color: transparentize( colour('brand', 'red'), .9 );
-
-    & + label {
-      &:after {
-        background-color: colour('brand', 'red');
-        width: 100%;
-      }
+    
+    & + label::after {
+      background-color: colour('brand', 'red');
+      width: 100%;
     }
-  }
-
-  &:required {
-    background-color: transparent;
   }
 }
 
-// ToDo: Replace with Required styling.
-input:required:invalid {
-  border: none;
-
-  & + label::after {
-    background-color: transparent;
-  }
+[data-js-input-message] {
+  color: colour('brand', 'red');
+  margin-bottom: 1rem;
 }
 
 input[type="submit"],
@@ -165,11 +162,6 @@ input[type="file"] {
     }
   }
 }
-
-input:required, textarea:required, select:required, input:required:required {
-  background-color: colour('tertiary', 'grey--light');
-}
-
 
 .rc-input {
   display: block;

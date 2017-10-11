@@ -269,3 +269,11 @@ $navigation-width: 240px;
 		padding-right: get-spacer('medium');
 	}
 }
+
+.hidden {
+	display: none;
+	
+	&.visible {
+		display: block;
+	}
+}
