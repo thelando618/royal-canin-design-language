@@ -90,11 +90,11 @@ $spacers: (
   $z-layers: (
 	default: 1,
 	carousel: 20,
-	tooltip: 20,
-	header-navigation: 30,
-	side-navigation: 30,
-	shade: 40,
-	modal: 60,
+	tooltip: 30,
+	header-navigation: 40,
+	side-navigation: 50,
+	shade: 60,
+	modal: 70,
 	top: 999
   );
   
@@ -272,7 +272,7 @@ $navigation-width: 240px;
 
 .hidden {
 	display: none;
-	
+
 	&.visible {
 		display: block;
 	}

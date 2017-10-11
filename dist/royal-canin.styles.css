@@ -5854,7 +5854,7 @@ input[type="file"] {
   background-color: transparent;
   border: none;
   position: fixed;
-  z-index: 31;
+  z-index: 51;
   cursor: pointer;
   top: 0;
 }
@@ -6146,7 +6146,7 @@ ul svg,ol svg {
   left: 50%;
   min-width: 90%;
   max-width: 100%;
-  z-index: 60;
+  z-index: 70;
   animation-direction: reverse;
   transform: translateX(-50%);
   background-color: #FFF;
@@ -6467,7 +6467,7 @@ ul svg,ol svg {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 40;
+  z-index: 60;
 }
 
 .shade--grey {
@@ -6859,7 +6859,7 @@ table label {
 }
 
 .rc-tooltip {
-  z-index: 20;
+  z-index: 30;
   display: block;
   background-color: #FFF;
   width: auto;
@@ -7380,7 +7380,7 @@ video.hero__bg {
   top: 0;
   max-width: 1440px;
   width: 100%;
-  z-index: 30;
+  z-index: 40;
   transition: 0.2s ease;
 }
 
@@ -7460,7 +7460,7 @@ video.hero__bg {
   bottom: 0;
   margin: 0;
   width: 100%;
-  z-index: 31;
+  z-index: 41;
   display: none;
   animation: fadeIn .3s;
   animation-direction: reverse;
@@ -7491,7 +7491,7 @@ video.hero__bg {
   width: 100%;
   height: 82px;
   position: fixed;
-  z-index: 30;
+  z-index: 50;
   top: 0;
   left: 0;
   overflow-y: auto;
@@ -8693,7 +8693,7 @@ video.hero__bg {
   .navigation nav {
     position: absolute;
     background-color: #FFF;
-    z-index: 29;
+    z-index: 49;
     top: -200%;
     width: 100%;
     transition: 0.2s ease;
@@ -8712,7 +8712,7 @@ video.hero__bg {
     top: 0;
     width: 100%;
     height: 82px;
-    z-index: 30;
+    z-index: 50;
   }
 
   .large-up {
