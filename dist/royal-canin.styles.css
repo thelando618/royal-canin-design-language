@@ -7160,6 +7160,7 @@ video.hero__bg {
 
 [data-tns-hidden="x"] {
   position: relative;
+  border: 1px solid #EAEAEA;
 }
 
 [data-controls] {
