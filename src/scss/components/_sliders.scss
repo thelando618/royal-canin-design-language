@@ -78,13 +78,13 @@
 
 .noUi-connect {
   background: colour('brand', 'red');
-  box-shadow: inset 0 0 3px rgba(51, 51, 51, .45);
+  box-shadow: getShadow('grey', 'inset');
   -webkit-transition: background 450ms;
   transition: background 450ms
 }
 
 .noUi-draggable {
-  cursor: ew-resize
+  cursor: ew-resize;
 }
 
 .noUi-handle {

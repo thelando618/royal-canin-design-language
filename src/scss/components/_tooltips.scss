@@ -3,7 +3,7 @@
   display: block;
   background-color: colour('brand', 'white');
   width: auto;
-  box-shadow: 0 .5em 1em rgba( 0, 0, 0, .1 );
+  box-shadow: getShadow('black', 'soft');
 
   p {
     margin: 0;
@@ -29,7 +29,7 @@
 .tippy-tooltip {
   color: colour('functional', 'text');
   padding: 0;
-  box-shadow: 0 .5em 1em rgba( 0, 0, 0, .1 );
+  box-shadow: getShadow('black', 'soft');
 }
 
 .tippy-popper[x-placement^=top] [x-arrow].arrow-big {

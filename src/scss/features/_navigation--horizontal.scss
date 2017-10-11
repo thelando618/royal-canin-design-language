@@ -67,7 +67,7 @@ $nav-heights: (
 	}
 
 	&.scrolled {
-		@include box-shadow(2px, 0, 8px, rgba(black, .1));
+		box-shadow: getShadow('black', 'faint');
 
 		& .svg-logo {
 			&:first-of-type {

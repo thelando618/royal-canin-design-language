@@ -4075,6 +4075,83 @@ sup {
   background-position: 100% 68.75%;
 }
 
+.outline-light,.card--featured,.card,.gallery-wrapper {
+  border: 1px solid colour("brand", "light-grey");
+}
+
+[role="alert"],.alert,.rc-map,.video-wrapper,.gallery-wrapper,.rc-tabs,.rc-tabs--side {
+  max-width: 700px;
+}
+
+.styled-link {
+  display: inline-block;
+  vertical-align: bottom;
+  position: relative;
+  z-index: 1;
+  color: colour("functional", "functional");
+  transition: color 0.2s ease-in;
+  overflow: hidden;
+  background-color: transparent;
+  border: none;
+  user-select: none;
+}
+
+.styled-link:before {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: colour("functional", "functional");
+  z-index: -1;
+  transform: translateY(110%);
+  transition: transform .2s ease-in-out, background-color .2s ease-in-out;
+}
+
+.styled-link:hover,.styled-link:focus {
+  color: colour("brand", "white");
+  text-decoration: none;
+}
+
+.styled-link:hover:before,.styled-link:focus:before {
+  transform: translateY(0%);
+}
+
+.styled-link:focus {
+  outline: none;
+}
+
+.styled-link:active:before {
+  background-color: colour("functional", "functional", "dark");
+}
+
+.border-top {
+  border-top-style: solid;
+  border-top-width: 1px;
+}
+
+.border-bottom {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.border-left {
+  border-left-style: solid;
+  border-left-width: 1px;
+}
+
+.border-right {
+  border-right-style: solid;
+  border-right-width: 1px;
+}
+
+.border-all {
+  border-style: solid;
+  border-width: 1px;
+}
+
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
@@ -5859,7 +5936,7 @@ ul svg,ol svg {
 }
 
 .list--significance {
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .list--significance svg {
@@ -6777,7 +6854,7 @@ table label {
   display: block;
   background-color: #FFF;
   width: auto;
-  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 .rc-tooltip p {
@@ -6799,7 +6876,7 @@ table label {
 .tippy-tooltip {
   color: #333333;
   padding: 0;
-  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 .tippy-popper[x-placement^=top] [x-arrow].arrow-big {
@@ -7308,7 +7385,7 @@ video.hero__bg {
 }
 
 .rc-header-navigation.scrolled {
-  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .rc-header-navigation.scrolled .svg-logo:first-of-type {

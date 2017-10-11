@@ -84,10 +84,32 @@ $borders: ('top', 'bottom', 'left', 'right');
 
 //---------------- Shadows --------------//
 
-@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
-  @if $inset {
-    box-shadow: inset $top $left $blur $color;
-  } @else {
-    box-shadow: $top $left $blur $color;
+$shadows: (
+  'black': (
+      'strong': 0 0 2px 2px rgba(0, 0, 0, .6),
+      'faint': 0 2px 4px rgba(0, 0, 0, .1),
+      'soft': 0 8px 15px rgba( 0, 0, 0, .1 )
+  ),
+  'grey': (
+      'inset': inset 0 0 3px rgba(51, 51, 51, .45),
+      'faint': 0 2px 4px #f1f1f1
+  ),
+);
+
+@function getShadow($colour, $strength) {
+  $getColour: map-get($shadows, $colour);
+
+  @if $getColour != null {
+    $getStrength: map-get( map-get($shadows, $colour), $strength);
+
+    @if $getColour != null {
+      @return $getStrength;
+    }
+    @else {
+      @error 'The colour doesn\'t exist';
+    }
+  }
+  @else {
+    @error 'The shadow doesn\'t exist';
   }
 }

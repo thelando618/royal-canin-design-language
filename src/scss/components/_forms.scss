@@ -335,7 +335,7 @@ input:required, textarea:required, select:required, input:required:required {
 
 [role="listbox"].choices {
   border-bottom: 3px solid #87888A;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: getShadow('black', 'faint');
   cursor: pointer;
 
   & > .choices__inner {

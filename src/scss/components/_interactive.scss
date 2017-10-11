@@ -18,7 +18,7 @@
 }
 
 %floating-button {
-  box-shadow: 0 2px 4px #f1f1f1;
+  box-shadow: getShadow('grey', 'faint');
   background: colour('brand', 'white');
 }
 
