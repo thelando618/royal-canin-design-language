@@ -4087,7 +4087,7 @@ sup {
   display: inline-block;
   vertical-align: bottom;
   position: relative;
-  z-index: 1;
+  z-index: z(default);
   color: colour("functional", "functional");
   transition: color 0.2s ease-in;
   overflow: hidden;
@@ -4105,7 +4105,7 @@ sup {
   width: 100%;
   height: 100%;
   background-color: colour("functional", "functional");
-  z-index: -1;
+  z-index: z(default)-1;
   transform: translateY(110%);
   transition: transform .2s ease-in-out, background-color .2s ease-in-out;
 }
@@ -4176,7 +4176,7 @@ sup {
   text-decoration: none;
   top: 5px;
   width: auto;
-  z-index: 100000;
+  z-index: z(top);
 }
 
 .colour-red__bkgrnd {
@@ -4617,7 +4617,14 @@ section {
   *
   * Used to create consistency across spacing.
   *
-  * @param {String} $name Name of the spacer found in the $spacers sass map. Current uses the middle value (3).
+  * @param {String} $size Name of the spacer found in the $spacers sass map. Current uses the middle value (3).
+  * @returns {Number}
+  *//**
+  * Z Index function
+  *
+  * Used to organise z-index layering of elements.
+  *
+  * @param {String} $key Name of the element.
   * @returns {Number}
   *//**
   * Generate spacer utility classes using the $spacers sass map.
@@ -4950,7 +4957,7 @@ blockquote > p,q > p {
   width: 100%;
   height: 100%;
   background-color: #5ca9ad;
-  z-index: -1;
+  z-index: 0;
   transform: translateY(110%);
   transition: transform .2s ease-in-out, background-color .2s ease-in-out;
 }
@@ -5845,7 +5852,7 @@ input:required,textarea:required,select:required,input:required:required {
   background-color: transparent;
   border: none;
   position: fixed;
-  z-index: 999;
+  z-index: 31;
   cursor: pointer;
   top: 0;
 }
@@ -6137,7 +6144,7 @@ ul svg,ol svg {
   left: 50%;
   min-width: 90%;
   max-width: 100%;
-  z-index: 12;
+  z-index: 60;
   animation-direction: reverse;
   transform: translateX(-50%);
   background-color: #FFF;
@@ -6458,7 +6465,7 @@ ul svg,ol svg {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 11;
+  z-index: 40;
 }
 
 .shade--grey {
@@ -6570,7 +6577,7 @@ ul svg,ol svg {
   height: 50px;
   top: -30px;
   width: 2px;
-  z-index: 0;
+  z-index: 1;
 }
 
 .noUi-marker-horizontal.noUi-marker-normal {
@@ -6850,7 +6857,7 @@ table label {
 }
 
 .rc-tooltip {
-  z-index: 1000;
+  z-index: 20;
   display: block;
   background-color: #FFF;
   width: auto;
@@ -7082,7 +7089,7 @@ table label {
 
 .hero__fg {
   position: relative;
-  z-index: 5;
+  z-index: 20;
   overflow: hidden;
   text-align: center;
   padding: 0 3.5em;
@@ -7159,7 +7166,7 @@ video.hero__bg {
   background-color: transparent;
   position: absolute;
   height: 50px;
-  z-index: 99;
+  z-index: 21;
   top: 50%;
   margin-top: -16px;
   cursor: pointer;
@@ -7370,7 +7377,7 @@ video.hero__bg {
   top: 0;
   max-width: 1440px;
   width: 100%;
-  z-index: 11;
+  z-index: 30;
   transition: 0.2s ease;
 }
 
@@ -7450,7 +7457,7 @@ video.hero__bg {
   bottom: 0;
   margin: 0;
   width: 100%;
-  z-index: 12;
+  z-index: 31;
   display: none;
   animation: fadeIn .3s;
   animation-direction: reverse;
@@ -7481,7 +7488,7 @@ video.hero__bg {
   width: 100%;
   height: 82px;
   position: fixed;
-  z-index: 11;
+  z-index: 30;
   top: 0;
   left: 0;
   overflow-y: auto;
@@ -8683,7 +8690,7 @@ video.hero__bg {
   .navigation nav {
     position: absolute;
     background-color: #FFF;
-    z-index: 10;
+    z-index: 29;
     top: -200%;
     width: 100%;
     transition: 0.2s ease;
@@ -8702,7 +8709,7 @@ video.hero__bg {
     top: 0;
     width: 100%;
     height: 82px;
-    z-index: 11;
+    z-index: 30;
   }
 
   .large-up {

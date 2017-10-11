@@ -158,12 +158,12 @@ $social-color-youtube: #CD201F;
 
     &:before {
       transform: translateX( -.5em ) translateY( -.5em ) rotate( 45deg );
-      z-index: 1;
+      z-index: z(default);
       border: 1px solid colour('brand', 'medium-grey', 'light');
     }
 
     &:after {
-      z-index: 2;
+      z-index: z(default) + 1;
       width: 2em;
       height: .75em;
       margin-left: -1em;

@@ -1,5 +1,5 @@
 .rc-tooltip {
-  z-index: 1000;
+  z-index: z(tooltip);
   display: block;
   background-color: colour('brand', 'white');
   width: auto;

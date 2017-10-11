@@ -205,13 +205,13 @@ input:required, textarea:required, select:required, input:required:required {
       width: 100%;
       background-color: colour('brand', 'medium-grey');
       height: 2px;
-      z-index: 1;
+      z-index: z(default);
       transition: width .3s ease-in-out, background-color .2s ease-in-out;
     }
 
     &:after {
       background-color: colour('functional', 'functional');
-      z-index: 2;
+      z-index: z(default) + 1;
       width: 0;
     }
   }

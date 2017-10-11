@@ -72,13 +72,40 @@ $spacers: (
   *
   * Used to create consistency across spacing.
   *
-  * @param {String} $name Name of the spacer found in the $spacers sass map. Current uses the middle value (3).
+  * @param {String} $size Name of the spacer found in the $spacers sass map. Current uses the middle value (3).
   * @returns {Number}
   */
 @function get-spacer($size) {
 	@return nth(map-get($spacers, $size), 3);
 }
 
+/**
+  * Z Index function
+  *
+  * Used to organise z-index layering of elements.
+  *
+  * @param {String} $key Name of the element.
+  * @returns {Number}
+  */
+  $z-layers: (
+	default: 1,
+	carousel: 20,
+	tooltip: 20,
+	header-navigation: 30,
+	side-navigation: 30,
+	shade: 40,
+	modal: 60,
+	top: 999
+  );
+  
+  @function z($key) {
+	@if map-has-key($z-layers, $key) {
+		@return map-get($z-layers, $key);
+	}
+	@else {
+		@error 'Unknown `#{$key}` in $z-layers.';
+	}
+  }
 
 /**
   * Generate spacer utility classes using the $spacers sass map.
