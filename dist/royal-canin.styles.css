@@ -4597,15 +4597,9 @@ section {
 
 .hidden.visible {
   display: block;
-}/**
-  * Generate spacer utility classes using the $spacers sass map.
-  *
-  * Each utility class gets a name value from the key then loops
-  * through each breakpoint set it $breakpoints and applied the
-  * value of the named spacer index value === index value of
-  * breakpoint. So 'small' being the first breakpoint it gets the
-  * first value from the current spacer value set.
-  */.spacer-large {
+}
+
+.spacer-large {
   padding: 3rem;
 }
 
@@ -4639,18 +4633,9 @@ section {
 
 .spacer-bottom-small {
   margin-bottom: 0.5rem;
-}/**
-		* Generate media queries for each breakpoint in $breakpoints sass map
-		*
-		* @example scss - Basic Usage Sass
-		*
-		*		.small-down - only show element on small screens and down
-		*
-		* @example scss - Basic Usage Sass - outputs @media (max-width)
-		*
-		*		.small-up - only show element on small screens and up
-		*
-		*/img {
+}
+
+img {
   display: block;
   max-width: 100%;
   height: auto;

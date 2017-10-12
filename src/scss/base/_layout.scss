@@ -1,8 +1,8 @@
-// ----------------------------------------------------------------------
+/// ----------------------------------------------------------------------
 
-// Layout
+/// Layout
 
-// ----------------------------------------------------------------------
+/// ----------------------------------------------------------------------
 
 .container {
 	height: 100%;
@@ -17,9 +17,9 @@ section {
 	@extend %clearfix;
 }
 
-// ------------------- 
-// Body modifier class for nav
-// -------------------
+/// ------------------- 
+/// Body modifier class for nav
+/// -------------------
 
 $navigation-width: 240px;
 
@@ -39,9 +39,9 @@ $navigation-width: 240px;
 	}
 }
 
-// ------------------- 
-// Layout Utilities
-// -------------------
+/// ------------------- 
+/// Layout Utilities
+/// -------------------
 
 %layout--two-one--base-small > .rc-column {
 	& > img,
@@ -58,9 +58,9 @@ $navigation-width: 240px;
 	@extend %layout--two-one--base-small;
 }
 
-// ------------------- 
-// Stick elements
-// -------------------
+/// ------------------- 
+/// Stick elements
+/// -------------------
 
 %stick {
 	position: absolute;
@@ -78,9 +78,9 @@ $navigation-width: 240px;
 	left: auto;
 }
 
-// ------------------- 
-// Alignment Utilities
-// -------------------
+/// ------------------- 
+/// Alignment Utilities
+/// -------------------
 
 .vertical-align {
 	position: absolute;
@@ -101,9 +101,9 @@ $navigation-width: 240px;
 	transform: translateY(-50%) translateX(-50%);
 }
 
-// ------------------- 
-// Max-widths
-// -------------------
+/// ------------------- 
+/// Max-widths
+/// -------------------
 
 .max-width--large {
 	max-width: get-maxWidth('large');
@@ -117,9 +117,9 @@ $navigation-width: 240px;
 	margin-right: auto;
 }
 
-// ------------------- 
-// Hide/show elements
-// -------------------
+/// ------------------- 
+/// Hide/show elements
+/// -------------------
 
 .hidden {
 	display: none;
@@ -129,9 +129,9 @@ $navigation-width: 240px;
 	}
 }
 
-// ------------------- 
-// Other Utilities
-// -------------------
+/// ------------------- 
+/// Other Utilities
+/// -------------------
 
 .text-column-padding-right {
 	@media (get-breakpoint('large')) {
@@ -139,82 +139,81 @@ $navigation-width: 240px;
 	}
 }
 
-/**
-  * Generate spacer utility classes using the $spacers sass map.
-  *
-  * Each utility class gets a name value from the key then loops
-  * through each breakpoint set it $breakpoints and applied the
-  * value of the named spacer index value === index value of
-  * breakpoint. So 'small' being the first breakpoint it gets the
-  * first value from the current spacer value set.
-  */
-	$spacingTypes: map-keys($spacers);
-	@each $spacer in $spacingTypes {
+///
+/// Generate spacer utility classes using the $spacers sass map.
+///
+/// Each utility class gets a name value from the key then loops
+/// through each breakpoint set it $breakpoints and applied the
+/// value of the named spacer index value === index value of
+/// breakpoint. So 'small' being the first breakpoint it gets the
+/// first value from the current spacer value set.
+///
+$spacingTypes: map-keys($spacers);
+@each $spacer in $spacingTypes {
+
+  .spacer-#{$spacer} {
+    $breakpointSizes: map-keys($breakpoints);
+    padding: nth(map-get($spacers, $spacer), 1);
+    $counter: 1;
+
+    @each $breakpoint in $breakpointSizes {
+      @media (get-breakpoint($breakpoint)) {
+        padding: nth(map-get($spacers, $spacer), $counter);
+      }
+      $counter: $counter + 1;
+    }
+  }
+
+  .spacer-sides-#{$spacer} {
+    $breakpointSizes: map-keys($breakpoints);
+    padding: 0 nth(map-get($spacers, $spacer), 1);
+    $counter: 1;
+
+    @each $breakpoint in $breakpointSizes {
+      @media (get-breakpoint($breakpoint)) {
+        padding: 0 nth(map-get($spacers, $spacer), $counter);
+      }
+      $counter: $counter + 1;
+    }
+  }
+
+  .spacer-bottom-#{$spacer} {
+    $breakpointSizes: map-keys($breakpoints);
+    margin-bottom: nth(map-get($spacers, $spacer), 1);
+    $counter: 1;
+
+    @each $breakpoint in $breakpointSizes {
+      @media (get-breakpoint($breakpoint)) {
+        margin-bottom: nth(map-get($spacers, $spacer), $counter);
+      }
+      $counter: $counter + 1;
+    }
+  }
+}
 	
-		.spacer-#{$spacer} {
-			$breakpointSizes: map-keys($breakpoints);
-			padding: nth(map-get($spacers, $spacer), 1);
-			$counter: 1;
-	
-			@each $breakpoint in $breakpointSizes {
-				@media (get-breakpoint($breakpoint)) {
-					padding: nth(map-get($spacers, $spacer), $counter);
-				}
-				$counter: $counter + 1;
-			}
-		}
-	
-		.spacer-sides-#{$spacer} {
-			$breakpointSizes: map-keys($breakpoints);
-			padding: 0 nth(map-get($spacers, $spacer), 1);
-			$counter: 1;
-	
-			@each $breakpoint in $breakpointSizes {
-				@media (get-breakpoint($breakpoint)) {
-					padding: 0 nth(map-get($spacers, $spacer), $counter);
-				}
-				$counter: $counter + 1;
-			}
-		}
-	
-		.spacer-bottom-#{$spacer} {
-			$breakpointSizes: map-keys($breakpoints);
-			margin-bottom: nth(map-get($spacers, $spacer), 1);
-			$counter: 1;
-	
-			@each $breakpoint in $breakpointSizes {
-				@media (get-breakpoint($breakpoint)) {
-					margin-bottom: nth(map-get($spacers, $spacer), $counter);
-				}
-				$counter: $counter + 1;
-			}
-		}
-	}
-	
-	/**
-		* Generate media queries for each breakpoint in $breakpoints sass map
-		*
-		* @example scss - Basic Usage Sass
-		*
-		*		.small-down - only show element on small screens and down
-		*
-		* @example scss - Basic Usage Sass - outputs @media (max-width)
-		*
-		*		.small-up - only show element on small screens and up
-		*
-		*/
-	@each $breakpoint in $breakpoints {
-		@media (get-breakpoint('#{nth($breakpoint, 1)}')) {
-			.#{nth($breakpoint, 1)}-down {
-				display: none;
-			}
-		}
-	}
-	
-	@each $breakpoint in $breakpoints {
-		@media (get-breakpoint-down('#{nth($breakpoint, 1)}')) {
-			.#{nth($breakpoint, 1)}-up {
-				display: none;
-			}
-		}
-	}
+///
+/// Generate media queries for each breakpoint in $breakpoints sass map
+///
+/// @example scss - Basic Usage Sass
+///
+///		.small-down - only show element on small screens and down
+///
+/// @example scss - Basic Usage Sass - outputs @media (max-width)
+///
+///		.small-up - only show element on small screens and up
+///
+@each $breakpoint in $breakpoints {
+  @media (get-breakpoint('#{nth($breakpoint, 1)}')) {
+    .#{nth($breakpoint, 1)}-down {
+      display: none;
+    }
+  }
+}
+
+@each $breakpoint in $breakpoints {
+  @media (get-breakpoint-down('#{nth($breakpoint, 1)}')) {
+    .#{nth($breakpoint, 1)}-up {
+      display: none;
+    }
+  }
+}

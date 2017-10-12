@@ -1,8 +1,8 @@
-// ----------------------------------------------------------------------
+/// ----------------------------------------------------------------------
 
-// Forms
+/// Forms
 
-// ----------------------------------------------------------------------
+/// ----------------------------------------------------------------------
 
 label {
   display: inline-block;
@@ -101,9 +101,9 @@ input[type="file"] {
   padding-left: 0;
 }
 
-// ------------------- 
-// Inputs
-// -------------------
+/// ------------------- 
+/// Inputs
+/// -------------------
 
 .rc-input {
   display: block;
@@ -265,9 +265,9 @@ input[type="file"] {
 }
 
 
-// ------------------- 
-// Custom checkbox + radio
-// -------------------
+/// ------------------- 
+/// Custom checkbox + radio
+/// -------------------
 
 .rc-input--custom {
   input[type="checkbox"],
@@ -331,9 +331,9 @@ input[type="file"] {
   }
 }
 
-// ------------------- 
-// Select inputs
-// -------------------
+/// ------------------- 
+/// Select inputs
+/// -------------------
 
 [role="listbox"].choices {
   border-bottom: 3px solid #87888A;
@@ -385,9 +385,9 @@ input[type="file"] {
   border: none;
 }
 
-// ------------------- 
-// Checkbox - featured option
-// -------------------
+/// ------------------- 
+/// Checkbox - featured option
+/// -------------------
 
 .featured-option {
   & > input[type="checkbox"] + label {
@@ -411,18 +411,18 @@ input[type="file"] {
   }
 }
 
-// ------------------- 
-// Datepicker - native
-// -------------------
+/// ------------------- 
+/// Datepicker - native
+/// -------------------
 
 ::-webkit-calendar-picker-indicator {
   color: colour('brand', 'red');
   cursor: pointer;
 }
 
-// ------------------- 
-// Datepicker - fallback
-// -------------------
+/// ------------------- 
+/// Datepicker - fallback
+/// -------------------
 
 .pika-lendar > table {
   display: table;
