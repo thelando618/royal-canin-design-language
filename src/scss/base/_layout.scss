@@ -5,16 +5,16 @@
 /// ----------------------------------------------------------------------
 
 .container {
-	height: 100%;
-	max-width: get-maxWidth('x-large');
-	background: colour('brand', 'white');
-	margin: auto;
-	position: relative;
+  height: 100%;
+  max-width: get-maxWidth('x-large');
+  background: colour('brand', 'white');
+  margin: auto;
+  position: relative;
 }  
 
 section {
-	position: relative;
-	@extend %clearfix;
+  position: relative;
+  @extend %clearfix;
 }
 
 /// ------------------- 
@@ -24,19 +24,19 @@ section {
 $navigation-width: 240px;
 
 .body--fixed-side-navigation {
-	margin: get-spacer('small') auto;
-	margin-top: 0;
-	width: 90%;
-	padding-top: 100px;
+  margin: get-spacer('small') auto;
+  margin-top: 0;
+  width: 90%;
+  padding-top: 100px;
 
-	@media (get-breakpoint('small')) {
-		margin: get-spacer('large') auto;
-		padding-top: 0;
-	}
+  @media (get-breakpoint('small')) {
+    margin: get-spacer('large') auto;
+    padding-top: 0;
+  }
 
-	@media (get-breakpoint('large')) {
-		padding-left: $navigation-width;
-	}
+  @media (get-breakpoint('large')) {
+    padding-left: $navigation-width;
+  }
 }
 
 /// ------------------- 
@@ -44,18 +44,18 @@ $navigation-width: 240px;
 /// -------------------
 
 %layout--two-one--base-small > .rc-column {
-	& > img,
-	& > figure > img {
-		margin: 0 auto;
-	}
+  & > img,
+  & > figure > img {
+    margin: 0 auto;
+  }
 }
 
 .layout--one-two {
-	@extend %layout--two-one--base-small;
+  @extend %layout--two-one--base-small;
 }
 
 .layout--two-one {
-	@extend %layout--two-one--base-small;
+  @extend %layout--two-one--base-small;
 }
 
 /// ------------------- 
@@ -63,19 +63,19 @@ $navigation-width: 240px;
 /// -------------------
 
 %stick {
-	position: absolute;
+  position: absolute;
 }
 
 .stick-left {
-	@extend %stick;
-	left: 0;
-	right: auto;
+  @extend %stick;
+  left: 0;
+  right: auto;
 }
 
 .stick-right {
-	@extend %stick;
-	right: 0;
-	left: auto;
+  @extend %stick;
+  right: 0;
+  left: auto;
 }
 
 /// ------------------- 
@@ -83,22 +83,22 @@ $navigation-width: 240px;
 /// -------------------
 
 .vertical-align {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .horizontal-align {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .center-align {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translateY(-50%) translateX(-50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
 }
 
 /// ------------------- 
@@ -106,15 +106,15 @@ $navigation-width: 240px;
 /// -------------------
 
 .max-width--large {
-	max-width: get-maxWidth('large');
-	margin-left: auto;
-	margin-right: auto;
+  max-width: get-maxWidth('large');
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .max-width--x-large {
-	max-width: get-maxWidth('x-large');
-	margin-left: auto;
-	margin-right: auto;
+  max-width: get-maxWidth('x-large');
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /// ------------------- 
@@ -122,11 +122,11 @@ $navigation-width: 240px;
 /// -------------------
 
 .hidden {
-	display: none;
+  display: none;
 
-	&.visible {
-		display: block;
-	}
+  &.visible {
+    display: block;
+  }
 }
 
 /// ------------------- 
@@ -134,9 +134,9 @@ $navigation-width: 240px;
 /// -------------------
 
 .text-column-padding-right {
-	@media (get-breakpoint('large')) {
-		padding-right: get-spacer('medium');
-	}
+  @media (get-breakpoint('large')) {
+    padding-right: get-spacer('medium');
+  }
 }
 
 ///
@@ -190,7 +190,7 @@ $spacingTypes: map-keys($spacers);
     }
   }
 }
-	
+  
 ///
 /// Generate media queries for each breakpoint in $breakpoints sass map
 ///

@@ -12,7 +12,7 @@ html {
 *,
 *::before,
 *::after {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 /// ------------------- 
@@ -20,22 +20,22 @@ html {
 /// -------------------
 
 %clearfix {
-	&::before,
-	&::after {
-		content: "";
-		display: table;
-	}
+  &::before,
+  &::after {
+    content: "";
+    display: table;
+  }
 }
 
 %clearfix::after {
-	clear: both;
+  clear: both;
 }
 
 %spacing-reset {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .clearfix {
-	@extend %clearfix;
+  @extend %clearfix;
 }
