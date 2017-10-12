@@ -24,8 +24,8 @@ RCWDL.features.Tooltip = {
             html: document.getElementById(tooltips[tooltip].getAttribute('data-tooltip')),
             arrow: true,
             arrowSize: 'big',
-            position: tooltips[tooltip].getAttribute('data-tooltip-direction') || 'top',
             interactive: true,
+            position: tooltips[tooltip].getAttribute('data-tooltip-direction') || 'top',
             trigger: 'click',
             popperOptions: {
               modifiers: {
