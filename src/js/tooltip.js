@@ -22,12 +22,10 @@ RCWDL.features.Tooltip = {
         tippy(tooltips[tooltip],
           {
             html: document.getElementById(tooltips[tooltip].getAttribute('data-tooltip')),
-            offset: tooltips[tooltip].getAttribute('data-tooltip-direction') === 'top' ? 0 : 0,
-            distance: tooltips[tooltip].getAttribute('data-tooltip-direction') === 'top' ? 100 : 50,
             arrow: true,
             arrowSize: 'big',
-            position: tooltips[tooltip].getAttribute('data-tooltip-direction') || 'top',
             interactive: true,
+            position: tooltips[tooltip].getAttribute('data-tooltip-direction') || 'top',
             trigger: 'click',
             popperOptions: {
               modifiers: {

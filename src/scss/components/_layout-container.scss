@@ -1,3 +1,9 @@
+/// ----------------------------------------------------------------------
+
+/// Layout Container
+
+/// ----------------------------------------------------------------------
+
 .layout-container {
   display: inline-block;
   width: 100%;
@@ -57,7 +63,7 @@
       width: 33%;
     }
 
-    .three-column &.double-width  {
+    .three-column &.double-width {
       width: 66%;
     }
 
@@ -85,7 +91,7 @@
       width: 78%;
     }
 
-    .three-column &.double-width  {
+    .three-column &.double-width {
       width: 66%;
     }
   }

@@ -1,9 +1,9 @@
 .rc-tooltip {
-  z-index: 1000;
+  z-index: z(tooltip);
   display: block;
   background-color: colour('brand', 'white');
   width: auto;
-  box-shadow: 0 .5em 1em rgba( 0, 0, 0, .1 );
+  box-shadow: getShadow('black', 'soft');
 
   p {
     margin: 0;
@@ -18,6 +18,10 @@
   }
 }
 
+[data-tooltip] {
+  cursor: pointer;
+}
+
 .tippy-tooltip {
   background-color: transparent;
 }
@@ -25,7 +29,7 @@
 .tippy-tooltip {
   color: colour('functional', 'text');
   padding: 0;
-  box-shadow: 0 .5em 1em rgba( 0, 0, 0, .1 );
+  box-shadow: getShadow('black', 'soft');
 }
 
 .tippy-popper[x-placement^=top] [x-arrow].arrow-big {
@@ -38,10 +42,6 @@
 
 .tippy-popper[x-placement^=bottom] [x-arrow].arrow-big {
   border-bottom-color: white;
-}
-
-.tippy-popper[x-placement^=right] {
-  top: -65px !important;
 }
 
 .rc-tooltip__pad {

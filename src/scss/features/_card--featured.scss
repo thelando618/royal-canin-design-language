@@ -10,7 +10,7 @@
       position: absolute;
       bottom: 0;
       right: 0;
-      transform: scale(0.5);
+      transform: scale(.5);
       @extend .rc-icon-arrow--right--red;
     }
   }
@@ -49,7 +49,7 @@
     height: 150px;
     padding: 1em;
 
-    h3{
+    h3 {
       margin: 0;
       font-size: 1.75em;
     }
@@ -64,14 +64,14 @@
 
     @media (get-breakpoint('small')) {
 
-      h3{
+      h3 {
         font-size: 1.35em;
       }
     }
 
     @media ( min-width: 1280px ) {
 
-      h3{
+      h3 {
         font-size: 1.75em;
       }
     }
