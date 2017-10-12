@@ -49,7 +49,7 @@ ul, ol {
 .list--significance {
   @extend %list--blank;
   @extend %list--align;
-  box-shadow: 0 0 4px rgba( 0, 0, 0, .1 );
+  box-shadow: getShadow('black', 'faint');
 
   svg {
     display: block;

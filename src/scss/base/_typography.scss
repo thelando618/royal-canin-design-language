@@ -1,4 +1,13 @@
-// General
+/// ----------------------------------------------------------------------
+
+/// Typography
+
+/// ----------------------------------------------------------------------
+
+/// ------------------- 
+/// General
+/// -------------------
+
 body,
 input,
 textarea,
@@ -73,6 +82,9 @@ $type-breakpoints: ('small', 'x-large');
   }
 }
 
+/// ------------------- 
+/// Font weights
+/// -------------------
 
 .font--regular {
   font-weight: 300;
@@ -91,7 +103,10 @@ $type-breakpoints: ('small', 'x-large');
 }
 
 
-// Paragraph
+/// ------------------- 
+/// Text blocks
+/// -------------------
+
 p {
   line-height: 1.5;
 }
@@ -102,7 +117,8 @@ q {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
-blockquote, q {
+blockquote,
+q {
   border-left: 3px solid colour('brand', 'red');
   margin-left: 0;
   padding: 2em;

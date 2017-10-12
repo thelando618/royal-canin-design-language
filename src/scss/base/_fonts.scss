@@ -1,3 +1,9 @@
+/// ----------------------------------------------------------------------
+
+/// Fonts
+
+/// ----------------------------------------------------------------------
+
 @each $familyname, $weight, $style in $typefaces {
 
   // Make the class/placeholder string valid by removing spaces and converting to lowercase.

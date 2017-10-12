@@ -5,7 +5,7 @@
   left: 50%;
   min-width: 90%;
   max-width: 100%;
-  z-index: 12;
+  z-index: z(modal);
   animation-direction: reverse;
 
   transform: translateX(-50%);

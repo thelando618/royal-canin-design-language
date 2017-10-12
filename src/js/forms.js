@@ -101,18 +101,24 @@ RCWDL.ready(RCWDL.features.FormElements.passwordField('[type="password"]'));
 RCWDL.features.Selects = function (selector) {
   'use strict';
   selector = selector || '[data-js-select]';
-  var selects = document.querySelector(selector);
+  var selects = document.querySelectorAll(selector);
 
   // Check if we actually have any selects on the page.
   if (selects !== null && selects.length > 0) {
-    new Choices(selector,
-      {
-        placeholder: true,
-        placeholderValue: 'Select an option',
-        searchEnabled: false,
-        shouldSort: false
-      }
-    );
+    selects.forEach(function (select) {
+      new Choices(select,
+        {
+          placeholder: true,
+          placeholderValue: 'Select an option',
+          searchEnabled: false,
+          shouldSort: false,
+          // Check if different colour scheme has been applied
+          classNames: {
+            containerOuter: RCWDL.utilities.hasClass(select, 'rc-input--white') ? 'choices choices--white' : 'choices'
+          }
+        }
+      );
+    });
   }
 };
 
