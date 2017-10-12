@@ -4073,43 +4073,9 @@ sup {
 .rc-icon-youtube--red::after {
   background-image: url("royal-canin.sprite.svg");
   background-position: 100% 68.75%;
-}/**
-  * Get Max Width function
-  *
-  * Used to create consistency across max width values.
-  *
-  * @param {String} $name Name of the max width found in the $max-width sass map.
-  * @returns {Number}
-  *//**
-  * Get Spacer function
-  *
-  * Used to create consistency across spacing.
-  *
-  * @param {String} $size Name of the spacer found in the $spacers sass map. Current uses the middle value (3).
-  * @returns {Number}
-  *//**
-  * Z Index function
-  *
-  * Used to organise z-index layering of elements.
-  *
-  * @param {String} $key Name of the element.
-  * @returns {Number}
-  *//**
-  * Generate media queries for each breakpoint in $breakpoints sass map
-  *
-	* @example scss - Basic Usage Sass - outputs @media (min-width)
-	*
-	*		@media (get-breakpoint('small')) {
-	*			margin: 0;
-	* 	}
-	*
-	* @example scss - Basic Usage Sass - outputs @media (max-width)
-	*
-	*		@media (get-breakpoint-down('small')) {
-	*			margin: 0;
-	* 	}
-  *
-  */.screen-reader-text {
+}
+
+.screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
   height: 1px;

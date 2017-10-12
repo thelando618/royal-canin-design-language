@@ -1,41 +1,41 @@
-// ----------------------------------------------------------------------
+/// ----------------------------------------------------------------------
 
-// Layout Functions
+/// Layout Functions
 
-// ----------------------------------------------------------------------
+/// ----------------------------------------------------------------------
 
-/**
-  * Get Max Width function
-  *
-  * Used to create consistency across max width values.
-  *
-  * @param {String} $name Name of the max width found in the $max-width sass map.
-  * @returns {Number}
-  */
+///
+/// Get Max Width function
+///
+/// Used to create consistency across max width values.
+///
+/// @param {String} $name Name of the max width found in the $max-width sass map.
+/// @returns {Number}
+///
 @function get-maxWidth($name) {
 	@return map-get($max-widths, $name) * 1px;
 }
 
-/**
-  * Get Spacer function
-  *
-  * Used to create consistency across spacing.
-  *
-  * @param {String} $size Name of the spacer found in the $spacers sass map. Current uses the middle value (3).
-  * @returns {Number}
-  */
+///
+/// Get Spacer function
+///
+/// Used to create consistency across spacing.
+///
+/// @param {String} $size Name of the spacer found in the $spacers sass map. Current uses the middle value (3).
+/// @returns {Number}
+///
 @function get-spacer($size) {
 	@return nth(map-get($spacers, $size), 3);
 }
 
-/**
-  * Z Index function
-  *
-  * Used to organise z-index layering of elements.
-  *
-  * @param {String} $key Name of the element.
-  * @returns {Number}
-  */
+///
+/// Z Index function
+///
+/// Used to organise z-index layering of elements.
+///
+/// @param {String} $key Name of the element.
+/// @returns {Number}
+///
 @function z($key) {
 	@if map-has-key($z-layers, $key) {
 		@return map-get($z-layers, $key);
@@ -45,22 +45,21 @@
 	}
 }
 
-/**
-  * Generate media queries for each breakpoint in $breakpoints sass map
-  *
-	* @example scss - Basic Usage Sass - outputs @media (min-width)
-	*
-	*		@media (get-breakpoint('small')) {
-	*			margin: 0;
-	* 	}
-	*
-	* @example scss - Basic Usage Sass - outputs @media (max-width)
-	*
-	*		@media (get-breakpoint-down('small')) {
-	*			margin: 0;
-	* 	}
-  *
-  */
+///
+/// Generate media queries for each breakpoint in $breakpoints sass map
+///
+/// @example scss - Basic Usage Sass - outputs @media (min-width)
+///
+///		@media (get-breakpoint('small')) {
+///			margin: 0;
+/// 	}
+///
+/// @example scss - Basic Usage Sass - outputs @media (max-width)
+///
+///		@media (get-breakpoint-down('small')) {
+///			margin: 0;
+/// 	}
+///
 @function get-breakpoint($size) {
   $breakpoint-size: map-get($breakpoints, $size);
 
