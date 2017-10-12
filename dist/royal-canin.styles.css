@@ -4073,86 +4073,43 @@ sup {
 .rc-icon-youtube--red::after {
   background-image: url("royal-canin.sprite.svg");
   background-position: 100% 68.75%;
-}
-
-.outline-light,.card--featured,.card,.gallery-wrapper {
-  border: 1px solid colour("brand", "light-grey");
-}
-
-[role="alert"],.alert,.rc-map,.video-wrapper,.gallery-wrapper,.rc-tabs,.rc-tabs--side {
-  max-width: 700px;
-}
-
-.styled-link {
-  display: inline-block;
-  vertical-align: bottom;
-  position: relative;
-  z-index: z(default);
-  color: colour("functional", "functional");
-  transition: color 0.2s ease-in;
-  overflow: hidden;
-  background-color: transparent;
-  border: none;
-  user-select: none;
-}
-
-.styled-link:before {
-  content: '';
-  position: absolute;
-  pointer-events: none;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: colour("functional", "functional");
-  z-index: z(default)-1;
-  transform: translateY(110%);
-  transition: transform .2s ease-in-out, background-color .2s ease-in-out;
-}
-
-.styled-link:hover,.styled-link:focus {
-  color: colour("brand", "white");
-  text-decoration: none;
-}
-
-.styled-link:hover:before,.styled-link:focus:before {
-  transform: translateY(0%);
-}
-
-.styled-link:focus {
-  outline: none;
-}
-
-.styled-link:active:before {
-  background-color: colour("functional", "functional", "dark");
-}
-
-.border-top {
-  border-top-style: solid;
-  border-top-width: 1px;
-}
-
-.border-bottom {
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-}
-
-.border-left {
-  border-left-style: solid;
-  border-left-width: 1px;
-}
-
-.border-right {
-  border-right-style: solid;
-  border-right-width: 1px;
-}
-
-.border-all {
-  border-style: solid;
-  border-width: 1px;
-}
-
-.screen-reader-text {
+}/**
+  * Get Max Width function
+  *
+  * Used to create consistency across max width values.
+  *
+  * @param {String} $name Name of the max width found in the $max-width sass map.
+  * @returns {Number}
+  *//**
+  * Get Spacer function
+  *
+  * Used to create consistency across spacing.
+  *
+  * @param {String} $size Name of the spacer found in the $spacers sass map. Current uses the middle value (3).
+  * @returns {Number}
+  *//**
+  * Z Index function
+  *
+  * Used to organise z-index layering of elements.
+  *
+  * @param {String} $key Name of the element.
+  * @returns {Number}
+  *//**
+  * Generate media queries for each breakpoint in $breakpoints sass map
+  *
+	* @example scss - Basic Usage Sass - outputs @media (min-width)
+	*
+	*		@media (get-breakpoint('small')) {
+	*			margin: 0;
+	* 	}
+	*
+	* @example scss - Basic Usage Sass - outputs @media (max-width)
+	*
+	*		@media (get-breakpoint-down('small')) {
+	*			margin: 0;
+	* 	}
+  *
+  */.screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
   height: 1px;
@@ -4176,7 +4133,7 @@ sup {
   text-decoration: none;
   top: 5px;
   width: auto;
-  z-index: z(top);
+  z-index: 999;
 }
 
 .colour-red__bkgrnd {
@@ -4555,14 +4512,24 @@ sup {
   font-family: "RC TYPE";
   font-style: normal;
   font-weight: 700;
-}/**
- * Where an icon is used inside a button in browsers that CSS transforming of SVGs, the SVG is scaled up slightly. Because transforms don't affect the surrounding content, the negative margin on the right hand side of the button must be reduced by an amount proportianate to the scaling up. This function finds that value.
- * @param  {number} $icon-scale   This is by how much the icon has been scaled up in the CSS transform rule
- * @param  {number} $margin-right This is how much margin-left space there is between the SVG and the button text.
- * @return {number}               This is the margin-left value minus half the difference between 1rem and the scale value. It's half because we are only applying it to the right side of the SVG.
- */html {
+}
+
+html {
   box-sizing: border-box;
   font-size: 100%;
+}
+
+*,*::before,*::after {
+  box-sizing: inherit;
+}
+
+.clearfix::before,section::before,.clearfix::after,section::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after,section::after {
+  clear: both;
 }
 
 [class^="rc-icon-"].small {
@@ -4590,43 +4557,81 @@ sup {
   height: 32px;
 }
 
-*,*::before,*::after {
-  box-sizing: inherit;
-}
-
-.clearfix::before,section::before,.clearfix::after,section::after {
-  content: "";
-  display: table;
-}
-
-.clearfix::after,section::after {
-  clear: both;
+.container {
+  height: 100%;
+  max-width: 1440px;
+  background: #FFF;
+  margin: auto;
+  position: relative;
 }
 
 section {
   position: relative;
+}
+
+.body--fixed-side-navigation {
+  margin: 1rem auto;
+  margin-top: 0;
+  width: 90%;
+  padding-top: 100px;
+}
+
+.layout--one-two > .rc-column > img,.layout--two-one > .rc-column > img,.layout--one-two > .rc-column > figure > img,.layout--two-one > .rc-column > figure > img {
+  margin: 0 auto;
+}
+
+.stick-left,.stick-right {
+  position: absolute;
+}
+
+.stick-left {
+  left: 0;
+  right: auto;
+}
+
+.stick-right {
+  right: 0;
+  left: auto;
+}
+
+.vertical-align {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.horizontal-align {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.center-align {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.max-width--large {
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.max-width--x-large {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.hidden.visible {
+  display: block;
 }/**
-  * Get Max Width function
-  *
-  * Used to create consistency across max width values.
-  *
-  * @param {String} $name Name of the max width found in the $max-width sass map.
-  * @returns {Number}
-  *//**
-  * Get Spacer function
-  *
-  * Used to create consistency across spacing.
-  *
-  * @param {String} $size Name of the spacer found in the $spacers sass map. Current uses the middle value (3).
-  * @returns {Number}
-  *//**
-  * Z Index function
-  *
-  * Used to organise z-index layering of elements.
-  *
-  * @param {String} $key Name of the element.
-  * @returns {Number}
-  *//**
   * Generate spacer utility classes using the $spacers sass map.
   *
   * Each utility class gets a name value from the key then loops
@@ -4668,85 +4673,18 @@ section {
 
 .spacer-bottom-small {
   margin-bottom: 0.5rem;
-}
-
-.container {
-  height: 100%;
-  max-width: 1440px;
-  background: #FFF;
-  margin: auto;
-  position: relative;
-}
-
-.body--fixed-side-navigation {
-  margin: 1rem auto;
-  margin-top: 0;
-  width: 90%;
-  padding-top: 100px;
-}
-
-.layout--one-two > .rc-column > img,.layout--two-one > .rc-column > img,.layout--one-two > .rc-column > figure > img,.layout--two-one > .rc-column > figure > img {
-  margin: 0 auto;
-}
-
-.vertical-align {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.horizontal-align {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.center-align {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
-}
-
-.stick-left,.stick-right {
-  position: absolute;
-}
-
-.stick-left {
-  left: 0;
-  right: auto;
-}
-
-.stick-right {
-  right: 0;
-  left: auto;
-}
-
-.show-at-large-only {
-  display: none;
-}
-
-.max-width--large {
-  max-width: 1240px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.max-width--x-large {
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hidden {
-  display: none;
-}
-
-.hidden.visible {
-  display: block;
-}
-
-img {
+}/**
+		* Generate media queries for each breakpoint in $breakpoints sass map
+		*
+		* @example scss - Basic Usage Sass
+		*
+		*		.small-down - only show element on small screens and down
+		*
+		* @example scss - Basic Usage Sass - outputs @media (max-width)
+		*
+		*		.small-up - only show element on small screens and up
+		*
+		*/img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -4935,58 +4873,6 @@ blockquote > p,q > p {
   color: #333333;
 }
 
-.outline-light,.card--featured,.card,.gallery-wrapper {
-  border: 1px solid #EAEAEA;
-}
-
-[role="alert"],.alert,.rc-map,.video-wrapper,.gallery-wrapper,.rc-tabs,.rc-tabs--side {
-  max-width: 700px;
-}
-
-.styled-link {
-  display: inline-block;
-  vertical-align: bottom;
-  position: relative;
-  z-index: 1;
-  color: #5ca9ad;
-  transition: color 0.2s ease-in;
-  overflow: hidden;
-  background-color: transparent;
-  border: none;
-  user-select: none;
-}
-
-.styled-link:before {
-  content: '';
-  position: absolute;
-  pointer-events: none;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #5ca9ad;
-  z-index: 0;
-  transform: translateY(110%);
-  transition: transform .2s ease-in-out, background-color .2s ease-in-out;
-}
-
-.styled-link:hover,.styled-link:focus {
-  color: #FFF;
-  text-decoration: none;
-}
-
-.styled-link:hover:before,.styled-link:focus:before {
-  transform: translateY(0%);
-}
-
-.styled-link:focus {
-  outline: none;
-}
-
-.styled-link:active:before {
-  background-color: #4b9296;
-}
-
 .border-top {
   border-top-style: solid;
   border-top-width: 1px;
@@ -5010,6 +4896,58 @@ blockquote > p,q > p {
 .border-all {
   border-style: solid;
   border-width: 1px;
+}
+
+.outline-light,.card--featured,.card,.gallery-wrapper {
+  border: 1px solid #EAEAEA;
+}
+
+.styled-link {
+  display: inline-block;
+  vertical-align: bottom;
+  position: relative;
+  z-index: 1;
+  color: #5ca9ad;
+  transition: color .2s ease-in;
+  overflow: hidden;
+  background-color: transparent;
+  border: none;
+  user-select: none;
+}
+
+.styled-link::before {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #5ca9ad;
+  z-index: 0;
+  transform: translateY(110%);
+  transition: transform .2s ease-in-out, background-color .2s ease-in-out;
+}
+
+.styled-link:hover,.styled-link:focus {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.styled-link:hover::before,.styled-link:focus::before {
+  transform: translateY(0%);
+}
+
+.styled-link:focus {
+  outline: none;
+}
+
+.styled-link:active::before {
+  background-color: #4b9296;
+}
+
+[role="alert"],.alert,.rc-map,.video-wrapper,.gallery-wrapper,.rc-tabs,.rc-tabs--side {
+  max-width: 700px;
 }
 
 [role="alert"],.alert {
@@ -7793,6 +7731,10 @@ video.hero__bg {
     margin-bottom: 0.5rem;
   }
 
+  .x-small-down {
+    display: none;
+  }
+
   .rc-progress-stepped__link {
     width: 2.5rem;
     height: 2.5rem;
@@ -7827,10 +7769,6 @@ video.hero__bg {
   .card .card__title {
     font-size: 1.125em;
   }
-
-  .x-small-down {
-    display: none;
-  }
 }
 
 @media (min-width: 640px) {
@@ -7857,6 +7795,11 @@ video.hero__bg {
   [dir="rtl"] .choices__list--dropdown .choices__item--selectable:after {
     right: auto;
     left: 10px;
+  }
+
+  .body--fixed-side-navigation {
+    margin: 4rem auto;
+    padding-top: 0;
   }
 
   .spacer-large {
@@ -7895,9 +7838,8 @@ video.hero__bg {
     margin-bottom: 0.5rem;
   }
 
-  .body--fixed-side-navigation {
-    margin: 4rem auto;
-    padding-top: 0;
+  .small-down {
+    display: none;
   }
 
   figure > figcaption {
@@ -8071,10 +8013,6 @@ video.hero__bg {
   .rc-tabs .rc-tabs__content__single {
     padding: 2em;
   }
-
-  .small-down {
-    display: none;
-  }
 }
 
 @media (min-width: 700px) {
@@ -8155,6 +8093,10 @@ video.hero__bg {
 
   .spacer-bottom-small {
     margin-bottom: 1rem;
+  }
+
+  .med-down {
+    display: none;
   }
 
   .layout-container {
@@ -8385,13 +8327,17 @@ video.hero__bg {
   .rc-header-navigation__logo .switch:first-of-type {
     height: 60px;
   }
-
-  .med-down {
-    display: none;
-  }
 }
 
 @media (min-width: 960px) {
+  .body--fixed-side-navigation {
+    padding-left: 240px;
+  }
+
+  .text-column-padding-right {
+    padding-right: 3rem;
+  }
+
   .spacer-large {
     padding: 4.5rem;
   }
@@ -8428,16 +8374,8 @@ video.hero__bg {
     margin-bottom: 1.5rem;
   }
 
-  .body--fixed-side-navigation {
-    padding-left: 240px;
-  }
-
-  .show-at-large-only {
-    display: block;
-  }
-
-  .text-column-padding-right {
-    padding-right: 3rem;
+  .large-down {
+    display: none;
   }
 
   .menu-toggle--left,.menu-toggle--right {
@@ -8475,10 +8413,6 @@ video.hero__bg {
     font-size: .825em;
     border-right: 1px solid rgba(0, 0, 0, 0.15);
     background-color: #FFF;
-  }
-
-  .large-down {
-    display: none;
   }
 }
 
@@ -8524,6 +8458,10 @@ video.hero__bg {
 
   .spacer-bottom-small {
     margin-bottom: 1.75rem;
+  }
+
+  .x-large-down {
+    display: none;
   }
 
   .alpha,.alpha--black {
@@ -8618,10 +8556,6 @@ video.hero__bg {
   .sub-footer .sub-navigation:nth-child(2) .sub-navigation__list-item:last-child::after {
     display: block;
   }
-
-  .x-large-down {
-    display: none;
-  }
 }
 
 @media (min-width: 1280px) {
@@ -8667,13 +8601,13 @@ video.hero__bg {
     margin-bottom: 2rem;
   }
 
+  .xxx-large-down {
+    display: none;
+  }
+
   .modal {
     min-width: 50%;
     padding: 4rem;
-  }
-
-  .xxx-large-down {
-    display: none;
   }
 }
 
@@ -8690,6 +8624,10 @@ video.hero__bg {
 }
 
 @media (max-width: 960px) {
+  .large-up {
+    display: none;
+  }
+
   .navigation nav {
     position: absolute;
     background-color: #FFF;
@@ -8714,30 +8652,26 @@ video.hero__bg {
     height: 82px;
     z-index: 50;
   }
-
-  .large-up {
-    display: none;
-  }
 }
 
 @media (max-width: 800px) {
+  .med-up {
+    display: none;
+  }
+
   [class^="button"].fill-width--just-mobile {
     width: 100%;
     text-align: center;
   }
-
-  .med-up {
-    display: none;
-  }
 }
 
 @media (max-width: 640px) {
-  .button--full--width--mobile {
-    width: 100%;
-  }
-
   .small-up {
     display: none;
+  }
+
+  .button--full--width--mobile {
+    width: 100%;
   }
 }
 
@@ -8796,7 +8730,7 @@ video.hero__bg {
   }
 
   50% {
-    opacity: 0.5;
+    opacity: .5;
   }
 
   100% {

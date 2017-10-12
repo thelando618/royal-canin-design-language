@@ -1,0 +1,26 @@
+// ----------------------------------------------------------------------
+
+// Animation Function
+
+// ----------------------------------------------------------------------
+
+@function animatePlusTransform($animate, $settings, $transform, $transformPlusValue) {
+  @if $animate == steady-spin {
+    @return steady-spin-#{$transform} $settings;
+  }
+}
+
+@function movementSetting($type, $setting) {
+  @if $type != null {
+    $getSetting: map-get( map-get($movementSettings, $type), $setting);
+    @if $getSetting != null {
+      @return $getSetting;
+    }
+    @else {
+      @error 'The setting #{$setting} doesn\'t appear to be in the animation setting type #{$type}';
+    }
+  }
+  @else {
+    @error 'The animation setting type #{$type} doesn\'t exsist';
+  }
+}

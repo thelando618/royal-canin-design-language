@@ -1,3 +1,9 @@
+// ----------------------------------------------------------------------
+
+// Animation
+
+// ----------------------------------------------------------------------
+
 // ToDo: this could/should be turned into a mixin.
 @keyframes steady-spin {
   0% {
@@ -7,7 +13,6 @@
     transform: rotate(360deg);
   }
 }
-
 
 @keyframes steady-spin-medium {
   0% {
@@ -27,6 +32,18 @@
   }
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @mixin generateAnimation($animate, $transform, $transformPlusValue) {
   @if $animate == steady-spin {
     @keyframes steady-spin-#{$transform} {
@@ -37,23 +54,5 @@
         transform: rotate(360deg) $transformPlusValue;
       }
     }
-  }
-}
-
-@function animatePlusTransform($animate, $settings, $transform, $transformPlusValue) {
-  @if $animate == steady-spin {
-    @return steady-spin-#{$transform} $settings;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
   }
 }

@@ -31,46 +31,14 @@
 ///
 
 $properties: (
-                ('bkgrnd', 'background-color')
-                ('text', 'color')
-                ('border', 'border-color')
+  ('bkgrnd', 'background-color')
+  ('text', 'color')
+  ('border', 'border-color')
 );
-
-@function colour($palette, $name, $tintTone: null) {
-  $getPalette: map-get($colours, $palette);
-
-  @if $getPalette != null {
-    $getColour: map-get( map-get($colours, $palette), $name);
-
-    @if $getColour != null {
-
-      @if $tintTone != null {
-        @if map-has-key($tint-tone, $tintTone) {
-          @return scale_color($getColour, $lightness: map-get($tint-tone, $tintTone) * 1%);
-
-        }
-        @else {
-          @error 'The tint used -> #{$tintTone} doesn\'t exsist. Please use: #{$tint-tone}';
-        }
-      }
-
-      @else {
-        @return $getColour;
-      }
-
-    } @else {
-      @error 'The colour #{$name} doesn\'t appear to be in the palette #{$palette}';
-    }
-  }
-  @else {
-    @error 'The palette #{$palette} doesn\'t exsist';
-  }
-}
 
 @each $palette in $colours {
   // Get the index of the current loop, use that to get the key.
   $i: index($colours, $palette);
-
 
   // Fetch the colours list from the current palette.
   $getPalette: map-get($colours, nth(map-keys($colours), $i));
@@ -80,8 +48,6 @@ $properties: (
     // For each colour get the key to be used in classes.
     $n: index($getPalette, $colour);
     $colourName: nth(map-keys($getPalette), $n);
-
-
 
     // Loop through the properties list to generate a class for each property and each variant.
     @each $shortname, $prop in $properties {
