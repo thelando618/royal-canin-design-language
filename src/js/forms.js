@@ -111,6 +111,7 @@ RCWDL.features.Selects = function (selector) {
           placeholder: true,
           placeholderValue: 'Select an option',
           searchEnabled: false,
+          removeItemButton: true,
           shouldSort: false,
           // Check if different colour scheme has been applied
           classNames: {
