@@ -1,157 +1,42 @@
-*,
-*::before,
-*::after {
-	box-sizing: inherit;
-}
+/// ----------------------------------------------------------------------
 
-// Clears
-%clearfix {
-	&::before,
-	&::after {
-		content: "";
-		display: table;
-	}
-}
+/// Layout
 
-%clearfix::after {
-	clear: both;
-}
+/// ----------------------------------------------------------------------
 
-%spacing-reset {
-	margin: 0;
-	padding: 0;
-}
-
-.clearfix {
-	@extend %clearfix;
-}
+.container {
+  height: 100%;
+  max-width: get-maxWidth('x-large');
+  background: colour('brand', 'white');
+  margin: auto;
+  position: relative;
+}  
 
 section {
-	position: relative;
-	@extend %clearfix;
+  position: relative;
+  @extend %clearfix;
 }
 
-$grid--standard: (
-	columns: 12,  // The number of columns in your grid
-	gutters: 1 / 4, // The size of a gutter in relation to a single column
-);
-
-$grid--no-gutters: ( 
-	columns: 12, // The number of columns in your grid
-	gutters: 0, // The size of a gutter in relation to a single column
-);
-
-///////////// Layouts Utilities ////////////////
-$max-widths: ( 
-	'x-large': 1440,
-	'large': 1240,
-	'medium': 800,
-	'small': 300
-);
-
-/**
-  * Get Max Width function
-  *
-  * Used to create consistency across max width values.
-  *
-  * @param {String} $name Name of the max width found in the $max-width sass map.
-  * @returns {Number}
-  */
-@function get-maxWidth($name) {
-	@return map-get($max-widths, $name) * 1px;
-}
-
-$spacers: ( 
-	'large': (3rem, 3.5rem, 4rem, 4.5rem, 6rem, 7rem),
-	'medium': (2rem, 2.5rem, 3rem, 4rem, 4.5rem, 5rem),
-	'small': (.5rem, .5rem, 1rem, 1.5rem, 1.75rem, 2rem)
-);
-
-/**
-  * Get Spacer function
-  *
-  * Used to create consistency across spacing.
-  *
-  * @param {String} $name Name of the spacer found in the $spacers sass map. Current uses the middle value (3).
-  * @returns {Number}
-  */
-@function get-spacer($size) {
-	@return nth(map-get($spacers, $size), 3);
-}
-
-
-/**
-  * Generate spacer utility classes using the $spacers sass map.
-  *
-  * Each utility class gets a name value from the key then loops
-  * through each breakpoint set it $breakpoints and applied the
-  * value of the named spacer index value === index value of
-  * breakpoint. So 'small' being the first breakpoint it gets the
-  * first value from the current spacer value set.
-  */
-
-
-$spacingTypes: map-keys($spacers);
-@each $spacer in $spacingTypes {
-	.spacer-#{$spacer} {
-		$breakpointSizes: map-keys($breakpoints);
-		padding: nth(map-get($spacers, $spacer), 1);
-
-
-		$counter: 1;
-		@each $breakpoint in $breakpointSizes {
-			@media (get-breakpoint($breakpoint)) {
-				padding: nth(map-get($spacers, $spacer), $counter);
-			}
-			$counter: $counter + 1;
-		}
-	}
-	.spacer-sides-#{$spacer} {
-		$breakpointSizes: map-keys($breakpoints);
-		padding: 0 nth(map-get($spacers, $spacer), 1);
-
-		$counter: 1;
-		@each $breakpoint in $breakpointSizes {
-			@media (get-breakpoint($breakpoint)) {
-				padding: 0 nth(map-get($spacers, $spacer), $counter);
-			}
-			$counter: $counter + 1;
-		}
-	}
-
-	.spacer-bottom-#{$spacer} {
-		$breakpointSizes: map-keys($breakpoints);
-
-		margin-bottom: nth(map-get($spacers, $spacer), 1);
-
-		$counter: 1;
-		@each $breakpoint in $breakpointSizes {
-			@media (get-breakpoint($breakpoint)) {
-				margin-bottom: nth(map-get($spacers, $spacer), $counter);
-			}
-			$counter: $counter + 1;
-		}
-	}
-}
-
-///////////// Layouts ////////////////
+/// ------------------- 
+/// Body modifier class for nav
+/// -------------------
 
 $navigation-width: 240px;
 
-.navigation + div {
-	margin: get-spacer('small') auto;
-	width: 90%;
-	margin-top: 90px;
+.body--fixed-side-navigation {
+  margin: get-spacer('small') auto;
+  margin-top: 0;
+  width: 90%;
+  padding-top: 100px;
 
-	@media (get-breakpoint('small')) {
-		margin: get-spacer('large') auto;
-	}
-}
+  @media (get-breakpoint('small')) {
+    margin: get-spacer('large') auto;
+    padding-top: 0;
+  }
 
-@media (get-breakpoint('large')) {
-	.navigation + div {
-		padding-left: $navigation-width;
-	}
+  @media (get-breakpoint('large')) {
+    padding-left: $navigation-width;
+  }
 }
 
 .has-left-side-bar > [role="alert"].alert--info {
@@ -168,42 +53,31 @@ body::before {
   height: 0;
 }
 
+/// ------------------- 
+/// Layout Utilities
+/// -------------------
+
 %layout--two-one--base-small > .rc-column {
-	& > img,
-	& > figure > img {
-		margin: 0 auto;
-	}
+  & > img,
+  & > figure > img {
+    margin: 0 auto;
+  }
 }
 
 .layout--one-two {
-	@extend %layout--two-one--base-small;
+  @extend %layout--two-one--base-small;
 }
 
 .layout--two-one {
-	@extend %layout--two-one--base-small;
+  @extend %layout--two-one--base-small;
 }
 
-.vertical-align {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-}
-
-.horizontal-align {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-}
-
-.center-align {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translateY(-50%) translateX(-50%);
-}
+/// ------------------- 
+/// Stick elements
+/// -------------------
 
 %stick {
-	position: absolute;
+  position: absolute;
 }
 
 %fixed {
@@ -211,15 +85,15 @@ body::before {
 }
 
 .stick-left {
-	@extend %stick;
-	left: 0;
-	right: auto;
+  @extend %stick;
+  left: 0;
+  right: auto;
 }
 
 .stick-right {
-	@extend %stick;
-	right: 0;
-	left: auto;
+  @extend %stick;
+  right: 0;
+  left: auto;
 }
 
 .stick-bottom {
@@ -260,32 +134,145 @@ body::before {
 }
 
 %show-at-large-only {
-	display: none;
-
-	@media (get-breakpoint('large')) {
-		display: block;
-	}
+  display: none;
 }
 
-.show-at-large-only {
-	@extend %show-at-large-only;
+/// ------------------- 
+/// Alignment Utilities
+/// -------------------
+
+.vertical-align {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
+
+.horizontal-align {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.center-align {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+/// ------------------- 
+/// Max-widths
+/// -------------------
 
 .max-width--large {
-	max-width: get-maxWidth('large');
-	margin-left: auto;
-	margin-right: auto;
+  max-width: get-maxWidth('large');
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .max-width--x-large {
-	max-width: get-maxWidth('x-large');
-	margin-left: auto;
-	margin-right: auto;
+  max-width: get-maxWidth('x-large');
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/// ------------------- 
+/// Hide/show elements
+/// -------------------
+
+.hidden {
+  display: none;
+
+  &.visible {
+    display: block;
+  }
+}
+
+/// ------------------- 
+/// Other Utilities
+/// -------------------
 
 .text-column-padding-right {
-	@media (get-breakpoint('large')) {
-		padding-right: get-spacer('medium');
-	}
+  @media (get-breakpoint('large')) {
+    padding-right: get-spacer('medium');
+  }
+}
+
+///
+/// Generate spacer utility classes using the $spacers sass map.
+///
+/// Each utility class gets a name value from the key then loops
+/// through each breakpoint set it $breakpoints and applied the
+/// value of the named spacer index value === index value of
+/// breakpoint. So 'small' being the first breakpoint it gets the
+/// first value from the current spacer value set.
+///
+$spacingTypes: map-keys($spacers);
+@each $spacer in $spacingTypes {
+
+  .spacer-#{$spacer} {
+    $breakpointSizes: map-keys($breakpoints);
+    padding: nth(map-get($spacers, $spacer), 1);
+    $counter: 1;
+
+    @each $breakpoint in $breakpointSizes {
+      @media (get-breakpoint($breakpoint)) {
+        padding: nth(map-get($spacers, $spacer), $counter);
+      }
+      $counter: $counter + 1;
+    }
+  }
+
+  .spacer-sides-#{$spacer} {
+    $breakpointSizes: map-keys($breakpoints);
+    padding: 0 nth(map-get($spacers, $spacer), 1);
+    $counter: 1;
+
+    @each $breakpoint in $breakpointSizes {
+      @media (get-breakpoint($breakpoint)) {
+        padding: 0 nth(map-get($spacers, $spacer), $counter);
+      }
+      $counter: $counter + 1;
+    }
+  }
+
+  .spacer-bottom-#{$spacer} {
+    $breakpointSizes: map-keys($breakpoints);
+    margin-bottom: nth(map-get($spacers, $spacer), 1);
+    $counter: 1;
+
+    @each $breakpoint in $breakpointSizes {
+      @media (get-breakpoint($breakpoint)) {
+        margin-bottom: nth(map-get($spacers, $spacer), $counter);
+      }
+      $counter: $counter + 1;
+    }
+  }
+}
+  
+///
+/// Generate media queries for each breakpoint in $breakpoints sass map
+///
+/// @example scss - Basic Usage Sass
+///
+///		.small-down - only show element on small screens and down
+///
+/// @example scss - Basic Usage Sass - outputs @media (max-width)
+///
+///		.small-up - only show element on small screens and up
+///
+@each $breakpoint in $breakpoints {
+  @media (get-breakpoint('#{nth($breakpoint, 1)}')) {
+    .#{nth($breakpoint, 1)}-down {
+      display: none;
+    }
+  }
+}
+
+@each $breakpoint in $breakpoints {
+  @media (get-breakpoint-down('#{nth($breakpoint, 1)}')) {
+    .#{nth($breakpoint, 1)}-up {
+      display: none;
+    }
+  }
 }

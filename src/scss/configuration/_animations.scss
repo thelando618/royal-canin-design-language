@@ -1,24 +1,14 @@
+// ----------------------------------------------------------------------
+
+// Animation configuration
+
+// ----------------------------------------------------------------------
+
 $movementSettings: (
-        transition: (
-                base: .2s ease,
-        ),
-        animation: (
-                base: .5s forwards ease
-        )
+  transition: (
+    base: .2s ease
+  ),
+  animation: (
+    base: .5s forwards ease
+  )
 );
-
-
-@function movementSetting($type, $setting) {
-  @if $type != null {
-    $getSetting: map-get( map-get($movementSettings, $type), $setting);
-    @if $getSetting != null {
-      @return $getSetting;
-    }
-    @else {
-      @error 'The setting #{$setting} doesn\'t appear to be in the animation setting type #{$type}';
-    }
-  }
-  @else {
-    @error 'The animation setting type #{$type} doesn\'t exsist';
-  }
-}

@@ -1,74 +1,14 @@
-%on-white-outline {
-  border: 1px solid colour('brand', 'light-grey');
-}
+/// ----------------------------------------------------------------------
 
-.outline-light {
-  @extend %on-white-outline;
-}
+/// Visual Styles
 
-%feature-width-restriction {
-  max-width: 700px;
-}
+/// ----------------------------------------------------------------------
 
-%example-wrapper {
-  padding: 1em;
-}
-
-@mixin red-accent($direction, $width) {
-  border-#{$direction}: $width solid colour('brand', 'red');
-}
-
-
-// Inline style link
-.styled-link {
-  display: inline-block;
-  vertical-align: bottom;
-  position: relative;
-  z-index: 1;
-  color: colour('functional', 'functional');
-  transition: color 0.2s ease-in;
-  overflow: hidden;
-  background-color: transparent;
-  border: none;
-  user-select: none;
-
-  &:before {
-    content: '';
-    position: absolute;
-    pointer-events: none;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: colour('functional', 'functional');
-    z-index: -1;
-    transform: translateY( 110% );
-    transition: transform .2s ease-in-out, background-color .2s ease-in-out;
-  }
-
-  &:hover, &:focus {
-    color: colour('brand', 'white');
-    text-decoration: none;
-
-    &:before {
-      transform: translateY( 0% );
-    }
-  }
-
-  &:focus {
-    outline: none;
-  }
-
-  &:active {
-    &:before {
-      background-color: colour('functional', 'functional', 'dark');
-    }
-  }
-}
-
+/// ------------------- 
+/// Outlines/borders
+/// -------------------
 
 $borders: ('top', 'bottom', 'left', 'right');
-
 
 @each $border in $borders {
   .border-#{$border} {
@@ -82,28 +22,77 @@ $borders: ('top', 'bottom', 'left', 'right');
   border-width: 1px;
 }
 
-//---------------- Shadows --------------//
-
-@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
-
-  @if $inset {
-    box-shadow: inset $top $left $blur $color;
-  }
-  @else {
-    box-shadow: $top $left $blur $color;
-  }
-
+%on-white-outline {
+  border: 1px solid colour('brand', 'light-grey');
 }
 
-@mixin get-boxshadow($type, $colour) {
-
-  @if $type == 'medium' {
-    @include box-shadow(2px, 0, 8px, rgba($colour, .1));
-  }
-
+.outline-light {
+  @extend %on-white-outline;
 }
 
-.boxshadow--medium,
-%boxshadow--medium {
- @include get-boxshadow('medium', black);
+@mixin red-accent($direction, $width) {
+  border-#{$direction}: $width solid colour('brand', 'red');
+}
+
+/// ------------------- 
+/// Inline style link
+/// -------------------
+
+.styled-link {
+  display: inline-block;
+  vertical-align: bottom;
+  position: relative;
+  z-index: z(default);
+  color: colour('functional', 'functional');
+  transition: color .2s ease-in;
+  overflow: hidden;
+  background-color: transparent;
+  border: none;
+  user-select: none;
+
+  &::before {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: colour('functional', 'functional');
+    z-index: z(default) - 2;
+    transform: translateY( 110% );
+    transition: transform .2s ease-in-out, background-color .2s ease-in-out;
+  }
+
+  &:hover,
+  &:focus {
+    color: colour('brand', 'white');
+    text-decoration: none;
+
+    &::before {
+      transform: translateY( 0% );
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    &::before {
+      background-color: colour('functional', 'functional', 'dark');
+    }
+  }
+}
+
+/// ------------------- 
+/// Misc
+/// -------------------
+
+%feature-width-restriction {
+  max-width: 700px;
+}
+
+%example-wrapper {
+  padding: 1em;
 }

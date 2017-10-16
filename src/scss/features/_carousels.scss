@@ -54,7 +54,7 @@ $hero-bp-large: 1000px;
 
 .hero__fg {
   position: relative;
-  z-index: 5;
+  z-index: z(carousel);
   overflow: hidden;
   text-align: center;
   padding: 0 3.5em;
@@ -71,11 +71,11 @@ $hero-bp-large: 1000px;
 }
 
 figure.hero__bg {
-  z-index: 1;
+  z-index: z(default);
 }
 
 video.hero__bg {
-  z-index: 2;
+  z-index: z(default) + 1;
 
   .touchevents & {
     display: none;
@@ -250,13 +250,14 @@ video.hero__bg {
 
 [data-tns-hidden="x"] {
   position: relative;
+  border: 1px solid colour('brand', 'light-grey');
 }
 
 [data-controls] {
   background-color: transparent;
   position: absolute;
   height: 50px;
-  z-index: 99;
+  z-index: z(carousel) + 1;
   top: 50%;
   margin-top: -16px;
   cursor: pointer;

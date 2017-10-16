@@ -18,7 +18,7 @@
 }
 
 %floating-button {
-  box-shadow: 0 2px 4px #f1f1f1;
+  box-shadow: getShadow('grey', 'faint');
   background: colour('brand', 'white');
 }
 
@@ -187,7 +187,7 @@
   background-color: transparent;
   border: none;
   position: fixed;
-  z-index: 999;
+  z-index: z(side-navigation) + 1;
   cursor: pointer;
   top: 0;
 

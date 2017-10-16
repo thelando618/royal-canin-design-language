@@ -1,23 +1,29 @@
+// ----------------------------------------------------------------------
+
+// Colour configuration
+
+// ----------------------------------------------------------------------
+
 $colours: (
-        'brand': (
-                'red':  #EC001A,
-                'medium-grey': #808285,
-                'light-grey':  #EAEAEA,
-                'white': #FFF
-        ),
-        'functional': (
-                'text': #333333,
-                'functional': #5ca9ad,
-                'success': #5FCC78,
-                'error': #C71838
-        ),
-        'tertiary': (
-                'grey--light': #F6F6F6,
-                'blue--light': #E7F4F7
-        )
+	'brand': (
+		'red':  #EC001A,
+		'medium-grey': #808285,
+		'light-grey':  #EAEAEA,
+		'white': #FFF
+	), 
+	'functional': (
+		'text': #333333,
+		'functional': #5ca9ad,
+		'success': #5FCC78,
+		'error': #C71838
+	),
+	'tertiary': (
+		'grey--light': #F6F6F6,
+		'blue--light': #E7F4F7
+	)
 );
 
 $tint-tone: (
-        'dark': -15,
-        'light': 10
+	'dark': -15,
+	'light': 10
 );

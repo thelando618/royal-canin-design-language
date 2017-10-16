@@ -1,0 +1,27 @@
+/// ----------------------------------------------------------------------
+
+/// Visual Style Functions
+
+/// ----------------------------------------------------------------------
+
+/// ------------------- 
+/// Shadows 
+/// -------------------
+
+@function getShadow($colour, $strength) {
+  $getColour: map-get($shadows, $colour);
+
+  @if $getColour != null {
+    $getStrength: map-get( map-get($shadows, $colour), $strength);
+
+    @if $getColour != null {
+      @return $getStrength;
+    }
+    @else {
+      @error 'The colour doesn\'t exist';
+    }
+  }
+  @else {
+    @error 'The shadow doesn\'t exist';
+  }
+}
