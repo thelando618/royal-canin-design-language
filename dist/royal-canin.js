@@ -4209,7 +4209,7 @@ RCDL.features.Selects = function (selector) {
           shouldSort: false,
           // Check if different colour scheme has been applied
           classNames: {
-            containerOuter: RCWDL.utilities.hasClass(select, 'rc-input--white') ? 'choices choices--white' : 'choices'
+            containerOuter: RCDL.utilities.hasClass(select, 'rc-input--white') ? 'choices choices--white' : 'choices'
           }
         }
       );
