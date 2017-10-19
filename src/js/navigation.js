@@ -20,10 +20,10 @@ RCDL.navigation.changeNavigationOnScroll = function (headerNavSelector, mobileFo
       var headerNav = document.querySelector(headerNavSelector);
 
       if (RCDL.posTop() > 100) {
-        RCDL.utilities.addClass(headerNav, 'scrolled');
+        RCDL.utilities.modifyClass('add', headerNav, 'scrolled');
       }
       else {
-        RCDL.utilities.removeClass(headerNav, 'scrolled');
+        RCDL.utilities.modifyClass('remove', headerNav, 'scrolled');
       }
     });
   }
@@ -37,11 +37,11 @@ RCDL.navigation.changeNavigationOnScroll = function (headerNavSelector, mobileFo
 
       if (RCDL.posTop() > previous) {
         if (!RCDL.utilities.hasClass(mainNav, 'open')) {
-          RCDL.utilities.addClass(footerNav, 'scrolled');
+          RCDL.utilities.modifyClass('add', footerNav, 'scrolled');
         }
       }
       else {
-        RCDL.utilities.removeClass(footerNav, 'scrolled');
+        RCDL.utilities.modifyClass('remove', footerNav, 'scrolled');
       }
       previous = RCDL.posTop();
     });
@@ -70,12 +70,12 @@ RCDL.navigation.searchBar = function (searchBarTriggerSelector, mainNavSelector)
     searchBarTrigger.addEventListener('click', function () {
       if (mainNav != null) {
         if (RCDL.utilities.hasClass(mainNav, 'open')) {
-          RCDL.utilities.removeClass(mainNav, 'open');
+          RCDL.utilities.modifyClass('remove', mainNav, 'open');
           document.body.style.overflow = ''; // Always allow page scrolling when search open
 
           if (mainNavToggler !== null) {
             var svg = mainNavToggler.contentDocument.querySelector('.svg-toggle');
-            RCDL.utilities.removeClass(svg, 'active');
+            RCDL.utilities.modifyClass('remove', svg, 'active');
           }
         }
       }
@@ -84,10 +84,10 @@ RCDL.navigation.searchBar = function (searchBarTriggerSelector, mainNavSelector)
 
       siblings.forEach(function (sibling) {
         if (sibling !== searchBarTrigger) {
-          RCDL.utilities.toggleClass(sibling, 'fade');
+          RCDL.utilities.modifyClass('toggle', sibling, 'fade');
         }
         else {
-          RCDL.utilities.toggleClass(searchBarTrigger, 'active');
+          RCDL.utilities.modifyClass('toggle', searchBarTrigger, 'active');
         }
       });
     });

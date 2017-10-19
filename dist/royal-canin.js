@@ -3677,93 +3677,80 @@ RCDL.utilities.getSiblings = function (el) {
 /**
  * Used to add/remove classes on a target element.
  *
+ * @param {String} type
+ * Modify class type, accepts toggle, add or remove.
+ * 
  * @param {Node} target
  * Targeted DOM node item.
  *
  * @param {String} className
  * Class name to be toggled.
  */
-RCDL.utilities.toggleClass = function (target, className) {
+RCDL.utilities.modifyClass = function (type, target, className) {
   'use strict';
-  var hasClass = null;
-  var addRemove = null;
 
-  if (target.classList) {
-    hasClass = target.classList.contains(className);
-  }
-  else {
-    hasClass = new RegExp('(^| )' + className + '( |$)', 'gi').test(target.className);
-  }
+  if (type === 'toggle') {
+    var hasClass = null;
+    var addRemove = null;
 
-  switch (hasClass) {
-    case true:
-      addRemove = 'remove';
-      break;
-
-    case false:
-      addRemove = 'add';
-      break;
-
-    default:
-      throw new Error('Has Class option used with method RCDL.utilities.toggleClass is invaild.');
-  }
-
-  // IE 8+ support.
-  if (target.classList) {
-    target.classList[addRemove](className);
-  }
-  else {
-    if (addRemove === 'add') {
-      target.className += className;
+    if (target.classList) {
+      hasClass = target.classList.contains(className);
     }
+    else {
+      hasClass = new RegExp('(^| )' + className + '( |$)', 'gi').test(target.className);
+    }
+
+    switch (hasClass) {
+      case true:
+        addRemove = 'remove';
+        break;
+
+      case false:
+        addRemove = 'add';
+        break;
+
+      default:
+        throw new Error('Has Class option used with method RCDL.utilities.toggleClass is invaild.');
+    }
+
+    // IE 8+ support.
+    if (target.classList) {
+      target.classList[addRemove](className);
+    }
+    else {
+      if (addRemove === 'add') {
+        target.className += className;
+      }
+      else {
+        target.className = target.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+      }
+    }
+  }
+
+  else if (type === 'add') {
+    if (target.classList) {
+      target.classList.add(className);
+    }
+    // IE 8+ support.
+    else {
+      target.className += ' ' + className;
+    }
+  }
+
+  else if (type === 'remove') {
+    if (target.classList) {
+      target.classList.remove(className);
+    }
+    // IE 8+ support.
     else {
       target.className = target.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
     }
   }
-};
 
-/**
- * Used to add classes on a target element.
- *
- * @param {Node} target
- * Targeted DOM node item.
- *
- * @param {String} className
- * Class name to be added.
- */
-RCDL.utilities.addClass = function (target, className) {
-  'use strict';
-
-  if (target.classList) {
-    target.classList.add(className);
-  }
-  // IE 8+ support.
   else {
-    target.className += ' ' + className;
+    throw new Error('Class modifier is invalid. Accepts toggle, add or remove');
   }
 };
-
-/**
- * Used to remove classes on a target element.
- *
- * @param {Node} target
- * Targeted DOM node item.
- *
- * @param {String} className
- * Class name to be removed.
- */
-RCDL.utilities.removeClass = function (target, className) {
-  'use strict';
-
-  if (target.classList) {
-    target.classList.remove(className);
-  }
-  // IE 8+ support.
-  else {
-    target.className = target.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
-  }
-};
-
 
 /**
  * Takes two DOM nodes and wraps one around the other.
@@ -3895,12 +3882,12 @@ RCDL.utilities.triggerAndTargetClassModifier = {
 
       var childTarget = document.querySelector('[data-js-target="' + targetNode.getAttribute('data-js-trigger') + '"]');
       if (childTarget !== null) {
-        RCDL.utilities.toggleClass(childTarget, classNoDot);
+        RCDL.utilities.modifyClass('toggle', childTarget, classNoDot);
       }
     }
     else {
       // Toggle the active class on the trigger.
-      RCDL.utilities.toggleClass(targetNode, classNoDot);
+      RCDL.utilities.modifyClass('toggle', targetNode, classNoDot);
     }
   },
   removeModifier: function (item, modifier) {
@@ -3923,11 +3910,11 @@ RCDL.utilities.triggerAndTargetClassModifier = {
 
     if (target.siblingCheck) {
       var childTarget = currentNode.querySelector(target.targetClass);
-      RCDL.utilities.toggleClass(childTarget, modifier.replace(/^\./, ''));
+      RCDL.utilities.modifyClass('toggle', childTarget, modifier.replace(/^\./, ''));
     }
     else {
       // Toggle the active class on the target.
-      RCDL.utilities.toggleClass(currentNode, modifier.replace(/^\./, ''));
+      RCDL.utilities.modifyClass('toggle', currentNode, modifier.replace(/^\./, ''));
     }
     return currentNode.parentNode;
   },
@@ -3989,7 +3976,7 @@ RCDL.utilities.svgAnimation = function (interactiveSvg) {
         var importedSvg = document.importNode(newSVGDoc.documentElement, true);
 
         classes.split(' ').forEach(function (singleClass) {
-          RCDL.utilities.addClass(importedSvg, singleClass);
+          RCDL.utilities.modifyClass('add', importedSvg, singleClass);
         });
 
         importedSvg.setAttribute('data-js-import-interactive-svg', dataTarget);
@@ -4628,10 +4615,10 @@ RCDL.navigation.changeNavigationOnScroll = function (headerNavSelector, mobileFo
       var headerNav = document.querySelector(headerNavSelector);
 
       if (RCDL.posTop() > 100) {
-        RCDL.utilities.addClass(headerNav, 'scrolled');
+        RCDL.utilities.modifyClass('add', headerNav, 'scrolled');
       }
       else {
-        RCDL.utilities.removeClass(headerNav, 'scrolled');
+        RCDL.utilities.modifyClass('remove', headerNav, 'scrolled');
       }
     });
   }
@@ -4645,11 +4632,11 @@ RCDL.navigation.changeNavigationOnScroll = function (headerNavSelector, mobileFo
 
       if (RCDL.posTop() > previous) {
         if (!RCDL.utilities.hasClass(mainNav, 'open')) {
-          RCDL.utilities.addClass(footerNav, 'scrolled');
+          RCDL.utilities.modifyClass('add', footerNav, 'scrolled');
         }
       }
       else {
-        RCDL.utilities.removeClass(footerNav, 'scrolled');
+        RCDL.utilities.modifyClass('remove', footerNav, 'scrolled');
       }
       previous = RCDL.posTop();
     });
@@ -4678,12 +4665,12 @@ RCDL.navigation.searchBar = function (searchBarTriggerSelector, mainNavSelector)
     searchBarTrigger.addEventListener('click', function () {
       if (mainNav != null) {
         if (RCDL.utilities.hasClass(mainNav, 'open')) {
-          RCDL.utilities.removeClass(mainNav, 'open');
+          RCDL.utilities.modifyClass('remove', mainNav, 'open');
           document.body.style.overflow = ''; // Always allow page scrolling when search open
 
           if (mainNavToggler !== null) {
             var svg = mainNavToggler.contentDocument.querySelector('.svg-toggle');
-            RCDL.utilities.removeClass(svg, 'active');
+            RCDL.utilities.modifyClass('remove', svg, 'active');
           }
         }
       }
@@ -4692,10 +4679,10 @@ RCDL.navigation.searchBar = function (searchBarTriggerSelector, mainNavSelector)
 
       siblings.forEach(function (sibling) {
         if (sibling !== searchBarTrigger) {
-          RCDL.utilities.toggleClass(sibling, 'fade');
+          RCDL.utilities.modifyClass('toggle', sibling, 'fade');
         }
         else {
-          RCDL.utilities.toggleClass(searchBarTrigger, 'active');
+          RCDL.utilities.modifyClass('toggle', searchBarTrigger, 'active');
         }
       });
     });
@@ -4997,7 +4984,7 @@ RCDL.features.Tabs = {
       // Find the target using the href attribute.
       var target = tabsets.querySelectorAll(itemHref);
 
-      RCDL.utilities.toggleClass(target[0], 'hidden');
+      RCDL.utilities.modifyClass('toggle', target[0], 'hidden');
 
       // Reset the ARIA attributes on the controller and target.
       tabs[item].setAttribute('aria-selected', 'false');
@@ -5019,7 +5006,7 @@ RCDL.features.Tabs = {
     var target = document.querySelectorAll(this.getAttribute('href'));
 
     RCDL.features.Tabs.hideTabs(this.parentNode.parentNode.parentNode);
-    RCDL.utilities.toggleClass(target[0], 'hidden');
+    RCDL.utilities.modifyClass('toggle', target[0], 'hidden');
 
     // Set the ARIA attributes on the controller and target.
     target[0].setAttribute('aria-hidden', 'false');

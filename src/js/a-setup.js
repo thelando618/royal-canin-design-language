@@ -161,93 +161,80 @@ RCDL.utilities.getSiblings = function (el) {
 /**
  * Used to add/remove classes on a target element.
  *
+ * @param {String} type
+ * Modify class type, accepts toggle, add or remove.
+ * 
  * @param {Node} target
  * Targeted DOM node item.
  *
  * @param {String} className
  * Class name to be toggled.
  */
-RCDL.utilities.toggleClass = function (target, className) {
+RCDL.utilities.modifyClass = function (type, target, className) {
   'use strict';
-  var hasClass = null;
-  var addRemove = null;
 
-  if (target.classList) {
-    hasClass = target.classList.contains(className);
-  }
-  else {
-    hasClass = new RegExp('(^| )' + className + '( |$)', 'gi').test(target.className);
-  }
+  if (type === 'toggle') {
+    var hasClass = null;
+    var addRemove = null;
 
-  switch (hasClass) {
-    case true:
-      addRemove = 'remove';
-      break;
-
-    case false:
-      addRemove = 'add';
-      break;
-
-    default:
-      throw new Error('Has Class option used with method RCDL.utilities.toggleClass is invaild.');
-  }
-
-  // IE 8+ support.
-  if (target.classList) {
-    target.classList[addRemove](className);
-  }
-  else {
-    if (addRemove === 'add') {
-      target.className += className;
+    if (target.classList) {
+      hasClass = target.classList.contains(className);
     }
+    else {
+      hasClass = new RegExp('(^| )' + className + '( |$)', 'gi').test(target.className);
+    }
+
+    switch (hasClass) {
+      case true:
+        addRemove = 'remove';
+        break;
+
+      case false:
+        addRemove = 'add';
+        break;
+
+      default:
+        throw new Error('Has Class option used with method RCDL.utilities.toggleClass is invaild.');
+    }
+
+    // IE 8+ support.
+    if (target.classList) {
+      target.classList[addRemove](className);
+    }
+    else {
+      if (addRemove === 'add') {
+        target.className += className;
+      }
+      else {
+        target.className = target.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+      }
+    }
+  }
+
+  else if (type === 'add') {
+    if (target.classList) {
+      target.classList.add(className);
+    }
+    // IE 8+ support.
+    else {
+      target.className += ' ' + className;
+    }
+  }
+
+  else if (type === 'remove') {
+    if (target.classList) {
+      target.classList.remove(className);
+    }
+    // IE 8+ support.
     else {
       target.className = target.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
     }
   }
-};
 
-/**
- * Used to add classes on a target element.
- *
- * @param {Node} target
- * Targeted DOM node item.
- *
- * @param {String} className
- * Class name to be added.
- */
-RCDL.utilities.addClass = function (target, className) {
-  'use strict';
-
-  if (target.classList) {
-    target.classList.add(className);
-  }
-  // IE 8+ support.
   else {
-    target.className += ' ' + className;
+    throw new Error('Class modifier is invalid. Accepts toggle, add or remove');
   }
 };
-
-/**
- * Used to remove classes on a target element.
- *
- * @param {Node} target
- * Targeted DOM node item.
- *
- * @param {String} className
- * Class name to be removed.
- */
-RCDL.utilities.removeClass = function (target, className) {
-  'use strict';
-
-  if (target.classList) {
-    target.classList.remove(className);
-  }
-  // IE 8+ support.
-  else {
-    target.className = target.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
-  }
-};
-
 
 /**
  * Takes two DOM nodes and wraps one around the other.
@@ -379,12 +366,12 @@ RCDL.utilities.triggerAndTargetClassModifier = {
 
       var childTarget = document.querySelector('[data-js-target="' + targetNode.getAttribute('data-js-trigger') + '"]');
       if (childTarget !== null) {
-        RCDL.utilities.toggleClass(childTarget, classNoDot);
+        RCDL.utilities.modifyClass('toggle', childTarget, classNoDot);
       }
     }
     else {
       // Toggle the active class on the trigger.
-      RCDL.utilities.toggleClass(targetNode, classNoDot);
+      RCDL.utilities.modifyClass('toggle', targetNode, classNoDot);
     }
   },
   removeModifier: function (item, modifier) {
@@ -407,11 +394,11 @@ RCDL.utilities.triggerAndTargetClassModifier = {
 
     if (target.siblingCheck) {
       var childTarget = currentNode.querySelector(target.targetClass);
-      RCDL.utilities.toggleClass(childTarget, modifier.replace(/^\./, ''));
+      RCDL.utilities.modifyClass('toggle', childTarget, modifier.replace(/^\./, ''));
     }
     else {
       // Toggle the active class on the target.
-      RCDL.utilities.toggleClass(currentNode, modifier.replace(/^\./, ''));
+      RCDL.utilities.modifyClass('toggle', currentNode, modifier.replace(/^\./, ''));
     }
     return currentNode.parentNode;
   },
@@ -473,7 +460,7 @@ RCDL.utilities.svgAnimation = function (interactiveSvg) {
         var importedSvg = document.importNode(newSVGDoc.documentElement, true);
 
         classes.split(' ').forEach(function (singleClass) {
-          RCDL.utilities.addClass(importedSvg, singleClass);
+          RCDL.utilities.modifyClass('add', importedSvg, singleClass);
         });
 
         importedSvg.setAttribute('data-js-import-interactive-svg', dataTarget);
