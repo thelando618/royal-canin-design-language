@@ -4198,22 +4198,16 @@ html {
   background-image: url("royal-canin.sprite.svg");
 }
 
-.breadcrumb__list-item::after,.rc-icon.small {
+.breadcrumb__list-item::after,.rc-icon--small::after {
   transform: scale(0.5);
 }
 
-[class^="button"].button--small::after,.rc-icon.small {
+[class^="button"].button--small::after {
   transform: scale(0.5) translateY(-50%);
-  transform-origin: top;
 }
 
-.rc-icon.large::after {
+.rc-icon--large::after {
   transform: scale(2);
-}
-
-.rc-icon.large::after {
-  transform: scale(2) translateY(-50%);
-  transform-origin: top;
 }
 
 .container {

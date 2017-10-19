@@ -22,23 +22,23 @@
 /// -------------------
 
 %rc-icon--small,
-.rc-icon.small {
-  transform: scale(.5);
+.rc-icon--small {
+  &::after {
+    transform: scale(.5);
+  }
 }
 
-%rc-icon--small--aligned,
-.rc-icon.small {
+%rc-icon--small--aligned {
   transform: scale(.5) translateY(-50%);
-  transform-origin: top;
 }
 
 %rc-icon--large,
-.rc-icon.large::after {
-  transform: scale(2);
+.rc-icon--large {
+  &::after {
+    transform: scale(2);
+  }
 }
 
-%rc-icon--large--aligned,
-.rc-icon.large::after {
+%rc-icon--large--aligned::after {
   transform: scale(2) translateY(-50%);
-  transform-origin: top;
 }
