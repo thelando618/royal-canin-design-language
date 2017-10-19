@@ -19,7 +19,7 @@
 
 
 ##### Changelog page
- Added the current page so that changes are easier to track.
+ Added the current page so that changes are clearly visible and easy to track.
 
 ##### Alert Functionality
  Added default functionality for closing alerts and storing that decision in the current session.
