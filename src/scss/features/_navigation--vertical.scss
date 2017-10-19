@@ -11,7 +11,7 @@
   overflow-y: auto;
   overflow-x: hidden;
   
-  @media (get-breakpoint('large')) {
+  @media (get-breakpoint-up('large')) {
     position: fixed;
     height: 100%;
     bottom: 0;

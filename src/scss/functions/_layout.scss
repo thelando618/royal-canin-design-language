@@ -50,7 +50,7 @@
 ///
 /// @example scss - Basic Usage Sass - outputs @media (min-width)
 ///
-///		@media (get-breakpoint('small')) {
+///		@media (get-breakpoint-up('small')) {
 ///			margin: 0;
 /// 	}
 ///
@@ -60,7 +60,7 @@
 ///			margin: 0;
 /// 	}
 ///
-@function get-breakpoint($size) {
+@function get-breakpoint-up($size) {
   $breakpoint-size: map-get($breakpoints, $size);
 
   @if $breakpoint-size != null {

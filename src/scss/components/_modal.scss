@@ -14,7 +14,7 @@
   background-color: colour('brand', 'white');
   padding: get-spacer('small');
 
-  @media (get-breakpoint('large')) {
+  @media (get-breakpoint-up('large')) {
     transform: translateY(-25%) translateX(-50%);
     top: 25%;
     min-width: 80%;
@@ -22,12 +22,12 @@
     padding: get-spacer('medium');
   }
 
-  @media (get-breakpoint('x-large')) {
+  @media (get-breakpoint-up('x-large')) {
     min-width: 70%;
     padding: get-spacer('large');
   }
 
-  @media (get-breakpoint('xxx-large')) {
+  @media (get-breakpoint-up('xxx-large')) {
     min-width: 50%;
     padding: get-spacer('large');
   }

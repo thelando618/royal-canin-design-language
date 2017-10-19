@@ -29,18 +29,18 @@ $navigation-width: 240px;
   width: 90%;
   padding-top: 100px;
 
-  @media (get-breakpoint('small')) {
+  @media (get-breakpoint-up('small')) {
     margin: get-spacer('large') auto;
     padding-top: 0;
   }
 
-  @media (get-breakpoint('large')) {
+  @media (get-breakpoint-up('large')) {
     padding-left: $navigation-width;
   }
 }
 
 .has-left-side-bar > [role="alert"].alert--info {
-  @media (get-breakpoint('large')) {
+  @media (get-breakpoint-up('large')) {
     left: $navigation-width;
   }
 }
@@ -193,7 +193,7 @@ body::before {
 /// -------------------
 
 .text-column-padding-right {
-  @media (get-breakpoint('large')) {
+  @media (get-breakpoint-up('large')) {
     padding-right: get-spacer('medium');
   }
 }
@@ -216,7 +216,7 @@ $spacingTypes: map-keys($spacers);
     $counter: 1;
 
     @each $breakpoint in $breakpointSizes {
-      @media (get-breakpoint($breakpoint)) {
+      @media (get-breakpoint-up($breakpoint)) {
         padding: nth(map-get($spacers, $spacer), $counter);
       }
       $counter: $counter + 1;
@@ -229,7 +229,7 @@ $spacingTypes: map-keys($spacers);
     $counter: 1;
 
     @each $breakpoint in $breakpointSizes {
-      @media (get-breakpoint($breakpoint)) {
+      @media (get-breakpoint-up($breakpoint)) {
         padding: 0 nth(map-get($spacers, $spacer), $counter);
       }
       $counter: $counter + 1;
@@ -242,7 +242,7 @@ $spacingTypes: map-keys($spacers);
     $counter: 1;
 
     @each $breakpoint in $breakpointSizes {
-      @media (get-breakpoint($breakpoint)) {
+      @media (get-breakpoint-up($breakpoint)) {
         margin-bottom: nth(map-get($spacers, $spacer), $counter);
       }
       $counter: $counter + 1;
@@ -262,7 +262,7 @@ $spacingTypes: map-keys($spacers);
 ///		.small-up - only show element on small screens and up
 ///
 @each $breakpoint in $breakpoints {
-  @media (get-breakpoint('#{nth($breakpoint, 1)}')) {
+  @media (get-breakpoint-up('#{nth($breakpoint, 1)}')) {
     .#{nth($breakpoint, 1)}-down {
       display: none;
     }

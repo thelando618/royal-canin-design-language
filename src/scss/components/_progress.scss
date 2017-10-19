@@ -152,7 +152,7 @@
 }
 
 
-@media (get-breakpoint('x-small') ) {
+@media (get-breakpoint-up('x-small') ) {
   .rc-progress-stepped__link {
     width: 2.5rem;
     height: 2.5rem;
@@ -173,7 +173,7 @@
   }
 }
 
-@media (get-breakpoint('small')) {
+@media (get-breakpoint-up('small')) {
   .rc-progress-stepped__link {
     width: 3.5rem;
     height: 3.5rem;

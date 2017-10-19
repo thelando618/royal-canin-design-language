@@ -258,7 +258,7 @@ input[type="file"] {
   &.gs-form-field{
     margin-bottom: 1em;
 
-    @media ( get-breakpoint('x-large') ) {
+    @media ( get-breakpoint-up('x-large') ) {
       margin-bottom: 2em;
     }
   }

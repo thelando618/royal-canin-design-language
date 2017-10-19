@@ -70,7 +70,7 @@ $type-breakpoints: ('small', 'x-large');
     font-size: nth($style, 3);
 
     @each $breakpoint in $type-breakpoints {
-      @media (get-breakpoint($breakpoint)) {
+      @media (get-breakpoint-up($breakpoint)) {
         font-size: nth($style, index($type-breakpoints, $breakpoint) + 3)
       }
     }

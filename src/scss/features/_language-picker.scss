@@ -7,7 +7,7 @@
   margin-bottom: 1rem;
   width: 50%;
 
-  @media (get-breakpoint('med')) {
+  @media (get-breakpoint-up('med')) {
     width: 20%;
   }
 }

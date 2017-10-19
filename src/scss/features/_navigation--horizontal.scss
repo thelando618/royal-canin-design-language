@@ -17,13 +17,13 @@ $nav-heights: (
 	margin-top: get-nav-height('med-down');
 }
 
-@media (get-breakpoint('med')) {
+@media (get-breakpoint-up('med')) {
 	.body--fixed-top-navigation {
 		margin-top: get-nav-height('med-up');
 	}
 }
 
-@media (get-breakpoint('large')) {
+@media (get-breakpoint-up('large')) {
 	.body--fixed-top-navigation {
 		margin-top: get-nav-height('large-up');
 	}
@@ -40,7 +40,7 @@ $nav-heights: (
 	z-index: z(header-navigation);
 	transition: movementSetting('transition', 'base');
 	
-	@media (get-breakpoint('med')) {
+	@media (get-breakpoint-up('med')) {
 		height: get-nav-height('med-up');
 		
 		&.scrolled {
@@ -48,7 +48,7 @@ $nav-heights: (
 		}
 	}
 
-	@media (get-breakpoint('large')) {
+	@media (get-breakpoint-up('large')) {
 		height: get-nav-height('large-up');
 		
 		&.scrolled {
@@ -81,7 +81,7 @@ $nav-heights: (
 }
 
 .rc-header-navigation__item {
-	@media (get-breakpoint('med')) {
+	@media (get-breakpoint-up('med')) {
 		margin: 0 get-spacer('small') / 4;
 	}
 
@@ -91,7 +91,7 @@ $nav-heights: (
 		filter: saturate(0);
 		transition: movementSetting('transition', 'base');
 
-		@media (get-breakpoint('med')) {
+		@media (get-breakpoint-up('med')) {
 			transform: scale(.8);
 		}
 	}
@@ -132,7 +132,7 @@ $nav-heights: (
 		height: 45px;
 		transition: movementSetting('transition', 'base');
 
-		@media (get-breakpoint('med')){
+		@media (get-breakpoint-up('med')){
 			height: 60px;
 		}
 	  }

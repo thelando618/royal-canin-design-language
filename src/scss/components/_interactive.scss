@@ -191,7 +191,7 @@
   cursor: pointer;
   top: 0;
 
-  @media (get-breakpoint('large')) {
+  @media (get-breakpoint-up('large')) {
     display: none;
   }
 }
