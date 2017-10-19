@@ -26,7 +26,7 @@
       pointer-events: none;
 
       &::after {
-        @extend %extend-icon-base;
+        @extend %rc-icon;
         @extend .rc-icon-loader--dark::after;
       }
     }
@@ -59,13 +59,13 @@
     right: 1rem;
 
     &::after {
-      @extend %extend-icon-base;
+      @extend %rc-icon;
       @extend .rc-icon-cross--dark::after;
     }
   }
 
   & > [type="submit"]::after {
-    @extend %extend-icon-base;
+    @extend %rc-icon;
     @extend .rc-icon-search--red::after;
     // This is overridden to stop the top of the icon being clipped.
     // ToDo: Investigate why clipping occurs.

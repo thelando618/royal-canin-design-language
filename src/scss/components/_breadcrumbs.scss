@@ -1,46 +1,49 @@
+/// ----------------------------------------------------------------------
+
+/// Breadcrumbs
+
+/// ----------------------------------------------------------------------
+
 .breadcrumbs {
 	overflow: hidden;
 }
 
+.breadcrumb__list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
 .breadcrumb__list,
 .breadcrumb__list-item {
+  display: flex;
+  align-items: center;
   margin: 0;
+  padding: 0;
 }
 
 .breadcrumb__list-item {
   display: inline-block;
-  vertical-align: middle;
-
-  & > a {
-    // ToDo: switch to grey icon.
-    position: relative;
-    padding-right: 1.75rem;
-
-    &::after {
-      @extend %extend-icon-base;
-      @extend .rc-icon-chevron--right--light::after;
-      transform-origin: 100% 0;
-      position: absolute;
-      right: -0.25rem;
-      top: 50%;
-      transform: translateY(-50%);
-    }
+  
+  &::after {
+    @extend %rc-icon;
+    @extend %rc-icon--small;
+    @extend .rc-icon-chevron--right--dark::after;
+    display: inline-block;
+    vertical-align: middle;
   }
 
-  &:last-child a::after {
-    display: none;
+  &:last-child::after {
+    visibility: hidden;
   }
-}
-
-.breadcrumb__link.logo--badge__wrapper::after {
-  transform: translateY(-42%);
 }
 
 .breadcrumb__link {
   color: colour('brand', 'medium-grey', 'light');
   text-decoration: none;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: colour('brand', 'red');
   }
 }
@@ -48,4 +51,16 @@
 .breadcrumbs__current {
   color: colour('brand', 'medium-grey');
   font-weight: 500;
+}
+
+/// ------------------- 
+/// Breadcrumb modifiers
+/// -------------------
+
+.breadcrumbs--inverse {
+  & .breadcrumb__list-item {
+    &::after {
+      @extend .rc-icon-chevron--right--light::after;
+    }
+  }
 }

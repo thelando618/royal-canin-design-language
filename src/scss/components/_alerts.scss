@@ -32,7 +32,8 @@
     min-height: 1rem;
     left: 0;
     right: 0;
-    z-index: 10;
+    z-index: z(top);
+    margin-bottom: 0;
 
     & > a {
       color: colour('brand', 'white');

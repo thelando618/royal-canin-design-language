@@ -117,7 +117,7 @@
   @extend %interactive--navigation;
 
   &::after {
-    @extend %extend-icon-base;
+    @extend %rc-icon;
     @extend .rc-icon-chevron--left--light::after;
   }
 
@@ -127,7 +127,7 @@
   @extend %interactive--navigation;
 
   &::after {
-    @extend %extend-icon-base;
+    @extend %rc-icon;
     @extend .rc-icon-chevron--right--light::after;
   }
 }
@@ -146,7 +146,7 @@
   @extend %floating-button;
 
   &::after {
-    @extend %extend-icon-base;
+    @extend %rc-icon;
     @extend .rc-icon-check--green::after;
   }
 
@@ -161,7 +161,7 @@
   @extend %floating-button;
 
   &::after {
-    @extend %extend-icon-base;
+    @extend %rc-icon;
     @extend .rc-icon-cross--red::after;
   }
 

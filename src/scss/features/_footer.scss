@@ -65,7 +65,7 @@
   color: colour('brand', 'medium-grey', 'light');
 
   &::after {
-    @extend %extend-icon-base;
+    @extend %rc-icon;
     @extend .rc-icon-chevron--right--light::after;
     display: none;
   }
