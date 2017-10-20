@@ -1,7 +1,7 @@
 
  # Changelog
 All notable changes to Royal Canin Design Language will be documented on this page.
-[View Full](https://developer.royal.canin/changelog.html)
+[View Full](http://rcwdl.first10.co.uk/changelog.html)
 
  ## v2.0.0
  ### Breaking Changes
