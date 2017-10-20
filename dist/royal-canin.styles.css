@@ -2833,7 +2833,7 @@ sup {
   background-position: 47.05882352941177% 18.75%;
 }
 
-.rc-icon-cross--light::after,.button--functional--fail::after {
+.rc-icon-cross--light::after,.button--functional--fail::after,.choices[data-type*="select-multiple"] .choices__button::after,.choices[data-type*="text"] .choices__button::after {
   background-position: 47.05882352941177% 25%;
 }
 
@@ -4188,7 +4188,7 @@ html {
   clear: both;
 }
 
-.breadcrumb__list-item::after,.button--functional::after,.button--functional--loading::after,.button--functional--success::after,.button--functional--fail::after,.button--medium[class*="icon-"]::after,.button--small[class*="icon-"]::after,.button--large[class*="icon-"]::after,.navigation--prev::after,.navigation--round--next::after,.navigation--next::after,.navigation--round--prev::after,.response--affirmative::after,.response--negative::after,.form--text-submit > button::after,.search-bar > [type="search"]:focus ~ [aria-label="Close"]::after,.search-bar > [aria-label="Close"]::after,.search-bar > [type="submit"]::after,[data-controls] .navigation--prev::after,[data-controls] .navigation--next::after,.rc-navigation--footer .rc-navigation__link::after,.rc-icon::after {
+.breadcrumb__list-item::after,.button--functional::after,.button--functional--loading::after,.button--functional--success::after,.button--functional--fail::after,.button--medium[class*="icon-"]::after,.button--small[class*="icon-"]::after,.button--large[class*="icon-"]::after,.choices[data-type*="select-multiple"] .choices__button::after,.choices[data-type*="text"] .choices__button::after,.navigation--prev::after,.navigation--round--next::after,.navigation--next::after,.navigation--round--prev::after,.response--affirmative::after,.response--negative::after,.form--text-submit > button::after,.search-bar > [type="search"]:focus ~ [aria-label="Close"]::after,.search-bar > [aria-label="Close"]::after,.search-bar > [type="submit"]::after,[data-controls] .navigation--prev::after,[data-controls] .navigation--next::after,.rc-navigation--footer .rc-navigation__link::after,.rc-icon::after {
   content: '';
   display: inline-block;
   background-repeat: no-repeat;
@@ -5186,7 +5186,7 @@ input[type="file"] {
   cursor: pointer;
 }
 
-.rc-input--custom input[type="checkbox"] + label:before,.rc-input--custom input[type="radio"] + label:before {
+.rc-input--custom input[type="checkbox"] + label::before,.rc-input--custom input[type="radio"] + label::before {
   content: '';
   display: inline-block;
   vertical-align: middle;
@@ -5198,26 +5198,26 @@ input[type="file"] {
   margin-right: .5rem;
 }
 
-.rc-input--custom input[type="checkbox"] + label:before {
+.rc-input--custom input[type="checkbox"] + label::before {
   border-radius: 4px;
 }
 
-.rc-input--custom input[type="radio"] + label:before {
+.rc-input--custom input[type="radio"] + label::before {
   border-radius: 100%;
 }
 
-.rc-input--custom input[type="checkbox"]:checked + label:before,.rc-input--custom input[type="radio"]:checked + label:before {
+.rc-input--custom input[type="checkbox"]:checked + label::before,.rc-input--custom input[type="radio"]:checked + label::before {
   background-position: center;
   background-size: 1rem;
   background-repeat: no-repeat;
 }
 
-.rc-input--custom input[type="checkbox"]:checked + label:before {
+.rc-input--custom input[type="checkbox"]:checked + label::before {
   background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2217%22%20viewBox%3D%220%200%2020%2017%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M19.58%203.264L9.917%2015.818c-.146.19-.32.346-.51.47-.005.002-.01.006-.014.01-.023.013-.046.023-.07.036-.31.18-.66.275-1.014.275-.432%200-.867-.138-1.235-.42%200-.002%200-.002-.002-.003L.79%2011.354C-.095%2010.67-.26%209.398.42%208.51c.683-.886%201.956-1.052%202.844-.37l4.677%203.6L16.367.79C17.05-.095%2018.32-.26%2019.21.42c.886.684%201.052%201.956.37%202.844%22%20fill%3D%22%23E2001A%22%20fill-rule%3D%22evenodd%22/%3E%3C/svg%3E");
   background-color: #FFF;
 }
 
-.rc-input--custom input[type="radio"]:checked + label:before {
+.rc-input--custom input[type="radio"]:checked + label::before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='Layer_1' viewBox='0 0 64 64'%3E %3Cstyle%3E .st0%7Bfill:%23E2001A;%7D %3C/style%3E %3Ccircle cx='32' cy='32' r='32' class='st0'/%3E %3C/svg%3E");
 }
 
@@ -5266,6 +5266,22 @@ input[type="file"] {
 .choices__list--multiple .choices__item.is-highlighted {
   background-color: #c90016;
   border: none;
+}
+
+.choices[data-type*="select-multiple"] .choices__button,.choices[data-type*="text"] .choices__button {
+  background-image: none;
+  border-left: none;
+  width: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.choices[data-type*="select-multiple"] .choices__button::after,.choices[data-type*="text"] .choices__button::after {
+  transform: scale(0.5);
+  transform-origin: center;
+  position: absolute;
+  right: -10px;
+  top: -10px;
 }
 
 .featured-option > input[type="checkbox"] + label {
