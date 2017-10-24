@@ -65,6 +65,10 @@
       text-align: center;
     }
   }
+
+  &.button--small::after {
+    @extend %rc-icon--small--aligned;
+  }
 }
 
 button {
@@ -122,7 +126,8 @@ button {
   color: colour('brand', 'red');
   background-color: transparent;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background-color: colour('brand', 'red');
     color: colour('brand', 'white');
   }
@@ -223,7 +228,7 @@ $variants: ('large', 'medium', 'small');
   background-color: colour('functional', 'functional');
 
   &::after {
-    @extend %extend-icon-base;
+    @extend %rc-icon;
     @extend .rc-icon-arrow--right--light::after;
   }
 
@@ -249,7 +254,7 @@ $variants: ('large', 'medium', 'small');
   &::after {
     right: 20px;
     transform-origin: 46% 0%;
-    @extend %extend-icon-base;
+    @extend %rc-icon;
     @extend .rc-icon-loader--light::after;
     animation: animatePlusTransform(steady-spin, 1s infinite linear, translateY, translateY(-50%));
 
@@ -282,7 +287,7 @@ $variants: ('large', 'medium', 'small');
   }
 
   &::after {
-    @extend %extend-icon-base;
+    @extend %rc-icon;
     @extend .rc-icon-check--light::after;
   }
 }
@@ -298,7 +303,7 @@ $variants: ('large', 'medium', 'small');
   }
 
   &::after {
-    @extend %extend-icon-base;
+    @extend %rc-icon;
     @extend .rc-icon-cross--light::after;
   }
 }
@@ -355,18 +360,19 @@ $variants: ('large', 'medium', 'small');
 .button--large[class*="icon-"] {
   padding-right: 4em;
 
+  &::after {
+    @extend %rc-icon;
+  }
+
   &.rc-icon-check {
-    @extend %extend-icon-base;
     @extend .rc-icon-check--light::after;
   }
 
   &.rc-icon-arrow-right {
-    @extend %extend-icon-base;
     @extend .rc-icon-arrow--right--light::after;
   }
 
   &.rc-icon-search {
-    @extend %extend-icon-base;
     @extend .rc-icon-search--light::after;
   }
 }

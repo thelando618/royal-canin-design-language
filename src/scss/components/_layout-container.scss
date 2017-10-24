@@ -28,7 +28,7 @@
   position: relative;
 }
 
-@media (get-breakpoint('med')) {
+@media (get-breakpoint-up('med')) {
 
   .layout-container {
     display: flex;

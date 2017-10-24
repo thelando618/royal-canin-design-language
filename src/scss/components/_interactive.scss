@@ -117,7 +117,7 @@
   @extend %interactive--navigation;
 
   &::after {
-    @extend %extend-icon-base;
+    @extend %rc-icon;
     @extend .rc-icon-chevron--left--light::after;
   }
 
@@ -127,7 +127,7 @@
   @extend %interactive--navigation;
 
   &::after {
-    @extend %extend-icon-base;
+    @extend %rc-icon;
     @extend .rc-icon-chevron--right--light::after;
   }
 }
@@ -146,7 +146,7 @@
   @extend %floating-button;
 
   &::after {
-    @extend %extend-icon-base;
+    @extend %rc-icon;
     @extend .rc-icon-check--green::after;
   }
 
@@ -161,7 +161,7 @@
   @extend %floating-button;
 
   &::after {
-    @extend %extend-icon-base;
+    @extend %rc-icon;
     @extend .rc-icon-cross--red::after;
   }
 
@@ -191,7 +191,7 @@
   cursor: pointer;
   top: 0;
 
-  @media (get-breakpoint('large')) {
+  @media (get-breakpoint-up('large')) {
     display: none;
   }
 }
@@ -218,3 +218,41 @@
   right: 0;
   transform: translate(-1.25rem, 1.25rem);
 }
+
+
+////////// Styles used to animate the toggle svg //////////
+
+.toggle-svg .bar {
+  fill: colour('brand', 'light-grey');
+  pointer-events: all;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+[data-js-import-interactive-svg-trigger].svg-active .bar {
+  fill: #e2001a;
+}
+
+.toggle-svg .bar-1 {
+  transform: scaleX(0.7);
+}
+
+.toggle-svg .bar-3 {
+  transform: scaleX(0.8);
+}
+
+[data-js-import-interactive-svg-trigger].svg-active .bar-1 {
+  transform: scaleX(1) rotate(45deg) translateX(-1px);
+  transform-origin: top left;
+}
+[data-js-import-interactive-svg-trigger].svg-active .bar-2 {
+  transform: scaleX(0);
+  transform-origin: left;
+}
+[data-js-import-interactive-svg-trigger].svg-active .bar-3 {
+  transform: scaleX(1) rotate(-45deg) translateX(-1px);
+  transform-origin: bottom left;
+}
+
+////////////////////////////////////////////////////////////
+

@@ -62,7 +62,7 @@
       right: 1.5em;
     }
 
-    @media (get-breakpoint('small')) {
+    @media (get-breakpoint-up('small')) {
 
       h3 {
         font-size: 1.35em;

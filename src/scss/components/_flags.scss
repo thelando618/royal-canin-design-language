@@ -1,8 +1,14 @@
+/// ----------------------------------------------------------------------
+
+/// Flags
+
+/// ----------------------------------------------------------------------
+
 .flag--round {
-  @extend %round-image;
+  @extend %image-round;
   height: 60px;
   width: 58px;
-  transform: scale(0.5);
+  transform: scale(.5);
   transform-origin: 0 0;
   position: absolute;
   left: 0;

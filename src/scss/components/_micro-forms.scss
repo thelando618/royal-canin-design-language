@@ -18,7 +18,7 @@
     &::after {
       z-index: z(default) - 1;
       right: 0.5rem;
-      @extend %extend-icon-base;
+      @extend %rc-icon;
       @extend .rc-icon-arrow--right--light;
     }
   }

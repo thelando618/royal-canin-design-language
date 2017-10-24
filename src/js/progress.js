@@ -1,8 +1,8 @@
 /**
  * Extension of the HTML element progress.
- * @type {{init: RCWDL.features.Progress.init, demo: RCWDL.features.Progress.demo}}
+ * @type {{init: RCDL.features.Progress.init, demo: RCDL.features.Progress.demo}}
  */
-RCWDL.features.Progress = {
+RCDL.features.Progress = {
 
   /**
    * Setup the progress element with a label to reflect the current
@@ -20,7 +20,7 @@ RCWDL.features.Progress = {
     var demo = document.querySelectorAll('[data-js-demo="update-progress-demo"]');
 
     if (typeof demo !== 'undefined' && demo.length > 0) {
-      RCWDL.features.Progress.demo(demo[0]);
+      RCDL.features.Progress.demo(demo[0]);
     }
 
     Object.keys(progElms).forEach(function (el) {
@@ -78,4 +78,4 @@ RCWDL.features.Progress = {
   }
 };
 
-RCWDL.ready(RCWDL.features.Progress.init('progress'));
+RCDL.ready(RCDL.features.Progress.init('progress'));

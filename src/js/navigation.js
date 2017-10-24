@@ -1,4 +1,4 @@
-RCWDL.navigation = {};
+RCDL.navigation = {};
 
 /**
  * Changes all navigation bars on scroll
@@ -10,7 +10,7 @@ RCWDL.navigation = {};
  * @param {String} mainNavSelector Selector for the main navigation div
  * 
  */
-RCWDL.navigation.changeNavigationOnScroll = function (headerNavSelector, mobileFooterNavSelector, mainNavSelector) {
+RCDL.navigation.changeNavigationOnScroll = function (headerNavSelector, mobileFooterNavSelector, mainNavSelector) {
   'use strict';
 
   var headerNav = document.querySelector(headerNavSelector);
@@ -19,11 +19,11 @@ RCWDL.navigation.changeNavigationOnScroll = function (headerNavSelector, mobileF
     window.addEventListener('scroll', function () {
       var headerNav = document.querySelector(headerNavSelector);
 
-      if (RCWDL.posTop() > 100) {
-        RCWDL.utilities.addClass(headerNav, 'scrolled');
+      if (RCDL.posTop() > 100) {
+        RCDL.utilities.modifyClass('add', headerNav, 'scrolled');
       }
       else {
-        RCWDL.utilities.removeClass(headerNav, 'scrolled');
+        RCDL.utilities.modifyClass('remove', headerNav, 'scrolled');
       }
     });
   }
@@ -32,23 +32,23 @@ RCWDL.navigation.changeNavigationOnScroll = function (headerNavSelector, mobileF
   var mainNav = document.querySelector(mainNavSelector);
 
   if (footerNav !== null) {
-    var previous = RCWDL.posTop();
+    var previous = RCDL.posTop();
     window.addEventListener('scroll', function () {
 
-      if (RCWDL.posTop() > previous) {
-        if (!RCWDL.utilities.hasClass(mainNav, 'open')) {
-          RCWDL.utilities.addClass(footerNav, 'scrolled');
+      if (RCDL.posTop() > previous) {
+        if (!RCDL.utilities.hasClass(mainNav, 'open')) {
+          RCDL.utilities.modifyClass('add', footerNav, 'scrolled');
         }
       }
       else {
-        RCWDL.utilities.removeClass(footerNav, 'scrolled');
+        RCDL.utilities.modifyClass('remove', footerNav, 'scrolled');
       }
-      previous = RCWDL.posTop();
+      previous = RCDL.posTop();
     });
   }
 };
 
-RCWDL.ready(RCWDL.navigation.changeNavigationOnScroll('.rc-header-navigation', '.rc-mobile-footer-navigation', '.rc-main-navigation'));
+RCDL.ready(RCDL.navigation.changeNavigationOnScroll('.rc-header-navigation', '.rc-mobile-footer-navigation', '.rc-main-navigation'));
 
 
 /**
@@ -59,7 +59,7 @@ RCWDL.ready(RCWDL.navigation.changeNavigationOnScroll('.rc-header-navigation', '
  * @param {String} mainNavSelector Selector for the main navigation wrapper.
  * 
  */
-RCWDL.navigation.searchBar = function (searchBarTriggerSelector, mainNavSelector) {
+RCDL.navigation.searchBar = function (searchBarTriggerSelector, mainNavSelector) {
   'use strict';
 
   var searchBarTrigger = document.querySelector(searchBarTriggerSelector);
@@ -69,71 +69,36 @@ RCWDL.navigation.searchBar = function (searchBarTriggerSelector, mainNavSelector
   if (searchBarTrigger !== null) {
     searchBarTrigger.addEventListener('click', function () {
       if (mainNav != null) {
-        if (RCWDL.utilities.hasClass(mainNav, 'open')) {
-          RCWDL.utilities.removeClass(mainNav, 'open');
+        if (RCDL.utilities.hasClass(mainNav, 'open')) {
+          RCDL.utilities.modifyClass('remove', mainNav, 'open');
           document.body.style.overflow = ''; // Always allow page scrolling when search open
 
           if (mainNavToggler !== null) {
             var svg = mainNavToggler.contentDocument.querySelector('.svg-toggle');
-            RCWDL.utilities.removeClass(svg, 'active');
+            RCDL.utilities.modifyClass('remove', svg, 'active');
           }
         }
       }
 
-      var siblings = RCWDL.utilities.getSiblings(searchBarTrigger);
+      var siblings = RCDL.utilities.getSiblings(searchBarTrigger);
 
       siblings.forEach(function (sibling) {
         if (sibling !== searchBarTrigger) {
-          RCWDL.utilities.toggleClass(sibling, 'fade');
+          RCDL.utilities.modifyClass('toggle', sibling, 'fade');
         }
         else {
-          RCWDL.utilities.toggleClass(searchBarTrigger, 'active');
+          RCDL.utilities.modifyClass('toggle', searchBarTrigger, 'active');
         }
       });
     });
   }
 
-  RCWDL.ready(RCWDL.utilities.triggerAndTargetClassModifier.init('click', searchBarTriggerSelector, '[data-js-trigger]', '.open', null));
+  RCDL.ready(RCDL.utilities.triggerAndTargetClassModifier.init('click', searchBarTriggerSelector, '[data-js-trigger]', '.open', null));
 };
 
 if (window.innerWidth < 800) {
-  RCWDL.ready(RCWDL.navigation.searchBar('[data-js-trigger="search-bar-mobile"]', '.rc-main-navigation__wrapper'));
+  RCDL.ready(RCDL.navigation.searchBar('[data-js-trigger="search-bar-mobile"]', '.rc-main-navigation__wrapper'));
 }
 else {
-  RCWDL.ready(RCWDL.navigation.searchBar('[data-js-trigger="search-bar"]', '.rc-main-navigation__wrapper'));
+  RCDL.ready(RCDL.navigation.searchBar('[data-js-trigger="search-bar"]', '.rc-main-navigation__wrapper'));
 }
-
-
-/**
- * Added toggle to svgs to target their internal svg/paths to trigger animations.
- *
- * @param {String} triggerSelector Css selector supplied for targeting the trigger elements.
- * 
- * @param {String} targetSelector Css selector supplied for targeting the target elements.
- * 
- */
-RCWDL.navigation.burgerToggle = function (triggerSelector, targetSelector) {
-  'use strict';
-
-  var targets = document.querySelectorAll(triggerSelector);
-
-  if (targets !== null) {
-    Object.keys(targets).forEach(function (item) {
-      targets[item].addEventListener('click', function (e) {
-        var listNode = e.target.parentNode.parentNode;
-        var svg = e.target.querySelector(targetSelector).contentDocument.querySelector('.svg-toggle');
-        var siblings = RCWDL.utilities.getSiblings(listNode);
-
-        RCWDL.utilities.toggleClass(svg, 'active');
-
-        siblings.forEach(function (sibling) {
-          if (sibling !== listNode) {
-            RCWDL.utilities.toggleClass(sibling, 'fade');
-          }
-        });
-      });
-    });
-  }
-};
-
-RCWDL.ready(RCWDL.navigation.burgerToggle('[data-js-animate-svg]', '[data-js-animate-svg-target]'));

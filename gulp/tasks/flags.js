@@ -53,7 +53,7 @@ const flagConfig = {
  * @param callback
  */
 function execute(command, callback) {
-  exec(command, function(error, stdout, stderr){
+  exec(command, function(error, stdout, stderr) {
     callback(stdout);
   });
 }

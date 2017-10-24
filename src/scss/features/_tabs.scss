@@ -40,7 +40,7 @@
     position: relative;
   }
 
-  @media (get-breakpoint('small')) {
+  @media (get-breakpoint-up('small')) {
 
     .rc-tabs__content__single {
       padding: 2em;

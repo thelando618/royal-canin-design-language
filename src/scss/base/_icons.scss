@@ -4,27 +4,41 @@
 
 /// ----------------------------------------------------------------------
 
-[class^="rc-icon-"].small {
-  transform: scale(.5);
+%rc-icon,
+.rc-icon {
+  &::after {
+    content: '';
+    display: inline-block;
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    transform-origin: 50% 50%;
+    background-image: url('royal-canin.sprite.svg');
+  }
 }
 
-[class^="rc-icon-"] {
-  transform: scale(1);
-  height: 32px;
-  width: 32px;
-  position: relative;
-  display: inline-block;
-  transform-origin: 32px 32px;
+/// ------------------- 
+/// Icon Size Modifiers
+/// -------------------
+
+%rc-icon--small,
+.rc-icon--small {
+  &::after {
+    transform: scale(.5);
+  }
 }
 
-[class^="rc-icon-"].large {
-  transform: scale(2);
+%rc-icon--small--aligned {
+  transform: scale(.5) translateY(-50%);
 }
 
-%extend-icon-base {
-  content: '';
-  display: block;
-  background-repeat: no-repeat;
-  width: 32px;
-  height: 32px;
+%rc-icon--large,
+.rc-icon--large {
+  &::after {
+    transform: scale(2);
+  }
+}
+
+%rc-icon--large--aligned::after {
+  transform: scale(2) translateY(-50%);
 }

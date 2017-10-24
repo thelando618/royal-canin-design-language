@@ -45,7 +45,7 @@
   color: colour('functional', 'text');
   display: none;
 
-  @media (get-breakpoint('x-large')) {
+  @media (get-breakpoint-up('x-large')) {
     display: block;
   }
 }
