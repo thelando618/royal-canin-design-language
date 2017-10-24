@@ -268,7 +268,7 @@ video.hero__bg {
     padding: 0;
 
     &::after {
-      @extend %extend-icon-base;
+      @extend %rc-icon;
       @extend .rc-icon-chevron--left--light::after;
     }
   }

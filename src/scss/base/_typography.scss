@@ -70,7 +70,7 @@ $type-breakpoints: ('small', 'x-large');
     font-size: nth($style, 3);
 
     @each $breakpoint in $type-breakpoints {
-      @media (get-breakpoint($breakpoint)) {
+      @media (get-breakpoint-up($breakpoint)) {
         font-size: nth($style, index($type-breakpoints, $breakpoint) + 3)
       }
     }
@@ -127,5 +127,23 @@ q {
 
   & > p {
     color: colour('functional', 'text');
+  }
+}
+
+
+$styleMapping: (
+                ('h1', 'alpha'),
+                ('h2', 'beta'),
+                ('h3', 'gamma'),
+                ('h4', 'delta'),
+                ('h5', 'espilon'),
+                ('h6', 'zeta')
+);
+
+.rc-replace-header-styles {
+  @each $tag, $style in $styleMapping {
+    #{$tag} {
+      @extend .#{$style};
+    }
   }
 }

@@ -4,7 +4,7 @@
   margin-bottom: 1em;
   @extend %on-white-outline;
 
-  @media ( get-breakpoint('small') ) {
+  @media (get-breakpoint-up('small')) {
     max-width: 310px;
   }
 
@@ -53,7 +53,7 @@
     }
   }
 
-  @media ( get-breakpoint('x-small') ) {
+  @media (get-breakpoint-up('x-small')) {
     .card__header {
       padding-left: 1em;
     }
@@ -122,7 +122,7 @@
     }
   }
 
-  @media ( get-breakpoint('large') ) {
+  @media (get-breakpoint-up('large')) {
     .card__title {
       font-size: 1.375em;
     }

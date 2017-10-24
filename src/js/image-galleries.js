@@ -1,9 +1,9 @@
 /**
  * Variant on the carousel function. Creates very simple carousels used for small image galleries.
  *
- * @type {{init: RCWDL.features.ImageGallery.init, create: RCWDL.features.ImageGallery.create, wrapAndRemoveDots: RCWDL.features.ImageGallery.wrapAndRemoveDots}}
+ * @type {{init: RCDL.features.ImageGallery.init, create: RCDL.features.ImageGallery.create, wrapAndRemoveDots: RCDL.features.ImageGallery.wrapAndRemoveDots}}
  */
-RCWDL.features.ImageGallery = {
+RCDL.features.ImageGallery = {
   init: function (targetClass, options) {
     'use strict';
 
@@ -12,13 +12,13 @@ RCWDL.features.ImageGallery = {
     if (imageGalleries !== null && Object.keys(imageGalleries).length > 0) {
       if (Object.keys(imageGalleries).length > 1) {
         Object.keys(imageGalleries).forEach(function (imageGallery) {
-          RCWDL.features.Carousel.create(imageGalleries[imageGallery], options);
-          RCWDL.features.ImageGallery.wrapAndRemoveDots(imageGalleries[imageGallery].parentNode.parentNode);
+          RCDL.features.Carousel.create(imageGalleries[imageGallery], options);
+          RCDL.features.ImageGallery.wrapAndRemoveDots(imageGalleries[imageGallery].parentNode.parentNode);
         });
       }
       else {
-        RCWDL.features.ImageGallery.create(imageGalleries[0], options);
-        RCWDL.features.ImageGallery.wrapAndRemoveDots(imageGalleries[0]);
+        RCDL.features.ImageGallery.create(imageGalleries[0], options);
+        RCDL.features.ImageGallery.wrapAndRemoveDots(imageGalleries[0]);
       }
     }
   },
@@ -64,14 +64,14 @@ RCWDL.features.ImageGallery = {
     // TNS wraps the markup so this is required to restrict the width etc.
     var wrapper = document.createElement('div');
     wrapper.classList.add('gallery-wrapper');
-    RCWDL.utilities.wrap(item.parentNode.parentNode, wrapper);
+    RCDL.utilities.wrap(item.parentNode.parentNode, wrapper);
 
     var pager = item.parentNode.parentNode.querySelectorAll('[aria-label="Carousel Pagination"]');
     pager[0].parentNode.removeChild(pager[0]);
 
     // Trigger resize to make sure the gallery adjusts to the correct size.
-    RCWDL.utilities.triggerResize();
+    RCDL.utilities.triggerResize();
   }
 };
 
-RCWDL.ready(RCWDL.features.ImageGallery.init('.rc-carousel--gallery'));
+RCDL.ready(RCDL.features.ImageGallery.init('.rc-carousel--gallery'));

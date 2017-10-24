@@ -25,13 +25,15 @@
     background-color: colour('functional', 'text');
     color: colour('brand', 'white');
     max-width: 99999px;
-    width: 100%;
     border: none;
     padding-right: 3rem;
     border-radius: 0;
     text-align: left;
     min-height: 1rem;
-    position: relative;
+    left: 0;
+    right: 0;
+    z-index: z(top);
+    margin-bottom: 0;
 
     & > a {
       color: colour('brand', 'white');
@@ -43,7 +45,7 @@
   }
 
   // @todo make this into a variable?
-  @media (get-breakpoint('small')) {
+  @media (get-breakpoint-up('small')) {
     border-radius: 50px;
   }
 }

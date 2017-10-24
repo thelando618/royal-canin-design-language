@@ -186,7 +186,7 @@ $social-color-youtube: #CD201F;
     }
   }
 
-  @media (get-breakpoint('small')) {
+  @media (get-breakpoint-up('small')) {
     ul {
       margin-top: 0;
       margin-left: .25em;

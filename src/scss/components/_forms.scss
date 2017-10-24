@@ -130,8 +130,8 @@ input[type="file"] {
   }
 
   label {
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       content: '';
       position: absolute;
       bottom: 0;
@@ -143,7 +143,7 @@ input[type="file"] {
       transition: width .3s ease-in-out, background-color .2s ease-in-out;
     }
 
-    &:after {
+    &::after {
       background-color: colour('functional', 'functional');
       z-index: z(default) + 1;
       width: 0;
@@ -151,7 +151,8 @@ input[type="file"] {
   }
 
   textarea + label {
-    &:before, &:after {
+    &::before,
+    &::after {
       bottom: auto;
       top: 100%;
     }
@@ -255,10 +256,10 @@ input[type="file"] {
 }
 
 .gs-present {
-  &.gs-form-field{
+  &.gs-form-field {
     margin-bottom: 1em;
 
-    @media ( get-breakpoint('x-large') ) {
+    @media (get-breakpoint-up('x-large')) {
       margin-bottom: 2em;
     }
   }
@@ -281,7 +282,7 @@ input[type="file"] {
     display: inline-block;
     cursor: pointer;
 
-    &:before {
+    &::before {
       content: '';
       display: inline-block;
       vertical-align: middle;
@@ -295,13 +296,13 @@ input[type="file"] {
   }
 
   input[type="checkbox"] + label {
-    &:before {
+    &::before {
       border-radius: 4px;
     }
   }
 
   input[type="radio"]+ label {
-    &:before {
+    &::before {
       border-radius: 100%;
     }
   }
@@ -309,7 +310,7 @@ input[type="file"] {
   // Checked
   input[type="checkbox"]:checked + label,
   input[type="radio"]:checked + label {
-    &:before {
+    &::before {
       background-position: center;
       background-size: 1rem;
       background-repeat: no-repeat;
@@ -317,7 +318,7 @@ input[type="file"] {
   }
 
   input[type="checkbox"]:checked + label {
-    &:before {
+    &::before {
       background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2217%22%20viewBox%3D%220%200%2020%2017%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M19.58%203.264L9.917%2015.818c-.146.19-.32.346-.51.47-.005.002-.01.006-.014.01-.023.013-.046.023-.07.036-.31.18-.66.275-1.014.275-.432%200-.867-.138-1.235-.42%200-.002%200-.002-.002-.003L.79%2011.354C-.095%2010.67-.26%209.398.42%208.51c.683-.886%201.956-1.052%202.844-.37l4.677%203.6L16.367.79C17.05-.095%2018.32-.26%2019.21.42c.886.684%201.052%201.956.37%202.844%22%20fill%3D%22%23E2001A%22%20fill-rule%3D%22evenodd%22/%3E%3C/svg%3E");
       background-color: colour('brand', 'white');
     }
@@ -325,7 +326,7 @@ input[type="file"] {
 
 
   input[type="radio"]:checked + label {
-    &:before {
+    &::before {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='Layer_1' viewBox='0 0 64 64'%3E %3Cstyle%3E .st0%7Bfill:%23E2001A;%7D %3C/style%3E %3Ccircle cx='32' cy='32' r='32' class='st0'/%3E %3C/svg%3E");
     }
   }
@@ -383,6 +384,25 @@ input[type="file"] {
 .choices__list--multiple .choices__item.is-highlighted {
   background-color: colour('brand', 'red', 'dark');
   border: none;
+}
+
+.choices[data-type*="select-multiple"] .choices__button,
+.choices[data-type*="text"] .choices__button {
+  background-image: none;
+  border-left: none;
+  width: 1.5rem;
+  margin: 0;
+  padding: 0;
+
+  &::after {
+    @extend %rc-icon;
+    @extend .rc-icon-cross--light::after;
+    transform: scale(.5);
+    transform-origin: center;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+  }
 }
 
 /// ------------------- 

@@ -7,7 +7,7 @@
     "domready": true,
     "matchMedia": true,
     "Modernizr": true,
-    "RCWDL": true,
+    "RCDL": true,
     "tns": true,
     "Choices": true,
     "Pikaday": true,
