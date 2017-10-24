@@ -13,7 +13,7 @@
     font-size: .875em;
   }
 
-  @media ( get-breakpoint-up('x-small') ) {
+  @media (get-breakpoint-up('x-small')) {
     max-width: 480px;
   }
 }

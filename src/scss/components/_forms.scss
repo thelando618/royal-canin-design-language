@@ -130,8 +130,8 @@ input[type="file"] {
   }
 
   label {
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       content: '';
       position: absolute;
       bottom: 0;
@@ -143,7 +143,7 @@ input[type="file"] {
       transition: width .3s ease-in-out, background-color .2s ease-in-out;
     }
 
-    &:after {
+    &::after {
       background-color: colour('functional', 'functional');
       z-index: z(default) + 1;
       width: 0;
@@ -151,7 +151,8 @@ input[type="file"] {
   }
 
   textarea + label {
-    &:before, &:after {
+    &::before,
+    &::after {
       bottom: auto;
       top: 100%;
     }
@@ -255,10 +256,10 @@ input[type="file"] {
 }
 
 .gs-present {
-  &.gs-form-field{
+  &.gs-form-field {
     margin-bottom: 1em;
 
-    @media ( get-breakpoint-up('x-large') ) {
+    @media (get-breakpoint-up('x-large')) {
       margin-bottom: 2em;
     }
   }

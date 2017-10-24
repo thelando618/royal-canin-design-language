@@ -57,10 +57,6 @@
 /// Breadcrumb modifiers
 /// -------------------
 
-.breadcrumbs--inverse {
-  & .breadcrumb__list-item {
-    &::after {
-      @extend .rc-icon-chevron--right--light::after;
-    }
-  }
+.breadcrumbs--inverse .breadcrumb__list-item::after {
+  @extend .rc-icon-chevron--right--light::after;
 }
