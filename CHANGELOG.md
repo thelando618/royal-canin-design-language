@@ -3,12 +3,12 @@
 All notable changes to Royal Canin Design Language will be documented on this page.
 [View Full](http://rcwdl.first10.co.uk/changelog.html)
 
- ## v2.0.0
+ ## v2.0.0 - 20/10/17
  ### Breaking Changes
  ##### Renamed Javascript Object
 All instances of RCWDL have been renamed to RCDL.
  ##### Renamed Toggle Class Method
-RCDL.toggleClass() has been renamed to RCDL.modifyClass() with added type parameter
+RCDL.toggleClass() has been renamed to RCDL.modifyClass() with added type parameter.
  ##### Icon Class Change
 All Royal Canin icons now require the base class .rc-icon.
  ### New Features
