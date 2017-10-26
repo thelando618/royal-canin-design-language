@@ -67,7 +67,7 @@ RCDL.features.FormElements = {
 
       // Initial styles and screen reader text for label.
       eye.innerHTML = '<span class="screen-reader-text">Toggle password visibility</span>';
-      eye.classList.add('rc-input--password__toggle');
+      eye.classList.add('rc-input__password__toggle');
 
       inputs[input].parentNode.appendChild(eye);
 
