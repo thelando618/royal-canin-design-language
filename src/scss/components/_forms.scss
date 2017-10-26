@@ -103,17 +103,21 @@
   &:focus {
     outline: none;
   }
+}
 
-  &:disabled {
-    background-color: colour('brand', 'medium-grey', 'light');
+/// ------------------- 
+/// Input states
+/// -------------------
 
+.input {
+  & :disabled {
     & + .input__label {
       opacity: .3;
     }
   }
 
-  &.error,
-  &:invalid {
+  & .error,
+  & :invalid {
     color: colour('brand', 'red');
     border: 1px solid colour('brand', 'red');
     background-color: transparentize( colour('brand', 'red'), .9 );
@@ -373,11 +377,9 @@
 
   &::after {
     @extend %rc-icon;
-    @extend .rc-icon-close--light::after;
-    transform: scale(.5);
-    transform-origin: center;
+    @extend .rc-icon-close--small--light::after;
     position: absolute;
-    right: -10px;
+    right: -8px;
     top: -10px;
   }
 }
