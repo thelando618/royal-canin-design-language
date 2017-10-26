@@ -120,7 +120,6 @@
     @extend %rc-icon;
     @extend .rc-icon-chevron--left--light::after;
   }
-
 }
 
 %navigation--next {
@@ -147,7 +146,7 @@
 
   &::after {
     @extend %rc-icon;
-    @extend .rc-icon-check--green::after;
+    @extend .rc-icon-feedback--success--dark::after;
   }
 
   &:hover,
@@ -162,7 +161,7 @@
 
   &::after {
     @extend %rc-icon;
-    @extend .rc-icon-cross--red::after;
+    @extend .rc-icon-feedback--failure--red::after;
   }
 
   &:hover,

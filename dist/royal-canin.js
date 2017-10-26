@@ -5044,6 +5044,7 @@ RCDL.features.Tooltip = {
             arrow: true,
             arrowSize: 'big',
             interactive: true,
+            dynamicTitle: true,
             position: tooltips[tooltip].getAttribute('data-tooltip-direction') || 'top',
             trigger: 'click',
             popperOptions: {

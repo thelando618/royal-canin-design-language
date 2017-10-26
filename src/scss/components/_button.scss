@@ -142,7 +142,7 @@ button {
   @extend %button--secondary;
 }
 
-$icons: ('icon-arrow--right', 'icon-chevron--right');
+$icons: ('icon-arrow--go', 'icon-chevron--right');
 
 @each $icon in $icons {
   [class*="button"].rc-#{$icon}--red::after:hover,
@@ -229,7 +229,7 @@ $variants: ('large', 'medium', 'small');
 
   &::after {
     @extend %rc-icon;
-    @extend .rc-icon-arrow--right--light::after;
+    @extend .rc-icon-arrow--go--light::after;
   }
 
   &:hover,
@@ -255,7 +255,7 @@ $variants: ('large', 'medium', 'small');
     right: 20px;
     transform-origin: 46% 0%;
     @extend %rc-icon;
-    @extend .rc-icon-loader--light::after;
+    @extend .rc-icon-loading--light::after;
     animation: animatePlusTransform(steady-spin, 1s infinite linear, translateY, translateY(-50%));
 
     .no-cssanimations & {
@@ -288,7 +288,7 @@ $variants: ('large', 'medium', 'small');
 
   &::after {
     @extend %rc-icon;
-    @extend .rc-icon-check--light::after;
+    @extend .rc-icon-feedback--success--light::after;
   }
 }
 
@@ -304,7 +304,7 @@ $variants: ('large', 'medium', 'small');
 
   &::after {
     @extend %rc-icon;
-    @extend .rc-icon-cross--light::after;
+    @extend .rc-icon-feedback--failure--light::after;
   }
 }
 
@@ -364,12 +364,12 @@ $variants: ('large', 'medium', 'small');
     @extend %rc-icon;
   }
 
-  &.rc-icon-check {
-    @extend .rc-icon-check--light::after;
+  &.rc-icon-feedback--success {
+    @extend .rc-icon-feedback--success--light::after;
   }
 
   &.rc-icon-arrow-right {
-    @extend .rc-icon-arrow--right--light::after;
+    @extend .rc-icon-arrow--go--light::after;
   }
 
   &.rc-icon-search {

@@ -355,7 +355,7 @@ input[type="file"] {
 }
 
 [role="listbox"].choices::after {
-  @extend .rc-icon-chevron--heavy--down--red;
+  @extend .rc-icon-chevron--down--red;
   height: 32px;
   width: 32px;
   border: none;
@@ -396,7 +396,7 @@ input[type="file"] {
 
   &::after {
     @extend %rc-icon;
-    @extend .rc-icon-cross--light::after;
+    @extend .rc-icon-close--light::after;
     transform: scale(.5);
     transform-origin: center;
     position: absolute;
