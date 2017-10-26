@@ -1,9 +1,19 @@
-ul, ol {
+/// ----------------------------------------------------------------------
+
+/// Lists
+
+/// ----------------------------------------------------------------------
+
+/// ------------------- 
+/// Standard List
+/// -------------------
+
+.list--standard {
   font-size: 1em;
   margin-top: 1em;
   margin-bottom: 1em;
 
-  li {
+  .list--standard__item {
     position: relative;
     line-height: 1.5;
     margin-bottom: .25em;
@@ -13,20 +23,15 @@ ul, ol {
     }
   }
 
-  ul {
+  .list--standard {
     margin-top: .5em;
     margin-bottom: .5em;
   }
-
-  svg {
-    display: inline-block;
-    vertical-align: middle;
-    width: 1em;
-    height: 1em;
-    right: 1em;
-    margin-right: .75em;
-  }
 }
+
+/// ------------------- 
+/// List Modifiers
+/// -------------------
 
 %list--blank {
   list-style-type: none;
@@ -46,21 +51,14 @@ ul, ol {
   @extend %list--align;
 }
 
+/// ------------------- 
+/// Significant List
+/// -------------------
+
 .list--significance {
   @extend %list--blank;
   @extend %list--align;
   box-shadow: getShadow('black', 'faint');
-
-  svg {
-    display: block;
-    width: 1.5em;
-    height: 1.5em;
-    position: absolute;
-    top: 50%;
-    margin-top: -.75em;
-    right: 1em;
-    fill: colour('brand', 'medium-grey');
-  }
 }
 
 .list--significance__item {

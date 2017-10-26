@@ -4,7 +4,7 @@
 
 /// ----------------------------------------------------------------------
 
-.rc-micro-form {
+.micro-form {
   position: relative;
   z-index: z(default) - 1;
   
@@ -26,7 +26,7 @@
     }
   }
   
-  & .rc-label {
+  & .input__label {
     z-index: z(default) - 1;
   }
 }

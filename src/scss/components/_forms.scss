@@ -8,7 +8,7 @@
 /// Labels
 /// -------------------
 
-.rc-label {
+.input__label {
   position: absolute;
   top: 0;
   left: 0;
@@ -36,7 +36,7 @@
   }
 }
 
-.rc-label__text {
+.input__label__text {
   display: inline-block;
   padding: .75em;
   pointer-events: none;
@@ -47,12 +47,12 @@
 /// Label transition
 /// -------------------
 
-.rc-input input:focus,
-.rc-input textarea:focus,
-.rc-input input:not([value=""]),
-.rc-input textarea:not([value=""]), {
-  & + .rc-label {
-    & > .rc-label__text {
+.input input:focus,
+.input textarea:focus,
+.input input:not([value=""]),
+.input textarea:not([value=""]), {
+  & + .input__label {
+    & > .input__label__text {
       transform: translate(0, -3em);
       padding-left: 0;
     }
@@ -67,12 +67,12 @@
 /// Label modifiers
 /// -------------------
 
-.rc-label--inline {
+.input__label--inline {
   display: inline-block;
   cursor: pointer;
 }
 
-.rc-label--wrap {
+.input__label--wrap {
   display: block;
   margin-bottom: .5rem;
   cursor: pointer;
@@ -82,7 +82,7 @@
 /// Inputs
 /// -------------------
 
-.rc-input {
+.input {
   display: block;
   position: relative;
   margin-top: 3rem;
@@ -90,7 +90,7 @@
   max-width: 300px;
 }
 
-%rc-input-base {
+%input-base {
   margin-bottom: 0;
   padding: .75em;
   box-shadow: none;
@@ -107,7 +107,7 @@
   &:disabled {
     background-color: colour('brand', 'medium-grey', 'light');
 
-    & + .rc-label {
+    & + .input__label {
       opacity: .3;
     }
   }
@@ -118,7 +118,7 @@
     border: 1px solid colour('brand', 'red');
     background-color: transparentize( colour('brand', 'red'), .9 );
     
-    & + .rc-label::after {
+    & + .input__label::after {
       background-color: colour('brand', 'red');
       width: 100%;
     }
@@ -129,45 +129,45 @@
 /// Common inputs
 /// -------------------
 
-.rc-input__text {
-  @extend %rc-input-base;
+.input__text {
+  @extend %input-base;
 }
 
-.rc-input__email {
-  @extend %rc-input-base;
+.input__email {
+  @extend %input-base;
 }
 
-.rc-input__number {
-  @extend %rc-input-base;
+.input__number {
+  @extend %input-base;
 }
 
-.rc-input__search {
-  @extend %rc-input-base;
+.input__search {
+  @extend %input-base;
 }
 
-.rc-input__tel {
-  @extend %rc-input-base;
+.input__tel {
+  @extend %input-base;
 }
 
-.rc-input__url {
-  @extend %rc-input-base;
+.input__url {
+  @extend %input-base;
 }
 
-.rc-input__date {
-  @extend %rc-input-base;
+.input__date {
+  @extend %input-base;
 }
 
 /// ------------------- 
 /// Input modifiers
 /// -------------------
 
-.rc-input--white {
+.input--white {
   & input {
     background-color: colour('brand', 'white');
   }
 }
 
-.rc-input--btn {
+.input--btn {
   display: block;
   max-width: 300px;
 }
@@ -176,11 +176,11 @@
 /// Password
 /// -------------------
 
-.rc-input__password {
-  @extend %rc-input-base;
+.input__password {
+  @extend %input-base;
 }
 
-.rc-input__password__toggle {
+.input__password__toggle {
   position: absolute;
   top: 0;
   right: 0;
@@ -204,8 +204,8 @@
 /// Textarea
 /// -------------------
 
-.rc-input__textarea {
-  @extend %rc-input-base;
+.input__textarea {
+  @extend %input-base;
   resize: vertical;
   height: 200px;
   background-color: colour('tertiary', 'grey--light');
@@ -215,15 +215,15 @@
 /// Checkboxes & radio buttons
 /// -------------------
 
-.rc-input__checkbox,
-.rc-input__radio {
+.input__checkbox,
+.input__radio {
   margin-right: .2rem;
 }
 
 %rc-checkbox-radio {
   visibility: hidden;
   
-  & + .rc-label--inline {
+  & + .input__label--inline {
     margin-left: 1rem;
   }
 
@@ -247,7 +247,7 @@
 /// Checkbox modifiers
 /// -------------------
 
-.rc-input__checkbox--custom {
+.input__checkbox--custom {
   @extend %rc-checkbox-radio;
 
   &::before {
@@ -265,7 +265,7 @@
   }
 }
 
-.rc-input__checkbox--featured {
+.input__checkbox--featured {
   @extend %rc-checkbox-radio;
 
   &::before {
@@ -287,7 +287,7 @@
 /// Radio modifiers
 /// -------------------
 
-.rc-input__radio--custom {
+.input__radio--custom {
   @extend %rc-checkbox-radio;
 
   &::before {

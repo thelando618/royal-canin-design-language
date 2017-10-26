@@ -4149,7 +4149,7 @@ RCDL.features.FormElements = {
 
       // Initial styles and screen reader text for label.
       eye.innerHTML = '<span class="screen-reader-text">Toggle password visibility</span>';
-      eye.classList.add('rc-input__password__toggle');
+      eye.classList.add('input__password__toggle');
 
       inputs[input].parentNode.appendChild(eye);
 
@@ -4170,7 +4170,7 @@ RCDL.features.FormElements = {
   }
 };
 
-RCDL.ready(RCDL.features.FormElements.labels('.rc-input'));
+RCDL.ready(RCDL.features.FormElements.labels('.input'));
 RCDL.ready(RCDL.features.FormElements.passwordField('[type="password"]'));
 
 /**
@@ -4197,7 +4197,7 @@ RCDL.features.Selects = function (selector) {
           shouldSort: false,
           // Check if different colour scheme has been applied
           classNames: {
-            containerOuter: RCDL.utilities.hasClass(select, 'rc-input--white') ? 'choices choices--white' : 'choices'
+            containerOuter: RCDL.utilities.hasClass(select, 'input--white') ? 'choices choices--white' : 'choices'
           }
         }
       );
