@@ -1,4 +1,9 @@
-/////////////////////////////////////// Button Base Styles ///////////////////////////////////////
+/// ----------------------------------------------------------------------
+
+/// Buttons
+
+/// ----------------------------------------------------------------------
+
 [class^="button"] {
   display: inline-block;
   text-decoration: none;
@@ -13,7 +18,7 @@
   border: 2px solid transparent;
   border-radius: 50px;
   margin-bottom: 1em;
-  transition: background-color 0.2s ease-in;
+  transition: movementSetting('transition', 'base');
 
   &::after {
     position: absolute;
@@ -65,10 +70,6 @@
       text-align: center;
     }
   }
-
-  &.button--small::after {
-    @extend %rc-icon--small--aligned;
-  }
 }
 
 button {
@@ -83,6 +84,11 @@ button {
 [class*="--icon-"]::after {
   content: '';
 }
+
+
+/// ------------------- 
+/// Button Sizes
+/// -------------------
 
 %button--small {
   $button-icon-padding: 1.5rem;
@@ -119,7 +125,10 @@ button {
 
 
 
-/////////////////////////////////////// Secondary Button ///////////////////////////////////////
+
+/// ------------------- 
+/// Secondary Buttons
+/// -------------------
 
 %button--secondary {
   border-color: colour('brand', 'red');
@@ -147,35 +156,34 @@ $icons: ('icon-arrow--go', 'icon-chevron--right');
 @each $icon in $icons {
   [class*="button"].rc-#{$icon}--red::after:hover,
   [class*="button"].rc-#{$icon}--red::after:focus {
-    @extend .rc-#{$icon}--light::after;
+    @extend .rc-#{$icon}--small--light::after;
   }
 }
 
 @each $icon in $icons {
   [class*="button"].rc-#{$icon}--dark::after:hover,
   [class*="button"].rc-#{$icon}--dark::after:focus {
-    @extend .rc-#{$icon}--light::after;
+    @extend .rc-#{$icon}--small--light::after;
   }
 }
 
 @each $icon in $icons {
   [class*="button"].rc-#{$icon}--light::after:hover,
   [class*="button"].rc-#{$icon}--light::after:focus {
-    @extend .rc-#{$icon}--dark::after;
+    @extend .rc-#{$icon}--small--dark::after;
   }
 }
 
 @each $icon in $icons {
   [class*="button--functional"].rc-#{$icon}--light::after:hover,
   [class*="button--functional"].rc-#{$icon}--light::after:focus {
-    @extend .rc-#{$icon}--light::after;
+    @extend .rc-#{$icon}--small--light::after;
   }
 }
 
-
-
-
-/////////////////////////////////////// Tertiary Button ///////////////////////////////////////
+/// ------------------- 
+/// Tertiary Button
+/// -------------------
 
 %button--tertiary {
   border-color: colour('functional', 'text');
@@ -198,6 +206,9 @@ $icons: ('icon-arrow--go', 'icon-chevron--right');
   @extend %button--tertiary;
 }
 
+/// ------------------- 
+/// Button Variants
+/// -------------------
 
 $buttons: ('secondary', 'tertiary');
 $variants: ('large', 'medium', 'small');
@@ -222,14 +233,17 @@ $variants: ('large', 'medium', 'small');
 }
 
 
-/////////////////////////////////////// Functional Button ///////////////////////////////////////
+
+/// ------------------- 
+/// Functional Buttons
+/// -------------------
 
 .button--functional {
   background-color: colour('functional', 'functional');
 
   &::after {
     @extend %rc-icon;
-    @extend .rc-icon-arrow--go--light::after;
+    @extend .rc-icon-arrow--go--small--light::after;
   }
 
   &:hover,
@@ -255,7 +269,7 @@ $variants: ('large', 'medium', 'small');
     right: 20px;
     transform-origin: 46% 0%;
     @extend %rc-icon;
-    @extend .rc-icon-loading--light::after;
+    @extend .rc-icon-loading--small--light::after;
     animation: animatePlusTransform(steady-spin, 1s infinite linear, translateY, translateY(-50%));
 
     .no-cssanimations & {
@@ -273,7 +287,7 @@ $variants: ('large', 'medium', 'small');
   padding-right: 4em;
 }
 
-.button--functional--loading.button--small:after {
+.button--functional--loading.button--small::after {
   right: .5em;
 }
 
@@ -288,7 +302,7 @@ $variants: ('large', 'medium', 'small');
 
   &::after {
     @extend %rc-icon;
-    @extend .rc-icon-feedback--success--light::after;
+    @extend .rc-icon-feedback--success--small--light::after;
   }
 }
 
@@ -304,7 +318,7 @@ $variants: ('large', 'medium', 'small');
 
   &::after {
     @extend %rc-icon;
-    @extend .rc-icon-feedback--failure--light::after;
+    @extend .rc-icon-feedback--failure--small--light::after;
   }
 }
 
@@ -319,8 +333,10 @@ $variants: ('large', 'medium', 'small');
   }
 }
 
-/////////////////////////////////////// Button Panel ///////////////////////////////////////
 
+/// ------------------- 
+/// Panel Button
+/// -------------------
 
 .button--panel {
   background: colour('brand', 'white');
@@ -365,14 +381,14 @@ $variants: ('large', 'medium', 'small');
   }
 
   &.rc-icon-feedback--success {
-    @extend .rc-icon-feedback--success--light::after;
+    @extend .rc-icon-feedback--success--small--light::after;
   }
 
   &.rc-icon-arrow-right {
-    @extend .rc-icon-arrow--go--light::after;
+    @extend .rc-icon-arrow--go--small--light::after;
   }
 
   &.rc-icon-search {
-    @extend .rc-icon-search--light::after;
+    @extend .rc-icon-search--small--light::after;
   }
 }
