@@ -128,26 +128,23 @@
 
 .navigation__link {
   position: relative;
-  @extend .rc-icon-chevron--down--red;
-
+  
   &::after {
-    transform: rotate(180deg) scale(.5);
+    @extend %rc-icon;
+    @extend .rc-icon-chevron--down--small--red::after;
+    transform: rotate(180deg);
     opacity: 0;
     transition: transform .5s ease, opacity .3s ease;
-    content: '';
     position: absolute;
     right: 1rem;
     top: 50%;
     margin-top: -16px;
     bottom: 0;
-    width: 32px;
-    height: 32px;
-    background-repeat: no-repeat;
   }
-
+  
   &.modal__toggle::after {
     opacity: 1;
-    transform: scale(0.5);
+    transform: rotate(0);
   }
 }
 
@@ -155,7 +152,7 @@
   font-weight: 500;
 
   .section > &::after {
-    transform: rotate(0) scale(.5);
+    transform: rotate(0);
     opacity: 1;
   }
 }
