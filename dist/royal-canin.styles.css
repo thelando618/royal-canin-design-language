@@ -4402,7 +4402,7 @@ figure > figcaption {
 body,input,textarea,select,button {
   font-family: "RC TYPE", "Avenir", Helvetica, Arial, sans-serif;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -4429,7 +4429,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .alpha,.alpha--black,.rc-replace-header-styles h1 {
-  font-size: 1.66em;
+  font-size: 2.1em;
 }
 
 .alpha--black {
@@ -4437,7 +4437,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .beta,.beta--black,.rc-replace-header-styles h2 {
-  font-size: 1.44em;
+  font-size: 1.85em;
 }
 
 .beta--black {
@@ -4445,7 +4445,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .gamma,.gamma--black,.rc-replace-header-styles h3 {
-  font-size: 1.22em;
+  font-size: 1.5em;
 }
 
 .gamma--black {
@@ -4453,7 +4453,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .delta,.delta--black,.rc-replace-header-styles h4 {
-  font-size: 1.11em;
+  font-size: 1.2em;
 }
 
 .delta--black {
@@ -4461,7 +4461,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .espilon,.espilon--black,.rc-replace-header-styles h5 {
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
 .espilon--black {
@@ -4469,7 +4469,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .zeta,.zeta--black,.rc-replace-header-styles h6 {
-  font-size: 0.88em;
+  font-size: 1em;
 }
 
 .zeta--black {
@@ -4477,7 +4477,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .rc-head--display,.rc-head--display--black {
-  font-size: 1.66em;
+  font-size: 2.1em;
 }
 
 .rc-head--display--black {
@@ -4485,7 +4485,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .rc-head--headline,.rc-head--headline--black {
-  font-size: 1.44em;
+  font-size: 1.85em;
 }
 
 .rc-head--headline--black {
@@ -4493,7 +4493,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .rc-head--subheadline,.rc-head--subheadline--black {
-  font-size: 1.22em;
+  font-size: 1.5em;
 }
 
 .rc-head--subheadline--black {
