@@ -15,8 +15,19 @@ select,
 button {
   font-family: $font-din; // weight size/line-height family
   font-weight: 300;
-  font-size: 1em;
+  font-size: 18px;
 }
+
+@media (get-breakpoint-up('small')) {
+  body,
+  input,
+  textarea,
+  select,
+  button {
+    font-size: 16px;
+  }
+}
+
 
 h1, h2, h3, h4, h5, h6 {
   // This is to stop some browsers enforcing their own weights on h tags.
@@ -30,15 +41,15 @@ h1, h2, h3, h4, h5, h6 {
 //                                                                Size at each breakpoint
 //               Class                    Base styles             default      small       x-large
 $type-styles: (
-                ('alpha',                'heading-base',           2em,        2.5em,      3.125em),
-                ('beta',                 'heading-base',           1.875em,    2.25em,     2.625em),
-                ('gamma',                'heading-base',           1.625em,    2em,        2.25em),
-                ('delta',                'heading-base',           1.5em,      1.875em,    2em),
-                ('espilon',              'heading-base',           1.375em,    1.625em,    1.75em),
-                ('zeta',                 'heading-base',           1.25em,     1.5em,      1.625em),
-                ('rc-head--display',     'heading--heavy-upper',   1.875em,    2.5em,      3.125em),
-                ('rc-head--headline',    'heading--heavy-upper',   1.375em,    1.75em,     2em),
-                ('rc-head--subheadline', 'heading-base',           1.125em,    1.375em,    1.5em),
+                ('alpha',                'heading-base',           1.66em,     2.5em,      3.125em),
+                ('beta',                 'heading-base',           1.44em,     2.25em,     2.625em),
+                ('gamma',                'heading-base',           1.22em,     2em,        2.25em),
+                ('delta',                'heading-base',           1.11em,     1.875em,    2em),
+                ('espilon',              'heading-base',           1em,        1.625em,    1.75em),
+                ('zeta',                 'heading-base',           .88em,      1.5em,      1.625em),
+                ('rc-head--display',     'heading--heavy-upper',   1.66em,     2.5em,      3.125em),
+                ('rc-head--headline',    'heading--heavy-upper',   1.44em,     1.75em,     2em),
+                ('rc-head--subheadline', 'heading-base',           1.22em,     1.375em,    1.5em),
                 ('rc-head--article',     'heading-base',           1em,        1.25em,     1.375em),
                 ('label',                'emphasised-text',        1em,        1.1em,      1.2em)
 );
@@ -71,7 +82,7 @@ $type-breakpoints: ('small', 'x-large');
 
     @each $breakpoint in $type-breakpoints {
       @media (get-breakpoint-up($breakpoint)) {
-        font-size: nth($style, index($type-breakpoints, $breakpoint) + 3)
+        font-size: nth($style, index($type-breakpoints, $breakpoint) + 3);
       }
     }
   }
@@ -102,12 +113,12 @@ $type-breakpoints: ('small', 'x-large');
   text-align: center;
 }
 
-
 /// ------------------- 
 /// Text blocks
 /// -------------------
 
-p {
+p,
+blockquote {
   line-height: 1.5;
 }
 
@@ -120,8 +131,9 @@ q {
 blockquote,
 q {
   border-left: 3px solid colour('brand', 'red');
-  margin-left: 0;
-  padding: 2em;
+  margin: auto 0;
+  padding: 1em;
+  padding-left: 2em;
   line-height: 140%;
   display: block;
 
@@ -130,14 +142,13 @@ q {
   }
 }
 
-
 $styleMapping: (
-                ('h1', 'alpha'),
-                ('h2', 'beta'),
-                ('h3', 'gamma'),
-                ('h4', 'delta'),
-                ('h5', 'espilon'),
-                ('h6', 'zeta')
+  ('h1', 'alpha'),
+  ('h2', 'beta'),
+  ('h3', 'gamma'),
+  ('h4', 'delta'),
+  ('h5', 'espilon'),
+  ('h6', 'zeta')
 );
 
 .rc-replace-header-styles {
