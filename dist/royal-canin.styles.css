@@ -5156,9 +5156,8 @@ section {
 
 .body--fixed-side-navigation {
   margin: 1rem auto;
-  margin-top: 0;
-  width: 90%;
-  padding-top: 100px;
+  width: calc(100% - 2rem);
+  padding-top: 82px;
 }
 
 body::before {
@@ -5335,7 +5334,7 @@ figure > figcaption {
 body,input,textarea,select,button {
   font-family: "RC TYPE", "Avenir", Helvetica, Arial, sans-serif;
   font-weight: 300;
-  font-size: 1em;
+  font-size: 14px;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -5362,7 +5361,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .alpha,.alpha--black,.rc-replace-header-styles h1 {
-  font-size: 2em;
+  font-size: 2.1em;
 }
 
 .alpha--black {
@@ -5370,7 +5369,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .beta,.beta--black,.rc-replace-header-styles h2 {
-  font-size: 1.875em;
+  font-size: 1.85em;
 }
 
 .beta--black {
@@ -5378,7 +5377,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .gamma,.gamma--black,.rc-replace-header-styles h3 {
-  font-size: 1.625em;
+  font-size: 1.5em;
 }
 
 .gamma--black {
@@ -5386,7 +5385,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .delta,.delta--black,.rc-replace-header-styles h4 {
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 .delta--black {
@@ -5394,7 +5393,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .espilon,.espilon--black,.rc-replace-header-styles h5 {
-  font-size: 1.375em;
+  font-size: 1.1em;
 }
 
 .espilon--black {
@@ -5402,7 +5401,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .zeta,.zeta--black,.rc-replace-header-styles h6 {
-  font-size: 1.25em;
+  font-size: 1em;
 }
 
 .zeta--black {
@@ -5410,7 +5409,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .rc-head--display,.rc-head--display--black {
-  font-size: 1.875em;
+  font-size: 2.1em;
 }
 
 .rc-head--display--black {
@@ -5418,7 +5417,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .rc-head--headline,.rc-head--headline--black {
-  font-size: 1.375em;
+  font-size: 1.85em;
 }
 
 .rc-head--headline--black {
@@ -5426,7 +5425,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .rc-head--subheadline,.rc-head--subheadline--black {
-  font-size: 1.125em;
+  font-size: 1.5em;
 }
 
 .rc-head--subheadline--black {
@@ -5465,7 +5464,7 @@ h1,h2,h3,h4,h5,h6 {
   text-align: center;
 }
 
-p {
+p,blockquote {
   line-height: 1.5;
 }
 
@@ -5477,8 +5476,9 @@ q {
 
 blockquote,q {
   border-left: 3px solid #EC001A;
-  margin-left: 0;
-  padding: 2em;
+  margin: auto 0;
+  padding: 1em;
+  padding-left: 2em;
   line-height: 140%;
   display: block;
 }
@@ -5673,6 +5673,7 @@ blockquote > p,q > p {
   font-size: .675em;
   padding: .3rem 1rem;
   line-height: 1.5;
+  text-align: center;
   border: 2px solid transparent;
   border-radius: 50px;
   margin-bottom: 1em;
@@ -7964,7 +7965,6 @@ video.hero__bg {
 .navigation {
   display: block;
   color: #333333;
-  font-size: .75em;
   width: 100%;
   height: 82px;
   position: fixed;
@@ -8008,6 +8008,7 @@ video.hero__bg {
   position: relative;
   text-decoration: none;
   color: inherit;
+  font-size: .825em;
   padding: 1.2em 0 1.2em 1.2em;
   transition: color .1s ease-in;
   text-transform: capitalize;
@@ -8333,11 +8334,6 @@ video.hero__bg {
     left: 10px;
   }
 
-  .body--fixed-side-navigation {
-    margin: 4rem auto;
-    padding-top: 0;
-  }
-
   .spacer-large {
     padding: 3.5rem;
   }
@@ -8410,6 +8406,10 @@ video.hero__bg {
   .media--aligncenter {
     max-width: 90%;
     margin: 1em auto;
+  }
+
+  body,input,textarea,select,button {
+    font-size: 16px;
   }
 
   .alpha,.alpha--black,.rc-replace-header-styles h1 {
@@ -8867,6 +8867,9 @@ video.hero__bg {
 
 @media (min-width: 960px) {
   .body--fixed-side-navigation {
+    padding-top: 0;
+    margin: 4rem auto;
+    width: calc(100% - 8rem);
     padding-left: 240px;
   }
 
@@ -8951,7 +8954,6 @@ video.hero__bg {
     height: 100%;
     bottom: 0;
     width: 240px;
-    font-size: .825em;
     border-right: 1px solid rgba(0, 0, 0, 0.15);
     background-color: #FFF;
   }

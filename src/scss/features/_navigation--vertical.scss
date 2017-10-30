@@ -1,7 +1,6 @@
 .navigation {
   display: block;
   color: colour('functional', 'text');
-  font-size: .75em;
   width: 100%;
   height: 82px;
   position: fixed;
@@ -16,7 +15,6 @@
     height: 100%;
     bottom: 0;
     width: $navigation-width;
-    font-size: .825em;
     border-right: 1px solid rgba( 0, 0, 0, .15 );
     background-color: colour('brand', 'white');
   }
@@ -83,6 +81,7 @@
   position: relative;
   text-decoration: none;
   color: inherit;
+  font-size: .825em;
   padding: 1.2em 0 1.2em 1.2em;
   transition: color .1s ease-in;
   text-transform: capitalize;
