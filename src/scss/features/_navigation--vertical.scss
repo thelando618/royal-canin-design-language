@@ -88,7 +88,7 @@
   cursor: pointer;
 
   &:focus {
-    background: colour('brand', 'light-grey');
+    background-color: colour('brand', 'light-grey');
   }
 
   &.current-page {

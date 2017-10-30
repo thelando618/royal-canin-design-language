@@ -340,7 +340,7 @@ $variants: ('large', 'medium', 'small');
 /// -------------------
 
 .button--panel {
-  background: colour('brand', 'white');
+  background-color: colour('brand', 'white');
   border-radius: 0;
   color: colour('brand', 'red');
   padding: 0;
@@ -359,7 +359,7 @@ $variants: ('large', 'medium', 'small');
   &:focus,
   &:active {
     color: colour('brand', 'red');
-    background: colour('brand', 'white');
+    background-color: colour('brand', 'white');
     text-decoration: underline;
   }
 }

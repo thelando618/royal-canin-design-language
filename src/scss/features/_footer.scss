@@ -1,5 +1,5 @@
 .site-footer {
-  background: colour('functional', 'text');
+  background-color: colour('functional', 'text');
   position: relative;
 
   & .outlined {
@@ -86,7 +86,7 @@
 }
 
 .sub-footer {
-  background: colour('brand', 'light-grey');
+  background-color: colour('brand', 'light-grey');
   padding: get-spacer('small');
 
   @media (get-breakpoint-up('x-large')) {

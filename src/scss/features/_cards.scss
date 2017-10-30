@@ -10,7 +10,8 @@
 
   .card__image {
     margin: 0;
-    background: center/cover no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
     flex: 0 0 30%;
     max-width: 200px;
   }

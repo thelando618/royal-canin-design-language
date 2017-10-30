@@ -73,11 +73,11 @@
   height: 8px;
   top: 50%;
   margin-top: -4px;
-  background: colour('brand', 'light-grey');
+  background-color: colour('brand', 'light-grey');
 }
 
 .noUi-connect {
-  background: colour('brand', 'red');
+  background-color: colour('brand', 'red');
   box-shadow: getShadow('grey', 'inset');
   -webkit-transition: background 450ms;
   transition: background 450ms;
@@ -123,7 +123,7 @@
 }
 
 [disabled] .noUi-connect {
-  background: colour('brand', 'light-grey', 'light');
+  background-color: colour('brand', 'light-grey', 'light');
 }
 
 [disabled] .noUi-handle,
@@ -155,7 +155,7 @@
 
 .noUi-marker {
   position: absolute;
-  background: colour('brand', 'light-grey', 'light');
+  background-color: colour('brand', 'light-grey', 'light');
 }
 
 .noUi-pips-horizontal {
@@ -176,7 +176,7 @@
   position: absolute;
   border: 1px solid colour('brand', 'light-grey', 'light');
   border-radius: 3px;
-  background: white;
+  background-color: colour('brand', 'white');
   color: black;
   padding: 5px;
   text-align: center;
