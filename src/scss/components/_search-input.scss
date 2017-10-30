@@ -27,7 +27,7 @@
 
       &::after {
         @extend %rc-icon;
-        @extend .rc-icon-loader--dark::after;
+        @extend .rc-icon-loading--dark::after;
       }
     }
 
@@ -60,7 +60,7 @@
 
     &::after {
       @extend %rc-icon;
-      @extend .rc-icon-cross--dark::after;
+      @extend .rc-icon-close--dark::after;
     }
   }
 

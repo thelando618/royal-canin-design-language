@@ -1,11 +1,14 @@
-.micro-form {
-}
+/// ----------------------------------------------------------------------
 
-.form--text-submit {
+/// Micro Forms
+
+/// ----------------------------------------------------------------------
+
+.micro-form {
   position: relative;
   z-index: z(default) - 1;
-
-  & > button {
+  
+  & > .button--submit {
     position: absolute;
     right: 0;
     top: 0;
@@ -14,16 +17,16 @@
     border-radius: 0;
     margin: 0;
     z-index: z(default);
-
+  
     &::after {
       z-index: z(default) - 1;
       right: 0.5rem;
       @extend %rc-icon;
-      @extend .rc-icon-arrow--right--light;
+      @extend .rc-icon-arrow--go--small--light;
     }
   }
-
-  & label {
+  
+  & .input__label {
     z-index: z(default) - 1;
   }
 }

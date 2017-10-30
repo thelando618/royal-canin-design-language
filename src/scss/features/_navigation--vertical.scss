@@ -1,7 +1,6 @@
 .navigation {
   display: block;
   color: colour('functional', 'text');
-  font-size: .75em;
   width: 100%;
   height: 82px;
   position: fixed;
@@ -16,7 +15,6 @@
     height: 100%;
     bottom: 0;
     width: $navigation-width;
-    font-size: .825em;
     border-right: 1px solid rgba( 0, 0, 0, .15 );
     background-color: colour('brand', 'white');
   }
@@ -83,13 +81,14 @@
   position: relative;
   text-decoration: none;
   color: inherit;
+  font-size: .825em;
   padding: 1.2em 0 1.2em 1.2em;
   transition: color .1s ease-in;
   text-transform: capitalize;
   cursor: pointer;
 
   &:focus {
-    background: colour('brand', 'light-grey');
+    background-color: colour('brand', 'light-grey');
   }
 
   &.current-page {
@@ -128,26 +127,23 @@
 
 .navigation__link {
   position: relative;
-  @extend .rc-icon-chevron--down--red;
-
+  
   &::after {
-    transform: rotate(180deg) scale(.5);
+    @extend %rc-icon;
+    @extend .rc-icon-chevron--down--small--red::after;
+    transform: rotate(180deg);
     opacity: 0;
     transition: transform .5s ease, opacity .3s ease;
-    content: '';
     position: absolute;
     right: 1rem;
     top: 50%;
     margin-top: -16px;
     bottom: 0;
-    width: 32px;
-    height: 32px;
-    background-repeat: no-repeat;
   }
-
+  
   &.modal__toggle::after {
     opacity: 1;
-    transform: scale(0.5);
+    transform: rotate(0);
   }
 }
 
@@ -155,7 +151,7 @@
   font-weight: 500;
 
   .section > &::after {
-    transform: rotate(0) scale(.5);
+    transform: rotate(0);
     opacity: 1;
   }
 }

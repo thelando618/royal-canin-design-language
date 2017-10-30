@@ -14,11 +14,6 @@
   color: colour('functional', 'text');
   text-decoration: none;
   font-size: 1rem;
-
-  & > [class^="rc-icon"] {
-    transform: scale(0.5);
-    transform-origin: 0 0;
-  }
 }
 
 
