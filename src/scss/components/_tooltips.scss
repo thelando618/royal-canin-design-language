@@ -1,4 +1,8 @@
-.rc-tooltip {
+.tippy-popper {
+  z-index: z(tooltip);
+}
+
+.tippy-tooltip {
   z-index: z(tooltip);
   display: block;
   background-color: colour('brand', 'white');
@@ -23,10 +27,6 @@
 }
 
 .tippy-tooltip {
-  background-color: transparent;
-}
-
-.tippy-tooltip {
   color: colour('functional', 'text');
   padding: 0;
   box-shadow: getShadow('black', 'soft');
@@ -44,7 +44,8 @@
   border-bottom-color: white;
 }
 
-.rc-tooltip__pad {
+.rc-tooltip__pad,
+.tippy-tooltip-content {
   padding: get-spacer('small');
 }
 

@@ -27,8 +27,7 @@
   
   &::after {
     @extend %rc-icon;
-    @extend %rc-icon--small;
-    @extend .rc-icon-chevron--right--dark::after;
+    @extend .rc-icon-chevron--right--small--dark::after;
     display: inline-block;
     vertical-align: middle;
   }
