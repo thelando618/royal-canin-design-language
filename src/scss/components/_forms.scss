@@ -166,9 +166,7 @@
 /// -------------------
 
 .input--white {
-  & input {
-    background-color: colour('brand', 'white');
-  }
+  background-color: colour('brand', 'white');
 }
 
 .input--btn {
@@ -303,7 +301,7 @@
   
   &:checked::after {
     content: '';
-    background: colour('brand', 'red');
+    background-color: colour('brand', 'red');
     border-radius: 1rem;
     width: 1rem;
     height: 1rem;

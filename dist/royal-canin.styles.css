@@ -5145,7 +5145,7 @@ html {
 .container {
   height: 100%;
   max-width: 1440px;
-  background: #FFF;
+  background-color: #FFF;
   margin: auto;
   position: relative;
 }
@@ -5851,7 +5851,7 @@ button {
 }
 
 .button--panel {
-  background: #FFF;
+  background-color: #FFF;
   border-radius: 0;
   color: #EC001A;
   padding: 0;
@@ -5869,7 +5869,7 @@ button {
 
 .button--panel:hover,.button--panel:focus,.button--panel:active {
   color: #EC001A;
-  background: #FFF;
+  background-color: #FFF;
   text-decoration: underline;
 }
 
@@ -5988,7 +5988,7 @@ button {
   width: 100%;
 }
 
-.input--white input {
+.input--white {
   background-color: #FFF;
 }
 
@@ -6078,7 +6078,7 @@ button {
 
 .input__radio--custom:checked::after {
   content: '';
-  background: #EC001A;
+  background-color: #EC001A;
   border-radius: 1rem;
   width: 1rem;
   height: 1rem;
@@ -6243,7 +6243,7 @@ button {
 
 .response--affirmative,.response--negative {
   box-shadow: 0 2px 4px #f1f1f1;
-  background: #FFF;
+  background-color: #FFF;
 }
 
 .pager {
@@ -7024,11 +7024,11 @@ button {
   height: 8px;
   top: 50%;
   margin-top: -4px;
-  background: #EAEAEA;
+  background-color: #EAEAEA;
 }
 
 .noUi-connect {
-  background: #EC001A;
+  background-color: #EC001A;
   box-shadow: inset 0 0 3px rgba(51, 51, 51, 0.45);
   -webkit-transition: background 450ms;
   transition: background 450ms;
@@ -7069,7 +7069,7 @@ button {
 }
 
 [disabled] .noUi-connect {
-  background: #ececec;
+  background-color: #ececec;
 }
 
 [disabled] .noUi-handle,[disabled].noUi-handle,[disabled].noUi-target {
@@ -7098,7 +7098,7 @@ button {
 
 .noUi-marker {
   position: absolute;
-  background: #ececec;
+  background-color: #ececec;
 }
 
 .noUi-pips-horizontal {
@@ -7120,7 +7120,7 @@ button {
   position: absolute;
   border: 1px solid #ececec;
   border-radius: 3px;
-  background: white;
+  background-color: #FFF;
   color: black;
   padding: 5px;
   text-align: center;
@@ -7412,7 +7412,7 @@ table label {
   left: 0;
   width: 45px;
   height: 45px;
-  background: #5ca9ad;
+  background-color: #5ca9ad;
   display: block;
   padding: 0.5em;
   text-align: center;
@@ -7421,7 +7421,7 @@ table label {
 }
 
 .card--featured .card--featured__header .icon-play:hover {
-  background: #4b9296;
+  background-color: #4b9296;
 }
 
 .card--featured .card--featured__header .icon-play::after {
@@ -7458,7 +7458,8 @@ table label {
 
 .card .card__image {
   margin: 0;
-  background: center/cover no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
   flex: 0 0 30%;
   max-width: 200px;
 }
@@ -7550,7 +7551,8 @@ table label {
 }
 
 .hero__bg {
-  background: center/cover no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -7682,7 +7684,7 @@ video.hero__bg {
 }
 
 .site-footer {
-  background: #333333;
+  background-color: #333333;
   position: relative;
 }
 
@@ -7749,7 +7751,7 @@ video.hero__bg {
 }
 
 .sub-footer {
-  background: #EAEAEA;
+  background-color: #EAEAEA;
   padding: 1rem;
 }
 
@@ -8016,7 +8018,7 @@ video.hero__bg {
 }
 
 .navigation__link:focus {
-  background: #EAEAEA;
+  background-color: #EAEAEA;
 }
 
 .navigation__link.current-page {
