@@ -1554,7 +1554,7 @@ sup {
 }
 
 .rc-flag::after {
-  background-image: url("royal-canin.sprite--flags.png");
+  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite--flags.png?v=3-0-0");
 }
 
 [class*="rc-flags-"]::after {
@@ -5131,7 +5131,7 @@ html {
   width: 32px;
   height: 32px;
   transform-origin: 50% 50%;
-  background-image: url("royal-canin.sprite.svg");
+  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/royal-canin.sprite.svg?v=3-0-0");
 }
 
 .rc-icon--small::after {
@@ -7825,27 +7825,27 @@ video.hero__bg {
 }
 
 .region-holder.africa {
-  background-image: url("africa.png");
+  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/africa.png?v=3-0-0");
 }
 
 .region-holder.asia {
-  background-image: url("asia.png");
+  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/asia.png?v=3-0-0");
 }
 
 .region-holder.europe {
-  background-image: url("europe.png");
+  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/europe.png?v=3-0-0");
 }
 
 .region-holder.north-america {
-  background-image: url("north-america.png");
+  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/north-america.png?v=3-0-0");
 }
 
 .region-holder.oceania {
-  background-image: url("oceania.png");
+  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/oceania.png?v=3-0-0");
 }
 
 .region-holder.south-america {
-  background-image: url("south-america.png");
+  background-image: url("https://d3moonnr9fkxfg.cloudfront.net/south-america.png?v=3-0-0");
 }
 
 .body--fixed-top-navigation {
