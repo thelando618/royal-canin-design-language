@@ -1,4 +1,4 @@
-Please use the following template to create eithee a) Bug report or b) a new feature request
+Please use the following template to create either a) Bug report or b) a new feature request
 ---
 ## a) Bug report
 
@@ -34,7 +34,7 @@ Tell us what happens instead. Please provide the steps that were taken to create
 Give the new feature a name.
 
 ### Description of desired feature
-Discrie what the feature is and how it should function and behave
+Describe what the feature is and how it should function and behave
 
 ### Why the feature is needed
-Exaplin what is missing from the current featureset that means a new feature is required
+Explain what is missing from the current featureset that means a new feature is required
