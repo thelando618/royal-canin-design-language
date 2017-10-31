@@ -33,4 +33,4 @@ Added the current page so that changes are clearly visible and easy to track.
 Added default functionality for closing alerts and storing that decision in the current session.
  ### Minor Updates/Bug fixes
  ##### Correct Icon Scaling
-Icon scaling has been improved by targeting the psuedo element.
+Icon scaling has been improved by targeting the pseudo element.
