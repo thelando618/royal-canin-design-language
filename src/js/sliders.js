@@ -42,11 +42,15 @@ RCDL.features.Slider = {
     var min = parseInt(item.getAttribute('data-js-min')) || 0;
     var max = parseInt(item.getAttribute('data-js-max')) || 100;
     var start = parseInt(item.getAttribute('data-js-start')) || min;
-    var step = parseInt(item.getAttribute('data-js-step')) || max / 10;
+    var step = parseInt(item.getAttribute('data-js-step')) || max / 50;
 
     var sliderInput = item.getElementsByTagName('input');
     sliderInput[0].value = start;
     sliderInput[0].style.display = 'none';
+
+    function filterVal(value) {
+      return value % 10 ? 0 : 1;
+    }
 
     noUiSlider.create(item, {
       start: [start],
@@ -59,8 +63,8 @@ RCDL.features.Slider = {
       },
       pips: {
         mode: 'steps',
-        stepped: true,
-        density: 2
+        density: step,
+        filter: filterVal
       }
     });
 
