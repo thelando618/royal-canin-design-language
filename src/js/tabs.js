@@ -81,7 +81,6 @@ RCDL.features.Tabs = {
     var target = document.querySelectorAll(this.getAttribute('href'));
 
     RCDL.features.Tabs.hideTabs(this.parentNode.parentNode.parentNode);
-    RCDL.utilities.modifyClass('toggle', target[0], 'hidden');
 
     // Set the ARIA attributes on the controller and target.
     target[0].setAttribute('aria-hidden', 'false');
