@@ -4,17 +4,13 @@ This repository contains the development files used to generate the Royal Canin 
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. For more details on implementation see [Royal Canin Design Language](http://developer.royalcanin.com/).
 
 ## Prerequisities
 
 Ensure you have the following installed globally:
 
 * [Node](https://github.com/nodejs/node) for core processing, npm for project dependencies.
-* [Gulp](https://github.com/gulpjs/gulp) for task running.
-* [Sass](https://github.com/sass/sass) for CSS preprocessing.
-
-Note: This project requires Gulp 4. You may need to update your global install of the Gulp CLI. See [here](https://github.com/gulpjs/gulp/blob/4.0/docs/getting-started.md) for info on upgrading.
 
 ## Installing
 
